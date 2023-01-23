@@ -1,0 +1,61 @@
+@import "../classes.scss";
+@import "../common.scss";
+@import "../components/header.scss";
+@import "../components/footer.scss";
+@import "../components/accordion.scss";
+
+.page-faq {
+    header {
+        background-color: transparent;
+    }
+
+    .middle-content {
+        padding-top: 0;
+    }
+}
+.header-sticky {
+    header {
+        background-color: $white;
+    }
+}
+.section-intro-image {
+    .col {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+
+    .section-image-content {
+        min-height: 650px;
+    }
+
+    .section-content-col {
+        position: relative;
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .section-content {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+}
+
+.section-get-back {
+    padding: 72px 0;
+
+    .container {
+        max-width: 680px;
+
+        h2 {
+            a {
+                color: $text-color;
+                text-decoration: underline;
+                font-style: italic;
+                font-weight: 400;
+            }
+        }
+    }
+}

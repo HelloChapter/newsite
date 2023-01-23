@@ -1,0 +1,48 @@
+.section-image-content {
+    .col-img {
+        min-height: 580px;
+    }
+
+    .col {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+
+    h2 {
+        margin-bottom: 55px;
+    }
+
+    .content {
+        max-width: 510px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    .link-text {
+        padding-top: 30px;
+    }
+}
+
+// Responsive CSS start
+@media (max-width:1440px) {
+    .section-image-content {
+        h2 {
+            margin-bottom: 40px;
+        }
+
+        .link-text {
+            padding-top: 10px;
+        }
+    }
+}
+
+// 1440 end
+@media (max-width:1199px) {
+    .section-image-content {
+        .col-img {
+            min-height: 500px;
+        }
+    }
+}
+
+// 1199end

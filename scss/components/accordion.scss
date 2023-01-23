@@ -1,0 +1,69 @@
+.section-accordion {
+    padding: 90px 0;
+
+    .container {
+        max-width: 1280px;
+    }
+
+    .section-title {
+        padding-bottom: 50px;
+        border-bottom: 1px solid $black;
+        margin-bottom: 5px;
+    }
+
+    button {
+        font-size: 17px;
+        line-height: 80px;
+        letter-spacing: -0.17px;
+        font-weight: 300;
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        text-align: left;
+        position: relative;
+
+        &:after {
+            content: "";
+            height: 7px;
+            min-width: 13px;
+            width: 13px;
+            background-image: url("../../images/icons/ico-chevron.svg");
+            background-size: 100% 100%;
+            background-position: 50%;
+            display: block;
+            transition: transform .3s, -webkit-transform .3s;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 40px;
+        }
+    }
+
+    .active-btn {
+        &:after {
+            -webkit-transform: scaleY(-1);
+            -ms-transform: scaleY(-1);
+            transform: scaleY(-1);
+        }
+    }
+
+    .card {
+        border-bottom: 1px solid $black;
+    }
+
+    .card-content {
+        padding-bottom: 40px;
+    }
+}
+
+// Responsive CSS start
+@media (max-width:1440px) {
+    .section-accordion {
+        button {
+            font-size: 15x;
+            line-height: 70px;
+        }
+    }
+}
+
+// 1440 end

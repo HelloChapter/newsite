@@ -1,0 +1,108 @@
+@import "../colors.scss";
+header {
+    padding: 36px 0 33px;
+    -webkit-transition: background-color .3s,opacity .3s!important;
+    -o-transition: background-color .3s,opacity .3s!important;
+    transition: background-color .3s,opacity .3s!important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: $white;
+    .header-nav {
+        align-items: center;
+    }
+    .container {
+        max-width: 1280px;
+    }
+    .col-logo {
+        max-width: 230px;
+        flex: 0 0 230px;
+    }
+    .logo {
+        max-width: 142px;
+    }
+    nav {
+        ul {
+            display: flex;
+            li {
+                padding: 0 20px;
+            }
+        }
+        a {
+            font-size: 17px;
+            line-height: 21px;
+            font-weight: 400;
+            color: $text-color;
+            letter-spacing: -0.16px;
+            padding: 5px 3px;
+            display: block;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 2px;
+            -webkit-transition: border-color .25s;
+            -o-transition: border-color .25s;
+            transition: border-color .25s;
+            &:hover {
+                border-color: $text-color;
+            }
+        }
+    }
+    .col-get-started {
+        max-width: 200px;
+        flex: 0 0 200px;
+        a {
+            font-size: 17px;
+            line-height: 30px;
+            color: $text-color;
+            text-decoration: underline;
+            letter-spacing: 0px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    }
+}
+.header-sticky {
+    header {
+        background-color: $white;
+    }
+}
+
+// Responsive UI start
+@media (max-width:1440px) {
+    header {
+        nav {
+            a {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+        .col-get-started {
+            a {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+// 1440 end
+@media (max-width:1240px) {
+    header {
+        .col-logo {
+            max-width: 200px;
+            flex: 0 0 200px;
+        }
+        nav {
+            ul {
+                li {
+                    padding: 0 15px;
+                }
+            }
+        }
+        .col-get-started {
+            max-width: 150px;
+            flex: 0 0 150px;
+        }
+    }    
+}
+// 1240 end

@@ -1,0 +1,92 @@
+.home-image-content-slider {
+    .slick-prev {
+        display: none !important;
+    }
+
+    .slick-next {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 3.6%;
+        text-indent: -99em;
+        font-size: 0;
+        width: 33px;
+        height: 10px;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0px;
+            background-image: url('../../images/icons/left-arrow.svg');
+            width: 33px;
+            height: 10px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0 -5px;
+        position: absolute;
+        left: calc(50% - 39%);
+        bottom: 34%;
+
+        li {
+            padding: 0 5px;
+        }
+
+        .slick-active {
+            button {
+                background-color: $text-color;
+            }
+        }
+
+        button {
+            background-color: rgba($color: $text-color, $alpha: 0.3);
+            border: none;
+            width: 10px;
+            height: 10px;
+            text-indent: -99em;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+    }
+    .col-img-content {
+        .content {
+            padding: 0 22%;
+            max-width: 100%;
+        }
+        .link-text {
+            padding-top: 60px;
+        }
+    }
+}
+// Responsive css start
+@media (max-width:1600px) {
+    .home-image-content-slider {
+        .slick-dots {
+            bottom: 32%;
+        }       
+    }
+}
+// 1600 end
+@media (max-width:1199px) {
+    .home-image-content-slider {
+        .slick-dots {
+            bottom: 35%;
+        }
+        .col-img-content .content {
+            padding-right: 30px;
+        }       
+    }
+}
+// 1199 end

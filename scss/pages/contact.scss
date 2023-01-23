@@ -1,0 +1,135 @@
+@import "../classes.scss";
+@import "../common.scss";
+@import "../components/form-elements.scss";
+@import "../components/header.scss";
+@import "../components/footer.scss";
+
+.page-contact {
+    .middle-content {
+        padding-top: 0;
+    }
+
+    header {
+        background-color: transparent;
+    }
+
+    .form-wrap {
+        max-width: 580px;
+        margin: 0 auto;
+        padding: 175px 15px 70px;
+    }
+
+    .page-title {
+        padding-bottom: 32px;
+    }
+}
+
+.header-sticky {
+    header {
+        background-color: $white;
+    }
+}
+
+.section-expert {
+    padding: 92px 0;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    address {
+        font-style: normal;
+        font-size: 23px;
+        line-height: 30px;
+        font-family: "Inter";
+        font-weight: 500;
+    }
+}
+
+.section-trusted-by {
+    padding: 65px 0;
+
+    .container {
+        max-width: 900px;
+    }
+
+    h2 {
+        margin-bottom: 60px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+
+        li {
+            padding: 0 48px;
+
+            img {
+                max-width: 140px;
+                height: auto;
+            }
+        }
+    }
+}
+
+.section-client-success {
+    padding: 95px 0 0;
+
+    .row {
+        margin-left: 20px;
+    }
+
+    .bg-image {
+        min-height: 520px;
+        max-width: 370px;
+        background-size: contain;
+        margin: 0 auto;
+    }
+
+    .content {
+        max-width: 470px;
+    }
+
+    h2 {
+        margin-bottom: 25px;
+    }
+}
+
+//Responsive CSS start
+@media (max-width:1440px) {
+    .page-contact {
+        .form-wrap {
+            padding: 140px 15px 40px;
+        }
+    }
+
+    .section-expert address {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .section-trusted-by ul li {
+        padding: 0 40px;
+
+        img {
+            max-width: 120px;
+        }
+    }
+}
+
+// 1440 end
+@media (max-width:1199px) {
+    .section-expert address {
+        font-size: 17px;
+    }
+
+    .section-trusted-by ul li {
+        padding: 0 30px;
+
+        img {
+            max-width: 100px;
+        }
+    }
+}
+
+// 1199 end

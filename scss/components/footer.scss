@@ -1,0 +1,103 @@
+@import "../colors.scss";
+@import "../mixin.scss";
+
+footer {
+    width: 100%;
+    background-color: $text-color;
+    padding: 60px 0 50px;
+    color: $white;
+
+    .footer-logo {
+        width: 57px;
+        margin-right: 120px;
+    }
+
+    a {
+        color: $white;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 21px;
+        letter-spacing: -0.12px;
+    }
+
+    ul {
+        li {
+            +li {
+                margin-top: 23px;
+            }
+        }
+    }
+
+    .col-news-letter {
+        max-width: 30%;
+        flex: 0 0 30%;
+
+        h6 {
+            font-size: 17px;
+            line-height: 37px;
+            font-weight: 300;
+            color: $white;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-control {
+            border: 1px solid $white;
+            height: 55px;
+            width: 100%;
+            border-radius: 0;
+            outline: none;
+            box-shadow: none;
+            padding: 10px 14px;
+            background-color: transparent;
+            line-height: 30px;
+            font-size: 17px;
+            font-weight: 300;
+            color: $white;
+
+            @include placeholder-text {
+                color: $white;
+                opacity: 1;
+            }
+        }
+
+        button {
+            height: 55px;
+            width: 55px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-left: 1px solid $white;
+
+            img {
+                max-width: 7px;
+            }
+        }
+    }
+}
+
+// Responsive UI start
+@media (max-width:1440px) {
+    footer {
+        a {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        ul li+li {
+            margin-top: 12px;
+        }
+
+        .col-news-letter {
+            .form-control {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+}
+
+// 1440 end

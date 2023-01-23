@@ -1,0 +1,74 @@
+@import "../mixin.scss";
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    font-size: 17px;
+    line-height: 1;
+    font-family: "Inter";
+    font-weight: 300;
+    padding-bottom: 25px;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $text-color;
+
+    @include placeholder-text {
+        letter-spacing: 0;
+        color: $text-color;
+    }
+}
+
+.input-wrap {
+    position: relative;
+
+    &:after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        margin-top: 10px;
+        background-color: $black;
+        display: block;
+        transform: scaleX(0);
+        transition: transform 1s 1s;
+        transform-origin: left;
+    }
+
+    .form-control {
+        border: none;
+        padding-bottom: 10px;
+    }
+}
+
+.aos-animate .input-wrap:after {
+    -webkit-transform: scaleX(1) !important;
+    -ms-transform: scaleX(1) !important;
+    transform: scaleX(1) !important;
+}
+
+.btn-submit {
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 50px;
+    letter-spacing: 0;
+    text-decoration: underline;
+}
+
+// Responsive CSS start
+@media (max-width:1440px) {
+    .form-control {
+        font-size: 14px;
+    }
+
+    .btn-submit {
+        font-size: 14px;
+        line-height: 40px;
+    }
+}

@@ -1,0 +1,134 @@
+.section-chapter-numbers {
+    padding: 100px 0;
+
+    .container {
+        max-width: 1280px;
+    }
+
+    .section-title {
+        padding-bottom: 70px;
+
+        h2 {
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            font-size: 23px;
+            font-weight: 500;
+            line-height: 20px;
+            text-transform: uppercase;
+        }
+    }
+
+    .counter-group {
+        h4 {
+            font-size: 100px;
+            line-height: 1;
+            letter-spacing: -0.31px;
+            font-family: "Times";
+            font-weight: bold;
+
+            .small-text {
+                font-size: 69px;
+                line-height: 1;
+                letter-spacing: -0.16px;
+            }
+
+            sup {
+                font-size: 35px;
+            }
+        }
+
+        h5 {
+            font-size: 20px;
+            line-height: 50px;
+            font-family: "Inter";
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+// Responsive CSS start
+@media (max-width:1600px) {
+    .section-chapter-numbers {
+        .counter-group {
+            h4 {
+                font-size: 97px;
+
+                .small-text {
+                    font-size: 67px;
+
+                    sup {
+                        font-size: 34px;
+                    }
+                }
+            }
+
+            h5 {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+}
+
+// 1600 end
+@media (max-width:1440px) {
+    .section-chapter-numbers {
+        .counter-group {
+            h4 {
+                font-size: 90px;
+
+                .small-text {
+                    font-size: 60px;
+
+                    sup {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 1440 end
+@media (max-width:1300px) {
+    .section-chapter-numbers {
+        .counter-group {
+            h4 {
+                font-size: 80px;
+
+                .small-text {
+                    font-size: 50px;
+
+                    sup {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 1300 end
+@media (max-width:1199px) {
+    .section-chapter-numbers {
+        .counter-group {
+            h4 {
+                font-size: 67px;
+
+                .small-text {
+                    font-size:40px;
+
+                    sup {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 1199 end

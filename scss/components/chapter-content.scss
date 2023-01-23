@@ -1,0 +1,22 @@
+.section-chapter-content {
+    padding: 92px 0;
+
+    img {
+        max-width: 58px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        margin-bottom: 54px;
+    }
+
+    .spinner-wrapper {
+        img.small {
+            -webkit-transform: rotate(1turn);
+            -ms-transform: rotate(1turn);
+            transform: rotate(1turn);
+            transition: transform 3s;
+        }
+    }
+
+}

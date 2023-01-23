@@ -1,0 +1,227 @@
+@import "../classes.scss";
+@import "../common.scss";
+@import "../components/slider.scss";
+@import "../components/header.scss";
+@import "../components/footer.scss";
+@import "../components/chapter-numbers.scss";
+@import "../components/review-slider.scss";
+@import "../components/accordion.scss";
+@import "../components/chapter-content.scss";
+@import "../components/image-content.scss";
+
+
+.section-intro-image {
+    .row {
+        min-height: calc(100vh - 111px);
+    }
+
+    .col {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+
+    .section-content-col {
+        position: relative;
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .section-graphic-img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 450px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+
+            &:before {
+                content: "";
+                width: 1px;
+                height: 109px;
+                background-color: $text-color;
+                display: block;
+                margin: 30px auto;
+            }
+
+            &:after {
+                content: "";
+                width: 1px;
+                height: 109px;
+                background-color: $text-color;
+                display: block;
+                margin: 30px auto;
+            }
+        }
+
+        h1 {
+            font-size: 70px;
+            line-height: 102px;
+            font-family: "Times";
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 25px;
+            line-height: 40px;
+            letter-spacing: -0.9px;
+        }
+
+        .contact-link {
+            a {
+                font-size: 17px;
+                line-height: 50px;
+                font-weight: 500;
+                color: $text-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.section-start {
+    padding: 106px 0;
+
+    .container {
+        max-width: 670px;
+
+        h2 {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.section-three-col-img-content {
+    padding: 115px 0 130px;
+
+    .container {
+        max-width: 1280px;
+    }
+
+    img {
+        max-width: 175px;
+    }
+
+    p {
+        letter-spacing: -0.7px;
+    }
+
+    h3 {
+        font-size: 23px;
+        line-height: 1;
+        font-weight: 500;
+        letter-spacing: -0.11px;
+        margin: 55px 0 45px;
+    }
+}
+
+.section-accordion {
+    .accordion {
+        padding-bottom: 75px;
+    }
+}
+
+.page-home {
+    header {
+        background-color: transparent;
+    }
+
+    .middle-content {
+        padding-top: 0;
+    }
+
+    .section-content-col {
+        padding-top: 141px;
+    }
+}
+
+.header-sticky {
+    header {
+        background-color: $white;
+    }
+}
+
+// Responsive css start
+@media (max-width:1600px) {
+    .section-intro-image {
+        .section-content-col {
+            h1 {
+                font-size: 63px;
+                line-height: 88px;
+            }
+
+            p {
+                font-size: 22px;
+                line-height: 35px;
+            }
+        }
+    }
+
+    .section-three-col-img-content {
+        h3 {
+            font-size: 20px;
+            margin: 40px 0 30px;
+        }
+    }
+}
+
+// 1600 end
+@media (max-width:1300px) {
+    .section-intro-image {
+        .section-content-col {
+            h1 {
+                font-size: 55px;
+                line-height: 80px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 31px;
+            }
+            .content {
+                &:before {
+                    height: 90px;
+                    margin: 25px auto;
+                }
+    
+                &:after {
+                    height: 90px;
+                    margin: 25px auto;
+                }
+            }
+        }
+    }
+
+    .section-three-col-img-content {
+        img {
+            max-width: 150px;
+        }
+    }
+}
+
+// 1300 end
+@media (max-width:1199px) {
+    .section-intro-image {
+        .section-content-col {
+            h1 {
+                font-size: 48px;
+                line-height: 1.4;
+            }
+        }
+    }
+    .section-three-col-img-content {
+        img {
+            max-width: 130px;
+        }
+    }
+}
+
+// 1199 end

@@ -1,0 +1,132 @@
+@import "../classes.scss";
+@import "../common.scss";
+@import "../components/chapter-content.scss";
+@import "../components/slider.scss";
+@import "../components/category.scss";
+@import "../components/image-content.scss";
+@import "../components/header.scss";
+@import "../components/footer.scss";
+
+
+.section-intro-image {
+    .col {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+
+    .section-image-content {
+        min-height: 650px;
+    }
+
+    .section-content-col {
+        position: relative;
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .page-title {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+}
+
+.section-location-info {
+    padding: 100px 0;
+
+    .container {
+        max-width: 880px;
+    }
+
+    h2 {
+        margin-bottom: 70px;
+    }
+
+    p+p {
+        margin-top: 25px;
+    }
+}
+
+.section-locations-listing {
+    .col-location {
+        position: relative;
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+
+    .stretched-link {
+        transition: background-color .3s ease-in-out;
+
+        &:hover {
+            background-color: $white;
+        }
+    }
+
+    .anchor-link {
+        background-color: $white;
+    }
+
+    .locations-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 710px;
+
+        h2 {
+            position: relative;
+            z-index: 1;
+            background-color: $white;
+            padding: 40px;
+        }
+    }
+}
+
+.section-stay-tuned {
+    padding: 100px 0;
+
+    .container {
+        max-width: 890px;
+    }
+
+    h3 {
+        font-size: 35px;
+        line-height: 50px;
+        margin-bottom: 55px;
+        text-transform: uppercase;
+        font-family: "Inter";
+        font-weight: 500;
+    }
+}
+
+// Responsive CSS start
+@media (max-width:1440px) {
+    .section-locations-listing {
+        .locations-image {
+            min-height: 600px;
+        }
+    }
+    .section-stay-tuned {
+        h3 {
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 35px;
+        }
+    }
+}
+
+// 1440 end
+@media (max-width:1199px) {
+    .section-intro-image {
+        .section-image-content {
+            min-height: 550px;
+        }
+    }
+
+    .section-location-info h2 {
+        margin-bottom: 40px;
+    }
+}
+
+// 1199 end

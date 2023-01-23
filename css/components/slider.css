@@ -1,0 +1,9 @@
+.home-image-content-slider .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.home-image-content-slider .slick-dots button {
+  background-color: transparent;
+  border: none;
+}

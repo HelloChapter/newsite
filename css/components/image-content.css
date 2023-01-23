@@ -1,0 +1,11 @@
+.section-image-content .col-img {
+  min-height: 580px;
+}
+.section-image-content h2 {
+  margin-bottom: 55px;
+}
+.section-image-content .content {
+  max-width: 510px;
+  padding: 0 15px;
+  margin: 0 auto;
+}

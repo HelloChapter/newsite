@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.07 10.72">
+  <defs>
+    <style>
+      .right-shift-1 {
+        fill: none;
+        stroke: #f1ece5;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <polyline class="right-shift-1" points=".35 .35 5.36 5.36 .35 10.37"/>
+  </g>
+</svg>
