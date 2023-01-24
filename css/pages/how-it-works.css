@@ -742,7 +742,7 @@ footer .col-news-letter button img {
 .process-list .list-heading:before {
   content: counter(a);
   margin-bottom: 0;
-  font-size: 23px;
+  font-size: 50px;
   font-weight: 300;
 }
 .process-list .list-heading h3 {
@@ -811,4 +811,43 @@ footer .col-news-letter button img {
 
 .section-images {
   padding: 140px 0 0;
+}
+
+@media (max-width: 1440px) {
+  .page-title {
+    max-width: 800px;
+  }
+  .process-list .list-heading::before {
+    font-size: 45px;
+  }
+  .process-list .list-heading h3 {
+    font-size: 20px;
+  }
+  .process-list .list-image {
+    width: 180px;
+    min-width: 180px;
+    height: 180px;
+  }
+  .section-images {
+    padding: 100px 0 0;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    padding: 0 30px;
+  }
+  .process-list .list-heading::before {
+    font-size: 40px;
+  }
+  .process-list .list-heading h3 {
+    font-size: 17px;
+  }
+  .process-list .list-image {
+    width: 160px;
+    min-width: 160px;
+    height: 160px;
+  }
+  .section-images {
+    padding: 70px 0 0;
+  }
 }

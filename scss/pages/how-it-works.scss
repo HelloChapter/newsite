@@ -8,23 +8,28 @@
 
 .page-how-it-works {
     background-color: $pearl-drop;
+
     header {
         background-color: transparent;
     }
+
     .section-client-success {
         padding: 50px 0;
     }
 }
+
 .header-sticky {
     header {
         background-color: $white;
     }
 }
+
 .section-accordion {
     .accordion {
         padding-bottom: 75px;
     }
 }
+
 .process-list {
     position: relative;
     text-align: left;
@@ -124,7 +129,7 @@
         &:before {
             content: counter(a);
             margin-bottom: 0;
-            font-size: 23px;
+            font-size: 50px;
             font-weight: 300;
         }
 
@@ -195,3 +200,55 @@
 .section-images {
     padding: 140px 0 0;
 }
+
+// Responsive CSS Start
+@media (max-width:1440px) {
+    .page-title {
+        max-width: 800px;
+    }
+    .process-list {
+        .list-heading {
+            &::before {
+                font-size: 45px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+        }
+        .list-image {
+         width: 180px;
+         min-width: 180px;
+         height: 180px;   
+        }
+    }
+    .section-images {
+        padding: 100px 0 0;
+    }
+}
+
+// 1440 end
+@media (max-width:1199px) {
+    .container {
+        padding: 0 30px;
+    }
+    .process-list {
+        .list-heading {
+            &::before {
+                font-size: 40px;
+            }
+            h3 {
+                font-size: 17px;
+            }
+        }
+        .list-image {
+         width: 160px;
+         min-width: 160px;
+         height: 160px;   
+        }
+    }
+    .section-images {
+        padding: 70px 0 0;
+    }
+}
+
+// 1199 end
