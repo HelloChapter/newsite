@@ -1,0 +1,18 @@
+.section-client-success {
+  padding: 95px 0 0;
+}
+.section-client-success .row {
+  margin-left: 20px;
+}
+.section-client-success .bg-image {
+  min-height: 520px;
+  max-width: 370px;
+  background-size: contain;
+  margin: 0 auto;
+}
+.section-client-success .content {
+  max-width: 470px;
+}
+.section-client-success h2 {
+  margin-bottom: 25px;
+}

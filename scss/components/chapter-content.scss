@@ -16,6 +16,9 @@
             -ms-transform: rotate(1turn);
             transform: rotate(1turn);
             transition: transform 3s;
+            &:hover {
+                transform: rotate(0);
+            }
         }
     }
 

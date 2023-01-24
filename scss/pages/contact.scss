@@ -1,6 +1,7 @@
 @import "../classes.scss";
 @import "../common.scss";
 @import "../components/form-elements.scss";
+@import "../components/client-sucess.scss";
 @import "../components/header.scss";
 @import "../components/footer.scss";
 
@@ -72,28 +73,6 @@
     }
 }
 
-.section-client-success {
-    padding: 95px 0 0;
-
-    .row {
-        margin-left: 20px;
-    }
-
-    .bg-image {
-        min-height: 520px;
-        max-width: 370px;
-        background-size: contain;
-        margin: 0 auto;
-    }
-
-    .content {
-        max-width: 470px;
-    }
-
-    h2 {
-        margin-bottom: 25px;
-    }
-}
 
 //Responsive CSS start
 @media (max-width:1440px) {

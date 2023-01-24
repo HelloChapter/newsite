@@ -158,6 +158,10 @@
   background-color: #D7C3B6;
 }
 
+.white-bg {
+  background-color: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -334,6 +338,10 @@ h2 {
   transition: transform 3s;
   transition: transform 3s, -webkit-transform 3s;
 }
+.section-chapter-content .spinner-wrapper img.small:hover {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
 
 .home-image-content-slider .slick-prev {
   display: none !important;
@@ -490,6 +498,10 @@ h2 {
   background-color: #D7C3B6;
 }
 
+.white-bg {
+  background-color: #ffffff;
+}
+
 header {
   padding: 36px 0 33px;
   -webkit-transition: background-color 0.3s, opacity 0.3s !important;
@@ -603,6 +615,10 @@ header .col-get-started a {
 
 .light-pink-bg {
   background-color: #D7C3B6;
+}
+
+.white-bg {
+  background-color: #ffffff;
 }
 
 footer {

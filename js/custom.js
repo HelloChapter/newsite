@@ -59,13 +59,14 @@ jQuery(document).ready(function ($) {
         slidesToShow: 2,
         slidesToScroll: 2,
         arrows: false,
-        speed: 800,
-        autoplaySpeed: 5000,
+        speed: 10000,
+        autoplaySpeed: 0,
         dots: false,
         centerMode: true,
         variableWidth: false,
         centerPadding: "250px",
         asNavFor: '.slider-nav',
+        cssEase: 'linear',
         responsive: [
             {
                 breakpoint: 768,
@@ -79,15 +80,17 @@ jQuery(document).ready(function ($) {
     $('.slider-nav').slick({
         asNavFor: '.review-slider',
         infinite: true,
+        autoplay:true,
         slidesToShow: 2,
         slidesToScroll: 2,
         arrows: false,
-        speed: 800,
-        autoplaySpeed: 3000,
+        speed: 10000,
+        autoplaySpeed: 0,
         dots: false,
         centerMode: true,
         variableWidth: false,
         centerPadding: "250px",
+        cssEase: 'linear',
     });
     // Review slider end
 
