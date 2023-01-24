@@ -1,0 +1,173 @@
+@import "../classes.scss";
+@import "../common.scss";
+@import "../components/header.scss";
+@import "../components/footer.scss";
+@import "../components/accordion.scss";
+
+.page-faq {
+    header {
+        background-color: transparent;
+    }
+
+    .middle-content {
+        padding-top: 0;
+    }
+}
+.header-sticky {
+    header {
+        background-color: $white;
+    }
+}
+.process-list {
+    position: relative;
+    text-align: left;
+    list-style: none;
+    counter-reset: a;
+    padding-top: 198px;
+    padding-bottom: 100px;
+}
+.process-list:before {
+    content: "";
+    width: 1px;
+    height: 102%;
+    background-color: #000;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.process-list li:after {
+    content: url('../../images/how-it-works/process-graphic.svg');
+    display: block;
+    width: 46%;
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -1;
+}
+.process-list li:nth-child(2n):before {
+    content: url('../../images/how-it-works/process-graphic-dark.svg');
+    display: block;
+    width: 46%;
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -1;
+}
+.process-list li:nth-child(2n):after {
+    top: 50%;
+}
+.process-list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    counter-increment: a;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    z-index: 44;
+}
+.process-list .list-heading {
+    width: 49%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+}
+.process-list .list-heading:before {
+    content: counter(a);
+    margin-bottom: 0;
+}
+.process-list .list-image {
+    width: 205px;
+    min-width: 205px;
+    height: 205px;
+    border-radius: 50%;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    margin-right: 51px;
+}
+.process-list li:nth-child(2n) .list-image {
+    margin-right: 0;
+    margin-left: 45px;
+}
+.image-fit, .richtext-entry .richtext__image {
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: 50%;
+}
+.image-fit img, .richtext-entry .richtext__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.process-list .list-heading h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.process-list .list-heading h3:before {
+    content: "";
+    margin: 0 15px;
+    width: 110px;
+    height: 1px;
+    background-color: #000;
+    display: block;
+}
+.process-list .list-content {
+    width: 45.7%;
+    line-height: 1.8;
+    font-weight: 300;
+    position: relative;
+    z-index: 44;
+}
+.process-list .list-content p {
+    max-width: 420px;
+}
+.process-list li:nth-child(2n) .list-heading, .process-list li:nth-child(2n) .list-heading h3 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+.process-list li:nth-child(2n) .list-heading {
+    text-align: right;
+}
+.process-list li:nth-child(2n) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+.process-list li + li {
+    margin-top: 60px;
+}
