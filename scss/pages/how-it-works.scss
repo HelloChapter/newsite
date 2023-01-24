@@ -30,7 +30,7 @@
     }
 }
 
-.process-list {
+.icons-list-group {
     position: relative;
     text-align: left;
     list-style: none;
@@ -207,7 +207,7 @@
         max-width: 800px;
     }
 
-    .process-list {
+    .icons-list-group {
         .list-heading {
             &::before {
                 font-size: 45px;
@@ -236,7 +236,7 @@
         padding: 0 30px;
     }
 
-    .process-list {
+    .icons-list-group {
         .list-heading {
             &::before {
                 font-size: 40px;
@@ -261,7 +261,7 @@
 
 // 1199 end
 @media (max-width:1023px) {
-    .process-list {
+    .icons-list-group {
         padding: 0;
 
         &::before {
@@ -334,7 +334,7 @@
 
 // 1023 end
 @media (max-width:767px) {
-    .process-list {
+    .icons-list-group {
         .list-image {
             width: 90px;
             min-width: 90px;
