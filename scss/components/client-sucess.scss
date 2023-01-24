@@ -20,3 +20,30 @@
         margin-bottom: 25px;
     }
 }
+
+// Responsive CSS start
+@media (max-width:767px) {
+    .section-client-success {
+        .row {
+            margin: 0 -15px;
+
+            .col {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+            .col-content {
+                order: 0; 
+                text-align: center;
+                padding-bottom: 25px;
+            }
+            .col-image {
+                order: 1;
+            }
+        }
+        .content {
+            max-width: 100%;
+        }
+    }
+}
+
+// 767 end

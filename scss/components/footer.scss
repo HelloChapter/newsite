@@ -101,3 +101,26 @@ footer {
 }
 
 // 1440 end
+@media (max-width:1023px) {
+    footer {
+        padding: 30px 0;
+        .col-news-letter {
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding-top: 30px;
+            form {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            .form-control  {
+                height: 40px;
+            }
+            button {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+}
+
+// 1023 end

@@ -206,21 +206,25 @@
     .page-title {
         max-width: 800px;
     }
+
     .process-list {
         .list-heading {
             &::before {
                 font-size: 45px;
             }
+
             h3 {
                 font-size: 20px;
             }
         }
+
         .list-image {
-         width: 180px;
-         min-width: 180px;
-         height: 180px;   
+            width: 180px;
+            min-width: 180px;
+            height: 180px;
         }
     }
+
     .section-images {
         padding: 100px 0 0;
     }
@@ -231,24 +235,112 @@
     .container {
         padding: 0 30px;
     }
+
     .process-list {
         .list-heading {
             &::before {
                 font-size: 40px;
             }
+
             h3 {
                 font-size: 17px;
             }
         }
+
         .list-image {
-         width: 160px;
-         min-width: 160px;
-         height: 160px;   
+            width: 160px;
+            min-width: 160px;
+            height: 160px;
         }
     }
+
     .section-images {
         padding: 70px 0 0;
     }
 }
 
 // 1199 end
+@media (max-width:1023px) {
+    .process-list {
+        padding: 0;
+
+        &::before {
+            display: none;
+        }
+
+        .list-image {
+            margin-right: 20px;
+        }
+
+        li {
+            display: block;
+
+            +li {
+                margin-top: 30px;
+            }
+
+            &:after {
+                top: 5%;
+                -webkit-transform: unset;
+                -ms-transform: unset;
+                transform: unset;
+                left: auto;
+                right: 0;
+            }
+
+            &:nth-child(2n):before {
+                top: 3%;
+                -webkit-transform: unset;
+                -ms-transform: unset;
+                transform: unset;
+                left: 0;
+            }
+            &:nth-child(2n):after {
+                display: none;
+            }
+            &:nth-child(2n) .list-content {
+                width: 100%;
+                text-align: right;
+            }
+        }
+        .list-heading {
+            width: 100%;
+            margin-bottom: 20px;
+            &:before {
+                font-size: 25px;
+            }
+            h3 {
+                max-width: 210px;
+                &::before {
+                    width: 25px;
+                }
+            }
+        }
+        .list-content {
+            width: 100%;
+        }
+    }
+
+    .page-title {
+        margin-bottom: 40px;
+    }
+    .section-images {
+        padding-bottom: 40px;
+    }
+    .section-accordion .accordion {
+        padding-bottom: 40px;
+    }
+}
+
+// 1023 end
+@media (max-width:767px) {
+    .process-list {
+        .list-image {
+            width: 90px;
+            min-width: 90px;
+            height: 90px;
+        }   
+    }
+}
+
+// 767 end

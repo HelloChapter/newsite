@@ -60,10 +60,21 @@
 @media (max-width:1440px) {
     .section-accordion {
         button {
-            font-size: 15x;
+            font-size: 15px;
             line-height: 70px;
         }
     }
 }
 
 // 1440 end
+@media (max-width:1023px) {
+    .section-accordion {
+        padding: 60px 0;
+        button {
+            font-size: 14px;
+            line-height: 50px;
+        }
+    }
+}
+
+// 1023 end
