@@ -2,7 +2,7 @@ jQuery(document).ready(function ($) {
     // Header sticky
     jQuery(window).scroll(function () {
         var scroll = jQuery(window).scrollTop();
-        if (scroll >= 20) {
+        if (scroll >= 15) {
             jQuery("body").addClass("header-sticky");
         } else {
             jQuery("body").removeClass("header-sticky");
@@ -26,6 +26,9 @@ jQuery(document).ready(function ($) {
         }
     });
     // Counter number js end
+    $(".menu-btn-toggle").click(function () {
+        $("body").toggleClass("header-open");
+    });
     $(".accordion .card .card-content").css(
         "display",
         "none"
@@ -56,11 +59,11 @@ jQuery(document).ready(function ($) {
     $('.review-slider').slick({
         infinite: true,
         autoplay:true,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 2,
         arrows: false,
         speed: 10000,
-        autoplaySpeed: 0,
+        autoplaySpeed: 1000,
         dots: false,
         centerMode: true,
         variableWidth: false,
@@ -69,10 +72,14 @@ jQuery(document).ready(function ($) {
         cssEase: 'linear',
         responsive: [
             {
+                breakpoint: 1199,
+                settings: {
+                    centerPadding: '150px',
+                },
                 breakpoint: 768,
                 settings: {
                     centerPadding: '40px',
-                    slidesToShow: 1
+                    slidesToShow: 2
                 }
             }
         ]
@@ -81,16 +88,29 @@ jQuery(document).ready(function ($) {
         asNavFor: '.review-slider',
         infinite: true,
         autoplay:true,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 2,
         arrows: false,
         speed: 10000,
-        autoplaySpeed: 0,
+        autoplaySpeed: 1000,
         dots: false,
         centerMode: true,
         variableWidth: false,
         centerPadding: "250px",
         cssEase: 'linear',
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    centerPadding: '150px',
+                },
+                breakpoint: 768,
+                settings: {
+                    centerPadding: '40px',
+                    slidesToShow: 2
+                }
+            }
+        ]
     });
     // Review slider end
 

@@ -47,9 +47,16 @@
     }
 
     .slider-nav {
+        .slider-item-wrap {
+            padding: 0 30px;
+            .slider-item {
+                padding: 0;
+            }
+        }
         .slider-item {
             background-color: $text-color;
             height: 1px;
+            width: 100%;
         }
     }
 }
