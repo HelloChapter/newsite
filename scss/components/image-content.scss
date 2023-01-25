@@ -57,4 +57,23 @@
     }
 }
 
-// 1023end
+// 1023 end
+@media (max-width:767px) {
+    .section-image-content {
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+        .col-img {
+            min-height: 100%;
+            padding-bottom: 75%;
+            order: 1;
+        }
+        .content {
+            margin: 0;
+            padding:40px 20px ;
+        }
+    }
+}
+
+// 1023 end

@@ -60,33 +60,64 @@
             overflow: hidden;
         }
     }
+
     .col-img-content {
         .content {
             padding: 0 22%;
             max-width: 100%;
         }
+
         .link-text {
             padding-top: 60px;
         }
     }
 }
+
 // Responsive css start
 @media (max-width:1600px) {
     .home-image-content-slider {
         .slick-dots {
             bottom: 32%;
-        }       
+        }
     }
 }
+
 // 1600 end
 @media (max-width:1199px) {
     .home-image-content-slider {
         .slick-dots {
             bottom: 35%;
         }
+
         .col-img-content .content {
             padding-right: 30px;
-        }       
+        }
     }
 }
+
+// 1199 end
+@media (max-width:767px) {
+    .home-image-content-slider {
+        .slick-dots {
+            bottom: 52%;
+            left: 20px;
+        }
+
+        .col-img-content {
+            .content {
+                padding: 60px 20px 40px;
+
+                .link-text {
+                    padding-top: 0;
+                }
+            }
+        }
+
+        .slick-next {
+            left: 20px;
+            top: 35px;
+        }
+    }
+}
+
 // 1199 end

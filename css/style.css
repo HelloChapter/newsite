@@ -480,7 +480,7 @@ header .col-get-started a {
     top: 40px;
     padding: 5px;
     right: 25px;
-    z-index: 999;
+    z-index: 9999;
   }
   header .menu-btn-toggle span {
     display: block;
@@ -519,6 +519,7 @@ header .col-get-started a {
     position: fixed;
     top: 40px;
     right: 30px;
+    z-index: 999;
   }
   header .contact-url {
     padding-right: 50px;
@@ -586,6 +587,9 @@ header .col-get-started a {
   }
 }
 @media (max-width: 767px) {
+  header nav {
+    width: 100%;
+  }
   header .container {
     padding: 0 20px;
   }

@@ -21,6 +21,8 @@
         width: 100%;
         text-align: left;
         position: relative;
+        padding-right: 70px;
+        color: $text-color;
 
         &:after {
             content: "";
@@ -70,9 +72,19 @@
 @media (max-width:1023px) {
     .section-accordion {
         padding: 60px 0;
+
         button {
             font-size: 14px;
-            line-height: 50px;
+            line-height: 1.4;
+            padding: 17px 50px 17px 0;
+
+            &:after {
+                right: 20px;
+            }
+        }
+
+        .card-content {
+            padding-right: 30px;
         }
     }
 }

@@ -98,4 +98,20 @@
     
     }
 }
-// 1300 end
+// 1199 end
+@media (max-width:1023px) {
+    .section-reviews {
+        padding: 60px 0;
+        .section-title {
+            padding-bottom: 50px;
+        }
+        .review-slider {
+            padding-top: 50px;
+        }
+        h3 {
+            font-size: 24px;
+            line-height: 1.2;
+        }
+    }
+}
+// 1023 end

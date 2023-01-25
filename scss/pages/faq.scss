@@ -59,3 +59,27 @@
         }
     }
 }
+// Responsive CSS end
+@media (max-width:767px) {
+    .page-faq {
+        .middle-content {
+            padding-top: 111px;
+        }
+    }
+    .section-intro-image {
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+    
+        .section-image-content {
+            min-height: 300px;
+            order: 1;
+            padding-bottom: 75%;
+        }
+    }
+    .section-get-back {
+        padding: 60px 0;
+    }
+}
+// 767 end

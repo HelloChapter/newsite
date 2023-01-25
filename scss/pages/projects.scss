@@ -4,26 +4,11 @@
 @import "../components/footer.scss";
 @import "../components/slider.scss";
 @import "../components/chapter-content.scss";
+@import "../components/category.scss";
 @import "../components/image-content.scss";
 .page-projects {
     header {
         border-bottom: 0.5px solid $black;
-    }
-}
-.section-project-category {
-    padding: 5px 0;
-    ul {
-        display: flex;
-        justify-content: center;
-        li {
-            padding: 0 25px;
-        }
-        a {
-            font-size: 17px;
-            line-height: 50px;
-            font-weight: 400;
-            color: $text-color;
-        }
     }
 }
 .section-full-image {
@@ -46,3 +31,27 @@
         min-height: 100vh;
     }
 }
+// Responsive start
+@media (max-width:1023px) {
+    .section-full-image {
+        min-height: 700px;
+    }
+    .section-project-info {
+        padding: 60px 0;
+    }
+    .section-single-heading {
+        padding: 60px 0;
+    }
+}
+// 1023 end
+@media (max-width:767px) {
+    .section-full-image {
+        min-height: 300px;
+        padding-bottom: 75%;
+    }
+    .section-two-full-img-layout .bg-image {
+        min-height: 300px;
+        padding-bottom: 75%;
+    }
+}
+// 767 end
