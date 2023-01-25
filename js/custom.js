@@ -58,7 +58,7 @@ jQuery(document).ready(function ($) {
     // Home slider end
     $('.review-slider').slick({
         infinite: true,
-        autoplay:true,
+        autoplay: true,
         slidesToShow: 3,
         slidesToScroll: 2,
         arrows: false,
@@ -66,20 +66,22 @@ jQuery(document).ready(function ($) {
         autoplaySpeed: 1000,
         dots: false,
         centerMode: true,
-        variableWidth: false,
+        variableWidth: true,
         centerPadding: "250px",
         asNavFor: '.slider-nav',
         cssEase: 'linear',
         responsive: [
             {
-                breakpoint: 1199,
+                breakpoint: 991,
                 settings: {
                     centerPadding: '150px',
-                },
+                }
+            },
+            {
                 breakpoint: 768,
                 settings: {
                     centerPadding: '40px',
-                    slidesToShow: 2
+                    slidesToShow: 2,
                 }
             }
         ]
@@ -87,7 +89,7 @@ jQuery(document).ready(function ($) {
     $('.slider-nav').slick({
         asNavFor: '.review-slider',
         infinite: true,
-        autoplay:true,
+        autoplay: true,
         slidesToShow: 3,
         slidesToScroll: 2,
         arrows: false,
@@ -95,19 +97,21 @@ jQuery(document).ready(function ($) {
         autoplaySpeed: 1000,
         dots: false,
         centerMode: true,
-        variableWidth: false,
+        variableWidth: true,
         centerPadding: "250px",
         cssEase: 'linear',
         responsive: [
             {
-                breakpoint: 1199,
+                breakpoint: 991,
                 settings: {
                     centerPadding: '150px',
-                },
+                }
+            },
+            {
                 breakpoint: 768,
                 settings: {
                     centerPadding: '40px',
-                    slidesToShow: 2
+                    slidesToShow: 2,
                 }
             }
         ]

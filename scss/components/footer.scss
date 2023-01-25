@@ -104,17 +104,21 @@ footer {
 @media (max-width:1023px) {
     footer {
         padding: 30px 0;
+
         .col-news-letter {
             max-width: 100%;
             flex: 0 0 100%;
             padding-top: 30px;
+
             form {
                 max-width: 400px;
                 margin: 0 auto;
             }
-            .form-control  {
+
+            .form-control {
                 height: 40px;
             }
+
             button {
                 height: 40px;
                 width: 40px;
@@ -124,3 +128,52 @@ footer {
 }
 
 // 1023 end
+@media (max-width:767px) {
+    footer {
+        .col-footer-logo {
+            max-width: 100px;
+            flex: 0 0 100%;
+        }
+
+        .footer-logo {
+            margin-right: 0;
+            width: 100%;
+
+            img {
+                max-width: 57px;
+            }
+        }
+    }
+}
+
+// 767 end
+@media (max-width:479px) {
+    footer {
+        .col-footer-logo {
+            padding-bottom: 20px;
+        }
+
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        ul {
+            li {
+                margin-bottom: 10px;
+
+                li {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .col-news-letter {
+            h6 {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+// 479 end

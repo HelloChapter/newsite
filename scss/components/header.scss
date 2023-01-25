@@ -293,3 +293,24 @@ header {
 }
 
 // 1023 end
+@media (max-width:767px) {
+    header {
+        .container {
+            padding: 0 20px;
+        }
+        .col-logo {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+        .logo {
+            img {
+                max-width: 120px;
+            }
+        }
+        .contact-url {
+            padding-right: 40px;
+        }
+    }
+}
+
+// 767 end
