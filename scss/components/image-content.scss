@@ -46,3 +46,15 @@
 }
 
 // 1199end
+@media (max-width:1023px) {
+    .section-image-content {
+        .col-img {
+            min-height: 400px;
+        }
+        h2 {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+// 1023end

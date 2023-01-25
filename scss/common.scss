@@ -186,6 +186,9 @@ h2 {
 
 // 1199 end
 @media (max-width:1023px) {
+    .container {
+        padding: 0 20px;
+    }
     h2 {
         font-size: 25px;
     }
@@ -199,9 +202,7 @@ h2 {
 
 // 1199 end
 @media (max-width:767px) {
-    .container {
-        padding: 0 20px;
-    }
+    
 }
 
 // 767 end

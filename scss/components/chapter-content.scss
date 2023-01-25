@@ -4,6 +4,7 @@
     img {
         max-width: 58px;
         margin-bottom: 20px;
+        opacity: 1 !important;
     }
 
     h2 {
@@ -16,10 +17,21 @@
             -ms-transform: rotate(1turn);
             transform: rotate(1turn);
             transition: transform 3s;
+
             &:hover {
                 transform: rotate(0);
             }
         }
     }
 
+}
+
+// Responsive CSS start
+@media (max-width:1023px) {
+    .section-chapter-content {
+        padding: 60px 0;
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
 }

@@ -128,7 +128,34 @@
                 }
             }
         }
+        .section-title {
+            h3 {
+                font-size: 20px;
+            }
+        }
     }
 }
 
 // 1199 end
+@media (max-width:1023px) {
+    .section-chapter-numbers {
+        padding: 60px 0 45px;
+        .container {
+            max-width: 860px;
+        }
+        .row {
+            white-space: nowrap;
+            .col {
+                padding-bottom: 15px;
+            }
+        }
+        .section-title {
+            padding-bottom: 40px;
+            h3 {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// 1023 end

@@ -196,6 +196,9 @@ header {
         .col-get-started {
             max-width: 160px;
             flex: 0 0 160px;
+            position: fixed;
+            top: 40px;
+            right: 30px;
         }
 
         .contact-url {

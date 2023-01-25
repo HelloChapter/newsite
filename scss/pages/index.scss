@@ -186,12 +186,13 @@
                 font-size: 18px;
                 line-height: 31px;
             }
+
             .content {
                 &:before {
                     height: 90px;
                     margin: 25px auto;
                 }
-    
+
                 &:after {
                     height: 90px;
                     margin: 25px auto;
@@ -215,8 +216,15 @@
                 font-size: 48px;
                 line-height: 1.4;
             }
+
+            .content {
+                &:before,&:after {
+                    height: 60px;
+                }
+            }
         }
     }
+
     .section-three-col-img-content {
         img {
             max-width: 130px;
@@ -225,3 +233,49 @@
 }
 
 // 1199 end
+@media (max-width:1023px) {
+    .section-intro-image {
+        padding: 10px 0 0;
+
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .section-image-content {
+            order: 1;
+            min-height: 600px;
+        }
+
+        .section-content-col {
+            padding-top: 100px;
+
+            h1 {
+                font-size: 42px;
+                margin-bottom: 20px;
+            }
+
+            .section-graphic-img {
+                width: 350px;
+            }
+        }
+    }
+    .section-start {
+        padding: 60px 0;
+        .container {
+            h2 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .section-three-col-img-content {
+        padding: 60px 0;
+    }
+    .section-accordion {
+        .accordion {
+            padding-bottom: 40px;
+        }
+    }
+}
+
+// 1023 end
