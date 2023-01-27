@@ -7,7 +7,7 @@
 
 
 .page-how-it-works {
-    background-color: $pearl-drop;
+    background-color: #f9f4ed;
 
     header {
         background-color: transparent;
@@ -94,7 +94,6 @@
 
         &:nth-child(2n) .list-heading,
         &:nth-child(2n) .list-heading h3 {
-            ;
             flex-direction: row-reverse;
         }
 

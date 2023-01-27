@@ -143,19 +143,19 @@
   font-display: swap;
 }
 .pearl-bg {
-  background-color: #F0EBE4;
+  background-color: #F3e3d8;
 }
 
 .pearl-bg2 {
-  background-color: #F1ECE5;
+  background-color: #Faf5ee;
 }
 
 .dawn-pink-bg {
-  background-color: #E9D9CE;
+  background-color: #c1a59a;
 }
 
 .light-pink-bg {
-  background-color: #D7C3B6;
+  background-color: #e1cdc0;
 }
 
 .white-bg {
@@ -171,7 +171,7 @@
 
 body {
   font-family: "Inter";
-  color: #221F1F;
+  color: #231F20;
   font-size: 17px;
   line-height: 30px;
   letter-spacing: -0.12px;
@@ -225,7 +225,7 @@ img {
   text-decoration: underline;
   text-transform: uppercase;
   font-weight: 500;
-  color: #221F1F;
+  color: #231F20;
 }
 
 textarea {
@@ -332,19 +332,19 @@ h2 {
   }
 }
 .pearl-bg {
-  background-color: #F0EBE4;
+  background-color: #F3e3d8;
 }
 
 .pearl-bg2 {
-  background-color: #F1ECE5;
+  background-color: #Faf5ee;
 }
 
 .dawn-pink-bg {
-  background-color: #E9D9CE;
+  background-color: #c1a59a;
 }
 
 .light-pink-bg {
-  background-color: #D7C3B6;
+  background-color: #e1cdc0;
 }
 
 .white-bg {
@@ -391,10 +391,10 @@ header nav ul li {
   padding: 0 20px;
 }
 header nav a {
-  font-size: 17px;
+  font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: #221F1F;
+  color: #231F20;
   letter-spacing: -0.16px;
   padding: 5px 3px;
   display: block;
@@ -404,7 +404,10 @@ header nav a {
   transition: border-color 0.25s;
 }
 header nav a:hover {
-  border-color: #221F1F;
+  border-color: #231F20;
+}
+header nav .active {
+  font-style: italic;
 }
 header .col-get-started {
   max-width: 200px;
@@ -413,9 +416,9 @@ header .col-get-started {
           flex: 0 0 200px;
 }
 header .col-get-started a {
-  font-size: 17px;
+  font-size: 14px;
   line-height: 30px;
-  color: #221F1F;
+  color: #231F20;
   text-decoration: underline;
   letter-spacing: 0px;
   text-transform: uppercase;
@@ -484,7 +487,7 @@ header .col-get-started a {
   }
   header .menu-btn-toggle span {
     display: block;
-    background-color: #221F1F;
+    background-color: #231F20;
     width: 24px;
     height: 2px;
     border-radius: 44px;
@@ -607,19 +610,19 @@ header .col-get-started a {
   }
 }
 .pearl-bg {
-  background-color: #F0EBE4;
+  background-color: #F3e3d8;
 }
 
 .pearl-bg2 {
-  background-color: #F1ECE5;
+  background-color: #Faf5ee;
 }
 
 .dawn-pink-bg {
-  background-color: #E9D9CE;
+  background-color: #c1a59a;
 }
 
 .light-pink-bg {
-  background-color: #D7C3B6;
+  background-color: #e1cdc0;
 }
 
 .white-bg {
@@ -628,7 +631,7 @@ header .col-get-started a {
 
 footer {
   width: 100%;
-  background-color: #221F1F;
+  background-color: #231F20;
   padding: 60px 0 50px;
   color: #ffffff;
 }
@@ -638,7 +641,7 @@ footer .footer-logo {
 }
 footer a {
   color: #ffffff;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 21px;
   letter-spacing: -0.12px;

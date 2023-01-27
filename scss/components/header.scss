@@ -43,7 +43,7 @@ header {
         }
 
         a {
-            font-size: 17px;
+            font-size: 14px;
             line-height: 21px;
             font-weight: 400;
             color: $text-color;
@@ -60,6 +60,9 @@ header {
                 border-color: $text-color;
             }
         }
+        .active {
+            font-style: italic;
+        }
     }
 
     .col-get-started {
@@ -67,7 +70,7 @@ header {
         flex: 0 0 200px;
 
         a {
-            font-size: 17px;
+            font-size: 14px;
             line-height: 30px;
             color: $text-color;
             text-decoration: underline;

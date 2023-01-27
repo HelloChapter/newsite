@@ -5,11 +5,27 @@
         margin-left: 20px;
     }
 
-    .bg-image {
-        min-height: 520px;
+    .phone-graphic-img {
         max-width: 370px;
-        background-size: contain;
+        flex: 0 0 370px;
+        padding: 0;
+        background-color: $text-color;
+        border-radius: 3vw;
+        min-height: 733px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .bg-image {
+        max-width: 370px;
+        background-size: cover;
         margin: 0 auto;
+        min-width: 270px;
+        min-height: calc(733px - 25px);
+        width: calc(100% - 25px);
+        background-color: $text-color;
+        border-radius: 3vw;
     }
 
     .content {
@@ -22,6 +38,19 @@
 }
 
 // Responsive CSS start
+@media (max-width:1023px) {
+    .section-client-success {
+        .phone-graphic-img {
+            min-height: 670px;
+        }
+
+        .bg-image {
+            min-height: calc(645px - 25px);
+        }
+    }
+}
+
+// 1023 end
 @media (max-width:767px) {
     .section-client-success {
         .row {
@@ -31,17 +60,24 @@
                 max-width: 100%;
                 flex: 0 0 100%;
             }
+
             .col-content {
-                order: 0; 
+                order: 0;
                 text-align: center;
                 padding-bottom: 25px;
             }
+
             .col-image {
                 order: 1;
             }
         }
+
         .content {
             max-width: 100%;
+        }
+
+        .phone-graphic-img {
+            margin: 0 auto;
         }
     }
 }
