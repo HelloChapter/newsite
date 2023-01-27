@@ -36,6 +36,7 @@
     }
 }
 .page-content {
+    word-break: break-all;
     .middle-content {
         padding-top: 0;
     }
@@ -48,3 +49,13 @@
         background-color: $white;
     }
 }
+// Responsive end
+@media (max-width:1023px) {
+    .section-content-heading {
+        padding: 130px 0 80px;
+    }
+    .section-main-content {
+        padding: 60px 0;
+    }
+}
+// 1023 end

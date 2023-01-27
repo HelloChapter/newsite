@@ -287,6 +287,11 @@
         }
 
         .team-wrapper {
+            .col-team {
+                max-width: 33.33%;
+                flex: 0 0 33.33%;
+            }
+
             .team-content {
                 padding: 15px;
 
@@ -340,3 +345,97 @@
 }
 
 // 1100 end
+@media (max-width:1023px) {
+    .section-intro-image {
+        padding: 100px 0 0;
+
+        .bg-image {
+            min-height: 600px;
+        }
+
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .section-image-content {
+            order: 1;
+        }
+
+        .section-content-col {
+            h4 {
+                font-size: 28px;
+            }
+
+            .content:before {
+                height: 40px;
+            }
+        }
+    }
+
+    .section-intro-content {
+        padding: 140px 0 60px;
+    }
+
+    .section-welcome-text {
+        padding: 60px 20px;
+         h3 {
+            font-size: 25px;
+         }
+    }
+
+    .section-team-members {
+        .section-title {
+            padding: 60px 20px;
+        }
+
+        .team-image {
+            .team-content {
+                display: none !important;
+            }
+        }
+
+        .team-content.desktop-hide {
+            visibility: visible;
+            display: block;
+            transition: none;
+            padding: 20px;
+        }
+
+        .col-team {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+// 1023 end
+@media (max-width:767px) {
+    .section-intro-content {
+        .content-wrap {
+            .col {
+                max-width: 100%;
+                flex: 0 0 100%;
+                padding-bottom: 20px;
+            }
+        }
+        .row .col+.col .content {
+            margin: 0;
+        }
+    }
+    .section-intro-image .bg-image {
+        min-height: 400px;
+    }
+    .section-team-members .team-wrapper .col-team {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+}
+
+//767 end
+@media (max-width:575px) {
+    .section-team-members .team-wrapper .col-team {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+// 575 end

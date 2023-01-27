@@ -52,7 +52,7 @@ jQuery(document).ready(function ($) {
         arrows: true,
         speed: 800,
         autoplaySpeed: 3000,
-        dots: true,
+        dots: false,
 
     });
     // Home slider end

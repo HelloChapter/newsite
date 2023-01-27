@@ -238,6 +238,9 @@ header {
 
                     a {
                         padding: 0;
+                         &:hover {
+                            border-color: transparent;
+                         }
                     }
                 }
             }
