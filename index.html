@@ -478,7 +478,7 @@
             </div>
           </section>
           <!-- Section reviews end -->
-          <section class="section-accordion light-pink-bg">
+          <section class="section-accordion light-pink-bg" data-aos="fade">
             <div class="container">
               <div class="section-title text-center">
                 <h2>FAQs</h2>
@@ -584,7 +584,7 @@
             </div>
           </section>
           <!-- Accordion end -->
-          <section class="section-chapter-content pearl-bg aos-init aos-animate"
+          <section class="section-chapter-content pearl-bg"
             data-aos="fade">
             <div class="container text-center">
               <h2>What Chapter are you in?</h2>
@@ -693,9 +693,12 @@
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/custom.js"></script>
     <script>
-     AOS.init({
+      $(document).ready(function(){
+        AOS.init({
          duration: 1200,
      })
+      })
+     
     </script>
   </body>
 </html>
