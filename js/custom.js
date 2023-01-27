@@ -1,4 +1,8 @@
 jQuery(document).ready(function ($) {
+    AOS.init({
+        duration: 1200,
+    })
+    // Aos Animate
     // Header sticky
     jQuery(window).scroll(function () {
         var scroll = jQuery(window).scrollTop();
