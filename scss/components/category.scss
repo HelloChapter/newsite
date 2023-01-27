@@ -1,5 +1,11 @@
 .section-project-category {
     padding: 5px 15px;
+    position: sticky;
+    top: 105px;
+    left: 0;
+    background-color: $white;
+    z-index: 9;
+    width: 100%;
 
     ul {
         display: flex;
@@ -17,10 +23,11 @@
         }
     }
 }
+
 // Responsive CSS start
 @media (max-width:1440px) {
     .section-project-category {
-        ul {  
+        ul {
             a {
                 font-size: 14px;
                 line-height: 40px;
@@ -28,4 +35,17 @@
         }
     }
 }
+
 // 1440 end
+@media (max-width:1023px) {
+    .section-project-category {
+        top: 100px;
+    }
+}
+// 1023 end
+@media (max-width:767px) {
+    .section-project-category {
+        top: 96px;
+    }
+}
+// 767 end
