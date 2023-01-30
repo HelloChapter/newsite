@@ -688,11 +688,13 @@
             var text = ["ON THE MOVE", "MOVING UP", "ABLE TO", "ALWAYS WANTED TO","BEEN DREAMING","READY" ];
             var counter = 0;
             var elem = document.getElementById("changeText");
-            var inst = setInterval(change, 1100);
-
+            var inst = setInterval(change, 1200);
             function change() {
             elem.innerHTML = text[counter];
             counter++;
+            $("#changeText").fadeOut('slow');
+            $("#changeText").fadeIn('slow');
+
             if (counter >= text.length) {
                 counter = 0;
                 // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle

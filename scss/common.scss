@@ -60,10 +60,37 @@ img {
 .link-text {
     a {
         line-height: 50px;
-        text-decoration: underline;
+        text-decoration: none;
         text-transform: uppercase;
         font-weight: 500;
         color: $text-color;
+        position: relative;
+        display: inline-block;
+
+        &:after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: #221f1f;
+            border-radius: 44px;
+            display: block;
+            -webkit-transition: -webkit-transform .3s;
+            transition: -webkit-transform .3s;
+            -o-transition: transform .3s;
+            transition: transform .3s;
+            transform-origin: center;
+            position: absolute;
+            bottom: 13px;
+            left: 0;
+        }
+
+        &:hover {
+            &:after {
+                -webkit-transform: scaleX(.8);
+                -ms-transform: scaleX(.8);
+                transform: scaleX(.8);
+            }
+        }
     }
 }
 
@@ -189,6 +216,7 @@ h2 {
     .container {
         padding: 0 20px;
     }
+
     h2 {
         font-size: 25px;
     }
@@ -201,8 +229,6 @@ h2 {
 }
 
 // 1199 end
-@media (max-width:767px) {
-    
-}
+@media (max-width:767px) {}
 
 // 767 end
