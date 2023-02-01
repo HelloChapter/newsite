@@ -32,17 +32,31 @@
         content: "";
         width: 100%;
         height: 1px;
-        margin-top: 10px;
         background-color: $black;
         display: block;
         transform: scaleX(0);
         transition: transform 1s 1s;
         transform-origin: left;
     }
-
+    &.error{
+        &:after {
+            background-color: $red;
+        }
+        .form-control::placeholder,
+        .form-control::-webkit-input-placeholder,
+        .form-control::-ms-input-placeholder,
+        .form-control:-ms-input-placeholder,
+        .form-control::-moz-placeholder,
+        .form-control:-moz-placeholder {
+            color: $red;
+        }
+        .form-control {
+            color: $red;
+        }
+    }
     .form-control {
         border: none;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
 }
 
