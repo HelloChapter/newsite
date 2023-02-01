@@ -64,6 +64,13 @@
     .middle-content {
         padding-top: 0;
     }
+    p {
+        margin-bottom: 16px;
+    }
+    h4 {
+        font-size: 29px;
+        margin-bottom: 16px;
+    }
 }
 
 .section-blog-heading {
@@ -91,7 +98,11 @@
 }
 
 .section-content {
-    padding: 70px 0;
+    padding: 40px 0;
+    h5 {
+        font-size: 20px;
+        margin: 14px 0;
+    }
 }
 
 .section-heading {
@@ -108,11 +119,15 @@
 }
 
 .section-back-to-article {
-    padding-bottom: 100px;
+    padding:40px 0 100px;
 }
 
 .section-full-image {
-    padding: 90px 0;
+    padding: 40px 0;
+}
+.content-full-image {
+    padding: 20px 0;
+    text-align: center;
 }
 
 .header-sticky {
