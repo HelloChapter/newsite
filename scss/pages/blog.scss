@@ -34,7 +34,7 @@
         }
 
         h5 {
-            font-size: 30px;
+            font-size: 24px;
             line-height: 1;
             margin-bottom: 17px;
         }
@@ -64,6 +64,21 @@
     .middle-content {
         padding-top: 0;
     }
+    p {
+        margin-bottom: 16px;
+    }
+    h4 {
+        font-size: 29px;
+        margin-bottom: 16px;
+    }
+    h6 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    ul, ol {
+        padding-left: 22px;
+        margin-bottom: 12px;
+    }
 }
 
 .section-blog-heading {
@@ -91,7 +106,18 @@
 }
 
 .section-content {
-    padding: 70px 0;
+    padding: 40px 0;
+    h5 {
+        font-size: 20px;
+        margin: 14px 0;
+    }
+    a {
+        color: $text-color;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 .section-heading {
@@ -108,11 +134,15 @@
 }
 
 .section-back-to-article {
-    padding-bottom: 100px;
+    padding:40px 0 100px;
 }
 
 .section-full-image {
-    padding: 90px 0;
+    padding: 40px 0;
+}
+.content-full-image {
+    padding: 20px 0;
+    text-align: center;
 }
 
 .header-sticky {
@@ -131,7 +161,7 @@
             }
 
             h5 {
-                font-size: 27px;
+                font-size: 21px;
             }
         }
     }
@@ -145,6 +175,11 @@
             line-height: 40px;
         }
     }
+    .page-blog-detail {
+        h4 {
+            font-size: 26px;
+        }
+    }
 }
 
 // 1440 end
@@ -156,7 +191,7 @@
     .page-blog {
         .card {
             h5 {
-                font-size: 24px;
+                font-size: 18px;
             }
         }
     }
@@ -172,6 +207,11 @@
     h3 {
         font-size: 27px;
         line-height: 1.4;
+    }
+}
+.page-blog-detail {
+    h4 {
+        font-size: 23px;
     }
 }
 
@@ -196,6 +236,10 @@
 
     .section-content {
         padding: 60px 0;
+         h5 {
+            font-size: 16px;
+            margin: 10px 0;
+        }
     }
 
     .section-full-image {
@@ -209,13 +253,17 @@
     .section-blog-heading {
         padding: 120px 0 60px;
     }
-}
-
-.section-heading {
-    padding: 60px 0;
-
-    h3 {
-        font-size: 24px;
+    .page-blog-detail {
+        h4 {
+            font-size: 20px;
+        }
+    }
+    .section-heading {
+        padding: 60px 0;
+    
+        h3 {
+            font-size: 24px;
+        }
     }
 }
 

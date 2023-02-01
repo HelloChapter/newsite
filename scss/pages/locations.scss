@@ -100,6 +100,74 @@
     }
 }
 
+.section-project-info {
+    padding: 60px 0;
+
+    .container {
+        max-width: 760px;
+    }
+
+    h2 {
+        margin-bottom: 32px;
+    }
+
+    h6 {
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+}
+
+.section-image-content {
+    .two-joint-images {
+        display: flex;
+
+        .bg-image {
+            max-width: 50%;
+            flex: 0 0 50%;
+            min-height: 580px;
+            position: relative;
+
+            h5 {
+                font-size: 17px;
+                line-height: 30px;
+                position: absolute;
+                bottom: 12px;
+                left: 12px;
+                display: inline-block;
+                background-color: $text-color;
+                color: $white;
+                padding: 5px;
+                min-width: 92px;
+                text-align: center;
+                font-weight: 400;
+            }
+        }
+
+        .after-img {
+            h5 {
+                left: auto;
+                right: 12px;
+            }
+        }
+    }
+}
+
+.section-only-content {
+    padding: 80px 0;
+
+    .container {
+        max-width: 910px;
+    }
+}
+
+.two-col-layout {
+    .bg-image {
+        min-height: 580px;
+    }
+}
+
 // Responsive CSS start
 @media (max-width:1440px) {
     .section-locations-listing {
@@ -146,7 +214,8 @@
 
     .section-location-info {
         padding: 60px 0;
-        p + p{
+
+        p+p {
             margin-top: 15px;
         }
     }
@@ -202,6 +271,46 @@
                 padding: 20px 30px;
             }
         }
+    }
+
+    .page-locations {
+        .section-image-content {
+            .content {
+                margin: 0 auto;
+            }
+
+            .row {
+                &:nth-child(2n) {
+                    .col-img-content {
+                        order: 1;
+                    }
+                }
+            }
+
+            .col-img {
+                padding-bottom: 0;
+            }
+
+            .two-joint-images {
+                flex-wrap: wrap;
+
+                .bg-image {
+                    max-width: 100%;
+                    flex: 0 0 100%;
+                }
+
+                .after-img h5 {
+                    top: 12px;
+                    bottom: auto;
+                    left: 12px;
+                    right: auto;
+                }
+            }
+        }
+    }
+
+    .section-only-content {
+        padding: 60px 0;
     }
 }
 
