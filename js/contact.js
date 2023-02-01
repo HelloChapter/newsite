@@ -63,7 +63,7 @@ function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
 }
 // Redirect user on submit
 function redirectToThankYou(){
-    // window.location.pathname = "/thankyou.html"
+    window.location.pathname = "/thank-you-message.html"
 }
 // Contact Submit 
 function handleContactSubmit(e) {
@@ -91,7 +91,7 @@ function handleContactSubmit(e) {
       inputs.each(function(){
         $(this).attr("disabled", "disabled");
       })
-        makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+      makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
     }
     
     // return false;
