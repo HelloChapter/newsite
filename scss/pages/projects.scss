@@ -28,10 +28,32 @@
 }
 .section-two-full-img-layout {
     .bg-image {
-        min-height: 100vh;
+        min-height: 60vh;
     }
 }
-// Responsive start
+
+
+/*Start: Added By tushar for old content integration*/
+.shortAddress {
+  margin-top: -15px;
+  font-size: 16px;
+  padding-bottom: 20px
+}
+.fullWidthPara {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pearl-bg iframe {
+    max-width: 100%;
+}
+.largeContent .col-img {
+    min-height: 600px;
+    
+}
+/*END: Added By tushar for old content integration*/
+
+// Responsive Start
 @media (max-width:1023px) {
     .section-full-image {
         min-height: 700px;
