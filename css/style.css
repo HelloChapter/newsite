@@ -300,12 +300,10 @@ h2 {
     font-size: 14px;
     line-height: 24px;
   }
-
   h2 {
     font-size: 47px;
     line-height: 52px;
   }
-
   .page-title h1 {
     font-size: 47px;
     line-height: 52px;
@@ -320,7 +318,6 @@ h2 {
     font-size: 44px;
     line-height: 48px;
   }
-
   .page-title h1 {
     font-size: 44px;
     line-height: 48px;
@@ -331,7 +328,6 @@ h2 {
     font-size: 38px;
     line-height: 45px;
   }
-
   .page-title h1 {
     font-size: 38px;
     line-height: 45px;
@@ -342,7 +338,6 @@ h2 {
     font-size: 31px;
     line-height: 1.2;
   }
-
   .page-title h1 {
     font-size: 31px;
     line-height: 1.2;
@@ -352,11 +347,9 @@ h2 {
   .container {
     padding: 0 20px;
   }
-
   h2 {
     font-size: 25px;
   }
-
   .page-title h1 {
     font-size: 25px;
   }
@@ -521,7 +514,6 @@ header .col-get-started a:hover:after {
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
   }
-
   header {
     padding: 31px 0;
     background-color: #ffffff !important;
@@ -613,7 +605,6 @@ header .col-get-started a:hover:after {
   header nav ul li a:hover {
     border-color: transparent;
   }
-
   .header-open:before {
     opacity: 1;
     z-index: 45;
