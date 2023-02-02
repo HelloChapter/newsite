@@ -170,14 +170,14 @@
             visibility: hidden;
             display: none;
             transition: display 0.6s all ease-out;
-            padding: 11% 60px;
+            padding: 5% 60px;
 
             h6 {
                 font-size: 17px;
                 line-height: 50px;
                 font-family: "Inter";
-                font-weight: 700;
-                margin-bottom: 30px;
+                font-weight: 400;
+                margin-bottom: 10px;
             }
 
             h3 {
@@ -190,7 +190,7 @@
                 line-height: 50px;
                 font-family: "Inter";
                 font-weight: 500;
-                margin-bottom: 18px;
+                margin-bottom: 10px;
                 text-transform: uppercase;
 
             }
@@ -203,7 +203,7 @@
     .section-team-members {
         .team-wrapper {
             .team-content {
-                padding: 30px;
+                padding: 20px;
 
                 h3 {
                     font-size: 35px;
