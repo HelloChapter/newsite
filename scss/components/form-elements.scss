@@ -77,7 +77,40 @@
     letter-spacing: 0;
     text-decoration: underline;
 }
+select {
+    appearance: none;
+    -webkit-appearance: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.select-wrapper {
+    position: relative;
+    &:before {
+        content: "";
+        height: 7px;
+        min-width: 13px;
+        width: 13px;
+        background-color: transparent;
+        background-image: url('../../images/icons/ico-chevron.svg');
+        background-size: 100% 100%;
+        background-position: 50%;
+        display: block;
+        transition: transform 0.3s,-webkit-transform 0.3s;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        right: 0px;
+    }
+}
 // Responsive CSS start
 @media (max-width:1440px) {
     .form-control {
