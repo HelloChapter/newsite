@@ -122,7 +122,24 @@
 .section-image-content {
     .two-joint-images {
         display: flex;
-
+position: relative;
+.before-img {
+    position: relative;
+    &:after {
+        content: '';
+        display: block;
+        background-image: url('../../images/icons/Slider.svg');
+        position: absolute;
+        top: 0;
+        right: -26px;
+        height: 100%;
+        width: 52px;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+}
         .bg-image {
             max-width: 50%;
             flex: 0 0 50%;
@@ -167,7 +184,9 @@
         min-height: 580px;
     }
 }
-
+.after-img {
+    background-position: center right;
+}
 // Responsive CSS start
 @media (max-width:1440px) {
     .section-locations-listing {
@@ -308,9 +327,17 @@
             }
         }
     }
-
+    .section-image-content .two-joint-images .before-img:after {
+        right: 0;
+        display: none;
+    }
     .section-only-content {
         padding: 60px 0;
+    }
+    .two-col-layout .bg-image {
+        max-width: 100%;
+        flex:0 0 100%;
+        min-height: 350px;
     }
 }
 

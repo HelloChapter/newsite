@@ -9,8 +9,8 @@
         max-width: 370px;
         flex: 0 0 370px;
         padding: 0;
-        background-color: $text-color;
-        border-radius: 3vw;
+        // background-color: $text-color;
+        // border-radius: 3vw;
         min-height: 733px;
         position: relative;
         display: flex;
@@ -19,13 +19,13 @@
 
     .bg-image {
         max-width: 370px;
-        background-size: cover;
+        background-size: contain;
         margin: 0 auto;
         min-width: 270px;
         min-height: calc(733px - 25px);
         width: calc(100% - 25px);
-        background-color: $text-color;
-        border-radius: 3vw;
+        // background-color: $text-color;
+        // border-radius: 3vw;
     }
 
     .content {
