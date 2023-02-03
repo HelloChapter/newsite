@@ -75,7 +75,8 @@
     font-size: 17px;
     line-height: 50px;
     letter-spacing: 0;
-    text-decoration: underline;
+    text-decoration: none;
+    color: $text-color;
 }
 select {
     appearance: none;
