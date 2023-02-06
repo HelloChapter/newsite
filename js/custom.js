@@ -118,8 +118,11 @@ jQuery(document).ready(function ($) {
     });
     // Review slider end
     AOS.init({
-        duration:1200,
+        duration: 1200,
     });
     // Aos Animate
+    jQuery(".location-link-hover").hover(function () {
+        jQuery(this).parents(".col-location").toggleClass("hover-link");
+    });
 });
 /*Ready function end*/

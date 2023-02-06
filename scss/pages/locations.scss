@@ -63,7 +63,14 @@
             background-color: $white;
         }
     }
-
+    .hover-link {
+        .stretched-link {    
+            background-color: $white;
+        }   
+    }
+    .hover-span {
+        display: none;
+    }
     .anchor-link {
         background-color: $white;
     }
@@ -73,13 +80,14 @@
         align-items: center;
         justify-content: center;
         min-height: 710px;
-
-        h2 {
-            position: relative;
-            z-index: 1;
-            background-color: $white;
-            padding: 40px;
-        }
+    }
+    h2 a{
+        position: relative;
+        z-index: 1;
+        background-color: $white;
+        padding: 40px;
+        color: $text-color;
+        display: block;
     }
 }
 
@@ -338,6 +346,11 @@ position: relative;
         max-width: 100%;
         flex:0 0 100%;
         min-height: 350px;
+    }
+    .page-miamis {
+        .section-image-content .col-img {
+            min-height: 380px;
+        }
     }
 }
 

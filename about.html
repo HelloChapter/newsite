@@ -129,7 +129,7 @@
                                         </h1>
                                     </div>
                                     <div class="content">
-                                        <h4>You’re <em id="changeText"></em>.</h4>
+                                        <h4><em id="changeText">You’re ON THE MOVE.</em> </h4>
                                     </div>
                                 </div>
                             </div>
@@ -564,15 +564,15 @@
             jQuery('#spinner-wrap').css({ transform:'translateX(-50%) rotate(' + theta + 'rad)' });
             });
             // About top section
-            var text = ["ON THE MOVE", "MOVING UP", "ABLE TO", "ALWAYS WANTED TO","BEEN DREAMING","READY" ];
+            var text = ["You’re ON THE MOVE.", "You’re MOVING UP.", "You’re ABLE TO.", "You’re ALWAYS WANTED TO.","You’re BEEN DREAMING.","You’re READY." ];
             var counter = 0;
             var elem = document.getElementById("changeText");
-            var inst = setInterval(change, 1200);
+            var inst = setInterval(change, 2000);
             function change() {
             elem.innerHTML = text[counter];
             counter++;
-            $("#changeText").fadeOut('slow');
-            $("#changeText").fadeIn('slow');
+            $(elem).fadeOut('1200');
+            $(elem).fadeIn('1200');
 
             if (counter >= text.length) {
                 counter = 0;
