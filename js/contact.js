@@ -41,6 +41,7 @@ $(document).on("change", "select", (function(e) {
     $(e.target).parent().removeClass("error");
     return
 }));
+window.fbq('track', 'Contact', { value: 0, currency: 'USD' });
 // Ajax function
 function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
     $.ajax({
