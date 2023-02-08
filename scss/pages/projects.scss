@@ -15,12 +15,15 @@
     min-height: 820px;
 }
 .section-project-info {
-    padding: 95px 0;
+    padding: 90px 0;
     .container {
         max-width: 760px;
     }
     h2 {
         margin-bottom: 42px;
+    }
+    p + p {
+        margin-top: 30px;
     }
 }
 .section-single-heading {
