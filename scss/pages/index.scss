@@ -9,6 +9,22 @@
 @import "../components/chapter-content.scss";
 @import "../components/image-content.scss";
 
+.announcement-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 6px 0;
+
+    * {
+        color: $white;
+    }
+
+    p {
+        font-weight: 400;
+    }
+}
 
 .section-intro-image {
     .row {
@@ -19,6 +35,7 @@
         max-width: 50%;
         flex: 0 0 50%;
     }
+
     .section-image-content {
         min-height: 100vh;
     }
@@ -137,6 +154,7 @@
 .page-home {
     header {
         background-color: transparent;
+        top: 40px;
     }
 
     .middle-content {
@@ -174,6 +192,12 @@
         h3 {
             font-size: 20px;
             margin: 40px 0 30px;
+        }
+    }
+
+    .page-home {
+        header {
+            top: 35px;
         }
     }
 }
@@ -339,6 +363,16 @@
         .col {
             max-width: 100%;
             flex: 0 0 100%;
+        }
+    }
+
+    .announcement-bar {
+        .container {
+            padding: 0 10px;
+        }
+
+        p {
+            font-size: 9px;
         }
     }
 }

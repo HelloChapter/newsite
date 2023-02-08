@@ -162,6 +162,10 @@
   background-color: #ffffff;
 }
 
+.black-bg {
+  background-color: #231F20;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -372,6 +376,10 @@ h2 {
 
 .white-bg {
   background-color: #ffffff;
+}
+
+.black-bg {
+  background-color: #231F20;
 }
 
 header {
@@ -677,6 +685,10 @@ header .col-get-started a:hover:after {
 
 .white-bg {
   background-color: #ffffff;
+}
+
+.black-bg {
+  background-color: #231F20;
 }
 
 footer {
