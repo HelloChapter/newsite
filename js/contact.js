@@ -92,6 +92,7 @@ function handleContactSubmit(e) {
       inputs.each(function(){
         $(this).attr("disabled", "disabled");
       })
+      window.gtag('event', 'conversion', {'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo'});
       makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
     }
     
