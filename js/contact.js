@@ -64,7 +64,7 @@ function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
 }
 // Redirect user on submit
 function redirectToThankYou(){
-    window.location.pathname = "/thank-you-message.html"
+    window.location.pathname = "/thank-you-message/"
 }
 // Contact Submit 
 function handleContactSubmit(e) {
