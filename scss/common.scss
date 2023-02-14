@@ -58,7 +58,9 @@ img {
 }
 
 .link-text {
-    a, button {
+
+    a,
+    button {
         line-height: 50px;
         text-decoration: none;
         text-transform: uppercase;
@@ -97,6 +99,7 @@ img {
 textarea {
     resize: none;
 }
+
 iframe {
     max-width: 100%;
 }
@@ -144,11 +147,23 @@ h2 {
     width: 100%;
 }
 
+.location-title {
+    font-size: 17px;
+    font-family: "Inter";
+    letter-spacing: 0.12px;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
 // Responsive CSS start
 @media (max-width:1600px) {
     body {
         font-size: 14px;
         line-height: 24px;
+    }
+
+    .location-title {
+        font-size: 14px;
     }
 
     h2 {
