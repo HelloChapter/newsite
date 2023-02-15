@@ -4,6 +4,7 @@
 @import "../components/slider.scss";
 @import "../components/category.scss";
 @import "../components/image-content.scss";
+@import "../components/before-after-slider.scss";
 @import "../components/header.scss";
 @import "../components/footer.scss";
 
@@ -63,14 +64,17 @@
             background-color: $white;
         }
     }
+
     .hover-link {
-        .stretched-link {    
+        .stretched-link {
             background-color: $white;
-        }   
+        }
     }
+
     .hover-span {
         display: none;
     }
+
     .anchor-link {
         background-color: $white;
     }
@@ -81,7 +85,8 @@
         justify-content: center;
         min-height: 710px;
     }
-    h2 a{
+
+    h2 a {
         position: relative;
         z-index: 1;
         background-color: $white;
@@ -125,59 +130,32 @@
         line-height: 30px;
         margin-bottom: 15px;
     }
-    p + p {
+
+    p+p {
         margin-top: 30px;
     }
 }
 
 .section-image-content {
-    .two-joint-images {
-        display: flex;
-position: relative;
-.before-img {
-    position: relative;
-    &:after {
-        content: '';
-        display: block;
-        background-image: url('../../images/icons/Slider.svg');
-        position: absolute;
-        top: 0;
-        right: -26px;
-        height: 100%;
-        width: 52px;
-        z-index: 1;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-    }
-}
-        .bg-image {
-            max-width: 50%;
-            flex: 0 0 50%;
-            min-height: 580px;
-            position: relative;
+    .bg-image {
+        max-width: 50%;
+        flex: 0 0 50%;
+        min-height: 580px;
+        position: relative;
 
-            h5 {
-                font-size: 17px;
-                line-height: 30px;
-                position: absolute;
-                bottom: 12px;
-                left: 12px;
-                display: inline-block;
-                background-color: $text-color;
-                color: $white;
-                padding: 5px;
-                min-width: 92px;
-                text-align: center;
-                font-weight: 400;
-            }
-        }
-
-        .after-img {
-            h5 {
-                left: auto;
-                right: 12px;
-            }
+        h5 {
+            font-size: 17px;
+            line-height: 30px;
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            display: inline-block;
+            background-color: $text-color;
+            color: $white;
+            padding: 5px;
+            min-width: 92px;
+            text-align: center;
+            font-weight: 400;
         }
     }
 }
@@ -195,12 +173,15 @@ position: relative;
         min-height: 580px;
     }
 }
+
 .after-img {
     background-position: center right;
 }
+
 .section-youtube-video {
     padding: 50px 0;
 }
+
 // Responsive CSS start
 @media (max-width:1440px) {
     .section-locations-listing {
@@ -341,18 +322,22 @@ position: relative;
             }
         }
     }
+
     .section-image-content .two-joint-images .before-img:after {
         right: 0;
         display: none;
     }
+
     .section-only-content {
         padding: 60px 0;
     }
+
     .two-col-layout .bg-image {
         max-width: 100%;
-        flex:0 0 100%;
+        flex: 0 0 100%;
         min-height: 350px;
     }
+
     .page-miamis {
         .section-image-content .col-img {
             min-height: 380px;

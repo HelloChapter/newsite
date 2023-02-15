@@ -124,5 +124,15 @@ jQuery(document).ready(function ($) {
     jQuery(".location-link-hover").hover(function () {
         jQuery(this).parents(".col-location").toggleClass("hover-");
     });
+    
 });
 /*Ready function end*/
+// After Before Js start
+$("#slider").on("input change", (e)=>{
+    const sliderPos = e.target.value;
+    // Update the width of the foreground image
+    $('.foreground-img').css('width', `${sliderPos}%`)
+    // Update the position of the slider button
+    $('.slider-button').css('left', `calc(${sliderPos}% - 18px)`)
+  });
+  // After Before Js end
