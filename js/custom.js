@@ -128,11 +128,25 @@ jQuery(document).ready(function ($) {
 });
 /*Ready function end*/
 // After Before Js start
-$("#slider").on("input change", (e)=>{
+$(".range-slider").on("input change", (e)=>{
     const sliderPos = e.target.value;
     // Update the width of the foreground image
     $('.foreground-img').css('width', `${sliderPos}%`)
     // Update the position of the slider button
     $('.slider-button').css('left', `calc(${sliderPos}% - 18px)`)
+  });
+  $(".after-before-btn-wrap .before-btn").on("input click", (e)=>{
+    const sliderPos = e.target.value;
+    // Update the width of the foreground image
+    $('.foreground-img').css('width', '100%')
+    // Update the position of the slider button
+    $('.slider-button').css('left', `calc(100% - 40px)`)
+  });
+  $(".after-before-btn-wrap .after-btn").on("input click", (e)=>{
+    const sliderPos = e.target.value;
+    // Update the width of the foreground image
+    $('.foreground-img').css('width', '0%')
+    // Update the position of the slider button
+    $('.slider-button').css('left', `calc(0px)`)
   });
   // After Before Js end
