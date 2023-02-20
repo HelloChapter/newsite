@@ -128,7 +128,7 @@ jQuery(document).ready(function ($) {
 });
 /*Ready function end*/
 // After Before Js start
-$(".range-slider").on("input change", (e)=>{
+$(this).on("input change", (e)=>{
     const sliderPos = e.target.value;
     // Update the width of the foreground image
     $('.foreground-img').css('width', `${sliderPos}%`)
