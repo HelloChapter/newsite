@@ -23,6 +23,7 @@
         background-size: 600px 100%;
         object-fit: cover;
         background-repeat: no-repeat;
+
         // background-position: center;
         img {
             object-fit: cover;
@@ -67,6 +68,7 @@
         margin: 0;
         transition: all .2s;
         @include center;
+        z-index: 1;
 
         &:hover {
             background: transparent;
@@ -98,6 +100,7 @@
         border-radius: 50%;
         left: calc(50% - 28px);
         top: 0;
+
         &:after {
             content: '';
             display: block;
@@ -130,6 +133,7 @@
         }
     }
 }
+
 @media (min-width:1200px) and (max-width:1400px) {
     .before-after-img-wrap .two-joint-images {
         .img {
@@ -137,6 +141,7 @@
         }
     }
 }
+
 @media (min-width:1401px) and (max-width:1600px) {
     .before-after-img-wrap .two-joint-images {
         .img {
@@ -144,20 +149,23 @@
         }
     }
 }
+
 @media (min-width:1800px) {
-    .before-after-img-wrap  .two-joint-images {
+    .before-after-img-wrap .two-joint-images {
         .img {
             background-size: 1000px 100%;
         }
     }
 }
+
 @media (min-width:1921px) {
-    .before-after-img-wrap  .two-joint-images {
+    .before-after-img-wrap .two-joint-images {
         .img {
             background-size: 1700px 100%;
         }
     }
 }
+
 @media (max-width:767px) {
     .before-after-img-wrap .two-joint-images {
         .img {
@@ -165,6 +173,7 @@
         }
     }
 }
+
 @media (max-width:600px) {
     .before-after-img-wrap .two-joint-images {
         .img {
@@ -172,6 +181,7 @@
         }
     }
 }
+
 @media (max-width:400px) {
     .before-after-img-wrap .two-joint-images {
         .img {
