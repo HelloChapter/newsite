@@ -7,13 +7,15 @@ var postDataObject = {
 	"phoneNumber": "",
 	"city": "",
 	"zipCode": "",
+  "projectDescription":"",
 }
 // Email Validation
 function isEmail(email) {
     return /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email)
 }
 // On input change
-$(document).on("change", "input", (function(e) {
+$(document).on("change", "input, textarea", (function(e) {
+
     if(e.target.value === ""){
       isValid=false;
       $(e.target).parent().addClass("error");
@@ -58,7 +60,6 @@ function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
             inputs.each(function(){
               $(this).attr("disabled", "false");
             })
-            console.log(jqXHR.responseJSON.details)
         }
     })
 }
@@ -88,10 +89,15 @@ function handleContactSubmit(e) {
           $(this).parent().addClass("error");
         }
     }));
+    // if($("textarea[name='projectDescription'").val() === ""){
+    //   $("textarea[name='projectDescription'").parent().addClass("error");
+    //   return false;
+    // }
     if(isValid){
       inputs.each(function(){
         $(this).attr("disabled", "disabled");
       })
+     // console.log(postDataObject)
       window.gtag('event', 'conversion', {'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo'});
       makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
     }
