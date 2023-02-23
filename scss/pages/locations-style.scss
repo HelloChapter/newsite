@@ -137,6 +137,7 @@
 }
 
 .section-image-content {
+    
     .bg-image {
         max-width: 50%;
         flex: 0 0 50%;
@@ -160,6 +161,7 @@
     }
 }
 
+
 .section-only-content {
     padding: 80px 0;
 
@@ -181,7 +183,9 @@
 .section-youtube-video {
     padding: 50px 0;
 }
-
+.bg-img {
+ min-height: 800px;
+}
 // Responsive CSS start
 @media (max-width:1440px) {
     .section-locations-listing {
@@ -341,8 +345,14 @@
     .page-miamis {
         .section-image-content .col-img {
             min-height: 380px;
+            max-width: 100%;
+            flex: 0 0 100%;
         }
     }
+    
+
 }
+
+
 
 // 767 end
