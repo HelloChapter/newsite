@@ -339,8 +339,15 @@
     }
 
     .page-miamis {
-        .section-image-content .col-img {
-            min-height: 380px;
+        .section-image-content {
+            .col-img {
+                min-height: 380px;
+            }
+
+            .col {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
         }
     }
 }
