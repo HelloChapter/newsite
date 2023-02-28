@@ -102,14 +102,26 @@
   list-style: none;
   margin-bottom: 0;
 }
-
+.col .bg-img{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 641px;
+}
 .bg-image {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   min-height: 300px;
 }
-
+.full-size-imgs{
+  min-height: 641px;
+}
+.background-full{
+  background-size: auto;
+  width: auto;
+  height: 100%;
+}
 @font-face {
   font-family: "Times";
   src: url("../fonts/times/Times-Bold.eot");

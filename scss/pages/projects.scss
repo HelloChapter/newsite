@@ -33,7 +33,12 @@
     .bg-image {
         min-height: 60vh;
     }
+    .col-full-size-img{
+        min-height: 800px;
+    }
 }
+
+
 
 
 /*Start: Added By tushar for old content integration*/
@@ -77,6 +82,9 @@
     .section-two-full-img-layout .bg-image {
         min-height: 300px;
         padding-bottom: 75%;
+    }
+    .section-two-full-img-layout .col-full-size-img {
+        min-height: 600px;
     }
 }
 // 767 end
