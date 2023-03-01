@@ -7,8 +7,9 @@
 @import "../components/before-after-slider.scss";
 @import "../components/header.scss";
 @import "../components/footer.scss";
-
-
+header {
+    border-bottom: 0.5px solid $border-color;
+}
 .section-intro-image {
     .col {
         max-width: 50%;
