@@ -60,21 +60,28 @@ jQuery(document).ready(function ($) {
         infinite: true,
         autoplay: true,
         slidesToShow: 3,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         arrows: false,
         speed: 10000,
         autoplaySpeed: 0,
         dots: false,
         centerMode: true,
-        variableWidth: true,
+        variableWidth: false,
         centerPadding: "250px",
         asNavFor: '.slider-nav',
         cssEase: 'linear',
         responsive: [
             {
-                breakpoint: 991,
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 992,
                 settings: {
                     centerPadding: '150px',
+                    slidesToShow: 1,
                 }
             },
             {
@@ -91,20 +98,27 @@ jQuery(document).ready(function ($) {
         infinite: true,
         autoplay: true,
         slidesToShow: 3,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         arrows: false,
         speed: 10000,
         autoplaySpeed: 0,
         dots: false,
         centerMode: true,
-        variableWidth: true,
+        variableWidth: false,
         centerPadding: "250px",
         cssEase: 'linear',
         responsive: [
             {
-                breakpoint: 991,
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 992,
                 settings: {
                     centerPadding: '150px',
+                    slidesToShow: 1,
                 }
             },
             {

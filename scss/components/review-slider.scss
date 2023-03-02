@@ -13,12 +13,15 @@
         display: flex;
         justify-content: center;
     }
+    .slick-slide {
+        padding: 0 30px;
+    }
 
     .slider-item {
         text-align: center;
-        margin: 0 30px;
-        min-width: 450px;
-        max-width: 500px;
+        // margin: 0 30px;
+        // min-width: 450px;
+        // max-width: 500px;
     }
 
     .star-imges {
@@ -50,7 +53,7 @@
 
     .slider-nav {
         .slider-item-wrap {
-            padding: 0 30px;
+            // padding: 0 30px;
             .slider-item {
                 padding: 0;
             }
