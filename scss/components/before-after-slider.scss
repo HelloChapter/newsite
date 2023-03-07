@@ -149,7 +149,13 @@
         }
     }
 }
-
+@media (min-width:1601px) {
+    .before-after-img-wrap .two-joint-images {
+        .img {
+            background-size: 900px 100%;
+        }
+    }
+}
 @media (min-width:1800px) {
     .before-after-img-wrap .two-joint-images {
         .img {

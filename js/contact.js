@@ -28,7 +28,7 @@ $(document).on("change", "input, textarea", (function(e) {
       isValid=false;
       $(e.target).parent().addClass("error");
       return
-    }else if(((!/^[0-9]+$/.test(e.target.value) && $(e.target).attr("name") === "phone") || ($(e.target).attr("name") === "phone" && (e.target.value.length < 5 || e.target.value.length > 12 )))){
+    }else if(((!/^[0-9]+$/.test(e.target.value) && $(e.target).attr("name") === "phoneNumber") || ($(e.target).attr("name") === "phoneNumber" && (e.target.value.length < 5 || e.target.value.length > 12 )))){
       isValid=false;
       $(e.target).parent().addClass("error");
       return
@@ -89,10 +89,10 @@ function handleContactSubmit(e) {
           $(this).parent().addClass("error");
         }
     }));
-    // if($("textarea[name='projectDescription'").val() === ""){
-    //   $("textarea[name='projectDescription'").parent().addClass("error");
-    //   return false;
-    // }
+    if($("textarea[name='projectDescription'").val() === ""){
+      $("textarea[name='projectDescription'").parent().addClass("error");
+      return false;
+    }
     if(isValid){
       inputs.each(function(){
         $(this).attr("disabled", "disabled");
