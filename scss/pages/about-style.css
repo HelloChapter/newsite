@@ -1272,9 +1272,10 @@ footer .col-news-letter button img {
 .section-team-members .team-wrapper .team-content {
   visibility: hidden;
   display: none;
-  -webkit-transition: display 0.6s all ease-out;
-  transition: display 0.6s all ease-out;
+  -webkit-transition: 0.6s all ease-out;
+  transition: 0.6s all ease-out;
   padding: 5% 60px;
+  overflow: hidden;
 }
 .section-team-members .team-wrapper .team-content h6 {
   font-size: 17px;

@@ -84,7 +84,7 @@ function handleContactSubmit(e) {
           isValid=false;
           $(this).parent().addClass("error");
         }
-        if(((!/^[0-9]+$/.test(this.value) && $(this).attr("name") === "phone") || ($(this).attr("name") === "phone" && (this.value.length < 5 || this.value.length > 12 )))){
+        if(((!/^[0-9]+$/.test(this.value) && $(this).attr("name") === "phoneNumber") || ($(this).attr("name") === "phoneNumber" && (this.value.length < 5 || this.value.length > 12 )))){
           isValid=false;
           $(this).parent().addClass("error");
         }
@@ -98,7 +98,7 @@ function handleContactSubmit(e) {
         $(this).attr("disabled", "disabled");
       })
      // console.log(postDataObject)
-      window.gtag('event', 'conversion', {'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo'});
+      // window.gtag('event', 'conversion', {'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo'});
       makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
     }
     

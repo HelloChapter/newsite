@@ -169,8 +169,9 @@
         .team-content {
             visibility: hidden;
             display: none;
-            transition: display 0.6s all ease-out;
+            transition:0.6s all ease-out;
             padding: 5% 60px;
+            overflow: hidden;
 
             h6 {
                 font-size: 17px;
