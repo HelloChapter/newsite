@@ -57,8 +57,8 @@ jQuery(document).ready(function ($) {
     });
     // Home slider end
     $('.review-slider').slick({
-        infinite: true,
         autoplay: true,
+        infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
@@ -68,7 +68,7 @@ jQuery(document).ready(function ($) {
         centerMode: true,
         variableWidth: false,
         centerPadding: "250px",
-        asNavFor: '.slider-nav',
+       // pauseOnHover:false,
         cssEase: 'linear',
         responsive: [
             {
@@ -88,44 +88,7 @@ jQuery(document).ready(function ($) {
                 breakpoint: 768,
                 settings: {
                     centerPadding: '40px',
-                    slidesToShow: 2,
-                }
-            }
-        ]
-    });
-    $('.slider-nav').slick({
-        asNavFor: '.review-slider',
-        infinite: true,
-        autoplay: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: false,
-        speed: 10000,
-        autoplaySpeed: 0,
-        dots: false,
-        centerMode: true,
-        variableWidth: false,
-        centerPadding: "250px",
-        cssEase: 'linear',
-        responsive: [
-            {
-                breakpoint: 1440,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    centerPadding: '150px',
                     slidesToShow: 1,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    centerPadding: '40px',
-                    slidesToShow: 2,
                 }
             }
         ]
