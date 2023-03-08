@@ -187,6 +187,11 @@ header {
 .bg-img {
  min-height: 800px;
 }
+.section-before-after-text {
+    h2 {
+        margin-bottom: 0;
+    }
+}
 // Responsive CSS start
 @media (max-width:1440px) {
     .section-locations-listing {
