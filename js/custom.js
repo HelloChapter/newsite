@@ -69,7 +69,7 @@ jQuery(document).ready(function ($) {
         variableWidth: false,
         centerPadding: "250px",
         pauseOnHover: false,
-        pauseOnFocus:false,
+        pauseOnFocus:true,
         draggable:false,
         cssEase: 'linear',
         responsive: [
