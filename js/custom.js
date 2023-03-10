@@ -68,7 +68,9 @@ jQuery(document).ready(function ($) {
         centerMode: true,
         variableWidth: false,
         centerPadding: "250px",
-       // pauseOnHover:false,
+        pauseOnHover: false,
+        pauseOnFocus:false,
+        draggable:false,
         cssEase: 'linear',
         responsive: [
             {
