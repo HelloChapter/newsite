@@ -15,7 +15,6 @@ function isEmail(email) {
 }
 // On input change
 $(document).on("change", "input, textarea", (function (e) {
-
   if (e.target.value === "") {
     isValid = false;
     $(e.target).parent().addClass("error");
@@ -48,7 +47,6 @@ jQuery(document).ready(function ($) {
   $("#phoneNumber").on("keyup", function (e) {
     var $field = $(this);
     val = this.value;
-    console.log(val);
     $thisIndex = parseInt($field.data("idx"), 10);
     if (this.validity && this.validity.badInput || isNaN(val) || $field.is(":invalid")) {
       this.value = inputQuantity[$thisIndex];
@@ -63,8 +61,12 @@ jQuery(document).ready(function ($) {
 });
 /*Ready function end*/
 window.fbq('track', 'Contact', { value: 0, currency: 'USD' });
+var inputs = $("#contact-form input");
+
 // Ajax function
+
 function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
+  
   $.ajax({
     dataType: "json",
     url: url,
@@ -114,12 +116,18 @@ function handleContactSubmit(e) {
     return false;
   }
   if (isValid) {
+    $('#loader').show();
     inputs.each(function () {
       $(this).attr("disabled", "disabled");
     })
     // console.log(postDataObject)
     // window.gtag('event', 'conversion', {'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo'});
-    makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+    
+    setTimeout(function(){
+      makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+    }, 500)
+    
+    //makeAjaxCall("", "POST", !0, postDataObject, redirectToThankYou);
   }
 
   // return false;
