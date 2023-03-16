@@ -1077,7 +1077,8 @@ footer .col-news-letter button img {
   margin-top: 60px;
 }
 .icons-list-group li:after {
-  content: url("../../images/how-it-img/process-graphic.svg");
+  content: "";
+  background-image: url("../../images/how-it-img/process-graphic.svg");
   display: block;
   width: 46%;
   position: absolute;
@@ -1088,7 +1089,8 @@ footer .col-news-letter button img {
   z-index: -1;
 }
 .icons-list-group li:nth-child(2n):before {
-  content: url("../../images/how-it-img/process-graphic-dark.svg");
+  content: "";
+  background-image: url("../../images/how-it-img/process-graphic-dark.svg");
   display: block;
   width: 46%;
   position: absolute;
