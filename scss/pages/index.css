@@ -95,10 +95,6 @@
   min-height: 300px;
 }
 
-.full-size-imgs {
-  min-height: 1241px;
-}
-
 @font-face {
   font-family: "Times";
   src: url("../fonts/times/Times-Bold.eot");
@@ -1056,18 +1052,15 @@ footer .col-news-letter button img {
 .section-reviews .section-title {
   padding-bottom: 75px;
 }
-.section-reviews .review-slider {
-  padding-top: 100px;
-}
 .section-reviews .slick-track {
   display: flex;
   justify-content: center;
 }
-.section-reviews .slider-item {
-  text-align: center;
+.section-reviews .slick-slide {
   margin: 0 30px;
-  min-width: 450px;
-  max-width: 500px;
+  border-top: 1px solid #231F20;
+  padding-top: 100px;
+  text-align: center;
 }
 .section-reviews .star-imges {
   display: flex;
@@ -1091,20 +1084,9 @@ footer .col-news-letter button img {
   max-width: 450px;
   margin: 40px auto 0;
 }
-.section-reviews .slider-nav .slider-item-wrap {
-  padding: 0 30px;
-}
-.section-reviews .slider-nav .slider-item-wrap .slider-item {
-  padding: 0;
-}
-.section-reviews .slider-nav .slider-item {
-  background-color: #231F20;
-  height: 1px;
-  width: 100%;
-}
 
 @media (max-width: 1440px) {
-  .section-reviews .review-slider {
+  .section-reviews .slick-slide {
     padding-top: 70px;
   }
   .section-reviews h3 {
@@ -1135,8 +1117,9 @@ footer .col-news-letter button img {
   .section-reviews .section-title {
     padding-bottom: 50px;
   }
-  .section-reviews .review-slider {
+  .section-reviews .slick-slide {
     padding-top: 50px;
+    margin: 0 15px;
   }
   .section-reviews h3 {
     font-size: 24px;
@@ -1252,9 +1235,12 @@ footer .col-news-letter button img {
   margin-bottom: 55px;
 }
 .section-image-content .content {
-  max-width: 510px;
+  max-width: 520px;
   padding: 30px 15px;
   margin: 0 auto;
+}
+.section-image-content .content p + p {
+  margin-top: 12px;
 }
 .section-image-content .link-text {
   padding-top: 30px;
