@@ -95,10 +95,6 @@
   min-height: 300px;
 }
 
-.full-size-imgs {
-  min-height: 1241px;
-}
-
 @font-face {
   font-family: "Times";
   src: url("../fonts/times/Times-Bold.eot");
@@ -987,9 +983,12 @@ footer .col-news-letter button img {
   margin-bottom: 55px;
 }
 .section-image-content .content {
-  max-width: 510px;
+  max-width: 520px;
   padding: 30px 15px;
   margin: 0 auto;
+}
+.section-image-content .content p + p {
+  margin-top: 12px;
 }
 .section-image-content .link-text {
   padding-top: 30px;
@@ -1032,7 +1031,7 @@ footer .col-news-letter button img {
   }
 }
 .page-projects header {
-  border-bottom: 0.5px solid #231F20;
+  border-bottom: 0.5px solid #C2C2C2;
 }
 
 .section-full-image {
@@ -1104,5 +1103,8 @@ footer .col-news-letter button img {
   .section-two-full-img-layout .bg-image {
     min-height: 300px;
     padding-bottom: 75%;
+  }
+  .section-two-full-img-layout .col-full-size-img {
+    min-height: 600px;
   }
 }/*# sourceMappingURL=projects.css.map */

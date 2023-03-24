@@ -16,6 +16,9 @@
         max-width: 520px;
         padding: 30px 15px;
         margin: 0 auto;
+        p + p {
+            margin-top: 12px;
+        }
     }
 
     .link-text {

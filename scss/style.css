@@ -95,10 +95,6 @@
   min-height: 300px;
 }
 
-.full-size-imgs {
-  min-height: 1241px;
-}
-
 @font-face {
   font-family: "Times";
   src: url("../fonts/times/Times-Bold.eot");

@@ -9,9 +9,12 @@
   margin-bottom: 55px;
 }
 .section-image-content .content {
-  max-width: 510px;
+  max-width: 520px;
   padding: 30px 15px;
   margin: 0 auto;
+}
+.section-image-content .content p + p {
+  margin-top: 12px;
 }
 .section-image-content .link-text {
   padding-top: 30px;
