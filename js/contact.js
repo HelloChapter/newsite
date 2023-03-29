@@ -8,6 +8,7 @@ var postDataObject = {
   "city": "",
   "zipCode": "",
   "projectDescription": "",
+  "qr_status":false,
 }
 // Email Validation
 function isEmail(email) {
@@ -86,6 +87,9 @@ function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
 }
 // Redirect user on submit
 function redirectToThankYou() {
+  if(localStorage.getItem("qr_status")){
+    localStorage.setItem("formSubmitted",true);
+  }
   window.location.pathname = "/thank-you-message/"
 }
 // Contact Submit 
@@ -123,8 +127,30 @@ function handleContactSubmit(e) {
     // console.log(postDataObject)
     // window.gtag('event', 'conversion', {'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo'});
     
+    // QR code status 
+    // if(localStorage.getItem("qr_status")){
+    //   postDataObject.qr_status = true 
+    // }else {
+    //   postDataObject.qr_status = false
+    // }
+
+   // all user 
+    // if(localStorage.getItem("formSubmitted")){
+    //   postDataObject.formSubmitted = true
+    // }else{
+    //   postDataObject.formSubmitted = false
+    // }
+
+    // QR code form submitted 
+    
+    if(localStorage.getItem("qr_status") && (localStorage.getItem("formSubmitted") === 'false')){  
+      postDataObject.qr_status = true
+    }else {
+      postDataObject.qr_status = false 
+    }
+
     setTimeout(function(){
-      makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+        makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
     }, 500)
     
     //makeAjaxCall("", "POST", !0, postDataObject, redirectToThankYou);
