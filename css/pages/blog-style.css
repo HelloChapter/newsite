@@ -318,6 +318,10 @@ h2 {
   margin-bottom: 12px;
 }
 
+.section-full-image img {
+  display: block;
+}
+
 @media (max-width: 1600px) {
   body {
     font-size: 14px;
