@@ -91,6 +91,48 @@ area.">
     })
       (window, document, "script", "//bat.bing.com/bat.js", "uetq");
   </script>
+
+  <!-- QR code query parameter read  -->
+  <script>
+    function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
+  $.ajax({
+    dataType: "json",
+    url: url,
+    type: type,
+    data: dataObject,
+    crossDomain: crossDomain,
+    async: !1,
+    success: function (result) {
+      callback(result)
+    },
+    error: function (jqXHR, exception) {
+      inputs.each(function () {
+        $(this).attr("disabled", "false");
+      })
+    }
+  })
+}
+   const queryString = window.location.search;
+   if(queryString === "?s=hello-miami"){
+    setTimeout(function(){
+      makeAjaxCall("https://api.hellochapter.dev/api/contact/track", "GET", !0,null, (res)=>{
+        console.log(res)
+        if(res.success){
+          localStorage.setItem("qr_status",true);
+          localStorage.setItem("formSubmitted",false);
+        }
+      });
+    }, 500)
+    
+   }else{
+    if (localStorage.getItem("qr_status")){
+      localStorage.removeItem("qr_status")
+      localStorage.removeItem("formSubmitted")
+    }
+    
+   }
+
+  </script>
   <!-- Microsoft Ads Conversion Tracking -->
 </head>
 
