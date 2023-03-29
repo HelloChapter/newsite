@@ -154,7 +154,11 @@ h2 {
     font-weight: 300;
     margin-bottom: 12px;
 }
-
+.section-full-image {
+    img {
+        display: block;
+    }
+}
 // Responsive CSS start
 @media (max-width:1600px) {
     body {
