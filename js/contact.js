@@ -115,8 +115,8 @@ function handleContactSubmit(e) {
     }
 
   }));
-  if ($("textarea[name='projectDescription'").val() === "") {
-    $("textarea[name='projectDescription'").parent().addClass("error");
+  if ($("textarea[name='projectDescription']").val() === "") {
+    $("textarea[name='projectDescription']").parent().addClass("error");
     return false;
   }
   if (isValid) {
