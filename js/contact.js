@@ -94,6 +94,28 @@ function redirectToThankYou() {
 }
 // Contact Submit 
 function handleContactSubmit(e) {
+
+
+  // Read cookies parameter 
+
+  const cookieValue_fbp = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("_fbp="))
+  ?.split("=")[1];
+
+  const cookieValue_fbc = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("_fbc="))
+  ?.split("=")[1];
+
+  const payload = {
+    fbp:cookieValue_fbp,
+    fbc:cookieValue_fbc
+  }
+
+  console.log(payload,118)
+
+
   var inputs = $("#contact-form input");
   isValid = true;
   inputs.each((function () {
@@ -148,6 +170,8 @@ function handleContactSubmit(e) {
     }else {
       postDataObject.qr_status = false 
     }
+
+    
 
     setTimeout(function(){
         makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
