@@ -9,6 +9,9 @@ var postDataObject = {
   "zipCode": "",
   "projectDescription": "",
   "qr_status":false,
+  "fbc":"",
+  "fbp":"",
+
 }
 // Email Validation
 function isEmail(email) {
@@ -94,6 +97,33 @@ function redirectToThankYou() {
 }
 // Contact Submit 
 function handleContactSubmit(e) {
+
+
+  // Read cookies parameter 
+
+  const cookieValue_fbp = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("_fbp="))
+  ?.split("=")[1];
+
+  const cookieValue_fbc = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("_fbc="))
+  ?.split("=")[1];
+
+  const payload = {
+    fbp:cookieValue_fbp,
+    fbc:cookieValue_fbc
+  }
+  if(payload.fbc === undefined || payload.fbc === "" ) {
+    console.log(cookieValue_fbc,112)
+    payload.fbc = null;
+  }
+  if(payload.fbp === undefined || payload.fbp === ""){
+    payload.fbp = null;
+  } 
+
+ 
   var inputs = $("#contact-form input");
   isValid = true;
   inputs.each((function () {
@@ -124,23 +154,7 @@ function handleContactSubmit(e) {
     inputs.each(function () {
       $(this).attr("disabled", "disabled");
     })
-    // console.log(postDataObject)
-    // window.gtag('event', 'conversion', {'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo'});
-    
-    // QR code status 
-    // if(localStorage.getItem("qr_status")){
-    //   postDataObject.qr_status = true 
-    // }else {
-    //   postDataObject.qr_status = false
-    // }
-
-   // all user 
-    // if(localStorage.getItem("formSubmitted")){
-    //   postDataObject.formSubmitted = true
-    // }else{
-    //   postDataObject.formSubmitted = false
-    // }
-
+   
     // QR code form submitted 
     
     if(localStorage.getItem("qr_status") && (localStorage.getItem("formSubmitted") === 'false')){  
@@ -148,6 +162,11 @@ function handleContactSubmit(e) {
     }else {
       postDataObject.qr_status = false 
     }
+
+    postDataObject.fbc = payload.fbc;
+    postDataObject.fbp = payload.fbp;
+     
+
 
     setTimeout(function(){
         makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
