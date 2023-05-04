@@ -112,6 +112,13 @@ function handleContactSubmit(e) {
     fbp:cookieValue_fbp,
     fbc:cookieValue_fbc
   }
+  if(payload.fbc === undefined) {
+    console.log(cookieValue_fbc,112)
+    payload.fbc = null;
+  }
+  if(payload.fbp === undefined){
+    payload.fbp = null;
+  } 
 
   console.log(payload,118)
 
