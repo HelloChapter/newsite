@@ -11,6 +11,7 @@ var postDataObject = {
   "qr_status":false,
   "fbc":"",
   "fbp":"",
+  "originalUrl":"",
 
 }
 // Email Validation
@@ -165,8 +166,9 @@ function handleContactSubmit(e) {
 
     postDataObject.fbc = payload.fbc;
     postDataObject.fbp = payload.fbp;
-     
 
+    // get url 
+    postDataObject.originalUrl = window.location.href;
 
     setTimeout(function(){
         makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
