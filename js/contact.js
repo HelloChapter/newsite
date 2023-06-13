@@ -8,10 +8,10 @@ var postDataObject = {
   "city": "",
   "zipCode": "",
   "projectDescription": "",
-  "qr_status":false,
-  "fbc":"",
-  "fbp":"",
-  "originalUrl":"",
+  "qr_status": false,
+  "fbc": "",
+  "fbp": "",
+  "originalUrl": "",
 
 }
 // Email Validation
@@ -71,7 +71,7 @@ var inputs = $("#contact-form input");
 // Ajax function
 
 function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
-  
+
   $.ajax({
     dataType: "json",
     url: url,
@@ -91,8 +91,8 @@ function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
 }
 // Redirect user on submit
 function redirectToThankYou() {
-  if(localStorage.getItem("qr_status")){
-    localStorage.setItem("formSubmitted",true);
+  if (localStorage.getItem("qr_status")) {
+    localStorage.setItem("formSubmitted", true);
   }
   window.location.pathname = "/thank-you-message/"
 }
@@ -103,28 +103,28 @@ function handleContactSubmit(e) {
   // Read cookies parameter 
 
   const cookieValue_fbp = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("_fbp="))
-  ?.split("=")[1];
+    .split("; ")
+    .find((row) => row.startsWith("_fbp="))
+    ?.split("=")[1];
 
   const cookieValue_fbc = document.cookie
-  .split("; ")
-  .find((row) => row.startsWith("_fbc="))
-  ?.split("=")[1];
+    .split("; ")
+    .find((row) => row.startsWith("_fbc="))
+    ?.split("=")[1];
 
   const payload = {
-    fbp:cookieValue_fbp,
-    fbc:cookieValue_fbc
+    fbp: cookieValue_fbp,
+    fbc: cookieValue_fbc
   }
-  if(payload.fbc === undefined || payload.fbc === "" ) {
-    console.log(cookieValue_fbc,112)
+  if (payload.fbc === undefined || payload.fbc === "") {
+    console.log(cookieValue_fbc, 112)
     payload.fbc = null;
   }
-  if(payload.fbp === undefined || payload.fbp === ""){
+  if (payload.fbp === undefined || payload.fbp === "") {
     payload.fbp = null;
-  } 
+  }
 
- 
+
   var inputs = $("#contact-form input");
   isValid = true;
   inputs.each((function () {
@@ -155,26 +155,27 @@ function handleContactSubmit(e) {
     inputs.each(function () {
       $(this).attr("disabled", "disabled");
     })
-   
+
     // QR code form submitted 
-    
-    if(localStorage.getItem("qr_status") && (localStorage.getItem("formSubmitted") === 'false')){  
+
+    if (localStorage.getItem("qr_status") && (localStorage.getItem("formSubmitted") === 'false')) {
       postDataObject.qr_status = true
-    }else {
-      postDataObject.qr_status = false 
+    } else {
+      postDataObject.qr_status = false
     }
 
     postDataObject.fbc = payload.fbc;
     postDataObject.fbp = payload.fbp;
 
     // get url 
-    postDataObject.originalUrl = window.location.href;
+    postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
 
-    setTimeout(function(){
-        makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+    setTimeout(function () {
+      makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
     }, 500)
-    
-    //makeAjaxCall("", "POST", !0, postDataObject, redirectToThankYou);
+    setTimeout(function () {
+      //makeAjaxCall("sdsdds", "POST", !0, postDataObject);
+    }, 500)
   }
 
   // return false;

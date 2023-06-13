@@ -1,4 +1,32 @@
+
 jQuery(document).ready(function ($) {
+    // Cookie code
+
+    var jQueryScript = document.createElement('script');
+    jQueryScript.setAttribute('src', 'https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js');
+    document.head.appendChild(jQueryScript);
+    //console.log(jQueryScript)
+    function custom_cookie() {
+        // Cookies.set('HelloChapter', 'PageUrl', { expires: 30, path: '' })
+        // var page_url = Cookies.get('HelloChapter');
+        // console.log(page_url);
+        // if (page_url === "/contact-chapter-home-renovation") {
+        //     console.log("contact page");
+        // }
+        // else {
+        //     console.log("other");
+        // }
+        if(Cookies.get('HelloChapterContactPath') === undefined) {
+            Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
+        }
+
+        if(window.location.pathname === '/contact-chapter-home-renovation/'){
+           // Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
+        }
+      
+    }
+    setTimeout(custom_cookie, 1000);
+
     // Header sticky
     jQuery(window).scroll(function () {
         var scroll = jQuery(window).scrollTop();
@@ -69,8 +97,8 @@ jQuery(document).ready(function ($) {
         variableWidth: false,
         centerPadding: "250px",
         pauseOnHover: false,
-        pauseOnFocus:false,
-        draggable:false,
+        pauseOnFocus: false,
+        draggable: false,
         cssEase: 'linear',
         responsive: [
             {
