@@ -171,10 +171,10 @@ function handleContactSubmit(e) {
     postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
 
     setTimeout(function () {
-      //makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+      makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
     }, 500)
     setTimeout(function () {
-      makeAjaxCall("sdsdds", "POST", !0, postDataObject);
+      //makeAjaxCall("sdsdds", "POST", !0, postDataObject);
     }, 500)
   }
 
