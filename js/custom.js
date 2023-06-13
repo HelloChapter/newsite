@@ -16,7 +16,9 @@ jQuery(document).ready(function ($) {
         // else {
         //     console.log("other");
         // }
-        Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
+        if(Cookies.get('HelloChapterContactPath') === undefined) {
+            Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
+        }
 
         if(window.location.pathname === '/contact-chapter-home-renovation/'){
            // Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
