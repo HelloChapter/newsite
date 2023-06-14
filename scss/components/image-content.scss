@@ -24,6 +24,12 @@
     .link-text {
         padding-top: 30px;
     }
+    .row {
+        align-items: normal;
+        .col-img-content {
+            align-self: center;
+        }
+    }
 }
 
 // Responsive CSS start
