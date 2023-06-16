@@ -102,7 +102,10 @@ function redirectToThankYou() {
 // Contact Submit 
 
 //code for back button pressed the form will reset
-window.addEventListener("pageshow", () => {
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    window.location.reload();
+  }
   $('form').get(0).reset();
 });
 function handleContactSubmit(e) {
@@ -178,10 +181,11 @@ function handleContactSubmit(e) {
 
     setTimeout(function () {
       makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
-    }, 500)
-    setTimeout(function () {
-      //makeAjaxCall("sdsdds", "POST", !0, postDataObject);
-    }, 500)
+      //makeAjaxCall("abcd", "POST", !0, postDataObject, redirectToThankYou);
+    }, 500);
+  }
+  else {
+    $('#loader').hide();
   }
 
   // return false;
