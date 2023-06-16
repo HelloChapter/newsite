@@ -97,8 +97,11 @@ function redirectToThankYou() {
   window.location.pathname = "/thank-you-message/"
 }
 // Contact Submit 
+window.addEventListener("pageshow", () => {
+  $('form').get(0).reset();
+});
+// $("#d")[0].reset()
 function handleContactSubmit(e) {
-
 
   // Read cookies parameter 
 
@@ -117,7 +120,6 @@ function handleContactSubmit(e) {
     fbc: cookieValue_fbc
   }
   if (payload.fbc === undefined || payload.fbc === "") {
-    console.log(cookieValue_fbc, 112)
     payload.fbc = null;
   }
   if (payload.fbp === undefined || payload.fbp === "") {
