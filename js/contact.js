@@ -178,10 +178,10 @@ function handleContactSubmit(e) {
 
     setTimeout(function () {
       makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
-    }, 500)
-    setTimeout(function () {
-      //makeAjaxCall("sdsdds", "POST", !0, postDataObject);
-    }, 500)
+    }, 500);
+  }
+  else {
+    $('#loader').hide();
   }
 
   // return false;
