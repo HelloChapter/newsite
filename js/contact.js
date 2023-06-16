@@ -48,6 +48,9 @@ $(document).on("change", "select", (function (e) {
   return
 }));
 jQuery(document).ready(function ($) {
+  setTimeout(function () {
+    window.scrollTo(0, 0);
+  }, 100)
   var inputQuantity = [];
   $("#phoneNumber").on("keyup", function (e) {
     var $field = $(this);
@@ -97,10 +100,11 @@ function redirectToThankYou() {
   window.location.pathname = "/thank-you-message/"
 }
 // Contact Submit 
+
+//code for back button pressed the form will reset
 window.addEventListener("pageshow", () => {
   $('form').get(0).reset();
 });
-// $("#d")[0].reset()
 function handleContactSubmit(e) {
 
   // Read cookies parameter 
