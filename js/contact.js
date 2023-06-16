@@ -48,6 +48,9 @@ $(document).on("change", "select", (function (e) {
   return
 }));
 jQuery(document).ready(function ($) {
+  setTimeout(function () {
+    window.scrollTo(0, 0);
+  }, 100)
   var inputQuantity = [];
   $("#phoneNumber").on("keyup", function (e) {
     var $field = $(this);
@@ -97,8 +100,12 @@ function redirectToThankYou() {
   window.location.pathname = "/thank-you-message/"
 }
 // Contact Submit 
-function handleContactSubmit(e) {
 
+//code for back button pressed the form will reset
+window.addEventListener("pageshow", () => {
+  $('form').get(0).reset();
+});
+function handleContactSubmit(e) {
 
   // Read cookies parameter 
 
@@ -117,7 +124,6 @@ function handleContactSubmit(e) {
     fbc: cookieValue_fbc
   }
   if (payload.fbc === undefined || payload.fbc === "") {
-    console.log(cookieValue_fbc, 112)
     payload.fbc = null;
   }
   if (payload.fbp === undefined || payload.fbp === "") {
