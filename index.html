@@ -116,7 +116,6 @@ area.">
    if(queryString === "?s=hello-miami"){
     setTimeout(function(){
       makeAjaxCall("https://api.hellochapter.dev/api/contact/track", "GET", !0,null, (res)=>{
-        console.log(res)
         if(res.success){
           localStorage.setItem("qr_status",true);
           localStorage.setItem("formSubmitted",false);
