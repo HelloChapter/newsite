@@ -7,9 +7,11 @@
 @import "../components/before-after-slider.scss";
 @import "../components/header.scss";
 @import "../components/footer.scss";
+
 header {
     border-bottom: 0.5px solid $border-color;
 }
+
 .section-intro-image {
     .col {
         max-width: 50%;
@@ -30,8 +32,12 @@ header {
     }
 
     .page-title {
-        max-width: 550px;
+        max-width: 660px;
         margin: 0 auto;
+
+        h1 {
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -39,7 +45,7 @@ header {
     padding: 100px 0;
 
     .container {
-        max-width: 880px;
+        max-width: 1000px;
     }
 
     h2 {
@@ -56,6 +62,13 @@ header {
         position: relative;
         max-width: 50%;
         flex: 0 0 50%;
+
+        p {
+            opacity: 0;
+            max-width: 397px;
+            margin: 0 auto;
+            text-align: center;
+        }
     }
 
     .stretched-link {
@@ -63,6 +76,15 @@ header {
 
         &:hover {
             background-color: $white;
+
+            +.locations-image {
+                p {
+                    opacity: 1;
+                    color: #231F20;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
         }
     }
 
@@ -87,13 +109,19 @@ header {
         min-height: 710px;
     }
 
-    h2 a {
-        position: relative;
-        z-index: 1;
-        background-color: $white;
-        padding: 40px;
-        color: $text-color;
-        display: block;
+    h2 {
+        width: 314px;
+        margin: 0 auto;
+
+        a {
+            position: relative;
+            z-index: 1;
+            background-color: $white;
+            padding: 42px;
+            color: $text-color;
+            text-align: center;
+            display: block;
+        }
     }
 }
 
@@ -138,7 +166,7 @@ header {
 }
 
 .section-image-content {
-    
+
     .bg-image {
         max-width: 50%;
         flex: 0 0 50%;
@@ -184,15 +212,224 @@ header {
 .section-youtube-video {
     padding: 50px 0;
 }
+
 .bg-img {
- min-height: 800px;
+    min-height: 800px;
 }
+
 .section-before-after-text {
     h2 {
         margin-bottom: 0;
     }
 }
+
+.section-get-to-know {
+    padding: 115px;
+
+    .container {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .col-content {
+        padding-left: 130px;
+    }
+
+    .col-image {
+        max-width: 46.9%;
+    }
+
+    .content {
+        max-width: 766px;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        p+h4 {
+            margin-top: 62px;
+        }
+    }
+
+    h2 {
+        font-size: 70px;
+        line-height: 1.1;
+        margin-bottom: 30px;
+    }
+
+    h4,
+    p {
+        font-size: 20px;
+        line-height: 1.75;
+    }
+
+    h4 {
+        font-weight: 600;
+    }
+}
+
+.section-project-fingertips {
+    padding: 115px;
+
+    .container {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .bg-image {
+        border: 13px solid $light-pink;
+        border-radius: 31px;
+        height: 100%;
+        background-size: 100% 100%;
+
+        img {
+            width: 100%;
+            border-radius: 31px;
+        }
+    }
+
+    .content {
+        max-width: 710px;
+        padding: 0 15px 100px;
+    }
+
+    h2 {
+        font-size: 70px;
+        line-height: 1.1;
+        margin-bottom: 30px;
+    }
+
+    .col-image {
+        max-width: 38.1%;
+        padding-right: 152px;
+    }
+
+    .col-content {
+        .row {
+            padding-right: 100px;
+
+            .col {
+                max-width: 33.33%;
+                flex: 0 0 33.33%;
+            }
+        }
+    }
+
+    .col-item {
+        text-align: center;
+        padding-bottom: 105px;
+
+        h3 {
+            font-size: 17px;
+            line-height: 30px;
+            font-weight: 500;
+        }
+    }
+}
+
+.section-future-good {
+    padding: 115px;
+
+    .content {
+        max-width: 560px;
+        padding: 0 15px 100px;
+
+        p {
+            margin-bottom: 40px;
+        }
+    }
+
+    h2 {
+        font-size: 70px;
+        line-height: 1.1;
+        margin-bottom: 30px;
+    }
+
+    .col-image {
+        max-width: 42.28%;
+        padding-bottom: 52.45%;
+    }
+
+    .col-content {
+        padding-left: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .icon-image {
+            text-align: right;
+        }
+    }
+
+}
+
 // Responsive CSS start
+@media (max-width:1600px) {
+    .section-get-to-know {
+        padding: 80px;
+
+        .col-content {
+            padding-left: 90px;
+        }
+
+        .content {
+            p+h4 {
+                margin-top: 40px;
+            }
+        }
+
+        h2 {
+            font-size: 60px;
+        }
+    }
+
+    .section-project-fingertips {
+        padding: 80px;
+
+        .content {
+            padding: 0 15px 70px;
+        }
+
+        h2 {
+            font-size: 60px;
+        }
+
+        .col-image {
+            padding-right: 130px;
+        }
+
+        .col-content {
+            .row {
+                padding-right: 70px;
+            }
+        }
+
+        .col-item {
+            padding-bottom: 70px;
+        }
+    }
+
+    .section-future-good {
+        padding: 80px;
+
+        .content {
+            padding: 0 15px 70px;
+
+            p {
+                margin-bottom: 30px;
+            }
+        }
+
+        h2 {
+            font-size: 60px;
+        }
+
+        .col-content {
+            padding-left: 70px;
+        }
+
+    }
+}
+
+// 1600 end
 @media (max-width:1440px) {
     .section-locations-listing {
         .locations-image {
@@ -207,10 +444,89 @@ header {
             margin-bottom: 35px;
         }
     }
+
+    .section-get-to-know {
+        padding: 60px;
+
+        .col-content {
+            padding-left: 60px;
+        }
+
+        .content {
+            p+h4 {
+                margin-top: 30px;
+            }
+        }
+
+        h2 {
+            font-size: 50px;
+        }
+    }
+
+    .section-project-fingertips {
+        padding: 60px;
+
+        .content {
+            padding: 0 15px 40px;
+        }
+
+        h2 {
+            font-size: 50px;
+        }
+
+        .col-image {
+            padding-right: 80px;
+        }
+
+        .col-content {
+            .row {
+                padding-right: 40px;
+            }
+        }
+
+        .col-item {
+            padding-bottom: 40px;
+
+            img {
+                max-width: 90px;
+            }
+        }
+    }
+
+    .section-future-good {
+        padding: 60px;
+
+        .content {
+            padding: 0 15px 40px;
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+
+        h2 {
+            font-size: 50px;
+        }
+
+        .col-content {
+            padding-left: 40px;
+
+            .icon-image {
+                img {
+                    max-width: 60px;
+                }
+            }
+        }
+
+    }
 }
 
 // 1440 end
 @media (max-width:1199px) {
+    .section-location-info {
+        padding: 70px 0;
+    }
+
     .section-intro-image {
         .section-image-content {
             min-height: 550px;
@@ -221,12 +537,60 @@ header {
         margin-bottom: 40px;
     }
 
+    .section-locations-listing h2 {
+        width: 260px;
+    }
+
     .section-stay-tuned {
         h3 {
             font-size: 28px;
             line-height: 1.2;
             margin-bottom: 20px;
         }
+    }
+
+    .section-get-to-know {
+        .col-content {
+            padding-left: 20px;
+        }
+
+        h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        h4,
+        p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        .content {
+            p+h4 {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .section-project-fingertips {
+        h2 {
+            font-size: 40px;
+        }
+
+        .col-image {
+            padding-right: 50px;
+        }
+    }
+
+    .section-future-good {
+        h2 {
+            font-size: 40px;
+        }
+
+        .col-content {
+            padding-left: 20px;
+        }
+
     }
 }
 
@@ -243,9 +607,134 @@ header {
             margin-top: 15px;
         }
     }
+
+    .section-project-fingertips .col-image {
+        padding: 0;
+    }
 }
 
-// 1023 end 
+// 1023 end
+
+@media (max-width:991px) {
+    .section-locations-listing {
+        h2 {
+            width: 149px;
+
+            a {
+                padding: 30px;
+            }
+        }
+
+        .locations-image {
+            min-height: 550px;
+        }
+    }
+
+    .section-get-to-know {
+        padding: 60px 20px;
+
+        h2 {
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 30px;
+            letter-spacing: -0.15px;
+
+            br {
+                display: none;
+            }
+        }
+
+        h4,
+        p {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .content {
+            p+h4 {
+                margin-top: 30px;
+            }
+        }
+
+        .col-image {
+            margin-bottom: auto;
+        }
+    }
+
+    .section-project-fingertips {
+        padding: 60px 20px;
+
+        h2 {
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 30px;
+            letter-spacing: -0.15px;
+        }
+
+        .col-content {
+            padding-right: 60px;
+
+            .row {
+                .col {
+                    max-width: 50%;
+                    flex: 0 0 50%;
+                }
+            }
+        }
+
+        .content {
+            padding-bottom: 32px;
+        }
+
+        .col-item {
+            padding-bottom: 30px;
+
+            img {
+                max-width: 42px;
+            }
+
+            h3 {
+                font-size: 14px;
+                line-height: 33px;
+            }
+        }
+
+        .bg-image {
+            border-width: 8px;
+        }
+    }
+
+    .section-future-good {
+        padding: 60px 20px 90px 35px;
+
+        .col-image {
+            max-width: 48.30%;
+            min-height: 452px;
+        }
+
+        h2 {
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 30px;
+            letter-spacing: -0.15px;
+
+            br {
+                display: none;
+            }
+        }
+
+        .col-content {
+            .icon-image {
+                img {
+                    max-width: 44px;
+                }
+            }
+        }
+    }
+}
+
+// 991 end
+
 @media (max-width:767px) {
     .section-intro-image {
         .col {
@@ -286,13 +775,22 @@ header {
         .col {
             max-width: 100%;
             flex: 0 0 100%;
+            margin-bottom: 5px;
+
+            +.col {
+                margin-bottom: 0;
+            }
         }
 
         .locations-image {
             min-height: 400px;
 
             h2 {
-                padding: 20px 30px;
+                padding: 0px;
+
+                a {
+                    padding: 30px;
+                }
             }
         }
     }
@@ -355,10 +853,76 @@ header {
             flex: 0 0 100%;
         }
     }
-    
+
+    .section-get-to-know {
+        .row {
+            .col {
+                max-width: 100%;
+                flex: 0 0 100%;
+                padding: 0;
+            }
+
+            .col-image {
+                order: 1;
+            }
+        }
+
+        .content {
+            padding: 0 0 60px;
+
+            p+h4 {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .section-project-fingertips {
+        .row {
+            .col {
+                max-width: 100%;
+                flex: 0 0 100%;
+                padding: 0;
+            }
+
+            .col-content {
+                padding-bottom: 40px;
+                .row {
+                    padding: 0;
+                }
+            }
+        }
+
+        .bg-image {
+            min-height: 606px;
+        }
+        .content {
+            padding: 0 0 32px;
+        }
+    }
+    .section-future-good {
+        padding: 60px 0 0px 0px;
+        .row {
+            margin: 0;
+        }
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding: 0;
+        }
+        .col-image {
+            order: 1;
+            min-height: 290px;
+            background-size: 100% 100%;
+            padding-bottom: 70%;
+        }
+        .content {
+            padding: 0 20px 60px;
+        }
+        .icon-image {
+            display: none;
+        }
+    }
 
 }
-
-
 
 // 767 end
