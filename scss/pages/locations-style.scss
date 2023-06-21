@@ -245,7 +245,7 @@ header {
         padding: 0 15px;
 
         p+h4 {
-            margin-top: 62px;
+            margin-top: 50px;
         }
     }
 
@@ -255,14 +255,15 @@ header {
         margin-bottom: 30px;
     }
 
-    h4,
     p {
-        font-size: 20px;
-        line-height: 1.75;
+        font-size: 17px;
+        line-height: 2;
     }
 
     h4 {
         font-weight: 600;
+        font-size: 20px;
+        line-height: 2;
     }
 }
 
@@ -559,7 +560,9 @@ header {
             margin-bottom: 20px;
         }
 
-        h4,
+        h4 {
+            font-size: 18px;
+        }
         p {
             font-size: 16px;
             line-height: 1.4;
@@ -644,7 +647,9 @@ header {
             }
         }
 
-        h4,
+        h4 {
+            font-size: 16px;
+        }
         p {
             font-size: 14px;
             line-height: 24px;
