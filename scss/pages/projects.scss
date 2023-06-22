@@ -213,6 +213,10 @@
         img {
             margin-bottom: 14px;
         }
+
+        .mobile-image {
+            display: none;
+        }
     }
 
 }
@@ -692,6 +696,17 @@
 
 // 991 end
 @media (max-width:767px) {
+    .section-image-content {
+        .page-title {
+            margin: 0 auto;
+            h1 {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+
     .section-full-image {
         min-height: 300px;
         padding-bottom: 75%;
@@ -706,47 +721,151 @@
         min-height: 600px;
     }
 
-    .section-what-we-know .row-content .col {
-        max-width: 100%;
-        flex: 0 0 100%;
+    .section-project-info p+p {
+        margin-top: 12px;
     }
 
-    .section-timeline-matches .timeline-row {
-        flex-direction: column;
+    .section-what-we-know {
+        .right-col {
+            padding: 30px 20px 5px;
+        }
 
-        .timeline-col {
-            &:after {
-                display: none;
-            }
+        .row-content {
+            margin: 0;
 
-            &:first-child {
+            .col {
                 max-width: 100%;
                 flex: 0 0 100%;
+                text-align: left;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                    background-image: url('../../images/location-img/icons/accept_small.svg');
+                    height: 16px;
+                    width: 16px;
+                }
             }
 
-            &:nth-child(2) {
-                max-width: 100%;
-                flex: 0 0 100%;
-            }
+            .col-item {
+                padding-bottom: 25px;
 
-            &:nth-child(3) {
-                max-width: 100%;
-                flex: 0 0 100%;
-            }
+                img {
+                    display: none;
+                }
 
-            &:last-child {
-                max-width: 100%;
-                flex: 0 0 100%;
-            }
+                h4 {
+                    font-size: 14px;
+                    line-height: 24px;
+                    margin: 0 0 0 10px;
 
-            .timeline-item {
-                background-color: transparent;
+                    br {
+                        display: none;
+                    }
+                }
             }
         }
     }
-    .section-contact-us .col {
-        max-width: 100%;
-        flex: 0 0 100%;
+
+    .section-timeline-matches {
+        .timeline-row {
+            flex-direction: column;
+
+            .timeline-col {
+                min-width: 140px;
+                min-height: 80px;
+
+                &:after {
+                    border: none;
+                    height: 100%;
+                    top: 100%;
+                    bottom: 0;
+                    border-left: 2px dashed $black;
+                    left: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &:before {
+                    top: auto;
+                    bottom: 0;
+                    left: calc(50% - 6px);
+                    transform: translateY(calc(50% - 6px));
+                }
+
+                &:first-child {
+                    max-width: 100%;
+                    flex: 0 0 100%;
+                }
+
+                &:nth-child(2) {
+                    max-width: 100%;
+                    flex: 0 0 100%;
+                }
+
+                &:nth-child(3) {
+                    max-width: 100%;
+                    flex: 0 0 100%;
+                }
+
+                &:last-child {
+                    max-width: 100%;
+                    flex: 0 0 100%;
+                }
+
+                .timeline-item {
+                    background-color: transparent;
+                    max-width: 100%;
+                    height: auto;
+                    padding: 0;
+                }
+
+                h4 {
+                    line-height: 24px;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
+            .timeline-item4 {
+                .desktop-image {
+                    display: none;
+                }
+
+                .mobile-image {
+                    background-color: $pearl-drop2;
+                    display: block;
+                    height: 64px;
+                    width: 64px;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 10px;
+
+                    img {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-contact-us {
+        padding: 60px 0 0;
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+        .col-img {
+            order: 1;
+            margin-top: 30px;
+        }
     }
 }
 
