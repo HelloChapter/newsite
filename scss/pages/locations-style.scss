@@ -4,6 +4,7 @@
 @import "../components/slider.scss";
 @import "../components/category.scss";
 @import "../components/image-content.scss";
+@import "../components/project-fingertips.scss";
 @import "../components/before-after-slider.scss";
 @import "../components/header.scss";
 @import "../components/footer.scss";
@@ -267,65 +268,6 @@ header {
     }
 }
 
-.section-project-fingertips {
-    padding: 115px;
-
-    .container {
-        padding: 0;
-        max-width: 100%;
-    }
-
-    .bg-image {
-        border: 13px solid $light-pink;
-        border-radius: 31px;
-        height: 100%;
-        background-size: 100% 100%;
-
-        img {
-            width: 100%;
-            border-radius: 31px;
-        }
-    }
-
-    .content {
-        max-width: 710px;
-        padding: 0 15px 100px;
-    }
-
-    h2 {
-        font-size: 70px;
-        line-height: 1.1;
-        margin-bottom: 30px;
-    }
-
-    .col-image {
-        max-width: 38.1%;
-        padding-right: 152px;
-    }
-
-    .col-content {
-        .row {
-            padding-right: 100px;
-
-            .col {
-                max-width: 33.33%;
-                flex: 0 0 33.33%;
-            }
-        }
-    }
-
-    .col-item {
-        text-align: center;
-        padding-bottom: 105px;
-
-        h3 {
-            font-size: 17px;
-            line-height: 30px;
-            font-weight: 500;
-        }
-    }
-}
-
 .section-future-good {
     padding: 115px;
 
@@ -382,32 +324,6 @@ header {
         }
     }
 
-    .section-project-fingertips {
-        padding: 80px;
-
-        .content {
-            padding: 0 15px 70px;
-        }
-
-        h2 {
-            font-size: 60px;
-        }
-
-        .col-image {
-            padding-right: 130px;
-        }
-
-        .col-content {
-            .row {
-                padding-right: 70px;
-            }
-        }
-
-        .col-item {
-            padding-bottom: 70px;
-        }
-    }
-
     .section-future-good {
         padding: 80px;
 
@@ -461,36 +377,6 @@ header {
 
         h2 {
             font-size: 50px;
-        }
-    }
-
-    .section-project-fingertips {
-        padding: 60px;
-
-        .content {
-            padding: 0 15px 40px;
-        }
-
-        h2 {
-            font-size: 50px;
-        }
-
-        .col-image {
-            padding-right: 80px;
-        }
-
-        .col-content {
-            .row {
-                padding-right: 40px;
-            }
-        }
-
-        .col-item {
-            padding-bottom: 40px;
-
-            img {
-                max-width: 90px;
-            }
         }
     }
 
@@ -575,16 +461,6 @@ header {
         }
     }
 
-    .section-project-fingertips {
-        h2 {
-            font-size: 40px;
-        }
-
-        .col-image {
-            padding-right: 50px;
-        }
-    }
-
     .section-future-good {
         h2 {
             font-size: 40px;
@@ -609,10 +485,6 @@ header {
         p+p {
             margin-top: 15px;
         }
-    }
-
-    .section-project-fingertips .col-image {
-        padding: 0;
     }
 }
 
@@ -663,49 +535,6 @@ header {
 
         .col-image {
             margin-bottom: auto;
-        }
-    }
-
-    .section-project-fingertips {
-        padding: 60px 20px;
-
-        h2 {
-            font-size: 25px;
-            line-height: 30px;
-            margin-bottom: 30px;
-            letter-spacing: -0.15px;
-        }
-
-        .col-content {
-            padding-right: 60px;
-
-            .row {
-                .col {
-                    max-width: 50%;
-                    flex: 0 0 50%;
-                }
-            }
-        }
-
-        .content {
-            padding-bottom: 32px;
-        }
-
-        .col-item {
-            padding-bottom: 30px;
-
-            img {
-                max-width: 42px;
-            }
-
-            h3 {
-                font-size: 14px;
-                line-height: 33px;
-            }
-        }
-
-        .bg-image {
-            border-width: 8px;
         }
     }
 
@@ -878,30 +707,6 @@ header {
             p+h4 {
                 margin-top: 50px;
             }
-        }
-    }
-
-    .section-project-fingertips {
-        .row {
-            .col {
-                max-width: 100%;
-                flex: 0 0 100%;
-                padding: 0;
-            }
-
-            .col-content {
-                padding-bottom: 40px;
-                .row {
-                    padding: 0;
-                }
-            }
-        }
-
-        .bg-image {
-            min-height: 606px;
-        }
-        .content {
-            padding: 0 0 32px;
         }
     }
     .section-future-good {
