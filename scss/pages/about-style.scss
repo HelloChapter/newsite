@@ -27,6 +27,11 @@
         flex: 0 0 50%;
     }
 
+    .page-title {
+        max-width: 548px;
+        margin: 0 auto;
+    }
+
     .bg-image {
         min-height: 650px;
     }
@@ -95,7 +100,7 @@
     }
 
     .content {
-        max-width: 600px;
+        max-width: 580px;
 
         p {
             letter-spacing: -0.6px;
@@ -169,7 +174,7 @@
         .team-content {
             visibility: hidden;
             display: none;
-            transition:0.6s all ease-out;
+            transition: 0.6s all ease-out;
             padding: 5% 60px;
             overflow: hidden;
 
@@ -199,6 +204,61 @@
     }
 }
 
+.section-team-chapter {
+    padding: 115px;
+
+    h2 {
+        margin-bottom: 30px;
+        font-size: 70px;
+        line-height: 1.14;
+    }
+
+    .col-img {
+        max-width: 50.13%;
+        flex: 0 0 50.13%;
+        min-height: 564px;
+    }
+
+    .col-content {
+        padding-left: 100px;
+    }
+
+    .content {
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    p {
+        line-height: 1.92;
+    }
+}
+.section-project-managers {
+    padding: 115px 0 0 115px;
+    h2 {
+        margin-bottom: 30px;
+        font-size: 70px;
+        line-height: 1.14;
+    }
+    .col-content {
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    .content {
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    p {
+        line-height: 1.92;
+    }
+    .col-img {
+        max-width: 63.2%;
+        flex: 0 0 63.2%;
+        padding-bottom: 42.1%;
+        margin-top: -30px;
+    }
+}
 //  Responsive CSS start
 @media (max-width:1800px) {
     .section-team-members {
@@ -221,6 +281,27 @@
 }
 
 // 1800 end
+@media (max-width:1660px) {
+    .section-team-chapter {
+        padding: 80px;
+
+        h2 {
+            font-size: 60px;
+        }
+
+        .col-content {
+            padding-left: 80px;
+        }
+    }
+    .section-project-managers {
+        padding: 80px 0 0 80px;
+        h2 {
+            font-size: 60px;
+        }
+    }
+}
+
+// 1660 end
 @media (max-width:1440px) {
     .section-intro-image {
         .section-content-col {
@@ -255,6 +336,24 @@
                     margin-bottom: 10px;
                 }
             }
+        }
+    }
+
+    .section-team-chapter {
+        padding: 60px;
+
+        h2 {
+            font-size: 50px;
+        }
+
+        .col-content {
+            padding-left: 60px;
+        }
+    }
+    .section-project-managers {
+        padding: 60px 0 0 60px;
+        h2 {
+            font-size: 50px;
         }
     }
 }
@@ -314,6 +413,21 @@
                     font-size: 12px;
                 }
             }
+        }
+    }
+
+    .section-team-chapter {
+        h2 {
+            font-size: 40px;
+        }
+
+        .col-content {
+            padding-left: 40px;
+        }
+    }
+    .section-project-managers {
+        h2 {
+            font-size: 40px;
         }
     }
 }
@@ -380,9 +494,10 @@
 
     .section-welcome-text {
         padding: 60px 20px;
-         h3 {
+
+        h3 {
             font-size: 25px;
-         }
+        }
     }
 
     .section-team-members {
@@ -407,9 +522,42 @@
             margin-bottom: 30px;
         }
     }
+
+    .section-team-chapter {
+        .col-img {
+            min-height: 100%;
+            padding-bottom: 56.25%;
+        }
+    }
 }
 
 // 1023 end
+@media (max-width:991px) {
+    .section-team-chapter {
+        padding: 60px 20px;
+
+        h2 {
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 30px;
+            letter-spacing: -0.15px;
+        }
+
+        .col-content {
+            padding-left: 40px;
+        }
+    }
+    .section-project-managers {
+        padding: 60px 0 0 20px;
+        h2 {
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 30px;
+            letter-spacing: -0.15px;
+        }
+    }
+}
+
 @media (max-width:767px) {
     .section-intro-content {
         .content-wrap {
@@ -419,16 +567,43 @@
                 padding-bottom: 20px;
             }
         }
+
         .row .col+.col .content {
             margin: 0;
         }
     }
+
     .section-intro-image .bg-image {
         min-height: 400px;
     }
+
     .section-team-members .team-wrapper .col-team {
         max-width: 50%;
         flex: 0 0 50%;
+    }
+
+    .section-team-chapter {
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+        .col-content {
+            padding: 30px 0 0;
+        }
+    }
+    .section-project-managers {
+        padding: 60px 0 0 0;
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+        .col-content {
+            padding: 0 20px 20px;
+        }
+        .col-img {
+            margin-top: 0;
+            padding-bottom: 50%;
+        }
     }
 }
 
@@ -439,4 +614,5 @@
         flex: 0 0 100%;
     }
 }
+
 // 575 end
