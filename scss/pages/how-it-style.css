@@ -518,6 +518,7 @@ h2 {
   font-size: 17px;
   line-height: 30px;
   font-weight: 500;
+  font-family: "Inter";
 }
 
 @media (max-width: 1600px) {
@@ -1334,7 +1335,7 @@ footer .col-news-letter button img {
   font-size: 23px;
   line-height: 1;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
