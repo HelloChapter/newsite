@@ -563,6 +563,9 @@ h2 {
   .section-project-fingertips .col-item img {
     max-width: 90px;
   }
+  .section-project-fingertips .col-item h3 {
+    font-size: 14px;
+  }
 }
 @media (max-width: 1199px) {
   .section-project-fingertips h2 {
