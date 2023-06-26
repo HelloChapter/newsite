@@ -141,14 +141,20 @@
 }
 
 .section-team-members {
+    padding-bottom: 60px;
+
     .section-title {
         padding: 115px 15px;
     }
 
     .team-wrapper {
+        padding: 0 115px;
+
         .col-team {
             max-width: 25%;
             flex: 0 0 25%;
+            padding-bottom: 30px;
+            position: relative;
 
             .team-image {
                 min-height: inherit;
@@ -157,15 +163,16 @@
 
                 &:hover {
                     .team-content {
-
                         display: block;
                         position: absolute;
                         bottom: 0;
+                        top: 0;
+                        right: 0;
                         left: 0;
-                        height: 100%;
-                        width: 100%;
+                        margin: auto;
+                        height: calc(100% - 30px);
+                        width: calc(100% - 30px);
                         visibility: visible;
-                        height: 100%;
                     }
                 }
             }
@@ -177,29 +184,99 @@
             transition: 0.6s all ease-out;
             padding: 5% 60px;
             overflow: hidden;
+            text-align: center;
+            background-color: rgba($color: #ffffff, $alpha: 0.86);
+            height: calc(100% - 30px);
+            width: calc(100% - 30px);
 
             h6 {
-                font-size: 17px;
-                line-height: 50px;
+                font-size: 14px;
+                line-height: 17px;
                 font-family: "Inter";
                 font-weight: 400;
                 margin-bottom: 10px;
             }
 
             h3 {
-                font-size: 40px;
-                line-height: 50px;
+                font-size: 36px;
+                line-height: 41px;
+                margin-bottom: 12px;
             }
 
             h4 {
-                font-size: 17px;
-                line-height: 50px;
+                font-size: 14px;
+                line-height: 17px;
                 font-family: "Inter";
-                font-weight: 500;
+                font-weight: 700;
                 margin-bottom: 10px;
-                text-transform: uppercase;
 
             }
+        }
+
+        .active-member:not(.col-team-5, .col-team-6) {
+            &:after {
+                content: '';
+                display: block;
+                bottom: 0;
+                height: 6px;
+                background-color: $black;
+                width: calc(100% - 30px);
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+            }
+        }
+
+        .active-member:not(.col-team-1, .col-team-2, .col-team-3, .col-team-4) {
+            &:before {
+                content: '';
+                display: block;
+                top: 0;
+                height: 6px;
+                background-color: $black;
+                width: calc(100% - 30px);
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                z-index: 1;
+            }
+        }
+    }
+
+    .mobile-team-wrapper {
+        display: none;
+    }
+
+    .team-clickable-content {
+        margin: 0px 0 30px;
+        padding: 100px;
+
+        .content {
+            max-width: 861px;
+        }
+
+        h6 {
+            font-size: 17px;
+            line-height: 1.15;
+            font-weight: 300;
+            font-family: "Inter";
+            margin-bottom: 6px;
+        }
+
+        h3 {
+            font-size: 70px;
+            line-height: 1.15;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            font-size: 17px;
+            line-height: 1.15;
+            font-weight: 600;
+            font-family: "Inter";
+            margin-bottom: 30px;
         }
     }
 }
@@ -232,13 +309,16 @@
         line-height: 1.92;
     }
 }
+
 .section-project-managers {
     padding: 115px 0 0 115px;
+
     h2 {
         margin-bottom: 30px;
         font-size: 70px;
         line-height: 1.14;
     }
+
     .col-content {
         padding-right: 20px;
         padding-bottom: 20px;
@@ -252,6 +332,7 @@
     p {
         line-height: 1.92;
     }
+
     .col-img {
         max-width: 63.2%;
         flex: 0 0 63.2%;
@@ -259,28 +340,8 @@
         margin-top: -30px;
     }
 }
+
 //  Responsive CSS start
-@media (max-width:1800px) {
-    .section-team-members {
-        .team-wrapper {
-            .team-content {
-                padding: 20px;
-
-                h3 {
-                    font-size: 35px;
-                    line-height: 40px;
-                }
-
-                h6 {
-                    line-height: 30px;
-                    margin-bottom: 20px;
-                }
-            }
-        }
-    }
-}
-
-// 1800 end
 @media (max-width:1660px) {
     .section-team-chapter {
         padding: 80px;
@@ -293,12 +354,39 @@
             padding-left: 80px;
         }
     }
+
     .section-project-managers {
         padding: 80px 0 0 80px;
+
         h2 {
             font-size: 60px;
         }
     }
+
+    .section-team-members {
+        padding-bottom: 30px;
+
+        .section-title {
+            padding: 80px 15px;
+        }
+
+        .team-wrapper {
+            padding: 0 80px;
+
+            .team-content {
+                padding: 20px;
+            }
+        }
+
+        .team-clickable-content {
+            padding: 70px;
+
+            h3 {
+                font-size: 60px;
+            }
+        }
+    }
+
 }
 
 // 1660 end
@@ -318,23 +406,24 @@
     }
 
     .section-team-members {
+        .section-title {
+            padding: 60px 15px;
+        }
+
         .team-wrapper {
-            .team-content {
-                padding: 20px;
+            padding: 0 60px;
 
-                h3 {
-                    font-size: 30px;
-                    line-height: 1.3;
-                }
+            .team-content h3 {
+                font-size: 32px;
+                line-height: 36px;
+            }
+        }
 
-                h4 {
-                    line-height: 1.3;
-                    margin-bottom: 10px;
-                }
+        .team-clickable-content {
+            padding: 50px;
 
-                h6 {
-                    margin-bottom: 10px;
-                }
+            h3 {
+                font-size: 50px;
             }
         }
     }
@@ -350,8 +439,10 @@
             padding-left: 60px;
         }
     }
+
     .section-project-managers {
         padding: 60px 0 0 60px;
+
         h2 {
             font-size: 50px;
         }
@@ -383,14 +474,11 @@
 
     .section-team-members {
         .section-title {
-            padding: 80px 15px;
+            padding: 40px 15px;
         }
 
         .team-wrapper {
-            .col-team {
-                max-width: 33.33%;
-                flex: 0 0 33.33%;
-            }
+            padding: 0 40px;
 
             .team-content {
                 padding: 15px;
@@ -414,6 +502,14 @@
                 }
             }
         }
+
+        .team-clickable-content {
+            padding: 40px;
+
+            h3 {
+                font-size: 40px;
+            }
+        }
     }
 
     .section-team-chapter {
@@ -425,6 +521,7 @@
             padding-left: 40px;
         }
     }
+
     .section-project-managers {
         h2 {
             font-size: 40px;
@@ -433,33 +530,6 @@
 }
 
 // 1199 end
-@media (max-width:1100px) {
-    .section-team-members {
-        .team-wrapper {
-            .team-content {
-                padding: 12px;
-
-                h3 {
-                    font-size: 24px;
-                }
-
-                h4 {
-                    font-size: 14px;
-                }
-
-                h6 {
-                    font-size: 14px;
-                }
-
-                .content {
-                    font-size: 12px;
-                }
-            }
-        }
-    }
-}
-
-// 1100 end
 @media (max-width:1023px) {
     .section-intro-image {
         padding: 100px 0 0;
@@ -517,10 +587,6 @@
             transition: none;
             padding: 20px;
         }
-
-        .col-team {
-            margin-bottom: 30px;
-        }
     }
 
     .section-team-chapter {
@@ -533,27 +599,76 @@
 
 // 1023 end
 @media (max-width:991px) {
+
+    .section-project-managers {
+        padding: 60px 0 0 20px;
+
+        h2 {
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 30px;
+            letter-spacing: -0.15px;
+        }
+
+        .col-img {
+            padding-bottom: 0;
+            margin-top: 0;
+            background-size: contain;
+        }
+    }
+
     .section-team-chapter {
         padding: 60px 20px;
 
         h2 {
             font-size: 25px;
             line-height: 30px;
-            margin-bottom: 30px;
             letter-spacing: -0.15px;
         }
 
         .col-content {
-            padding-left: 40px;
+            padding-left: 20px;
         }
     }
-    .section-project-managers {
-        padding: 60px 0 0 20px;
-        h2 {
-            font-size: 25px;
-            line-height: 30px;
-            margin-bottom: 30px;
-            letter-spacing: -0.15px;
+
+    .section-team-members {
+        .desktop-team-wrapper {
+            display: none;
+        }
+
+        .mobile-team-wrapper {
+            display: block;
+            padding: 0 20px;
+
+            .col-team {
+                max-width: 50%;
+                flex: 0 0 50%;
+            }
+        }
+
+        .team-content-info {
+            padding: 15px 0;
+
+            h6 {
+                font-size: 14px;
+                line-height: 17px;
+                font-weight: 400;
+                margin-bottom: 5px;
+            }
+
+            h3 {
+                font-size: 24px;
+                line-height: 28px;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+
+            h4 {
+                font-size: 14px;
+                line-height: 17px;
+                font-weight: 700;
+                margin-bottom: 30px;
+            }
         }
     }
 }
@@ -577,29 +692,35 @@
         min-height: 400px;
     }
 
-    .section-team-members .team-wrapper .col-team {
-        max-width: 50%;
-        flex: 0 0 50%;
+    .section-team-chapter {
+        padding: 60px 0 0;
+
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .col-img {
+            order: 1;
+        }
+
+        .col-content {
+            padding: 0 20px 30px;
+        }
     }
 
-    .section-team-chapter {
-        .col {
-            max-width: 100%;
-            flex: 0 0 100%;
-        }
-        .col-content {
-            padding: 30px 0 0;
-        }
-    }
     .section-project-managers {
         padding: 60px 0 0 0;
+
         .col {
             max-width: 100%;
             flex: 0 0 100%;
         }
+
         .col-content {
             padding: 0 20px 20px;
         }
+
         .col-img {
             margin-top: 0;
             padding-bottom: 50%;
@@ -608,11 +729,33 @@
 }
 
 //767 end
-@media (max-width:575px) {
-    .section-team-members .team-wrapper .col-team {
-        max-width: 100%;
-        flex: 0 0 100%;
+@media (max-width:600px) {
+    .section-team-members .team-wrapper {
+        padding: 0;
+
+        .row {
+            margin: 0;
+        }
+
+        .col {
+            padding: 0;
+        }
+
+        .col-team {
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding-bottom: 30px;
+        }
+
+        .team-content-info {
+            padding: 15px 20px;
+        }
     }
 }
 
-// 575 end
+// 600 end
+@media (max-width:430px) {
+    .section-project-managers .col-img {
+        background-size: 100% 100%;
+    }
+}

@@ -1,3 +1,4 @@
+let selectedEmp = null;
 
 jQuery(document).ready(function ($) {
     // Cookie code
@@ -7,23 +8,14 @@ jQuery(document).ready(function ($) {
     document.head.appendChild(jQueryScript);
     //console.log(jQueryScript)
     function custom_cookie() {
-        // Cookies.set('HelloChapter', 'PageUrl', { expires: 30, path: '' })
-        // var page_url = Cookies.get('HelloChapter');
-        // console.log(page_url);
-        // if (page_url === "/contact-chapter-home-renovation") {
-        //     console.log("contact page");
-        // }
-        // else {
-        //     console.log("other");
-        // }
-        if(Cookies.get('HelloChapterContactPath') === undefined) {
-            Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
+        if (Cookies.get('HelloChapterContactPath') === undefined) {
+            Cookies.set('HelloChapterContactPath', window.location.href, { expires: 30, path: '' })
         }
 
-        if(window.location.pathname === '/contact-chapter-home-renovation/'){
-           // Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
+        if (window.location.pathname === '/contact-chapter-home-renovation/') {
+            // Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
         }
-      
+
     }
     setTimeout(custom_cookie, 1000);
 
@@ -54,6 +46,33 @@ jQuery(document).ready(function ($) {
         }
     });
     // Counter number js end
+
+    // About team click js
+
+    $(".desktop-team-wrapper .team-image").click(function () {
+        var current_item= $(this).attr("data-point-id");
+        if($(".team-clickable-content")[current_item].classList.contains('d-block')){
+            // just remove 'd-block' and add 'd-none' to all elements and return here
+            $(".team-clickable-content").removeClass('d-block');
+            $(".team-clickable-content").addClass('d-none');
+            return false;
+        }
+        // check if div has class 'd-block'
+        $(".team-clickable-content").removeClass('d-block');
+        $(".team-clickable-content").addClass('d-none');
+
+        $(".team-clickable-content")[current_item].classList.remove('d-none');
+        $(".team-clickable-content")[current_item].classList.add('d-block');
+
+        // if($(".col-team").classList.contains('active-member')){
+        //     $(".col-team").removeClass("active-member");
+        //     $(this).parent(".col-team").addClass("active-member");
+        //     return false;
+        // }
+        $(".col-team").removeClass("active-member");
+        $(this).parent(".col-team").addClass("active-member");
+    });
+
     $(".menu-btn-toggle").click(function () {
         $("body").toggleClass("header-open");
     });

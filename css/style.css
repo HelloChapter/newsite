@@ -99,6 +99,10 @@
   text-align: center;
 }
 
+.d-none {
+  display: none;
+}
+
 .d-block {
   display: block;
 }
