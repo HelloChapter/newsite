@@ -3,6 +3,7 @@
 @import "../components/slider.scss";
 @import "../components/header.scss";
 @import "../components/footer.scss";
+@import "../components/chapter-content.scss";
 @import "../components/chapter-numbers.scss";
 
 .page-about {
@@ -72,7 +73,7 @@
         h4 {
             font-size: 35px;
             line-height: 50px;
-            font-weight: 500;
+            font-weight: 400;
             font-family: "Inter";
             text-transform: uppercase;
             letter-spacing: 0;
@@ -85,9 +86,13 @@
     padding: 215px 0 115px;
     position: relative;
 
+    h2 {
+        line-height: 1.13;
+    }
+
     .section-title {
         max-width: 850px;
-        margin: 0 auto 90px;
+        margin: 0 auto 20px;
     }
 
     .row {
@@ -104,6 +109,7 @@
 
         p {
             letter-spacing: -0.6px;
+            line-height: 2.8;
         }
     }
 }
@@ -133,8 +139,8 @@
 
     h3 {
         font-size: 40px;
-        line-height: 50px;
-        font-weight: 500;
+        line-height: 48px;
+        font-weight: 400;
         font-family: "Inter";
         text-transform: uppercase;
     }
@@ -145,6 +151,11 @@
 
     .section-title {
         padding: 115px 15px;
+
+        h2 {
+            font-size: 70px;
+            line-height: 1.15;
+        }
     }
 
     .team-wrapper {
@@ -163,7 +174,6 @@
 
                 &:hover {
                     .team-content {
-                        display: block;
                         position: absolute;
                         bottom: 0;
                         top: 0;
@@ -173,6 +183,10 @@
                         height: calc(100% - 30px);
                         width: calc(100% - 30px);
                         visibility: visible;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
                     }
                 }
             }
@@ -188,6 +202,7 @@
             background-color: rgba($color: #ffffff, $alpha: 0.86);
             height: calc(100% - 30px);
             width: calc(100% - 30px);
+            
 
             h6 {
                 font-size: 14px;
@@ -232,7 +247,7 @@
             &:before {
                 content: '';
                 display: block;
-                top: 0;
+                top: -36px;
                 height: 6px;
                 background-color: $black;
                 width: calc(100% - 30px);
@@ -368,6 +383,10 @@
 
         .section-title {
             padding: 80px 15px;
+
+            h2 {
+                font-size: 60px;
+            }
         }
 
         .team-wrapper {
@@ -408,6 +427,10 @@
     .section-team-members {
         .section-title {
             padding: 60px 15px;
+
+            h2 {
+                font-size: 50px;
+            }
         }
 
         .team-wrapper {
@@ -458,10 +481,6 @@
 
     .section-intro-content {
         padding: 175px 0 85px;
-
-        .section-title {
-            margin-bottom: 40px;
-        }
     }
 
     .section-welcome-text {
@@ -475,6 +494,10 @@
     .section-team-members {
         .section-title {
             padding: 40px 15px;
+
+            h2 {
+                font-size: 40px;
+            }
         }
 
         .team-wrapper {
@@ -686,6 +709,12 @@
         .row .col+.col .content {
             margin: 0;
         }
+
+        .content {
+            p {
+                line-height: 24px;
+            }
+        }
     }
 
     .section-intro-image .bg-image {
@@ -724,6 +753,16 @@
         .col-img {
             margin-top: 0;
             padding-bottom: 50%;
+        }
+    }
+
+    .section-team-members {
+        .section-title {
+            h2 {
+                font-size: 25px;
+                line-height: 30px;
+                letter-spacing: -0.15px;
+            }
         }
     }
 }

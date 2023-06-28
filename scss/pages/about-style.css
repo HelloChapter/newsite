@@ -1014,6 +1014,36 @@ footer .col-news-letter button img {
     margin-bottom: 10px;
   }
 }
+.section-chapter-content {
+  padding: 92px 0;
+}
+.section-chapter-content img {
+  max-width: 58px;
+  margin-bottom: 20px;
+  opacity: 1 !important;
+}
+.section-chapter-content h2 {
+  margin-bottom: 54px;
+}
+.section-chapter-content .spinner-wrapper img.small {
+  -webkit-transition: -webkit-transform 3s;
+  transition: -webkit-transform 3s;
+  transition: transform 3s;
+  transition: transform 3s, -webkit-transform 3s;
+}
+.section-chapter-content .spinner-wrapper img.small.aos-animate, .section-chapter-content .spinner-wrapper img.small:hover {
+  -webkit-transform: rotate(1turn);
+  transform: rotate(1turn);
+}
+
+@media (max-width: 1023px) {
+  .section-chapter-content {
+    padding: 60px 0;
+  }
+  .section-chapter-content h2 {
+    margin-bottom: 40px;
+  }
+}
 .section-chapter-numbers {
   padding: 100px 0;
 }
@@ -1223,7 +1253,7 @@ footer .col-news-letter button img {
 .section-intro-image .section-content-col h4 {
   font-size: 35px;
   line-height: 50px;
-  font-weight: 500;
+  font-weight: 400;
   font-family: "Inter";
   text-transform: uppercase;
   letter-spacing: 0;
@@ -1233,9 +1263,12 @@ footer .col-news-letter button img {
   padding: 215px 0 115px;
   position: relative;
 }
+.section-intro-content h2 {
+  line-height: 1.13;
+}
 .section-intro-content .section-title {
   max-width: 850px;
-  margin: 0 auto 90px;
+  margin: 0 auto 20px;
 }
 .section-intro-content .row .col + .col .content {
   margin-right: 0;
@@ -1246,6 +1279,7 @@ footer .col-news-letter button img {
 }
 .section-intro-content .content p {
   letter-spacing: -0.6px;
+  line-height: 2.8;
 }
 
 .spinner-wrap {
@@ -1270,8 +1304,8 @@ footer .col-news-letter button img {
 }
 .section-welcome-text h3 {
   font-size: 40px;
-  line-height: 50px;
-  font-weight: 500;
+  line-height: 48px;
+  font-weight: 400;
   font-family: "Inter";
   text-transform: uppercase;
 }
@@ -1281,6 +1315,10 @@ footer .col-news-letter button img {
 }
 .section-team-members .section-title {
   padding: 115px 15px;
+}
+.section-team-members .section-title h2 {
+  font-size: 70px;
+  line-height: 1.15;
 }
 .section-team-members .team-wrapper {
   padding: 0 115px;
@@ -1299,7 +1337,6 @@ footer .col-news-letter button img {
   position: relative;
 }
 .section-team-members .team-wrapper .col-team .team-image:hover .team-content {
-  display: block;
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1309,6 +1346,19 @@ footer .col-news-letter button img {
   height: calc(100% - 30px);
   width: calc(100% - 30px);
   visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .section-team-members .team-wrapper .team-content {
   visibility: hidden;
@@ -1356,7 +1406,7 @@ footer .col-news-letter button img {
 .section-team-members .team-wrapper .active-member:not(.col-team-1, .col-team-2, .col-team-3, .col-team-4):before {
   content: "";
   display: block;
-  top: 0;
+  top: -36px;
   height: 6px;
   background-color: #231F20;
   width: calc(100% - 30px);
@@ -1472,6 +1522,9 @@ footer .col-news-letter button img {
   .section-team-members .section-title {
     padding: 80px 15px;
   }
+  .section-team-members .section-title h2 {
+    font-size: 60px;
+  }
   .section-team-members .team-wrapper {
     padding: 0 80px;
   }
@@ -1496,6 +1549,9 @@ footer .col-news-letter button img {
   }
   .section-team-members .section-title {
     padding: 60px 15px;
+  }
+  .section-team-members .section-title h2 {
+    font-size: 50px;
   }
   .section-team-members .team-wrapper {
     padding: 0 60px;
@@ -1534,9 +1590,6 @@ footer .col-news-letter button img {
   .section-intro-content {
     padding: 175px 0 85px;
   }
-  .section-intro-content .section-title {
-    margin-bottom: 40px;
-  }
   .section-welcome-text {
     padding: 75px;
   }
@@ -1545,6 +1598,9 @@ footer .col-news-letter button img {
   }
   .section-team-members .section-title {
     padding: 40px 15px;
+  }
+  .section-team-members .section-title h2 {
+    font-size: 40px;
   }
   .section-team-members .team-wrapper {
     padding: 0 40px;
@@ -1705,6 +1761,9 @@ footer .col-news-letter button img {
   .section-intro-content .row .col + .col .content {
     margin: 0;
   }
+  .section-intro-content .content p {
+    line-height: 24px;
+  }
   .section-intro-image .bg-image {
     min-height: 400px;
   }
@@ -1740,6 +1799,11 @@ footer .col-news-letter button img {
   .section-project-managers .col-img {
     margin-top: 0;
     padding-bottom: 50%;
+  }
+  .section-team-members .section-title h2 {
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -0.15px;
   }
 }
 @media (max-width: 600px) {
