@@ -487,6 +487,7 @@ header nav a:hover {
 }
 header nav .active {
   font-style: italic;
+  font-weight: 700;
 }
 header .col-get-started {
   max-width: 200px;
@@ -1088,7 +1089,7 @@ footer .col-news-letter button img {
     padding: 140px 0 70px;
   }
   .section-blog-heading h4,
-.section-blog-heading h5 {
+  .section-blog-heading h5 {
     font-size: 14px;
     line-height: 40px;
   }

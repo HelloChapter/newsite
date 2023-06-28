@@ -487,6 +487,7 @@ header nav a:hover {
 }
 header nav .active {
   font-style: italic;
+  font-weight: 700;
 }
 header .col-get-started {
   max-width: 200px;
