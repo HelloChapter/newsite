@@ -266,7 +266,7 @@ header {
         font-weight: 600;
         font-size: 20px;
         line-height: 2;
-        font-family: "Inter";   
+        font-family: "Inter";
     }
 }
 
@@ -451,6 +451,7 @@ header {
         h4 {
             font-size: 18px;
         }
+
         p {
             font-size: 16px;
             line-height: 1.4;
@@ -524,6 +525,7 @@ header {
         h4 {
             font-size: 16px;
         }
+
         p {
             font-size: 14px;
             line-height: 24px;
@@ -691,6 +693,8 @@ header {
     }
 
     .section-get-to-know {
+        padding:60px 0;
+    
         .row {
             .col {
                 max-width: 100%;
@@ -700,36 +704,51 @@ header {
 
             .col-image {
                 order: 1;
+                padding-bottom: 56.25%;
+                min-height: 290px;
+            }
+            .col-content {
+                padding: 0 20px;
             }
         }
-
+        
         .content {
             padding: 0 0 60px;
+
+            h2 {
+                text-align: center;
+            }
 
             p+h4 {
                 margin-top: 50px;
             }
         }
     }
+
     .section-future-good {
         padding: 60px 0 0px 0px;
+
         .row {
             margin: 0;
         }
+
         .col {
             max-width: 100%;
             flex: 0 0 100%;
             padding: 0;
         }
+
         .col-image {
             order: 1;
             min-height: 290px;
             background-size: 100% 100%;
             padding-bottom: 70%;
         }
+
         .content {
             padding: 0 20px 60px;
         }
+
         .icon-image {
             display: none;
         }

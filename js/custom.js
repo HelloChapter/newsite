@@ -100,6 +100,8 @@ jQuery(document).ready(function ($) {
         speed: 800,
         autoplaySpeed: 3000,
         dots: false,
+        fade: true,
+        cssEase: 'ease-in-out',
 
     });
     // Home slider end
