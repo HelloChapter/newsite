@@ -92,7 +92,38 @@
         }
     }
 }
+.after-before-slider {
+    .slick-dots {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0 -5px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -24px;
 
+        li {
+            padding: 0 5px;
+        }
+
+        .slick-active {
+            button {
+                background-color: $black;
+            }
+        }
+
+        button {
+            background-color:$light-pink;
+            border: none;
+            width: 10px;
+            height: 10px;
+            text-indent: -99em;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+    }
+}
 // Responsive css start
 @media (max-width:1600px) {
     .home-image-content-slider {

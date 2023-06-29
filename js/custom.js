@@ -105,6 +105,19 @@ jQuery(document).ready(function ($) {
 
     });
     // Home slider end
+    $('.after-before-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        speed: 800,
+        autoplaySpeed: 3000,
+        dots: true,
+        fade: true,
+        cssEase: 'ease-in-out',
+
+    });
+    // after-before-slider end
     $('.review-slider').slick({
         autoplay: true,
         infinite: true,
