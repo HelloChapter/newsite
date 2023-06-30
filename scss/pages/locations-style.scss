@@ -532,13 +532,18 @@ header {
         }
 
         .content {
+            padding: 0;
             p+h4 {
-                margin-top: 30px;
+                margin-top: 40px;
+                margin-bottom: 5px;
             }
         }
 
         .col-image {
             margin-bottom: auto;
+            min-height: 416px;
+            max-width: 50%;
+            flex: 0 0 50%;
         }
     }
 
@@ -693,7 +698,7 @@ header {
     }
 
     .section-get-to-know {
-        padding:60px 0;
+        padding:60px 0 0;
     
         .row {
             .col {
