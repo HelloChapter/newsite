@@ -1387,4 +1387,7 @@ footer .col-news-letter button img {
   .after-before-slider-wrap .col-img {
     padding-bottom: 0;
   }
+  .after-before-slider-wrap .two-joint-images {
+    min-height: 400px;
+  }
 }
