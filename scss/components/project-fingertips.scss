@@ -186,20 +186,25 @@
             .col {
                 max-width: 100%;
                 flex: 0 0 100%;
-                padding: 0;
+                padding: 0 0 35px;
+                h3 {
+                    margin-top: 10px;
+                }
             }
 
             .col-content {
-                padding-bottom: 40px;
+                padding-bottom:0px;
                 .row {
                     padding: 0;
                 }
             }
+            .col-image {
+                padding-bottom: 0;
+            }
         }
 
-        .bg-image {
-            min-height: 606px;
-            padding-bottom: 100%;
+        .bg-img-image {
+            max-width: 300px;
         }
         .content {
             padding: 0 0 32px;

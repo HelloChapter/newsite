@@ -621,17 +621,22 @@ h2 {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
-    padding: 0;
+    padding: 0 0 35px;
+  }
+  .section-project-fingertips .row .col h3 {
+    margin-top: 10px;
   }
   .section-project-fingertips .row .col-content {
-    padding-bottom: 40px;
+    padding-bottom: 0px;
   }
   .section-project-fingertips .row .col-content .row {
     padding: 0;
   }
-  .section-project-fingertips .bg-image {
-    min-height: 606px;
-    padding-bottom: 100%;
+  .section-project-fingertips .row .col-image {
+    padding-bottom: 0;
+  }
+  .section-project-fingertips .bg-img-image {
+    max-width: 300px;
   }
   .section-project-fingertips .content {
     padding: 0 0 32px;
