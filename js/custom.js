@@ -50,8 +50,8 @@ jQuery(document).ready(function ($) {
     // About team click js
 
     $(".desktop-team-wrapper .team-image").click(function () {
-        var current_item= $(this).attr("data-point-id");
-        if($(".team-clickable-content")[current_item].classList.contains('d-block')){
+        var current_item = $(this).attr("data-point-id");
+        if ($(".team-clickable-content")[current_item].classList.contains('d-block')) {
             // just remove 'd-block' and add 'd-none' to all elements and return here
             $(".team-clickable-content").removeClass('d-block');
             $(".team-clickable-content").addClass('d-none');
@@ -169,46 +169,63 @@ jQuery(document).ready(function ($) {
 });
 /*Ready function end*/
 // After Before Js start
-$(".range-slider1").on("input change", (e) => {
+
+// $(".range-slider2").on("input change", (e2) => {
+//     const sliderPos = e2.target.value;
+//     // Update the width of the foreground image
+//     $('.two-joint-images2 .foreground-img').css('width', `${sliderPos}%`)
+//     // Update the position of the slider button
+//     $('.two-joint-images2 .slider-button').css('left', `calc(${sliderPos}% - 28px)`)
+// });
+// $(".after-before-btn-wrap .before-btn").on("input click", (e) => {
+//     const sliderPos = e.target.value;
+//     // Update the width of the foreground image
+//     $('.foreground-img').css('width', '100%')
+//     // Update the position of the slider button
+//     $('.slider-button').css('left', `calc(100% - 40px)`)
+// });
+// $(".two-joint-images1 .after-before-btn-wrap .after-btn").on("input click", (e) => {
+//     const sliderPos = e.target.value;
+//     // Update the width of the foreground image
+//     $('.two-joint-images1 .foreground-img').css('width', '0%')
+//     // Update the position of the slider button
+//     $('.two-joint-images1 .slider-button').css('left', `calc(0px)`)
+// });
+// $(".two-joint-images2 .after-before-btn-wrap .before-btn").on("input click", (e) => {
+//     const sliderPos = e.target.value;
+//     // Update the width of the foreground image
+//     $('.two-joint-images2 .foreground-img').css('width', '100%')
+//     // Update the position of the slider button
+//     $('.two-joint-images2 .slider-button').css('left', `calc(100% - 40px)`)
+// });
+// $(".two-joint-images2 .after-before-btn-wrap .after-btn").on("input click", (e) => {
+//     const sliderPos = e.target.value;
+//     // Update the width of the foreground image
+//     $('.two-joint-images2 .foreground-img').css('width', '0%')
+//     // Update the position of the slider button
+//     $('.two-joint-images2 .slider-button').css('left', `calc(0px)`)
+// });
+
+// Js for global after before
+$(".range-slider").on("input change", (e) => {
     const sliderPos = e.target.value;
     // Update the width of the foreground image
-    $('.two-joint-images1 .foreground-img').css('width', `${sliderPos}%`)
+    $(this).parents('.two-joint-images').find.css('width', `${sliderPos}%`)
     // Update the position of the slider button
-    $('.two-joint-images1 .slider-button').css('left', `calc(${sliderPos}% - 28px)`)
+    $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(${sliderPos}% - 28px)`)
 });
-$(".range-slider2").on("input change", (e2) => {
-    const sliderPos = e2.target.value;
-    // Update the width of the foreground image
-    $('.two-joint-images2 .foreground-img').css('width', `${sliderPos}%`)
-    // Update the position of the slider button
-    $('.two-joint-images2 .slider-button').css('left', `calc(${sliderPos}% - 28px)`)
-});
-$(".after-before-btn-wrap .before-btn").on("input click", (e) => {
+$(".after-before-btn-wrap .before-btn").click(function (e) {
     const sliderPos = e.target.value;
+   // $(this).parents('.two-joint-images').css('background-color', 'red');
     // Update the width of the foreground image
-    $('.foreground-img').css('width', '100%')
+    $(this).parents('.two-joint-images').find(".foreground-img").css('width', '100%');
     // Update the position of the slider button
-    $('.slider-button').css('left', `calc(100% - 40px)`)
+   $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(100% - 40px)`);
+
 });
-$(".two-joint-images1 .after-before-btn-wrap .after-btn").on("input click", (e) => {
-    const sliderPos = e.target.value;
-    // Update the width of the foreground image
-    $('.two-joint-images1 .foreground-img').css('width', '0%')
-    // Update the position of the slider button
-    $('.two-joint-images1 .slider-button').css('left', `calc(0px)`)
-});
-$(".two-joint-images2 .after-before-btn-wrap .before-btn").on("input click", (e) => {
-    const sliderPos = e.target.value;
-    // Update the width of the foreground image
-    $('.two-joint-images2 .foreground-img').css('width', '100%')
-    // Update the position of the slider button
-    $('.two-joint-images2 .slider-button').css('left', `calc(100% - 40px)`)
-});
-$(".two-joint-images2 .after-before-btn-wrap .after-btn").on("input click", (e) => {
-    const sliderPos = e.target.value;
-    // Update the width of the foreground image
-    $('.two-joint-images2 .foreground-img').css('width', '0%')
-    // Update the position of the slider button
-    $('.two-joint-images2 .slider-button').css('left', `calc(0px)`)
+$(".two-joint-images .after-before-btn-wrap .after-btn").click(function () {
+   $(this).parents('.two-joint-images').find(".foreground-img").css('width', '0%');
+   $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(0px)`);
+
 });
   // After Before Js end

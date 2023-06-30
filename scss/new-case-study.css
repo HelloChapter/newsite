@@ -678,6 +678,28 @@ h2 {
   padding-top: 0;
 }
 
+.after-before-slider .slick-arrow {
+  position: absolute;
+  bottom: -35px;
+  background-color: transparent;
+  border: none;
+  text-indent: -99em;
+  font-size: 0;
+}
+.after-before-slider .slick-arrow:after {
+  content: "";
+  display: block;
+  height: 22px;
+  width: 46px;
+}
+.after-before-slider .slick-arrow.slick-next {
+  background-image: url("../../images/icons/left-arrow1.svg");
+  left: 24px;
+}
+.after-before-slider .slick-arrow.slick-prev {
+  background-image: url("../../images/icons/right-arrow.svg");
+  right: 24px;
+}
 .after-before-slider .slick-dots {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -689,7 +711,7 @@ h2 {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: -24px;
+  bottom: -39px;
 }
 .after-before-slider .slick-dots li {
   padding: 0 5px;
