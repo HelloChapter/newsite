@@ -115,6 +115,7 @@ jQuery(document).ready(function ($) {
         dots: true,
         fade: true,
         cssEase: 'ease-in-out',
+        draggable:false,
 
     });
     // after-before-slider end
@@ -207,25 +208,25 @@ jQuery(document).ready(function ($) {
 // });
 
 // Js for global after before
-$(".range-slider").on("input change", (e) => {
+$(".range-slider").change(function (e) {
     const sliderPos = e.target.value;
     // Update the width of the foreground image
-    $(this).parents('.two-joint-images').find.css('width', `${sliderPos}%`)
+    $(this).parents('.two-joint-images').find(".foreground-img").css('width', `${sliderPos}%`)
     // Update the position of the slider button
     $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(${sliderPos}% - 28px)`)
+
 });
 $(".after-before-btn-wrap .before-btn").click(function (e) {
     const sliderPos = e.target.value;
-   // $(this).parents('.two-joint-images').css('background-color', 'red');
     // Update the width of the foreground image
     $(this).parents('.two-joint-images').find(".foreground-img").css('width', '100%');
     // Update the position of the slider button
-   $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(100% - 40px)`);
+    $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(100% - 40px)`);
 
 });
 $(".two-joint-images .after-before-btn-wrap .after-btn").click(function () {
-   $(this).parents('.two-joint-images').find(".foreground-img").css('width', '0%');
-   $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(0px)`);
+    $(this).parents('.two-joint-images').find(".foreground-img").css('width', '0%');
+    $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(0px)`);
 
 });
   // After Before Js end
