@@ -1411,6 +1411,29 @@ footer .col-news-letter button img {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.section-team-members .team-wrapper .col-team-7 {
+  max-width: 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+.section-team-members .team-wrapper .col-team-7 .bg-image {
+  height: 100%;
+  width: 100%;
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.section-team-members .team-wrapper .col-team-7 .image img {
+  display: block;
+}
 .section-team-members .team-wrapper .team-content {
   visibility: hidden;
   display: none;
@@ -1672,6 +1695,10 @@ footer .col-news-letter button img {
   }
   .section-team-members .team-wrapper .team-content .content {
     font-size: 12px;
+  }
+  .section-team-members .team-wrapper .col-team-7 .bg-image img {
+    max-width: 70%;
+    margin: 0 auto;
   }
   .section-team-members .team-clickable-content {
     padding: 40px;

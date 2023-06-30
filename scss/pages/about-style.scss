@@ -192,6 +192,26 @@
             }
         }
 
+        .col-team-7 {
+            max-width: 50%;
+            flex: 0 0 50%;
+
+            .bg-image {
+                height: 100%;
+                width: 100%;
+                min-height: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .image {
+                img {
+                    display: block;
+                }
+            }
+        }
+
         .team-content {
             visibility: hidden;
             display: none;
@@ -202,7 +222,7 @@
             background-color: rgba($color: #ffffff, $alpha: 0.86);
             height: calc(100% - 30px);
             width: calc(100% - 30px);
-            
+
 
             h6 {
                 font-size: 14px;
@@ -524,6 +544,12 @@
                     font-size: 12px;
                 }
             }
+            .col-team-7 .bg-image {
+                img {
+                    max-width: 70%;
+                    margin: 0 auto;
+                }
+            }
         }
 
         .team-clickable-content {
@@ -533,6 +559,7 @@
                 font-size: 40px;
             }
         }
+        
     }
 
     .section-team-chapter {
