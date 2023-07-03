@@ -693,12 +693,12 @@ h2 {
   width: 46px;
 }
 .after-before-slider .slick-arrow.slick-next {
-  background-image: url("../../images/icons/left-arrow1.svg");
-  left: 24px;
+  right: 24px;
+  background-image: url("../../images/icons/right-arrow.svg");
 }
 .after-before-slider .slick-arrow.slick-prev {
-  background-image: url("../../images/icons/right-arrow.svg");
-  right: 24px;
+  left: 24px;
+  background-image: url("../../images/icons/left-arrow1.svg");
 }
 .after-before-slider .slick-dots {
   display: -webkit-box;

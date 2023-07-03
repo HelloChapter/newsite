@@ -111,13 +111,13 @@
         }
 
         &.slick-next {
-            background-image: url("../../images/icons/left-arrow1.svg");
-            left: 24px;
+            right: 24px;
+            background-image: url("../../images/icons/right-arrow.svg");
         }
 
         &.slick-prev {
-            background-image: url("../../images/icons/right-arrow.svg");
-            right: 24px;
+            left: 24px;
+            background-image: url("../../images/icons/left-arrow1.svg");
         }
     }
 
