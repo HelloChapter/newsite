@@ -503,6 +503,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   z-index: 1;
+  opacity: 0;
 }
 .before-after-img-wrap .two-joint-images .range-slider:hover {
   background: transparent;

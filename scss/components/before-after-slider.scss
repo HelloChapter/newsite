@@ -69,6 +69,7 @@
         transition: all .2s;
         @include center;
         z-index: 1;
+        opacity: 0;
 
         &:hover {
             background: transparent;
@@ -149,6 +150,7 @@
         }
     }
 }
+
 @media (min-width:1601px) {
     .before-after-img-wrap .two-joint-images {
         .img {
@@ -156,6 +158,7 @@
         }
     }
 }
+
 @media (min-width:1800px) {
     .before-after-img-wrap .two-joint-images {
         .img {
