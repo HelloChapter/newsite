@@ -1507,6 +1507,7 @@ footer .col-news-letter button img {
   font-weight: 300;
   font-family: "Inter";
   margin-bottom: 6px;
+  text-transform: uppercase;
 }
 .section-team-members .team-clickable-content h3 {
   font-size: 70px;
