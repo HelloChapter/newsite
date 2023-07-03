@@ -1452,6 +1452,7 @@ footer .col-news-letter button img {
   font-family: "Inter";
   font-weight: 400;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 .section-team-members .team-wrapper .team-content h3 {
   font-size: 36px;
@@ -1814,6 +1815,7 @@ footer .col-news-letter button img {
     line-height: 17px;
     font-weight: 400;
     margin-bottom: 5px;
+    text-transform: uppercase;
   }
   .section-team-members .team-content-info h3 {
     font-size: 24px;
