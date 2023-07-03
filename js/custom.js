@@ -55,6 +55,7 @@ jQuery(document).ready(function ($) {
             // just remove 'd-block' and add 'd-none' to all elements and return here
             $(".team-clickable-content").removeClass('d-block');
             $(".team-clickable-content").addClass('d-none');
+            $(".col-team").removeClass("active-member");
             return false;
         }
         // check if div has class 'd-block'
