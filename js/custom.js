@@ -119,6 +119,7 @@ jQuery(document).ready(function ($) {
         draggable: false,
         swipeToSlide: false,
         touchMove: false,
+        swipe:false,
 
     });
     // after-before-slider end
