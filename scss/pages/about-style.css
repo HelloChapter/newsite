@@ -336,6 +336,10 @@ h2 {
   display: block;
 }
 
+.opacity-0 {
+  opacity: 0 !important;
+}
+
 @media (max-width: 1600px) {
   body {
     font-size: 14px;
@@ -547,6 +551,11 @@ h2 {
   }
   .home-image-content-slider .col-img-content .content {
     padding-right: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .home-image-content-slider .content .content-p br {
+    display: none;
   }
 }
 @media (max-width: 767px) {

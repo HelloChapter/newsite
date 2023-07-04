@@ -168,7 +168,7 @@ jQuery(document).ready(function ($) {
     });
     // Aos Animate
     jQuery(".location-link-hover").hover(function () {
-        jQuery(this).parents(".col-location").toggleClass("hover-");
+        jQuery(this).parents(".col-location").toggleClass("hover-link");
     });
 
 });

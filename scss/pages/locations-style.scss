@@ -74,6 +74,7 @@ header {
 
     .stretched-link {
         transition: background-color .3s ease-in-out;
+        z-index: 1;
 
         &:hover {
             background-color: $white;
@@ -92,6 +93,14 @@ header {
     .hover-link {
         .stretched-link {
             background-color: $white;
+        }
+        .locations-image {
+            p {
+                opacity: 1;
+                color: #231F20;
+                position: relative;
+                z-index: 1;
+            }
         }
     }
 
@@ -533,6 +542,7 @@ header {
 
         .content {
             padding: 0;
+
             p+h4 {
                 margin-top: 40px;
                 margin-bottom: 5px;
@@ -698,8 +708,8 @@ header {
     }
 
     .section-get-to-know {
-        padding:60px 0 0;
-    
+        padding: 60px 0 0;
+
         .row {
             .col {
                 max-width: 100%;
@@ -712,11 +722,12 @@ header {
                 padding-bottom: 56.25%;
                 min-height: 290px;
             }
+
             .col-content {
                 padding: 0 20px;
             }
         }
-        
+
         .content {
             padding: 0 0 60px;
 
@@ -746,8 +757,10 @@ header {
         .col-image {
             order: 1;
             min-height: 290px;
-            background-size: 100% 100%;
-            padding-bottom: 70%;
+            background-size:cover;
+            padding-bottom: 74.5%;
+            background-image: url("../../images/locations-style/mobile-the-future-looks-good.jpg") !important;
+            background-position: center bottom;
         }
 
         .content {

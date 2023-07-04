@@ -180,6 +180,18 @@
 }
 
 // 1199 end
+@media (max-width:991px) {
+    .home-image-content-slider {
+        .content {
+            .content-p {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width:767px) {
     .home-image-content-slider {
         .slick-dots {
