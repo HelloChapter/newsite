@@ -213,13 +213,14 @@ jQuery(document).ready(function ($) {
 
 // Js for global after before
 // $(".range-slider").change(function (e) {
-$(".range-slider1").on("input change", (e) => {
+$('body').on('input change', '.range-slider', function(e) { 
     const sliderPos = e.target.value;
     // Update the width of the foreground image
     e.target.parentElement.parentElement.querySelector(".foreground-img").style['width'] = `${sliderPos}%`;
     // Update the position of the slider button
     e.target.parentElement.parentElement.querySelector(".slider-button").style['left'] = `calc(${sliderPos}% - 28px)`;
     // $(this).parents('.two-joint-images').children('.slider-button').css('left', `calc(${sliderPos}% - 28px)`)
+
 });
 $(".after-before-btn-wrap .before-btn").click(function (e) {
     const sliderPos = e.target.value;
