@@ -52,7 +52,7 @@ area.">
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -95,57 +95,81 @@ area.">
   <!-- QR code query parameter read  -->
   <script>
     function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
-  $.ajax({
-    dataType: "json",
-    url: url,
-    type: type,
-    data: dataObject,
-    crossDomain: crossDomain,
-    async: !1,
-    success: function (result) {
-      callback(result)
-    },
-    error: function (jqXHR, exception) {
-      inputs.each(function () {
-        $(this).attr("disabled", "false");
+      $.ajax({
+        dataType: "json",
+        url: url,
+        type: type,
+        data: dataObject,
+        crossDomain: crossDomain,
+        async: !1,
+        success: function (result) {
+          callback(result)
+        },
+        error: function (jqXHR, exception) {
+          inputs.each(function () {
+            $(this).attr("disabled", "false");
+          })
+        }
       })
     }
-  })
-}
-   const queryString = window.location.search;
-   if(queryString === "?s=hello-miami"){
-    setTimeout(function(){
-      makeAjaxCall("https://api.hellochapter.dev/api/contact/track", "GET", !0,null, (res)=>{
-        if(res.success){
-          localStorage.setItem("qr_status",true);
-          localStorage.setItem("formSubmitted",false);
-        }
-      });
-    }, 500)
-    
-   }else{
-    if (localStorage.getItem("qr_status")){
-      localStorage.removeItem("qr_status")
-      localStorage.removeItem("formSubmitted")
+    const queryString = window.location.search;
+    const arrQueryStrign = [
+      '?s=mail5tdr',
+      '?s=mail11beach',
+      '?s=mail280rec',
+      '?s=mail2250bway',
+      '?s=mail105W13th',
+      '?s=mail114E84th',
+      '?s=mail142E16th',
+      '?s=mail145central',
+      '?s=flyer530E72nd',
+      '?s=flyer5tdr',
+      '?s=flyer11beach',
+      '?s=flyer280rec',
+      '?s=flyer2250bway',
+      '?s=flyer105W13th',
+      '?s=flyer114E84th',
+      '?s=flyer142E16th',
+      '?s=flyer145central',
+      '?s=hello-miami'
+    ]
+    if (arrQueryStrign.indexOf(queryString) !== -1) {
+      setTimeout(function () {
+        makeAjaxCall("https://api.hellochapter.dev/api/contact/track", "GET", !0, null, (res) => {
+          console.log(res)
+          if (res.success) {
+            localStorage.setItem("qr_status", true);
+            localStorage.setItem("formSubmitted", false);
+          }
+        });
+      }, 500)
+
+    } else {
+      if (localStorage.getItem("qr_status")) {
+        localStorage.removeItem("qr_status")
+        localStorage.removeItem("formSubmitted")
+      }
+
     }
-    
-   }
 
   </script>
   <!-- Microsoft Ads Conversion Tracking -->
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PRJKFJK');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');</script>
   <!-- End Google Tag Manager -->
 </head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRJKFJK"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRJKFJK" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div class="wrapper">
     <div class="page-home">
