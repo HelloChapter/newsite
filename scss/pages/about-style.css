@@ -1870,6 +1870,9 @@ footer .col-news-letter button img {
   .section-intro-content .row .col + .col .content {
     margin: 0;
   }
+  .section-intro-content .content {
+    max-width: 100%;
+  }
   .section-intro-content .content p {
     line-height: 24px;
   }
