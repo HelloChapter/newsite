@@ -1508,14 +1508,6 @@ footer .col-news-letter button img {
   padding: 100px;
   min-height: 510px;
 }
-.section-team-members .team-clickable-content.d-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
 .section-team-members .team-clickable-content .content {
   max-width: 861px;
 }
@@ -1553,7 +1545,7 @@ footer .col-news-letter button img {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50.13%;
           flex: 0 0 50.13%;
-  min-height: 564px;
+  padding-bottom: 33.4%;
 }
 .section-team-chapter .col-content {
   padding-left: 100px;
@@ -1786,7 +1778,6 @@ footer .col-news-letter button img {
   }
   .section-team-chapter .col-img {
     min-height: 100%;
-    padding-bottom: 56.25%;
   }
 }
 @media (max-width: 991px) {
@@ -1823,6 +1814,9 @@ footer .col-news-letter button img {
   }
   .section-team-chapter .col-content {
     padding-left: 20px;
+  }
+  .section-team-chapter .col-img {
+    padding-bottom: 57.15%;
   }
   .section-team-members .desktop-team-wrapper {
     display: none;
@@ -1920,6 +1914,10 @@ footer .col-news-letter button img {
     font-size: 25px;
     line-height: 30px;
     letter-spacing: -0.15px;
+  }
+  .section-team-members .team-wrapper .col-team .team-image {
+    min-height: 290px;
+    padding-bottom: 74%;
   }
 }
 @media (max-width: 600px) {

@@ -290,11 +290,6 @@
         padding: 100px;
         min-height: 510px;
 
-        &.d-block {
-            display: flex;
-            align-items: center;
-        }
-
         .content {
             max-width: 861px;
         }
@@ -336,7 +331,8 @@
     .col-img {
         max-width: 50.13%;
         flex: 0 0 50.13%;
-        min-height: 564px;
+        // min-height: 564px;
+        padding-bottom: 33.4%;
     }
 
     .col-content {
@@ -653,7 +649,6 @@
     .section-team-chapter {
         .col-img {
             min-height: 100%;
-            padding-bottom: 56.25%;
         }
     }
 }
@@ -696,6 +691,9 @@
 
         .col-content {
             padding-left: 20px;
+        }
+        .col-img {
+            padding-bottom: 57.15%;
         }
     }
 
@@ -816,6 +814,11 @@
                 line-height: 30px;
                 letter-spacing: -0.15px;
             }
+        }
+
+        .team-wrapper .col-team .team-image {
+            min-height: 290px;
+            padding-bottom: 74%;
         }
     }
 }
