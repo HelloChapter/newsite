@@ -1889,6 +1889,7 @@ footer .col-news-letter button img {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    min-height: 290px;
   }
   .section-team-chapter .col-content {
     padding: 0 20px 30px;
