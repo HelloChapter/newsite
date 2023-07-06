@@ -231,7 +231,7 @@ document.body.addEventListener("touchstart", (e) => {
     // Update the width of the foreground image
     e.target.parentElement.parentElement.querySelector(".foreground-img").style['width'] = `${sliderPos}%`;
     // Update the position of the slider button
-    e.target.parentElement.parentElement.querySelector(".slider-button").style['left'] = `calc(${sliderPos}% - 40px)`;
+    e.target.parentElement.parentElement.querySelector(".slider-button").style['left'] = `calc(${sliderPos}% - 28px)`;
     console.log("touchstart", +sliderPos);
 
 });
@@ -240,7 +240,7 @@ $(".after-before-btn-wrap .before-btn").click(function (e) {
     // Update the width of the foreground image
     $(this).parents('.two-joint-images').find(".foreground-img").css('width', '100%');
     // Update the position of the slider button
-    $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(100% - 60px)`);
+    $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(100% - 40px)`);
 
 });
 $(".two-joint-images .after-before-btn-wrap .after-btn").click(function () {
