@@ -119,7 +119,7 @@ jQuery(document).ready(function ($) {
         draggable: false,
         swipeToSlide: false,
         touchMove: false,
-        swipe:false,
+        swipe: false,
 
     });
     // after-before-slider end
@@ -213,13 +213,23 @@ jQuery(document).ready(function ($) {
 
 // Js for global after before
 // $(".range-slider").change(function (e) {
-$('body').on('input change', '.range-slider', function(e) { 
+$('body').on('input change', '.range-slider', function (e) {
     const sliderPos = e.target.value;
     // Update the width of the foreground image
     e.target.parentElement.parentElement.querySelector(".foreground-img").style['width'] = `${sliderPos}%`;
     // Update the position of the slider button
     e.target.parentElement.parentElement.querySelector(".slider-button").style['left'] = `calc(${sliderPos}% - 28px)`;
     // $(this).parents('.two-joint-images').children('.slider-button').css('left', `calc(${sliderPos}% - 28px)`)
+    console.log("input change", +sliderPos);
+
+});
+document.body.addEventListener("touchstart", (e) => {
+    const sliderPos = e.target.value;
+    // Update the width of the foreground image
+    e.target.parentElement.parentElement.querySelector(".foreground-img").style['width'] = `${sliderPos}%`;
+    // Update the position of the slider button
+    e.target.parentElement.parentElement.querySelector(".slider-button").style['left'] = `calc(${sliderPos}% - 28px)`;
+    console.log("touchstart", +sliderPos);
 
 });
 $(".after-before-btn-wrap .before-btn").click(function (e) {
