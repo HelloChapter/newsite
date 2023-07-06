@@ -226,13 +226,14 @@ $('body').on('input change', '.range-slider', function (e) {
     }, "50");
 
 });
-document.body.addEventListener("ontouchmove", (e) => {
+document.body.addEventListener("touchend", (e) => {
+    console.log("touchstart", + e.target.value);
     const sliderPos = e.target.value;
     // Update the width of the foreground image
     e.target.parentElement.parentElement.querySelector(".foreground-img").style['width'] = `${sliderPos}%`;
     // Update the position of the slider button
     e.target.parentElement.parentElement.querySelector(".slider-button").style['left'] = `calc(${sliderPos}% - 28px)`;
-    console.log("touchstart", +sliderPos);
+    
 
 });
 $(".after-before-btn-wrap .before-btn").click(function (e) {
