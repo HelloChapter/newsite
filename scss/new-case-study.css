@@ -685,11 +685,12 @@ h2 {
 
 .after-before-slider .slick-arrow {
   position: absolute;
-  bottom: -35px;
+  bottom: 14px;
   background-color: transparent;
   border: none;
   text-indent: -99em;
   font-size: 0;
+  z-index: 1;
 }
 .after-before-slider .slick-arrow:after {
   content: "";
@@ -716,7 +717,14 @@ h2 {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: -39px;
+  bottom: 0;
+  background-color: #Faf5ee;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 9.5px;
+  min-height: 49px;
 }
 .after-before-slider .slick-dots li {
   padding: 0 5px;
@@ -1370,8 +1378,16 @@ footer .col-news-letter button img {
   padding: 50px 0;
 }
 
-.after-before-slider-wrap {
-  padding-bottom: 48px;
+.after-before-slider-wrap .before-after-img-wrap .two-joint-images .after-before-btn {
+  bottom: 60px;
+}
+.after-before-slider-wrap .before-after-img-wrap .slick-dots li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 1440px) {

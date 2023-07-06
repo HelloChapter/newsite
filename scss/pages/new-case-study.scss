@@ -39,7 +39,18 @@
 }
 
 .after-before-slider-wrap {
-    padding-bottom: 48px;
+
+    // padding-bottom: 48px;
+    .before-after-img-wrap {
+        .two-joint-images .after-before-btn {
+            bottom: 60px;
+        }
+
+        .slick-dots li {
+            display: flex;
+            align-items: center;
+        }
+    }
 }
 
 // Responsive css start
@@ -74,6 +85,7 @@
         .col-img {
             padding-bottom: 0;
         }
+
         .two-joint-images {
             min-height: 400px;
         }
