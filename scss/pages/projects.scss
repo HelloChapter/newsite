@@ -268,6 +268,18 @@
     }
 }
 
+.location-listing-wrapper {
+    .section-image-content-slider {
+        .location-title {
+            min-height: 30px;
+        }
+
+        .content-p {
+            min-height: 60px;
+        }
+    }
+}
+
 // Responsive Start
 @media (max-width:1600px) {
     .section-what-we-know {
@@ -349,6 +361,22 @@
             h4 {
                 font-size: 17px;
                 line-height: 43px;
+            }
+        }
+    }
+
+    .location-listing-wrapper {
+        .section-image-content-slider {
+            .location-title {
+                min-height: 24px;
+            }
+
+            .content-p {
+                min-height: 48px;
+            }
+
+            .col-img-content .content {
+                padding-right: 30px;
             }
         }
     }
@@ -701,6 +729,17 @@
 }
 
 // 991 end
+@media (max-width:880px) {
+    .location-listing-wrapper {
+        .section-image-content-slider {
+            .content-p {
+                min-height: 72px;
+            }
+        }
+    }
+}
+
+// 880 end
 @media (max-width:767px) {
     .section-image-content {
         .page-title {
@@ -879,6 +918,35 @@
             padding-bottom: 74%;
         }
     }
+
+    .location-listing-wrapper {
+        .section-image-content-slider {
+            background-color: transparent;
+
+            .col-img {
+                padding-bottom: 66.59%;
+            }
+
+            .col-img-content {
+                background-color: $pearl-drop2;
+                .content {
+                    padding-right: 20px;
+                }
+            }
+            .content-p {
+                min-height: 48px;
+            }
+        }
+    }
 }
 
 // 767 end
+@media (max-width:360px) {
+    .location-listing-wrapper {
+        .section-image-content-slider {
+            .content-p {
+                min-height: 72px;
+            }
+        }
+    }
+}
