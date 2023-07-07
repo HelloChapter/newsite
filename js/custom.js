@@ -223,18 +223,7 @@ $('body').on('input change', '.range-slider', function (e) {
         // Update the position of the slider button
         e.target.parentElement.parentElement.querySelector(".slider-button").style['left'] = `calc(${sliderPos}% - 28px)`;
         // $(this).parents('.two-joint-images').children('.slider-button').css('left', `calc(${sliderPos}% - 28px)`)
-    }, "50");
-
-});
-document.body.addEventListener("touchend", (e) => {
-    console.log("touchstart", + e.target.value);
-    const sliderPos = e.target.value;
-    // Update the width of the foreground image
-    e.target.parentElement.parentElement.querySelector(".foreground-img").style['width'] = `${sliderPos}%`;
-    // Update the position of the slider button
-    e.target.parentElement.parentElement.querySelector(".slider-button").style['left'] = `calc(${sliderPos}% - 28px)`;
-    
-
+    }, 0);
 });
 $(".after-before-btn-wrap .before-btn").click(function (e) {
     const sliderPos = e.target.value;
