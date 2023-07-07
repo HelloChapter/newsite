@@ -215,8 +215,6 @@ jQuery(document).ready(function ($) {
 // $(".range-slider").change(function (e) {
 $('body').on('input change', '.range-slider', function (e) {
     const sliderPos = e.target.value;
-
-    console.log("input change", +sliderPos);
     setTimeout(() => {
         // Update the width of the foreground image
         e.target.parentElement.parentElement.querySelector(".foreground-img").style['width'] = `${sliderPos}%`;

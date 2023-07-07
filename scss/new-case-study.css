@@ -515,13 +515,13 @@ h2 {
 .before-after-img-wrap .two-joint-images .range-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 6px;
+  width: 52px;
   height: 580px;
   background: transparent;
   cursor: pointer;
 }
 .before-after-img-wrap .two-joint-images .range-slider::-moz-range-thumb {
-  width: 6px;
+  width: 52px;
   height: 580px;
   background: transparent;
   cursor: pointer;
