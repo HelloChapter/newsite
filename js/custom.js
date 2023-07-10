@@ -1,3 +1,4 @@
+let selectedEmp = null;
 
 jQuery(document).ready(function ($) {
     // Cookie code
@@ -7,23 +8,14 @@ jQuery(document).ready(function ($) {
     document.head.appendChild(jQueryScript);
     //console.log(jQueryScript)
     function custom_cookie() {
-        // Cookies.set('HelloChapter', 'PageUrl', { expires: 30, path: '' })
-        // var page_url = Cookies.get('HelloChapter');
-        // console.log(page_url);
-        // if (page_url === "/contact-chapter-home-renovation") {
-        //     console.log("contact page");
-        // }
-        // else {
-        //     console.log("other");
-        // }
-        if(Cookies.get('HelloChapterContactPath') === undefined) {
-            Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
+        if (Cookies.get('HelloChapterContactPath') === undefined) {
+            Cookies.set('HelloChapterContactPath', window.location.href, { expires: 30, path: '' })
         }
 
-        if(window.location.pathname === '/contact-chapter-home-renovation/'){
-           // Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
+        if (window.location.pathname === '/contact-chapter-home-renovation/') {
+            // Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
         }
-      
+
     }
     setTimeout(custom_cookie, 1000);
 
@@ -54,6 +46,34 @@ jQuery(document).ready(function ($) {
         }
     });
     // Counter number js end
+
+    // About team click js
+
+    $(".desktop-team-wrapper .team-image").click(function () {
+        var current_item = $(this).attr("data-point-id");
+        if ($(".team-clickable-content")[current_item].classList.contains('d-block')) {
+            // just remove 'd-block' and add 'd-none' to all elements and return here
+            $(".team-clickable-content").removeClass('d-block');
+            $(".team-clickable-content").addClass('d-none');
+            $(".col-team").removeClass("active-member");
+            return false;
+        }
+        // check if div has class 'd-block'
+        $(".team-clickable-content").removeClass('d-block');
+        $(".team-clickable-content").addClass('d-none');
+
+        $(".team-clickable-content")[current_item].classList.remove('d-none');
+        $(".team-clickable-content")[current_item].classList.add('d-block');
+
+        // if($(".col-team").classList.contains('active-member')){
+        //     $(".col-team").removeClass("active-member");
+        //     $(this).parent(".col-team").addClass("active-member");
+        //     return false;
+        // }
+        $(".col-team").removeClass("active-member");
+        $(this).parent(".col-team").addClass("active-member");
+    });
+
     $(".menu-btn-toggle").click(function () {
         $("body").toggleClass("header-open");
     });
@@ -81,9 +101,28 @@ jQuery(document).ready(function ($) {
         speed: 800,
         autoplaySpeed: 3000,
         dots: false,
+        fade: true,
+        cssEase: 'ease-in-out',
 
     });
     // Home slider end
+    $('.after-before-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        speed: 1000,
+        autoplaySpeed: 3000,
+        dots: true,
+        fade: true,
+        cssEase: 'ease-in-out',
+        draggable: false,
+        swipeToSlide: false,
+        touchMove: false,
+        swipe: false,
+
+    });
+    // after-before-slider end
     $('.review-slider').slick({
         autoplay: true,
         infinite: true,
@@ -129,52 +168,77 @@ jQuery(document).ready(function ($) {
     });
     // Aos Animate
     jQuery(".location-link-hover").hover(function () {
-        jQuery(this).parents(".col-location").toggleClass("hover-");
+        jQuery(this).parents(".col-location").toggleClass("hover-link");
     });
 
 });
 /*Ready function end*/
 // After Before Js start
-$(".range-slider1").on("input change", (e) => {
+
+// $(".range-slider2").on("input change", (e2) => {
+//     const sliderPos = e2.target.value;
+//     // Update the width of the foreground image
+//     $('.two-joint-images2 .foreground-img').css('width', `${sliderPos}%`)
+//     // Update the position of the slider button
+//     $('.two-joint-images2 .slider-button').css('left', `calc(${sliderPos}% - 28px)`)
+// });
+// $(".after-before-btn-wrap .before-btn").on("input click", (e) => {
+//     const sliderPos = e.target.value;
+//     // Update the width of the foreground image
+//     $('.foreground-img').css('width', '100%')
+//     // Update the position of the slider button
+//     $('.slider-button').css('left', `calc(100% - 40px)`)
+// });
+// $(".two-joint-images1 .after-before-btn-wrap .after-btn").on("input click", (e) => {
+//     const sliderPos = e.target.value;
+//     // Update the width of the foreground image
+//     $('.two-joint-images1 .foreground-img').css('width', '0%')
+//     // Update the position of the slider button
+//     $('.two-joint-images1 .slider-button').css('left', `calc(0px)`)
+// });
+// $(".two-joint-images2 .after-before-btn-wrap .before-btn").on("input click", (e) => {
+//     const sliderPos = e.target.value;
+//     // Update the width of the foreground image
+//     $('.two-joint-images2 .foreground-img').css('width', '100%')
+//     // Update the position of the slider button
+//     $('.two-joint-images2 .slider-button').css('left', `calc(100% - 40px)`)
+// });
+// $(".two-joint-images2 .after-before-btn-wrap .after-btn").on("input click", (e) => {
+//     const sliderPos = e.target.value;
+//     // Update the width of the foreground image
+//     $('.two-joint-images2 .foreground-img').css('width', '0%')
+//     // Update the position of the slider button
+//     $('.two-joint-images2 .slider-button').css('left', `calc(0px)`)
+// });
+
+// Js for global after before
+// $(".range-slider").change(function (e) {
+$('body').on('input change', '.range-slider', function (e) {
     const sliderPos = e.target.value;
-    // Update the width of the foreground image
-    $('.two-joint-images1 .foreground-img').css('width', `${sliderPos}%`)
-    // Update the position of the slider button
-    $('.two-joint-images1 .slider-button').css('left', `calc(${sliderPos}% - 28px)`)
+    setTimeout(() => {
+        // Update the width of the foreground image
+        e.target.parentElement.parentElement.querySelector(".foreground-img").style['width'] = `${sliderPos}%`;
+        // Update the position of the slider button
+        e.target.parentElement.parentElement.querySelector(".slider-button").style['left'] = `calc(${sliderPos}% - 28px)`;
+        // $(this).parents('.two-joint-images').children('.slider-button').css('left', `calc(${sliderPos}% - 28px)`)
+    }, 0);
 });
-$(".range-slider2").on("input change", (e2) => {
-    const sliderPos = e2.target.value;
-    // Update the width of the foreground image
-    $('.two-joint-images2 .foreground-img').css('width', `${sliderPos}%`)
-    // Update the position of the slider button
-    $('.two-joint-images2 .slider-button').css('left', `calc(${sliderPos}% - 28px)`)
+$(".after-before-btn-wrap .before-btn").click(function (e) {
+    // const sliderPos = e.target.value;
+    setTimeout(() => {
+        // Update the width of the foreground image
+        const sliderPos =  e.target.parentElement.parentElement.querySelector(".range-slider").value = "100";
+        $(this).parents('.two-joint-images').find(".foreground-img").css('width', '100%');
+        // Update the position of the slider button
+        $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(100% - 40px)`);
+    }, 10);
 });
-$(".after-before-btn-wrap .before-btn").on("input click", (e) => {
-    const sliderPos = e.target.value;
-    // Update the width of the foreground image
-    $('.foreground-img').css('width', '100%')
-    // Update the position of the slider button
-    $('.slider-button').css('left', `calc(100% - 40px)`)
+$(".two-joint-images .after-before-btn-wrap .after-btn").click(function (e) {
+    setTimeout(() => {
+        const sliderPos =  e.target.parentElement.parentElement.querySelector(".range-slider").value = "0";
+        $(this).parents('.two-joint-images').find(".foreground-img").css('width', '0%');
+        $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(0px)`);
+    }, 10);
 });
-$(".two-joint-images1 .after-before-btn-wrap .after-btn").on("input click", (e) => {
-    const sliderPos = e.target.value;
-    // Update the width of the foreground image
-    $('.two-joint-images1 .foreground-img').css('width', '0%')
-    // Update the position of the slider button
-    $('.two-joint-images1 .slider-button').css('left', `calc(0px)`)
-});
-$(".two-joint-images2 .after-before-btn-wrap .before-btn").on("input click", (e) => {
-    const sliderPos = e.target.value;
-    // Update the width of the foreground image
-    $('.two-joint-images2 .foreground-img').css('width', '100%')
-    // Update the position of the slider button
-    $('.two-joint-images2 .slider-button').css('left', `calc(100% - 40px)`)
-});
-$(".two-joint-images2 .after-before-btn-wrap .after-btn").on("input click", (e) => {
-    const sliderPos = e.target.value;
-    // Update the width of the foreground image
-    $('.two-joint-images2 .foreground-img').css('width', '0%')
-    // Update the position of the slider button
-    $('.two-joint-images2 .slider-button').css('left', `calc(0px)`)
-});
+
   // After Before Js end

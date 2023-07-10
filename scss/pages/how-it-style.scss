@@ -1,6 +1,7 @@
 @import "../classes.scss";
 @import "../common.scss";
 @import "../components/client-sucess.scss";
+@import "../components/project-fingertips.scss";
 @import "../components/header.scss";
 @import "../components/footer.scss";
 @import "../components/accordion.scss";
@@ -116,6 +117,11 @@
                 }
             }
         }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
     }
 
     .list-heading {
@@ -136,7 +142,7 @@
             font-size: 23px;
             line-height: 1;
             text-transform: uppercase;
-            font-weight: 500;
+            font-weight: 400;
             display: flex;
             font-family: "Inter";
             align-items: center;
@@ -169,7 +175,7 @@
         z-index: 44;
 
         p {
-            max-width: 420px;
+            max-width: 400px;
         }
     }
 }
@@ -192,7 +198,7 @@
 }
 
 .page-title {
-    max-width: 870px;
+    max-width: 860px;
     margin: 0 auto 95px;
 }
 
@@ -203,7 +209,7 @@
 // Responsive CSS Start
 @media (max-width:1440px) {
     .page-title {
-        max-width: 800px;
+        max-width: 760px;
     }
 
     .icons-list-group {

@@ -63,6 +63,7 @@
 
     .slider-dots {
         padding: 40px 0 30px;
+
         ul {
             display: flex;
         }
@@ -93,6 +94,71 @@
     }
 }
 
+.after-before-slider {
+    .slick-arrow {
+        position: absolute;
+        bottom: 14px;
+        background-color: transparent;
+        border: none;
+        text-indent: -99em;
+        font-size: 0;
+        z-index: 1;
+
+        &:after {
+            content: '';
+            display: block;
+            height: 22px;
+            width: 46px;
+        }
+
+        &.slick-next {
+            right: 24px;
+            background-image: url("../../images/icons/right-arrow.svg");
+        }
+
+        &.slick-prev {
+            left: 24px;
+            background-image: url("../../images/icons/left-arrow1.svg");
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0 -5px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        background-color: $pearl-drop2;
+        width: 100%;
+        justify-content: center;
+        padding: 9.5px;
+        min-height: 49px;
+
+        li {
+            padding: 0 5px;
+        }
+
+        .slick-active {
+            button {
+                background-color: $black;
+            }
+        }
+
+        button {
+            background-color: $light-pink;
+            border: none;
+            width: 10px;
+            height: 10px;
+            text-indent: -99em;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+    }
+}
+
 // Responsive css start
 @media (max-width:1600px) {
     .home-image-content-slider {
@@ -108,9 +174,11 @@
         .slick-dots {
             bottom: 35%;
         }
+
         .slider-dots {
             padding: 30px 0 20px;
         }
+
         .col-img-content .content {
             padding-right: 30px;
         }
@@ -118,6 +186,18 @@
 }
 
 // 1199 end
+@media (max-width:991px) {
+    .home-image-content-slider {
+        .content {
+            .content-p {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width:767px) {
     .home-image-content-slider {
         .slick-dots {

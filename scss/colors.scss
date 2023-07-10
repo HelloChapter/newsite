@@ -3,6 +3,7 @@ $white:#ffffff;
 $text-color:#231F20;
 $pearl-drop:#F9F4ED;
 $pearl-drop2:#Faf5ee;
+$pearl-drop3:#F3E3D8;
 $dawn-pink:#F2E2D7;
 $light-pink:#e1cdc0;
 $light-pink2:#D7C3B6;
@@ -13,6 +14,9 @@ $border-color:#C2C2C2;
 }
 .pearl-bg2 {
     background-color: $pearl-drop2;
+}
+.pearl-bg3 {
+    background-color: $pearl-drop3;
 }
 .dawn-pink-bg {
     background-color: $dawn-pink;

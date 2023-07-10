@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46.54" height="22.49" viewBox="0 0 46.54 22.49">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_693" data-name="Rectangle 693" width="34.54" height="10.49" transform="translate(115 321)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Arrow" transform="translate(-1847.46 -1846.757)">
+    <rect id="Rectangle_692" data-name="Rectangle 692" width="46.54" height="22.49" transform="translate(1847.46 1846.757)" fill="none"/>
+    <g id="Arrow-2" data-name="Arrow" transform="translate(2003 2184.247) rotate(180)" clip-path="url(#clip-path)">
+      <path id="Path_894" data-name="Path 894" d="M118.28,326.25h32.37" transform="translate(-1.11)" fill="none" stroke="#231f20" stroke-width="2"/>
+      <path id="Path_895" data-name="Path 895" d="M120.95,330.78l-4.54-4.53,4.54-4.54" fill="none" stroke="#231f20" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
