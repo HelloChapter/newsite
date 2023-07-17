@@ -31,7 +31,27 @@
         }
     }
 }
-
+.section-image-content-cards {
+    .row {
+        &:nth-child(even) {
+            .col-img-content {
+                order: 1;
+            }
+        }
+    }
+}
+.section-image-content-miami-cards {
+    .row {
+        &:nth-child(even) {
+            .col-img-content {
+                order: 0;
+            }
+            .col-img  {
+                order: 1;
+            }
+        }
+    }
+}
 // Responsive CSS start
 @media (max-width:1440px) {
     .section-image-content {
