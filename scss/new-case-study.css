@@ -712,7 +712,6 @@ h2 {
   display: flex;
   list-style: none;
   padding: 0;
-  margin: 0 -5px;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1429,6 +1428,7 @@ footer .col-news-letter button img {
   margin-bottom: 31px;
 }
 .section-project-info h6 {
+  font-weight: 600;
   font-size: 17px;
   line-height: 30px;
   font-family: "Inter";
@@ -1438,6 +1438,9 @@ footer .col-news-letter button img {
   font-weight: 400;
 }
 
+.section-image-content h2 {
+  margin-bottom: 30px;
+}
 .section-image-content .content {
   max-width: 730px;
 }
@@ -1483,5 +1486,8 @@ footer .col-news-letter button img {
   }
   .after-before-slider-wrap .two-joint-images {
     min-height: 400px;
+  }
+  .section-image-content h2 {
+    margin-bottom: 25px;
   }
 }
