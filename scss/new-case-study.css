@@ -712,7 +712,6 @@ h2 {
   display: flex;
   list-style: none;
   padding: 0;
-  margin: 0 -5px;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1360,6 +1359,23 @@ footer .col-news-letter button img {
       align-self: center;
 }
 
+.section-image-content-cards .row:nth-child(even) .col-img-content {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.section-image-content-miami-cards .row:nth-child(even) .col-img-content {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+.section-image-content-miami-cards .row:nth-child(even) .col-img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
 @media (max-width: 1440px) {
   .section-image-content h2 {
     margin-bottom: 40px;
@@ -1412,6 +1428,7 @@ footer .col-news-letter button img {
   margin-bottom: 31px;
 }
 .section-project-info h6 {
+  font-weight: 600;
   font-size: 17px;
   line-height: 30px;
   font-family: "Inter";
@@ -1421,6 +1438,9 @@ footer .col-news-letter button img {
   font-weight: 400;
 }
 
+.section-image-content h2 {
+  margin-bottom: 30px;
+}
 .section-image-content .content {
   max-width: 730px;
 }
@@ -1466,5 +1486,8 @@ footer .col-news-letter button img {
   }
   .after-before-slider-wrap .two-joint-images {
     min-height: 400px;
+  }
+  .section-image-content h2 {
+    margin-bottom: 25px;
   }
 }
