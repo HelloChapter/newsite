@@ -100,7 +100,7 @@ jQuery(document).ready(function ($) {
         arrows: true,
         speed: 800,
         autoplaySpeed: 3000,
-        dots: false,
+        dots: true,
         fade: true,
         cssEase: 'ease-in-out',
 

@@ -735,6 +735,9 @@
             .content-p {
                 min-height: 72px;
             }
+         .slick-dots {
+            padding-bottom: 0;
+         }   
         }
     }
 }
@@ -936,16 +939,32 @@
             .content-p {
                 min-height: 48px;
             }
+            .slick-dots {
+                top: 220px;
+            }
         }
     }
 }
 
 // 767 end
+@media (max-width:375px) {
+    .location-listing-wrapper {
+        .section-image-content-slider {
+            .slick-dots {
+                top: 225px;
+            }
+        }
+    }
+}
+// 375 end
 @media (max-width:360px) {
     .location-listing-wrapper {
         .section-image-content-slider {
             .content-p {
                 min-height: 72px;
+            }
+            .slick-dots {
+                top: 250px;
             }
         }
     }
