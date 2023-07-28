@@ -767,7 +767,7 @@
     }
 
     .section-two-full-img-layout .col-full-size-img {
-        min-height: 600px;
+        min-height: 290px;
     }
 
     .section-project-info p+p {
@@ -943,6 +943,9 @@
                 top: 220px;
             }
         }
+    }
+    .largeContent .col-img {
+        min-height: 290px;
     }
 }
 
