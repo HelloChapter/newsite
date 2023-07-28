@@ -453,14 +453,21 @@ h2 {
 }
 .home-image-content-slider .slick-dots li {
   margin: 0 5px;
+}
+.home-image-content-slider .slick-dots li button {
   width: 10px;
+  display: block;
   height: 10px;
   text-indent: -99em;
   border-radius: 100%;
+  border: none;
+  overflow: hidden;
   background-color: rgba(35, 31, 32, 0.3);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
-.home-image-content-slider .slick-dots .active,
-.home-image-content-slider .slick-dots .slick-active {
+.home-image-content-slider .slick-dots .active button,
+.home-image-content-slider .slick-dots .slick-active button {
   background-color: #231F20;
 }
 .home-image-content-slider .col-img-content .content {
