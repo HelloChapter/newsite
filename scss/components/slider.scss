@@ -31,38 +31,17 @@
         }
     }
 
-    .slick-dots {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin: 0 -5px;
-        position: absolute;
-        left: calc(50% - 39%);
-        bottom: 34%;
-
-        li {
-            padding: 0 5px;
-        }
-
-        .slick-active {
-            button {
-                background-color: $text-color;
-            }
-        }
-
-        button {
-            background-color: rgba($color: $text-color, $alpha: 0.3);
-            border: none;
-            width: 10px;
-            height: 10px;
-            text-indent: -99em;
-            border-radius: 100%;
-            overflow: hidden;
-        }
+    .slider-dots {
+        min-height: 80px;
     }
 
-    .slider-dots {
+    .slick-dots {
         padding: 40px 0 30px;
+        display: flex;
+        list-style: none;
+        position: absolute;
+        left: calc(50% - 39%);
+        bottom: 33.2%;
 
         ul {
             display: flex;
@@ -70,15 +49,25 @@
 
         li {
             margin: 0 5px;
-            width: 10px;
-            height: 10px;
-            text-indent: -99em;
-            border-radius: 100%;
-            background-color: rgba($color: $text-color, $alpha: 0.3);
+
+            button {
+                width: 10px;
+                display: block;
+                height: 10px;
+                text-indent: -99em;
+                border-radius: 100%;
+                border: none;
+                overflow: hidden;
+                background-color: rgba($color: $text-color, $alpha: 0.3);
+                box-shadow: none;
+            }
         }
 
-        .active {
-            background-color: $text-color;
+        .active,
+        .slick-active {
+            button {
+                background-color: $text-color;
+            }
         }
     }
 
@@ -126,7 +115,6 @@
         display: flex;
         list-style: none;
         padding: 0;
-        margin: 0 -5px;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -160,25 +148,8 @@
 }
 
 // Responsive css start
-@media (max-width:1600px) {
-    .home-image-content-slider {
-        .slick-dots {
-            bottom: 32%;
-        }
-    }
-}
-
-// 1600 end
 @media (max-width:1199px) {
     .home-image-content-slider {
-        .slick-dots {
-            bottom: 35%;
-        }
-
-        .slider-dots {
-            padding: 30px 0 20px;
-        }
-
         .col-img-content .content {
             padding-right: 30px;
         }
@@ -200,9 +171,15 @@
 
 @media (max-width:767px) {
     .home-image-content-slider {
+        .slider-dots {
+            min-height: 60px;
+        }
+
         .slick-dots {
-            bottom: 52%;
+            top: 205px;
+            bottom: auto;
             left: 20px;
+            padding: 0;
         }
 
         .col-img-content {
@@ -222,4 +199,17 @@
     }
 }
 
-// 1199 end
+// 767 end
+@media (max-width:375px) {
+    .home-image-content-slider {
+        .content-p {
+            min-height: 48px;
+        }
+
+        .slick-dots {
+            top: 225px;
+        }
+    }
+}
+
+// 375 end

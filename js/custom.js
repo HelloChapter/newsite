@@ -100,7 +100,7 @@ jQuery(document).ready(function ($) {
         arrows: true,
         speed: 800,
         autoplaySpeed: 3000,
-        dots: false,
+        dots: true,
         fade: true,
         cssEase: 'ease-in-out',
 
@@ -173,46 +173,7 @@ jQuery(document).ready(function ($) {
 
 });
 /*Ready function end*/
-// After Before Js start
-
-// $(".range-slider2").on("input change", (e2) => {
-//     const sliderPos = e2.target.value;
-//     // Update the width of the foreground image
-//     $('.two-joint-images2 .foreground-img').css('width', `${sliderPos}%`)
-//     // Update the position of the slider button
-//     $('.two-joint-images2 .slider-button').css('left', `calc(${sliderPos}% - 28px)`)
-// });
-// $(".after-before-btn-wrap .before-btn").on("input click", (e) => {
-//     const sliderPos = e.target.value;
-//     // Update the width of the foreground image
-//     $('.foreground-img').css('width', '100%')
-//     // Update the position of the slider button
-//     $('.slider-button').css('left', `calc(100% - 40px)`)
-// });
-// $(".two-joint-images1 .after-before-btn-wrap .after-btn").on("input click", (e) => {
-//     const sliderPos = e.target.value;
-//     // Update the width of the foreground image
-//     $('.two-joint-images1 .foreground-img').css('width', '0%')
-//     // Update the position of the slider button
-//     $('.two-joint-images1 .slider-button').css('left', `calc(0px)`)
-// });
-// $(".two-joint-images2 .after-before-btn-wrap .before-btn").on("input click", (e) => {
-//     const sliderPos = e.target.value;
-//     // Update the width of the foreground image
-//     $('.two-joint-images2 .foreground-img').css('width', '100%')
-//     // Update the position of the slider button
-//     $('.two-joint-images2 .slider-button').css('left', `calc(100% - 40px)`)
-// });
-// $(".two-joint-images2 .after-before-btn-wrap .after-btn").on("input click", (e) => {
-//     const sliderPos = e.target.value;
-//     // Update the width of the foreground image
-//     $('.two-joint-images2 .foreground-img').css('width', '0%')
-//     // Update the position of the slider button
-//     $('.two-joint-images2 .slider-button').css('left', `calc(0px)`)
-// });
-
 // Js for global after before
-// $(".range-slider").change(function (e) {
 $('body').on('input change', '.range-slider', function (e) {
     const sliderPos = e.target.value;
     setTimeout(() => {

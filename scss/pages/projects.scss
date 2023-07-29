@@ -64,7 +64,7 @@
 }
 
 .largeContent .col-img {
-    min-height: 600px;
+    // min-height: 600px;
 }
 
 .section-image-content {
@@ -464,6 +464,10 @@
 
         }
     }
+
+    .section-two-full-img-layout .col-full-size-img {
+        min-height: 700px;
+    }
 }
 
 // 1440 end
@@ -545,6 +549,10 @@
             }
         }
     }
+
+    .section-two-full-img-layout .col-full-size-img {
+        min-height: 580px;
+    }
 }
 
 // 1199 end
@@ -559,6 +567,9 @@
 
     .section-single-heading {
         padding: 60px 0;
+    }
+    .section-two-full-img-layout .col-full-size-img {
+        min-height: 400px;
     }
 }
 
@@ -726,6 +737,10 @@
             }
         }
     }
+
+    .section-full-image {
+        min-height: 600px;
+    }
 }
 
 // 991 end
@@ -734,6 +749,10 @@
         .section-image-content-slider {
             .content-p {
                 min-height: 72px;
+            }
+
+            .slick-dots {
+                padding-bottom: 0;
             }
         }
     }
@@ -764,7 +783,7 @@
     }
 
     .section-two-full-img-layout .col-full-size-img {
-        min-height: 600px;
+        min-height: 290px;
     }
 
     .section-project-info p+p {
@@ -929,23 +948,48 @@
 
             .col-img-content {
                 background-color: $pearl-drop2;
+
                 .content {
                     padding-right: 20px;
                 }
             }
+
             .content-p {
                 min-height: 48px;
+            }
+
+            .slick-dots {
+                top: 220px;
+            }
+        }
+    }
+
+    .largeContent .col-img {
+        min-height: 290px;
+    }
+}
+
+// 767 end
+@media (max-width:375px) {
+    .location-listing-wrapper {
+        .section-image-content-slider {
+            .slick-dots {
+                top: 225px;
             }
         }
     }
 }
 
-// 767 end
+// 375 end
 @media (max-width:360px) {
     .location-listing-wrapper {
         .section-image-content-slider {
             .content-p {
                 min-height: 72px;
+            }
+
+            .slick-dots {
+                top: 250px;
             }
         }
     }
