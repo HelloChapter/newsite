@@ -1408,6 +1408,7 @@ footer .col-news-letter button img {
   .section-image-content .content {
     margin: 0;
     padding: 40px 20px;
+    max-width: 100%;
   }
 }
 .new-case-study-page header {
