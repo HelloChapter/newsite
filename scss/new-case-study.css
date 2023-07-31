@@ -1370,6 +1370,32 @@ footer .col-news-letter button img {
           order: 1;
 }
 
+.section-multiple-image-content .bg-image {
+  display: block;
+}
+.section-multiple-image-content .bg-image-1600 {
+  display: none;
+}
+@media (max-width: 1600px) {
+  .section-multiple-image-content .bg-image {
+    display: none;
+  }
+  .section-multiple-image-content .bg-image-1600 {
+    display: block;
+  }
+}
+@media (max-width: 1440px) {
+  .section-multiple-image-content .bg-image {
+    display: none;
+  }
+  .section-multiple-image-content .bg-image-1600 {
+    display: none;
+  }
+  .section-multiple-image-content .bg-image-1280 {
+    display: block;
+  }
+}
+
 @media (max-width: 1440px) {
   .section-image-content h2 {
     margin-bottom: 40px;

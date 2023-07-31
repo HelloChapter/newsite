@@ -52,6 +52,33 @@
         }
     }
 }
+.section-multiple-image-content {
+    .bg-image {
+        display: block;
+    }
+    .bg-image-1600 {
+        display: none;
+    }
+    @media (max-width:1600px) {
+        .bg-image {
+            display: none;
+        }
+        .bg-image-1600 {
+            display: block;
+        }   
+    }
+    @media (max-width:1440px) {
+        .bg-image {
+            display: none;
+        }
+        .bg-image-1600 {
+            display: none;
+        }   
+        .bg-image-1280 {
+            display: block;
+        }
+    }
+}
 // Responsive CSS start
 @media (max-width:1440px) {
     .section-image-content {
