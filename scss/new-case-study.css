@@ -1371,10 +1371,12 @@ footer .col-news-letter button img {
 }
 
 .section-multiple-image-content .bg-image {
-  display: block;
-}
-.section-multiple-image-content .bg-image-1600 {
   display: none;
+}
+@media (min-width: 1601px) {
+  .section-multiple-image-content .bg-image-1920 {
+    display: block;
+  }
 }
 @media (max-width: 1600px) {
   .section-multiple-image-content .bg-image {
@@ -1386,9 +1388,6 @@ footer .col-news-letter button img {
 }
 @media (max-width: 1440px) {
   .section-multiple-image-content .bg-image {
-    display: none;
-  }
-  .section-multiple-image-content .bg-image-1600 {
     display: none;
   }
   .section-multiple-image-content .bg-image-1280 {
