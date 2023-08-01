@@ -588,6 +588,9 @@ h2 {
   .before-after-img-wrap .two-joint-images .img {
     background-size: 767px 100%;
   }
+  .after-before-slider-wrap .two-joint-images {
+    min-height: 400px;
+  }
 }
 @media (max-width: 600px) {
   .before-after-img-wrap .two-joint-images .img {
@@ -597,6 +600,9 @@ h2 {
 @media (max-width: 400px) {
   .before-after-img-wrap .two-joint-images .img {
     background-size: 400px 100%;
+  }
+  .after-before-slider-wrap .two-joint-images {
+    min-height: 293px;
   }
 }
 .home-image-content-slider .slick-prev {
@@ -1518,9 +1524,6 @@ footer .col-news-letter button img {
 @media (max-width: 767px) {
   .after-before-slider-wrap .col-img {
     padding-bottom: 0;
-  }
-  .after-before-slider-wrap .two-joint-images {
-    min-height: 400px;
   }
   .section-image-content h2 {
     margin-bottom: 25px;
