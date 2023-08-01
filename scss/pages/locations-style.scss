@@ -776,3 +776,8 @@ header {
 }
 
 // 767 end
+@media (max-width:400px) {
+    .page-miamis .section-image-content .after-before-slider-wrap .col-img {
+        min-height: 293px;
+    }
+}
