@@ -1521,6 +1521,21 @@ footer .col-news-letter button img {
     margin-bottom: 15px;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .after-before-slider-wrap .col {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  .after-before-slider-wrap .col .content {
+    max-width: 100%;
+    padding: 40px 20px;
+  }
+  .after-before-slider-wrap .before-after-img-wrap .two-joint-images .img {
+    background-size: 992px 100%;
+  }
+}
 @media (max-width: 767px) {
   .after-before-slider-wrap .col-img {
     padding-bottom: 0;
