@@ -584,9 +584,27 @@ h2 {
     background-size: 1700px 100%;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .after-before-slider-wrap .col {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  .after-before-slider-wrap .col .content {
+    max-width: 100%;
+    padding: 40px 20px;
+  }
+  .after-before-slider-wrap .before-after-img-wrap .two-joint-images .img {
+    background-size: 992px 100%;
+  }
+}
 @media (max-width: 767px) {
   .before-after-img-wrap .two-joint-images .img {
     background-size: 767px 100%;
+  }
+  .after-before-slider-wrap .two-joint-images {
+    min-height: 400px;
   }
 }
 @media (max-width: 600px) {
@@ -597,6 +615,9 @@ h2 {
 @media (max-width: 400px) {
   .before-after-img-wrap .two-joint-images .img {
     background-size: 400px 100%;
+  }
+  .after-before-slider-wrap .two-joint-images {
+    min-height: 293px;
   }
 }
 .home-image-content-slider .slick-prev {
@@ -1370,6 +1391,31 @@ footer .col-news-letter button img {
           order: 1;
 }
 
+.section-multiple-image-content-row .bg-image {
+  display: none;
+}
+@media (min-width: 1601px) {
+  .section-multiple-image-content-row .bg-image-1920 {
+    display: block;
+  }
+}
+@media (max-width: 1600px) {
+  .section-multiple-image-content-row .bg-image {
+    display: none;
+  }
+  .section-multiple-image-content-row .bg-image-1600 {
+    display: block;
+  }
+}
+@media (max-width: 1440px) {
+  .section-multiple-image-content-row .bg-image {
+    display: none;
+  }
+  .section-multiple-image-content-row .bg-image-1280 {
+    display: block;
+  }
+}
+
 @media (max-width: 1440px) {
   .section-image-content h2 {
     margin-bottom: 40px;
@@ -1475,12 +1521,24 @@ footer .col-news-letter button img {
     margin-bottom: 15px;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .after-before-slider-wrap .col {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  .after-before-slider-wrap .col .content {
+    max-width: 100%;
+    padding: 40px 20px;
+  }
+  .after-before-slider-wrap .before-after-img-wrap .two-joint-images .img {
+    background-size: 992px 100%;
+  }
+}
 @media (max-width: 767px) {
   .after-before-slider-wrap .col-img {
     padding-bottom: 0;
-  }
-  .after-before-slider-wrap .two-joint-images {
-    min-height: 400px;
   }
   .section-image-content h2 {
     margin-bottom: 25px;
