@@ -165,19 +165,19 @@ function handleContactSubmit(e) {
 
     if(emailElement)
     {
+      localStorage.setItem('email', emailElement.value);
       emailElement.setAttribute("data-email", emailElement.value);
-      //console.log("emailElement"+emailElement.getAttribute('data-email'));
     }
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    //window.dataLayer = window.dataLayer || [];
+    //function gtag() { dataLayer.push(arguments); }
+    //gtag('js', new Date());
 
-    gtag('config', 'UA-225495044-1');
+    //gtag('config', 'UA-225495044-1');
     // gtag('set', 'user_data', {
     //     "email": localStorage.getItem('email') != undefined ? localStorage.getItem('email') : null,
     // });
-    gtag('event', 'conversion', { 'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo' });
+    //gtag('event', 'conversion', { 'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo' });
     $('#loader').show();
     inputs.each(function () {
       $(this).attr("disabled", "disabled");

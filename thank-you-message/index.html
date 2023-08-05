@@ -49,17 +49,6 @@
     </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script>
-    <!-- <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-225495044-1');
-        gtag('set', 'user_data', {
-            "email": localStorage.getItem('email') != undefined ? localStorage.getItem('email') : null,
-        });
-        gtag('event', 'conversion', { 'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo' });
-    </script> -->
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=432821205070173&ev=PageView&noscript=1" />
     </noscript>
@@ -179,7 +168,7 @@
                             itstime@hellochapter.com<br />
                             <!-- 204 Park Avenue New York, NY 10010 -->
                         </address>
-                        <input type="hidden" id="userEmail" name="email" value="">
+                        <input type="hidden" id="contact-email-field-id" name="email" value="">
                     </div>
                 </section>
                 <!-- section expert end -->
@@ -353,13 +342,22 @@
     </div>
     <!-- Wrapper end -->
     <script>
-        var emailElement = document.getElementById('userEmail');
+        var emailElement = document.getElementById('contact-email-field-id');
         emailElement.value = localStorage.getItem('email') != undefined ? localStorage.getItem('email') : null;
+        emailElement.setAttribute("data-email", emailElement.value);
+        console.log('Read value', emailElement.value);
     </script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-225495044-1');
+        gtag('event', 'conversion', { 'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo' });
+    </script>
     <script src="./../js/custom.js"></script>
 </body>
 
