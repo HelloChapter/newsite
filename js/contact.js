@@ -160,6 +160,15 @@ function handleContactSubmit(e) {
     return false;
   }
   if (isValid) {
+    var emailElement = document.getElementById('contact-email-field-id');
+    //console.log("emailElement1");
+
+    if(emailElement)
+    {
+      emailElement.setAttribute("data-email", emailElement.value);
+      //console.log("emailElement"+emailElement.getAttribute('data-email'));
+    }
+
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
