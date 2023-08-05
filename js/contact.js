@@ -166,7 +166,7 @@ function handleContactSubmit(e) {
     if(emailElement)
     {
       localStorage.setItem('email', emailElement.value);
-      console.log('Value Set', emailElement.value);
+      emailElement.setAttribute("data-email", emailElement.value);
     }
 
     //window.dataLayer = window.dataLayer || [];

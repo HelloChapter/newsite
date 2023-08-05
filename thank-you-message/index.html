@@ -344,6 +344,7 @@
     <script>
         var emailElement = document.getElementById('contact-email-field-id');
         emailElement.value = localStorage.getItem('email') != undefined ? localStorage.getItem('email') : null;
+        emailElement.setAttribute("data-email", emailElement.value);
         console.log('Read value', emailElement.value);
     </script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
