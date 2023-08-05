@@ -97,7 +97,7 @@ function redirectToThankYou() {
   if (localStorage.getItem("qr_status")) {
     localStorage.setItem("formSubmitted", true);
   }
-  window.location.pathname = "/thank-you-message/"
+  window.location.href = "/thank-you-message/?submit=true"
 }
 // Contact Submit 
 
@@ -163,8 +163,7 @@ function handleContactSubmit(e) {
     var emailElement = document.getElementById('contact-email-field-id');
     //console.log("emailElement1");
 
-    if(emailElement)
-    {
+    if (emailElement) {
       localStorage.setItem('email', emailElement.value);
       emailElement.setAttribute("data-email", emailElement.value);
     }
