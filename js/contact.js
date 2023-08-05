@@ -160,6 +160,15 @@ function handleContactSubmit(e) {
     return false;
   }
   if (isValid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-225495044-1');
+    // gtag('set', 'user_data', {
+    //     "email": localStorage.getItem('email') != undefined ? localStorage.getItem('email') : null,
+    // });
+    gtag('event', 'conversion', { 'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo' });
     $('#loader').show();
     inputs.each(function () {
       $(this).attr("disabled", "disabled");
