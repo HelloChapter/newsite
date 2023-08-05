@@ -249,6 +249,9 @@ header {
     .col-image {
         max-width: 46.9%;
     }
+    .mobile-bg-image {
+        display: none;
+    }
 
     .content {
         max-width: 766px;
@@ -720,10 +723,15 @@ header {
 
             .col-image {
                 order: 1;
-                padding-bottom: 56.25%;
+                padding-bottom: 74%;
                 min-height: 290px;
             }
-
+            .desktop-bg-image {
+                display: none;
+            }
+            .mobile-bg-image {
+                display: block;
+            }
             .col-content {
                 padding: 0 20px;
             }
