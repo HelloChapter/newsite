@@ -1,0 +1,12 @@
+.new-projects-card-layout {
+ .card-groups {
+    .row {
+        margin: 0 -16px;
+        .col-card {
+            padding:0 16px;
+            max-width: 33.33%;
+            flex:0 0 33.33%;
+        }
+    }
+ }   
+}

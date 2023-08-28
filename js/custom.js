@@ -163,6 +163,20 @@ jQuery(document).ready(function ($) {
         ]
     });
     // Review slider end
+    $('.new-projects-card-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        speed: 800,
+        autoplaySpeed: 3000,
+        dots: true,
+        fade: true,
+        cssEase: 'ease-in-out',
+
+    });
+    // new projects pages card slider end
+
     AOS.init({
         duration: 1200,
     });
