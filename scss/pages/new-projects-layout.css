@@ -1154,6 +1154,7 @@ footer .col-news-letter button img {
 }
 .new-projects-card-layout {
   padding-bottom: 83px;
+  padding-top: 115px;
 }
 .new-projects-card-layout .container {
   max-width: 1720px;
@@ -1165,6 +1166,9 @@ footer .col-news-letter button img {
   font-size: 70px;
   line-height: 1.1;
   margin-bottom: 0px;
+}
+.new-projects-card-layout .newyork-section-title {
+  padding-top: 0;
 }
 .new-projects-card-layout .card-groups .row {
   margin: 0 -16px;
@@ -1326,6 +1330,7 @@ footer .col-news-letter button img {
 @media (max-width: 1441px) {
   .new-projects-card-layout {
     padding-bottom: 20px;
+    padding-top: 41px;
   }
   .new-projects-card-layout .container {
     max-width: 90%;
@@ -1336,6 +1341,9 @@ footer .col-news-letter button img {
   .new-projects-card-layout .section-title h2 {
     font-size: 44px;
     line-height: 50px;
+  }
+  .new-projects-card-layout .newyork-section-title {
+    padding-top: 0;
   }
   .new-projects-card-layout .card-groups .row {
     margin: 0 -12px;
@@ -1384,6 +1392,9 @@ footer .col-news-letter button img {
   .new-projects-card-layout .section-title h2 {
     font-size: 25px;
     line-height: 29px;
+  }
+  .new-projects-card-layout .newyork-section-title {
+    padding-top: 0;
   }
   .new-projects-card-layout .card-groups .row {
     margin: 0 -8px;
