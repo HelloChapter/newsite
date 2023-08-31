@@ -163,6 +163,31 @@ jQuery(document).ready(function ($) {
         ]
     });
     // Review slider end
+    $('.new-projects-card-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        speed: 800,
+        autoplaySpeed: 3000,
+        dots: true,
+        fade: true,
+        cssEase: 'ease-in-out',
+    });
+    // new projects pages card slider end
+    $('.show-lesss-btn').hide();
+    $(".expand-project-btn .show-all-btn").click(function (event) {
+        $(this).hide();
+        $('.show-lesss-btn').show();
+        $(".expand-all-projects").slideDown();
+        $('.new-projects-card-slider').slick('reinit');
+    });
+    $(".expand-project-btn .show-lesss-btn").click(function (event) {
+        $(this).hide();
+        $('.show-all-btn').show();
+        $(".expand-all-projects").slideUp();
+        $('.new-projects-card-slider').slick('reinit');
+    });
     AOS.init({
         duration: 1200,
     });
@@ -188,7 +213,7 @@ $(".after-before-btn-wrap .before-btn").click(function (e) {
     // const sliderPos = e.target.value;
     setTimeout(() => {
         // Update the width of the foreground image
-        const sliderPos =  e.target.parentElement.parentElement.querySelector(".range-slider").value = "100";
+        const sliderPos = e.target.parentElement.parentElement.querySelector(".range-slider").value = "100";
         $(this).parents('.two-joint-images').find(".foreground-img").css('width', '100%');
         // Update the position of the slider button
         $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(100% - 40px)`);
@@ -196,7 +221,7 @@ $(".after-before-btn-wrap .before-btn").click(function (e) {
 });
 $(".two-joint-images .after-before-btn-wrap .after-btn").click(function (e) {
     setTimeout(() => {
-        const sliderPos =  e.target.parentElement.parentElement.querySelector(".range-slider").value = "0";
+        const sliderPos = e.target.parentElement.parentElement.querySelector(".range-slider").value = "0";
         $(this).parents('.two-joint-images').find(".foreground-img").css('width', '0%');
         $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(0px)`);
     }, 10);
