@@ -603,6 +603,12 @@ h2 {
   .before-after-img-wrap .two-joint-images .img {
     background-size: 767px 100%;
   }
+  .before-after-img-wrap .two-joint-images .range-slider::-webkit-slider-thumb {
+    height: 400px;
+  }
+  .before-after-img-wrap .two-joint-images .range-slider::-moz-range-thumb {
+    height: 400px;
+  }
   .after-before-slider-wrap .two-joint-images {
     min-height: 400px;
   }
@@ -618,6 +624,12 @@ h2 {
   }
   .after-before-slider-wrap .two-joint-images {
     min-height: 293px;
+  }
+  .after-before-slider-wrap .two-joint-images .range-slider::-webkit-slider-thumb {
+    height: 293px;
+  }
+  .after-before-slider-wrap .two-joint-images .range-slider::-moz-range-thumb {
+    height: 293px;
   }
 }
 .home-image-content-slider .slick-prev {

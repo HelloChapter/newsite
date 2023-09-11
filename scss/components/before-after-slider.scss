@@ -191,9 +191,18 @@
 }
 // 991 end
 @media (max-width:767px) {
+    
     .before-after-img-wrap .two-joint-images {
         .img {
             background-size: 767px 100%;
+        }
+        .range-slider {
+            &::-webkit-slider-thumb {
+                height: 400px;
+            }
+            &::-moz-range-thumb {
+                height: 400px; 
+            }
         }
     }
 
@@ -221,6 +230,14 @@
     .after-before-slider-wrap {
         .two-joint-images {
             min-height: 293px;
+            .range-slider {
+                &::-webkit-slider-thumb {
+                    height: 293px;
+                }
+                &::-moz-range-thumb {
+                    height: 293px; 
+                }
+            }
         }
     }
 }
