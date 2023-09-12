@@ -1650,6 +1650,12 @@ footer .col-news-letter button img {
   .section-team-members .team-clickable-content h3 {
     font-size: 50px;
   }
+  .section-team-members .team-clickable-content .content {
+    max-width: 840px;
+  }
+  .section-team-members .team-clickable-content .content p br {
+    display: none;
+  }
   .section-team-chapter {
     padding: 60px;
   }
