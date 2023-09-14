@@ -1917,6 +1917,9 @@ footer .col-news-letter button img {
     padding-bottom: 63%;
     min-height: 290px;
   }
+  .section-team-members {
+    padding-bottom: 0;
+  }
   .section-team-members .section-title h2 {
     font-size: 25px;
     line-height: 30px;
