@@ -192,10 +192,7 @@
             }
         }
 
-        .col-team-7 {
-            max-width: 50%;
-            flex: 0 0 50%;
-
+        .col-team-no-image {
             .bg-image {
                 height: 100%;
                 width: 100%;
@@ -203,6 +200,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                padding: 30px;
             }
 
             .image {
@@ -473,6 +471,14 @@
 
             h3 {
                 font-size: 50px;
+            }
+            .content {
+                max-width: 840px;
+                p {
+                    br {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -811,6 +817,7 @@
     }
 
     .section-team-members {
+        padding-bottom: 0;
         .section-title {
             h2 {
                 font-size: 25px;
@@ -843,6 +850,9 @@
             max-width: 100%;
             flex: 0 0 100%;
             padding-bottom: 30px;
+            .team-image {
+                background-position: center top;
+            }
         }
 
         .team-content-info {
