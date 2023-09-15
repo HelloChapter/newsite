@@ -1421,13 +1421,7 @@ footer .col-news-letter button img {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.section-team-members .team-wrapper .col-team-7 {
-  max-width: 50%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-}
-.section-team-members .team-wrapper .col-team-7 .bg-image {
+.section-team-members .team-wrapper .col-team-no-image .bg-image {
   height: 100%;
   width: 100%;
   min-height: inherit;
@@ -1440,8 +1434,9 @@ footer .col-news-letter button img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 30px;
 }
-.section-team-members .team-wrapper .col-team-7 .image img {
+.section-team-members .team-wrapper .col-team-no-image .image img {
   display: block;
 }
 .section-team-members .team-wrapper .team-content {
@@ -1654,6 +1649,12 @@ footer .col-news-letter button img {
   }
   .section-team-members .team-clickable-content h3 {
     font-size: 50px;
+  }
+  .section-team-members .team-clickable-content .content {
+    max-width: 840px;
+  }
+  .section-team-members .team-clickable-content .content p br {
+    display: none;
   }
   .section-team-chapter {
     padding: 60px;
@@ -1916,6 +1917,9 @@ footer .col-news-letter button img {
     padding-bottom: 63%;
     min-height: 290px;
   }
+  .section-team-members {
+    padding-bottom: 0;
+  }
   .section-team-members .section-title h2 {
     font-size: 25px;
     line-height: 30px;
@@ -1942,6 +1946,9 @@ footer .col-news-letter button img {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     padding-bottom: 30px;
+  }
+  .section-team-members .team-wrapper .col-team .team-image {
+    background-position: center top;
   }
   .section-team-members .team-wrapper .team-content-info {
     padding: 15px 20px;
