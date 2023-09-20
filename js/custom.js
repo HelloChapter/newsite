@@ -227,4 +227,4 @@ $(".two-joint-images .after-before-btn-wrap .after-btn").click(function (e) {
     }, 10);
 });
 
-  // After Before Js end
+// After Before Js end
