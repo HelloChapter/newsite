@@ -170,11 +170,28 @@ jQuery(document).ready(function ($) {
         arrows: true,
         speed: 800,
         autoplaySpeed: 3000,
+        autoplay: true,
         dots: true,
         fade: true,
         cssEase: 'ease-in-out',
     });
     // new projects pages card slider end
+    $('.announcement-bar').slick({
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed:0,
+        speed:35000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        fade: false,
+        variableWidth:true,
+        centerMode: true,
+        cssEase: 'linear',
+    });
+    // announcement-bar slider end
+
     $('.show-lesss-btn').hide();
     $(".expand-project-btn .show-all-btn").click(function (event) {
         $(this).hide();

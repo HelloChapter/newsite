@@ -9,6 +9,7 @@
 @import "../components/chapter-content.scss";
 @import "../components/image-content.scss";
 @import "../components/form-elements.scss";
+@import "../components/home-project-fingertips.scss";
 
 .announcement-bar {
     position: fixed;
@@ -31,20 +32,9 @@
     p {
         font-weight: 400;
     }
-    .text-label-wrap {
-        opacity: 0;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 100%;
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        .letter {
-            letter-spacing: 0;
-        }
+
+    .slider-item {
+        padding: 0 30px;
     }
 }
 
@@ -194,7 +184,18 @@
     }
 }
 
+.new-section-title {
+    h2 {
+        font-size: 80px;
+        line-height: 1.064;
+        font-family: "Times";
+        font-weight: bold;
+    }
+}
+
 .section-new-intro-image {
+    position: relative;
+
     .row {
         min-height: calc(100vh - 111px);
     }
@@ -253,6 +254,166 @@
         p {
             font-size: 20px;
             line-height: 40px;
+        }
+    }
+}
+
+.scroll-button-wrapper {
+    line-height: 0;
+    font-size: 0;
+
+    .text-label-wrap {
+        transform: rotate(270deg);
+        position: absolute;
+        left: calc(50% - 34px);
+        top: calc(100% - 170px);
+    }
+
+    .button-label {
+        display: inline-block;
+        font-size: 20px;
+        line-height: 47px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+    }
+
+    .line {
+        height: 86px;
+        display: inline-block;
+        width: 2px;
+        background-color: $black;
+        position: absolute;
+        left: calc(50% - 2px);
+        top: calc(100% - 40px);
+        z-index: 1;
+    }
+}
+
+.section-confident {
+    .col {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+
+    .section-content {
+        padding: 127px 0;
+
+        .content {
+            max-width: 561px;
+            margin: 0 auto;
+        }
+
+        .new-section-title {
+            margin-bottom: 84px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 2;
+        }
+    }
+
+    .section-box-col {
+        background-color: $pearl-drop2;
+        padding: 127px 141px;
+
+        .section-box {
+            background-color: $white;
+            padding: 95px 47px;
+            overflow: hidden;
+            position: relative;
+
+            &:hover {
+                .diamond-square {
+                    transform: translate(-50%, -50%) scale(1.2) rotate(45deg);
+                    background-color: $black;
+                }
+
+                .diamond-square-content {
+                    * {
+                        // color: $white;
+                    }
+                }
+            }
+        }
+
+        .diamond-square {
+            width: 187px;
+            height: 187px;
+            background-color: transparent;
+            position: relative;
+            transform: rotate(45deg);
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: inherit;
+                top: 0;
+                left: 0;
+                transform: rotate(90deg);
+            }
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .section-box-item {
+            max-width: 50%;
+            flex: 0 0 50%;
+            text-align: center;
+            transition: transform 0.1s ease-in-out;
+
+            &:hover {
+                .diamond-square {
+                    background-color: $black;
+
+                    * {
+                        color: $white;
+                    }
+                }
+            }
+
+            &:first-child,
+            &:nth-child(2) {
+                padding-bottom: 150px;
+            }
+
+            h4 {
+                font-size: 24px;
+                line-height: 40px;
+                font-weight: 700;
+                margin-bottom: 38px;
+                font-family: "Inter";
+            }
+
+            h3 {
+                font-size: 50px;
+                line-height: 57px;
+            }
+
+            .diamond-square-content {
+                z-index: 1;
+                position: relative;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
         }
     }
 }

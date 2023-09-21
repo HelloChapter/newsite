@@ -1,0 +1,91 @@
+.section-home-project-fingertips {
+    padding: 75px 115px;
+
+    .container {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .new-section-title {
+        margin-bottom: 28px;
+    }
+
+    .content {
+        max-width: 550px;
+        padding: 0 15px 70px;
+    }
+
+    .col-image {
+        max-width: 53.9%;
+        flex: 0 0 53.9%;
+    }
+
+    .col-content {
+        .row {
+            padding-right: 100px;
+
+            .col {
+                max-width: 33.33%;
+                flex: 0 0 33.33%;
+            }
+        }
+    }
+
+    .col-item {
+        text-align: center;
+        padding-bottom: 55px;
+
+        h3 {
+            font-size: 17px;
+            line-height: 33px;
+            font-weight: 500;
+            font-family: "Inter";
+        }
+    }
+    .bg-img-image-wrap {
+        padding-right: 22px;
+    }
+    .bg-img-image-verticle {
+        max-width: 336px;
+        margin-bottom: -39.5%;
+        position: relative;
+        z-index: 1;
+    }
+    .bg-img-image-horizontal {
+        max-width: 774px;
+        margin:0 0 0 98px;
+    }
+}
+
+// Responsive CSS start
+@media (max-width:1600px) {
+}
+
+// 1600 end
+@media (max-width:1440px) {
+    
+}
+
+// 1440 end
+@media (max-width:1199px) {
+    
+}
+
+// 1199 end
+@media (max-width:1023px) {
+    
+}
+
+// 1023 end
+
+@media (max-width:991px) {
+    
+}
+
+// 991 end
+
+@media (max-width:767px) {
+    
+}
+
+// 767 end
