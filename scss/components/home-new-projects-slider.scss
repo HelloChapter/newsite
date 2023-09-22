@@ -1,0 +1,124 @@
+.home-new-projects-slider {
+    letter-spacing: 0;
+    .heading-content-wrap {
+        padding: 52px 18.5% 42px;
+
+        h3 {
+            font-size: 60px;
+            line-height: 69px;
+            margin-bottom: 26px;
+        }
+
+        .heading-content {
+            max-width: 583px;
+
+            p {
+                font-size: 20px;
+                line-height: 2;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .content {
+        padding: 59px 18.5%;
+        background-color: $pearl-drop3;
+
+        h2 {
+            font-size: 60px;
+            line-height: 1.2;
+            margin-bottom: 92px;
+        }
+    }
+
+    .location-title {
+        font-size: 20px;
+        line-height: 40px;
+        letter-spacing: 0;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        margin-bottom: 21px;
+
+        img {
+            margin-right: 13px;
+        }
+    }
+
+    .content-p {
+        font-size: 20px;
+        line-height: 2;
+        font-weight: 400;
+        margin-bottom: 162px;
+    }
+
+    .more-btn-wrap {
+        margin-bottom: 23px;
+    }
+
+    .slick-prev {
+        display: none !important;
+    }
+
+    .slick-next {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        bottom: calc(29.8% - 12px);
+        transform: translateY(-50%);
+        left: calc(50% - 40.75% + 100px);
+        text-indent: -99em;
+        font-size: 0;
+        width: 67px;
+        height: 18px;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0px;
+            background-image: url('../../images/icons/right-arrow3.svg');
+            width: 67px;
+            height: 18px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    .slick-dots {
+        padding: 0;
+        display: flex;
+        list-style: none;
+        position: absolute;
+        bottom: 29.8%;
+        left: calc(50% - 40.75%);
+        ul {
+            display: flex;
+        }
+
+        li {
+            margin: 0 6.5px;
+
+            button {
+                width: 10px;
+                display: block;
+                height: 10px;
+                text-indent: -99em;
+                border-radius: 100%;
+                border: none;
+                overflow: hidden;
+                background-color: rgba($color: $white, $alpha: 1);
+                box-shadow: none;
+            }
+        }
+
+        .active,
+        .slick-active {
+            button {
+                background-color: $text-color;
+            }
+        }
+    }
+}

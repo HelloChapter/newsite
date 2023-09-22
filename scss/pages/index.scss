@@ -11,6 +11,8 @@
 @import "../components/form-elements.scss";
 @import "../components/home-project-fingertips.scss";
 @import "../components/section-home-contact-forms.scss";
+@import "../components/home-new-projects-slider.scss";
+@import "../components/section-client-slider";
 
 .announcement-bar {
     position: fixed;
@@ -418,7 +420,9 @@
         }
     }
 }
-
+.section-home-reviews {
+    padding: 30px 0;
+}
 // Responsive css start
 @media (max-width:1600px) {
     .section-intro-image {
