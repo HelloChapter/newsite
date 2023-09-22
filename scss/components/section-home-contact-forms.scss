@@ -1,0 +1,99 @@
+.section-home-contact-forms {
+    padding: 42px 0;
+
+    .container {
+        max-width: 771px;
+    }
+
+    .content {
+        max-width: 561px;
+        margin: 0 auto 42px;
+        font-size: 20px;
+        line-height: 2;
+    }
+
+    .new-section-title {
+        margin-bottom: 30px;
+    }
+
+    .input-wrap {
+        &::after {
+            display: none;
+        }
+    }
+
+    .form-control {
+        padding: 3px 17px;
+        min-height: 51px;
+        border: 0.5px solid $black;
+        font-size: 20px;
+        line-height: 2;
+        font-weight: 400;
+        letter-spacing: 0;
+        color: $black;
+
+        @include placeholder-text {
+            color: $text-color2;
+        }
+
+        &:focus {
+            border: 2px solid $black;
+        }
+    }
+
+    .input-wrap {
+        position: relative;
+
+        .error-message {
+            color: $red2;
+            font-size: 13px;
+            line-height: 40px;
+            position: absolute;
+            font-weight: 400;
+            left: 0;
+            bottom: -34px;
+            display: none;
+        }
+    }
+
+    .error-show {
+        .error-message {
+            display: block;
+        }
+    }
+
+    textarea.form-control {
+        min-height: 125px;
+    }
+
+    .row {
+        margin: 0 -12px;
+
+        .col {
+            padding: 0 12px;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 27px;
+    }
+
+    .btn-submit-wrap {
+        padding-top: 23px;
+    }
+
+    .select-wrapper {
+        select {
+            color: $text-color2;
+
+        }
+
+        &:before {
+            right: 17px;
+            background-image: url("../../images/icons/ico-chevron2.svg");
+        }
+    }
+    .thank-you-wrap {
+        padding: 134px 0;
+    }
+}
