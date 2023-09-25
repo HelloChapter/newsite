@@ -340,6 +340,10 @@ h2 {
   opacity: 0 !important;
 }
 
+video, iframe {
+  max-width: 100%;
+}
+
 @media (max-width: 1600px) {
   body {
     font-size: 14px;

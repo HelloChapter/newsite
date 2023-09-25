@@ -119,6 +119,21 @@ jQuery(document).ready(function ($) {
 
     });
     // home-new-projects-slider end
+    $('.home-client-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        speed: 800,
+        autoplaySpeed: 3000,
+        dots: true,
+        fade: true,
+        prevArrow: '.custom-next-arrow',
+        cssEase: 'ease-in-out',
+
+    });
+    // home-client-slider end
+    
     $('.after-before-slider').slick({
         infinite: true,
         slidesToShow: 1,

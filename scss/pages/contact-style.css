@@ -340,6 +340,10 @@ h2 {
   opacity: 0 !important;
 }
 
+video, iframe {
+  max-width: 100%;
+}
+
 @media (max-width: 1600px) {
   body {
     font-size: 14px;
@@ -562,6 +566,34 @@ input[type=number] {
 .btn-black:hover {
   background-color: transparent;
   color: #231F20;
+}
+
+.btn-white {
+  background-color: #ffffff;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-decoration: none;
+  color: #231F20;
+  min-width: 183px;
+  min-height: 65px;
+  border: 1px solid #ffffff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  outline: none;
+}
+.btn-white:hover {
+  background-color: transparent;
+  color: #ffffff;
 }
 
 @media (max-width: 1440px) {

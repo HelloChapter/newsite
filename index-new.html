@@ -42,6 +42,7 @@ area.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/pages/index.css" />
     <!-- Meta Pixel Code -->
     <script>
@@ -238,7 +239,20 @@ area.">
             <div class="middle-content">
                 <section class="section-new-intro-image">
                     <div class="row no-gutters">
-                        <div class="col section-image-content aos-init pearl-bg2">
+                        <div class="col col-video-box aos-init pearl-bg2">
+                            <div class="video-box-wrap">
+                                <div class="video-box">
+                                    <video controlsList="nodownload nofullscreen" playsinline="none" preload="auto"
+                                        controls="" id="video-player" class="video-js"
+                                        poster="./images/home/placeholder-image.png" autobuffer="true" data-setup="{}">
+                                        <source src="./videos/home/Chapter-Hero-Video.webm" type="video/webm" />
+
+                                        Your browser does not support HTML5 video.
+                                    </video>
+                                    <button id="btn-play" class="btn-styled-removed" type="button"><img
+                                            src="./images/icons/play-btn-small.svg" alt="icon" /> </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="col section-content-col">
                             <div class="section-content text-center">
@@ -329,6 +343,42 @@ area.">
                         </div>
                 </section>
                 <!-- confident Section end -->
+                <section class="section-home-how-it-works-slider black-bg">
+                    <div class="container">
+                        <div class="new-section-title">
+                            <h2>A full-service design and renovation company specializing in luxury remodeling</h2>
+                        </div>
+                        <div class="heading-content">
+                            <p>You always have peace of mind with Chapter. We offer you every service in-house,
+                                including interior designers, architects, and engineers. And you always have a dedicated
+                                project manager to oversee your entire renovation, from start to finish. With Chapter,
+                                you get everything you need for a successful renovation, all from one source.</p>
+                        </div>
+                        <div class="home-how-it-works-slider">
+                            <div class="row">
+                                <div class="col col-col-left">
+                                    <div class="content">
+                                        <h5>Build</h5>
+                                        <h3>Make it<br />happen</h3>
+                                        <div class="content-p">
+                                            <p>When you work with Chapter, you have an experienced project manager
+                                                overseeing
+                                                all phases of your renovation project. Our PM’s are educated in
+                                                construction-related fields, like civil engineering and architecture,
+                                                which
+                                                makes them truly qualified to lead your project. </p>
+                                        </div>
+                                        <button type="button" class="btn-white">How it works</button>
+                                    </div>
+                                </div>
+                                <div class="col col-col-right">
+                                    <div class="image bg-image" style="background-image: url(./images/home/how-it-works-slider/slider1.png);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section class="section-home-project-fingertips pearl-bg2">
                     <div class="container">
                         <div class="row no-gutters">
@@ -507,33 +557,166 @@ area.">
                 <!-- section-home-carousel end -->
                 <section class="section-client-slider pearl-bg2">
                     <div class="container">
-                        <div class="row">
-                            <div class="col col-left">
-                                <div class="content">
-                                    <h2>“Chapter made me feel like I didn’t have anything to worry about.”</h2>
-                                    <div class="client-info">
-                                        <h3>Jaye W. / <img src="./images/icons/location2.svg" /> Brooklyn, NY</h3>
+                        <div class="home-client-slider">
+                            <div class="slider-item">
+                                <div class="row align-items-center">
+                                    <div class="col col-left">
+                                        <div class="content">
+                                            <h2>“Chapter made me feel like I didn’t have anything to worry about.”</h2>
+                                            <div class="client-info">
+                                                <h3>Jaye W. / <img src="./images/icons/location2.svg" /> Brooklyn, NY
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="images-icon">
+                                            <div class="circle-ui"></div>
+                                            <div class="client-image">
+                                                <img src="./images/home/clients/client1.png" alt="image" />
+                                                <button id="openModal" type="button"
+                                                    class="btn-styled-removed btn-client-play"><img
+                                                        src="./images/icons/play-icon-full.svg" alt="icon" /></button>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="images-icon">
-                                    <div class="circle-ui"></div>
-                                    <div class="client-image">
-                                        <img src="./images/home/clients/client1.png" alt="image" />
-                                        <button type="button" class="btn-styled-removed btn-client-play"><img src="./images/icons/play-icon-full.svg" alt="icon"/></button>
+                                    <div class="col col-right">
+                                        <div class="client-content-wrap">
+                                            <div class="wave-icon">
+                                                <img src="./images/icons/wave-icon.svg" alt="image" />
+                                            </div>
+                                            <div class="content">
+                                                <h2>Trusted by our clients</h2>
+                                            </div>
+                                            <div class="content-p">
+                                                <p>It’s our mission to partner with clients like you to make renovation
+                                                    dreams
+                                                    come true.</p>
+                                            </div>
+                                            <button class="custom-next-arrow btn-styled-removed btn-next-success-story"
+                                                aria-label="Next Slide">
+                                                <img src="./images/icons/right-arrow3.svg" alt="icons">
+                                                <div class="text-1 text-label-wrap1" style="opacity: 0;"><span
+                                                        class="button-label" style="opacity: 1;">N</span><span
+                                                        class="button-label" style="opacity: 1;">e</span><span
+                                                        class="button-label" style="opacity: 1;">x</span><span
+                                                        class="button-label" style="opacity: 1;">t</span><span
+                                                        class="button-label" style="opacity: 1;"> </span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;">u</span><span
+                                                        class="button-label" style="opacity: 1;">c</span><span
+                                                        class="button-label" style="opacity: 1;">c</span><span
+                                                        class="button-label" style="opacity: 1;">e</span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;"> </span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;">t</span><span
+                                                        class="button-label" style="opacity: 1;">o</span><span
+                                                        class="button-label" style="opacity: 1;">r</span><span
+                                                        class="button-label" style="opacity: 1;">y</span>
+                                                </div>
+                                                <div class="text-2 text-label-wrap1" style="opacity: 0;"><span
+                                                        class="button-label" style="opacity: 1;">N</span><span
+                                                        class="button-label" style="opacity: 1;">e</span><span
+                                                        class="button-label" style="opacity: 1;">x</span><span
+                                                        class="button-label" style="opacity: 1;">t</span><span
+                                                        class="button-label" style="opacity: 1;"> </span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;">u</span><span
+                                                        class="button-label" style="opacity: 1;">c</span><span
+                                                        class="button-label" style="opacity: 1;">c</span><span
+                                                        class="button-label" style="opacity: 1;">e</span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;"> </span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;">t</span><span
+                                                        class="button-label" style="opacity: 1;">o</span><span
+                                                        class="button-label" style="opacity: 1;">r</span><span
+                                                        class="button-label" style="opacity: 1;">y</span>
+                                                </div>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col col-right">
-                                <div class="client-content-wrap">
-                                    <div class="wave-icon">
-                                        <img src="./images/icons/wave-icon.svg" alt="image" />
+                            <div class="slider-item">
+                                <div class="row align-items-center">
+                                    <div class="col col-left">
+                                        <div class="content">
+                                            <h2>“The Chapter <br /> team made <br />my vision<br /> come to life.”</h2>
+                                            <div class="client-info">
+                                                <h3>Jeremy / <img src="./images/icons/location2.svg" /> Brooklyn, NY
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="images-icon">
+                                            <div class="circle-ui"></div>
+                                            <div class="client-image">
+                                                <img src="./images/home/clients/client2.png" alt="image" />
+                                                <button id="openModal" type="button"
+                                                    class="btn-styled-removed btn-client-play"><img
+                                                        src="./images/icons/play-icon-full.svg" alt="icon" /></button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="content">
-                                        <h2>Trusted by our clients</h2>
-                                    </div>
-                                    <div class="content-p">
-                                        <p>It’s our mission to partner with clients like you to make renovation dreams
-                                            come true.</p>
+                                    <div class="col col-right">
+                                        <div class="client-content-wrap">
+                                            <div class="wave-icon">
+                                                <img src="./images/icons/wave-icon.svg" alt="image" />
+                                            </div>
+                                            <div class="content">
+                                                <h2>Trusted by our clients</h2>
+                                            </div>
+                                            <div class="content-p">
+                                                <p>It’s our mission to partner with clients like you to make renovation
+                                                    dreams
+                                                    come true.</p>
+                                            </div>
+                                            <button class="custom-next-arrow btn-styled-removed btn-next-success-story"
+                                                aria-label="Next Slide">
+                                                <img src="./images/icons/right-arrow3.svg" alt="icons">
+                                                <div class="text-1 text-label-wrap1" style="opacity: 0;"><span
+                                                        class="button-label" style="opacity: 1;">N</span><span
+                                                        class="button-label" style="opacity: 1;">e</span><span
+                                                        class="button-label" style="opacity: 1;">x</span><span
+                                                        class="button-label" style="opacity: 1;">t</span><span
+                                                        class="button-label" style="opacity: 1;"> </span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;">u</span><span
+                                                        class="button-label" style="opacity: 1;">c</span><span
+                                                        class="button-label" style="opacity: 1;">c</span><span
+                                                        class="button-label" style="opacity: 1;">e</span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;"> </span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;">t</span><span
+                                                        class="button-label" style="opacity: 1;">o</span><span
+                                                        class="button-label" style="opacity: 1;">r</span><span
+                                                        class="button-label" style="opacity: 1;">y</span>
+                                                </div>
+                                                <div class="text-2 text-label-wrap1" style="opacity: 0;"><span
+                                                        class="button-label" style="opacity: 1;">N</span><span
+                                                        class="button-label" style="opacity: 1;">e</span><span
+                                                        class="button-label" style="opacity: 1;">x</span><span
+                                                        class="button-label" style="opacity: 1;">t</span><span
+                                                        class="button-label" style="opacity: 1;"> </span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;">u</span><span
+                                                        class="button-label" style="opacity: 1;">c</span><span
+                                                        class="button-label" style="opacity: 1;">c</span><span
+                                                        class="button-label" style="opacity: 1;">e</span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;"> </span><span
+                                                        class="button-label" style="opacity: 1;">s</span><span
+                                                        class="button-label" style="opacity: 1;">t</span><span
+                                                        class="button-label" style="opacity: 1;">o</span><span
+                                                        class="button-label" style="opacity: 1;">r</span><span
+                                                        class="button-label" style="opacity: 1;">y</span>
+                                                </div>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -714,6 +897,23 @@ area.">
                         </div>
                     </div>
                 </section>
+                <!-- section-home-contact-forms end -->
+                <!-- modal-home-client-video start -->
+                <div id="myModal" class="modal modal-home-client-video">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="btn-styled-removed btn-close" data-dismiss="modal">
+                                <img src="./images/icons/close.svg" alt="icon" />
+                            </button>
+                        </div>
+                        <div class="mid-content">
+                            <div class="video-box">
+                                <div id="player"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- modal-home-client-video end -->
             </div>
             <!-- Middle container end -->
             <footer>
@@ -814,6 +1014,8 @@ area.">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
     <script src="./js/custom.js"></script>
     <script src="./js/contact-home.js"></script>
 
@@ -862,7 +1064,102 @@ area.">
                     scrollTop: nextSection.offset().top - 60
                 }, 1000);
             });
+
+            // Home page  client video
+            // When the "Open Modal" button is clicked
+            $('#openModal').click(function () {
+                // Show the modal
+                $('#myModal').css('display', 'flex');
+
+                // Load the YouTube video
+                loadYouTubeVideo('HxahMCQcVOk'); // Replace with your YouTube video ID
+            });
+
+            // When the "Close" button or the modal background is clicked
+            $('.btn-close, .modal').click(function () {
+                // Hide the modal and stop the video
+                $('#myModal').css('display', 'none');
+                stopYouTubeVideo();
+            });
+
+            // Prevent clicks inside the modal from closing it
+            $('.modal-content').click(function (event) {
+                event.stopPropagation();
+            });
+
+            // Load and control the YouTube video
+            var player;
+
+            function loadYouTubeVideo(videoId) {
+                var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
+                var queryParams = '?modestbranding=1&rel=0&showinfo=0';
+                player = new YT.Player('player', {
+                    height: '100%',
+                    width: '100%',
+                    videoId: videoId,
+                    playerVars: {
+                        'playsinline': 1,
+                        'modestbranding': 1,
+                        'rel': 0,
+                        'showinfo': 0
+                    },
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+
+            }
+
+            function onPlayerReady(event) {
+                // Video player is ready to play
+                event.target.playVideo();
+            }
+
+            function onPlayerStateChange(event) {
+                // Handle video state changes here (e.g., pause, end)
+                if (event.data === YT.PlayerState.PAUSED) {
+                    // Video paused
+                }
+                if (event.data === YT.PlayerState.ENDED) {
+                    // Video ended
+                }
+                // Add more handling as needed
+            }
+
+            function stopYouTubeVideo() {
+                if (player && player.stopVideo) {
+                    player.stopVideo();
+                }
+            }
+            $('.slider').on('init', function (event, slick) {
+                story_animation();
+            });
+
+            // Js for intro section video
+            // Get the video element by its ID
+            var video = document.getElementById("video-player_html5_api");
+
+            // Get the play button by its ID
+            var playButton = document.getElementById("btn-play");
+
+            // Add a click event listener to the play button
+            playButton.addEventListener("click", function () {
+                if (video.paused || video.ended) {
+                    // Check if the video is paused or has ended
+                    video.setAttribute("controls", "controls");
+                    video.play().catch(function (error) {
+                        console.error("Failed to play video:", error.message);
+                    });
+                } else {
+                    // If the video is playing, pause it
+                    video.pause();
+                    // Hide default video controls when paused
+                    video.removeAttribute("controls");
+                }
+            });
         });
+        // ready function end
     </script>
     <script>
 
@@ -956,6 +1253,102 @@ area.">
                     });
             }, 100);
         });
+        // top scroll down animation effect end
+        $(window).on('load', function () {
+            story_animation();
+            function story_animation() {
+                setTimeout(function () {
+                    var textWrapper = document.querySelector('.btn-next-success-story .text-1');
+                    var subtexts = $('.btn-next-success-story .text-1').html();
+                    var subStrInEm = subtexts.match("<em>(.*)</em>");
+                    subtexts = subtexts.replace('/em', 'em');
+                    subtexts = subtexts.split('<em>');
+                    $('.btn-next-success-story .text-1').html('');
+                    var i, text2Length;
+                    text2Length = $('.btn-next-success-story .text-2').text();
+                    text2Length = text2Length.length;
+                    var delayTime = 30 * text2Length + 4000;
+                    for (i = 0; i < subtexts.length; ++i) {
+                        var str = subtexts[i].replace(/<(.|\n)*?>/g, '');
+                        if (subStrInEm != null && subtexts[i] == subStrInEm[1]) {
+                            $('.btn-next-success-story .text-1').append(str.replace(/([^\x80-\xFF]|\w)/g, "<span class='button-label color'>$&</span>"));
+                        } else {
+                            $('.btn-next-success-story .text-1').append(str.replace(/([^\x80-\xFF]|\w)/g, "<span class='button-label'>$&</span>"));
+                        }
+                    }
+                    $('.btn-next-success-story .text-1').css('opacity', 1);
+                    anime.timeline({ loop: true })
+                        .add({
+                            targets: '.btn-next-success-story .text-1 .button-label',
+                            opacity: [0, 1],
+                            easing: "easeInOutQuad",
+                            duration: 300,
+                            delay: function (el, i) {
+                                return 30 * (i + 1)
+                            }
+                        }).add({
+                            targets: '.btn-next-success-story .text-1',
+                            opacity: 0,
+                            duration: 1000,
+                            easing: "easeOutExpo",
+                            delay: 3000
+                        }).add({
+                            targets: '.btn-next-success-story .text-1',
+                            opacity: 0,
+                            duration: delayTime,
+                            easing: "easeOutExpo",
+                            delay: 0
+                        });
+                }, 100);
+
+                setTimeout(function () {
+                    var textWrapper = document.querySelector('.btn-next-success-story .text-2');
+                    var subtexts = $('.btn-next-success-story .text-2').html();
+                    var subStrInEm = subtexts.match("<em>(.*)</em>");
+                    subtexts = subtexts.replace('/em', 'em');
+                    subtexts = subtexts.split('<em>');
+                    $('.btn-next-success-story .text-2').html('');
+                    var i, text1Length;
+                    text1Length = $('.btn-next-success-story .text-1').text();
+                    text1Length = text1Length.length;
+                    var delayTime = 30 * text1Length + 6000;
+                    for (i = 0; i < subtexts.length; ++i) {
+                        var str = subtexts[i].replace(/<(.|\n)*?>/g, '');
+                        if (subStrInEm != null && subtexts[i] == subStrInEm[1]) {
+                            $('.btn-next-success-story .text-2').append(str.replace(/([^\x80-\xFF]|\w)/g, "<span class='button-label color'>$&</span>"));
+                        } else {
+                            $('.btn-next-success-story .text-2').append(str.replace(/([^\x80-\xFF]|\w)/g, "<span class='button-label'>$&</span>"));
+                        }
+                    }
+                    $('.btn-next-success-story .text-2').css('opacity', 1);
+                    anime.timeline({ loop: true })
+                        .add({
+                            targets: '.btn-next-success-story .text-2',
+                            opacity: 1,
+                            duration: delayTime,
+                            easing: "easeOutExpo",
+                            delay: 0
+                        })
+                        .add({
+                            targets: '.btn-next-success-story .text-2 .button-label',
+                            opacity: [0, 1],
+                            easing: "easeInOutQuad",
+                            duration: 300,
+                            delay: function (el, i) {
+                                return 30 * (i + 1)
+                            }
+                        }).add({
+                            targets: '.btn-next-success-story .text-2',
+                            opacity: 0,
+                            duration: 1000,
+                            easing: "easeOutExpo",
+                            delay: 3000
+                        });
+                }, 100);
+            }
+
+        });
+        // client section Next success story animation effect end
     </script>
 </body>
 

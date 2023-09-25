@@ -1,6 +1,11 @@
 .section-client-slider {
     padding: 120px 184px 115px;
 
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
     .circle-ui {
         background-color: $pearl-drop3;
         width: 546px;
@@ -8,7 +13,7 @@
         border-radius: 100%;
         position: absolute;
         top: 7.5%;
-        right: 4px;
+        right: 134px;
         z-index: 0;
     }
 
@@ -18,7 +23,7 @@
         max-width: 464px;
         max-height: 464px;
         position: relative;
-        margin: 0 0 0 auto;
+        margin: -60px 0 0 auto;
 
         &:after {
             content: '';
@@ -53,6 +58,7 @@
                 font-size: 60px;
                 line-height: 1.2;
                 font-family: "Inter";
+                letter-spacing: 0;
             }
 
             h3 {
@@ -71,6 +77,10 @@
     }
 
     .col-right {
+        padding-left: 9%;
+        padding-top: 135px;
+        max-width: 50%;
+        flex: 0 0 50%;
         .client-content-wrap {
             max-width: 503px;
         }
@@ -93,6 +103,63 @@
                 line-height: 2;
                 font-weight: 400;
             }
+        }
+    }
+    .slick-dots {
+        padding: 0;
+        display: flex;
+        list-style: none;
+        position: absolute;
+        bottom: 2%;
+        left: calc(50% + 9%);
+        ul {
+            display: flex;
+        }
+
+        li {
+            margin: 0 6.5px;
+
+            button {
+                width: 10px;
+                display: block;
+                height: 10px;
+                text-indent: -99em;
+                border-radius: 100%;
+                border: none;
+                overflow: hidden;
+                background-color: rgba($color: $light-pink, $alpha: 1);
+                box-shadow: none;
+            }
+        }
+
+        .active,
+        .slick-active {
+            button {
+                background-color: $text-color;
+            }
+        }
+    }
+    .slick-next {
+        display: none !important;
+    }
+    .text-label-wrap1 {
+        position: absolute;
+        min-width: 300px;
+        bottom: 0px;
+    }
+    .custom-next-arrow {
+        display: flex;
+        align-items: center;
+        left: calc(50% + 9% + 60px);
+        position: absolute;
+        bottom: 0;
+        font-size: 14px;
+        line-height: 40px;
+        font-weight: 400;
+        font-family: "Inter";
+        img {
+            margin-right: 25px;
+            margin-bottom: 10px;
         }
     }
 }
