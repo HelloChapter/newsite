@@ -134,6 +134,26 @@ jQuery(document).ready(function ($) {
     });
     // home-client-slider end
     
+    $('.home-how-it-works-slider').slick({
+        autoplay: true,
+        speed:10000,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplaySpeed: 0,
+        dots: true,
+        fade:true,
+        centerMode: true,
+        variableWidth: false,
+        centerPadding: "0px",
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        draggable: false,
+        cssEase: 'ease-in-out',
+    });
+    // home-how-it-works-slider end
+    
     $('.after-before-slider').slick({
         infinite: true,
         slidesToShow: 1,

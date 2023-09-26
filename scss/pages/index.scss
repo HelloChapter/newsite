@@ -389,17 +389,17 @@
         }
 
         .diamond-square {
-            width: 187px;
-            height: 187px;
-            background-color: transparent;
-            position: relative;
-            transform: rotate(45deg);
-            margin: 0 auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(45deg);
-            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            // width: 187px;
+            // height: 187px;
+            // background-color: transparent;
+            // position: relative;
+            // transform: rotate(45deg);
+            // margin: 0 auto;
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%) rotate(45deg);
+            // transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
             &::after {
                 content: '';
@@ -493,7 +493,7 @@
 
         p {
             font-size: 40px;
-            line-height: 1.6;
+            line-height: 1.63;
             font-weight: 400;
             color: $white;
         }
@@ -525,17 +525,69 @@
         color: $white;
         margin: 95px 0 84px;
     }
+
     .col-col-right {
-        max-width: 39.4%;
-        flex: 0 0 39.4%;
+        max-width: 41%;
+        flex: 0 0 41%;
     }
-    .home-how-it-works-slider {
+
+    .home-how-it-works-slider-wrap {
+        position: relative;
         margin-top: 115px;
-        padding-top: 99px;
-        border-top: 2px solid $white;
+
+        .progress-bars {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .progress-bar {
+            max-width: 33.33%;
+            flex: 0 0 33.33%;
+            height: 10px;
+            background-color: $white;
+            margin: 0 5px;
+        }
     }
+
+    .home-how-it-works-slider {
+        padding-top: 99px;
+        padding-right: 35px;
+        padding-left: 30px;
+        border-top: 2px solid $white;
+
+        .slick-dots {
+            list-style-type: none;
+            position: absolute;
+            top: 0;
+            left: -7.5px;
+            width: calc(100% + 15px);
+            display: flex;
+            // margin: 0 -7.5px;
+
+            li {
+                max-width: 33.33%;
+                flex: 0 0 33.33%;
+                padding: 0 7.5px;
+            }
+
+            button {
+                border: none;
+                background-color: $white;
+                outline: none;
+                box-shadow: none;
+                line-height: 0;
+                font-size: 0px;
+                overflow: hidden;
+                text-indent: -99em;
+                width: 100%;
+                height: 10px;
+            }
+        }
+    }
+
     .bg-image {
-        padding-bottom:117.8%;
+        padding-bottom: 117.8%;
     }
 }
 
