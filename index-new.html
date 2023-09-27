@@ -347,7 +347,7 @@
                                 you get everything you need for a successful renovation, all from one source.</p>
                         </div>
                         <div class="home-how-it-works-slider-wrap">
-                            <!-- <div class="progress-bars"></div> -->
+                            <div class="progress-bars"></div>
                             <div class="home-how-it-works-slider">
                                 <div class="slider-item">
                                     <div class="row">
@@ -951,6 +951,7 @@
                 <!-- section-home-contact-forms end -->
                 <!-- modal-home-client-video start -->
                 <div id="client1-modal" class="modal modal-home-client-video">
+                    <div class="modal-backdrop"></div>
                     <div class="modal-content">
                         <div class="modal-header">
                             <button class="btn-styled-removed btn-close" data-dismiss="modal">
@@ -965,6 +966,7 @@
                     </div>
                 </div>
                 <div id="client2-modal" class="modal modal-home-client-video">
+                    <div class="modal-backdrop"></div>
                     <div class="modal-content">
                         <div class="modal-header">
                             <button class="btn-styled-removed btn-close" data-dismiss="modal">
@@ -1267,12 +1269,6 @@
                 for (var i = 0; i < progressBarCount; i++) {
                     var progressBar = $('<div class="progress-bar"></div>');
                     progressBarsContainer.append(progressBar);
-
-                    // Attach a click event to each progress bar to navigate to the corresponding slide
-                    progressBar.on('click', function () {
-                        var index = $(this).index();
-                        slider.slick('slickGoTo', index);
-                    });
                 }
             });
 
@@ -1284,13 +1280,13 @@
             for (var i = 0; i < initialProgressBarCount; i++) {
                 var progressBar = $('<div class="progress-bar"></div>');
                 progressBarsContainer.append(progressBar);
-
-                // Attach a click event to each progress bar to navigate to the corresponding slide
-                progressBar.on('click', function () {
-                    var index = $(this).index();
-                    slider.slick('slickGoTo', index);
-                });
             }
+
+            // Delegate the click event to the progress bars
+            progressBarsContainer.on('click', '.progress-bar', function () {
+                var index = $(this).index();
+                slider.slick('slickGoTo', index, true);
+            });
             // how it works home-how-it-works-slider js end
         });
         // ready function end

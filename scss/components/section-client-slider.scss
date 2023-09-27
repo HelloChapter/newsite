@@ -163,3 +163,18 @@
         }
     }
 }
+// Responsive CSS start
+@media (max-width:1800px) {
+    .section-client-slider {
+        padding: 120px 150px 115px;
+        .circle-ui {
+            width: 490px;
+            height: 490px;
+        }
+        .client-image {
+            max-width: 420px;
+            max-height: 420px;
+        }
+    } 
+}
+// 1800 end
