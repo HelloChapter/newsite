@@ -279,7 +279,7 @@
 // 1300 end
 @media (max-width:1023px) {
     .section-client-slider {
-        padding: 30px 59px;
+        padding: 0 59px;
         .client-image {
             margin:0px 0 0 auto;
         }
@@ -314,14 +314,22 @@
             order: 0;
             max-width: 100%;
             flex: 0 0 100%;
-            padding: 43px 0;
+            padding: 43px 0 65px;
             margin-bottom: 50px;
             position: relative;
+            .client-content-wrap {
+             max-width: 446px;   
+            }
             .content {
+                max-width: 374px;
                 h2 {
                     font-size: 70px;
                     line-height: 80px;
                 }
+            }
+            .content-p {
+                font-size: 17px;
+                line-height: 35px;
             }
             .wave-icon {
                 position: absolute;
