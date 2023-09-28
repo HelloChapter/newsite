@@ -115,7 +115,7 @@ input[type=number] {
 .btn-black {
     background-color: $black;
     font-family: "Inter";
-    font-weight: 500;
+    font-weight: 700;
     font-size: 19px;
     line-height: 22px;
     letter-spacing: 0;
@@ -128,6 +128,7 @@ input[type=number] {
     align-items: center;
     justify-content: center;
     outline: none;
+    text-transform: initial;
     &:hover {
         background-color: transparent;
         color: $black;

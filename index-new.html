@@ -235,7 +235,7 @@
                             <div class="video-box-wrap">
                                 <div class="video-box">
                                     <video controlsList="nodownload nofullscreen" playsinline="none" preload="auto"
-                                        controls="" id="video-player" class="video-js"
+                                        loop="true" controls="" id="video-player" class="video-js"
                                         poster="./images/home/placeholder-image.png" autobuffer="true" data-setup="{}">
                                         <source src="./videos/home/Chapter-Hero-Video.webm" type="video/webm" />
 
@@ -244,6 +244,25 @@
                                     <button id="btn-play" class="btn-styled-removed" type="button"><img
                                             src="./images/icons/play-btn-small.svg" alt="icon" /> </button>
                                 </div>
+                            </div>
+                            <div class="desktop-hide scroll-button-wrapper">
+                                <button id="scrollButton" class="btn-styled-removed" type="button">
+                                    <span class="line"></span>
+                                    <div class="text-1 text-label-wrap" style="opacity: 0;">
+                                        <span class="button-label" style="opacity: 1;">S</span><span class="button-label"
+                                            style="opacity: 1;">c</span><span class="button-label"
+                                            style="opacity: 1;">r</span><span class="button-label"
+                                            style="opacity: 1;">o</span><span class="button-label"
+                                            style="opacity: 1;">l</span><span class="button-label" style="opacity: 1;">l</span>
+                                    </div>
+                                    <div class="text-2 text-label-wrap" style="opacity: 0;"><span class="button-label"
+                                            style="opacity: 1;">S</span><span class="button-label"
+                                            style="opacity: 1;">c</span><span class="button-label"
+                                            style="opacity: 1;">r</span><span class="button-label"
+                                            style="opacity: 1;">o</span><span class="button-label"
+                                            style="opacity: 1;">l</span><span class="button-label" style="opacity: 1;">l</span>
+                                    </div>
+                                </button>
                             </div>
                         </div>
                         <div class="col section-content-col">
@@ -267,7 +286,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="scroll-button-wrapper">
+                    <div class="mobile-hide scroll-button-wrapper">
                         <button id="scrollButton" class="btn-styled-removed" type="button">
                             <span class="line"></span>
                             <div class="text-1 text-label-wrap" style="opacity: 0;">
@@ -364,13 +383,17 @@
                                                         board approvals—to ensure
                                                         a smooth process moving forward. </p>
                                                 </div>
-                                                <button type="button" class="btn-white">How it works</button>
+                                                <div class="mobile-hide"><button type="button" class="btn-white">How it
+                                                        works</button></div>
                                             </div>
                                         </div>
                                         <div class="col col-col-right">
                                             <div class="image bg-image"
                                                 style="background-image: url(./images/home/how-it-works-slider/slider3.png);">
                                             </div>
+                                            <div class="desktop-hide"><button type="button" class="btn-white">How it
+                                                    works</button></div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -390,12 +413,16 @@
                                                         while
                                                         sticking to your budget. </p>
                                                 </div>
-                                                <button type="button" class="btn-white">How it works</button>
+                                                <div class="mobile-hide"><button type="button" class="btn-white">How it
+                                                        works</button></div>
                                             </div>
                                         </div>
                                         <div class="col col-col-right">
                                             <div class="image bg-image"
                                                 style="background-image: url(./images/home/how-it-works-slider/slider2.png);">
+                                            </div>
+                                            <div class="desktop-hide"><button type="button" class="btn-white">How it
+                                                    works</button>
                                             </div>
                                         </div>
                                     </div>
@@ -410,25 +437,29 @@
                                                     <p>When you work with Chapter, you have an experienced project
                                                         manager
                                                         overseeing
-                                                        all phases of your renovation project. Our PM’s are educated in
+                                                        all phases of your renovation project. Our PM’s are educated
+                                                        in
                                                         construction-related fields, like civil engineering and
                                                         architecture,
                                                         which
                                                         makes them truly qualified to lead your project. </p>
                                                 </div>
-                                                <button type="button" class="btn-white">How it works</button>
+                                                <div class="mobile-hide"><button type="button" class="btn-white">How
+                                                        it works</button></div>
                                             </div>
                                         </div>
                                         <div class="col col-col-right">
                                             <div class="image bg-image"
                                                 style="background-image: url(./images/home/how-it-works-slider/slider1.png);">
                                             </div>
+                                            <div class="desktop-hide"><button type="button" class="btn-white">How it
+                                                    works</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </section>
                 <section class="section-home-project-fingertips pearl-bg2">
                     <div class="container">
@@ -511,6 +542,15 @@
                                     </div>
 
                                 </div>
+                                <div class="desktop-hide">
+                                    <div class="heading-content-wrap">
+                                        <h3>Get inspired</h3>
+                                        <div class="heading-content">
+                                            <p>Take a look at some of our case studies to learn about our process and to
+                                                see the beautiful results.</p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col col-img bg-image" style="background-image:
                                   url('./images/home/section-image-1.jpeg');">
                                 </div>
@@ -538,6 +578,15 @@
                                         </div>
                                     </div>
 
+                                </div>
+                                <div class="desktop-hide">
+                                    <div class="heading-content-wrap">
+                                        <h3>Get inspired</h3>
+                                        <div class="heading-content">
+                                            <p>Take a look at some of our case studies to learn about our process and to
+                                                see the beautiful results.</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col col-img bg-image" style="background-image:
                                   url('./images/projects/miami-img/Image.png');">
@@ -568,6 +617,15 @@
                                     </div>
 
                                 </div>
+                                <div class="desktop-hide">
+                                    <div class="heading-content-wrap">
+                                        <h3>Get inspired</h3>
+                                        <div class="heading-content">
+                                            <p>Take a look at some of our case studies to learn about our process and to
+                                                see the beautiful results.</p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col col-img bg-image" style="background-image:
                                   url('./images/home/section-image-2.jpeg');">
                                 </div>
@@ -597,6 +655,15 @@
                                         </div>
                                     </div>
 
+                                </div>
+                                <div class="desktop-hide">
+                                    <div class="heading-content-wrap">
+                                        <h3>Get inspired</h3>
+                                        <div class="heading-content">
+                                            <p>Take a look at some of our case studies to learn about our process and to
+                                                see the beautiful results.</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col col-img bg-image" style="background-image:
                                   url('./images/home/section-image-3.jpeg');">
@@ -934,7 +1001,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group text-center btn-submit-wrap">
-                                        <button type="submit" class="btn-submit btn-black">submit</button>
+                                        <button type="submit" class="btn-submit btn-black">Submit</button>
                                     </div>
                                 </form>
                             </div>
@@ -1239,7 +1306,7 @@
             playButton.addEventListener("click", function () {
                 if (video.paused || video.ended) {
                     // Check if the video is paused or has ended
-                    video.setAttribute("controls", "controls");
+                    //video.setAttribute("controls", "controls");
                     video.play().catch(function (error) {
                         console.error("Failed to play video:", error.message);
                     });
@@ -1247,7 +1314,7 @@
                     // If the video is playing, pause it
                     video.pause();
                     // Hide default video controls when paused
-                    video.removeAttribute("controls");
+                    // video.removeAttribute("controls");
                 }
             });
 

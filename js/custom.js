@@ -136,12 +136,12 @@ jQuery(document).ready(function ($) {
     
     $('.home-how-it-works-slider').slick({
         autoplay: true,
-        speed:15000,
+        speed:10000,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        autoplaySpeed: 0,
+        autoplaySpeed: 10000,
         dots: false,
         fade:true,
         centerMode: true,
@@ -150,8 +150,7 @@ jQuery(document).ready(function ($) {
         pauseOnHover: false,
         pauseOnFocus: false,
         draggable: false,
-        cssEase: 'ease-in-out',
-        initialSlide: 0,
+        cssEase: 'ease-in-out'
     });
     // home-how-it-works-slider end
     

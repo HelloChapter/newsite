@@ -93,7 +93,37 @@
             background-image: url("../../images/icons/ico-chevron2.svg");
         }
     }
+
     .thank-you-wrap {
         padding: 134px 0;
     }
+
+    .btn-submit {
+        font-weight: 700;
+    }
 }
+
+// Resposnsive css start
+@media (max-width:1023px) {
+    .section-home-contact-forms {
+        .form-group {
+            margin-bottom: 21px;
+        }
+        .form-control {
+            font-size: 17px;
+            line-height: 40px;
+            height: 40px;
+            padding: 0 17px;
+        }
+        textarea.form-control {
+            min-height: 98px;
+            height: auto;
+        }
+        .content {
+            font-size: 17px;
+            line-height: 35px;
+        }
+    }
+}
+
+// 1023 end

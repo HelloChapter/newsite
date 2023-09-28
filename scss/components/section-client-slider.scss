@@ -81,6 +81,7 @@
         padding-top: 135px;
         max-width: 50%;
         flex: 0 0 50%;
+
         .client-content-wrap {
             max-width: 503px;
         }
@@ -105,6 +106,7 @@
             }
         }
     }
+
     .slick-dots {
         padding: 0;
         display: flex;
@@ -112,6 +114,7 @@
         position: absolute;
         bottom: 2%;
         left: calc(50% + 9%);
+
         ul {
             display: flex;
         }
@@ -139,14 +142,17 @@
             }
         }
     }
+
     .slick-next {
         display: none !important;
     }
+
     .text-label-wrap1 {
         position: absolute;
         min-width: 300px;
         bottom: 0px;
     }
+
     .custom-next-arrow {
         display: flex;
         align-items: center;
@@ -157,24 +163,173 @@
         line-height: 40px;
         font-weight: 400;
         font-family: "Inter";
+
         img {
             margin-right: 25px;
             margin-bottom: 10px;
         }
     }
 }
+
 // Responsive CSS start
 @media (max-width:1800px) {
     .section-client-slider {
-        padding: 120px 150px 115px;
+        padding: 120px 140px 115px;
+
         .circle-ui {
             width: 490px;
             height: 490px;
         }
+
         .client-image {
             max-width: 420px;
             max-height: 420px;
         }
-    } 
+    }
 }
+
 // 1800 end
+@media (max-width:1600px) {
+    .section-client-slider {
+        padding: 90px 110px;
+
+        .circle-ui {
+            width: 443px;
+            height: 443px;
+        }
+
+        .client-image {
+            max-width: 380px;
+            max-height: 380px;
+        }
+
+        .col-left {
+            .content {
+                h2 {
+                    font-size: 55px;
+                }
+            }
+        }
+
+        .col-right {
+            .content {
+                h2 {
+                    font-size: 75px;
+                }
+            }
+        }
+    }
+}
+
+// 1600 end
+@media (max-width:1440px) {
+    .section-client-slider {
+        padding: 70px 80px;
+
+        .circle-ui {
+            right: 80px;
+        }
+        .col-left {
+            .content {
+                h2 {
+                    font-size: 50px;
+                }
+            }
+        }
+
+        .col-right {
+            .content {
+                h2 {
+                    font-size: 70px;
+                }
+            }
+        }
+    }
+}
+
+// 1440 end
+@media (max-width:1300px) {
+    .section-client-slider {
+        padding: 70px 40px;
+
+        .circle-ui {
+            right: 30px;
+        }
+        .client-image {
+            margin:0px 0 0 auto;
+        }
+        .col-left {
+            .content {
+                h2 {
+                    font-size: 45px;
+                }
+            }
+        }
+
+        .col-right {
+            .content {
+                h2 {
+                    font-size: 65px;
+                }
+            }
+        }
+    }
+}
+
+// 1300 end
+@media (max-width:1023px) {
+    .section-client-slider {
+        padding: 30px 59px;
+        .client-image {
+            margin:0px 0 0 auto;
+        }
+        .circle-ui {
+            right: 83px;
+        }
+        .row {
+            margin: 0;
+        }
+        .slick-dots {
+            left: 0;
+            bottom: 0;
+            right: 0;
+            justify-content: center;
+        }
+        .btn-next-success-story {
+            display: none !important;
+        }
+        .col-left {
+            max-width: 100%;
+            flex: 0 0 100%;
+            order: 1;
+            .content {
+                h2 {
+                    font-size: 40px;
+                    line-height: 48px;
+                }
+            }
+        }
+
+        .col-right {
+            order: 0;
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding: 43px 0;
+            margin-bottom: 50px;
+            position: relative;
+            .content {
+                h2 {
+                    font-size: 70px;
+                    line-height: 80px;
+                }
+            }
+            .wave-icon {
+                position: absolute;
+                bottom: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+// 1023 end

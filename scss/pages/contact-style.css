@@ -543,7 +543,7 @@ input[type=number] {
 .btn-black {
   background-color: #231F20;
   font-family: "Inter";
-  font-weight: 500;
+  font-weight: 700;
   font-size: 19px;
   line-height: 22px;
   letter-spacing: 0;
@@ -562,6 +562,7 @@ input[type=number] {
       -ms-flex-pack: center;
           justify-content: center;
   outline: none;
+  text-transform: initial;
 }
 .btn-black:hover {
   background-color: transparent;
@@ -842,7 +843,7 @@ header .col-get-started a {
     transition: opacity 0.3s;
   }
   header {
-    padding: 31px 0;
+    padding: 29px 0;
     background-color: #ffffff !important;
   }
   header .container {
