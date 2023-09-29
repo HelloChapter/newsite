@@ -59,6 +59,7 @@
                 line-height: 1.2;
                 font-family: "Inter";
                 letter-spacing: 0;
+                @include default_words_animation;
             }
 
             h3 {
@@ -68,6 +69,7 @@
                 font-weight: 400;
                 display: flex;
                 align-items: center;
+                @include default_words_animation;
 
                 img {
                     margin: 0 11px;
@@ -96,14 +98,16 @@
                 line-height: 1;
                 max-width: 472px;
                 margin-bottom: 32px;
+                @include default_words_animation;
             }
+        }
 
-            p {
-                font-family: "Inter";
-                font-size: 20px;
-                line-height: 2;
-                font-weight: 400;
-            }
+        .content-p {
+            font-family: "Inter";
+            font-size: 20px;
+            line-height: 2;
+            font-weight: 400;
+            @include default_words_animation;
         }
     }
 
@@ -167,6 +171,30 @@
         img {
             margin-right: 25px;
             margin-bottom: 10px;
+        }
+    }
+
+    .slick-active {
+        .col-left .content {
+            h2 {
+                @include active_words_animation;
+            }
+
+            h3 {
+                @include active_words_animation;
+            }
+        }
+
+        .col-right {
+            .content {
+                h2 {
+                    @include active_words_animation;
+                }
+            }
+
+            .content-p {
+                @include active_words_animation;
+            }
         }
     }
 }
