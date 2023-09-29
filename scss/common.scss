@@ -162,6 +162,9 @@ h2 {
 .opacity-0 {
     opacity: 0 !important;
 }
+video, iframe {
+    max-width: 100%;
+}
 // Responsive CSS start
 @media (max-width:1600px) {
     body {

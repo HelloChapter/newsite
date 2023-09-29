@@ -106,6 +106,63 @@ jQuery(document).ready(function ($) {
 
     });
     // Home slider end
+    $('.home-new-projects-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        speed: 800,
+        autoplaySpeed: 3000,
+        dots: true,
+        fade: true,
+        cssEase: 'ease-in-out',
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                adaptiveHeight: true
+              }
+            },
+          ]
+
+
+    });
+    // home-new-projects-slider end
+    $('.home-client-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        speed: 800,
+        autoplaySpeed: 3000,
+        dots: true,
+        fade: true,
+        prevArrow: '.custom-next-arrow',
+        cssEase: 'ease-in-out',
+
+    });
+    // home-client-slider end
+    
+    $('.home-how-it-works-slider').slick({
+        autoplay: true,
+        speed:10000,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplaySpeed: 10000,
+        dots: false,
+        fade:true,
+        centerMode: true,
+        variableWidth: false,
+        centerPadding: "0px",
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        draggable: false,
+        cssEase: 'ease-in-out'
+    });
+    // home-how-it-works-slider end
+    
     $('.after-before-slider').slick({
         infinite: true,
         slidesToShow: 1,
@@ -170,11 +227,28 @@ jQuery(document).ready(function ($) {
         arrows: true,
         speed: 800,
         autoplaySpeed: 3000,
+        autoplay: true,
         dots: true,
         fade: true,
         cssEase: 'ease-in-out',
     });
     // new projects pages card slider end
+    $('.announcement-bar').slick({
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed:0,
+        speed:35000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        fade: false,
+        variableWidth:true,
+        centerMode: true,
+        cssEase: 'linear',
+    });
+    // announcement-bar slider end
+
     $('.show-lesss-btn').hide();
     $(".expand-project-btn .show-all-btn").click(function (event) {
         $(this).hide();
@@ -227,4 +301,4 @@ $(".two-joint-images .after-before-btn-wrap .after-btn").click(function (e) {
     }, 10);
 });
 
-  // After Before Js end
+// After Before Js end

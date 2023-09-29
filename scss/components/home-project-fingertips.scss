@@ -1,0 +1,227 @@
+.section-home-project-fingertips {
+    padding: 75px 115px 10px;
+
+    .container {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .new-section-title {
+        margin-bottom: 28px;
+    }
+
+    .content {
+        max-width: 550px;
+        padding: 0 15px 70px;
+        font-size: 20px;
+        line-height: 2;
+    }
+
+    .col-image {
+        max-width: 53.9%;
+        flex: 0 0 53.9%;
+    }
+
+    .col-content {
+        .row {
+            padding-right: 100px;
+
+            .col {
+                max-width: 33.33%;
+                flex: 0 0 33.33%;
+            }
+        }
+    }
+
+    .col-item {
+        text-align: center;
+        padding-bottom: 55px;
+
+        h3 {
+            font-size: 17px;
+            line-height: 33px;
+            font-weight: 500;
+            font-family: "Inter";
+        }
+    }
+
+    .bg-img-image-wrap {
+        padding-right: 22px;
+    }
+
+    .bg-img-image-verticle {
+        max-width: 336px;
+        margin-bottom: -39.5%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .bg-img-image-horizontal {
+        max-width: 774px;
+        margin: 0 0 0 98px;
+    }
+}
+
+// Responsive CSS start
+@media (max-width:1600px) {
+    .section-home-project-fingertips {
+        padding: 50px 80px;
+
+        .col-content .row {
+            padding-right: 70px;
+        }
+    }
+}
+
+// 1600 end
+@media (max-width:1440px) {
+    .section-home-project-fingertips {
+        padding: 50px 60px;
+
+        .col-content {
+            padding-right: 30px;
+
+            .row {
+                padding-right: 50px;
+
+                .col {
+                    img {
+                        max-width: 80px;
+                    }
+                }
+            }
+
+            .col-item {
+                padding-bottom: 35px;
+            }
+        }
+    }
+}
+
+// 1440 end
+@media (max-width:1300px) {
+    .section-home-project-fingertips .content {
+        font-size: 17px;
+        line-height: 35px;
+        padding: 0 0 90px;
+    }
+}
+
+// 1300 end
+@media (max-width:1199px) {
+    .section-home-project-fingertips {
+        padding: 50px 40px;
+
+        .col-content .row {
+            padding-right: 30px;
+        }
+    }
+}
+
+// 1199 end
+@media (max-width:1023px) {
+    .section-home-project-fingertips {
+        padding: 55px 0 0 58px;
+        overflow: hidden;
+
+        .col-image {
+            margin-bottom: -190px;
+            margin-top: -160px;
+        }
+
+        .col-content,
+        .col-image {
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding: 0;
+        }
+
+        .col-content {
+            .row {
+                padding: 0;
+                max-width: 435px;
+                margin-left: -59px;
+
+                .col {
+                    img {
+                        max-width: 45px;
+                    }
+                }
+            }
+        }
+
+        .content {
+            max-width: 519px;
+        }
+
+        .bg-img-image-wrap {
+            padding-right: 0;
+        }
+
+        .bg-img-image-verticle {
+            margin-left: auto;
+            margin-right: -110px;
+            margin-bottom: -520px;
+        }
+    }
+}
+
+// 1023 end
+
+@media (max-width:767px) {
+    .section-home-project-fingertips {
+        padding: 19px 30px;
+
+        .new-section-title {
+            margin-bottom: 10px;
+
+            h2 {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .content {
+            font-size: 14px;
+            line-height: 30px;
+            padding-right: 36px;
+            padding-bottom: 55px;
+        }
+
+        .col-content {
+            .row {
+                margin-left: -30px;
+
+                .col img {
+                    max-width: 36px;
+                }
+            }
+
+            .col-item {
+                padding-bottom: 20px;
+
+                h3 {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .bg-img-image-horizontal {
+            display: none;
+        }
+
+        .bg-img-image-verticle {
+            margin: 0 auto;
+            max-width: 208px;
+        }
+
+        .col-image {
+            margin-top: 0;
+            margin-bottom: -140px;
+            padding-top: 45px;
+        }
+    }
+}
+
+// 767 end

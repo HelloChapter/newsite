@@ -112,6 +112,50 @@ input[type=number] {
         right: 0px;
     }
 }
+.btn-black {
+    background-color: $black;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    letter-spacing: 0;
+    text-decoration: none;
+    color: $white;
+    min-width: 183px;
+    min-height: 67px;
+    border: 1px solid $black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    text-transform: initial;
+    &:hover {
+        background-color: transparent;
+        color: $black;
+    }
+}
+.btn-white {
+    background-color: $white;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-decoration: none;
+    color: $black;
+    min-width: 183px;
+    min-height: 65px;
+    border: 1px solid $white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    &:hover {
+        background-color: transparent;
+        color: $white;
+    }
+}
+
 // Responsive CSS start
 @media (max-width:1440px) {
     .form-control {
