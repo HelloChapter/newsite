@@ -688,6 +688,7 @@ header .col-get-started a {
   line-height: 21px;
   font-style: italic;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .header-sticky header {
@@ -875,7 +876,23 @@ header .col-get-started a {
     max-width: 120px;
   }
   header .contact-url {
-    padding-right: 40px;
+    padding-right: 6px;
+  }
+  header .col-get-started {
+    top: 34px;
+  }
+  header .col-get-started a {
+    line-height: 17px;
+    min-width: 117px;
+    padding: 6px;
+  }
+}
+@media (max-width: 350px) {
+  header .col-get-started {
+    right: 55px;
+  }
+  header .col-get-started a {
+    min-width: 110px;
   }
 }
 .pearl-bg {

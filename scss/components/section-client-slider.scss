@@ -199,8 +199,8 @@
         }
 
         .client-image {
-            max-width: 380px;
-            max-height: 380px;
+            max-width: 377px;
+            max-height: 377px;
         }
 
         .col-left {
@@ -279,19 +279,28 @@
 // 1300 end
 @media (max-width:1023px) {
     .section-client-slider {
-        padding: 0 59px;
+        padding: 0 59px ;
+        .home-client-slider {
+            padding-bottom: 141px;
+        } 
         .client-image {
-            margin:0px 0 0 auto;
+            margin:-30px 50px 0 auto;
+            .btn-client-play {
+                img {
+                    max-width: 154px;
+                }
+            }
         }
         .circle-ui {
-            right: 83px;
+            right: 140px;
+            top: 0;
         }
         .row {
             margin: 0;
         }
         .slick-dots {
             left: 0;
-            bottom: 0;
+            bottom: 60px;
             right: 0;
             justify-content: center;
         }
@@ -303,9 +312,15 @@
             flex: 0 0 100%;
             order: 1;
             .content {
+                max-width: 396px;
                 h2 {
                     font-size: 40px;
                     line-height: 48px;
+                    margin-bottom: 8px;
+                }
+                h3 {
+                    font-size: 17px;
+                    line-height: 35px;
                 }
             }
         }

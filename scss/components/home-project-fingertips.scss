@@ -156,10 +156,10 @@
 
 // 1023 end
 
-@media (max-width:991px) {}
-
-// 991 end
-
-@media (max-width:767px) {}
+@media (max-width:767px) {
+    .section-home-project-fingertips {
+        padding:19px 30px;
+    }
+}
 
 // 767 end

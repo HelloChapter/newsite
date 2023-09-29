@@ -241,26 +241,30 @@
 
                                         Your browser does not support HTML5 video.
                                     </video>
-                                    <button id="btn-play" class="btn-styled-removed" type="button"><img
-                                            src="./images/icons/play-btn-small.svg" alt="icon" /> </button>
+                                    <button id="btn-play" class="btn-styled-removed" type="button">
+                                        <img class="play-btn-icon" src="./images/icons/play-btn-small.svg" alt="icon" /> 
+                                        <img class="pause-btn-icon" src="./images/icons/Pause.svg" alt="icon" /> 
+                                        </button>
                                 </div>
                             </div>
                             <div class="desktop-hide scroll-button-wrapper">
                                 <button id="scrollButton" class="btn-styled-removed" type="button">
                                     <span class="line"></span>
                                     <div class="text-1 text-label-wrap" style="opacity: 0;">
-                                        <span class="button-label" style="opacity: 1;">S</span><span class="button-label"
-                                            style="opacity: 1;">c</span><span class="button-label"
+                                        <span class="button-label" style="opacity: 1;">S</span><span
+                                            class="button-label" style="opacity: 1;">c</span><span class="button-label"
                                             style="opacity: 1;">r</span><span class="button-label"
                                             style="opacity: 1;">o</span><span class="button-label"
-                                            style="opacity: 1;">l</span><span class="button-label" style="opacity: 1;">l</span>
+                                            style="opacity: 1;">l</span><span class="button-label"
+                                            style="opacity: 1;">l</span>
                                     </div>
                                     <div class="text-2 text-label-wrap" style="opacity: 0;"><span class="button-label"
                                             style="opacity: 1;">S</span><span class="button-label"
                                             style="opacity: 1;">c</span><span class="button-label"
                                             style="opacity: 1;">r</span><span class="button-label"
                                             style="opacity: 1;">o</span><span class="button-label"
-                                            style="opacity: 1;">l</span><span class="button-label" style="opacity: 1;">l</span>
+                                            style="opacity: 1;">l</span><span class="button-label"
+                                            style="opacity: 1;">l</span>
                                     </div>
                                 </button>
                             </div>
@@ -388,8 +392,11 @@
                                             </div>
                                         </div>
                                         <div class="col col-col-right">
-                                            <div class="image bg-image"
+                                            <div class="image bg-image mobile-hide"
                                                 style="background-image: url(./images/home/how-it-works-slider/slider3.png);">
+                                            </div>
+                                            <div class="image bg-image desktop-hide"
+                                                style="background-image: url(./images/home/how-it-works-slider/mobile-client3.png);">
                                             </div>
                                             <div class="desktop-hide"><button type="button" class="btn-white">How it
                                                     works</button></div>
@@ -418,8 +425,11 @@
                                             </div>
                                         </div>
                                         <div class="col col-col-right">
-                                            <div class="image bg-image"
+                                            <div class="image bg-image mobile-hide"
                                                 style="background-image: url(./images/home/how-it-works-slider/slider2.png);">
+                                            </div>
+                                            <div class="image bg-image desktop-hide"
+                                                style="background-image: url(./images/home/how-it-works-slider/mobile-client2.png);">
                                             </div>
                                             <div class="desktop-hide"><button type="button" class="btn-white">How it
                                                     works</button>
@@ -449,8 +459,11 @@
                                             </div>
                                         </div>
                                         <div class="col col-col-right">
-                                            <div class="image bg-image"
+                                            <div class="image bg-image mobile-hide"
                                                 style="background-image: url(./images/home/how-it-works-slider/slider1.png);">
+                                            </div>
+                                            <div class="image bg-image desktop-hide"
+                                                style="background-image: url(./images/home/how-it-works-slider/mobile-client1.png);">
                                             </div>
                                             <div class="desktop-hide"><button type="button" class="btn-white">How it
                                                     works</button>
@@ -1178,7 +1191,7 @@
         });
 
         content.addEventListener('mouseenter', (e) => {
-            content.style.color = '#ffffff'; // Change content color on hover
+           // content.style.color = '#ffffff'; // Change content color on hover
         });
 
         content.addEventListener('mouseleave', () => {
@@ -1307,12 +1320,14 @@
                 if (video.paused || video.ended) {
                     // Check if the video is paused or has ended
                     //video.setAttribute("controls", "controls");
+                    $(this).addClass("video-played");
                     video.play().catch(function (error) {
                         console.error("Failed to play video:", error.message);
                     });
                 } else {
                     // If the video is playing, pause it
                     video.pause();
+                    $(this).removeClass("video-played");
                     // Hide default video controls when paused
                     // video.removeAttribute("controls");
                 }

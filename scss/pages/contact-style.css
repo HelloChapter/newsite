@@ -545,12 +545,12 @@ input[type=number] {
   font-family: "Inter";
   font-weight: 700;
   font-size: 19px;
-  line-height: 22px;
+  line-height: 23px;
   letter-spacing: 0;
   text-decoration: none;
   color: #ffffff;
   min-width: 183px;
-  min-height: 65px;
+  min-height: 67px;
   border: 1px solid #231F20;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -794,6 +794,7 @@ header .col-get-started a {
   line-height: 21px;
   font-style: italic;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .header-sticky header {
@@ -981,7 +982,23 @@ header .col-get-started a {
     max-width: 120px;
   }
   header .contact-url {
-    padding-right: 40px;
+    padding-right: 6px;
+  }
+  header .col-get-started {
+    top: 34px;
+  }
+  header .col-get-started a {
+    line-height: 17px;
+    min-width: 117px;
+    padding: 6px;
+  }
+}
+@media (max-width: 350px) {
+  header .col-get-started {
+    right: 55px;
+  }
+  header .col-get-started a {
+    min-width: 110px;
   }
 }
 .pearl-bg {
