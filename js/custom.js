@@ -116,6 +116,15 @@ jQuery(document).ready(function ($) {
         dots: true,
         fade: true,
         cssEase: 'ease-in-out',
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                adaptiveHeight: true
+              }
+            },
+          ]
+
 
     });
     // home-new-projects-slider end

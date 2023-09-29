@@ -100,6 +100,8 @@
 
     .btn-submit {
         font-weight: 700;
+        font-size: 19px;
+        line-height: 23px;
     }
 }
 
@@ -113,6 +115,7 @@
             font-size: 17px;
             line-height: 40px;
             height: 40px;
+            min-height: 40px;
             padding: 0 17px;
         }
         textarea.form-control {
@@ -127,3 +130,50 @@
 }
 
 // 1023 end
+@media (max-width:767px) {
+    .section-home-contact-forms {
+        padding: 23px 0;
+        .row {
+            margin: 0 -4.5px;
+            .col {
+                padding: 0 4.5px;
+            }
+        }
+        .form-group {
+            margin-bottom: 21px;
+        }
+        .new-section-title {
+            margin-bottom: 15px;
+        }
+        .container {
+            padding: 0 13px;
+        }
+        .form-control {
+            font-size: 14px;
+        }
+        textarea.form-control {
+            min-height: 98px;
+            height: auto;
+        }
+        .content {
+            font-size: 14px;
+            line-height: 30px;
+            padding: 0 17px;
+            margin-bottom: 17px;
+        }
+        .input-wrap .error-message {
+            font-size: 9px;
+            bottom: -30px;
+        }
+        .thank-you-wrap {
+            font-size: 14px;
+            line-height: 40px;
+            h2 {
+                margin-bottom: 10px;
+                line-height: 80px;
+            }
+        }
+    }
+}
+
+// 767 end

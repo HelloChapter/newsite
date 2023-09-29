@@ -83,12 +83,14 @@
 
             .row {
                 padding-right: 50px;
+
                 .col {
                     img {
                         max-width: 80px;
                     }
                 }
             }
+
             .col-item {
                 padding-bottom: 35px;
             }
@@ -104,10 +106,12 @@
         padding: 0 0 90px;
     }
 }
+
 // 1300 end
 @media (max-width:1199px) {
     .section-home-project-fingertips {
         padding: 50px 40px;
+
         .col-content .row {
             padding-right: 30px;
         }
@@ -119,20 +123,25 @@
     .section-home-project-fingertips {
         padding: 55px 0 0 58px;
         overflow: hidden;
+
         .col-image {
             margin-bottom: -190px;
             margin-top: -160px;
         }
-        .col-content, .col-image {
+
+        .col-content,
+        .col-image {
             max-width: 100%;
             flex: 0 0 100%;
             padding: 0;
         }
+
         .col-content {
             .row {
                 padding: 0;
                 max-width: 435px;
                 margin-left: -59px;
+
                 .col {
                     img {
                         max-width: 45px;
@@ -140,16 +149,19 @@
                 }
             }
         }
+
         .content {
             max-width: 519px;
         }
+
         .bg-img-image-wrap {
             padding-right: 0;
         }
+
         .bg-img-image-verticle {
             margin-left: auto;
             margin-right: -110px;
-            margin-bottom:-520px;
+            margin-bottom: -520px;
         }
     }
 }
@@ -158,7 +170,57 @@
 
 @media (max-width:767px) {
     .section-home-project-fingertips {
-        padding:19px 30px;
+        padding: 19px 30px;
+
+        .new-section-title {
+            margin-bottom: 10px;
+
+            h2 {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .content {
+            font-size: 14px;
+            line-height: 30px;
+            padding-right: 36px;
+            padding-bottom: 55px;
+        }
+
+        .col-content {
+            .row {
+                margin-left: -30px;
+
+                .col img {
+                    max-width: 36px;
+                }
+            }
+
+            .col-item {
+                padding-bottom: 20px;
+
+                h3 {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .bg-img-image-horizontal {
+            display: none;
+        }
+
+        .bg-img-image-verticle {
+            margin: 0 auto;
+            max-width: 208px;
+        }
+
+        .col-image {
+            margin-top: 0;
+            margin-bottom: -140px;
+            padding-top: 45px;
+        }
     }
 }
 
