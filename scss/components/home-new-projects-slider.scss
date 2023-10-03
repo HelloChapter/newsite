@@ -320,31 +320,39 @@
                 // padding-bottom: 60%;
             }
         }
+
         .slick-dots {
             bottom: calc(332px + 10px);
+
             li {
                 margin: 0 4px;
+
                 button {
                     height: 7px;
                     width: 7px;
                 }
             }
         }
+
         .content {
             padding: 38px 30px;
+
             h2 {
                 font-size: 35px;
                 line-height: 42px;
                 margin-bottom: 40px;
             }
         }
+
         .more-btn-wrap {
             margin-bottom: 10px;
         }
+
         .location-title {
             font-size: 14px;
             line-height: 30px;
         }
+
         .content-p {
             font-size: 14px;
             line-height: 35px;
@@ -353,3 +361,16 @@
 }
 
 // 767 end
+@media (max-width:345px) {
+    .home-new-projects-slider {
+        .slick-dots {
+            bottom: 385px;
+        }
+
+        .content {
+            min-height: 374px;
+        }
+    }
+}
+
+// 345 end
