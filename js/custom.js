@@ -118,12 +118,12 @@ jQuery(document).ready(function ($) {
         cssEase: 'ease-in-out',
         responsive: [
             {
-              breakpoint: 768,
-              settings: {
-                adaptiveHeight: true
-              }
+                breakpoint: 768,
+                settings: {
+                    adaptiveHeight: true
+                }
             },
-          ]
+        ]
 
 
     });
@@ -142,27 +142,28 @@ jQuery(document).ready(function ($) {
 
     });
     // home-client-slider end
-    
+
     $('.home-how-it-works-slider').slick({
-        autoplay: true,
-        speed:10000,
-        infinite: true,
+        autoplay: false,
+        speed:1000,
+        infinite: false,
         slidesToShow: 1,
+        vertical: true,
         slidesToScroll: 1,
         arrows: false,
-        autoplaySpeed: 10000,
+        // autoplaySpeed: 10000,
         dots: false,
-        fade:true,
-        centerMode: true,
-        variableWidth: false,
-        centerPadding: "0px",
-        pauseOnHover: false,
-        pauseOnFocus: false,
-        draggable: false,
-        cssEase: 'ease-in-out'
+       // fade: true,
+        // centerMode: true,
+        // variableWidth: false,
+        // centerPadding: "0px",
+        // pauseOnHover: false,
+        // pauseOnFocus: false,
+        // draggable: false,
+       // cssEase: 'ease-in-out'
     });
     // home-how-it-works-slider end
-    
+
     $('.after-before-slider').slick({
         infinite: true,
         slidesToShow: 1,
@@ -236,14 +237,14 @@ jQuery(document).ready(function ($) {
     $('.announcement-bar').slick({
         infinite: true,
         autoplay: true,
-        autoplaySpeed:0,
-        speed:35000,
+        autoplaySpeed: 0,
+        speed: 35000,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         dots: false,
         fade: false,
-        variableWidth:true,
+        variableWidth: true,
         centerMode: true,
         cssEase: 'linear',
     });
@@ -302,3 +303,4 @@ $(".two-joint-images .after-before-btn-wrap .after-btn").click(function (e) {
 });
 
 // After Before Js end
+

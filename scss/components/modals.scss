@@ -79,7 +79,7 @@
     bottom: 0;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     -webkit-tap-highlight-color: transparent;
     z-index: -1;
 }
@@ -96,7 +96,36 @@
     display: none;
 
     .modal-content {
-        max-width: 600px;
+        max-width: 85%;
+        padding: 0;
+        position: relative;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    .mid-content {
+        padding: 0;
+    }
+    .modal-header {
+        margin-bottom: 0;
+        min-height: auto;
+        border: none;
+        .btn-close {
+            top: 10px;
+            z-index: 999;
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.031372549);
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.031372549);
+            border: 1px solid #C2C2C2;
+            height: 28px;
+            width: 28px;
+            border-radius: 100%;
+            img {
+                max-width: 20px;
+            }
+        }
     }
 
     .video-box {
@@ -115,6 +144,7 @@
             height: 100%;
             width: 100%;
             transform: translate(-50%, -50%);
+            border: none;
         }
     }
 }

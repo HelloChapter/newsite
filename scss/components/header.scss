@@ -81,6 +81,7 @@ header {
             font-style: italic;
             text-align: center;
             text-transform: uppercase;
+            border: 1px solid transparent;
             // font-size: 14px;
             // line-height: 30px;
             // color: $text-color;
@@ -106,13 +107,11 @@ header {
             //     left: 0;
             // }
 
-            // &:hover {
-            //     &:after {
-            //         -webkit-transform: scaleX(.8);
-            //         -ms-transform: scaleX(.8);
-            //         transform: scaleX(.8);
-            //     }
-            // }
+            &:hover {
+                color: $black;
+                background-color: transparent;
+                border-color: $black;
+            }
         }
     }
 }

@@ -241,7 +241,7 @@
         .slick-dots {
             left: 0px;
             right: 0;
-            bottom: 50%;
+            bottom: 326px;
             justify-content: center;
         }
 
@@ -321,7 +321,7 @@
             }
         }
         .slick-dots {
-            bottom: 41.5%;
+            bottom: calc(332px + 10px);
             li {
                 margin: 0 4px;
                 button {
