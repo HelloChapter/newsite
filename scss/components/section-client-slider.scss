@@ -479,3 +479,19 @@
 }
 
 // 767 end
+@media (max-width:389px) {
+    .section-client-slider {
+        .circle-ui {
+            right: 12%;
+            height: 229px;
+            width: 229px;
+        }
+        .client-image {
+            max-width: 200px;
+            max-height: 200px;
+            margin: 5px 2px 0 auto;
+        }
+    }
+}
+
+// 389 end

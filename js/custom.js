@@ -143,25 +143,54 @@ jQuery(document).ready(function ($) {
     });
     // home-client-slider end
 
-    $('.home-how-it-works-slider').slick({
-        autoplay: false,
-        speed:1000,
-        infinite: false,
-        slidesToShow: 1,
-        vertical: true,
-        slidesToScroll: 1,
-        arrows: false,
-        // autoplaySpeed: 10000,
-        dots: false,
-       // fade: true,
-        // centerMode: true,
-        // variableWidth: false,
-        // centerPadding: "0px",
-        // pauseOnHover: false,
-        // pauseOnFocus: false,
-        // draggable: false,
-       // cssEase: 'ease-in-out'
+    //$('.home-how-it-works-slider').slick({
+    // autoplay: false,
+    // speed: 1000,
+    // infinite: false,
+    // slidesToShow: 1,
+    // vertical: true,
+    // slidesToScroll: 1,
+    // arrows: false,
+    // autoplaySpeed: 10000,
+    // dots: false,
+    // fade: true,
+    // centerMode: true,
+    // variableWidth: false,
+    // centerPadding: "0px",
+    // pauseOnHover: false,
+    // pauseOnFocus: false,
+    // draggable: false,
+    // cssEase: 'ease-in-out'
+    //});
+    // $('.home-how-it-works-slider').slick({
+    //     autoplay: false,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     infinite: true,
+    //     speed: 1000,
+    //     fade: false, // Enable fade effect
+    //     cssEase: 'linear',
+    //     arrows: false,
+    // });
+
+    // Track if the section has been scrolled into view
+    var sectionInView = false;
+
+    $(window).scroll(function () {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            // Scrolling down, move to next slide
+            // $('.home-how-it-works-slider').slick('slickNext');
+        } else {
+            // Scrolling up, move to previous slide
+            //$('.home-how-it-works-slider').slick('slickPrev');
+        }
+        lastScrollTop = st;
     });
+    var divHeight = $('.home-how-it-works-slider-swiper .slider-item').height();
+    var divTotalHeight = divHeight * 3;
+    var setHeight = $('.empty-height-div');
+    setHeight.height(divTotalHeight);
     // home-how-it-works-slider end
 
     $('.after-before-slider').slick({

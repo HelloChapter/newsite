@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/pages/index.css" />
 
 </head>
@@ -66,12 +67,6 @@
 
     ul {
         list-style-type: none;
-    }
-
-    html,
-    body {
-        height: 100%;
-        overflow: hidden;
     }
 
     body {
@@ -328,8 +323,12 @@
             }
         }
     }
-    .middle-content {
-        min-height: 100vh;
+
+    .page-home .middle-content {
+        padding-top: 160px;
+    }
+    .swiper {
+        min-height: 600px;
     }
 </style>
 
@@ -403,7 +402,7 @@
             </header>
             <!-- Header end -->
             <div class="middle-content">
-                <div class="scene">
+                <!-- <div class="scene">
                     <div class="img-cont left cont-1" data-helper="0" data-blocks="1"></div>
                     <div class="img-cont right cont-1" data-helper="0" data-blocks="1"></div>
                     <div class="content cont-1">
@@ -440,7 +439,126 @@
                             nulla sed, corporis, sunt eveniet earum sapiente officia possimus eligendi.</p>
                         <span class="close">+</span>
                     </div>
-                    <!-- end of content -->
+                    end of content 
+                </div> -->
+                <!-- Swiper -->
+                <section class="section-home-how-it-works-slider black-bg">
+                    <div class="container">
+                        <div class="new-section-title">
+                            <h2>A full-service design and renovation company specializing in luxury remodeling</h2>
+                        </div>
+                        <div class="heading-content">
+                            <p>You always have peace of mind with Chapter. We offer you every service in-house,
+                                including interior designers, architects, and engineers. And you always have a dedicated
+                                project manager to oversee your entire renovation, from start to finish. With Chapter,
+                                you get everything you need for a successful renovation, all from one source.</p>
+                        </div>
+                        <div class="home-how-it-works-slider-wrap mySwiper swiper">
+                            <div class="progress-bars"></div>
+                            <div class="home-how-it-works-slider swiper-wrapper">
+                                <div class="slider-item swiper-slide">
+                                    <div class="row">
+                                        <div class="col col-col-left">
+                                            <div class="content-wrap">
+                                                <h5>Plan</h5>
+                                                <h3>Get set <br /> for success</h3>
+                                                <div class="content-p">
+                                                    <p>We understand that timelines and budgets are top of mind when
+                                                        considering a home renovation. That’s why our expert team works
+                                                        with
+                                                        you to find the best plan that matches your needs and budget. In
+                                                        addition, we map out all the important paperwork—from permits to
+                                                        board approvals—to ensure
+                                                        a smooth process moving forward. </p>
+                                                </div>
+                                                <div class="mobile-hide"><button type="button" class="btn-white">How it
+                                                        works</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-col-right">
+                                            <div class="image bg-image mobile-hide"
+                                                style="background-image: url(./images/home/how-it-works-slider/slider3.png);">
+                                            </div>
+                                            <div class="image bg-image desktop-hide"
+                                                style="background-image: url(./images/home/how-it-works-slider/mobile-client3.png);">
+                                            </div>
+                                            <div class="desktop-hide"><button type="button" class="btn-white">How it
+                                                    works</button></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-item swiper-slide">
+                                    <div class="row">
+                                        <div class="col col-col-left">
+                                            <div class="content-wrap">
+                                                <h5>Design</h5>
+                                                <h3>Capture<br /> your style</h3>
+                                                <div class="content-p">
+                                                    <p>Our in-house interior designers work with you to achieve a luxury
+                                                        design that’s tailored to your personal preferences, at no
+                                                        additional cost. With a keen eye for aesthetics and design
+                                                        principles, our talented designers help you create your dream
+                                                        space.
+                                                        They guide you to make design decisions that inspire you, all
+                                                        while
+                                                        sticking to your budget. </p>
+                                                </div>
+                                                <div class="mobile-hide"><button type="button" class="btn-white">How it
+                                                        works</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-col-right">
+                                            <div class="image bg-image mobile-hide"
+                                                style="background-image: url(./images/home/how-it-works-slider/slider2.png);">
+                                            </div>
+                                            <div class="image bg-image desktop-hide"
+                                                style="background-image: url(./images/home/how-it-works-slider/mobile-client2.png);">
+                                            </div>
+                                            <div class="desktop-hide"><button type="button" class="btn-white">How it
+                                                    works</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-item swiper-slide">
+                                    <div class="row">
+                                        <div class="col col-col-left">
+                                            <div class="content-wrap">
+                                                <h5>Build</h5>
+                                                <h3>Make it<br />happen</h3>
+                                                <div class="content-p">
+                                                    <p>When you work with Chapter, you have an experienced project
+                                                        manager
+                                                        overseeing
+                                                        all phases of your renovation project. Our PM’s are educated
+                                                        in
+                                                        construction-related fields, like civil engineering and
+                                                        architecture,
+                                                        which
+                                                        makes them truly qualified to lead your project. </p>
+                                                </div>
+                                                <div class="mobile-hide"><button type="button" class="btn-white">How
+                                                        it works</button></div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-col-right">
+                                            <div class="image bg-image mobile-hide"
+                                                style="background-image: url(./images/home/how-it-works-slider/slider1.png);">
+                                            </div>
+                                            <div class="image bg-image desktop-hide"
+                                                style="background-image: url(./images/home/how-it-works-slider/mobile-client1.png);">
+                                            </div>
+                                            <div class="desktop-hide"><button type="button" class="btn-white">How it
+                                                    works</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="empty-div"></div>
+                        </div>
+                </section>
             </div>
             <!-- Middle container end -->
             <footer>
@@ -544,13 +662,20 @@
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"></script>
-    <script src="./js/custom.js"></script>
-    <script src="./js/contact-home.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
     </script>
     <script>
 
         $(document).ready(function () {
+            var swiper = new Swiper(".mySwiper", {
+                direction: "horizontal",
+                slidesPerView: 1,
+                parallax: true,
+                spaceBetween: 30,
+                mousewheel: true,
+                speed: 800,
+            });
             $(document).ready(function () {
 
                 var scrolling = false,

@@ -361,14 +361,16 @@
 }
 
 // 767 end
-@media (max-width:345px) {
+@media (max-width:360px) {
     .home-new-projects-slider {
         .slick-dots {
             bottom: 385px;
         }
 
         .content {
-            min-height: 374px;
+            h2 {
+                min-height: 85px;
+            }
         }
     }
 }
