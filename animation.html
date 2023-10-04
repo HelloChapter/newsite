@@ -327,8 +327,31 @@
     .page-home .middle-content {
         padding-top: 160px;
     }
+
     .swiper {
         min-height: 600px;
+    }
+
+    body {
+        cursor: url('./images/icons/left-arrow1.svg'), auto;
+        /* Use the small cursor image as the default cursor */
+    }
+
+    .hover-section {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: none;
+        /* Hide the default cursor for this section */
+    }
+
+    .hover-section:hover {
+        cursor: url('./images/icons/left-arrow.svg'), auto;
+        /* Change to the large cursor image on hover */
+        transition: cursor 0.3s ease-in-out;
     }
 </style>
 
@@ -402,6 +425,8 @@
             </header>
             <!-- Header end -->
             <div class="middle-content">
+                <div class="hover-section">Hover over me</div>
+
                 <!-- <div class="scene">
                     <div class="img-cont left cont-1" data-helper="0" data-blocks="1"></div>
                     <div class="img-cont right cont-1" data-helper="0" data-blocks="1"></div>
@@ -442,7 +467,7 @@
                     end of content 
                 </div> -->
                 <!-- Swiper -->
-                <section class="section-home-how-it-works-slider black-bg">
+                <!-- <section class="section-home-how-it-works-slider black-bg">
                     <div class="container">
                         <div class="new-section-title">
                             <h2>A full-service design and renovation company specializing in luxury remodeling</h2>
@@ -558,7 +583,8 @@
                             </div>
                             <div class="empty-div"></div>
                         </div>
-                </section>
+                </section> -->
+
             </div>
             <!-- Middle container end -->
             <footer>
