@@ -1441,7 +1441,11 @@
 
             // Initial update of progress bars
             updateProgressBars();
-
+            // Handle click events on progress bars
+            progressBarsContainer.on('click', '.progress-bar', function () {
+                var index = $(this).index();
+                swiper.slideTo(index);
+            });
             // Handle slide change event
             swiper.on('slideChange', function () {
                 updateProgressBars();
