@@ -332,26 +332,51 @@
         min-height: 600px;
     }
 
+
     body {
-        cursor: url('./images/icons/left-arrow1.svg'), auto;
-        /* Use the small cursor image as the default cursor */
+        /* Hide the default cursor */
+        position: relative;
     }
 
+    /* Style for the cursor */
+    .cursor {
+        width: 10px;
+        height: 10px;
+        background-color: #000;
+        border-radius: 50%;
+        position: absolute;
+        transition: transform 0.2s, background-color 0.2s;
+        /* Smooth transition for movement and color change */
+    }
+
+    /* Change cursor color and move smoothly on hover */
+    .hover-section:hover .cursor {
+        background-color: #ff0000;
+        /* Change color on hover */
+        transform: scale(2);
+        /* Scale up cursor size on hover */
+    }
+
+    /* Define the parent div where the hover effect should occur */
     .hover-section {
-        width: 200px;
-        height: 100px;
-        background-color: lightblue;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: none;
-        /* Hide the default cursor for this section */
+        position: relative;
+        overflow: hidden;
+        /* Hide cursor outside this section */
+        width: 300px;
+        /* Adjust to your section width */
+        height: 300px;
+        /* Adjust to your section height */
     }
 
-    .hover-section:hover {
-        cursor: url('./images/icons/left-arrow.svg'), auto;
-        /* Change to the large cursor image on hover */
-        transition: cursor 0.3s ease-in-out;
+    /* Restyle the cursor for the normal state outside the hover section */
+    .cursor-normal {
+        width: 4px;
+        height: 4px;
+        background-color: #000;
+        border-radius: 50%;
+        position: absolute;
+        transition: none;
+        /* No transition outside the hover section */
     }
 </style>
 
@@ -425,7 +450,16 @@
             </header>
             <!-- Header end -->
             <div class="middle-content">
-                <div class="hover-section">Hover over me</div>
+                <div class="hover-section">
+                    <!-- Your content goes here -->
+                    <h1>This is the hover section</h1>
+                </div>
+
+                <!-- Cursor element (initially hidden) -->
+                <div class="cursor"></div>
+
+                <!-- Cursor element for normal state -->
+                <div class="cursor-normal"></div>
 
                 <!-- <div class="scene">
                     <div class="img-cont left cont-1" data-helper="0" data-blocks="1"></div>

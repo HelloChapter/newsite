@@ -226,7 +226,7 @@
     }
 
     .content {
-        max-width: 477px;
+        max-width: 473px;
         margin: 43px auto 67px;
     }
 
@@ -376,11 +376,10 @@
     }
 
     .section-content {
-        padding: 127px 0;
+        padding: 127px 0 127px 115px;
 
         .content {
             max-width: 561px;
-            margin: 0 auto;
         }
 
         .new-section-title {
@@ -420,15 +419,15 @@
         .diamond-square {
             // width: 187px;
             // height: 187px;
-            // background-color: transparent;
-            // position: relative;
-            // transform: rotate(45deg);
-            // margin: 0 auto;
-            // position: absolute;
-            // top: 50%;
-            // left: 50%;
-            // transform: translate(-50%, -50%) rotate(45deg);
-            // transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            background-color: transparent;
+            position: relative;
+            transform: rotate(45deg);
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
             &::after {
                 content: '';
@@ -709,7 +708,7 @@
         }
 
         .section-content {
-            padding: 90px 0;
+            padding: 90px 0 90px 80px;
         }
     }
 
@@ -744,7 +743,7 @@
         }
 
         .section-content {
-            padding: 60px 20px;
+            padding: 60px 20px 60px 60px;
         }
     }
 
@@ -826,9 +825,13 @@
     }
 
     .section-confident {
-        .section-content p {
-            font-size: 17px;
-            line-height: 35px;
+        .section-content {
+            padding: 60px 30px;
+
+            p {
+                font-size: 17px;
+                line-height: 35px;
+            }
         }
 
         .section-box-col {
