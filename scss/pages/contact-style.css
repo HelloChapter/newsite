@@ -602,6 +602,53 @@ input[type=number] {
   color: #ffffff;
 }
 
+.nice-select {
+  border-radius: 0;
+  height: auto;
+  float: none;
+}
+.nice-select .current {
+  color: #BDB8B8;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+}
+.nice-select .option.selected {
+  font-weight: 400;
+}
+.nice-select .list {
+  max-height: 323px;
+  overflow: hidden;
+  overflow-y: auto;
+  width: calc(100% + 2px);
+  margin-top: 1px;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 0.5px solid #231F20;
+  border-top: none;
+  left: -1px;
+  font-size: 17px;
+  line-height: 40px;
+  font-weight: 400;
+}
+.nice-select .list li {
+  padding: 0 13px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.nice-select .selected,
+.nice-select .option:hover,
+.nice-select .focus {
+  color: #ffffff;
+  background-color: #231F20 !important;
+}
+.nice-select.open .current {
+  color: #231F20;
+}
+
 @media (max-width: 1440px) {
   .form-control {
     font-size: 14px;
@@ -612,6 +659,15 @@ input[type=number] {
   .btn-submit {
     font-size: 14px;
     line-height: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .nice-select.open .list {
+    font-size: 14px;
+    line-height: 35px;
+  }
+  .nice-select.open .list .option {
+    line-height: 35px;
   }
 }
 .section-client-success {

@@ -83,15 +83,37 @@
         padding-top: 23px;
     }
 
-    .select-wrapper {
-        select {
-            color: $text-color2;
+    .select-wrapper-row {
+        .col {
+            max-width: 33.33%;
+            flex: 0 0 33%;
+        }
+    }
+
+    .nice-select {
+        padding-right: 35px;
+
+        &::before {
+            display: none;
+        }
+
+        &:after {
+            right: 15px;
+            background-image: url("../../images/icons/ico-chevron2.svg");
+            border: none;
+            height: 8px;
+            min-width: 13px;
+            width: 13px;
+            background-size: 100% 100%;
+            background-position: 50%;
+            transform: none;
 
         }
 
-        &:before {
-            right: 17px;
-            background-image: url("../../images/icons/ico-chevron2.svg");
+        &.open {
+            &::after {
+                transform: rotate(180deg);
+            }
         }
     }
 
@@ -119,6 +141,10 @@
             height: 40px;
             min-height: 40px;
             padding: 0 17px;
+        }
+
+        .nice-select {
+            padding-right: 35px;
         }
 
         textarea.form-control {
@@ -180,6 +206,7 @@
         }
 
         .thank-you-wrap {
+            padding: 100px 0;
             font-size: 14px;
             line-height: 40px;
 
