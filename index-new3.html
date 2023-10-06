@@ -164,6 +164,12 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="wrapper">
         <div class="page-home">
+            <!-- <div class="announcement-bar black-bg">
+                <div class="container text-center">
+                    <p>Chapter is expanding! Renovation dreams are now coming true in
+                        NYC and Miami.</p>
+                </div>
+            </div> -->
             <div class="announcement-bar text-center black-bg">
                 <div class="slider-item">
                     Chapter is expanding! Renovation dreams are now coming true in NYC and Miami.
@@ -225,13 +231,6 @@
             </header>
             <!-- Header end -->
             <div class="middle-content">
-                <!-- Pending animations
-                1. Diamond animation
-                2. All Background Parralax effect
-                3. Check Plan, Design, Build section slider animation 
-                4. Check other animation effects
-            -->
-
                 <section class="section-new-intro-image">
                     <div class="row no-gutters">
                         <div class="col col-video-box aos-init pearl-bg2">
@@ -335,7 +334,6 @@
                         </div>
                         <div class="col section-box-col">
                             <div class="section-box">
-                                <div id="diamond-square" class="diamond-square"></div>
                                 <div class="row">
                                     <div class="col section-box-item">
                                         <div class="diamond-square-content">
@@ -361,6 +359,7 @@
                                             <h3>6,153</h3>
                                         </div>
                                     </div>
+                                    <div id="diamond-square" class="diamond-square"></div>
                                 </div>
                             </div>
                         </div>
@@ -494,7 +493,6 @@
                             </div>
                         </div>
                 </section>
-                <!-- section-home-how-it-works-slider end -->
                 <section class="section-home-project-fingertips pearl-bg2">
                     <div class="container">
                         <div class="row no-gutters">
@@ -1069,7 +1067,6 @@
                     </div>
                 </section>
                 <!-- section-home-contact-forms end -->
-
                 <!-- modal-home-client-video start -->
                 <div id="client1-modal" class="modal modal-home-client-video">
                     <div class="modal-backdrop"></div>
@@ -1213,41 +1210,68 @@
     </script>
     <script>
         // js for diamond shape
-        const diamond = document.getElementById('diamond-square');
-        const container = document.querySelector('.section-box');
-        const content = document.querySelector('.diamond-square-content');
+        // const diamond = document.getElementById('diamond-square');
+        // const container = document.querySelector('.section-box');
+        // const content = document.querySelector('.diamond-square-content');
 
-        container.addEventListener('mousemove', (e) => {
-            const x = e.clientX - container.getBoundingClientRect().left;
-            const y = e.clientY - container.getBoundingClientRect().top;
+        // container.addEventListener('mousemove', (e) => {
+        //     const x = e.clientX - container.getBoundingClientRect().left;
+        //     const y = e.clientY - container.getBoundingClientRect().top;
 
-            diamond.style.left = `${x}px`;
-            diamond.style.top = `${y}px`;
+        //     diamond.style.left = `${x}px`;
+        //     diamond.style.top = `${y}px`;
 
-            // Check if the diamond square overlaps the content
-            if (x > content.getBoundingClientRect().left &&
-                x < content.getBoundingClientRect().right &&
-                y > content.getBoundingClientRect().top &&
-                y < content.getBoundingClientRect().bottom) {
-                content.style.color = '#ffffff'; // Change content color when overlapped
-            } else {
-                content.style.color = '#231F20'; // Reset content color
-            }
-        });
+        //     // Check if the diamond square overlaps the content
+        //     if (x > content.getBoundingClientRect().left &&
+        //         x < content.getBoundingClientRect().right &&
+        //         y > content.getBoundingClientRect().top &&
+        //         y < content.getBoundingClientRect().bottom) {
+        //         content.style.color = '#ffffff'; // Change content color when overlapped
+        //     } else {
+        //         content.style.color = '#231F20'; // Reset content color
+        //     }
+        // });
 
-        content.addEventListener('mouseenter', (e) => {
-            content.style.color = '#ffffff'; // Change content color on hover
-        });
+        // content.addEventListener('mouseenter', (e) => {
+        //     content.style.color = '#ffffff'; // Change content color on hover
+        // });
 
-        content.addEventListener('mouseleave', () => {
-            content.style.color = '#231F20'; // Reset content color on hover out
-        });
+        // content.addEventListener('mouseleave', () => {
+        //     content.style.color = '#231F20'; // Reset content color on hover out
+        // });
 
-        container.addEventListener('mouseout', () => {
-            diamond.style.left = '30%';
-            diamond.style.top = '30%';
-            content.style.color = '#231F20'; // Reset content color on mouseout
-        });
+        // container.addEventListener('mouseout', () => {
+        //     diamond.style.left = '30%';
+        //     diamond.style.top = '30%';
+        //     content.style.color = '#231F20'; // Reset content color on mouseout
+        // });
+        const link = document.querySelectorAll('.section-box > .section-box-item');
+        const cursor = document.querySelector('.diamond-square');
+
+        const animateit = function (e) {
+            const span = this.querySelector('h4');
+            const { offsetX: x, offsetY: y } = e,
+                { offsetWidth: width, offsetHeight: height } = this,
+
+                move = 25,
+                xMove = x / width * (move * 2) - move,
+                yMove = y / height * (move * 2) - move;
+
+            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+            if (e.type === 'mouseleave') span.style.transform = '';
+        };
+
+        const editCursor = e => {
+            const { clientX: x, clientY: y } = e;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+        };
+
+        link.forEach(b => b.addEventListener('mousemove', animateit));
+        link.forEach(b => b.addEventListener('mouseleave', animateit));
+        window.addEventListener('mousemove', editCursor);
+
         // Scroll down js
         $(document).ready(function () {
             // Select box UI

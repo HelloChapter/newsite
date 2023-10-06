@@ -428,7 +428,17 @@
             left: 50%;
             transform: translate(-50%, -50%) rotate(45deg);
             transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            transition: transform 0.3s ease;
+
+            // new css start
+            // pointer-events: none;
+            // position: fixed;
+            // padding: 0.3rem;
+            // transform: rotate(45deg);
+            // background-color: #fff;
             // mix-blend-mode: difference;
+           // mix-blend-mode: difference;
+            // transition: transform 0.3s ease;
 
             &::after {
                 content: '';
@@ -441,6 +451,10 @@
                 transform: rotate(90deg);
             }
         }
+
+        // .section-box-item:hover~.diamond-square {
+        //     transform: translate(-50%, -50%) scale(18) rotate(45deg);
+        // }
 
         .content {
             position: absolute;
@@ -485,7 +499,7 @@
             }
 
             .diamond-square-content {
-                z-index: 1;
+                // z-index: 1;
                 position: relative;
                 height: 100%;
                 width: 100%;
@@ -493,6 +507,7 @@
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+                background-color: #fff;
             }
         }
     }
