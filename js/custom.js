@@ -137,9 +137,9 @@ jQuery(document).ready(function ($) {
         autoplaySpeed: 3000,
         dots: true,
         fade: true,
+        // variableWidth:true,
         prevArrow: '.custom-next-arrow',
         cssEase: 'ease-in-out',
-
     });
     // home-client-slider end
 
@@ -189,7 +189,7 @@ jQuery(document).ready(function ($) {
     });
 
     calculate_slider_height();
-    
+
     // home-how-it-works-slider end
 
     $('.after-before-slider').slick({
@@ -331,10 +331,10 @@ $(".two-joint-images .after-before-btn-wrap .after-btn").click(function (e) {
 });
 
 // After Before Js end
-window.addEventListener('resize', function(event) {
+window.addEventListener('resize', function (event) {
     calculate_slider_height();
 }, true);
-function calculate_slider_height () {
+function calculate_slider_height() {
     var divHeight = $('.home-how-it-works-slider-swiper .slider-item').height();
     var divTotalHeight = divHeight * 3;
     var setHeight = $('.empty-height-div');
