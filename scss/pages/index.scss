@@ -583,9 +583,15 @@
         padding-right: 33px;
     }
 
-    .home-how-it-works-slider-wrap {
+    .home-how-it-works-slider-main {
         position: relative;
+    }
+
+    .home-how-it-works-slider-wrap {
         margin-top: 115px;
+        height: 100%;
+        position: sticky;
+        top: 165px;
 
         .progress-bars {
             display: flex;
@@ -620,10 +626,6 @@
     }
 
     .custom-swiper-slider {
-        height: 100%;
-        position: sticky;
-        top: 115px;
-
         .swiper-slide {
             //transition: none !important;
         }
@@ -729,8 +731,10 @@
         .video-box-wrap {
             padding: 137px 100px 80px 80px;
         }
+
         .content {
             margin: 30px auto 40px;
+
             p {
                 line-height: 35px;
             }
