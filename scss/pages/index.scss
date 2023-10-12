@@ -191,10 +191,11 @@
 
 .new-section-title {
     h2 {
-        font-size: 80px;
-        line-height: 1.064;
+        font-size: 75px;
+        line-height: 1.14;
         font-family: "Times";
         font-weight: bold;
+        letter-spacing: 0;
     }
 }
 
@@ -220,13 +221,13 @@
     }
 
     .section-content {
-        max-width: 692px;
+        max-width: 592px;
         margin: 0 auto;
         padding-top: 60px;
     }
 
     .content {
-        max-width: 473px;
+        max-width: 507px;
         margin: 43px auto 67px;
     }
 
@@ -255,20 +256,20 @@
         }
 
         h1 {
-            font-size: 80px;
-            line-height: 1.064;
+            font-size: 75px;
+            line-height: 1.14;
             font-family: "Times";
             font-weight: bold;
         }
 
         p {
-            font-size: 20px;
+            font-size: 17px;
             line-height: 40px;
         }
     }
 
     .video-box-wrap {
-        padding: 137px 128px 86px 94px;
+        padding: 137px 130px 79px 130px;
         height: 100%;
 
         /* Hide default video controls */
@@ -285,7 +286,7 @@
 
         .video-box {
             position: relative;
-            padding-bottom: 98%;
+            padding-bottom: 95%;
             height: 100%;
 
             .vjs-poster,
@@ -379,7 +380,7 @@
         padding: 127px 0 127px 115px;
 
         .content {
-            max-width: 561px;
+            max-width: 517px;
         }
 
         .new-section-title {
@@ -387,8 +388,8 @@
         }
 
         p {
-            font-size: 20px;
-            line-height: 2;
+            font-size: 17px;
+            line-height: 40px;
         }
     }
 
@@ -437,7 +438,7 @@
             // transform: rotate(45deg);
             // background-color: #fff;
             // mix-blend-mode: difference;
-           // mix-blend-mode: difference;
+            // mix-blend-mode: difference;
             // transition: transform 0.3s ease;
 
             &::after {
@@ -486,7 +487,7 @@
             }
 
             h4 {
-                font-size: 24px;
+                font-size: 17px;
                 line-height: 40px;
                 font-weight: 700;
                 margin-bottom: 38px;
@@ -494,8 +495,8 @@
             }
 
             h3 {
-                font-size: 50px;
-                line-height: 57px;
+                font-size: 45px;
+                line-height: 52px;
             }
 
             .diamond-square-content {
@@ -537,18 +538,18 @@
     }
 
     .heading-content {
-        max-width: 1422px;
+        max-width: 1248px;
 
         p {
-            font-size: 40px;
-            line-height: 1.63;
+            font-size: 35px;
+            line-height: 1.720;
             font-weight: 400;
             color: $white;
         }
     }
 
     .content {
-        max-width: 490px;
+        max-width: 519px;
     }
 
     h5,
@@ -557,8 +558,8 @@
     }
 
     h5 {
-        font-size: 20px;
-        line-height: 2;
+        font-size: 17px;
+        line-height: 40px;
         font-family: "Inter";
         font-weight: 400;
         margin-bottom: 53px;
@@ -572,13 +573,14 @@
     .content-p {
         color: $white;
         margin: 95px 0 84px;
-        font-size: 20px;
-        line-height: 2;
+        font-size: 17px;
+        line-height: 40px;
     }
 
     .col-col-right {
-        max-width: 41%;
-        flex: 0 0 41%;
+        max-width: 35.6%;
+        flex: 0 0 35.6%;
+        padding-right: 33px;
     }
 
     .home-how-it-works-slider-wrap {
@@ -617,14 +619,35 @@
         }
     }
 
+    .custom-swiper-slider {
+        height: 100%;
+        position: sticky;
+        top: 115px;
+
+        .swiper-slide {
+            //transition: none !important;
+        }
+
+        .image-with-fade {
+            opacity: 0.7;
+            /* Adjust the opacity value as needed */
+            transition: opacity 0.5s ease;
+            /* Add a smooth transition effect */
+        }
+
+        .swiper-slide-active {
+            .image-with-fade {
+                opacity: 1;
+                /* Fully show the image on hover */
+            }
+        }
+    }
+
     .home-how-it-works-slider-swiper {
         padding-top: 99px;
         padding-right: 35px;
         padding-left: 30px;
         border-top: 2px solid $white;
-        height: 100%;
-        position: sticky;
-        top: 115px;
 
         .slick-arrow {
             display: none !important;
@@ -661,8 +684,8 @@
     }
 
     .bg-image {
-        padding-bottom: 117.8%;
-        height: 100%;
+        padding-bottom: 118.5%;
+        // height: 100%;
     }
 }
 
@@ -700,11 +723,17 @@
 @media (max-width:1599px) {
     .section-new-intro-image {
         .section-content-col h1 {
-            font-size: 75px;
+            font-size: 70px;
         }
 
         .video-box-wrap {
             padding: 137px 100px 80px 80px;
+        }
+        .content {
+            margin: 30px auto 40px;
+            p {
+                line-height: 35px;
+            }
         }
     }
 
@@ -748,7 +777,7 @@
             padding: 137px 60px 60px;
 
             .video-box {
-                padding-bottom: 100%;
+                // padding-bottom: 100%;
             }
         }
     }

@@ -8,11 +8,11 @@
 
     .circle-ui {
         background-color: $pearl-drop3;
-        width: 546px;
-        height: 546px;
+        width: 513px;
+        height: 513px;
         border-radius: 100%;
         position: absolute;
-        top: 7.5%;
+        top: 11%;
         right: 134px;
         z-index: 0;
     }
@@ -20,8 +20,8 @@
     .client-image {
         border-radius: 100%;
         overflow: hidden;
-        max-width: 464px;
-        max-height: 464px;
+        max-width: 437px;
+        max-height: 437px;
         position: relative;
         margin: -60px 0 0 auto;
 
@@ -58,20 +58,21 @@
         .content {
             position: relative;
             z-index: 1;
-            max-width: 583px;
+            max-width: 525px;
 
             h2 {
-                font-size: 60px;
+                font-size: 55px;
                 line-height: 1.2;
                 font-family: "Inter";
+                margin-bottom: 27px;
                 letter-spacing: 0;
                 //@include default_words_animation;
             }
 
             h3 {
                 font-family: "Inter";
-                font-size: 20px;
-                line-height: 2;
+                font-size: 17px;
+                line-height:40px;
                 font-weight: 400;
                 display: flex;
                 align-items: center;
@@ -101,8 +102,8 @@
 
         .content {
             h2 {
-                font-size: 80px;
-                line-height: 1;
+                font-size: 75px;
+                line-height: 1.07;
                 max-width: 472px;
                 margin-bottom: 32px;
                 //@include default_words_animation;
@@ -111,8 +112,8 @@
 
         .content-p {
             font-family: "Inter";
-            font-size: 20px;
-            line-height: 2;
+            font-size: 17px;
+            line-height: 40px;
             font-weight: 400;
             // @include default_words_animation;
         }
@@ -172,7 +173,7 @@
         left: calc(142px + 46px);
         position: absolute;
         bottom: 0;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 40px;
         font-weight: 400;
         font-family: "Inter";
@@ -305,6 +306,13 @@
 }
 
 // 1300 end
+@media (max-width:1100px) {
+    .section-client-slider .circle-ui {
+        right: 10px;
+    }
+}
+
+// 1100 end
 @media (max-width:1023px) {
     .section-client-slider {
         padding: 0 59px;

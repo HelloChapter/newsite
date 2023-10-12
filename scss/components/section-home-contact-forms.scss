@@ -2,14 +2,18 @@
     padding: 42px 0;
 
     .container {
-        max-width: 771px;
+        max-width: 776px;
     }
 
     .content {
         max-width: 561px;
-        margin: 0 auto 42px;
-        font-size: 20px;
-        line-height: 2;
+        margin: 0 auto 38px;
+        font-size: 17px;
+        line-height: 40px;
+         p {
+            max-width: 405px;
+            margin: 0 auto;
+         }
     }
 
     .new-section-title {
@@ -26,8 +30,8 @@
         padding: 3px 17px;
         min-height: 51px;
         border: 0.5px solid $black;
-        font-size: 20px;
-        line-height: 2;
+        font-size: 17px;
+        line-height: 40px;
         font-weight: 400;
         letter-spacing: 0;
         color: $black;
