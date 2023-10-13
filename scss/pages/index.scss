@@ -26,8 +26,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 36px;
+    min-height: 30px;
     letter-spacing: 0;
+    font-size: 14px;
+    line-height: 17px;
+    transition: opacity 0.6s ease-in-out !important;
+
 
     * {
         color: $white;
@@ -171,7 +175,8 @@
 .page-home {
     header {
         background-color: transparent;
-        top: 40px;
+        top: 30px;
+        transition: top 0.6s ease-in-out !important;
     }
 
     .middle-content {
@@ -184,7 +189,11 @@
 }
 
 .header-sticky {
+    .announcement-bar {
+        opacity: 0;
+    }
     header {
+        top: 0;
         background-color: $white;
     }
 }
@@ -591,7 +600,7 @@
         margin-top: 115px;
         height: 100%;
         position: sticky;
-        top: 165px;
+        top: 125px;
 
         .progress-bars {
             display: flex;
@@ -711,12 +720,6 @@
         h3 {
             font-size: 20px;
             margin: 40px 0 30px;
-        }
-    }
-
-    .page-home {
-        header {
-            top: 35px;
         }
     }
 }

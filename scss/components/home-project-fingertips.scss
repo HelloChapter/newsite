@@ -1,5 +1,6 @@
 .section-home-project-fingertips {
     padding: 75px 115px 10px;
+    min-height: calc(100vh - 114px);
 
     .desktop-hide,
     .tablet-show-image {
@@ -16,7 +17,7 @@
     }
 
     .content {
-        max-width: 519px;
+        max-width: 780px;
         padding: 0 0 53px;
         font-size: 17px;
         line-height: 40px;
@@ -42,7 +43,7 @@
 
     .col-item {
         text-align: center;
-        padding-bottom: 55px;
+        padding-bottom: 45px;
 
         h3 {
             font-size: 14px;
@@ -61,12 +62,13 @@
     }
 
     .bg-image-full {
-        max-width: 872px;
+        max-width: 617px;
+        margin: 0 auto;
     }
 
     .bg-img-image-wrap {
-        padding-right: 22px;
         padding-bottom: 45px;
+        padding-left: 171px;
     }
 
     .bg-img-image-verticle {
@@ -85,10 +87,13 @@
 // Responsive CSS start
 @media (max-width:1600px) {
     .section-home-project-fingertips {
-        padding: 50px 80px;
+        padding: 50px 80px 10px;
 
         .col-content .row {
             padding-right: 70px;
+        }
+        .bg-img-image-wrap {
+            padding-left: 140px;
         }
     }
 }
@@ -96,7 +101,7 @@
 // 1600 end
 @media (max-width:1440px) {
     .section-home-project-fingertips {
-        padding: 50px 60px;
+        padding: 50px 60px 10px;
 
         .col-content {
             padding-right: 30px;
@@ -109,6 +114,9 @@
             .col-item {
                 padding-bottom: 35px;
             }
+        }
+        .bg-img-image-wrap {
+            padding-left: 110px;
         }
     }
 }
@@ -137,6 +145,9 @@
         .col-content .row {
             padding-right: 30px;
         }
+        .bg-img-image-wrap {
+            padding-left: 70px;
+        }
     }
 }
 
@@ -148,7 +159,7 @@
 
         .col-image {
             margin-bottom: -190px;
-            margin-top: -160px;
+            margin-top: -140px;
         }
 
         .tablet-show-image {
@@ -187,6 +198,7 @@
 
         .bg-img-image-wrap {
             padding-right: 0;
+            padding-left: 0;
         }
 
         .bg-image-full {

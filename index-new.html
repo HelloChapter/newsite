@@ -1396,7 +1396,7 @@
                 var sectionTop = section.getBoundingClientRect().top;
 
                 // Check if the section is at the top of the viewport (touching the top)
-                if (sectionTop <= 165) {
+                if (sectionTop <= 130) {
                     toggleMousewheelControl(true);
                 } else {
                     toggleMousewheelControl(false);
@@ -1424,33 +1424,6 @@
                     swiper.mousewheel.handleMousewheel(e); // Pass mousewheel event to Swiper
                 });
             });
-            let allowSwiper = false;
-            // Function to enable/disable Swiper based on section visibility
-            function checkSectionVisibility() {
-                const sectionRect = section.getBoundingClientRect();
-                //  console.log("sectionRect", sectionRect)
-                if (sectionRect.top <= 0) {
-                    //    allowSwiper = true;
-                } else {
-                    //  allowSwiper = false;
-                }
-            }
-            // Initial check and listen for scroll events
-            checkSectionVisibility();
-            window.addEventListener("scroll", checkSectionVisibility);
-            // Function to handle scroll events
-            function handleScroll(event) {
-                if (allowSwiper) {
-                    //  swiper.allowSlideNext = true;
-                    //swiper.allowSlidePrev = true;
-                } else {
-                    //swiper.allowSlideNext = false;
-                    //swiper.allowSlidePrev = false;
-                }
-            }
-
-            // Listen for scroll events
-            window.addEventListener("scroll", handleScroll);
             // Create the progress bars container
             var slider = $('.home-how-it-works-slider-swiper');
             // Create the progress bars container
@@ -1460,14 +1433,11 @@
             function updateProgressBars() {
                 var activeIndex = swiper.activeIndex + 1; // Add 1 because indices are zero-based
                 progressBarsContainer.html('');
-
                 for (var i = 0; i < totalSlides; i++) {
                     var progressBar = $('<div class="progress-bar"></div>');
-
                     if (i < activeIndex) {
                         progressBar.addClass('active-progress-bar');
                     }
-
                     progressBarsContainer.append(progressBar);
                 }
             }
@@ -1492,98 +1462,6 @@
     </script>
     <script>
 
-        // $(window).on('load', function () {
-
-        //     setTimeout(function () {
-        //         var textWrapper = document.querySelector('.scroll-button-wrapper .text-1');
-        //         var subtexts = $('.scroll-button-wrapper .text-1').html();
-        //         var subStrInEm = subtexts.match("<em>(.*)</em>");
-        //         subtexts = subtexts.replace('/em', 'em');
-        //         subtexts = subtexts.split('<em>');
-        //         $('.scroll-button-wrapper .text-1').html('');
-        //         var i, text2Length;
-        //         text2Length = $('.scroll-button-wrapper .text-2').text();
-        //         text2Length = text2Length.length;
-        //         var delayTime = 30 * text2Length + 4000;
-        //         for (i = 0; i < subtexts.length; ++i) {
-        //             var str = subtexts[i].replace(/<(.|\n)*?>/g, '');
-        //             if (subStrInEm != null && subtexts[i] == subStrInEm[1]) {
-        //                 $('.scroll-button-wrapper .text-1').append(str.replace(/([^\x80-\xFF]|\w)/g, "<span class='button-label color'>$&</span>"));
-        //             } else {
-        //                 $('.scroll-button-wrapper .text-1').append(str.replace(/([^\x80-\xFF]|\w)/g, "<span class='button-label'>$&</span>"));
-        //             }
-        //         }
-        //         $('.scroll-button-wrapper .text-1').css('opacity', 1);
-        //         anime.timeline({ loop: true })
-        //             .add({
-        //                 targets: '.scroll-button-wrapper .text-1 .button-label',
-        //                 opacity: [0, 1],
-        //                 easing: "easeInOutQuad",
-        //                 duration: 300,
-        //                 delay: function (el, i) {
-        //                     return 30 * (i + 1)
-        //                 }
-        //             }).add({
-        //                 targets: '.scroll-button-wrapper .text-1',
-        //                 opacity: 0,
-        //                 duration: 1000,
-        //                 easing: "easeOutExpo",
-        //                 delay: 3000
-        //             }).add({
-        //                 targets: '.scroll-button-wrapper .text-1',
-        //                 opacity: 0,
-        //                 duration: delayTime,
-        //                 easing: "easeOutExpo",
-        //                 delay: 0
-        //             });
-        //     }, 100);
-
-        //     setTimeout(function () {
-        //         var textWrapper = document.querySelector('.scroll-button-wrapper .text-2');
-        //         var subtexts = $('.scroll-button-wrapper .text-2').html();
-        //         var subStrInEm = subtexts.match("<em>(.*)</em>");
-        //         subtexts = subtexts.replace('/em', 'em');
-        //         subtexts = subtexts.split('<em>');
-        //         $('.scroll-button-wrapper .text-2').html('');
-        //         var i, text1Length;
-        //         text1Length = $('.scroll-button-wrapper .text-1').text();
-        //         text1Length = text1Length.length;
-        //         var delayTime = 30 * text1Length + 6000;
-        //         for (i = 0; i < subtexts.length; ++i) {
-        //             var str = subtexts[i].replace(/<(.|\n)*?>/g, '');
-        //             if (subStrInEm != null && subtexts[i] == subStrInEm[1]) {
-        //                 $('.scroll-button-wrapper .text-2').append(str.replace(/([^\x80-\xFF]|\w)/g, "<span class='button-label color'>$&</span>"));
-        //             } else {
-        //                 $('.scroll-button-wrapper .text-2').append(str.replace(/([^\x80-\xFF]|\w)/g, "<span class='button-label'>$&</span>"));
-        //             }
-        //         }
-        //         $('.scroll-button-wrapper .text-2').css('opacity', 1);
-        //         anime.timeline({ loop: true })
-        //             .add({
-        //                 targets: '.scroll-button-wrapper .text-2',
-        //                 opacity: 1,
-        //                 duration: delayTime,
-        //                 easing: "easeOutExpo",
-        //                 delay: 0
-        //             })
-        //             .add({
-        //                 targets: '.scroll-button-wrapper .text-2 .button-label',
-        //                 opacity: [0, 1],
-        //                 easing: "easeInOutQuad",
-        //                 duration: 300,
-        //                 delay: function (el, i) {
-        //                     return 30 * (i + 1)
-        //                 }
-        //             }).add({
-        //                 targets: '.scroll-button-wrapper .text-2',
-        //                 opacity: 0,
-        //                 duration: 1000,
-        //                 easing: "easeOutExpo",
-        //                 delay: 3000
-        //             });
-        //     }, 100);
-        // });
-        // top scroll down animation effect end
         $(window).on('load', function () {
             story_animation();
             function story_animation() {

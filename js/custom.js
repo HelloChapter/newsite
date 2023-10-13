@@ -176,18 +176,6 @@ jQuery(document).ready(function ($) {
     // Track if the section has been scrolled into view
     var sectionInView = false;
 
-    $(window).scroll(function () {
-        var st = $(this).scrollTop();
-        if (st > lastScrollTop) {
-            // Scrolling down, move to next slide
-            // $('.home-how-it-works-slider').slick('slickNext');
-        } else {
-            // Scrolling up, move to previous slide
-            //$('.home-how-it-works-slider').slick('slickPrev');
-        }
-        lastScrollTop = st;
-    });
-
     calculate_slider_height();
 
     // home-how-it-works-slider end
