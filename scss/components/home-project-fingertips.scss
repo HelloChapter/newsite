@@ -104,19 +104,21 @@
         padding: 50px 60px 10px;
 
         .col-content {
-            padding-right: 30px;
-
             .row {
                 padding-right: 50px;
                 margin-left: -45px;
             }
 
             .col-item {
-                padding-bottom: 35px;
+                padding-bottom: 30px;
             }
         }
         .bg-img-image-wrap {
             padding-left: 110px;
+        }
+        .content {
+            line-height: 35px;
+            padding-bottom: 30px;
         }
     }
 }

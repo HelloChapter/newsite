@@ -225,13 +225,6 @@
             </header>
             <!-- Header end -->
             <div class="middle-content">
-                <!-- Pending animations
-                1. Diamond animation
-                2. All Background Parralax effect
-                3. Check Plan, Design, Build section slider animation 
-                4. Check other animation effects
-            -->
-
                 <section class="section-new-intro-image aos-init " data-aos="fade">
                     <div class="row no-gutters">
                         <div class="col col-video-box aos-init pearl-bg2">
@@ -254,25 +247,6 @@
                                     <span class="line"></span>
 
                                 </button>
-                                <!-- <button id="scrollButton2" class="btn-styled-removed" type="button">
-                                    <span class="line"></span>
-                                    <div class="text-1 text-label-wrap" style="opacity: 0;">
-                                        <span class="button-label" style="opacity: 1;">S</span><span
-                                            class="button-label" style="opacity: 1;">c</span><span class="button-label"
-                                            style="opacity: 1;">r</span><span class="button-label"
-                                            style="opacity: 1;">o</span><span class="button-label"
-                                            style="opacity: 1;">l</span><span class="button-label"
-                                            style="opacity: 1;">l</span>
-                                    </div>
-                                    <div class="text-2 text-label-wrap" style="opacity: 0;"><span class="button-label"
-                                            style="opacity: 1;">S</span><span class="button-label"
-                                            style="opacity: 1;">c</span><span class="button-label"
-                                            style="opacity: 1;">r</span><span class="button-label"
-                                            style="opacity: 1;">o</span><span class="button-label"
-                                            style="opacity: 1;">l</span><span class="button-label"
-                                            style="opacity: 1;">l</span>
-                                    </div>
-                                </button> -->
                             </div>
                         </div>
                         <div class="col section-content-col">
@@ -299,23 +273,6 @@
                     <div class="mobile-hide scroll-button-wrapper">
                         <div id="lottie-container"></div>
                         <button id="scrollButton" class="text-label-wrap btn-styled-removed" type="button"></button>
-                        <!-- <button id="scrollButton" class="btn-styled-removed" type="button">
-                            <span class="line"></span>
-                            <div class="text-1 text-label-wrap" style="opacity: 0;">
-                                <span class="button-label" style="opacity: 1;">S</span><span class="button-label"
-                                    style="opacity: 1;">c</span><span class="button-label"
-                                    style="opacity: 1;">r</span><span class="button-label"
-                                    style="opacity: 1;">o</span><span class="button-label"
-                                    style="opacity: 1;">l</span><span class="button-label" style="opacity: 1;">l</span>
-                            </div>
-                            <div class="text-2 text-label-wrap" style="opacity: 0;"><span class="button-label"
-                                    style="opacity: 1;">S</span><span class="button-label"
-                                    style="opacity: 1;">c</span><span class="button-label"
-                                    style="opacity: 1;">r</span><span class="button-label"
-                                    style="opacity: 1;">o</span><span class="button-label"
-                                    style="opacity: 1;">l</span><span class="button-label" style="opacity: 1;">l</span>
-                            </div>
-                        </button> -->
                     </div>
                 </section>
                 <!-- Intro Section end -->
@@ -1219,19 +1176,15 @@
         $(document).ready(function () {
             // Select box UI
             $('select').niceSelect();
-            // Specify the path to your Lottie JSON file
             var animationPath = './js/scroll-animation.json';
-
-            // Get a reference to the container element
             var container = document.getElementById('scrollButton');
-
             // Load the Lottie animation
             var animation = lottie.loadAnimation({
-                container: container, // Specify the container
-                renderer: 'svg',      // Choose the renderer (SVG or canvas)
-                loop: true,           // Set to true for looping
-                autoplay: true,       // Set to true to play the animation automatically
-                path: animationPath   // Path to your Lottie JSON file
+                container: container,
+                renderer: 'svg',     
+                loop: true,          
+                autoplay: true,      
+                path: animationPath  
             });
 
             $("#scrollButton, #scrollButton2").click(function () {
@@ -1327,7 +1280,6 @@
                 if (event.data === YT.PlayerState.ENDED) {
                     // Video ended
                 }
-                // Add more handling as needed
             }
 
             function stopYouTubeVideo() {
@@ -1402,12 +1354,6 @@
                     toggleMousewheelControl(false);
                 }
             });
-            // Automatically enable mousewheel control when cursor enters the slider section
-            // $(".home-how-it-works-slider-swiper").on("mouseenter", function () {
-            //     toggleMousewheelControl(true);
-            // }).on("mouseleave", function () {
-            //     toggleMousewheelControl(false);
-            // });
 
             // Detect when the last slide is reached and enable page scrolling
             swiper.on("reachEnd", function () {
@@ -1426,7 +1372,6 @@
             });
             // Create the progress bars container
             var slider = $('.home-how-it-works-slider-swiper');
-            // Create the progress bars container
             var progressBarsContainer = $('.progress-bars');
             var totalSlides = swiper.slides.length;
             // Function to create and update progress bars

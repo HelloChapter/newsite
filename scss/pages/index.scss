@@ -192,6 +192,7 @@
     .announcement-bar {
         opacity: 0;
     }
+
     header {
         top: 0;
         background-color: $white;
@@ -525,6 +526,8 @@
 
 .section-home-reviews {
     padding: 30px 0;
+    min-height: calc(100vh - 114px);
+
 }
 
 .section-home-how-it-works-slider {
@@ -558,7 +561,7 @@
     }
 
     .content {
-        max-width: 519px;
+        max-width: 635px;
     }
 
     h5,
@@ -567,11 +570,11 @@
     }
 
     h5 {
-        font-size: 17px;
+        font-size: 20px;
         line-height: 40px;
         font-family: "Inter";
         font-weight: 400;
-        margin-bottom: 53px;
+        margin-bottom: 24px;
     }
 
     h3 {
@@ -581,19 +584,21 @@
 
     .content-p {
         color: $white;
-        margin: 95px 0 84px;
+        margin: 32px 0 45px;
         font-size: 17px;
         line-height: 40px;
+        min-height: 200px;
     }
 
     .col-col-right {
-        max-width: 35.6%;
-        flex: 0 0 35.6%;
+        max-width: 29.9%;
+        flex: 0 0 29.9%;
         padding-right: 33px;
     }
 
     .home-how-it-works-slider-main {
         position: relative;
+        min-height: calc(100vh - 115px);
     }
 
     .home-how-it-works-slider-wrap {
@@ -614,14 +619,13 @@
         }
 
         .progress-bar {
-            opacity: 0;
             max-width: 33.33%;
             flex: 0 0 33.33%;
             height: 10px;
             width: 100%;
-            background-color: $white;
+            background-color: #FFFFFF1A;
             margin: 20px 0 0;
-            transition: opacity 0.6s ease-in-out;
+            transition: background-color 0.6s ease-in-out;
             cursor: pointer;
 
             +.progress-bar {
@@ -629,16 +633,12 @@
             }
 
             &.active-progress-bar {
-                opacity: 1;
+                background-color: $white;
             }
         }
     }
 
     .custom-swiper-slider {
-        .swiper-slide {
-            //transition: none !important;
-        }
-
         .image-with-fade {
             opacity: 0.7;
             /* Adjust the opacity value as needed */
@@ -655,7 +655,7 @@
     }
 
     .home-how-it-works-slider-swiper {
-        padding-top: 99px;
+        padding-top: 58px;
         padding-right: 35px;
         padding-left: 30px;
         border-top: 2px solid $white;
@@ -695,7 +695,7 @@
     }
 
     .bg-image {
-        padding-bottom: 118.5%;
+        padding-bottom: 118.2%;
         // height: 100%;
     }
 }
@@ -779,6 +779,10 @@
 
 // 1599 end
 @media (max-width:1440px) {
+    .new-section-title h2 {
+        font-size: 65px;
+    }
+
     .section-new-intro-image {
         .video-box-wrap {
             padding: 137px 60px 60px;
@@ -800,18 +804,18 @@
     }
 
     .section-home-how-it-works-slider {
-        padding: 110px 60px 50px;
+        padding: 60px 60px 50px;
 
         .new-section-title {
-            margin-bottom: 80px;
+            margin-bottom: 50px;
         }
 
         .heading-content p {
             font-size: 35px;
         }
 
-        .content-p {
-            margin: 60px 0 60px;
+        .col-col-right {
+            padding-right: 0;
         }
     }
 }
@@ -891,7 +895,7 @@
     }
 
     .section-home-how-it-works-slider {
-        padding: 80px 59px 82px;
+        padding: 60px 59px 82px;
 
         .home-how-it-works-slider-swiper {
             padding-left: 0;
@@ -1092,7 +1096,6 @@
         }
     }
 
-
     .section-confident {
         .col {
             max-width: 100%;
@@ -1114,6 +1117,9 @@
     }
 
     .section-home-how-it-works-slider {
+        .home-how-it-works-slider-wrap {
+            top: 105px;
+        }
         .home-how-it-works-slider-swiper {
             .slider-item {
 
@@ -1137,6 +1143,10 @@
 
             .desktop-hide {
                 display: block;
+            }
+
+            .content-p {
+                min-height: inherit;
             }
         }
     }
@@ -1331,6 +1341,7 @@
 
     .section-home-reviews {
         padding: 0;
+        min-height: inherit;
     }
 }
 

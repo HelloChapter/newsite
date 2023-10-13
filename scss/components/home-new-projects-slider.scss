@@ -386,14 +386,14 @@
 
 // 345 end
 
-@media (min-height:700px) and (max-height:830px) {
+@media (min-height:635px) and (min-width:1200px) and (max-width:1440px) {
     .home-new-projects-slider {
-        // .slick-next {
-        //     bottom: calc(26% - 15px);
-        // }
-        // .slick-dots {
-        //     bottom: calc(26%);
-        // }
+        .slick-next {
+            bottom: calc(26% - 15px);
+        }
+        .slick-dots {
+            bottom: calc(26%);
+        }
     }
 }
 // 830 end
