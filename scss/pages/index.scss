@@ -15,7 +15,9 @@
 @import "../components/home-new-projects-slider.scss";
 @import "../components/section-client-slider";
 @import "../components/modals.scss";
-
+.is-swiper-animating {
+    overflow: hidden !important;
+}
 .announcement-bar {
     position: fixed;
     top: 0;
@@ -640,16 +642,13 @@
 
     .custom-swiper-slider {
         .image-with-fade {
-            opacity: 0.7;
-            /* Adjust the opacity value as needed */
-            transition: opacity 0.5s ease;
-            /* Add a smooth transition effect */
+            opacity: 0;
+            transition: opacity 0.7s ease;
         }
 
         .swiper-slide-active {
             .image-with-fade {
                 opacity: 1;
-                /* Fully show the image on hover */
             }
         }
     }

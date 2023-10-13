@@ -1153,24 +1153,24 @@
                 x < content.getBoundingClientRect().right &&
                 y > content.getBoundingClientRect().top &&
                 y < content.getBoundingClientRect().bottom) {
-                content.style.color = '#ffffff'; // Change content color when overlapped
+                content.style.color = '#ffffff';
             } else {
-                content.style.color = '#231F20'; // Reset content color
+                content.style.color = '#231F20';
             }
         });
 
         content.addEventListener('mouseenter', (e) => {
-            content.style.color = '#ffffff'; // Change content color on hover
+            content.style.color = '#ffffff';
         });
 
         content.addEventListener('mouseleave', () => {
-            content.style.color = '#231F20'; // Reset content color on hover out
+            content.style.color = '#231F20';
         });
 
         container.addEventListener('mouseout', () => {
             diamond.style.left = '30%';
             diamond.style.top = '30%';
-            content.style.color = '#231F20'; // Reset content color on mouseout
+            content.style.color = '#231F20';
         });
         // Scroll down js
         $(document).ready(function () {
@@ -1181,10 +1181,10 @@
             // Load the Lottie animation
             var animation = lottie.loadAnimation({
                 container: container,
-                renderer: 'svg',     
-                loop: true,          
-                autoplay: true,      
-                path: animationPath  
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: animationPath
             });
 
             $("#scrollButton, #scrollButton2").click(function () {
@@ -1201,18 +1201,17 @@
                 // Show the modal
                 $('#client1-modal').css('display', 'flex');
                 // Load the YouTube video
-                loadYouTubeVideo('EroEwFzupYI'); // Replace with your YouTube video ID
+                loadYouTubeVideo('EroEwFzupYI');
             });
             $('#openModal2').click(function () {
                 // Show the modal
                 $('#client2-modal').css('display', 'flex');
                 // Load the YouTube video
-                loadYouTubeVideo2('wmmtsXhlG0s'); // Replace with your YouTube video ID
+                loadYouTubeVideo2('wmmtsXhlG0s');
             });
 
             // When the "Close" button or the modal background is clicked
             $('.btn-close, .modal').click(function () {
-                // Hide the modal and stop the video
                 $('#client1-modal, #client2-modal').css('display', 'none');
                 stopYouTubeVideo();
             });
@@ -1292,24 +1291,18 @@
             });
 
             // Js for intro section video
-            // Get the video element by its ID
             var video = document.getElementById("video-player_html5_api");
-
             // Get the play button by its ID
             var playButton = document.getElementById("btn-play");
-            // Add a click event listener to the play button
             $(playButton).on("click", function () {
                 if (video.paused || video.ended) {
-                    // Check if the video is paused or has ended
                     $(this).removeClass("video-played");
                     video.play().catch(function (error) {
                         console.error("Failed to play video:", error.message);
                     });
                 } else {
-                    // If the video is playing, pause it
                     video.pause();
                     $(this).addClass("video-played");
-                    // Hide default video controls when paused
                 }
             });
 
@@ -1320,15 +1313,21 @@
                 slidesPerView: 1,
                 parallax: false,
                 spaceBetween: 50,
-                effect: 'fade', // Set the effect to 'fade'
+                effect: 'fade',
                 fadeEffect: {
                     crossFade: true
                 },
-                speed: 1000,
+                speed: 200,
                 mousewheel: {
-                    enabled: false, // Initially enable mousewheel control
-                    releaseOnEdges: true, //Allow page scroll when at the beginning or end of the slider
+                    enabled: false,
+                    releaseOnEdges: true,
                 },
+            });
+            swiper.on("slideChangeTransitionStart", function () {
+                $("body").addClass("is-swiper-animating");
+            });
+            swiper.on("slideChangeTransitionEnd", function () {
+                $("body").removeClass("is-swiper-animating");
             });
             // Function to enable/disable mousewheel control
             function toggleMousewheelControl(enable) {
@@ -1339,15 +1338,9 @@
                 }
             }
 
-            // Add a scroll event listener to toggle mousewheel control
             window.addEventListener('scroll', function () {
-                // Define the section you want to trigger the Swiper
                 var section = document.querySelector('.home-how-it-works-slider-swiper');
-
-                // Define the top edge of the section
                 var sectionTop = section.getBoundingClientRect().top;
-
-                // Check if the section is at the top of the viewport (touching the top)
                 if (sectionTop <= 130) {
                     toggleMousewheelControl(true);
                 } else {
@@ -1355,19 +1348,16 @@
                 }
             });
 
-            // Detect when the last slide is reached and enable page scrolling
             swiper.on("reachEnd", function () {
                 toggleMousewheelControl(false);
-                // Enable page scroll when reaching the end of the last slide
                 $(document).off("mousewheel");
             });
 
             swiper.on("fromEdge", function () {
                 toggleMousewheelControl(true);
-                // Re-enable mousewheel control when moving away from the last slide
                 $(document).on("mousewheel", function (e) {
-                    e.preventDefault(); // Prevent default page scrolling
-                    swiper.mousewheel.handleMousewheel(e); // Pass mousewheel event to Swiper
+                    e.preventDefault(); 
+                    swiper.mousewheel.handleMousewheel(e);
                 });
             });
             // Create the progress bars container
@@ -1394,7 +1384,6 @@
                 var index = $(this).index();
                 swiper.slideTo(index);
             });
-            // Handle slide change event
             swiper.on('slideChange', function () {
                 updateProgressBars();
             });
