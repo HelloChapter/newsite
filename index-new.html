@@ -292,7 +292,6 @@
                         </div>
                         <div class="col section-box-col">
                             <div class="section-box">
-                                <div id="diamond-square" class="diamond-square"></div>
                                 <div class="row">
                                     <div class="col section-box-item">
                                         <div class="diamond-square-content">
@@ -318,6 +317,7 @@
                                             <h3>6,153</h3>
                                         </div>
                                     </div>
+                                    <div id="diamond-square" class="diamond-square"></div>
                                 </div>
                             </div>
                         </div>
@@ -575,6 +575,13 @@
                                         <div class="content-p">
                                             <p>When two become one</p>
                                         </div>
+                                        <div class="custom-btn-wrapper">
+                                            <div class="custom-slick-dots">
+                                            </div>
+                                            <div class="custom-arrow">
+                                                <button class="slick-next"></button>
+                                            </div>
+                                        </div>
                                         <div class="more-btn-wrap">
                                             <a href="/project/broadway-duplex-renovation/" title="Learn more"
                                                 class="btn-black">Learn more</a>
@@ -611,6 +618,13 @@
                                         <h2>Miami Shores</h2>
                                         <div class="content-p">
                                             <p>Elegance meets tropical…</p>
+                                        </div>
+                                       <div class="custom-btn-wrapper">
+                                            <div class="custom-slick-dots">
+                                            </div>
+                                            <div class="custom-arrow">
+                                                <button class="slick-next"></button>
+                                            </div>
                                         </div>
                                         <div class="more-btn-wrap">
                                             <a href="/miami-shores-homerenovation/" title="Learn more"
@@ -650,6 +664,13 @@
                                         <div class="content-p">
                                             <p>Luxury experience</p>
                                         </div>
+                                       <div class="custom-btn-wrapper">
+                                            <div class="custom-slick-dots">
+                                            </div>
+                                            <div class="custom-arrow">
+                                                <button class="slick-next"></button>
+                                            </div>
+                                        </div>
                                         <div class="more-btn-wrap">
                                             <a href="/project/chelsea-luxury-renovation/" title="Learn more"
                                                 class="btn-black">Learn more</a>
@@ -688,6 +709,13 @@
                                         <h2>UES Townhouse</h2>
                                         <div class="content-p">
                                             <p>Perfect balance of classy and elegant</p>
+                                        </div>
+                                       <div class="custom-btn-wrapper">
+                                            <div class="custom-slick-dots">
+                                            </div>
+                                            <div class="custom-arrow">
+                                                <button class="slick-next"></button>
+                                            </div>
                                         </div>
                                         <div class="more-btn-wrap">
                                             <a href=/project/ues-townhouse-renovation/ title="Learn more"
@@ -1126,7 +1154,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -1137,41 +1164,33 @@
     </script>
     <script>
         // js for diamond shape
-        const diamond = document.getElementById('diamond-square');
-        const container = document.querySelector('.section-box');
-        const content = document.querySelector('.diamond-square-content');
+        const link = document.querySelectorAll('.section-box > .section-box-item');
+        const cursor = document.querySelector('.diamond-square');
 
-        container.addEventListener('mousemove', (e) => {
-            const x = e.clientX - container.getBoundingClientRect().left;
-            const y = e.clientY - container.getBoundingClientRect().top;
+        const animateit = function (e) {
+            const span = this.querySelector('h4');
+            const { offsetX: x, offsetY: y } = e,
+                { offsetWidth: width, offsetHeight: height } = this,
 
-            diamond.style.left = `${x}px`;
-            diamond.style.top = `${y}px`;
+                move = 25,
+                xMove = x / width * (move * 2) - move,
+                yMove = y / height * (move * 2) - move;
 
-            // Check if the diamond square overlaps the content
-            if (x > content.getBoundingClientRect().left &&
-                x < content.getBoundingClientRect().right &&
-                y > content.getBoundingClientRect().top &&
-                y < content.getBoundingClientRect().bottom) {
-                content.style.color = '#ffffff';
-            } else {
-                content.style.color = '#231F20';
-            }
-        });
+            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
 
-        content.addEventListener('mouseenter', (e) => {
-            content.style.color = '#ffffff';
-        });
+            if (e.type === 'mouseleave') span.style.transform = '';
+        };
 
-        content.addEventListener('mouseleave', () => {
-            content.style.color = '#231F20';
-        });
+        const editCursor = e => {
+            const { clientX: x, clientY: y } = e;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+        };
 
-        container.addEventListener('mouseout', () => {
-            diamond.style.left = '30%';
-            diamond.style.top = '30%';
-            content.style.color = '#231F20';
-        });
+        link.forEach(b => b.addEventListener('mousemove', animateit));
+        link.forEach(b => b.addEventListener('mouseleave', animateit));
+        window.addEventListener('mousemove', editCursor);
+
         // Scroll down js
         $(document).ready(function () {
             // Select box UI
@@ -1198,19 +1217,14 @@
 
             // When the "Open Modal" button is clicked
             $('#openModal').click(function () {
-                // Show the modal
                 $('#client1-modal').css('display', 'flex');
-                // Load the YouTube video
                 loadYouTubeVideo('EroEwFzupYI');
             });
             $('#openModal2').click(function () {
-                // Show the modal
                 $('#client2-modal').css('display', 'flex');
-                // Load the YouTube video
                 loadYouTubeVideo2('wmmtsXhlG0s');
             });
 
-            // When the "Close" button or the modal background is clicked
             $('.btn-close, .modal').click(function () {
                 $('#client1-modal, #client2-modal').css('display', 'none');
                 stopYouTubeVideo();
@@ -1224,10 +1238,10 @@
             // Load and control the YouTube video
             var player;
             var player2;
+            var queryParams = '?modestbranding=1&rel=0&showinfo=0&enablejsapi=1&start=0';
 
             function loadYouTubeVideo(videoId) {
                 var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
-                var queryParams = '?modestbranding=1&rel=0&showinfo=0&enablejsapi=1';
                 player = new YT.Player('player', {
                     height: '100%',
                     width: '100%',
@@ -1247,8 +1261,7 @@
             }
             function loadYouTubeVideo2(videoId) {
                 var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
-                var queryParams = '?modestbranding=1&rel=0&showinfo=0';
-                player = new YT.Player('player2', {
+                player2 = new YT.Player('player2', {
                     height: '100%',
                     width: '100%',
                     videoId: videoId,
@@ -1267,32 +1280,34 @@
             }
 
             function onPlayerReady(event) {
-                // Video player is ready to play
                 event.target.playVideo();
             }
-
-            function onPlayerStateChange(event) {
-                // Handle video state changes here (e.g., pause, end)
-                if (event.data === YT.PlayerState.PAUSED) {
-                    // Video paused
+            function stopYouTubeVideo(event) {
+                if (player2 && player2.pauseVideo) {
+                    player2.pauseVideo();
                 }
-                if (event.data === YT.PlayerState.ENDED) {
-                    // Video ended
-                }
-            }
-
-            function stopYouTubeVideo() {
                 if (player && player.stopVideo) {
                     player.stopVideo();
                 }
+                console.log("stop video");
             }
+            function onPlayerStateChange(event) {
+                // Handle video state changes here (e.g., pause, end)
+                if (event.data === YT.PlayerState.PAUSED) {
+                }
+                if (event.data === YT.PlayerState.ENDED) {
+                }
+            }
+
             $('.slider').on('init', function (event, slick) {
                 story_animation();
             });
-
+            $(".modal-home-client-video .btn-close").on("click", function () {
+                stopYouTubeVideo();
+                console.log("youtube play")
+            });
             // Js for intro section video
             var video = document.getElementById("video-player_html5_api");
-            // Get the play button by its ID
             var playButton = document.getElementById("btn-play");
             $(playButton).on("click", function () {
                 if (video.paused || video.ended) {
@@ -1356,7 +1371,7 @@
             swiper.on("fromEdge", function () {
                 toggleMousewheelControl(true);
                 $(document).on("mousewheel", function (e) {
-                    e.preventDefault(); 
+                    e.preventDefault();
                     swiper.mousewheel.handleMousewheel(e);
                 });
             });
@@ -1492,6 +1507,8 @@
         });
         // client section Next success story animation effect end
     </script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
 </body>
 
 </html>

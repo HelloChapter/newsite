@@ -106,15 +106,17 @@ jQuery(document).ready(function ($) {
 
     });
     // Home slider end
-    $('.home-new-projects-slider').slick({
+   var home_slider = $('.home-new-projects-slider').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
         speed: 800,
         autoplaySpeed: 3000,
-        dots: true,
         fade: true,
+        dots:true,
+        nextArrow: $('.custom-arrow .slick-next'),
+        appendDots: $('.custom-slick-dots'),
         cssEase: 'ease-in-out',
         responsive: [
             {
@@ -123,9 +125,12 @@ jQuery(document).ready(function ($) {
                     adaptiveHeight: true
                 }
             },
-        ]
-
-
+        ],
+    });
+    home_slider.on('afterChange', function(event, slick, currentSlide) {
+        var dots = $('.custom-slick-dots .slick-dots li');
+        dots.removeClass('slick-active');
+        dots.eq(currentSlide).addClass('slick-active');
     });
     // home-new-projects-slider end
     $('.home-client-slider').slick({
@@ -143,37 +148,6 @@ jQuery(document).ready(function ($) {
     });
     // home-client-slider end
 
-    //$('.home-how-it-works-slider').slick({
-    // autoplay: false,
-    // speed: 1000,
-    // infinite: false,
-    // slidesToShow: 1,
-    // vertical: true,
-    // slidesToScroll: 1,
-    // arrows: false,
-    // autoplaySpeed: 10000,
-    // dots: false,
-    // fade: true,
-    // centerMode: true,
-    // variableWidth: false,
-    // centerPadding: "0px",
-    // pauseOnHover: false,
-    // pauseOnFocus: false,
-    // draggable: false,
-    // cssEase: 'ease-in-out'
-    //});
-    // $('.home-how-it-works-slider').slick({
-    //     autoplay: false,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     infinite: true,
-    //     speed: 1000,
-    //     fade: false, // Enable fade effect
-    //     cssEase: 'linear',
-    //     arrows: false,
-    // });
-
-    // Track if the section has been scrolled into view
     var sectionInView = false;
 
     calculate_slider_height();
@@ -324,7 +298,7 @@ window.addEventListener('resize', function (event) {
 }, true);
 function calculate_slider_height() {
     var divHeight = $('.home-how-it-works-slider-swiper .slider-item').height();
-    var divTotalHeight = divHeight * 3;
+    var divTotalHeight = divHeight * 8;
     var setHeight = $('.empty-height-div');
     setHeight.height(divTotalHeight);
 }
