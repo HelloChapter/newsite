@@ -619,7 +619,7 @@
                                         <div class="content-p">
                                             <p>Elegance meets tropical…</p>
                                         </div>
-                                       <div class="custom-btn-wrapper">
+                                        <div class="custom-btn-wrapper">
                                             <div class="custom-slick-dots">
                                             </div>
                                             <div class="custom-arrow">
@@ -664,7 +664,7 @@
                                         <div class="content-p">
                                             <p>Luxury experience</p>
                                         </div>
-                                       <div class="custom-btn-wrapper">
+                                        <div class="custom-btn-wrapper">
                                             <div class="custom-slick-dots">
                                             </div>
                                             <div class="custom-arrow">
@@ -710,7 +710,7 @@
                                         <div class="content-p">
                                             <p>Perfect balance of classy and elegant</p>
                                         </div>
-                                       <div class="custom-btn-wrapper">
+                                        <div class="custom-btn-wrapper">
                                             <div class="custom-slick-dots">
                                             </div>
                                             <div class="custom-arrow">
@@ -1023,35 +1023,8 @@
                 <!-- section-home-contact-forms end -->
 
                 <!-- modal-home-client-video start -->
-                <div id="client1-modal" class="modal modal-home-client-video">
-                    <div class="modal-backdrop"></div>
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button class="btn-styled-removed btn-close" data-dismiss="modal">
-                                <img src="./images/icons/close-icon.svg" alt="icon" />
-                            </button>
-                        </div>
-                        <div class="mid-content">
-                            <div class="video-box">
-                                <div id="player"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="client2-modal" class="modal modal-home-client-video">
-                    <div class="modal-backdrop"></div>
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button class="btn-styled-removed btn-close" data-dismiss="modal">
-                                <img src="./images/icons/close-icon.svg" alt="icon" />
-                            </button>
-                        </div>
-                        <div class="mid-content">
-                            <div class="video-box">
-                                <div id="player2"></div>
-                            </div>
-                        </div>
-                    </div>
+                <div id="clent1-modal-container">
+
                 </div>
                 <!-- modal-home-client-video end -->
             </div>
@@ -1217,15 +1190,69 @@
 
             // When the "Open Modal" button is clicked
             $('#openModal').click(function () {
+                // create and append modal structure here.
+                const docString = `
+                    <div id="client1-modal" class="modal modal-home-client-video">
+                        <div class="modal-backdrop"></div>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button id="client1-btn-close" class="btn-styled-removed btn-close" data-dismiss="modal">
+                                    <img src="./images/icons/close-icon.svg" alt="icon" />
+                                </button>
+                            </div>
+                            <div class="mid-content">
+                                <div class="video-box">
+                                    <div id="player1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                const modalContainer = document.getElementById('clent1-modal-container');
+                modalContainer.innerHTML = docString;
+
+                // attach event handler for the rendered modal
+                $(".modal-home-client-video .btn-close").on("click", function () {
+                    stopYouTubeVideo("modal1");
+                });
+
                 $('#client1-modal').css('display', 'flex');
                 loadYouTubeVideo('EroEwFzupYI');
             });
+
             $('#openModal2').click(function () {
+                // create and append modal structure here.
+                const docString2 = `
+                    <div id="client2-modal" class="modal modal-home-client-video">
+                        <div class="modal-backdrop"></div>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button id="client1-btn-close" class="btn-styled-removed btn-close" data-dismiss="modal">
+                                    <img src="./images/icons/close-icon.svg" alt="icon" />
+                                </button>
+                            </div>
+                            <div class="mid-content">
+                                <div class="video-box">
+                                    <div id="player2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                const modalContainer = document.getElementById('clent1-modal-container');
+                modalContainer.innerHTML = docString2;
+
+                // attach event handler for the rendered modal
+                $(".modal-home-client-video .btn-close").on("click", function () {
+                    stopYouTubeVideo("modal2");
+                });
+
                 $('#client2-modal').css('display', 'flex');
                 loadYouTubeVideo2('wmmtsXhlG0s');
             });
 
-            $('.btn-close, .modal').click(function () {
+
+            $('.modal-home-client-video .btn-close, .modal-home-client-video').click(function () {
                 $('#client1-modal, #client2-modal').css('display', 'none');
                 stopYouTubeVideo();
             });
@@ -1236,13 +1263,12 @@
             });
 
             // Load and control the YouTube video
-            var player;
-            var player2;
+            
             var queryParams = '?modestbranding=1&rel=0&showinfo=0&enablejsapi=1&start=0';
 
             function loadYouTubeVideo(videoId) {
                 var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
-                player = new YT.Player('player', {
+                new YT.Player('player1', {
                     height: '100%',
                     width: '100%',
                     videoId: videoId,
@@ -1251,7 +1277,7 @@
                         'modestbranding': 1,
                         'rel': 0,
                         'showinfo': 0,
-                        'iv_load_policy': 3 // Hide annotations
+                        'iv_load_policy': 3 
                     },
                     events: {
                         'onReady': onPlayerReady,
@@ -1261,7 +1287,7 @@
             }
             function loadYouTubeVideo2(videoId) {
                 var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
-                player2 = new YT.Player('player2', {
+                new YT.Player('player2', {
                     height: '100%',
                     width: '100%',
                     videoId: videoId,
@@ -1270,7 +1296,7 @@
                         'modestbranding': 1,
                         'rel': 0,
                         'showinfo': 0,
-                        'iv_load_policy': 3 // Hide annotations
+                        'iv_load_policy': 3 
                     },
                     events: {
                         'onReady': onPlayerReady,
@@ -1282,14 +1308,14 @@
             function onPlayerReady(event) {
                 event.target.playVideo();
             }
-            function stopYouTubeVideo(event) {
-                if (player2 && player2.pauseVideo) {
-                    player2.pauseVideo();
+            function stopYouTubeVideo(type) {
+                if(type === 'modal1'){
+                    const client1Modal = document.getElementById('client1-modal');
+                    client1Modal.remove();
+                }else if(type === 'modal2'){
+                    const client2Modal = document.getElementById('client2-modal');
+                    client2Modal.remove();
                 }
-                if (player && player.stopVideo) {
-                    player.stopVideo();
-                }
-                console.log("stop video");
             }
             function onPlayerStateChange(event) {
                 // Handle video state changes here (e.g., pause, end)
@@ -1302,10 +1328,7 @@
             $('.slider').on('init', function (event, slick) {
                 story_animation();
             });
-            $(".modal-home-client-video .btn-close").on("click", function () {
-                stopYouTubeVideo();
-                console.log("youtube play")
-            });
+           
             // Js for intro section video
             var video = document.getElementById("video-player_html5_api");
             var playButton = document.getElementById("btn-play");

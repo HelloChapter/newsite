@@ -32,7 +32,7 @@
     letter-spacing: 0;
     font-size: 14px;
     line-height: 17px;
-    transition: opacity 0.6s ease-in-out !important;
+    transition: opacity 0.4s ease-in-out !important;
 
 
     * {
@@ -220,7 +220,7 @@
     }
 
     .row {
-        min-height: calc(100vh - 111px);
+        min-height: calc(100vh);
     }
 
     .col {
@@ -917,7 +917,7 @@
 // 1300 end
 @media (max-width:1220px) {
     .section-new-intro-image .video-box-wrap .video-box {
-        padding-bottom: 120%;
+        padding-bottom: 100%;
     }
 }
 
@@ -1250,7 +1250,7 @@
 
                 &:first-child,
                 &:nth-child(2) {
-                    padding-bottom: 72px;
+                    margin-bottom: 72px;
                 }
 
                 h4 {
