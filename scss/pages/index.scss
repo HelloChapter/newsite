@@ -15,9 +15,11 @@
 @import "../components/home-new-projects-slider.scss";
 @import "../components/section-client-slider";
 @import "../components/modals.scss";
+
 .is-swiper-animating {
     overflow: hidden !important;
 }
+
 .announcement-bar {
     position: fixed;
     top: 0;
@@ -418,7 +420,7 @@
             &:hover {
                 .diamond-square {
                     transform: translate(-50%, -50%) scale(1.2) rotate(45deg);
-                   // background-color: $black;
+                    // background-color: $black;
                 }
 
                 .diamond-square-content {
@@ -511,7 +513,7 @@
 }
 
 .section-home-how-it-works-slider {
-    padding: 165px 115px 87px;
+    padding: 165px 0 87px;
     letter-spacing: 0;
 
     .container {
@@ -527,6 +529,10 @@
         max-width: 1125px;
         margin-bottom: 128px;
         color: $white;
+    }
+
+    .heading-content-wrap {
+        padding: 0 115px;
     }
 
     .heading-content {
@@ -587,20 +593,27 @@
         position: sticky;
         top: 125px;
 
+        .progress-bars-wrap {
+            position: relative;
+        }
+
         .progress-bars {
             display: flex;
             justify-content: flex-start;
             position: absolute;
             top: 0;
             left: 0;
-            width: calc(100% - 30px);
+            right: 0;
+            width: calc(100% - 230px);
             z-index: 9;
+            margin: 0 auto;
+            border-top: 2px solid $white;
             //cursor: pointer;
         }
 
         .progress-bar {
-            max-width: 33.33%;
-            flex: 0 0 33.33%;
+            max-width: calc(33.33% - 10px);
+            flex: 0 0 calc(33.33% - 10px);
             height: 10px;
             width: 100%;
             background-color: #FFFFFF1A;
@@ -633,9 +646,9 @@
 
     .home-how-it-works-slider-swiper {
         padding-top: 58px;
-        padding-right: 35px;
-        padding-left: 30px;
-        border-top: 2px solid $white;
+        padding-right: 145px;
+        padding-left: 145px;
+        margin: 0 auto;
 
         .slick-arrow {
             display: none !important;
@@ -742,7 +755,7 @@
     }
 
     .section-home-how-it-works-slider {
-        padding: 135px 80px 70px;
+        padding: 135px 0px 70px;
 
         .new-section-title {
             margin-bottom: 100px;
@@ -750,6 +763,16 @@
 
         .heading-content p {
             font-size: 35px;
+        }
+        .home-how-it-works-slider-wrap .progress-bars {
+            width: calc(100% - 160px);
+        }
+        .heading-content-wrap {
+            padding: 0 80px;
+        }
+        .home-how-it-works-slider-swiper {
+            padding-left: 110px;
+            padding-right: 110px;
         }
     }
 }
@@ -773,6 +796,12 @@
     .section-confident {
         .section-box-col {
             padding: 60px 70px;
+
+            .section-box-item {
+                margin: 0 60px;
+                max-width: calc(50% - 120px);
+                flex: 0 0 calc(50% - 120px)
+            }
         }
 
         .section-content {
@@ -781,7 +810,7 @@
     }
 
     .section-home-how-it-works-slider {
-        padding: 60px 60px 50px;
+        padding: 60px 0px 50px;
 
         .new-section-title {
             margin-bottom: 50px;
@@ -793,6 +822,16 @@
 
         .col-col-right {
             padding-right: 0;
+        }
+        .home-how-it-works-slider-wrap .progress-bars {
+            width: calc(100% - 120px);
+        }
+        .heading-content-wrap {
+            padding: 0 60px;
+        }
+        .home-how-it-works-slider-swiper {
+            padding-left: 90px;
+            padding-right: 90px;
         }
     }
 }
@@ -868,16 +907,23 @@
 
         .section-box-col {
             padding: 58px 59px;
+
+            .section-box-item {
+
+                &:first-child,
+                &:nth-child(2) {
+                    margin-bottom: 110px;
+                }
+            }
         }
     }
 
     .section-home-how-it-works-slider {
-        padding: 60px 59px 82px;
+        padding: 60px 0 82px;
 
         .home-how-it-works-slider-swiper {
-            padding-left: 0;
-            padding-right: 0;
-            padding-top: 33px;
+            padding-left: 59px;
+            padding-right: 59px;
         }
 
         .new-section-title {
@@ -898,6 +944,12 @@
 
         .home-how-it-works-slider-wrap {
             margin-top: 65px;
+        }
+        .home-how-it-works-slider-wrap .progress-bars {
+            width: calc(100% - 118px);
+        }
+        .heading-content-wrap {
+            padding: 0 59px;
         }
 
         h5 {
@@ -1097,6 +1149,7 @@
         .home-how-it-works-slider-wrap {
             top: 105px;
         }
+
         .home-how-it-works-slider-swiper {
             .slider-item {
 
@@ -1267,7 +1320,7 @@
     }
 
     .section-home-how-it-works-slider {
-        padding: 44px 30px 56px;
+        padding: 44px 0 56px;
 
         .new-section-title {
             margin-bottom: 35px;
@@ -1292,6 +1345,16 @@
                     margin-left: 8px;
                 }
             }
+        }
+        .home-how-it-works-slider-swiper {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .home-how-it-works-slider-wrap .progress-bars {
+            width: calc(100% - 60px);
+        }
+        .heading-content-wrap {
+            padding: 0 30px;
         }
 
         h5 {
