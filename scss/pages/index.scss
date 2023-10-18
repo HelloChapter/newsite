@@ -1279,10 +1279,12 @@
             .content {
                 // max-width: 293px;
                 margin-bottom: 0;
-                padding-right: 40px;
 
                 .new-section-title {
                     margin-bottom: 37px;
+                }
+                p {
+                    padding-right: 40px;
                 }
             }
 
