@@ -230,8 +230,9 @@
                         <div class="col col-video-box aos-init pearl-bg2">
                             <div class="video-box-wrap">
                                 <div class="video-box">
-                                    <video controlsList="nodownload nofullscreen" autoplay="true" loop="true" muted playsinline
-                                        controls="" id="video-player" class="video-js" autobuffer="true" muted
+                                    <video controlsList="nodownload nofullscreen" autoplay="true" loop="true" muted
+                                        playsinline controls="" id="video-player" class="video-js" autobuffer="true"
+                                        muted
                                         data-setup='{ "controls": false, "autoplay": true, "preload": "auto", "loop": "true" }'>
                                         <source src="./videos/home/Chapter-Hero-Video.webm" type="video/webm" />
                                         <source src="./videos/home/Chapter-Hero-Video.mp4" type="video/mp4" />
@@ -262,7 +263,8 @@
                                         budget and on schedule.</p>
                                 </div>
                                 <div class="contact-link">
-                                    <a href="/contact-chapter-home-renovation/" title="" class="btn-black">Let’s talk</a>
+                                    <a href="/contact-chapter-home-renovation/" title="" class="btn-black">Let’s
+                                        talk</a>
                                 </div>
                             </div>
                             <div class="section-graphic-img aos-init " data-aos="fade" data-aos-delay="350">
@@ -1150,10 +1152,6 @@
                 move = 25,
                 xMove = x / width * (move * 2) - move,
                 yMove = y / height * (move * 2) - move;
-
-
-
-            //  if (e.type === 'mouseleave') span.style.transform = '';
         };
 
         const editCursor = e => {
@@ -1172,6 +1170,19 @@
             $("body").css("cursor", "none");
         });
         $(".section-confident .section-box-col").mouseleave(function () {
+            $("body").css("cursor", "inherit");
+            $(".diamond-square").css("display", "none");
+        });
+
+
+       // Js for mobile devices
+        window.addEventListener('touchmove', editCursor);
+        const section_box = document.querySelector('.section-box-col');
+        section_box.addEventListener('touchstart', function (event) {
+            $(".diamond-square").css("display", "block");
+            $("body").css("cursor", "none");
+        });
+        section_box.addEventListener('touchend', function (event) {
             $("body").css("cursor", "inherit");
             $(".diamond-square").css("display", "none");
         });
