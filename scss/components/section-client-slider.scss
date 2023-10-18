@@ -193,6 +193,10 @@
         min-width: 300px;
         bottom: 0px;
         margin-left: 45px;
+        color: $black;
+        .button-label {
+        color: $black;
+        }
     }
 
     .custom-next-arrow {
@@ -458,9 +462,11 @@
 @media (max-width:767px) {
     .section-client-slider {
         padding: 0 30px;
+        position: relative;
 
         .home-client-slider {
             padding-bottom: 98px;
+            position: static;
         }
 
         .col-right {
@@ -487,6 +493,7 @@
         .col-left {
             max-width: 340px;
             padding: 0;
+            position: static;
 
             .content {
                 max-width: 231px;

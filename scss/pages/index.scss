@@ -442,7 +442,7 @@
         }
 
         .section-box-item:hover~.diamond-square {
-            transform: translate(-50%, -50%) scale(18) rotate(45deg);
+            transform: translate(-50%, -50%) scale(15) rotate(45deg);
         }
 
         .content {
@@ -1300,7 +1300,9 @@
             }
 
             .section-box-item {
-
+                margin: 0 30px;
+                max-width: calc(50% - 60px);
+                flex:0 0 calc(50% - 60px);
                 &:first-child,
                 &:nth-child(2) {
                     margin-bottom: 72px;

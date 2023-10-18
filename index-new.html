@@ -277,7 +277,7 @@
                     </div>
                 </section>
                 <!-- Intro Section end -->
-                <section class="section-confident aos-init " data-aos="fade">
+                <section class="section-confident">
                     <div class="row no-gutters">
                         <div class="col section-content">
                             <div class="content">
@@ -1140,11 +1140,11 @@
     </script>
     <script>
         // js for diamond shape
-        const link = document.querySelectorAll('.section-box > .section-box-item');
+        const link = document.querySelectorAll('.section-box-item');
         const cursor = document.querySelector('.diamond-square');
 
         const animateit = function (e) {
-            const span = this.querySelector('h4');
+            //  const span = this.querySelector('span');
             const { offsetX: x, offsetY: y } = e,
                 { offsetWidth: width, offsetHeight: height } = this,
 
@@ -1152,9 +1152,9 @@
                 xMove = x / width * (move * 2) - move,
                 yMove = y / height * (move * 2) - move;
 
-            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
 
-            if (e.type === 'mouseleave') span.style.transform = '';
+
+            //  if (e.type === 'mouseleave') span.style.transform = '';
         };
 
         const editCursor = e => {
@@ -1166,7 +1166,16 @@
         link.forEach(b => b.addEventListener('mousemove', animateit));
         link.forEach(b => b.addEventListener('mouseleave', animateit));
         window.addEventListener('mousemove', editCursor);
+        $(".diamond-square").css("display", "none");
 
+        $(".section-confident .section-box-col").mouseenter(function () {
+            $(".diamond-square").css("display", "block");
+            $("body").css("cursor", "none");
+        });
+        $(".section-confident .section-box-col").mouseleave(function () {
+            $("body").css("cursor", "inherit");
+            $(".diamond-square").css("display", "none");
+        });
         // Scroll down js
         $(document).ready(function () {
             // Select box UI
@@ -1358,14 +1367,12 @@
                 fadeEffect: {
                     crossFade: true
                 },
-                speed: 200,
+                speed: 400,
                 mousewheel: {
                     enabled: false,
                     releaseOnEdges: true,
                 },
-                keyboard: {
-                    enabled: true,
-                },
+
             });
             swiper.on("slideChangeTransitionStart", function () {
                 $("body").addClass("is-swiper-animating");
