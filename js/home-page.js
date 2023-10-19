@@ -235,16 +235,16 @@ $(document).ready(function () {
             crossFade: true
         },
         speed: 600,
+        // scrollbar: {
+        //     el: ".col-col-left",
+        // },
         mousewheel: {
             enabled: false,
             releaseOnEdges: true,
-            sensitivity: 2,
-        },
-        breakpoints: {
-            320: {
-                allowTouchMove: true,
-            },
-          }
+            sensitivity: 1,
+            thresholdDelta: null,
+            thresholdTime: null,
+        }
     });
     swiper.on("slideChangeTransitionStart", function () {
         $("body").addClass("is-swiper-animating");

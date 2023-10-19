@@ -75,7 +75,6 @@ var CustomSelect = $("#contact-form select");
 // Ajax function
 
 function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
-
     $.ajax({
         dataType: "json",
         url: url,
@@ -98,12 +97,24 @@ function redirectToThankYou() {
     if (localStorage.getItem("qr_status")) {
         localStorage.setItem("formSubmitted", true);
     }
-    //window.location.href = "/thank-you-message/?submit=true"
+    var url = window.location.href;
+    if (!url.includes("?submit=true")) {
+        if (url.indexOf("?") !== -1) {
+            url = url + "&submit=true";
+        } else {
+            url = url + "?submit=true";
+        }
+        window.location.href = url;
+    }
     $(".form-fields-wrap").hide();
     $(".thank-you-wrap").show();
 }
 // Contact Submit 
-
+var url_check = window.location.href;
+if (url_check.includes("?submit=true")) {
+    $(".form-fields-wrap").hide();
+    $(".thank-you-wrap").show();
+}
 //code for back button pressed the form will reset
 window.addEventListener("pageshow", (event) => {
     if (event.persisted) {
@@ -173,22 +184,11 @@ function handleContactSubmit(e) {
     }
     if (isValid) {
         var emailElement = document.getElementById('contact-email-field-id');
-        //console.log("emailElement1");
 
         if (emailElement) {
             localStorage.setItem('email', emailElement.value);
             emailElement.setAttribute("data-email", emailElement.value);
         }
-
-        //window.dataLayer = window.dataLayer || [];
-        //function gtag() { dataLayer.push(arguments); }
-        //gtag('js', new Date());
-
-        //gtag('config', 'UA-225495044-1');
-        // gtag('set', 'user_data', {
-        //     "email": localStorage.getItem('email') != undefined ? localStorage.getItem('email') : null,
-        // });
-        //gtag('event', 'conversion', { 'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo' });
         $('#loader').show();
         inputs.each(function () {
             $(this).attr("disabled", "disabled");
