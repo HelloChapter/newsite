@@ -290,8 +290,8 @@ $(document).ready(function () {
 
     const viewport_height = document.querySelector('.custom-swiper-slider');
     function isScrolledIntoView(elem) {
-        var docViewTop = $(window).scrollTop() + (window.innerWidth < 768 ? 92 : 144);
-        // console.log(window.innerWidth < 768 ? 92 : 144);
+        var docViewTop = $(window).scrollTop() + (window.innerWidth < 768 ? 92 : 114);
+        //console.log(window.innerWidth < 768 ? 92 : 144);
         var docViewBottom = docViewTop + $(window).height();
         var elemTop = $(elem).offset().top;
         var elemBottom = elemTop + ($(elem).height() / 3);
