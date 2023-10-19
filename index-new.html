@@ -371,10 +371,11 @@
                                                                     board approvals—to ensure
                                                                     a smooth process moving forward. </p>
                                                             </div>
-                                                            <div class="mobile-hide"><button type="button"
-                                                                    class="btn-white">How
-                                                                    it
-                                                                    works</button></div>
+                                                            <div class="mobile-hide">
+                                                                <a href="how-chapter-home-renovation-works/"
+                                                                    type="button" class="btn-white">How it works
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col col-col-right">
@@ -384,9 +385,11 @@
                                                         <div class="image bg-image desktop-hide image-with-fade"
                                                             style="background-image: url(./images/home/how-it-works-slider/mobile-client3.png);">
                                                         </div>
-                                                        <div class="desktop-hide"><button type="button"
-                                                                class="btn-white">How it
-                                                                works</button></div>
+                                                        <div class="desktop-hide">
+                                                            <a href="how-chapter-home-renovation-works/" type="button"
+                                                                class="btn-white">How it works
+                                                            </a>
+                                                        </div>
 
                                                     </div>
                                                 </div>
@@ -417,10 +420,11 @@
                                                                     while
                                                                     sticking to your budget. </p>
                                                             </div>
-                                                            <div class="mobile-hide"><button type="button"
-                                                                    class="btn-white">How
-                                                                    it
-                                                                    works</button></div>
+                                                            <div class="mobile-hide">
+                                                                <a href="how-chapter-home-renovation-works/"
+                                                                    type="button" class="btn-white">How it works
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col col-col-right">
@@ -430,9 +434,10 @@
                                                         <div class="image bg-image desktop-hide image-with-fade"
                                                             style="background-image: url(./images/home/how-it-works-slider/mobile-client2.png);">
                                                         </div>
-                                                        <div class="desktop-hide"><button type="button"
-                                                                class="btn-white">How it
-                                                                works</button>
+                                                        <div class="desktop-hide">
+                                                            <a href="how-chapter-home-renovation-works/" type="button"
+                                                                class="btn-white">How it works
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -458,9 +463,11 @@
                                                                     makes them truly qualified to lead your project. 
                                                                 </p>
                                                             </div>
-                                                            <div class="mobile-hide"><button type="button"
-                                                                    class="btn-white">How
-                                                                    it works</button></div>
+                                                            <div class="mobile-hide">
+                                                                <a href="how-chapter-home-renovation-works/"
+                                                                    type="button" class="btn-white">How it works
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col col-col-right">
@@ -470,9 +477,10 @@
                                                         <div class="image bg-image desktop-hide image-with-fade"
                                                             style="background-image: url(./images/home/how-it-works-slider/mobile-client1.png);">
                                                         </div>
-                                                        <div class="desktop-hide"><button type="button"
-                                                                class="btn-white">How it
-                                                                works</button>
+                                                        <div class="desktop-hide">
+                                                            <a href="how-chapter-home-renovation-works/" type="button"
+                                                                class="btn-white">How it works
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1145,10 +1153,8 @@
         const cursor = document.querySelector('.diamond-square');
 
         const animateit = function (e) {
-            //  const span = this.querySelector('span');
             const { offsetX: x, offsetY: y } = e,
                 { offsetWidth: width, offsetHeight: height } = this,
-
                 move = 25,
                 xMove = x / width * (move * 2) - move,
                 yMove = y / height * (move * 2) - move;
@@ -1165,19 +1171,19 @@
         window.addEventListener('mousemove', editCursor);
         $(".diamond-square").css("display", "none");
 
-        $(".section-confident .section-box-col").mouseenter(function () {
+        $(".section-confident .section-box").mouseenter(function () {
             $(".diamond-square").css("display", "block");
             $("body").css("cursor", "none");
         });
-        $(".section-confident .section-box-col").mouseleave(function () {
+        $(".section-confident .section-box").mouseleave(function () {
             $("body").css("cursor", "inherit");
             $(".diamond-square").css("display", "none");
         });
 
 
-       // Js for mobile devices
+        // Js for mobile devices
         window.addEventListener('touchmove', editCursor);
-        const section_box = document.querySelector('.section-box-col');
+        const section_box = document.querySelector('.section-box');
         section_box.addEventListener('touchstart', function (event) {
             $(".diamond-square").css("display", "block");
             $("body").css("cursor", "none");
@@ -1420,6 +1426,32 @@
                     e.preventDefault();
                     swiper.mousewheel.handleMousewheel(e);
                 });
+            });
+
+            const viewport_height = document.querySelector('.section-home-project-fingertips');
+            function isScrolledIntoView(elem) {
+                var docViewTop = $(window).scrollTop();
+                var docViewBottom = docViewTop + $(window).height();
+                var elemTop = $(elem).offset().top;
+                var elemBottom = elemTop + ($(elem).height() / 3);
+                return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+            }
+
+            function animateOnScroll() {
+                $('.section-home-project-fingertips').each(function () {
+                    if (isScrolledIntoView(this) === true) {
+                        $("#custom-swiper-slider").addClass('custom-swiper-animate-pause');
+                    }
+                    else {
+                        $("#custom-swiper-slider").removeClass('custom-swiper-animate-pause');
+                        swiper.mousewheel.enable();
+
+                    }
+                });
+            }
+
+            $(window).scroll(function () {
+                animateOnScroll()
             });
             // Create the progress bars container
             var slider = $('.home-how-it-works-slider-swiper');
