@@ -238,9 +238,13 @@ $(document).ready(function () {
         mousewheel: {
             enabled: false,
             releaseOnEdges: true,
-            sensitivity: 9,
+            sensitivity: 2,
         },
-
+        breakpoints: {
+            320: {
+                allowTouchMove: true,
+            },
+          }
     });
     swiper.on("slideChangeTransitionStart", function () {
         $("body").addClass("is-swiper-animating");
