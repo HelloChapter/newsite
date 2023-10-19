@@ -234,18 +234,27 @@ $(document).ready(function () {
         fadeEffect: {
             crossFade: true
         },
-        speed: 400,
+        speed: 600,
         mousewheel: {
             enabled: false,
             releaseOnEdges: true,
+            sensitivity: 2,
         },
 
     });
     swiper.on("slideChangeTransitionStart", function () {
         $("body").addClass("is-swiper-animating");
+        const isFirstSlide = swiper.isBeginning;
+        if (isFirstSlide) {
+          toggleMousewheelControl(true);
+        }
     });
     swiper.on("slideChangeTransitionEnd", function () {
         $("body").removeClass("is-swiper-animating");
+        const isLastSlide = swiper.isEnd;
+        if (isLastSlide) {
+          toggleMousewheelControl(true);
+        }
     });
     // Function to enable/disable mousewheel control
     function toggleMousewheelControl(enable) {
@@ -259,7 +268,7 @@ $(document).ready(function () {
     window.addEventListener('scroll', function () {
         var section = document.querySelector('.home-how-it-works-slider-swiper');
         var sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop <= 130) {
+        if (sectionTop <= 125) {
             toggleMousewheelControl(true);
         } else {
             toggleMousewheelControl(false);
@@ -279,9 +288,9 @@ $(document).ready(function () {
         });
     });
 
-    const viewport_height = document.querySelector('.section-home-project-fingertips');
+    const viewport_height = document.querySelector('.custom-swiper-slider');
     function isScrolledIntoView(elem) {
-        var docViewTop = $(window).scrollTop();
+        var docViewTop = $(window).scrollTop() + 114;
         var docViewBottom = docViewTop + $(window).height();
         var elemTop = $(elem).offset().top;
         var elemBottom = elemTop + ($(elem).height() / 3);
@@ -289,20 +298,14 @@ $(document).ready(function () {
     }
 
     function animateOnScroll() {
-        $('.section-home-project-fingertips').each(function () {
+        $('.custom-swiper-slider').each(function () {
             if (isScrolledIntoView(this) === true) {
                 $(".custom-swiper-slider").addClass('custom-swiper-animate-pause');
-                swiper.allowSlideNext = false;
-                swiper.allowSlidePrev = false;
-                swiper.mousewheel.enabled = false;
-                swiper.disable();
+                swiper.enable();
             }
             else {
                 $(".custom-swiper-slider").removeClass('custom-swiper-animate-pause');
-                swiper.allowSlideNext = true;
-                swiper.allowSlidePrev = true;
-                swiper.mousewheel.enabled = true;
-                swiper.enable();
+                swiper.disable();
             }
         });
     }
@@ -316,7 +319,7 @@ $(document).ready(function () {
     var totalSlides = swiper.slides.length;
     // Function to create and update progress bars
     function updateProgressBars() {
-        var activeIndex = swiper.activeIndex + 1; // Add 1 because indices are zero-based
+        var activeIndex = swiper.activeIndex + 1; 
         progressBarsContainer.html('');
         for (var i = 0; i < totalSlides; i++) {
             var progressBar = $('<div class="progress-bar"></div>');
@@ -329,7 +332,6 @@ $(document).ready(function () {
 
     // Initial update of progress bars
     updateProgressBars();
-    // Handle click events on progress bars
     progressBarsContainer.on('click', '.progress-bar', function () {
         var index = $(this).index();
         swiper.slideTo(index);
@@ -341,7 +343,7 @@ $(document).ready(function () {
 });
 // ready function end
 var lastScrollTop = 0;
-var delta = 3; // Minimum scroll distance to trigger slide change
+var delta = 3; 
 
 $(window).on('load', function () {
     story_animation();

@@ -306,7 +306,7 @@ window.addEventListener('resize', function (event) {
 }, true);
 function calculate_slider_height() {
     var divHeight = $('.home-how-it-works-slider-swiper .slider-item').height();
-    var divTotalHeight = divHeight * 4;
+    var divTotalHeight = divHeight * 6;
     var setHeight = $('.empty-height-div');
     setHeight.height(divTotalHeight);
 }
