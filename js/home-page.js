@@ -238,7 +238,7 @@ $(document).ready(function () {
         mousewheel: {
             enabled: false,
             releaseOnEdges: true,
-            sensitivity: 2,
+            sensitivity: 9,
         },
 
     });
@@ -246,14 +246,14 @@ $(document).ready(function () {
         $("body").addClass("is-swiper-animating");
         const isFirstSlide = swiper.isBeginning;
         if (isFirstSlide) {
-          toggleMousewheelControl(true);
+            toggleMousewheelControl(true);
         }
     });
     swiper.on("slideChangeTransitionEnd", function () {
         $("body").removeClass("is-swiper-animating");
         const isLastSlide = swiper.isEnd;
         if (isLastSlide) {
-          toggleMousewheelControl(true);
+            toggleMousewheelControl(true);
         }
     });
     // Function to enable/disable mousewheel control
@@ -290,12 +290,17 @@ $(document).ready(function () {
 
     const viewport_height = document.querySelector('.custom-swiper-slider');
     function isScrolledIntoView(elem) {
-        var docViewTop = $(window).scrollTop() + 114;
+        var docViewTop = $(window).scrollTop() + (window.innerWidth < 768 ? 92 : 144);
+        // console.log(window.innerWidth < 768 ? 92 : 144);
         var docViewBottom = docViewTop + $(window).height();
         var elemTop = $(elem).offset().top;
         var elemBottom = elemTop + ($(elem).height() / 3);
         return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     }
+
+    window.addEventListener('resize', function (event) {
+        animateOnScroll();
+    }, true);
 
     function animateOnScroll() {
         $('.custom-swiper-slider').each(function () {
@@ -319,7 +324,7 @@ $(document).ready(function () {
     var totalSlides = swiper.slides.length;
     // Function to create and update progress bars
     function updateProgressBars() {
-        var activeIndex = swiper.activeIndex + 1; 
+        var activeIndex = swiper.activeIndex + 1;
         progressBarsContainer.html('');
         for (var i = 0; i < totalSlides; i++) {
             var progressBar = $('<div class="progress-bar"></div>');
@@ -343,7 +348,7 @@ $(document).ready(function () {
 });
 // ready function end
 var lastScrollTop = 0;
-var delta = 3; 
+var delta = 3;
 
 $(window).on('load', function () {
     story_animation();
