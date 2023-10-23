@@ -1157,12 +1157,12 @@ footer .col-news-letter button img {
 }
 @media (max-width: 1023px) {
   .section-project-category {
-    top: 100px;
+    top: 98px;
   }
 }
 @media (max-width: 767px) {
   .section-project-category {
-    top: 96px;
+    top: 94px;
   }
 }
 .new-projects-card-layout {
