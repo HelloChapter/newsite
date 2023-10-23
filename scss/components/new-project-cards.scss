@@ -31,6 +31,19 @@
                 margin-bottom: 32px;
             }
         }
+        .coming-soon-card {
+            .slick-dots {
+                display: none !important;
+            }
+            .link-text {
+                h6 {
+                    line-height: 50px;
+                    font-weight: 400;
+                    font-size: 17px;
+                    font-family: "Inter";
+                }
+            }
+        }
 
         .slider-image {
             min-height: 342px;
@@ -212,9 +225,11 @@
                 line-height: 50px;
             }
         }
+
         .newyork-section-title {
             padding-top: 0;
         }
+
         .card-groups {
             .row {
                 margin: 0 -12px;
@@ -292,6 +307,7 @@
                 line-height: 29px;
             }
         }
+
         .newyork-section-title {
             padding-top: 0;
         }

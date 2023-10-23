@@ -1194,6 +1194,15 @@ footer .col-news-letter button img {
           flex: 0 0 33.33%;
   margin-bottom: 32px;
 }
+.new-projects-card-layout .card-groups .coming-soon-card .slick-dots {
+  display: none !important;
+}
+.new-projects-card-layout .card-groups .coming-soon-card .link-text h6 {
+  line-height: 50px;
+  font-weight: 400;
+  font-size: 17px;
+  font-family: "Inter";
+}
 .new-projects-card-layout .card-groups .slider-image {
   min-height: 342px;
 }
