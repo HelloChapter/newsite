@@ -106,6 +106,62 @@ jQuery(document).ready(function ($) {
 
     });
     // Home slider end
+    $('.home-new-projects-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        speed: 0,
+        autoplaySpeed: 3000,
+        fade: true,
+        dots: true,
+        nextArrow: $('.custom-arrow .slick-next'),
+        appendDots: $('.custom-slick-dots'),
+        cssEase: 'ease-in-out',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    adaptiveHeight: true
+                }
+            },
+        ],
+    });
+    var activeClass = 'slick-active',
+        ariaAttribute = 'aria-hidden';
+    $('.home-new-projects-slider')
+        .on('init', function () {
+            $('.slick-dots li:first-of-type').addClass(activeClass).attr(ariaAttribute, false);
+        })
+        .on('afterChange', function (event, slick, currentSlide) {
+            var $dots = $('.slick-dots');
+            $('li', $dots).removeClass(activeClass).attr(ariaAttribute, true);
+            $dots.each(function () {
+                $('li', $(this)).eq(currentSlide).addClass(activeClass).attr(ariaAttribute, false);
+            });
+        });
+    // home-new-projects-slider end
+    $('.home-client-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        speed: 800,
+        autoplaySpeed: 3000,
+        dots: true,
+        fade: true,
+        // variableWidth:true,
+        prevArrow: '.custom-next-arrow',
+        cssEase: 'ease-in-out',
+    });
+    // home-client-slider end
+
+    var sectionInView = false;
+
+    calculate_slider_height();
+
+    // home-how-it-works-slider end
+
     $('.after-before-slider').slick({
         infinite: true,
         slidesToShow: 1,
@@ -163,6 +219,62 @@ jQuery(document).ready(function ($) {
         ]
     });
     // Review slider end
+    $('.new-projects-card-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        speed: 600,
+        autoplaySpeed: 3000,
+        autoplay: false,
+        dots: true,
+        fade: true,
+        cssEase: 'ease-in-out',
+    });
+    // new projects pages card slider end
+    $('.announcement-bar').slick({
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 35000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        fade: false,
+        variableWidth: true,
+        centerMode: true,
+        cssEase: 'linear',
+    });
+    // announcement-bar slider end
+    //NYC projects more cards
+    $('.show-lesss-btn').hide();
+    $(".expand-project-nyc-btn .show-all-btn").click(function (event) {
+        $(this).hide();
+        $('.expand-project-nyc-btn .show-lesss-btn').show();
+        $(".expand-all-nyc-projects").slideDown();
+        $('.new-projects-card-slider').slick('reinit');
+    });
+    $(".expand-project-nyc-btn .show-lesss-btn").click(function (event) {
+        $(this).hide();
+        $('.expand-project-nyc-btn .show-all-btn').show();
+        $(".expand-all-nyc-projects").slideUp();
+        $('.new-projects-card-slider').slick('reinit');
+    });
+    //Miami projects more cards
+    $('.show-lesss-btn').hide();
+    $(".miami-card-groups .expand-project-btn .show-all-btn").click(function (event) {
+        $(this).hide();
+        $('.miami-card-groups .show-lesss-btn').show();
+        $(".miami-card-groups .expand-all-projects").slideDown();
+        $('.new-projects-card-slider').slick('reinit');
+    });
+    $(".miami-card-groups .expand-project-btn .show-lesss-btn").click(function (event) {
+        $(this).hide();
+        $('.miami-card-groups .show-all-btn').show();
+        $(".miami-card-groups .expand-all-projects").slideUp();
+        $('.new-projects-card-slider').slick('reinit');
+    });
     AOS.init({
         duration: 1200,
     });
@@ -188,7 +300,7 @@ $(".after-before-btn-wrap .before-btn").click(function (e) {
     // const sliderPos = e.target.value;
     setTimeout(() => {
         // Update the width of the foreground image
-        const sliderPos =  e.target.parentElement.parentElement.querySelector(".range-slider").value = "100";
+        const sliderPos = e.target.parentElement.parentElement.querySelector(".range-slider").value = "100";
         $(this).parents('.two-joint-images').find(".foreground-img").css('width', '100%');
         // Update the position of the slider button
         $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(100% - 40px)`);
@@ -196,10 +308,19 @@ $(".after-before-btn-wrap .before-btn").click(function (e) {
 });
 $(".two-joint-images .after-before-btn-wrap .after-btn").click(function (e) {
     setTimeout(() => {
-        const sliderPos =  e.target.parentElement.parentElement.querySelector(".range-slider").value = "0";
+        const sliderPos = e.target.parentElement.parentElement.querySelector(".range-slider").value = "0";
         $(this).parents('.two-joint-images').find(".foreground-img").css('width', '0%');
         $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(0px)`);
     }, 10);
 });
 
-  // After Before Js end
+// After Before Js end
+window.addEventListener('resize', function (event) {
+    calculate_slider_height();
+}, true);
+function calculate_slider_height() {
+    var divHeight = $('.home-how-it-works-slider-swiper .slider-item').height();
+    var divTotalHeight = divHeight * 3;
+    var setHeight = $('.empty-height-div');
+    setHeight.height(divTotalHeight);
+}
