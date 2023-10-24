@@ -106,7 +106,7 @@ jQuery(document).ready(function ($) {
 
     });
     // Home slider end
-     $('.home-new-projects-slider').slick({
+    $('.home-new-projects-slider').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -247,18 +247,32 @@ jQuery(document).ready(function ($) {
         cssEase: 'linear',
     });
     // announcement-bar slider end
-
+    //NYC projects more cards
     $('.show-lesss-btn').hide();
-    $(".expand-project-btn .show-all-btn").click(function (event) {
+    $(".expand-project-nyc-btn .show-all-btn").click(function (event) {
         $(this).hide();
-        $('.show-lesss-btn').show();
-        $(".expand-all-projects").slideDown();
+        $('.expand-project-nyc-btn .show-lesss-btn').show();
+        $(".expand-all-nyc-projects").slideDown();
         $('.new-projects-card-slider').slick('reinit');
     });
-    $(".expand-project-btn .show-lesss-btn").click(function (event) {
+    $(".expand-project-nyc-btn .show-lesss-btn").click(function (event) {
         $(this).hide();
-        $('.show-all-btn').show();
-        $(".expand-all-projects").slideUp();
+        $('.expand-project-nyc-btn .show-all-btn').show();
+        $(".expand-all-nyc-projects").slideUp();
+        $('.new-projects-card-slider').slick('reinit');
+    });
+    //Miami projects more cards
+    $('.show-lesss-btn').hide();
+    $(".miami-card-groups .expand-project-btn .show-all-btn").click(function (event) {
+        $(this).hide();
+        $('.miami-card-groups .show-lesss-btn').show();
+        $(".miami-card-groups .expand-all-projects").slideDown();
+        $('.new-projects-card-slider').slick('reinit');
+    });
+    $(".miami-card-groups .expand-project-btn .show-lesss-btn").click(function (event) {
+        $(this).hide();
+        $('.miami-card-groups .show-all-btn').show();
+        $(".miami-card-groups .expand-all-projects").slideUp();
         $('.new-projects-card-slider').slick('reinit');
     });
     AOS.init({
