@@ -361,7 +361,7 @@
         //transform: rotate(270deg);
         position: absolute;
         left: calc(50% - 34px);
-        top: calc(100% - 170px);
+        top: calc(100% - 200px);
     }
 
     .button-label {
@@ -577,8 +577,8 @@
     }
 
     .col-col-right {
-        max-width: 29.9%;
-        flex: 0 0 29.9%;
+        max-width: 28.9%;
+        flex: 0 0 28.9%;
         padding-right: 33px;
     }
 
@@ -646,8 +646,8 @@
 
     .home-how-it-works-slider-swiper {
         padding-top: 58px;
-        padding-right: 145px;
-        padding-left: 145px;
+        padding-right: 115px;
+        padding-left: 115px;
         margin: 0 auto;
 
         .slick-arrow {
@@ -771,8 +771,8 @@
             padding: 0 80px;
         }
         .home-how-it-works-slider-swiper {
-            padding-left: 110px;
-            padding-right: 110px;
+            padding-left: 80px;
+            padding-right: 80px;
         }
     }
 }
@@ -830,8 +830,8 @@
             padding: 0 60px;
         }
         .home-how-it-works-slider-swiper {
-            padding-left: 90px;
-            padding-right: 90px;
+            padding-left: 60px;
+            padding-right: 60px;
         }
     }
 }
@@ -1258,7 +1258,7 @@
 
         .scroll-button-wrapper .line {
             height: 38px;
-            top: -22px;
+            top: -28px;
         }
 
         .video-box-wrap {
