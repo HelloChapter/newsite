@@ -98,7 +98,7 @@ function redirectToThankYou() {
         localStorage.setItem("formSubmitted", true);
     }
     var url = window.location.href;
-    if (!url.includes("?submit=true")) {
+    if (!url.includes("submit=true")) {
         if (url.indexOf("?") !== -1) {
             url = url + "&submit=true";
         } else {
@@ -111,7 +111,7 @@ function redirectToThankYou() {
 }
 // Contact Submit 
 var url_check = window.location.href;
-if (url_check.includes("?submit=true")) {
+if (url_check.includes("submit=true")) {
     $(".form-fields-wrap").hide();
     $(".thank-you-wrap").show();
 }
