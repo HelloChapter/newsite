@@ -66,6 +66,17 @@ jQuery(document).ready(function ($) {
         }
         inputQuantity[$thisIndex] = val;
     });
+    var url_check = window.location.href;
+    if (url_check.includes("submit=true")) {
+        $(".form-fields-wrap").hide();
+        $(".thank-you-wrap").show();
+        var stickyHeaderHeight = 160;
+
+        var offset = $('.thank-you-wrap').offset().top - stickyHeaderHeight;
+        $('html, body').animate({
+            scrollTop: offset
+        }, 400);
+    }
 });
 /*Ready function end*/
 window.fbq('track', 'Contact', { value: 0, currency: 'USD' });
@@ -97,24 +108,20 @@ function redirectToThankYou() {
     if (localStorage.getItem("qr_status")) {
         localStorage.setItem("formSubmitted", true);
     }
-    var url = window.location.href;
+    // var url = window.location.href;
+    window.location.href = "/thank-you-message-home/?submit=true";
+    var url ="/thank-you-message-home/?submit=true";
     if (!url.includes("submit=true")) {
         if (url.indexOf("?") !== -1) {
             url = url + "&submit=true";
         } else {
             url = url + "?submit=true";
         }
-        window.location.href = url;
     }
     $(".form-fields-wrap").hide();
     $(".thank-you-wrap").show();
 }
 // Contact Submit 
-var url_check = window.location.href;
-if (url_check.includes("submit=true")) {
-    $(".form-fields-wrap").hide();
-    $(".thank-you-wrap").show();
-}
 //code for back button pressed the form will reset
 window.addEventListener("pageshow", (event) => {
     if (event.persisted) {
@@ -183,7 +190,7 @@ function handleContactSubmit(e) {
         return false;
     }
     if (isValid) {
-        var emailElement = document.getElementById('contact-email-field-id');
+        var emailElement = document.getElementById('contact-email-field-id-home');
 
         if (emailElement) {
             localStorage.setItem('email', emailElement.value);
