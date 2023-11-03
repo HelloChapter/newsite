@@ -75,28 +75,40 @@ $(document).ready(function () {
     });
 
     // how it works slider js
-    const section = document.getElementById("custom-swiper-slider");
-    var swiper = new Swiper(".home-how-it-works-slider-swiper", {
-        direction: "horizontal",
-        slidesPerView: 1,
-        parallax: false,
-        spaceBetween: 50,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-        speed: 600,
-        // scrollbar: {
-        //     el: ".col-col-left",
-        // },
-        mousewheel: {
-            enabled: false,
-            releaseOnEdges: true,
-            sensitivity: 1,
-            thresholdDelta: null,
-            thresholdTime: null,
-        }
-    });
+    let swiper;
+    function isTouchDeviceBelowIpadPro() {
+        return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        // const ipadProWidth = 1197;
+        // return (
+        //     'ontouchstart' in window && window.innerWidth < ipadProWidth
+        // );
+    }
+    function initializeSwiper() {
+        const swiperDirection = isTouchDeviceBelowIpadPro() ? 'vertical' : 'horizontal';
+        console.log(swiperDirection)
+        swiper = new Swiper(".home-how-it-works-slider-swiper", {
+            direction: swiperDirection,
+            slidesPerView: 1,
+            parallax: false,
+            spaceBetween: 50,
+            effect: 'fade',
+            autoHeight: true,
+            updateOnWindowResize: true,
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 600,
+            mousewheel: {
+                enabled: false,
+                releaseOnEdges: true,
+                sensitivity: 1,
+                thresholdDelta: null,
+                thresholdTime: null,
+            }
+        });
+    }
+    initializeSwiper();
+
     swiper.on("slideChangeTransitionStart", function () {
         $("body").addClass("is-swiper-animating");
         const isFirstSlide = swiper.isBeginning;
@@ -105,6 +117,8 @@ $(document).ready(function () {
         }
     });
     swiper.on("slideChangeTransitionEnd", function () {
+        console.log(swiper.isEnd)
+
         $("body").removeClass("is-swiper-animating");
         const isLastSlide = swiper.isEnd;
         if (isLastSlide) {
@@ -119,24 +133,51 @@ $(document).ready(function () {
             swiper.mousewheel.disable();
         }
     }
-
-    window.addEventListener('scroll', function () {
+    // window.addEventListener('scroll', function () {
+    //     var section = document.querySelector('.home-how-it-works-slider-swiper');
+    //     var sectionTop = section.getBoundingClientRect().top;
+    //     if (sectionTop <= 125) {
+    //         toggleMousewheelControl(true);
+    //     } else {
+    //         toggleMousewheelControl(false);
+    //     }
+    // });
+    function updateSectionTop() {
         var section = document.querySelector('.home-how-it-works-slider-swiper');
-        var sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop <= 125) {
+        count_box = $('.section-home-how-it-works-slider .home-how-it-works-slider-position');
+        console.log("home-how-it-works-slider-position", count_box);
+        if (count_box.length) {
+            var intTotalHeight = count_box.offset().top;
+            console.log("count_box Height", intTotalHeight);
+        }
+        if (($(this).scrollTop()) >= intTotalHeight) {
             toggleMousewheelControl(true);
         } else {
             toggleMousewheelControl(false);
+        console.log("Current", $(this).scrollTop());
+
+            $(document).off("mousewheel");
+        }
+        // var sectionTop = section.getBoundingClientRect().top;
+        // if ((window.innerWidth > 1023) && (sectionTop <= 125)) {
+        //     toggleMousewheelControl(true);
+        // } else {
+        //     toggleMousewheelControl(false);
+        // }
+    }
+
+    window.addEventListener('scroll', updateSectionTop);
+    window.addEventListener('resize', updateSectionTop);
+
+    swiper.on("transitionEnd", function () {
+        if (swiper.isEnd) {
+            console.log("Reached the end of the swiper");
+            toggleMousewheelControl(false);
+            $(document).off("mousewheel");
         }
     });
-
-    swiper.on("reachEnd", function () {
-        toggleMousewheelControl(false);
-        $(document).off("mousewheel");
-    });
-
     swiper.on("fromEdge", function () {
-        toggleMousewheelControl(true);
+        toggleMousewheelControl(false);
         $(document).on("mousewheel", function (e) {
             e.preventDefault();
             swiper.mousewheel.handleMousewheel(e);
@@ -145,8 +186,7 @@ $(document).ready(function () {
 
     const viewport_height = document.querySelector('.custom-swiper-slider');
     function isScrolledIntoView(elem) {
-        var docViewTop = $(window).scrollTop() + (window.innerWidth < 768 ? 92 : 114);
-        //console.log(window.innerWidth < 768 ? 92 : 144);
+        var docViewTop = $(window).scrollTop() + (window.innerWidth < 1024 ? 92 : 114);
         var docViewBottom = docViewTop + $(window).height();
         var elemTop = $(elem).offset().top;
         var elemBottom = elemTop + ($(elem).height() / 3);
