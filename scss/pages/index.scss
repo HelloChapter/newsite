@@ -19,6 +19,26 @@
 .is-swiper-animating {
     // overflow: hidden !important;
 }
+.home-how-it-works-slider-swiper {
+   // border: solid 2px red;
+}
+.position-mobile-div {
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.custom-swiper-body {
+    .position-mobile-div {
+        display: block;
+    }
+}
+
 
 .announcement-bar {
     position: fixed;
@@ -659,7 +679,7 @@
         padding-right: 115px;
         padding-left: 115px;
         margin: 0 auto;
-
+min-height: calc(100vh - 115px);
         .slick-arrow {
             display: none !important;
         }

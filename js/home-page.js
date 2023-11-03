@@ -66,7 +66,7 @@ $(document).ready(function () {
         if (video.paused || video.ended) {
             $(this).removeClass("video-played");
             video.play().catch(function (error) {
-                console.error("Failed to play video:", error.message);
+                // console.error("Failed to play video:", error.message);
             });
         } else {
             video.pause();
@@ -75,7 +75,7 @@ $(document).ready(function () {
     });
 
     // how it works slider js
-    let swiper;
+    var swiper;
     function isTouchDeviceBelowIpadPro() {
         return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
         // const ipadProWidth = 1197;
@@ -85,15 +85,15 @@ $(document).ready(function () {
     }
     function initializeSwiper() {
         const swiperDirection = isTouchDeviceBelowIpadPro() ? 'vertical' : 'horizontal';
-        console.log(swiperDirection)
+        // console.log(swiperDirection)
         swiper = new Swiper(".home-how-it-works-slider-swiper", {
+            enabled: false,
             direction: swiperDirection,
             slidesPerView: 1,
             parallax: false,
             spaceBetween: 50,
             effect: 'fade',
             autoHeight: true,
-            updateOnWindowResize: true,
             fadeEffect: {
                 crossFade: true
             },
@@ -117,21 +117,25 @@ $(document).ready(function () {
         }
     });
     swiper.on("slideChangeTransitionEnd", function () {
-        console.log(swiper.isEnd)
-
         $("body").removeClass("is-swiper-animating");
         const isLastSlide = swiper.isEnd;
         if (isLastSlide) {
             toggleMousewheelControl(true);
         }
     });
+
     // Function to enable/disable mousewheel control
     function toggleMousewheelControl(enable) {
         if (enable) {
+            // console.log('ver')
+            // swiper.direction = 'vertical'
             swiper.mousewheel.enable();
         } else {
+            // swiper.direction = 'horizontal'
             swiper.mousewheel.disable();
         }
+
+        // console.log(swiper)
     }
     // window.addEventListener('scroll', function () {
     //     var section = document.querySelector('.home-how-it-works-slider-swiper');
@@ -143,18 +147,18 @@ $(document).ready(function () {
     //     }
     // });
     function updateSectionTop() {
-        var section = document.querySelector('.home-how-it-works-slider-swiper');
+        // var section = document.querySelector('.home-how-it-works-slider-swiper');
         count_box = $('.section-home-how-it-works-slider .home-how-it-works-slider-position');
-        console.log("home-how-it-works-slider-position", count_box);
+        // console.log("slider-position", count_box);
         if (count_box.length) {
             var intTotalHeight = count_box.offset().top;
-            console.log("count_box Height", intTotalHeight);
+            // console.log("count_box Height", intTotalHeight);
         }
         if (($(this).scrollTop()) >= intTotalHeight) {
             toggleMousewheelControl(true);
         } else {
             toggleMousewheelControl(false);
-        console.log("Current", $(this).scrollTop());
+            // console.log("Current", $(this).scrollTop());
 
             $(document).off("mousewheel");
         }
@@ -169,15 +173,93 @@ $(document).ready(function () {
     window.addEventListener('scroll', updateSectionTop);
     window.addEventListener('resize', updateSectionTop);
 
+    function handleTouchStart(evt) {
+        const firstTouch = getTouches(evt)[0];                                      
+        xDown = firstTouch.clientX;                                      
+        yDown = firstTouch.clientY;                                      
+    }; 
+
+    function handleTouchMove(evt) {
+        if ( ! xDown || ! yDown ) {
+            return;
+        }
+    
+        var xUp = evt.touches[0].clientX;                                    
+        var yUp = evt.touches[0].clientY;
+    
+        var xDiff = xDown - xUp;
+        var yDiff = yDown - yUp;
+
+        count_box = $('.section-home-how-it-works-slider .home-how-it-works-slider-position');
+        if (count_box.length) {
+            var intTotalHeight = count_box.offset().top;
+            // console.log("count_box Height", intTotalHeight);
+        }
+        if (($(this).scrollTop()) != intTotalHeight){
+            // do nothing
+            return false
+        }
+
+        // go beyond this only if above is all good
+
+
+        if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+            if ( xDiff > 0 ) {
+                /* right swipe */ 
+            } else {
+                /* left swipe */
+            }                       
+        } else {
+            if(yDiff<0){
+                // debugger;
+            }
+            var scrollHeight = $('.home-how-it-works-slider-swiper .slider-item').height() * 3;
+            if ( yDiff > 0 ) {
+                if(swiper?.activeIndex===2){
+                    console.log(swiper)
+                    // set page scroll to +100
+                    window.scrollBy(0, scrollHeight);
+                    // debugger;
+                }
+                /* down swipe */ 
+            } else if(yDiff<0) { 
+                // debugger
+                if(swiper?.activeIndex===0){
+                    console.log(swiper)
+                    // set page scroll to -100
+                    window.scrollTo(0, scrollHeight*(-1));
+                    // debugger;
+                }
+            }                                                                 
+        }
+    }
+     document.addEventListener('touchmove', handleTouchMove, false);
+     document.addEventListener('touchstart', handleTouchStart, false);        
+
+     var xDown = null;                                                        
+     var yDown = null;
+     
+     function getTouches(evt) {
+       return evt.touches ||             // browser API
+              evt.originalEvent.touches; // jQuery
+     }                                                     
+        
     swiper.on("transitionEnd", function () {
         if (swiper.isEnd) {
-            console.log("Reached the end of the swiper");
-            toggleMousewheelControl(false);
             $(document).off("mousewheel");
+            toggleMousewheelControl(false);
         }
     });
+
+    swiper.on("transitionStart", function () {
+        if (swiper.isBeginning) {
+
+        }
+    });
+   
     swiper.on("fromEdge", function () {
         toggleMousewheelControl(false);
+        $("body").removeClass('custom-swiper-body');
         $(document).on("mousewheel", function (e) {
             e.preventDefault();
             swiper.mousewheel.handleMousewheel(e);

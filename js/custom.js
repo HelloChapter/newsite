@@ -320,8 +320,8 @@ window.addEventListener('resize', function (event) {
 }, true);
 function calculate_slider_height() {
     var divHeight = $('.home-how-it-works-slider-swiper .slider-item').height();
-   //var divTotalHeight = divHeight * 3;
-    var divTotalHeight = 1500;
+  var divTotalHeight = divHeight * 3;
+   // var divTotalHeight = 1500;
     var setHeight = $('.empty-height-div');
     setHeight.height(divTotalHeight);
 }
