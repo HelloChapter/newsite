@@ -320,8 +320,11 @@ window.addEventListener('resize', function (event) {
 }, true);
 function calculate_slider_height() {
     var divHeight = $('.home-how-it-works-slider-swiper .slider-item').height();
-  var divTotalHeight = divHeight * 3;
-   // var divTotalHeight = 1500;
+    // detect screen size here and adjust div height accordingly
+    var viewportWidth = window.innerWidth;
+    const magicScrollNumber = 170;
+    var divTotalHeight = divHeight * (viewportWidth/magicScrollNumber);
+
     var setHeight = $('.empty-height-div');
     setHeight.height(divTotalHeight);
 }
