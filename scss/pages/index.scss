@@ -17,8 +17,28 @@
 @import "../components/modals.scss";
 
 .is-swiper-animating {
-   // overflow: hidden !important;
+    // overflow: hidden !important;
 }
+.home-how-it-works-slider-swiper {
+   // border: solid 2px red;
+}
+.position-mobile-div {
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.custom-swiper-body {
+    .position-mobile-div {
+        display: block;
+    }
+}
+
 
 .announcement-bar {
     position: fixed;
@@ -516,6 +536,16 @@
     padding: 165px 0 87px;
     letter-spacing: 0;
 
+    .swiper-slide {
+        height: 100% !important;
+        // opacity: 0 !important;
+        // overflow: hidden;
+    }
+
+    .swiper-slide-active {
+        opacity: 1 !important;
+    }
+
     .container {
         padding: 0;
         max-width: 100%;
@@ -533,6 +563,7 @@
 
     .heading-content-wrap {
         padding: 0 115px;
+        margin-bottom: 115px;
     }
 
     .heading-content {
@@ -588,7 +619,6 @@
     }
 
     .home-how-it-works-slider-wrap {
-        margin-top: 115px;
         height: 100%;
         position: sticky;
         top: 125px;
@@ -649,7 +679,7 @@
         padding-right: 115px;
         padding-left: 115px;
         margin: 0 auto;
-
+min-height: calc(100vh - 115px);
         .slick-arrow {
             display: none !important;
         }
@@ -764,12 +794,15 @@
         .heading-content p {
             font-size: 35px;
         }
+
         .home-how-it-works-slider-wrap .progress-bars {
             width: calc(100% - 160px);
         }
+
         .heading-content-wrap {
             padding: 0 80px;
         }
+
         .home-how-it-works-slider-swiper {
             padding-left: 80px;
             padding-right: 80px;
@@ -823,12 +856,15 @@
         .col-col-right {
             padding-right: 0;
         }
+
         .home-how-it-works-slider-wrap .progress-bars {
             width: calc(100% - 120px);
         }
+
         .heading-content-wrap {
             padding: 0 60px;
         }
+
         .home-how-it-works-slider-swiper {
             padding-left: 60px;
             padding-right: 60px;
@@ -942,12 +978,14 @@
             margin-bottom: 42px;
         }
 
-        .home-how-it-works-slider-wrap {
-            margin-top: 65px;
+        .heading-content-wrap {
+            margin-bottom: 65px;
         }
+
         .home-how-it-works-slider-wrap .progress-bars {
             width: calc(100% - 118px);
         }
+
         .heading-content-wrap {
             padding: 0 59px;
         }
@@ -1002,8 +1040,16 @@
     .section-new-intro-image .video-box-wrap {
         padding: 137px 40px 60px;
     }
-   .section-confident .diamond-square {
+
+    .section-confident .diamond-square {
         display: none !important;
+    }
+
+    .section-home-how-it-works-slider .home-how-it-works-slider-main {
+        .home-how-it-works-slider-wrap {
+            //  max-height: calc(100vh - 90px);
+            //overflow: hidden;
+        }
     }
 }
 
@@ -1149,8 +1195,12 @@
     }
 
     .section-home-how-it-works-slider {
+        .heading-content-wrap {
+            margin-bottom: 50px;
+        }
+
         .home-how-it-works-slider-wrap {
-            top: 105px;
+            top: 100px;
         }
 
         .home-how-it-works-slider-swiper {
@@ -1286,6 +1336,7 @@
                 .new-section-title {
                     margin-bottom: 37px;
                 }
+
                 p {
                     padding-right: 40px;
                 }
@@ -1307,7 +1358,8 @@
             .section-box-item {
                 margin: 0 30px;
                 max-width: calc(50% - 60px);
-                flex:0 0 calc(50% - 60px);
+                flex: 0 0 calc(50% - 60px);
+
                 &:first-child,
                 &:nth-child(2) {
                     margin-bottom: 72px;
@@ -1340,9 +1392,11 @@
             }
         }
 
-        .home-how-it-works-slider-wrap {
-            margin-top: 85px;
+        .heading-content-wrap {
+            margin-bottom: 85px;
+        }
 
+        .home-how-it-works-slider-wrap {
             .progress-bars {
                 width: calc(100% - 16px);
             }
@@ -1353,13 +1407,16 @@
                 }
             }
         }
+
         .home-how-it-works-slider-swiper {
             padding-left: 30px;
             padding-right: 30px;
         }
+
         .home-how-it-works-slider-wrap .progress-bars {
             width: calc(100% - 60px);
         }
+
         .heading-content-wrap {
             padding: 0 30px;
         }
