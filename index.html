@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="https://hellochapter.com/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
-      user-scalable=0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+      user-scalable=0" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>Chapter | Luxury Home Renovation & Remodeling Contractors</title>
     <meta name="description"
         content="Chapter is a professional home renovation contractor company. You get full-service design from a renovation company specializing in luxury interior remodeling of apartments and townhouses specializing the New York City and Miami area." />
@@ -329,7 +330,7 @@
                         </div>
                 </section>
                 <!-- confident Section end -->
-                <section class="section-home-how-it-works-slider black-bg aos-init " data-aos="fade">
+                <section class="section-home-how-it-works-slider black-bg">
                     <div class="container">
                         <div class="heading-content-wrap">
                             <div class="new-section-title">
@@ -344,7 +345,9 @@
                                     you get everything you need for a successful renovation, all from one source.</p>
                             </div>
                         </div>
+                        <div class="slider-position-top"></div>
                         <div class="home-how-it-works-slider-main">
+                            <div class="position-mobile-div"></div>
                             <div class="home-how-it-works-slider-wrap">
                                 <div class="progress-bars-wrap">
                                     <div class="progress-bars"></div>
@@ -496,6 +499,7 @@
                             <div class="empty-height-div">
                             </div>
                         </div>
+                        <div class="slider-position-bottom"></div>
                 </section>
                 <!-- section-home-how-it-works-slider end -->
                 <section class="section-home-project-fingertips pearl-bg2 aos-init " data-aos="fade">
@@ -1135,6 +1139,10 @@
             </footer>
             <!-- Footer end -->
         </div>
+        <!-- for blocking page events -->
+        <!-- <div class='event-blocker'>
+
+        </div> -->
         <!-- Page wrapper end -->
     </div>
     <!-- Wrapper end -->
@@ -1150,6 +1158,7 @@
     <script src="./js/custom.js"></script>
     <script src="./js/contact-home.js"></script>
     <script src="./js/home-page.js"></script>
+    <script src="./js/home-slider.js"></script>
     <script>
     </script>
 
@@ -1159,13 +1168,16 @@
             var animationPath = './js/scroll-animation.json';
             var container = document.getElementById('scrollButton');
             // Load the Lottie animation
-            var animation = lottie.loadAnimation({
-                container: container,
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                path: animationPath
-            });
+            setTimeout(() => {
+                var animation = lottie.loadAnimation({
+                    container: container,
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: animationPath
+                });
+            }, 200);
+
             // Home page client video
 
             $('.modal-home-client-video .btn-close, .modal-home-client-video').click(function () {
