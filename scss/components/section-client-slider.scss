@@ -93,6 +93,7 @@
                 font-family: "Inter";
                 margin-bottom: 27px;
                 letter-spacing: 0;
+                min-height: 265px;
                 //@include default_words_animation;
             }
 
@@ -202,7 +203,7 @@
     .custom-next-arrow {
         display: flex;
         align-items: center;
-        left: calc(142px + 46px);
+        left: calc(142px + 60px);
         position: absolute;
         bottom: 23px;
         font-size: 12px;
@@ -310,6 +311,7 @@
             .content {
                 h2 {
                     font-size: 45px;
+                    min-height: 235px;
                 }
             }
         }
@@ -501,6 +503,7 @@
                 h2 {
                     font-size: 20px;
                     line-height: 24px;
+                    min-height: 100px;
                 }
 
                 h3 {

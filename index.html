@@ -802,6 +802,25 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="slider-item">
+                                        <div class="content">
+                                            <h2>“We would a <br /> 1000% recommend <br />Chapter.”</h2>
+                                            <div class="client-info">
+                                                <h3>katie and Scott / <img src="./images/icons/location2.svg" />
+                                                    Mahattan, NY
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="images-icon">
+                                            <div class="circle-ui"></div>
+                                            <div class="client-image">
+                                                <img src="./images/home/clients/client2.png" alt="image" />
+                                                <button id="openModal3" type="button"
+                                                    class="btn-styled-removed btn-client-play"><img
+                                                        src="./images/icons/play-icon-full.svg" alt="icon" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col col-right">
@@ -1231,6 +1250,25 @@
                     }
                 });
             }
+            function loadYouTubeVideo3(videoId) {
+                var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
+                new YT.Player('player3', {
+                    height: '100%',
+                    width: '100%',
+                    videoId: videoId,
+                    playerVars: {
+                        'playsinline': 1,
+                        'modestbranding': 1,
+                        'rel': 0,
+                        'showinfo': 0,
+                        'iv_load_policy': 3
+                    },
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
 
             function onPlayerReady(event) {
                 event.target.playVideo();
@@ -1241,6 +1279,9 @@
                     client1Modal.remove();
                 } else if (type === 'modal2') {
                     const client2Modal = document.getElementById('client2-modal');
+                    client2Modal.remove();
+                }else if (type === 'modal3') {
+                    const client2Modal = document.getElementById('client3-modal');
                     client2Modal.remove();
                 }
             }
@@ -1283,7 +1324,6 @@
             });
 
             $('#openModal2').click(function () {
-                // create and append modal structure here.
                 const docString2 = `
             <div id="client2-modal" class="modal modal-home-client-video">
                 <div class="modal-backdrop"></div>
@@ -1311,6 +1351,35 @@
 
                 $('#client2-modal').css('display', 'flex');
                 loadYouTubeVideo2('wmmtsXhlG0s');
+            });
+            $('#openModal3').click(function () {
+                const docString2 = `
+            <div id="client3-modal" class="modal modal-home-client-video">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button id="client1-btn-close" class="btn-styled-removed btn-close" data-dismiss="modal">
+                            <img src="./images/icons/close-icon.svg" alt="icon" />
+                        </button>
+                    </div>
+                    <div class="mid-content">
+                        <div class="video-box">
+                            <div id="player3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+                const modalContainer = document.getElementById('clent1-modal-container');
+                modalContainer.innerHTML = docString2;
+
+                // attach event handler for the rendered modal
+                $(".modal-home-client-video .btn-close").on("click", function () {
+                    stopYouTubeVideo("modal3");
+                });
+
+                $('#client3-modal').css('display', 'flex');
+                loadYouTubeVideo3('rsCpcFnADrY');
             });
         });
         // ready function end
