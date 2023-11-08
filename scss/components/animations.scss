@@ -1,0 +1,9 @@
+@mixin default_words_animation {
+    transform: translateY(10rem) rotateX(-90deg);
+    transition: none;
+}
+
+@mixin active_words_animation {
+    transform: translateY(0) rotateX(0);
+                transition: transform 1.2s cubic-bezier(.19, 1, .22, 1), opacity .5s linear;
+}

@@ -63,10 +63,6 @@
     max-width: 100%;
 }
 
-.largeContent .col-img {
-    // min-height: 600px;
-}
-
 .section-image-content {
     .page-title {
         h1+p {
@@ -279,7 +275,9 @@
         }
     }
 }
-
+.section-youtube-video {
+    padding: 50px 0;
+}
 // Responsive Start
 @media (max-width:1600px) {
     .section-what-we-know {

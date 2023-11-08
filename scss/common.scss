@@ -6,6 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Inter';
@@ -22,6 +25,7 @@ body {
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
     text-size-adjust: none;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -161,6 +165,9 @@ h2 {
 }
 .opacity-0 {
     opacity: 0 !important;
+}
+video, iframe {
+    max-width: 100%;
 }
 // Responsive CSS start
 @media (max-width:1600px) {
