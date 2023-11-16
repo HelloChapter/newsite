@@ -151,7 +151,7 @@ jQuery(document).ready(function ($) {
         dots: true,
         fade: true,
         // variableWidth:true,
-        prevArrow: '.custom-next-arrow',
+        nextArrow: '.custom-next-arrow',
         cssEase: 'ease-in-out',
     });
     // home-client-slider end
