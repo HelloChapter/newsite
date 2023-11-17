@@ -86,6 +86,7 @@
             position: relative;
             z-index: 1;
             max-width: 525px;
+            min-height: 310px;
 
             h2 {
                 font-size: 55px;
@@ -195,8 +196,9 @@
         bottom: 0px;
         margin-left: 45px;
         color: $black;
+
         .button-label {
-        color: $black;
+            color: $black;
         }
     }
 
@@ -411,6 +413,7 @@
 
             .content {
                 max-width: 396px;
+                min-height: 240px;
 
                 h2 {
                     font-size: 40px;
@@ -499,6 +502,7 @@
 
             .content {
                 max-width: 231px;
+                min-height: 140px;
 
                 h2 {
                     font-size: 20px;
