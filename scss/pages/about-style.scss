@@ -398,6 +398,10 @@
 
     p {
         line-height: 40px;
+
+        br {
+            display: none;
+        }
     }
 
     .partners-wrap {
@@ -423,6 +427,7 @@
                 background-color: $black;
                 height: 88%;
             }
+
             .col {
                 max-width: 50%;
                 flex: 0 0 50%;
@@ -878,8 +883,14 @@
             letter-spacing: -0.15px;
         }
 
+        p {
+            br {
+                display: block;
+            }
+        }
+
         .heading-section {
-            max-width: 300px;
+            max-width: 345px;
         }
 
         .partners-wrap {
@@ -888,11 +899,13 @@
             img {
                 max-width: 151px;
             }
+
             .col-left {
                 padding-right: 60px;
             }
+
             .col-right {
-                padding-left:60px;
+                padding-left: 60px;
             }
         }
     }
@@ -984,6 +997,7 @@
             padding-bottom: 74%;
         }
     }
+
     .section-about-partners {
         .partners-wrap {
             margin-top: 30px;
@@ -991,11 +1005,13 @@
             img {
                 max-width: 116px;
             }
+
             .col-left {
                 padding-right: 30px;
             }
+
             .col-right {
-                padding-left:30px;
+                padding-left: 30px;
             }
         }
     }

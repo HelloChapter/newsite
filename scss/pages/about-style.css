@@ -1613,6 +1613,9 @@ footer .col-news-letter button img {
 .section-about-partners p {
   line-height: 40px;
 }
+.section-about-partners p br {
+  display: none;
+}
 .section-about-partners .partners-wrap {
   margin: 90px 0 20px;
   line-height: 0;
@@ -1974,8 +1977,11 @@ footer .col-news-letter button img {
     line-height: 30px;
     letter-spacing: -0.15px;
   }
+  .section-about-partners p br {
+    display: block;
+  }
   .section-about-partners .heading-section {
-    max-width: 300px;
+    max-width: 345px;
   }
   .section-about-partners .partners-wrap {
     margin-top: 36px;
