@@ -369,7 +369,11 @@
         padding: 0 59px;
 
         .home-client-slider {
-            padding-bottom: 141px;
+            padding-bottom: 0;
+
+            .slider-item {
+                padding-bottom: 141px;
+            }
         }
 
         .images-icon {
@@ -470,8 +474,11 @@
         position: relative;
 
         .home-client-slider {
-            padding-bottom: 98px;
+            padding-bottom: 0;
             position: static;
+            .slider-item {
+                padding-bottom: 98px;
+            }
         }
 
         .col-right {
@@ -496,7 +503,7 @@
         }
 
         .col-left {
-            max-width: 340px;
+            // max-width: 340px;
             padding: 0;
             position: static;
 
