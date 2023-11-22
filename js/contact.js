@@ -155,6 +155,18 @@ function handleContactSubmit(e) {
     }
 
   }));
+
+  // validation for state
+  var CustomSelect = $("#contact-form select");
+    CustomSelect.each((function () {
+      var selectedOption = $('#selectBox').val();
+      if (selectedOption == 0) {
+          isValid = false;
+          $(this).parent().addClass("error");
+      } else {
+          $(this).parent().removeClass("erro");
+      }
+  }));
   if ($("textarea[name='projectDescription']").val() === "") {
     $("textarea[name='projectDescription']").parent().addClass("error");
     return false;

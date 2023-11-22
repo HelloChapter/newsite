@@ -178,7 +178,7 @@ function handleContactSubmit(e) {
     var CustomSelect = $("#contact-form select");
     CustomSelect.each((function () {
         var selectedOption = $('#selectBox').val();
-        if ($('#selectBox').val() == 0) {
+        if (selectedOption == 0) {
             isValid = false;
             $(this).parent().addClass("error-show");
         } else {
