@@ -378,6 +378,73 @@
     }
 }
 
+.section-about-partners {
+    padding: 102px 0;
+
+    .container {
+        max-width: 930px;
+    }
+
+    .heading-section {
+        max-width: 670px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 80px;
+        line-height: 1.07;
+        margin-bottom: 50px;
+    }
+
+    p {
+        line-height: 40px;
+
+        br {
+            display: none;
+        }
+    }
+
+    .partners-wrap {
+        margin: 90px 0 20px;
+        line-height: 0;
+
+        img {
+            max-width: 274px;
+        }
+
+        .row {
+            position: relative;
+            align-items: center;
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                width: 1px;
+                background-color: $black;
+                height: 88%;
+            }
+
+            .col {
+                max-width: 50%;
+                flex: 0 0 50%;
+            }
+        }
+
+        .col-left {
+            padding-right: 135px;
+            text-align: right;
+        }
+
+        .col-right {
+            padding-left: 135px;
+        }
+    }
+}
+
 //  Responsive CSS start
 @media (max-width:1660px) {
     .section-team-chapter {
@@ -429,6 +496,37 @@
         }
     }
 
+    .section-about-partners {
+        padding: 80px 0;
+
+        h2 {
+            font-size: 70px;
+        }
+
+        p {
+            line-height: 24px;
+        }
+
+        .heading-section {
+            max-width: 570px;
+        }
+
+        .partners-wrap {
+            margin: 60px 0 20px;
+
+            img {
+                max-width: 250px;
+            }
+
+            .col-left {
+                padding-right: 100px;
+            }
+
+            .col-right {
+                padding-left: 100px;
+            }
+        }
+    }
 }
 
 // 1660 end
@@ -472,8 +570,10 @@
             h3 {
                 font-size: 50px;
             }
+
             .content {
                 max-width: 840px;
+
                 p {
                     br {
                         display: none;
@@ -500,6 +600,12 @@
 
         h2 {
             font-size: 50px;
+        }
+    }
+
+    .section-about-partners {
+        h2 {
+            font-size: 60px;
         }
     }
 }
@@ -590,6 +696,17 @@
             font-size: 40px;
         }
     }
+
+    .section-about-partners {
+        h2 {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+
+        .partners-wrap img {
+            max-width: 210px;
+        }
+    }
 }
 
 // 1199 end
@@ -657,6 +774,18 @@
             min-height: 100%;
         }
     }
+
+    .section-about-partners {
+        padding: 60px 0;
+
+        h2 {
+            font-size: 40px;
+        }
+
+        .partners-wrap {
+            margin-bottom: 0;
+        }
+    }
 }
 
 // 1023 end
@@ -698,6 +827,7 @@
         .col-content {
             padding-left: 20px;
         }
+
         .col-img {
             padding-bottom: 57.15%;
         }
@@ -745,6 +875,40 @@
             }
         }
     }
+
+    .section-about-partners {
+        h2 {
+            font-size: 25px;
+            line-height: 30px;
+            letter-spacing: -0.15px;
+        }
+
+        p {
+            br {
+                display: block;
+            }
+        }
+
+        .heading-section {
+            max-width: 345px;
+        }
+
+        .partners-wrap {
+            margin-top: 36px;
+
+            img {
+                max-width: 151px;
+            }
+
+            .col-left {
+                padding-right: 60px;
+            }
+
+            .col-right {
+                padding-left: 60px;
+            }
+        }
+    }
 }
 
 @media (max-width:820px) and (min-width:768px) {
@@ -769,6 +933,7 @@
 
         .content {
             max-width: 100%;
+
             p {
                 line-height: 24px;
             }
@@ -818,6 +983,7 @@
 
     .section-team-members {
         padding-bottom: 0;
+
         .section-title {
             h2 {
                 font-size: 25px;
@@ -829,6 +995,24 @@
         .team-wrapper .col-team .team-image {
             min-height: 290px;
             padding-bottom: 74%;
+        }
+    }
+
+    .section-about-partners {
+        .partners-wrap {
+            margin-top: 30px;
+
+            img {
+                max-width: 116px;
+            }
+
+            .col-left {
+                padding-right: 30px;
+            }
+
+            .col-right {
+                padding-left: 30px;
+            }
         }
     }
 }
@@ -850,6 +1034,7 @@
             max-width: 100%;
             flex: 0 0 100%;
             padding-bottom: 30px;
+
             .team-image {
                 background-position: center top;
             }

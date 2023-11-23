@@ -86,6 +86,7 @@
             position: relative;
             z-index: 1;
             max-width: 525px;
+            min-height: 310px;
 
             h2 {
                 font-size: 55px;
@@ -93,6 +94,7 @@
                 font-family: "Inter";
                 margin-bottom: 27px;
                 letter-spacing: 0;
+                // min-height: 265px;
                 //@include default_words_animation;
             }
 
@@ -184,7 +186,7 @@
         }
     }
 
-    .slick-next {
+    .slick-prev {
         display: none !important;
     }
 
@@ -194,15 +196,16 @@
         bottom: 0px;
         margin-left: 45px;
         color: $black;
+
         .button-label {
-        color: $black;
+            color: $black;
         }
     }
 
     .custom-next-arrow {
         display: flex;
         align-items: center;
-        left: calc(142px + 46px);
+        left: calc(142px + 60px);
         position: absolute;
         bottom: 23px;
         font-size: 12px;
@@ -310,6 +313,7 @@
             .content {
                 h2 {
                     font-size: 45px;
+                    // min-height: 235px;
                 }
             }
         }
@@ -365,7 +369,11 @@
         padding: 0 59px;
 
         .home-client-slider {
-            padding-bottom: 141px;
+            padding-bottom: 0;
+
+            .slider-item {
+                padding-bottom: 141px;
+            }
         }
 
         .images-icon {
@@ -409,6 +417,7 @@
 
             .content {
                 max-width: 396px;
+                min-height: 240px;
 
                 h2 {
                     font-size: 40px;
@@ -465,8 +474,11 @@
         position: relative;
 
         .home-client-slider {
-            padding-bottom: 98px;
+            padding-bottom: 0;
             position: static;
+            .slider-item {
+                padding-bottom: 98px;
+            }
         }
 
         .col-right {
@@ -491,16 +503,18 @@
         }
 
         .col-left {
-            max-width: 340px;
+            // max-width: 340px;
             padding: 0;
             position: static;
 
             .content {
                 max-width: 231px;
+                min-height: 140px;
 
                 h2 {
                     font-size: 20px;
                     line-height: 24px;
+                    // min-height: 100px;
                 }
 
                 h3 {
