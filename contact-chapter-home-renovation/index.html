@@ -92,18 +92,51 @@ area." />
     </script>
     <!-- Microsoft Ads Conversion Tracking -->
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PRJKFJK');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');</script>
     <!-- End Google Tag Manager -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "https://hellochapter.com/",
+          "sameAs": ["https://hellochapter.com/", "https://hellochapter.com/"],
+          "logo": "https://hellochapter.com/images/icons/logo.svg",
+          "name": "hellochapter",
+          "description": "Chapter is a full-service design and renovation contractor company specializing in residential home remodeling.",
+          "address": [{
+            "@type": "PostalAddress",
+            "streetAddress": "345 7th Ave,",
+            "addressLocality": "New York",
+            "addressCountry": "US",
+            "addressRegion": "NY",
+            "postalCode": "10001"
+          },{
+            "streetAddress": "252 NW 29th St",
+            "addressLocality": "Miami",
+            "postalCode": "33127",
+            "addressCountry": "US"
+          }]
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "itstime@hellochapter.com",
+            "telephone": "212-680-4628"
+          }
+        }
+        </script>
+        <!-- organization structured data end -->
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRJKFJK"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRJKFJK" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="wrapper">
         <div class="page-contact">
@@ -174,7 +207,7 @@ area." />
                                     <h1>What chapter are you in?</h1>
                                     <h2>Contact us</h2>
                                 </div>
-                            <div id="loader"></div>
+                                <div id="loader"></div>
                                 <form onsubmit="handleContactSubmit();
                                         return false;" id="contact-form">
                                     <div class="form-group row">
@@ -194,8 +227,8 @@ area." />
                                     <div class="form-group row">
                                         <div class="col col-input">
                                             <div class="input-wrap">
-                                                <input type="text" id="contact-email-field-id" data-email="" class="form-control" placeholder="Email*"
-                                                    name="email" />
+                                                <input type="text" id="contact-email-field-id" data-email=""
+                                                    class="form-control" placeholder="Email*" name="email" />
                                             </div>
                                         </div>
                                     </div>
@@ -335,28 +368,64 @@ area." />
                                         <div class="input-wrap">
                                             <textarea class="form-control"
                                                 placeholder="Tell us more about your project*" rows="5" minlength="5"
-                                                 name="projectDescription"></textarea>
+                                                name="projectDescription"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group link-text">
                                         <button type="submit" class="btn-submit">submit</button>
                                     </div>
-                                    <input type="hidden" id="zc_gad" name="zc_gad" value=""/>
+                                    <input type="hidden" id="zc_gad" name="zc_gad" value="" />
                                 </form>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- contact form section end -->
-                <section class="section-expert pearl-bg aos-init
+                <!-- <section class="section-expert pearl-bg aos-init
                         aos-animate" data-aos="fade">
                     <div class="container text-center">
                         <h2>Speak to an expert.</h2>
                         <address>
                             212-680-4628 <br />
                             itstime@hellochapter.com<br />
-                            <!-- 204 Park Avenue New York, NY 10010 -->
                         </address>
+                    </div>
+                </section> -->
+                <section class="section-speak-to-expert pearl-bg" data-aos="fade">
+                    <div class="container">
+                        <div class="section-title text-center">
+                            <h2>Speak to an expert.</h2>
+                        </div>
+                        <div class="content-wrap">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="content text-center">
+                                        <img src="../images/icons/mail.svg" />
+                                        <div class="dash"></div>
+                                        <h4>Email</h4>
+                                        <a href="mailto:itstime@hellochapter.com">itstime@hellochapter.com</a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="content text-center">
+                                        <img src="../images/icons/distance.svg" />
+                                        <div class="dash"></div>
+                                        <h4>Offices</h4>
+                                        <h6><strong>New York-</strong> 345 7th Ave, New York, NY 10001</h6>
+                                        <h6><strong>Miami-</strong> 252 NW 29th St, Miami, FL 33127</h6>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="content text-center">
+                                        <img src="../images/icons/phone.svg" />
+                                        <div class="dash"></div>
+                                        <h4>Phone</h4>
+                                        <h6><strong>New York-</strong><a href="tel:212-680-4628"> 212-680-4628</a></h6>
+                                        <h6><strong>Miami-</strong><a href="tel:(305) 676-6787"> (305) 676-6787</a></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <!-- section expert end -->
@@ -534,7 +603,7 @@ area." />
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./../js/custom.js"></script>
     <script src="./../js/contact.js"></script>
-<script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
+    <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
 </body>
 
 </html>
