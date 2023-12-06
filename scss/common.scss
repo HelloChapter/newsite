@@ -169,6 +169,24 @@ h2 {
 video, iframe {
     max-width: 100%;
 }
+.btn-black-bg {
+    min-height: 45px;
+    min-width: 139px;
+    font-size: 13px;
+    line-height: 16px;
+    color: $white;
+    background-color: $black;
+    font-weight: 700;
+    border: 1px solid $black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter";
+    &:hover {
+        background-color: transparent;
+        color: $black;
+    }
+}
 // Responsive CSS start
 @media (max-width:1600px) {
     body {
@@ -261,6 +279,13 @@ video, iframe {
 }
 
 // 1199 end
-@media (max-width:767px) {}
+@media (max-width:767px) {
+    // .btn-black-bg {
+    //     min-height: 67px;
+    //     min-width: 183px;
+    //     font-size: 19px;
+    //     line-height:23px;
+    // }
+}
 
 // 767 end
