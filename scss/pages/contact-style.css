@@ -808,7 +808,7 @@ input[type=number] {
 
 @media (max-width: 1023px) {
   .section-speak-to-expert {
-    padding: 60px 0;
+    padding: 60px 0 22px;
   }
   .section-speak-to-expert .section-title {
     padding-bottom: 40px;
@@ -818,10 +818,22 @@ input[type=number] {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
-    padding-bottom: 42px;
+    padding-bottom: 35px;
   }
-  .section-speak-to-expert .row .col:last-child {
-    padding-bottom: 0;
+  .section-speak-to-expert .col-email {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .section-speak-to-expert .col-phone {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .section-speak-to-expert .col-office {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
   .section-speak-to-expert .content-wrap h4 {
     font-size: 14px;

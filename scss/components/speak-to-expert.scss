@@ -42,7 +42,7 @@
 // Responsive css start
 @media (max-width:1023px) {
     .section-speak-to-expert {
-        padding: 60px 0;
+        padding: 60px 0 22px;
 
         .section-title {
             padding-bottom: 40px;
@@ -51,15 +51,16 @@
         .col {
             max-width: 100%;
             flex: 0 0 100%;
-            padding-bottom: 42px;
+            padding-bottom: 35px;
         }
-
-        .row {
-            .col {
-                &:last-child {
-                    padding-bottom: 0;
-                }
-            }
+        .col-email {
+            order: 1;
+        }
+        .col-phone {
+            order: 2;
+        }
+        .col-office {
+            order: 3;
         }
 
         .content-wrap {
