@@ -157,6 +157,22 @@
 }
 
 // 1199 end
+@media (max-width:1023px) {
+    .home-image-content-slider {
+       .col-img-content .content {
+        padding: 0 20px;
+       }
+       .slick-dots {
+        left: 15px;
+       }
+        .slick-next {
+            left: 20px;
+            top: 35px;
+        }
+    }
+}
+
+// 1023 end
 @media (max-width:991px) {
     .home-image-content-slider {
         .content {
@@ -192,10 +208,6 @@
             }
         }
 
-        .slick-next {
-            left: 20px;
-            top: 35px;
-        }
     }
 }
 

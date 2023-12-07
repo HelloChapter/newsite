@@ -805,6 +805,18 @@ video, iframe {
     padding-right: 30px;
   }
 }
+@media (max-width: 1023px) {
+  .home-image-content-slider .col-img-content .content {
+    padding: 0 20px;
+  }
+  .home-image-content-slider .slick-dots {
+    left: 15px;
+  }
+  .home-image-content-slider .slick-next {
+    left: 20px;
+    top: 35px;
+  }
+}
 @media (max-width: 991px) {
   .home-image-content-slider .content .content-p br {
     display: none;
@@ -825,10 +837,6 @@ video, iframe {
   }
   .home-image-content-slider .col-img-content .content .link-text {
     padding-top: 0;
-  }
-  .home-image-content-slider .slick-next {
-    left: 20px;
-    top: 35px;
   }
 }
 @media (max-width: 375px) {
