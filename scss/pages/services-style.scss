@@ -1,0 +1,43 @@
+@import "../classes.scss";
+@import "../common.scss";
+@import "../components/slider.scss";
+@import "../components/header.scss";
+@import "../components/footer.scss";
+@import "../components/category.scss";
+@import "../components/form-elements.scss";
+@import "../components/chapter-content.scss";
+@import "../components/image-content.scss";
+@import "../components/home-new-projects-slider.scss";
+
+.page-services {
+    header {
+        border-bottom: 0.5px solid $border-color;
+    }
+}
+
+.section-intro-image {
+    padding: 80px 0;
+
+    h1 {
+        font-size: 75px;
+        line-height: 1.07;
+    }
+
+    .section-content-col {
+        padding-left: 115px;
+    }
+
+    .col-img {
+        background-size: 76% auto;
+    }
+
+    .page-title {
+        max-width: 620px;
+    }
+
+    .content {
+        max-width: 600px;
+        margin: 0;
+        padding: 30px 0;
+    }
+}
