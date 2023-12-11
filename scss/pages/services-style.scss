@@ -13,15 +13,14 @@
     header {
         border-bottom: 0.5px solid $border-color;
     }
-}
-
-.section-intro-image {
-    padding: 80px 0;
-
-    h1 {
+    h2,h1 {
         font-size: 75px;
         line-height: 1.07;
+        letter-spacing: 0;
     }
+}
+.section-intro-image {
+    padding: 80px 0;
 
     .section-content-col {
         padding-left: 115px;
@@ -39,5 +38,39 @@
         max-width: 600px;
         margin: 0;
         padding: 30px 0;
+    }
+}
+.section-what-we-know {
+    padding: 115px 0 75px;
+    .container {
+        max-width: 960px;
+    }
+    .content-row {
+        .col {
+            max-width: 33.33%;
+            flex: 0 0 33.33%;
+        }
+    }
+    .heading-content {
+        margin-bottom: 30px;
+        p {
+            font-size: 20px;
+            line-height: 2;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+    }
+    h2 {
+        margin-bottom: 30px;
+    }
+    .col-item {
+        padding-bottom: 40px;
+        h4 {
+            font-size: 17px;
+            line-height: 30px;
+            font-family: "Inter";
+            font-weight: 400;
+            margin-top: 30px;
+        }
     }
 }
