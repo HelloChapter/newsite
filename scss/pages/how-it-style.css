@@ -349,6 +349,31 @@ video, iframe {
   max-width: 100%;
 }
 
+.btn-black-bg {
+  min-height: 45px;
+  min-width: 139px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: #231F20;
+  font-weight: 700;
+  border: 1px solid #231F20;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Inter";
+}
+.btn-black-bg:hover {
+  background-color: transparent;
+  color: #231F20;
+}
+
 @media (max-width: 1600px) {
   body {
     font-size: 14px;

@@ -79,6 +79,33 @@
         }
     }
 }
+.section-image-content-location {
+    .content {
+        max-width: 700px;
+    }
+    .btn-wrap {
+        margin-top: 60px;
+    }
+    .col-img {
+        position: relative;
+    }
+    .image-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $black;
+        padding: 0 40px;
+        width: auto;
+        h6 {
+            color: $white;
+            margin: 0;
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 40px;
+            font-family: "Inter";
+        }
+    }
+}
 // Responsive CSS start
 @media (max-width:1440px) {
     .section-image-content {
@@ -111,6 +138,16 @@
             margin-bottom: 25px;
         }
     }
+    .section-image-content-location {
+        .btn-wrap {
+            margin-top: 30px;
+        }
+        .image-label {
+            h6 {
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 // 1023 end
@@ -130,6 +167,15 @@
             margin: 0;
             padding:40px 20px ;
             max-width: 100%;
+        }
+    }
+    .section-image-content-location {
+        .btn-wrap {
+            margin-bottom: 20px;
+        }
+        .image-label {
+            width: 100%;
+            text-align: center;
         }
     }
 }
