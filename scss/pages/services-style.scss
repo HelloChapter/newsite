@@ -13,12 +13,18 @@
     header {
         border-bottom: 0.5px solid $border-color;
     }
-    h2,h1 {
+
+    .sub-title,
+    h1 {
         font-size: 75px;
         line-height: 1.07;
         letter-spacing: 0;
     }
 }
+.mobile-content {
+    display: none;
+}
+
 .section-intro-image {
     padding: 80px 0;
 
@@ -31,7 +37,7 @@
     }
 
     .page-title {
-        max-width: 620px;
+        max-width: 630px;
     }
 
     .content {
@@ -40,19 +46,24 @@
         padding: 30px 0;
     }
 }
+
 .section-what-we-know {
-    padding: 115px 0 75px;
+    padding: 115px 0 65px;
+
     .container {
         max-width: 960px;
     }
+
     .content-row {
         .col {
             max-width: 33.33%;
             flex: 0 0 33.33%;
         }
     }
+
     .heading-content {
         margin-bottom: 30px;
+
         p {
             font-size: 20px;
             line-height: 2;
@@ -60,11 +71,14 @@
             margin: 0 auto;
         }
     }
+
     h2 {
         margin-bottom: 30px;
     }
+
     .col-item {
-        padding-bottom: 40px;
+        padding-bottom: 50px;
+
         h4 {
             font-size: 17px;
             line-height: 30px;
@@ -74,3 +88,484 @@
         }
     }
 }
+
+.section-our-design-team {
+    padding: 111px 115px;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    .section-content-col {
+        max-width: 56%;
+        flex: 0 0 56%;
+        padding-right: 30px;
+    }
+
+    .content {
+        max-width: 860px;
+        font-size: 20px;
+        line-height: 40px;
+        font-weight: 400;
+    }
+
+    .bg-image {
+        padding-bottom: 43%;
+    }
+}
+
+.section-project-manager {
+    padding: 136px 115px;
+
+    .content {
+        max-width: 570px;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+        max-width: 580px;
+    }
+
+    .section-image-content {
+        max-width: 56%;
+        flex: 0 0 56%;
+        padding-right: 30px;
+    }
+
+    .image {
+        max-width: 730px;
+        margin: 0 auto;
+    }
+}
+
+.section-two-card-layout {
+    padding: 50px 60px;
+
+    .row {
+        margin: 0 -30px;
+
+        .col {
+            padding: 0 30px;
+        }
+    }
+
+    .card {
+        height: 100%;
+    }
+
+    .card-image {
+        img {
+            display: block;
+        }
+    }
+
+    .link-url {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-content {
+        padding: 30px 130px 55px 55px;
+        position: relative;
+
+        h3 {
+            font-size: 50px;
+            line-height: 57px;
+            font-weight: 700;
+            margin: 20px 0 30px;
+            font-family: "Inter";
+        }
+
+        p {
+            max-width: 570px;
+            line-height: 35px;
+        }
+
+        .right-arrow-click {
+            position: absolute;
+            right: 60px;
+            bottom: 60px;
+        }
+    }
+}
+
+.section-reviews {
+    padding: 30px 0;
+}
+
+// Responsive css start
+@media (max-width:1600px) {
+    .page-services {
+
+        .sub-title,
+        h1 {
+            font-size: 70px;
+            line-height: 80px;
+        }
+    }
+
+    .section-intro-image {
+        padding: 50px 0;
+
+        .section-content-col {
+            padding-left: 80px;
+        }
+    }
+
+    .section-what-we-know {
+        padding: 80px 0 50px;
+
+        .heading-content {
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .section-our-design-team {
+        padding: 70px 80px;
+
+        .content {
+            font-size: 18px;
+            line-height: 2;
+        }
+    }
+
+    .section-project-manager {
+        padding: 100px 80px;
+    }
+
+    .section-two-card-layout {
+        padding: 35px 60px;
+
+        .card-content {
+            padding: 30px 110px 35px 35px;
+
+            h3 {
+                font-size: 45px;
+                line-height: 50px;
+            }
+
+            .right-arrow-click {
+                position: absolute;
+                right: 40px;
+                bottom: 40px;
+            }
+        }
+    }
+}
+
+// 1600px end
+@media (max-width:1440px) {
+    .section-intro-image {
+        padding: 35px 0;
+
+        .section-content-col {
+            padding-left: 60px;
+        }
+    }
+
+    .section-what-we-know {
+        padding: 60px 0 35px;
+
+        .heading-content {
+            p {
+                font-size: 16px;
+            }
+        }
+
+    }
+
+    .section-our-design-team {
+        padding: 50px 60px;
+
+        .content {
+            font-size: 16px;
+        }
+    }
+
+    .section-project-manager {
+        padding: 80px 60px;
+    }
+
+    .section-two-card-layout {
+        padding: 25px 60px;
+
+        .card-content {
+            padding: 30px 110px 35px 35px;
+
+            h3 {
+                font-size: 40px;
+                line-height: 1.1;
+            }
+
+            .right-arrow-click {
+                position: absolute;
+                right: 40px;
+                bottom: 40px;
+            }
+        }
+    }
+}
+
+// 1440 end
+@media (max-width:991px) {
+    .section-intro-image {
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .section-image-content {
+            background-size: contain;
+        }
+
+        .content-wrap {
+            max-width: 405px;
+            margin: 0 auto;
+            text-align: center;
+            padding-bottom: 80px;
+            position: relative;
+
+            &:after {
+                content: ' ';
+                display: block;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 10px;
+                height: 20px;
+                width: 2px;
+                background-color: $black;
+            }
+        }
+    }
+
+    .section-two-card-layout {
+        .row .col-card {
+            max-width: 100%;
+            flex: 0 0 100%;
+
+            +.col-card {
+                padding-top: 60px;
+            }
+        }
+
+        .card-content {
+            padding: 35px 60px 35px 30px;
+
+            p {
+                line-height: 24px;
+            }
+
+            h3 {
+                br {
+                    display: none;
+                }
+            }
+
+            .right-arrow-click {
+                position: absolute;
+                right: 40px;
+                bottom: auto;
+                top: 115px;
+            }
+        }
+    }
+
+    .section-project-manager {
+        padding: 60px;
+
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .section-image-content {
+            order: 1;
+            padding: 0;
+        }
+
+        .content {
+            max-width: 640px;
+        }
+
+        .image {
+            padding-top: 110px;
+            max-width: 503px;
+        }
+    }
+
+    .section-our-design-team {
+        padding: 60px;
+
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .bg-image {
+            padding-bottom: 102%;
+        }
+
+        .section-content-col {
+            padding: 0 0 60px;
+        }
+
+        .content {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    .section-what-we-know {
+        padding: 115px 0 60px;
+
+        .heading-content {
+            margin: 0 auto 30px;
+            max-width: 620px;
+            text-align: center;
+
+            p {
+                font-size: 14px;
+                line-height: 40px;
+                max-width: 430px;
+
+            }
+        }
+
+        .col-item {
+            h4 {
+                font-size: 14px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+// 991 end
+@media (max-width:767px) {
+    .page-services {
+
+        .sub-title,
+        h1 {
+            font-size: 45px;
+            line-height: 60px;
+        }
+    }
+    .mobile-content {
+        display: flex;
+        h3 {
+            display: flex;
+            align-items: center;
+            img {
+                margin-right: 12px;
+                max-width: 35px;
+            }
+        }
+    }
+    .desktop-content {
+        display:none;
+    }
+
+    .section-two-card-layout {
+        padding: 10px 20px;
+
+        .row {
+            margin: 0;
+
+            .col {
+                padding: 0;
+            }
+            .col-card+.col-card {
+                padding-top: 30px;
+            }
+        }
+
+        .card-content {
+            padding: 30px 30px 78px 30px;
+
+            h3 {
+                font-size: 25px;
+                line-height: 29px;
+                margin: 0 0 13px;
+            }
+
+            .right-arrow-click {
+                right: 30px;
+                top: auto;
+                bottom: 20px;
+            }
+        }
+    }
+    .section-reviews {
+        padding: 10px 0;
+    }
+    .section-project-manager {
+        padding: 30px 20px;
+        p {
+            font-size: 17px;
+            line-height: 35px;
+        }
+        .image {
+            padding-top: 60px;
+            max-width: 85%;
+        }
+    }
+    .section-our-design-team {
+        padding: 60px 20px;
+        .section-content-col {
+            padding-bottom: 30px;
+        }
+        .bg-image {
+            padding-bottom: 86.5%;
+        }
+    }
+    .section-what-we-know {
+        padding: 60px 0 40px;
+        background-color:$light-pink;
+        .container {
+            text-align: left;
+        }
+        .heading-content {
+            text-align: left;
+             p {
+                line-height: 24px;
+             }
+        }
+        .row {
+            .col {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+        }
+        .col-item {
+            padding: 0 0 20px 30px;
+            position: relative;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 5px;
+                left: 0;
+                background-image: url("../../images/location-img/icons/accept_small.svg");
+                height: 16px;
+                width: 16px;
+            }
+            img {
+                display: none;
+            }
+            h4 {
+                margin: 0;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+// 767 end
