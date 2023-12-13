@@ -8,6 +8,7 @@
 @import "../components/chapter-content.scss";
 @import "../components/image-content.scss";
 @import "../components/home-new-projects-slider.scss";
+@import "../components/accordion.scss";
 
 .page-services {
     header {
@@ -17,10 +18,11 @@
     .sub-title,
     h1 {
         font-size: 75px;
-        line-height: 1.07;
+        line-height: 1.13;
         letter-spacing: 0;
     }
 }
+
 .mobile-content {
     display: none;
 }
@@ -194,6 +196,229 @@
 
 .section-reviews {
     padding: 30px 0;
+}
+
+// Kitchen components start
+.section-kitchen-intro-image {
+    padding: 0;
+
+    .section-content-col {
+        padding: 0 15px;
+    }
+
+    .section-image-content {
+        padding: 110px 0;
+    }
+
+    .col-img {
+        background-size: contain;
+        padding-bottom: 75%;
+    }
+
+    .page-title {
+        max-width: 692px;
+        margin: 0 auto;
+    }
+
+    .content {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+}
+
+.section-what-invloved {
+    padding: 115px 0 47px;
+
+    .heading-content {
+        max-width: 992px;
+        margin: 0 auto 50px;
+
+        h2 {
+            line-height: 58px;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 700;
+            margin: 16px 0;
+        }
+    }
+
+    .content-wrap {
+        .col-item {
+            max-width: 33.33%;
+            flex: 0 0 33.33%;
+        }
+
+        h5 {
+            font-size: 20px;
+            line-height: 22px;
+            margin-bottom: 12px;
+        }
+
+        .content {
+            max-width: 360px;
+            margin-bottom: 68px;
+        }
+
+        .dash {
+            background-color: $black;
+            height: 2px;
+            width: 8px;
+            margin: 3px 0 8px;
+        }
+    }
+}
+
+.section-plan-design-build {
+    padding: 115px 134px;
+
+    * {
+        color: $white;
+    }
+
+    .row {
+        margin: 0 -20px;
+    }
+
+    .col {
+        padding: 0 20px;
+    }
+
+    .card {
+        border: 1px solid $white;
+        height: 100%;
+
+        .card-header {
+            border-bottom: 1px solid $white;
+            min-height: 308px;
+        }
+
+        .card-content {
+            padding: 42px 42px 100px;
+        }
+
+        h6 {
+            font-size: 17px;
+            line-height: 47px;
+            font-family: "Inter";
+            font-weight: 300;
+        }
+
+        h2 {
+            line-height: 57px;
+        }
+
+        p {
+            line-height: 35px;
+            font-weight: 400;
+        }
+
+        .time {
+            padding-top: 40px;
+
+            h6 {
+                display: flex;
+                align-items: center;
+                font-size: 17px;
+                line-height: 35px;
+                font-weight: 700;
+                margin-bottom: 9px;
+                font-family: "Inter";
+
+                img {
+                    margin-right: 7px;
+                }
+            }
+        }
+
+        h5 {
+            font-family: "Inter";
+            font-size: 17px;
+            line-height: 35px;
+            font-weight: 400;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin: 0 -6.5px;
+        width: 100%;
+
+        li {
+            padding: 0 6.5px;
+        }
+
+        .slick-active {
+            button {
+                background-color: $white;
+            }
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            font-size: 0;
+            border: 0.25px solid $white;
+            height: 11px;
+            width: 11px;
+            border-radius: 100%;
+        }
+    }
+}
+.section-plan-design-build-method {
+    .col {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+    .section-content-col {
+        padding: 107px 115px 180px;
+    }
+    .content-wrap {
+        max-width: 740px;
+        margin: 0 auto;
+        h2 {
+            margin-bottom: 30px;
+        }
+        p {
+            line-height: 40px;
+        }
+    }
+}
+.section-access-world {
+    .section-image-content {
+        padding: 115px;
+        .col-img {
+            padding-bottom: 98.5%;
+        }
+    }
+    .col {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+    .content-wrap {
+        max-width: 847px;
+        h2 {
+            margin-bottom: 30px;
+        }
+        h5{
+            font-size: 17px;
+            line-height: 35px;
+            font-family: "Inter";
+            margin-bottom: 12px;
+        }
+        p {
+            line-height: 35px;
+            margin-bottom: 10px;
+        }
+    }
 }
 
 // Responsive css start
@@ -458,19 +683,23 @@
             line-height: 60px;
         }
     }
+
     .mobile-content {
         display: flex;
+
         h3 {
             display: flex;
             align-items: center;
+
             img {
                 margin-right: 12px;
                 max-width: 35px;
             }
         }
     }
+
     .desktop-content {
-        display:none;
+        display: none;
     }
 
     .section-two-card-layout {
@@ -482,6 +711,7 @@
             .col {
                 padding: 0;
             }
+
             .col-card+.col-card {
                 padding-top: 30px;
             }
@@ -503,50 +733,64 @@
             }
         }
     }
+
     .section-reviews {
         padding: 10px 0;
     }
+
     .section-project-manager {
         padding: 30px 20px;
+
         p {
             font-size: 17px;
             line-height: 35px;
         }
+
         .image {
             padding-top: 60px;
             max-width: 85%;
         }
     }
+
     .section-our-design-team {
         padding: 60px 20px;
+
         .section-content-col {
             padding-bottom: 30px;
         }
+
         .bg-image {
             padding-bottom: 86.5%;
         }
     }
+
     .section-what-we-know {
         padding: 60px 0 40px;
-        background-color:$light-pink;
+        background-color: $light-pink;
+
         .container {
             text-align: left;
         }
+
         .heading-content {
             text-align: left;
-             p {
+
+            p {
                 line-height: 24px;
-             }
+            }
         }
+
         .row {
             .col {
                 max-width: 100%;
                 flex: 0 0 100%;
             }
         }
+
         .col-item {
             padding: 0 0 20px 30px;
             position: relative;
+
             &:before {
                 content: "";
                 display: block;
@@ -557,9 +801,11 @@
                 height: 16px;
                 width: 16px;
             }
+
             img {
                 display: none;
             }
+
             h4 {
                 margin: 0;
                 font-weight: 300;
