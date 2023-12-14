@@ -247,6 +247,10 @@
         }
     }
 
+    .col-tablet {
+        display: none;
+    }
+
     .content-wrap {
         .col-item {
             max-width: 33.33%;
@@ -351,9 +355,12 @@
         padding: 0;
         margin: 0 -6.5px;
         width: 100%;
+        position: absolute;
+        bottom: -35px;
 
         li {
             padding: 0 6.5px;
+            line-height: 0;
         }
 
         .slick-active {
@@ -373,47 +380,60 @@
         }
     }
 }
+
 .section-plan-design-build-method {
     .col {
         max-width: 50%;
         flex: 0 0 50%;
     }
+
     .section-content-col {
         padding: 107px 115px 180px;
     }
+
     .content-wrap {
         max-width: 740px;
         margin: 0 auto;
+
         h2 {
             margin-bottom: 30px;
         }
+
         p {
             line-height: 40px;
         }
     }
 }
+
 .section-access-world {
     .section-image-content {
         padding: 115px;
+
         .col-img {
             padding-bottom: 98.5%;
         }
     }
+
     .col {
         max-width: 50%;
         flex: 0 0 50%;
     }
+
     .content-wrap {
         max-width: 847px;
+        padding: 40px 0;
+
         h2 {
             margin-bottom: 30px;
         }
-        h5{
+
+        h5 {
             font-size: 17px;
             line-height: 35px;
             font-family: "Inter";
             margin-bottom: 12px;
         }
+
         p {
             line-height: 35px;
             margin-bottom: 10px;
@@ -481,6 +501,36 @@
             }
         }
     }
+
+    .section-kitchen-intro-image {
+        .section-image-content {
+            padding: 80px 0;
+        }
+    }
+
+    .section-what-invloved {
+        padding: 80px 0 40px;
+
+        .heading-content {
+            margin: 0 auto 40px;
+        }
+    }
+
+    .section-plan-design-build {
+        padding: 80px 100px;
+    }
+
+    .section-plan-design-build-method {
+        .section-content-col {
+            padding: 80px 80px 150px;
+        }
+    }
+
+    .section-access-world {
+        .section-image-content {
+            padding: 80px;
+        }
+    }
 }
 
 // 1600px end
@@ -534,9 +584,149 @@
             }
         }
     }
+
+    .section-plan-design-build {
+        padding: 60px 60px;
+    }
+
+    .section-plan-design-build-method .section-content-col {
+        padding: 60px 60px 120px;
+    }
+
+    .section-access-world .section-image-content {
+        padding: 60px;
+    }
 }
 
 // 1440 end
+@media (max-width:1023px) {
+    .section-kitchen-intro-image {
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .section-image-content {
+            order: 1;
+            padding: 37px;
+
+            .col-img {
+                background-size: cover;
+            }
+        }
+
+        .content-wrap {
+            max-width: 560px;
+            margin: 0 auto;
+            padding: 30px 0 60px;
+        }
+
+        .content {
+            max-width: 405px;
+            margin: 0 auto;
+        }
+    }
+
+    .section-what-invloved {
+        padding: 60px 80px 30px;
+
+        .heading-content {
+            margin: 0 auto 35px;
+
+            h2 {
+                line-height: 29px;
+            }
+
+            p {
+                line-height: 30px;
+            }
+
+            h4 {
+                display: none;
+            }
+        }
+
+        .row {
+            margin: 0 -19px;
+
+            .col {
+                padding: 0 19px;
+            }
+        }
+
+        .col-tablet {
+            display: block;
+
+            h4 {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: "Inter";
+            }
+        }
+
+        .content-wrap {
+            .col-item {
+                max-width: 50%;
+                flex: 0 0 50%;
+            }
+
+            h5 {
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            .content {
+                max-width: 285px;
+                margin-bottom: 26px;
+            }
+        }
+    }
+
+    .section-plan-design-build {
+        padding: 60px;
+
+        .card {
+            .card-header {
+                min-height: 200px;
+                background-position: top center;
+                padding-bottom: 30%;
+            }
+
+            .card-content {
+                padding: 30px 30px 54px;
+            }
+
+            h6 {
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+
+            p {
+                line-height: 24px;
+            }
+
+            .time {
+                padding-top: 60px;
+
+                h6 {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
+
+            h5 {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+// 1023 end
 @media (max-width:991px) {
     .section-intro-image {
         .col {

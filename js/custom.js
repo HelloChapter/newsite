@@ -348,7 +348,7 @@ function kitchen_plan_design_slider() {
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 5000,
-        variableWidth: true,
+        variableWidth: false,
         arrows: false,
         responsive: [
             {
@@ -356,7 +356,7 @@ function kitchen_plan_design_slider() {
                 settings: "unslick"
             },
             {
-                breakpoint: 992,
+                breakpoint: 1025,
                 settings: {
                     infinite: true,
                     dots: true
