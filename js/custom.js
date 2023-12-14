@@ -366,3 +366,6 @@ function kitchen_plan_design_slider() {
     });
 }
 // kitchen-plan-design-build-slider end
+$(window).on('load', function() {
+    AOS.refresh();
+ });
