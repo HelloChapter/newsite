@@ -1,9 +1,9 @@
-<svg width="60" height="67" viewBox="0 0 60 67" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.3701 28.3999H36.6401" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M15.3701 33.3999H36.2401" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M15.3701 38.3999H36.6401" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M15.3701 43.3999H36.6401" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M49.0603 1L36.2803 29.31L36.6403 38.4L43.7003 32.66L56.4803 4.35L49.0603 1Z" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M44.36 11.3999H11.01L4.01 18.3999L4 65.3999H48L48.01 23.1199" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.00977 18.3999H11.0098V11.3999" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<svg width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.5352 23.9751H35.3703" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.5352 28.1676H35.0349" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.5352 32.3602H35.3703" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.5352 36.5527H35.3703" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M45.7845 1L35.0684 24.7382L35.3702 32.3603L41.2901 27.5472L52.0063 3.80901L45.7845 1Z" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M41.8423 9.72046H13.878L8.00839 15.59L8 55H44.8945L44.9029 19.5478" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.00781 15.59H13.8774V9.72046" stroke="#231F20" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

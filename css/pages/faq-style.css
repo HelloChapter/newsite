@@ -963,6 +963,7 @@ footer .col-news-letter button img {
   position: relative;
   padding-right: 70px;
   color: #231F20;
+  font-family: "Inter";
 }
 .section-accordion button:after {
   content: "";
