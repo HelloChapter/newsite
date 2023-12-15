@@ -356,7 +356,7 @@ function kitchen_plan_design_slider() {
                 settings: "unslick"
             },
             {
-                breakpoint: 1025,
+                breakpoint: 1196,
                 settings: {
                     infinite: true,
                     dots: true
