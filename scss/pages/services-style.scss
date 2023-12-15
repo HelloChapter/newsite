@@ -210,12 +210,11 @@
     }
 
     .section-image-content {
-        padding: 110px 0;
+        padding: 110px;
     }
 
     .col-img {
-        background-size: contain;
-        padding-bottom: 75%;
+        padding-bottom: 97.5%;
     }
 
     .page-title {
@@ -507,7 +506,7 @@
 
     .section-kitchen-intro-image {
         .section-image-content {
-            padding: 80px 0;
+            padding: 80px;
         }
     }
 
@@ -588,6 +587,12 @@
         }
     }
 
+    .section-kitchen-intro-image {
+        .section-image-content {
+            padding: 60px;
+        }
+    }
+
     .section-plan-design-build {
         padding: 60px 60px;
     }
@@ -615,6 +620,8 @@
 
             .col-img {
                 background-size: cover;
+                padding-bottom: 73.5%;
+
             }
         }
 
@@ -1108,10 +1115,9 @@
     .section-kitchen-intro-image {
         .section-image-content {
             padding: 30px;
-        }
-
-        .col-img {
-            padding-bottom: 100%;
+            .col-img {
+                padding-bottom: 99.5%;
+            }
         }
     }
 
