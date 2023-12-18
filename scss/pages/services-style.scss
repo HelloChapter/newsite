@@ -215,6 +215,23 @@
 
     .col-img {
         padding-bottom: 97.5%;
+        position: relative;
+    }
+
+    .image-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($color: $black, $alpha: 0.9);
+        padding: 0 40px;
+
+        h6 {
+            font-size: 17px;
+            line-height: 40px;
+            font-family: "Inter";
+            font-weight: 300;
+            color: $white;
+        }
     }
 
     .page-title {
@@ -624,6 +641,12 @@
                 background-size: cover;
                 padding-bottom: 73.5%;
 
+            }
+            .image-label {
+        
+                h6 {
+                    font-size: 14px;
+                }
             }
         }
 
@@ -1117,6 +1140,7 @@
     .section-kitchen-intro-image {
         .section-image-content {
             padding: 30px;
+
             .col-img {
                 padding-bottom: 99.5%;
             }
