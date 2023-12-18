@@ -243,7 +243,7 @@ jQuery(document).ready(function ($) {
         dots: false,
         fade: false,
         variableWidth: true,
-        centerMode: true,
+        centerMode: false,
         cssEase: 'linear',
     });
     // announcement-bar slider end
