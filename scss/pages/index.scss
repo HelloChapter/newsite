@@ -556,7 +556,7 @@ img {
     }
 
     .desktop-hide {
-        display: none;
+        display: none !important;
     }
 
     .new-section-title {
@@ -1225,11 +1225,11 @@ min-height: calc(100vh - 115px);
             }
 
             .mobile-hide {
-                display: none;
+                display: none !important;
             }
 
             .desktop-hide {
-                display: block;
+                display: block !important;
             }
 
             .content-p {
