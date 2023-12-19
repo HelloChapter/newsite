@@ -64,12 +64,6 @@ jQuery(document).ready(function ($) {
 
         $(".team-clickable-content")[current_item].classList.remove('d-none');
         $(".team-clickable-content")[current_item].classList.add('d-block');
-
-        // if($(".col-team").classList.contains('active-member')){
-        //     $(".col-team").removeClass("active-member");
-        //     $(this).parent(".col-team").addClass("active-member");
-        //     return false;
-        // }
         $(".col-team").removeClass("active-member");
         $(this).parent(".col-team").addClass("active-member");
     });
@@ -81,8 +75,6 @@ jQuery(document).ready(function ($) {
         "display",
         "none"
     );
-    //$(".accordion .card:first-of-type .card-title button").addClass("active-btn");
-
     $(".accordion .card-title button").click(function () {
         $(".active-btn")
             .not(this)
@@ -324,7 +316,6 @@ function calculate_slider_height() {
     var viewportWidth = window.innerWidth;
     const magicScrollNumber = 170;
     var divTotalHeight = divHeight * (viewportWidth/magicScrollNumber);
-
     var setHeight = $('.empty-height-div');
     setHeight.height(divTotalHeight);
 }
