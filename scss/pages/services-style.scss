@@ -626,6 +626,14 @@
 }
 
 // 1440 end
+@media (max-width:1196px) {
+    .section-plan-design-build .card .card-header {
+        min-height: 200px;
+        background-position: top center;
+        padding-bottom: 30%;
+    }
+}
+
 @media (max-width:1023px) {
     .section-kitchen-intro-image {
         .col {
@@ -642,8 +650,9 @@
                 padding-bottom: 73.5%;
 
             }
+
             .image-label {
-        
+
                 h6 {
                     font-size: 14px;
                 }
@@ -736,12 +745,6 @@
         padding: 60px;
 
         .card {
-            .card-header {
-                min-height: 200px;
-                background-position: top center;
-                padding-bottom: 30%;
-            }
-
             .card-content {
                 padding: 30px 30px 54px;
             }
