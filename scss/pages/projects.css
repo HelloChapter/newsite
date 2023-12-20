@@ -1,23 +1,19 @@
 .inline-block {
   display: inline-block;
 }
-
 .d-flex, .row {
   display: flex;
 }
-
 .row {
   flex-wrap: wrap;
   margin: 0 -15px;
 }
-
 .col {
   padding: 0 15px;
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
 }
-
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -27,74 +23,58 @@
   padding-right: 0;
   padding-left: 0;
 }
-
 .justify-content-between {
   justify-content: space-between;
 }
-
 .justify-content-center {
   justify-content: center;
 }
-
 .align-items-between {
   -ms-flex-pack: justify;
   align-items: space-between;
 }
-
 .align-items-center {
   -ms-flex-pack: center;
   align-items: center;
 }
-
 .flex-wrap {
   flex-wrap: wrap;
 }
-
 .px-5 {
   padding: 0 5px;
 }
-
 .pr-0 {
   padding-right: 0;
 }
-
 .m-0 {
   margin: 0;
 }
-
 .w-100 {
   width: 100%;
 }
-
 .h-100 {
   height: 100%;
 }
-
 .textRight {
   text-align: right;
 }
-
 .text-center {
   text-align: center;
 }
-
 .d-block {
   display: block;
 }
-
 .list-unstyled {
   padding: 0;
   list-style: none;
   margin-bottom: 0;
 }
-
 .bg-image {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   min-height: 300px;
 }
-
 @font-face {
   font-family: "Times";
   src: url("../fonts/times/Times-Bold.eot");
@@ -130,37 +110,29 @@
 .pearl-bg {
   background-color: #F9F4ED;
 }
-
 .pearl-bg2 {
   background-color: #Faf5ee;
 }
-
 .dawn-pink-bg {
   background-color: #F2E2D7;
 }
-
 .light-pink-bg {
   background-color: #e1cdc0;
 }
-
 .light-pink-bg2 {
   background-color: #D7C3B6;
 }
-
 .white-bg {
   background-color: #ffffff;
 }
-
 .black-bg {
   background-color: #231F20;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Inter";
   color: #231F20;
@@ -176,39 +148,32 @@ body {
   -moz-text-size-adjust: none;
   text-size-adjust: none;
 }
-
 a {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
-
 button {
   cursor: pointer;
 }
-
 svg,
 img {
   max-width: 100%;
 }
-
 .btn-styled-removed {
   background-color: transparent;
   border: none;
   box-shadow: none;
 }
-
 .container {
   max-width: 1310px;
   padding: 0 15px;
   margin: 0 auto;
 }
-
 .middle-content {
   min-height: 400px;
   padding-top: 111px;
 }
-
 .link-text a,
 .link-text button {
   line-height: 50px;
@@ -237,15 +202,12 @@ img {
 .link-text button:hover:after {
   transform: scaleX(0.8);
 }
-
 textarea {
   resize: none;
 }
-
 iframe {
   max-width: 100%;
 }
-
 h1,
 h2,
 h3,
@@ -255,13 +217,11 @@ h6 {
   font-family: "Times";
   font-weight: bold;
 }
-
 h2 {
   font-size: 50px;
   line-height: 50px;
   letter-spacing: -0.2px;
 }
-
 .page-title h1 {
   font-size: 50px;
   line-height: 50px;
@@ -274,7 +234,6 @@ h2 {
   font-weight: 500;
   text-transform: uppercase;
 }
-
 .stretched-link {
   text-align: center;
   text-decoration: none;
@@ -285,7 +244,6 @@ h2 {
   height: 100%;
   width: 100%;
 }
-
 .location-title {
   font-size: 17px;
   font-family: "Inter";
@@ -293,7 +251,6 @@ h2 {
   font-weight: 300;
   margin-bottom: 12px;
 }
-
 @media (max-width: 1600px) {
   body {
     font-size: 14px;
@@ -359,31 +316,24 @@ h2 {
 .pearl-bg {
   background-color: #F9F4ED;
 }
-
 .pearl-bg2 {
   background-color: #Faf5ee;
 }
-
 .dawn-pink-bg {
   background-color: #F2E2D7;
 }
-
 .light-pink-bg {
   background-color: #e1cdc0;
 }
-
 .light-pink-bg2 {
   background-color: #D7C3B6;
 }
-
 .white-bg {
   background-color: #ffffff;
 }
-
 .black-bg {
   background-color: #231F20;
 }
-
 header {
   padding: 36px 0 33px;
   transition: background-color 0.3s, opacity 0.3s !important;
@@ -463,11 +413,9 @@ header .col-get-started a:after {
 header .col-get-started a:hover:after {
   transform: scaleX(0.8);
 }
-
 .header-sticky header {
   background-color: #ffffff;
 }
-
 @media (max-width: 1440px) {
   header nav a {
     font-size: 14px;
@@ -628,31 +576,24 @@ header .col-get-started a:hover:after {
 .pearl-bg {
   background-color: #F9F4ED;
 }
-
 .pearl-bg2 {
   background-color: #Faf5ee;
 }
-
 .dawn-pink-bg {
   background-color: #F2E2D7;
 }
-
 .light-pink-bg {
   background-color: #e1cdc0;
 }
-
 .light-pink-bg2 {
   background-color: #D7C3B6;
 }
-
 .white-bg {
   background-color: #ffffff;
 }
-
 .black-bg {
   background-color: #231F20;
 }
-
 footer {
   width: 100%;
   background-color: #231F20;
@@ -728,7 +669,6 @@ footer .col-news-letter button {
 footer .col-news-letter button img {
   max-width: 7px;
 }
-
 @media (max-width: 1440px) {
   footer a {
     font-size: 14px;
@@ -871,7 +811,6 @@ footer .col-news-letter button img {
 .home-image-content-slider .col-img-content .link-text {
   padding-top: 0;
 }
-
 @media (max-width: 1600px) {
   .home-image-content-slider .slick-dots {
     bottom: 32%;
@@ -921,7 +860,6 @@ footer .col-news-letter button img {
 .section-chapter-content .spinner-wrapper img.small.aos-animate, .section-chapter-content .spinner-wrapper img.small:hover {
   transform: rotate(1turn);
 }
-
 @media (max-width: 1023px) {
   .section-chapter-content {
     padding: 60px 0;
@@ -955,7 +893,6 @@ footer .col-news-letter button img {
 .section-project-category ul .active {
   font-style: italic;
 }
-
 @media (max-width: 1440px) {
   .section-project-category ul a {
     font-size: 14px;
@@ -993,7 +930,6 @@ footer .col-news-letter button img {
 .section-image-content .link-text {
   padding-top: 30px;
 }
-
 @media (max-width: 1440px) {
   .section-image-content h2 {
     margin-bottom: 40px;
@@ -1033,11 +969,9 @@ footer .col-news-letter button img {
 .page-projects header {
   border-bottom: 0.5px solid #C2C2C2;
 }
-
 .section-full-image {
   min-height: 820px;
 }
-
 .section-project-info {
   padding: 90px 0;
 }
@@ -1050,39 +984,32 @@ footer .col-news-letter button img {
 .section-project-info p + p {
   margin-top: 30px;
 }
-
 .section-single-heading {
   padding: 88px 0;
 }
-
 .section-two-full-img-layout .bg-image {
   min-height: 60vh;
 }
 .section-two-full-img-layout .col-full-size-img {
   min-height: 800px;
 }
-
 /*Start: Added By tushar for old content integration*/
 .shortAddress {
   margin-top: -15px;
   font-size: 16px;
   padding-bottom: 20px;
 }
-
 .fullWidthPara {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
-
 .pearl-bg iframe {
   max-width: 100%;
 }
-
 .largeContent .col-img {
   min-height: 600px;
 }
-
 /*END: Added By tushar for old content integration*/
 @media (max-width: 1023px) {
   .section-full-image {

@@ -3,28 +3,23 @@
 @import "../components/header.scss";
 @import "../components/footer.scss";
 @import "../components/chapter-content.scss";
-
 .page-blog {
     .row {
         margin: 0 -7px;
     }
-
     .col-blog {
         padding: 0 7px;
         max-width: 33.33%;
         flex: 0 0 33.33%;
         margin-bottom: 31px;
     }
-
     .card {
         position: relative;
         opacity: 1;
         transition: opacity .3s;
-
         &:hover {
             opacity: 0.7;
         }
-
         h4 {
             font-size: 17px;
             line-height: 50px;
@@ -33,71 +28,56 @@
             font-weight: 500;
             margin-bottom: 8px;
         }
-
         h5 {
             font-size: 24px;
             line-height: 1;
             margin-bottom: 17px;
         }
     }
-
     .card-content {
         padding: 22px 0 0;
     }
-
     .card-image {
         min-height: inherit;
         padding-bottom: 52.25%;
     }
 }
-
 .section-blog-listing {
     padding: 65px 0 100px;
 }
-
 // Blog listing css end
-
 .page-blog-detail {
     header {
         background-color: transparent;
     }
-
     .middle-content {
         padding-top: 0;
     }
-
     p {
         margin-bottom: 16px;
     }
-
     h4 {
         font-size: 29px;
         margin-bottom: 16px;
     }
-
     h6 {
         font-size: 16px;
         margin-bottom: 12px;
     }
-
     ul,
     ol {
         padding-left: 22px;
         margin-bottom: 12px;
     }
-
     .section-chapter-content {
         padding: 70px 0;
     }
 }
-
 .section-blog-heading {
     padding: 160px 0 90px;
-
     .container {
         max-width: 900px;
     }
-
     h4,
     h5 {
         font-size: 17px;
@@ -105,82 +85,64 @@
         font-family: "Inter";
         font-weight: 500;
     }
-
     h5 {
         text-transform: uppercase;
     }
-
     .page-title {
         padding: 10px 0 25px;
     }
 }
-
 .section-content {
     padding: 40px 0;
-
     h5 {
         font-size: 20px;
         margin: 14px 0;
     }
-
     a {
         color: $text-color;
         text-decoration: underline;
-
         &:hover {
             text-decoration: none;
         }
     }
 }
-
 .section-heading {
     padding: 70px 0;
-
     .container {
         max-width: 950px;
     }
-
     h3 {
         font-size: 30px;
         line-height: 40px;
     }
 }
-
 .section-back-to-article {
     padding: 70px 0;
 }
-
 .section-full-image {
     padding: 40px 0;
 }
-
 .content-full-image {
     padding: 20px 0;
     text-align: center;
 }
-
 .header-sticky {
     header {
         background-color: $white;
     }
 }
-
 .blog-content-title {
     margin-bottom: 10px;
-
     h3 {
         color: $black;
         font-size: 20px;
         line-height: 1.2;
         margin-bottom: 0;
-
         @media (max-width:767px) {
             font-size: 17px;
         }
     }
 }
-
-
 // Responsive CSS start
 @media (max-width:1440px) {
     .page-blog {
@@ -189,36 +151,30 @@
                 font-size: 14px;
                 line-height: 40px;
             }
-
             h5 {
                 font-size: 21px;
             }
         }
     }
-
     .section-blog-heading {
         padding: 140px 0 70px;
-
         h4,
         h5 {
             font-size: 14px;
             line-height: 40px;
         }
     }
-
     .page-blog-detail {
         h4 {
             font-size: 26px;
         }
     }
 }
-
 // 1440 end
 @media (max-width:1199px) {
     .section-blog-listing {
         padding: 50px 0;
     }
-
     .page-blog {
         .card {
             h5 {
@@ -227,81 +183,65 @@
         }
     }
 }
-
 .section-heading {
     padding: 70px 0;
-
     .container {
         max-width: 950px;
     }
-
     h3 {
         font-size: 27px;
         line-height: 1.4;
     }
 }
-
 .page-blog-detail {
     h4 {
         font-size: 23px;
     }
 }
-
 // 1199 end
 @media (max-width:1023px) {
     .section-blog-listing {
         padding: 30px 0;
     }
-
     .page-blog {
         .card {
             h5 {
                 font-size: 21px;
                 margin-bottom: 10px;
             }
-
             h4 {
                 line-height: 2;
             }
         }
     }
-
     .section-content {
         padding: 60px 0;
-
         h5 {
             font-size: 16px;
             margin: 10px 0;
         }
     }
-
     .section-full-image {
         padding: 60px 0;
     }
-
     .section-back-to-article {
         padding-bottom: 60px;
     }
-
     .section-blog-heading {
         padding: 120px 0 60px;
     }
-
     .page-blog-detail {
         h4 {
             font-size: 20px;
         }
     }
-
     .section-heading {
         padding: 60px 0;
-
         h3 {
             font-size: 24px;
         }
     }
 }
-
 // 1023 end
 @media (max-width:767px) {
     .page-blog {
@@ -310,31 +250,25 @@
             flex: 0 0 50%;
         }
     }
-
     .section-img-col {
         .col {
             max-width: 100%;
             flex: 0 0 100%;
         }
     }
-
     .section-content {
         padding: 40px 0;
     }
-
     .section-full-image {
         padding: 40px 0;
     }
-
     .section-back-to-article {
         padding-bottom: 60px;
     }
-
     .section-blog-heading {
         padding: 100px 0 30px;
     }
 }
-
 // 767 end
 @media (max-width:575px) {
     .page-blog {
@@ -344,5 +278,4 @@
         }
     }
 }
-
 // 575 end

@@ -15,7 +15,6 @@
 .section-chapter-content .spinner-wrapper img.small.aos-animate, .section-chapter-content .spinner-wrapper img.small:hover {
   transform: rotate(1turn);
 }
-
 @media (max-width: 1023px) {
   .section-chapter-content {
     padding: 60px 0;

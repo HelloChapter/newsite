@@ -1,17 +1,14 @@
 @import "../colors.scss";
 @import "../mixin.scss";
-
 footer {
     width: 100%;
     background-color: $text-color;
     padding: 60px 0 50px;
     color: $white;
-
     .footer-logo {
         width: 57px;
         margin-right: 120px;
     }
-
     a {
         color: $white;
         font-size: 14px;
@@ -19,7 +16,6 @@ footer {
         line-height: 21px;
         letter-spacing: -0.12px;
     }
-
     ul {
         li {
             +li {
@@ -27,11 +23,9 @@ footer {
             }
         }
     }
-
     .col-news-letter {
         max-width: 30%;
         flex: 0 0 30%;
-
         h6 {
             font-size: 17px;
             line-height: 37px;
@@ -39,11 +33,9 @@ footer {
             color: $white;
             margin-bottom: 20px;
         }
-
         .form-group {
             position: relative;
         }
-
         .form-control {
             border: 1px solid $white;
             height: 55px;
@@ -57,13 +49,11 @@ footer {
             font-size: 17px;
             font-weight: 300;
             color: $white;
-
             @include placeholder-text {
                 color: $white;
                 opacity: 1;
             }
         }
-
         button {
             height: 55px;
             width: 55px;
@@ -71,14 +61,12 @@ footer {
             right: 0;
             top: 0;
             border-left: 1px solid $white;
-
             img {
                 max-width: 7px;
             }
         }
     }
 }
-
 // Responsive UI start
 @media (max-width:1440px) {
     footer {
@@ -86,11 +74,9 @@ footer {
             font-size: 14px;
             line-height: 17px;
         }
-
         ul li+li {
             margin-top: 12px;
         }
-
         .col-news-letter {
             .form-control {
                 font-size: 14px;
@@ -99,26 +85,21 @@ footer {
         }
     }
 }
-
 // 1440 end
 @media (max-width:1023px) {
     footer {
         padding: 30px 0;
-
         .col-news-letter {
             max-width: 100%;
             flex: 0 0 100%;
             padding-top: 30px;
-
             form {
                 max-width: 400px;
                 margin: 0 auto;
             }
-
             .form-control {
                 height: 40px;
             }
-
             button {
                 height: 40px;
                 width: 40px;
@@ -126,7 +107,6 @@ footer {
         }
     }
 }
-
 // 1023 end
 @media (max-width:767px) {
     footer {
@@ -134,40 +114,33 @@ footer {
             max-width: 100px;
             flex: 0 0 100%;
         }
-
         .footer-logo {
             margin-right: 0;
             width: 100%;
-
             img {
                 max-width: 57px;
             }
         }
     }
 }
-
 // 767 end
 @media (max-width:479px) {
     footer {
         .col-footer-logo {
             padding-bottom: 20px;
         }
-
         .col {
             max-width: 100%;
             flex: 0 0 100%;
         }
-
         ul {
             li {
                 margin-bottom: 10px;
-
                 li {
                     margin-top: 0;
                 }
             }
         }
-
         .col-news-letter {
             h6 {
                 margin-bottom: 10px;
@@ -175,5 +148,4 @@ footer {
         }
     }
 }
-
 // 479 end

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="https://hellochapter.com/favicon.ico" />
@@ -21,7 +20,6 @@
     <meta property="og:image" content="https://hellochapter.com/images/og-images/other/home.jpg" />
     <meta property="og:image:width" content="750" />
     <meta property="og:image:height" content="422" />
-
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://hellochapter.com/">
@@ -86,7 +84,6 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');</script>
     <!-- End Google Tag Manager -->
-
     <!-- QR code query parameter read  -->
     <script>
         function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
@@ -138,15 +135,12 @@
                     }
                 });
             }, 500)
-
         } else {
             if (localStorage.getItem("qr_status")) {
                 localStorage.removeItem("qr_status")
                 localStorage.removeItem("formSubmitted")
             }
-
         }
-
     </script>
     <!-- Microsoft Ads Conversion Tracking -->
     <!-- Google Tag Manager -->
@@ -163,7 +157,6 @@
         type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
     <!-- Crisp chat end -->
 </head>
-
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRJKFJK" height="0" width="0"
@@ -255,13 +248,11 @@
                             <div class="desktop-hide scroll-button-wrapper">
                                 <button id="scrollButton2" class="text-label-wrap btn-styled-removed" type="button">
                                     <span class="line"></span>
-
                                 </button>
                             </div>
                         </div>
                         <div class="col section-content-col">
                             <div class="section-content text-center">
-
                                 <h1 data-aos="fade" data-aos-delay="650" class="aos-init
                     ">
                                     The home renovation you've been dreaming of</h1>
@@ -398,7 +389,6 @@
                                                                 class="btn-white">How it works
                                                             </a>
                                                         </div>
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -608,7 +598,6 @@
                                                 class="btn-black">Learn more</a>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="desktop-hide">
                                     <div class="heading-content-wrap">
@@ -653,7 +642,6 @@
                                                 class="btn-black">Learn more</a>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="desktop-hide">
                                     <div class="heading-content-wrap">
@@ -699,7 +687,6 @@
                                                 class="btn-black">Learn more</a>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="desktop-hide">
                                     <div class="heading-content-wrap">
@@ -713,7 +700,6 @@
                                 <div class="col col-img bg-image" style="background-image:
                                   url('./../images/home/section-image-2.webp');">
                                 </div>
-
                             </div>
                         </div>
                         <div class="slide-item">
@@ -746,7 +732,6 @@
                                                 class="btn-black">Learn more</a>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="desktop-hide">
                                     <div class="heading-content-wrap">
@@ -1047,10 +1032,8 @@
                     </div>
                 </section>
                 <!-- section-home-contact-forms end -->
-
                 <!-- modal-home-client-video start -->
                 <div id="clent1-modal-container">
-
                 </div>
                 <!-- modal-home-client-video end -->
             </div>
@@ -1163,7 +1146,6 @@
     <script src="./../js/home-page.js"></script>
     <script>
     </script>
-
     <script src="https://www.youtube.com/iframe_api"></script>
     <script>
         $(document).ready(function () {
@@ -1178,20 +1160,15 @@
                 path: animationPath
             });
             // Home page client video
-
             $('.modal-home-client-video .btn-close, .modal-home-client-video').click(function () {
                 $('#client1-modal, #client2-modal').css('display', 'none');
                 stopYouTubeVideo();
             });
-
             $('.modal-content').click(function (event) {
                 event.stopPropagation();
             });
-
             // Load and control the YouTube video
-
             var queryParams = '?modestbranding=1&rel=0&showinfo=0&enablejsapi=1&start=0';
-
             function loadYouTubeVideo(videoId) {
                 var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
                 new YT.Player('player1', {
@@ -1230,7 +1207,6 @@
                     }
                 });
             }
-
             function onPlayerReady(event) {
                 event.target.playVideo();
             }
@@ -1271,16 +1247,13 @@
         `;
                 const modalContainer = document.getElementById('clent1-modal-container');
                 modalContainer.innerHTML = docString;
-
                 // attach event handler for the rendered modal
                 $(".modal-home-client-video .btn-close").on("click", function () {
                     stopYouTubeVideo("modal1");
                 });
-
                 $('#client1-modal').css('display', 'flex');
                 loadYouTubeVideo('EroEwFzupYI');
             });
-
             $('#openModal2').click(function () {
                 // create and append modal structure here.
                 const docString2 = `
@@ -1302,12 +1275,10 @@
         `;
                 const modalContainer = document.getElementById('clent1-modal-container');
                 modalContainer.innerHTML = docString2;
-
                 // attach event handler for the rendered modal
                 $(".modal-home-client-video .btn-close").on("click", function () {
                     stopYouTubeVideo("modal2");
                 });
-
                 $('#client2-modal').css('display', 'flex');
                 loadYouTubeVideo2('wmmtsXhlG0s');
             });
@@ -1330,5 +1301,4 @@
     </script>
 <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
 </body>
-
 </html>

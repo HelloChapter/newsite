@@ -1,16 +1,13 @@
 .section-accordion {
     padding: 90px 0;
-
     .container {
         max-width: 1280px;
     }
-
     .section-title {
         padding-bottom: 50px;
         border-bottom: 1px solid $black;
         margin-bottom: 5px;
     }
-
     button {
         font-size: 17px;
         line-height: 80px;
@@ -23,7 +20,6 @@
         position: relative;
         padding-right: 70px;
         color: $text-color;
-
         &:after {
             content: "";
             height: 7px;
@@ -40,7 +36,6 @@
             right: 40px;
         }
     }
-
     .active-btn {
         &:after {
             -webkit-transform: scaleY(-1);
@@ -48,17 +43,14 @@
             transform: scaleY(-1);
         }
     }
-
     .card {
         border-bottom: 1px solid $black;
     }
-
     .card-content {
         padding-bottom: 40px;
         padding-right: 60px;
     }
 }
-
 // Responsive CSS start
 @media (max-width:1440px) {
     .section-accordion {
@@ -68,26 +60,21 @@
         }
     }
 }
-
 // 1440 end
 @media (max-width:1023px) {
     .section-accordion {
         padding: 60px 0;
-
         button {
             font-size: 14px;
             line-height: 1.4;
             padding: 17px 50px 17px 0;
-
             &:after {
                 right: 20px;
             }
         }
-
         .card-content {
             padding-right: 40px;
         }
     }
 }
-
 // 1023 end
