@@ -19,7 +19,7 @@ const editCursor = e => {
 
 link.forEach(b => b.addEventListener('mousemove', animateit));
 link.forEach(b => b.addEventListener('mouseleave', animateit));
-window.addEventListener('mousemove', editCursor);
+window.addEventListener('mousemove',{passive: true}, editCursor);
 $(".diamond-square").css("display", "none");
 
 $(".section-confident .section-box").mouseenter(function () {
