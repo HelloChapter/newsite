@@ -41,10 +41,11 @@
     <link rel="preconnect" href="https://embedsocial.com/" />
     <link defer rel="stylesheet" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/index.css" />
 
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js" as="script"/>
+
     <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
 
     <link rel="preload" href="./videos/home/Chapter-Hero-Video.webm" as="video" type="video/webm" />
-    <link rel="preload" href="./videos/home/Chapter-Hero-Video.mp4" as="video" type="video/mp4" />
 
     <!-- Meta Pixel Code -->
     <script>
@@ -136,7 +137,8 @@
     </script>
     <!-- Microsoft Ads Conversion Tracking -->
     <script defer type="text/javascript">
-        $(document).ready(function () {
+        document.addEventListener('DOMContentLoaded', function() {
+            $(document).ready(function () {
             // <!-- Google Tag Manager -->
 
             (function (w, d, s, l, i) {
@@ -163,6 +165,8 @@
                 (window, document, "script", "//bat.bing.com/bat.js", "uetq");
             // <!-- Microsoft Ads Conversion Tracking -->
         });
+        })
+        
     </script>
     <!-- Crisp chat end -->
 </head>
@@ -1209,7 +1213,8 @@
     </script>
     <script defer src="https://www.youtube.com/iframe_api"></script>
     <script>
-        $(document).ready(function () {
+        document.addEventListener('DOMContentLoaded', function() {
+            $(document).ready(function () {
             var animationPath = './js/scroll-animation.json';
             var container = document.getElementById('scrollButton');
             // Load the Lottie animation
@@ -1402,6 +1407,8 @@
                 loadYouTubeVideo3('rsCpcFnADrY');
             });
         });
+        })
+        
     </script>
     <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
 </body>
