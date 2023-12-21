@@ -57,22 +57,7 @@
             src="https://www.facebook.com/tr?id=432821205070173&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Meta Pixel Code -->
-    <script>
-        (function (w, d, t, r, u) {
-            var f, n, i;
-            w[u] = w[u] || [], f = function () {
-                var o = { ti: "247002886" };
-                o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad")
-            },
-                n = d.createElement(t), n.src = r, n.async = 1, n.onload = n.onreadystatechange = function () {
-                    var s = this.readyState;
-                    s && s !== "loaded" && s !== "complete" || (f(), n.onload = n.onreadystatechange = null)
-                },
-                i = d.getElementsByTagName(t)[0], i.parentNode.insertBefore(n, i)
-        })
-            (window, document, "script", "//bat.bing.com/bat.js", "uetq");
-    </script>
-    <!-- Microsoft Ads Conversion Tracking -->
+
     <!-- Google Tag Manager -->
     <script>
 
@@ -137,8 +122,6 @@
         }
     </script>
     <!-- Microsoft Ads Conversion Tracking -->
-    <script>
-    </script>
     <script type="text/javascript">
         setTimeout(() => {
             window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
@@ -153,8 +136,21 @@
                         'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
             })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');
             // <!-- End Google Tag Manager -->
-
-        }, "5000");
+            (function (w, d, t, r, u) {
+                var f, n, i;
+                w[u] = w[u] || [], f = function () {
+                    var o = { ti: "247002886" };
+                    o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad")
+                },
+                    n = d.createElement(t), n.src = r, n.async = 1, n.onload = n.onreadystatechange = function () {
+                        var s = this.readyState;
+                        s && s !== "loaded" && s !== "complete" || (f(), n.onload = n.onreadystatechange = null)
+                    },
+                    i = d.getElementsByTagName(t)[0], i.parentNode.insertBefore(n, i)
+            })
+                (window, document, "script", "//bat.bing.com/bat.js", "uetq");
+            // <!-- Microsoft Ads Conversion Tracking -->
+        }, 5000);
     </script>
     <!-- Crisp chat end -->
 </head>
@@ -233,8 +229,10 @@
                                         controls="" id="video-player" class="video-js" autobuffer="true" muted
                                         loading="lazy"
                                         data-setup='{ "controls": false, "autoplay": false, "preload": "auto", "loop": "true" }'>
-                                         <source src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/home/Chapter-Hero-Video.webm" type="video/webm" />
-                                        <!-- <source src="./videos/home/Chapter-Hero-Video.mp4" type="video/mp4" /> --> 
+                                        <source
+                                            src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/home/Chapter-Hero-Video.webm"
+                                            type="video/webm" />
+                                        <!-- <source src="./videos/home/Chapter-Hero-Video.mp4" type="video/mp4" /> -->
                                         Your browser does not support HTML5 video.
                                     </video>
                                     <button id="btn-play" class="btn-styled-removed" type="button">
@@ -1186,7 +1184,8 @@
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/lottie.min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.lazy.min.js"></script>
     <script async src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/swiper.js"></script>
-    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.nice-select.min.js"></script>
+    <script defer
+        src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.nice-select.min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/custom.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/contact-home.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/home-page.js"></script>
