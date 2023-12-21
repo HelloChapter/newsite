@@ -77,7 +77,10 @@ jQuery(document).ready(function ($) {
     }
 });
 /*Ready function end*/
-window.fbq('track', 'Contact', { value: 0, currency: 'USD' });
+setTimeout(() => {
+    window.fbq('track', 'Contact', { value: 0, currency: 'USD' });
+}, 5000);
+
 var inputs = $("#contact-form input");
 var CustomSelect = $("#contact-form select");
 // Ajax function
@@ -106,7 +109,7 @@ function redirectToThankYou() {
     }
     // var url = window.location.href;
     window.location.href = "/thank-you-message-home/?submit=true";
-    var url ="/thank-you-message-home/?submit=true";
+    var url = "/thank-you-message-home/?submit=true";
     if (!url.includes("submit=true")) {
         if (url.indexOf("?") !== -1) {
             url = url + "&submit=true";
