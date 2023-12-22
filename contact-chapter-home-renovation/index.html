@@ -31,17 +31,13 @@
     apartments and townhouses specilizing the New York City and Miami
     area.">
     <meta property="twitter:image" content="https://hellochapter.com/images/contact-img/contact-image1.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
-    <!-- <link href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
-        rel="stylesheet" async> -->
-    <link rel="stylesheet" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/contact-style.css" />
     <script  src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
     <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-    <noscript><link rel="stylesheet" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"></noscript>
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/contact-style.css?rsct=text/css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css">
+        <link rel="stylesheet" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/contact-style.css?rsct=text/css">
+    </noscript>
     <!-- Meta Pixel Code -->
     <script>
         setTimeout(() => {
@@ -61,7 +57,15 @@
         }, 0);
 
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script>
+    <script>
+        setTimeout(function() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-225495044-1';
+            document.head.appendChild(script);
+        }, 2000);
+    </script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script> -->
     <script>
         $(document).ready(function () {
             setTimeout(() => {
@@ -97,7 +101,7 @@
                 //<!-- End Google Tag Manager -->
                 window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
                 //<!-- Crisp chat end -->
-            }, 2000);
+            }, 3000);
         });
         // Ready function end
     </script>
