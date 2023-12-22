@@ -5,6 +5,10 @@
 @import "../components//speak-to-expert.scss";
 @import "../components/header.scss";
 @import "../components/footer.scss";
+img {
+    height: auto;
+    width: auto;
+}
 .page-contact {
     .middle-content {
         padding-top: 0;
