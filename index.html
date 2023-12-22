@@ -1226,13 +1226,13 @@
                     autoplay: true,
                     path: animationPath
                 });
-            }, 200);
+            }, 500);
             // Play intro section video
             var player = videojs('video-player');
             player.pause();
             setTimeout(function () {
                 player.play();
-            }, 700);
+            }, 800);
             // Home page client video
             $('.lazy').Lazy();
             // lazy load images
@@ -1410,7 +1410,7 @@
         })
         
     </script>
-    <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
+    <script defer type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
 </body>
 
 </html>

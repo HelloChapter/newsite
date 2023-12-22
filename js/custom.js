@@ -208,20 +208,22 @@ jQuery(document).ready(function ($) {
         cssEase: 'ease-in-out',
     });
     // new projects pages card slider end
-    $('.announcement-bar').slick({
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 35000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-        fade: false,
-        variableWidth: true,
-        centerMode: false,
-        cssEase: 'linear',
-    });
+    setTimeout(() => {
+        $('.announcement-bar').slick({
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 0,
+            speed: 35000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            fade: false,
+            variableWidth: true,
+            centerMode: false,
+            cssEase: 'linear',
+        });
+      }, 800);
     // announcement-bar slider end
     //NYC projects more cards
     $('.show-lesss-btn').hide();
