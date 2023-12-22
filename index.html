@@ -29,8 +29,8 @@
     <meta property="twitter:image" content="https://hellochapter.com/images/og-images/other/home.jpg">
     <link rel="stylesheet"
         href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/slick.css?rsct=text/css" async />
-    <link href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
-        rel="stylesheet" async>
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet"
         href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/swiper.css?rsct=text/css" async>
     <!-- <link href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/video-js.css?rsct=text/css"
@@ -43,13 +43,16 @@
 
     <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"
         as="script" />
-
+    <noscript>
+        <link rel="stylesheet"
+            href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css">
+    </noscript>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script> -->
     <script>
-        setTimeout(function() {
+        setTimeout(function () {
             var script = document.createElement('script');
             script.async = true;
             script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-225495044-1';
@@ -247,7 +250,7 @@
                         <div class="col col-video-box aos-init pearl-bg2">
                             <div class="video-box-wrap">
                                 <div class="video-box">
-                                    <video muted playsinline controlsList="nodownload nofullscreen" loop="true" 
+                                    <video muted playsinline controlsList="nodownload nofullscreen" loop="true"
                                         controls="" id="video-player" class="video-js" autobuffer="true" muted
                                         loading="lazy" preload="auto"
                                         data-setup='{ "controls": false, "autoplay": false, "preload": "auto", "loop": "true" }'>
@@ -1419,7 +1422,7 @@
     </script>
     <!-- <script defer type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script> -->
     <script defer>
-        setTimeout(function() {
+        setTimeout(function () {
             var script = document.createElement('script');
             script.async = true;
             script.src = 'https://crm.zoho.com/crm/javascript/zcga.js';
