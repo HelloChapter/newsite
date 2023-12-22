@@ -67,7 +67,10 @@ jQuery(document).ready(function ($) {
   });
 });
 /*Ready function end*/
-window.fbq('track', 'Contact', { value: 0, currency: 'USD' });
+setTimeout(() => {
+  window.fbq('track', 'Contact', { value: 0, currency: 'USD' });
+}, 2000);
+
 var inputs = $("#contact-form input");
 // Ajax function
 function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
