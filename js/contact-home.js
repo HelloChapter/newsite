@@ -12,7 +12,6 @@ var postDataObject = {
     "fbc": "",
     "fbp": "",
     "originalUrl": "",
-
 }
 // Email Validation
 function isEmail(email) {
