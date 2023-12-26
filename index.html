@@ -35,8 +35,8 @@
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet"
         href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/swiper.css?rsct=text/css" async>
-    <link href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/video-js.css?rsct=text/css"
-        rel="stylesheet" async />
+    <!-- <link href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/video-js.css?rsct=text/css"
+        rel="stylesheet" async /> -->
     <link rel="stylesheet"
         href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/nice-select.css?rsct=text/css" async />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -1212,7 +1212,7 @@
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/aos.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/slick.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/anime.js"></script>
-    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/video.min.js"></script>
+    <!-- <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/video.min.js"></script> -->
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/lottie.min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.lazy.min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/swiper.js"></script>
@@ -1241,8 +1241,8 @@
                     });
                 }, 500);
                 // Play intro section video
-                var player = videojs('video-player');
-                //var player = document.getElementById("video-player")
+                // var player = videojs('video-player');
+                var player = document.getElementById("video-player")
                 player.pause();
                 setTimeout(function () {
                     player.play();
