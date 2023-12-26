@@ -1155,6 +1155,10 @@
             .col-img {
                 padding-bottom: 99.5%;
             }
+            .image-label {
+                width: 100%;
+                text-align: center;
+            }
         }
     }
 
@@ -1168,6 +1172,9 @@
             h2 {
                 line-height: 28px;
                 max-width: 252px;
+            }
+            p {
+                line-height: 35px;
             }
         }
 
