@@ -148,6 +148,7 @@
   color: #999;
   cursor: default;
 }
+
 .no-csspointerevents .nice-select .list {
   display: none;
 }
