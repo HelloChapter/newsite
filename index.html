@@ -31,7 +31,7 @@
         href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/slick.css?rsct=text/css" async /> -->
     <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/slick.css?rsct=text/css"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet"
         href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/swiper.css?rsct=text/css" async>
@@ -48,7 +48,7 @@
     <noscript>
         <link rel="stylesheet"
             href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/slick.css?rsct=text/css">
-            <link rel="stylesheet"
+        <link rel="stylesheet"
             href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css">
     </noscript>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
@@ -68,6 +68,20 @@
     </noscript>
     <!-- End Meta Pixel Code -->
     <script async>
+        // !function (f, b, e, v, n, t, s) {
+        //     if (f.fbq) return; n = f.fbq = function () {
+        //         n.callMethod ?
+        //             n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        //     };
+        //     if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        //     n.queue = []; t = b.createElement(e); t.async = !0;
+        //     t.src = v; s = b.getElementsByTagName(e)[0];
+        //     s.parentNode.insertBefore(t, s)
+        // }(window, document, 'script',
+        //     'https://connect.facebook.net/en_US/fbevents.js');
+        // fbq('init', '432821205070173');
+        // fbq('track', 'PageView');
+
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
@@ -75,8 +89,11 @@
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
+            var cacheControl = 'max-age=3600';
+            t.src = v + '?cache_control=' + cacheControl;
+
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '432821205070173');
@@ -997,7 +1014,7 @@
                                         <div class="col col-select">
                                             <div class="input-wrap select-wrapper-box">
                                                 <select id="selectBox" class="form-control" tabindex="0"
-                                                    aria-invalid="false" name="state">
+                                                    aria-invalid="false" name="state" aria-label="State">
                                                     <option value="0" selected="selected" class="gf_placeholder">State*
                                                     </option>
                                                     <option value="Alaska">Alaska</option>
