@@ -17,9 +17,9 @@ const editCursor = e => {
     cursor.style.top = y + 'px';
 };
 
-link.forEach(b => b.addEventListener('mousemove', animateit));
-link.forEach(b => b.addEventListener('mouseleave', animateit));
-window.addEventListener('mousemove', editCursor);
+link.forEach(b => b.addEventListener('mousemove', animateit, {passive: true}));
+link.forEach(b => b.addEventListener('mouseleave', animateit, {passive: true}));
+window.addEventListener('mousemove', editCursor, {passive: true});
 $(".diamond-square").css("display", "none");
 
 $(".section-confident .section-box").mouseenter(function () {
