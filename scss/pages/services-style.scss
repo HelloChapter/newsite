@@ -9,12 +9,10 @@
 @import "../components/image-content.scss";
 @import "../components/home-new-projects-slider.scss";
 @import "../components/accordion.scss";
-
 .page-services {
     header {
         border-bottom: 0.5px solid $border-color;
     }
-
     .sub-title,
     h1 {
         font-size: 75px;
@@ -22,54 +20,42 @@
         letter-spacing: 0;
     }
 }
-
 .mobile-content {
     display: none;
 }
-
 .home-new-projects-slider .heading-content-wrap {
     background-color: $pearl-drop2;
 }
-
 .section-intro-image {
     padding: 80px 0;
-
     .section-content-col {
         padding-left: 115px;
     }
-
     .col-img {
         background-size: 76% auto;
     }
-
     .page-title {
         max-width: 630px;
     }
-
     .content {
         max-width: 600px;
         margin: 0;
         padding: 30px 0;
     }
 }
-
 .section-what-we-know {
     padding: 115px 0 65px;
-
     .container {
         max-width: 960px;
     }
-
     .content-row {
         .col {
             max-width: 33.33%;
             flex: 0 0 33.33%;
         }
     }
-
     .heading-content {
         margin-bottom: 30px;
-
         p {
             font-size: 17px;
             line-height: 2;
@@ -77,14 +63,11 @@
             margin: 0 auto;
         }
     }
-
     h2 {
         margin-bottom: 30px;
     }
-
     .col-item {
         padding-bottom: 50px;
-
         h4 {
             font-size: 17px;
             line-height: 30px;
@@ -94,77 +77,61 @@
         }
     }
 }
-
 .section-our-design-team {
     padding: 111px 115px;
-
     h2 {
         margin-bottom: 30px;
     }
-
     .section-content-col {
         max-width: 56%;
         flex: 0 0 56%;
         padding-right: 30px;
     }
-
     .content {
         max-width: 860px;
         font-size: 17px;
         line-height: 40px;
         font-weight: 300;
     }
-
     .bg-image {
         padding-bottom: 43%;
     }
 }
-
 .section-project-manager {
     padding: 136px 115px;
-
     .content {
         max-width: 570px;
     }
-
     h2 {
         margin-bottom: 30px;
         max-width: 580px;
     }
-
     .section-image-content {
         max-width: 56%;
         flex: 0 0 56%;
         padding-right: 30px;
     }
-
     .image {
         max-width: 730px;
         margin: 0 auto;
     }
 }
-
 .section-two-card-layout {
     padding: 50px 60px;
-
     .row {
         margin: 0 -30px;
-
         .col {
             padding: 0 30px;
         }
     }
-
     .card {
         height: 100%;
     }
-
     .card-image {
         img {
             display: block;
         }
     }
-
     .link-url {
         position: absolute;
         top: 0;
@@ -172,23 +139,19 @@
         width: 100%;
         height: 100%;
     }
-
     .card-content {
         padding: 30px 130px 55px 55px;
         position: relative;
-
         h3 {
             font-size: 50px;
             line-height: 57px;
             font-weight: 700;
             margin: 20px 0 30px;
         }
-
         p {
             max-width: 570px;
             line-height: 35px;
         }
-
         .right-arrow-click {
             position: absolute;
             right: 60px;
@@ -196,35 +159,28 @@
         }
     }
 }
-
 .section-reviews {
     padding: 30px 0;
 }
-
 // Kitchen components start
 .section-kitchen-intro-image {
     padding: 0;
-
     .section-content-col {
         padding: 0 15px;
     }
-
     .section-image-content {
         padding: 110px;
     }
-
     .col-img {
         padding-bottom: 97.5%;
         position: relative;
     }
-
     .image-label {
         position: absolute;
         bottom: 0;
         left: 0;
         background-color: rgba($color: $black, $alpha: 0.9);
         padding: 0 40px;
-
         h6 {
             font-size: 17px;
             line-height: 40px;
@@ -233,31 +189,25 @@
             color: $white;
         }
     }
-
     .page-title {
         max-width: 692px;
         margin: 0 auto;
     }
-
     .content {
         max-width: 600px;
         margin: 0 auto;
         padding: 30px 0;
     }
 }
-
 .section-what-invloved {
     padding: 115px 0 47px;
-
     .heading-content {
         max-width: 992px;
         margin: 0 auto 50px;
-
         h2 {
             line-height: 58px;
             margin-bottom: 30px;
         }
-
         h4 {
             font-size: 20px;
             line-height: 30px;
@@ -266,29 +216,24 @@
             font-family: "Inter";
         }
     }
-
     .col-tablet {
         display: none;
     }
-
     .content-wrap {
         .col-item {
             max-width: 33.33%;
             flex: 0 0 33.33%;
         }
-
         h5 {
             font-size: 20px;
             line-height: 22px;
             margin-bottom: 12px;
             font-family: "Inter";
         }
-
         .content {
             max-width: 360px;
             margin-bottom: 68px;
         }
-
         .dash {
             background-color: $black;
             height: 2px;
@@ -297,55 +242,43 @@
         }
     }
 }
-
 .section-plan-design-build {
     padding: 115px 134px;
-
     * {
         color: $white;
     }
-
     .row {
         margin: 0 -20px;
     }
-
     .col {
         padding: 0 20px;
     }
-
     .card {
         border: 1px solid $white;
         height: 100%;
-
         .card-header {
             border-bottom: 1px solid $white;
             min-height: 308px;
         }
-
         .card-content {
             padding: 42px 42px 100px;
         }
-
         h6 {
             font-size: 17px;
             line-height: 47px;
             font-family: "Inter";
             font-weight: 300;
         }
-
         h2 {
             line-height: 57px;
         }
-
         p {
             font-size: 17px;
             line-height: 35px;
             font-weight: 400;
         }
-
         .time {
             padding-top: 40px;
-
             h6 {
                 display: flex;
                 align-items: center;
@@ -354,13 +287,11 @@
                 font-weight: 700;
                 margin-bottom: 9px;
                 font-family: "Inter";
-
                 img {
                     margin-right: 7px;
                 }
             }
         }
-
         h5 {
             font-family: "Inter";
             font-size: 17px;
@@ -368,7 +299,6 @@
             font-weight: 400;
         }
     }
-
     .slick-dots {
         display: flex;
         justify-content: center;
@@ -379,18 +309,15 @@
         width: 100%;
         position: absolute;
         bottom: -35px;
-
         li {
             padding: 0 6.5px;
             line-height: 0;
         }
-
         .slick-active {
             button {
                 background-color: $white;
             }
         }
-
         button {
             background-color: transparent;
             border: none;
@@ -402,120 +329,95 @@
         }
     }
 }
-
 .section-plan-design-build-method {
     .col {
         max-width: 50%;
         flex: 0 0 50%;
     }
-
     .section-content-col {
         padding: 107px 115px 180px;
     }
-
     .content-wrap {
         max-width: 740px;
         margin: 0 auto;
-
         h2 {
             margin-bottom: 30px;
         }
-
         p {
             line-height: 40px;
         }
     }
 }
-
 .section-access-world {
     .section-image-content {
         padding: 115px;
-
         .col-img {
             padding-bottom: 98.5%;
         }
     }
-
     .col {
         max-width: 50%;
         flex: 0 0 50%;
     }
-
     .content-wrap {
         max-width: 847px;
         padding: 40px 0;
-
         h2 {
             margin-bottom: 30px;
         }
-
         h5 {
             font-size: 20px;
             line-height: 35px;
             font-family: "Inter";
             margin-bottom: 12px;
         }
-
         p {
             line-height: 35px;
             margin-bottom: 10px;
         }
     }
 }
-
 // Responsive css start
 @media (max-width:1600px) {
     .page-services {
-
         .sub-title,
         h1 {
             font-size: 70px;
             line-height: 80px;
         }
     }
-
     .section-intro-image {
         padding: 50px 0;
-
         .section-content-col {
             padding-left: 80px;
         }
     }
-
     .section-what-we-know {
         padding: 80px 0 50px;
-
         .heading-content {
             p {
                 font-size: 17px;
             }
         }
     }
-
     .section-our-design-team {
         padding: 70px 80px;
-
         .content {
             font-size: 17px;
             line-height: 2;
         }
     }
-
     .section-project-manager {
         padding: 100px 80px;
     }
-
     .section-two-card-layout {
         padding: 35px 60px;
-
         .card-content {
             padding: 30px 110px 35px 35px;
-
             h3 {
                 font-size: 45px;
                 line-height: 50px;
             }
-
             .right-arrow-click {
                 position: absolute;
                 right: 40px;
@@ -523,82 +425,64 @@
             }
         }
     }
-
     .section-kitchen-intro-image {
         .section-image-content {
             padding: 80px;
         }
     }
-
     .section-what-invloved {
         padding: 80px 0 40px;
-
         .heading-content {
             margin: 0 auto 40px;
         }
     }
-
     .section-plan-design-build {
         padding: 80px 100px;
     }
-
     .section-plan-design-build-method {
         .section-content-col {
             padding: 80px 80px 150px;
         }
     }
-
     .section-access-world {
         .section-image-content {
             padding: 80px;
         }
     }
 }
-
 // 1600px end
 @media (max-width:1440px) {
     .section-intro-image {
         padding: 35px 0;
-
         .section-content-col {
             padding-left: 60px;
         }
     }
-
     .section-what-we-know {
         padding: 60px 0 35px;
-
         .heading-content {
             p {
                 font-size: 16px;
             }
         }
-
     }
-
     .section-our-design-team {
         padding: 50px 60px;
-
         .content {
             font-size: 16px;
         }
     }
-
     .section-project-manager {
         padding: 80px 60px;
     }
-
     .section-two-card-layout {
         padding: 25px 60px;
-
         .card-content {
             padding: 30px 110px 35px 35px;
-
             h3 {
                 font-size: 40px;
                 line-height: 1.1;
             }
-
             .right-arrow-click {
                 position: absolute;
                 right: 40px;
@@ -606,26 +490,21 @@
             }
         }
     }
-
     .section-kitchen-intro-image {
         .section-image-content {
             padding: 60px;
         }
     }
-
     .section-plan-design-build {
         padding: 60px 60px;
     }
-
     .section-plan-design-build-method .section-content-col {
         padding: 60px 60px 120px;
     }
-
     .section-access-world .section-image-content {
         padding: 60px;
     }
 }
-
 // 1440 end
 @media (max-width:1196px) {
     .section-plan-design-build .card .card-header {
@@ -634,38 +513,30 @@
         padding-bottom: 30%;
     }
 }
-
 @media (max-width:1023px) {
     .section-kitchen-intro-image {
         .col {
             max-width: 100%;
             flex: 0 0 100%;
         }
-
         .section-image-content {
             order: 1;
             padding: 37px;
-
             .col-img {
                 background-size: cover;
                 padding-bottom: 73.5%;
-
             }
-
             .image-label {
-
                 h6 {
                     font-size: 14px;
                 }
             }
         }
-
         .content-wrap {
             max-width: 560px;
             margin: 0 auto;
             padding: 30px 0 60px;
             position: relative;
-
             &:after {
                 content: " ";
                 display: block;
@@ -680,121 +551,96 @@
                 background-color: $black;
             }
         }
-
         .content {
             max-width: 405px;
             margin: 0 auto;
         }
     }
-
     .section-what-invloved {
         padding: 60px 80px 30px;
-
         .heading-content {
             margin: 0 auto 35px;
-
             h2 {
                 line-height: 29px;
             }
-
             p {
                 line-height: 30px;
             }
-
             h4 {
                 display: none;
             }
         }
-
         .row {
             margin: 0 -19px;
-
             .col {
                 padding: 0 19px;
             }
         }
-
         .col-tablet {
             display: block;
-
             h4 {
                 font-size: 14px;
                 line-height: 24px;
                 font-family: "Inter";
             }
         }
-
         .content-wrap {
             .col-item {
                 max-width: 50%;
                 flex: 0 0 50%;
             }
-
             h5 {
                 font-size: 14px;
                 line-height: 22px;
             }
-
             .content {
                 max-width: 285px;
                 margin-bottom: 26px;
             }
         }
     }
-
     .section-plan-design-build {
         padding: 60px;
-
         .card {
             .card-content {
                 padding: 30px 30px 54px;
             }
-
             h6 {
                 font-size: 14px;
                 line-height: 24px;
             }
-
             h2 {
                 font-size: 40px;
             }
-
             p {
                 font-size: 14px;
                 line-height: 24px;
             }
-
             .time {
                 padding-top: 60px;
-
                 h6 {
                     font-size: 14px;
                     line-height: 24px;
                 }
             }
-
             h5 {
                 font-size: 14px;
                 line-height: 24px;
             }
         }
     }
-
     .section-plan-design-build-method {
         .col {
             max-width: 100%;
             flex: 0 0 100%;
         }
-
         .section-image-content {
             min-height: 335px;
             padding-bottom: 40%;
         }
-
         .section-content-col {
             padding: 60px;
         }
-
         .content-wrap {
             p {
                 font-size: 14px;
@@ -802,60 +648,47 @@
             }
         }
     }
-
     .section-access-world {
         letter-spacing: 0;
-
         .section-image-content {
             padding: 0 60px 60px;
             order: 1;
-
             .col-img {
                 padding-bottom: 86.8%;
             }
         }
-
         .section-content-col {
             order: 0;
         }
-
         .col {
             max-width: 100%;
             flex: 0 0100%;
         }
-
         .content-wrap {
             padding: 60px;
-
             h5 {
                 font-size: 14px;
                 line-height: 24px;
             }
-
             p {
                 line-height: 24px;
             }
         }
     }
-
     .home-new-projects-slider {
         .col-12 {
             max-width: 100%;
             flex: 0 0 100%;
         }
     }
-
     .section-accordion {
         padding: 60px 14px;
-
         h2 {
             font-size: 50px;
         }
-
         .section-title {
             padding-bottom: 30px;
         }
-
         .card {
             button {
                 line-height: 24px;
@@ -864,7 +697,6 @@
         }
     }
 }
-
 // 1023 end
 @media (max-width:991px) {
     .section-intro-image {
@@ -874,11 +706,9 @@
             padding-left: 20px;
             padding-right: 20px;
         }
-
         .section-image-content {
             background-size: contain;
         }
-
         .content-wrap {
             max-width: 455px;
             margin: 0 auto;
@@ -907,30 +737,24 @@
             }
         }
     }
-
     .section-two-card-layout {
         .row .col-card {
             max-width: 100%;
             flex: 0 0 100%;
-
             +.col-card {
                 padding-top: 60px;
             }
         }
-
         .card-content {
             padding: 35px 60px 35px 30px;
-
             p {
                 line-height: 24px;
             }
-
             h3 {
                 br {
                     display: none;
                 }
             }
-
             .right-arrow-click {
                 position: absolute;
                 right: 40px;
@@ -939,68 +763,53 @@
             }
         }
     }
-
     .section-project-manager {
         padding: 60px;
-
         .col {
             max-width: 100%;
             flex: 0 0 100%;
         }
-
         .section-image-content {
             order: 1;
             padding: 0;
         }
-
         .content {
             max-width: 640px;
         }
-
         .image {
             padding-top: 110px;
             max-width: 503px;
         }
     }
-
     .section-our-design-team {
         padding: 60px;
-
         .col {
             max-width: 100%;
             flex: 0 0 100%;
         }
-
         .bg-image {
             padding-bottom: 102%;
         }
-
         .section-content-col {
             padding: 0 0 60px;
         }
-
         .content {
             font-size: 14px;
             line-height: 24px;
         }
     }
-
     .section-what-we-know {
         padding: 115px 0 60px;
-
         .heading-content {
             margin: 0 auto 30px;
             max-width: 620px;
             text-align: center;
-
             p {
                 font-size: 14px;
                 line-height: 40px;
                 max-width: 430px;
-
             }
         }
-
         .col-item {
             h4 {
                 font-size: 14px;
@@ -1009,60 +818,47 @@
         }
     }
 }
-
 // 991 end
 @media (max-width:767px) {
     .page-services {
-
         .sub-title,
         h1 {
             font-size: 45px;
             line-height: 60px;
         }
     }
-
     .mobile-content {
         display: flex;
-
         h3 {
             display: flex;
             align-items: center;
-
             img {
                 margin-right: 12px;
                 max-width: 35px;
             }
         }
     }
-
     .desktop-content {
         display: none;
     }
-
     .section-two-card-layout {
         padding: 10px 20px;
-
         .row {
             margin: 0;
-
             .col {
                 padding: 0;
             }
-
             .col-card+.col-card {
                 padding-top: 30px;
             }
         }
-
         .card-content {
             padding: 30px 30px 78px 30px;
-
             h3 {
                 font-size: 25px;
                 line-height: 29px;
                 margin: 0 0 13px;
             }
-
             .right-arrow-click {
                 right: 30px;
                 top: auto;
@@ -1070,64 +866,50 @@
             }
         }
     }
-
     .section-reviews {
         padding: 10px 0;
     }
-
     .section-project-manager {
         padding: 30px 20px;
-
         p {
             font-size: 17px;
             line-height: 35px;
         }
-
         .image {
             padding-top: 60px;
             max-width: 85%;
         }
     }
-
     .section-our-design-team {
         padding: 60px 20px;
-
         .section-content-col {
             padding-bottom: 30px;
         }
-
         .bg-image {
             padding-bottom: 86.5%;
         }
     }
-
     .section-what-we-know {
         padding: 60px 0 40px;
         background-color: $light-pink;
-
         .container {
             text-align: left;
         }
-
         .heading-content {
             text-align: left;
-
             p {
                 line-height: 24px;
             }
         }
-
         .row {
             .col {
                 max-width: 100%;
                 flex: 0 0 100%;
             }
         }
-
         .col-item {
             padding: 0 0 20px 30px;
             position: relative;
-
             &:before {
                 content: "";
                 display: block;
@@ -1138,22 +920,18 @@
                 height: 16px;
                 width: 16px;
             }
-
             img {
                 display: none;
             }
-
             h4 {
                 margin: 0;
                 font-weight: 300;
             }
         }
     }
-
     .section-kitchen-intro-image {
         .section-image-content {
             padding: 30px;
-
             .col-img {
                 padding-bottom: 99.5%;
             }
@@ -1163,14 +941,11 @@
             }
         }
     }
-
     .section-what-invloved {
         padding: 30px 0px 0px;
-
         .heading-content {
             margin: 0 auto 35px;
             text-align: left;
-
             h2 {
                 line-height: 28px;
                 max-width: 252px;
@@ -1179,41 +954,33 @@
                 line-height: 35px;
             }
         }
-
         .col-tablet {
             margin-bottom: 30px;
-
             h4 {
                 font-size: 14px;
                 line-height: 24px;
                 font-family: "Inter";
             }
         }
-
         .content-wrap {
             .col-item {
                 max-width: 100%;
                 flex: 0 0 100%;
             }
-
             .content {
                 max-width: 100%;
                 margin-bottom: 36px;
             }
-
             .title-content {
                 display: flex;
                 align-items: center;
                 margin-bottom: 12px;
-
                 .dash {
                     display: none;
                 }
-
                 h5 {
                     margin: 0 0 0 8px;
                 }
-
                 img {
                     max-width: 25px;
                     height: auto;
@@ -1221,42 +988,33 @@
             }
         }
     }
-
     .section-plan-design-build {
         padding: 30px 20px 71px;
-
         .card .card-content {
             padding: 30px 20px 47px;
-
             h2 {
                 font-size: 35px;
                 line-height: 40px;
             }
         }
     }
-
     .section-plan-design-build-method .section-content-col {
         padding: 30px 20px 60px;
     }
-
     .section-access-world {
         .content-wrap {
             padding: 60px 20px 30px;
         }
-
         .section-image-content {
             padding: 0 20px 30px;
         }
     }
-
     .section-accordion {
         padding: 60px 0;
-
         .card button {
             padding: 15px 50px 15px 0;
             min-height: 81px;
         }
     }
 }
-
 // 767 end

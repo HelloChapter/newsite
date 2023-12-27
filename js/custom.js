@@ -225,7 +225,6 @@ jQuery(document).ready(function ($) {
         });
       }, 800);
     // announcement-bar slider end
-    
     //NYC projects more cards
     $('.show-lesss-btn').hide();
     $(".expand-project-nyc-btn .show-all-btn").click(function (event) {
@@ -263,7 +262,6 @@ jQuery(document).ready(function ($) {
     });
     kitchen_plan_design_slider();
 // kitchen-plan-design-build-slider end
-
 });
 /*Ready function end*/
 // Js for global after before
@@ -315,7 +313,6 @@ function debounce(func, delay) {
         timeoutId = setTimeout(func, delay);
     };
 }
-
 // Attach a debounced event listener to the window resize event
 window.addEventListener('resize', debounce(kitchen_plan_design_slider, 200));
 function kitchen_plan_design_slider() {

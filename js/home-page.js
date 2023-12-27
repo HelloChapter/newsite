@@ -1,8 +1,6 @@
-
 // js for diamond shape
 const link = document.querySelectorAll('.section-box-item');
 const cursor = document.querySelector('.diamond-square');
-
 const animateit = function (e) {
     const { offsetX: x, offsetY: y } = e,
         { offsetWidth: width, offsetHeight: height } = this,
@@ -10,18 +8,15 @@ const animateit = function (e) {
         xMove = x / width * (move * 2) - move,
         yMove = y / height * (move * 2) - move;
 };
-
 const editCursor = e => {
     const { clientX: x, clientY: y } = e;
     cursor.style.left = x + 'px';
     cursor.style.top = y + 'px';
 };
-
 link.forEach(b => b.addEventListener('mousemove', animateit, {passive: true}));
 link.forEach(b => b.addEventListener('mouseleave', animateit, {passive: true}));
 window.addEventListener('mousemove', editCursor, {passive: true});
 $(".diamond-square").css("display", "none");
-
 $(".section-confident .section-box").mouseenter(function () {
     $(".diamond-square").css("display", "block");
     $("body").css("cursor", "none");
@@ -30,8 +25,6 @@ $(".section-confident .section-box").mouseleave(function () {
     $("body").css("cursor", "inherit");
     $(".diamond-square").css("display", "none");
 });
-
-
 // Js for mobile devices
 window.addEventListener('touchmove', editCursor, {passive: true});
 const section_box = document.querySelector('.section-box');
@@ -47,18 +40,15 @@ section_box.addEventListener('touchend',{passive: true}, function (event) {
 $(document).ready(function () {
     // Select box UI
     $('select').niceSelect();
-
     $("#scrollButton, #scrollButton2").click(function () {
         var nextSection = $(this).closest("section").next(".section-confident");
         $("html, body").animate({
             scrollTop: nextSection.offset().top - 60
         }, 1000);
     });
-
     $('.slider').on('init', function (event, slick) {
         story_animation();
     });
-
     // Js for intro section video
     var video = document.getElementById("video-player_html5_api");
     var playButton = document.getElementById("btn-play");
@@ -77,7 +67,6 @@ $(document).ready(function () {
 // ready function end
 var lastScrollTop = 0;
 var delta = 3;
-
 $(window).on('load', function () {
     story_animation();
     function story_animation() {
@@ -124,7 +113,6 @@ $(window).on('load', function () {
                     delay: 0
                 });
         }, 100);
-
         setTimeout(function () {
             var textWrapper = document.querySelector('.btn-next-success-story .text-2');
             var subtexts = $('.btn-next-success-story .text-2').html();
@@ -170,6 +158,5 @@ $(window).on('load', function () {
                 });
         }, 100);
     }
-
 });
 // client section Next success story animation effect end
