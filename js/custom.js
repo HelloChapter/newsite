@@ -247,6 +247,7 @@ jQuery(document).ready(function ($) {
         cssEase: 'linear',
     });
     // announcement-bar slider end
+    
     //NYC projects more cards
     $('.show-lesss-btn').hide();
     $(".expand-project-nyc-btn .show-all-btn").click(function (event) {
@@ -282,6 +283,8 @@ jQuery(document).ready(function ($) {
     jQuery(".location-link-hover").hover(function () {
         jQuery(this).parents(".col-location").toggleClass("hover-link");
     });
+    kitchen_plan_design_slider();
+// kitchen-plan-design-build-slider end
 
 });
 /*Ready function end*/
@@ -323,8 +326,46 @@ function calculate_slider_height() {
     // detect screen size here and adjust div height accordingly
     var viewportWidth = window.innerWidth;
     const magicScrollNumber = 170;
-    var divTotalHeight = divHeight * (viewportWidth/magicScrollNumber);
+    var divTotalHeight = divHeight * (viewportWidth / magicScrollNumber);
 
     var setHeight = $('.empty-height-div');
     setHeight.height(divTotalHeight);
 }
+// Debounce function
+function debounce(func, delay) {
+    let timeoutId;
+    return function () {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(func, delay);
+    };
+}
+
+// Attach a debounced event listener to the window resize event
+window.addEventListener('resize', debounce(kitchen_plan_design_slider, 200));
+function kitchen_plan_design_slider() {
+    $('.kitchen-plan-design-build-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 5000,
+        variableWidth: false,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 9999,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 1197,
+                settings: {
+                    infinite: true,
+                    dots: true
+                }
+            }
+        ]
+    });
+}
+// kitchen-plan-design-build-slider end
+$(window).on('load', function() {
+    AOS.refresh();
+ });
