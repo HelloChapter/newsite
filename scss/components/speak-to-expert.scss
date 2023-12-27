@@ -1,22 +1,18 @@
 .section-speak-to-expert {
     padding: 92px 0;
-
     .section-title {
         padding-bottom: 62px;
     }
-
     .col {
         max-width: 33.33%;
         flex: 0 0 33.33%;
     }
-
     .dash {
         background-color: $black;
         width: 10px;
         height: 2px;
         margin: 10px auto;
     }
-
     .content-wrap {
         h4 {
             font-size: 20px;
@@ -24,30 +20,25 @@
             margin: 0 0 6px;
             font-family: "Inter";
         }
-
-        h6 {
+        h5 {
             font-size: 17px;
             line-height: 30px;
             margin-bottom: 0px;
             font-family: "Inter";
             font-weight: 400;
         }
-
         a {
             color: $black;
         }
     }
 }
-
 // Responsive css start
 @media (max-width:1023px) {
     .section-speak-to-expert {
         padding: 60px 0 22px;
-
         .section-title {
             padding-bottom: 40px;
         }
-
         .col {
             max-width: 100%;
             flex: 0 0 100%;
@@ -62,14 +53,12 @@
         .col-office {
             order: 3;
         }
-
         .content-wrap {
             h4 {
                 font-size: 14px;
                 line-height: 24px;
             }
-
-            h6 {
+            h5 {
                 font-size: 14px;
                 line-height: 24px;
             }

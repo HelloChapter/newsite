@@ -1,10 +1,8 @@
 .section-client-success {
     padding: 95px 0 0;
-
     .row {
         margin-left: 20px;
     }
-
     .phone-graphic-img {
         max-width: 370px;
         flex: 0 0 370px;
@@ -16,7 +14,6 @@
         display: flex;
         align-items: center;
     }
-
     .bg-image {
         max-width: 370px;
         background-size: contain;
@@ -27,61 +24,49 @@
         // background-color: $text-color;
         // border-radius: 3vw;
     }
-
     .content {
         max-width: 560px;
     }
-
     h2 {
         margin-bottom: 25px;
     }
 }
-
 // Responsive CSS start
 @media (max-width:1023px) {
     .section-client-success {
         padding: 60px 0 0;
-
         .phone-graphic-img {
             min-height: 670px;
         }
-
         .bg-image {
             min-height: calc(645px - 25px);
         }
     }
 }
-
 // 1023 end
 @media (max-width:767px) {
     .section-client-success {
         .row {
             margin: 0 -15px;
-
             .col {
                 max-width: 100%;
                 flex: 0 0 100%;
             }
-
             .col-content {
                 order: 0;
                 text-align: center;
                 padding-bottom: 25px;
             }
-
             .col-image {
                 order: 1;
             }
         }
-
         .content {
             max-width: 100%;
         }
-
         .phone-graphic-img {
             margin: 0 auto;
         }
     }
 }
-
 // 767 end

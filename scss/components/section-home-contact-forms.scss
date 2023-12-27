@@ -1,32 +1,26 @@
 .section-home-contact-forms {
     padding: 42px 0;
-
     .container {
         max-width: 776px;
     }
-
     .content {
         max-width: 561px;
         margin: 0 auto 38px;
         font-size: 17px;
         line-height: 40px;
-
         p {
             max-width: 405px;
             margin: 0 auto;
         }
     }
-
     .new-section-title {
         margin-bottom: 30px;
     }
-
     .input-wrap {
         &::after {
             display: none;
         }
     }
-
     .form-control {
         padding: 3px 17px;
         min-height: 51px;
@@ -38,19 +32,15 @@
         color: $black;
         transition: border-width 0.6s ease-in-out;
         background-color: $white;
-
         @include placeholder-text {
             color: $text-color2;
         }
-
         &:focus {
             border: 2px solid $black;
         }
     }
-
     .input-wrap {
         position: relative;
-
         .error-message {
             color: $red2;
             font-size: 13px;
@@ -62,50 +52,40 @@
             display: none;
         }
     }
-
     .error-show {
         .error-message {
             display: block;
         }
     }
-
     textarea.form-control {
         min-height: 125px;
     }
-
     .row {
         margin: 0 -12px;
-
         .col {
             padding: 0 12px;
         }
     }
-
     .form-group {
         margin-bottom: 27px;
     }
-
     .btn-submit-wrap {
         padding-top: 23px;
     }
-
     .select-wrapper-row {
         .col {
             max-width: 33.33%;
             flex: 0 0 33%;
         }
     }
-
     .nice-select {
         padding-right: 35px;
-
         &::before {
             display: none;
         }
-
         &:after {
             right: 15px;
-            background-image: url("../../images/icons/ico-chevron2.svg");
+            background-image: url("https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/ico-chevron2.svg");
             border: none;
             height: 8px;
             min-width: 13px;
@@ -113,28 +93,23 @@
             background-size: 100% 100%;
             background-position: 50%;
             transform: none;
-
         }
-
         &.open {
             &::after {
                 transform: rotate(180deg);
             }
         }
     }
-
     .thank-you-wrap {
         padding: 134px 0;
     }
 }
-
 // Resposnsive css start
 @media (max-width:1023px) {
     .section-home-contact-forms {
         .form-group {
             margin-bottom: 21px;
         }
-
         .form-control {
             font-size: 17px;
             line-height: 40px;
@@ -142,74 +117,59 @@
             min-height: 40px;
             padding: 0 17px;
         }
-
         .nice-select {
             padding-right: 35px;
         }
-
         textarea.form-control {
             min-height: 98px;
             height: auto;
         }
-
         .content {
             font-size: 17px;
             line-height: 35px;
         }
     }
 }
-
 // 1023 end
 @media (max-width:767px) {
     .section-home-contact-forms {
         padding: 23px 0;
-
         .row {
             margin: 0 -4.5px;
-
             .col {
                 padding: 0 4.5px;
             }
         }
-
         .form-group {
             margin-bottom: 21px;
         }
-
         .new-section-title {
             margin-bottom: 15px;
         }
-
         .container {
             padding: 0 13px;
         }
-
         .form-control {
             font-size: 14px;
         }
-
         textarea.form-control {
             min-height: 98px;
             height: auto;
         }
-
         .content {
             font-size: 14px;
             line-height: 30px;
             padding: 0 17px;
             margin-bottom: 17px;
         }
-
         .input-wrap .error-message {
             font-size: 9px;
             bottom: -30px;
         }
-
         .thank-you-wrap {
             padding: 100px 0;
             font-size: 14px;
             line-height: 40px;
-
             h2 {
                 margin-bottom: 10px;
                 line-height: 80px;
@@ -217,5 +177,4 @@
         }
     }
 }
-
 // 767 end

@@ -2,7 +2,6 @@
     .slick-prev {
         display: none !important;
     }
-
     .slick-next {
         background-color: transparent;
         border: none;
@@ -15,7 +14,6 @@
         width: 33px;
         height: 10px;
         z-index: 1;
-
         &::before {
             content: "";
             position: absolute;
@@ -30,11 +28,9 @@
             background-size: contain;
         }
     }
-
     .slider-dots {
         min-height: 80px;
     }
-
     .slick-dots {
         padding: 40px 0 30px;
         display: flex;
@@ -42,14 +38,11 @@
         position: absolute;
         left: calc(50% - 39%);
         bottom: 33.2%;
-
         ul {
             display: flex;
         }
-
         li {
             margin: 0 5px;
-
             button {
                 width: 10px;
                 display: block;
@@ -62,7 +55,6 @@
                 box-shadow: none;
             }
         }
-
         .active,
         .slick-active {
             button {
@@ -70,19 +62,16 @@
             }
         }
     }
-
     .col-img-content {
         .content {
             padding: 0 22%;
             max-width: 100%;
         }
-
         .link-text {
             padding-top: 0;
         }
     }
 }
-
 .after-before-slider {
     .slick-arrow {
         position: absolute;
@@ -92,25 +81,21 @@
         text-indent: -99em;
         font-size: 0;
         z-index: 1;
-
         &:after {
             content: '';
             display: block;
             height: 22px;
             width: 46px;
         }
-
         &.slick-next {
             right: 24px;
-            background-image: url("../../images/icons/right-arrow.svg");
+            background-image: url("https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/right-arrow3.svg");
         }
-
         &.slick-prev {
             left: 24px;
             background-image: url("../../images/icons/left-arrow1.svg");
         }
     }
-
     .slick-dots {
         display: flex;
         list-style: none;
@@ -124,17 +109,14 @@
         justify-content: center;
         padding: 9.5px;
         min-height: 49px;
-
         li {
             padding: 0 5px;
         }
-
         .slick-active {
             button {
                 background-color: $black;
             }
         }
-
         button {
             background-color: $light-pink;
             border: none;
@@ -146,7 +128,6 @@
         }
     }
 }
-
 // Responsive css start
 @media (max-width:1199px) {
     .home-image-content-slider {
@@ -155,7 +136,6 @@
         }
     }
 }
-
 // 1199 end
 @media (max-width:1023px) {
     .home-image-content-slider {
@@ -171,7 +151,6 @@
         }
     }
 }
-
 // 1023 end
 @media (max-width:991px) {
     .home-image-content-slider {
@@ -184,44 +163,36 @@
         }
     }
 }
-
 @media (max-width:767px) {
     .home-image-content-slider {
         .slider-dots {
             min-height: 60px;
         }
-
         .slick-dots {
             top: 205px;
             bottom: auto;
             left: 20px;
             padding: 0;
         }
-
         .col-img-content {
             .content {
                 padding: 60px 20px 40px;
-
                 .link-text {
                     padding-top: 0;
                 }
             }
         }
-
     }
 }
-
 // 767 end
 @media (max-width:375px) {
     .home-image-content-slider {
         .content-p {
             min-height: 48px;
         }
-
         .slick-dots {
             top: 225px;
         }
     }
 }
-
 // 375 end

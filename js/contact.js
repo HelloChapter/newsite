@@ -12,7 +12,6 @@ var postDataObject = {
   "fbc": "",
   "fbp": "",
   "originalUrl": "",
-
 }
 // Email Validation
 function isEmail(email) {
@@ -68,13 +67,13 @@ jQuery(document).ready(function ($) {
   });
 });
 /*Ready function end*/
-window.fbq('track', 'Contact', { value: 0, currency: 'USD' });
+setTimeout(() => {
+  window.fbq('track', 'Contact', { value: 0, currency: 'USD' });
+}, 2000);
+
 var inputs = $("#contact-form input");
-
 // Ajax function
-
 function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
-
   $.ajax({
     dataType: "json",
     url: url,
@@ -100,7 +99,6 @@ function redirectToThankYou() {
   window.location.href = "/thank-you-message/?submit=true"
 }
 // Contact Submit 
-
 //code for back button pressed the form will reset
 window.addEventListener("pageshow", (event) => {
   if (event.persisted) {
@@ -109,19 +107,15 @@ window.addEventListener("pageshow", (event) => {
   $('form').get(0).reset();
 });
 function handleContactSubmit(e) {
-
   // Read cookies parameter 
-
   const cookieValue_fbp = document.cookie
     .split("; ")
     .find((row) => row.startsWith("_fbp="))
     ?.split("=")[1];
-
   const cookieValue_fbc = document.cookie
     .split("; ")
     .find((row) => row.startsWith("_fbc="))
     ?.split("=")[1];
-
   const payload = {
     fbp: cookieValue_fbp,
     fbc: cookieValue_fbc
@@ -132,8 +126,6 @@ function handleContactSubmit(e) {
   if (payload.fbp === undefined || payload.fbp === "") {
     payload.fbp = null;
   }
-
-
   var inputs = $("#contact-form input");
   isValid = true;
   inputs.each((function () {
@@ -153,7 +145,6 @@ function handleContactSubmit(e) {
       isValid = false;
       $(this).parent().addClass("error");
     }
-
   }));
   if ($("textarea[name='projectDescription']").val() === "") {
     $("textarea[name='projectDescription']").parent().addClass("error");
@@ -162,16 +153,13 @@ function handleContactSubmit(e) {
   if (isValid) {
     var emailElement = document.getElementById('contact-email-field-id');
     //console.log("emailElement1");
-
     if (emailElement) {
       localStorage.setItem('email', emailElement.value);
       emailElement.setAttribute("data-email", emailElement.value);
     }
-
     //window.dataLayer = window.dataLayer || [];
     //function gtag() { dataLayer.push(arguments); }
     //gtag('js', new Date());
-
     //gtag('config', 'UA-225495044-1');
     // gtag('set', 'user_data', {
     //     "email": localStorage.getItem('email') != undefined ? localStorage.getItem('email') : null,
@@ -181,21 +169,16 @@ function handleContactSubmit(e) {
     inputs.each(function () {
       $(this).attr("disabled", "disabled");
     })
-
     // QR code form submitted 
-
     if (localStorage.getItem("qr_status") && (localStorage.getItem("formSubmitted") === 'false')) {
       postDataObject.qr_status = true
     } else {
       postDataObject.qr_status = false
     }
-
     postDataObject.fbc = payload.fbc;
     postDataObject.fbp = payload.fbp;
-
     // get url 
     postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
-
     setTimeout(function () {
       makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
       //makeAjaxCall("abcd", "POST", !0, postDataObject, redirectToThankYou);
@@ -204,6 +187,5 @@ function handleContactSubmit(e) {
   else {
     $('#loader').hide();
   }
-
   // return false;
 }

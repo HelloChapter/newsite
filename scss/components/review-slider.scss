@@ -1,36 +1,29 @@
 .section-reviews {
     padding: 100px 0;
-
     .section-title {
         padding-bottom: 75px;
     }
-
     .slick-track {
         display: flex;
         justify-content: center;
     }
-
     .slick-slide {
         margin: 0 30px;
         border-top: 1px solid $text-color;
         padding-top: 100px;
         text-align: center;
     }
-
     .star-imges {
         display: flex;
         justify-content: center;
-
         .star-img+.star-img {
             margin-left: 10px;
         }
     }
-
     h3 {
         font-size: 40px;
         line-height: 60px;
     }
-
     h4 {
         font-size: 17px;
         line-height: 50px;
@@ -38,33 +31,27 @@
         font-weight: 500;
         text-transform: uppercase;
     }
-
     .slider-content {
         max-width: 450px;
         margin: 40px auto 0;
     }
-
 }
-
 // Responsive css start
 @media (max-width:1440px) {
     .section-reviews {
         .slick-slide {
             padding-top: 70px;
         }
-
         h3 {
             font-size: 37px;
             line-height: 45px;
         }
-
         h4 {
             font-size: 14px;
             line-height: 45px;
         }
     }
 }
-
 // 1440 end
 @media (max-width:1300px) {
     .section-reviews {
@@ -72,10 +59,8 @@
             font-size: 34px;
             line-height: 42px;
         }
-
     }
 }
-
 // 1300 end
 @media (max-width:1199px) {
     .section-reviews {
@@ -83,29 +68,23 @@
             font-size: 28px;
             line-height: 38px;
         }
-
     }
 }
-
 // 1199 end
 @media (max-width:1023px) {
     .section-reviews {
         padding: 60px 0;
-
         .section-title {
             padding-bottom: 50px;
         }
-
         .slick-slide {
             padding-top: 50px;
             margin: 0 15px;
         }
-
         h3 {
             font-size: 24px;
             line-height: 1.2;
         }
     }
 }
-
 // 1023 end

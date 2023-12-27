@@ -1,16 +1,13 @@
 .section-chapter-content {
     padding: 92px 0;
-
     img {
         max-width: 58px;
         margin-bottom: 20px;
         opacity: 1 !important;
     }
-
     h2 {
         margin-bottom: 54px;
     }
-
     .spinner-wrapper {
         img.small {
             -webkit-transition: -webkit-transform 3s;
@@ -18,7 +15,6 @@
             -o-transition: transform 3s;
             transition: transform 3s;
             transition: transform 3s, -webkit-transform 3s;
-
             &.aos-animate,
             &:hover {
                 -webkit-transform: rotate(1turn);
@@ -27,14 +23,11 @@
             }
         }
     }
-
 }
-
 // Responsive CSS start
 @media (max-width:1023px) {
     .section-chapter-content {
         padding: 60px 0;
-
         h2 {
             margin-bottom: 40px;
         }

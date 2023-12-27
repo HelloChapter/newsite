@@ -2,15 +2,12 @@
     &::-webkit-input-placeholder {
       @content;
     }
-  
     &::-moz-placeholder {
       @content;
     }
-  
     &::-o-placeholder {
       @content;
     }
-  
     &::-ms-input-placeholder {
       @content;
     }

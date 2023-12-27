@@ -12,7 +12,6 @@
     bottom: auto;
     justify-content: center;
     flex-direction: column;
-
     .modal-content {
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 5px 5px 15px #00000008;
@@ -25,32 +24,27 @@
         position: relative;
         z-index: 1;
     }
-
     .mid-content {
         padding: 0 12px;
         max-height: 70vh;
         overflow: hidden;
         overflow-y: auto;
     }
-
     .btn-close {
         position: absolute;
         right: 10px;
         top: 17px;
         padding: 0;
     }
-
     .modal-header {
         border-bottom: 1px solid$border-color;
         padding: 0 24px;
         margin-bottom: 12px;
         min-height: 34px;
     }
-
     .modal-footer {
         padding: 24px 12px 0;
         border-top: 1px solid $border-color;
-
         .button-group {
             button {
                 +button {
@@ -60,7 +54,6 @@
         }
     }
 }
-
 .modal-backdrop {
     position: fixed;
     display: -webkit-box;
@@ -83,18 +76,15 @@
     -webkit-tap-highlight-color: transparent;
     z-index: -1;
 }
-
 .modal-open {
     .modal-backdrop {
         opacity: 1;
         transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     }
 }
-
 // common video css end
 .modal-home-client-video {
     display: none;
-
     .modal-content {
         max-width: 85%;
         padding: 0;
@@ -129,14 +119,12 @@
             }
         }
     }
-
     .video-box {
         border-radius: 10px;
         overflow: hidden;
         position: relative;
         min-height: 200px;
         padding-bottom: 56.25%;
-
         video,
         iframe {
             object-fit: cover;
@@ -150,7 +138,6 @@
         }
     }
 }
-
 // modal-home-client-video end
 // Responsive css start
 @media(max-width:991px) {

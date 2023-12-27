@@ -33,13 +33,13 @@ $(".section-confident .section-box").mouseleave(function () {
 
 
 // Js for mobile devices
-window.addEventListener('touchmove', editCursor);
+window.addEventListener('touchmove', editCursor, {passive: true});
 const section_box = document.querySelector('.section-box');
-section_box.addEventListener('touchstart', function (event) {
+section_box.addEventListener('touchstart',{passive: true}, function (event) {
     $(".diamond-square").css("display", "block");
     $("body").css("cursor", "none");
 });
-section_box.addEventListener('touchend', function (event) {
+section_box.addEventListener('touchend',{passive: true}, function (event) {
     $("body").css("cursor", "inherit");
     $(".diamond-square").css("display", "none");
 });

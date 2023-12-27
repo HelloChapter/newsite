@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 .inline-block {
   display: inline-block;
 }
@@ -759,7 +760,7 @@ video, iframe {
 }
 .after-before-slider .slick-arrow.slick-next {
   right: 24px;
-  background-image: url("../../images/icons/right-arrow.svg");
+  background-image: url("https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/right-arrow3.svg");
 }
 .after-before-slider .slick-arrow.slick-prev {
   left: 24px;

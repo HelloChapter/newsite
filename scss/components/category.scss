@@ -6,15 +6,12 @@
     background-color: $white;
     z-index: 9;
     width: 100%;
-
     ul {
         display: flex;
         justify-content: center;
-
         li {
             padding: 0 25px;
         }
-
         a {
             font-size: 17px;
             line-height: 50px;
@@ -27,7 +24,6 @@
         }
     }
 }
-
 // Responsive CSS start
 @media (max-width:1440px) {
     .section-project-category {
@@ -39,7 +35,6 @@
         }
     }
 }
-
 // 1440 end
 @media (max-width:1023px) {
     .section-project-category {

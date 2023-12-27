@@ -4,8 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="https://hellochapter.com/favicon.ico" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
-      user-scalable=0" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>Chapter | Home Renovation & Remodeling Contractors</title>
     <meta name="description"
@@ -22,7 +20,6 @@
     <meta property="og:image" content="https://hellochapter.com/images/og-images/other/home.jpg" />
     <meta property="og:image:width" content="750" />
     <meta property="og:image:height" content="422" />
-
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://hellochapter.com/">
@@ -30,17 +27,61 @@
     <meta property="twitter:description"
         content="Chapter is a professional home renovation and remodeling contractor company offering full-service design and build services. We specialize in interior remodeling of homes, apartments and townhouses in the New York City and Miami area.">
     <meta property="twitter:image" content="https://hellochapter.com/images/og-images/other/home.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/nice-select.css" />
-    <link rel="stylesheet" href="css/pages/index.css" />
-    <!-- Meta Pixel Code -->
+    <!-- <link rel="stylesheet"
+        href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/slick.css?rsct=text/css" async /> -->
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/slick.css?rsct=text/css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet"
+        href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/swiper.css?rsct=text/css" async>
+    <!-- <link href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/video-js.css?rsct=text/css"
+        rel="stylesheet" async /> -->
+    <link rel="stylesheet"
+        href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/nice-select.css?rsct=text/css" async />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://embedsocial.com/" />
+    <link defer rel="stylesheet" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/index.css" />
+
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"
+        as="script" />
+    <noscript>
+        <link rel="stylesheet"
+            href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/slick.css?rsct=text/css">
+        <link rel="stylesheet"
+            href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css">
+    </noscript>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script> -->
     <script>
+        // setTimeout(function () {
+        //     var script = document.createElement('script');
+        //     script.async = true;
+        //     script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-225495044-1';
+        //     document.head.appendChild(script);
+        // }, 2000);
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=432821205070173&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+    <script async>
+        // !function (f, b, e, v, n, t, s) {
+        //     if (f.fbq) return; n = f.fbq = function () {
+        //         n.callMethod ?
+        //             n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        //     };
+        //     if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        //     n.queue = []; t = b.createElement(e); t.async = !0;
+        //     t.src = v; s = b.getElementsByTagName(e)[0];
+        //     s.parentNode.insertBefore(t, s)
+        // }(window, document, 'script',
+        //     'https://connect.facebook.net/en_US/fbevents.js');
+        // fbq('init', '432821205070173');
+        // fbq('track', 'PageView');
+
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
@@ -48,120 +89,115 @@
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
+            var cacheControl = 'max-age=8600000';
+            t.src = v + '?cache_control=' + cacheControl;
+
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '432821205070173');
         fbq('track', 'PageView');
     </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=432821205070173&ev=PageView&noscript=1" />
-    </noscript>
-    <!-- End Meta Pixel Code -->
+    <!-- Google Tag Manager -->
     <script>
-        (function (w, d, t, r, u) {
-            var f, n, i;
-            w[u] = w[u] || [], f = function () {
-                var o = { ti: "247002886" };
-                o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad")
-            },
-                n = d.createElement(t), n.src = r, n.async = 1, n.onload = n.onreadystatechange = function () {
-                    var s = this.readyState;
-                    s && s !== "loaded" && s !== "complete" || (f(), n.onload = n.onreadystatechange = null)
-                },
-                i = d.getElementsByTagName(t)[0], i.parentNode.insertBefore(n, i)
-        })
-            (window, document, "script", "//bat.bing.com/bat.js", "uetq");
+
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- QR code query parameter read  -->
+    <script async>
+
     </script>
     <!-- Microsoft Ads Conversion Tracking -->
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- QR code query parameter read  -->
-    <script>
-        function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
-            $.ajax({
-                dataType: "json",
-                url: url,
-                type: type,
-                data: dataObject,
-                crossDomain: crossDomain,
-                async: !1,
-                success: function (result) {
-                    callback(result)
-                },
-                error: function (jqXHR, exception) {
-                    inputs.each(function () {
-                        $(this).attr("disabled", "false");
+    <script defer type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).ready(function () {
+                function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
+                    $.ajax({
+                        dataType: "json",
+                        url: url,
+                        type: type,
+                        data: dataObject,
+                        crossDomain: crossDomain,
+                        async: !1,
+                        success: function (result) {
+                            callback(result)
+                        },
+                        error: function (jqXHR, exception) {
+                            inputs.each(function () {
+                                $(this).attr("disabled", "false");
+                            })
+                        }
                     })
                 }
-            })
-        }
-        const queryString = window.location.search;
-        const arrQueryStrign = [
-            '?s=mail5tdr',
-            '?s=mail11beach',
-            '?s=mail280rec',
-            '?s=mail2250bway',
-            '?s=mail105W13th',
-            '?s=mail114E84th',
-            '?s=mail142E16th',
-            '?s=mail145central',
-            '?s=flyer530E72nd',
-            '?s=flyer5tdr',
-            '?s=flyer11beach',
-            '?s=flyer280rec',
-            '?s=flyer2250bway',
-            '?s=flyer105W13th',
-            '?s=flyer114E84th',
-            '?s=flyer142E16th',
-            '?s=flyer145central',
-            '?s=hello-miami'
-        ]
-        if (arrQueryStrign.indexOf(queryString) !== -1) {
-            setTimeout(function () {
-                makeAjaxCall("https://api.hellochapter.dev/api/contact/track", "GET", !0, null, (res) => {
-                    console.log(res)
-                    if (res.success) {
-                        localStorage.setItem("qr_status", true);
-                        localStorage.setItem("formSubmitted", false);
+                const queryString = window.location.search;
+                const arrQueryStrign = [
+                    '?s=mail5tdr',
+                    '?s=mail11beach',
+                    '?s=mail280rec',
+                    '?s=mail2250bway',
+                    '?s=mail105W13th',
+                    '?s=mail114E84th',
+                    '?s=mail142E16th',
+                    '?s=mail145central',
+                    '?s=flyer530E72nd',
+                    '?s=flyer5tdr',
+                    '?s=flyer11beach',
+                    '?s=flyer280rec',
+                    '?s=flyer2250bway',
+                    '?s=flyer105W13th',
+                    '?s=flyer114E84th',
+                    '?s=flyer142E16th',
+                    '?s=flyer145central',
+                    '?s=hello-miami'
+                ]
+                if (arrQueryStrign.indexOf(queryString) !== -1) {
+                    setTimeout(function () {
+                        makeAjaxCall("https://api.hellochapter.dev/api/contact/track", "GET", !0, null, (res) => {
+                            console.log(res)
+                            if (res.success) {
+                                localStorage.setItem("qr_status", true);
+                                localStorage.setItem("formSubmitted", false);
+                            }
+                        });
+                    }, 500)
+                } else {
+                    if (localStorage.getItem("qr_status")) {
+                        localStorage.removeItem("qr_status")
+                        localStorage.removeItem("formSubmitted")
                     }
-                });
-            }, 500)
+                }
 
-        } else {
-            if (localStorage.getItem("qr_status")) {
-                localStorage.removeItem("qr_status")
-                localStorage.removeItem("formSubmitted")
-            }
+                // <!-- Google Tag Manager -->
 
-        }
+                (function (w, d, s, l, i) {
+                    w[l] = w[l] || []; w[l].push({
+                        'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'
+                    }); var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');
+                // <!-- End Google Tag Manager -->
+                (function (w, d, t, r, u) {
+                    var f, n, i;
+                    w[u] = w[u] || [], f = function () {
+                        var o = { ti: "247002886" };
+                        o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad")
+                    },
+                        n = d.createElement(t), n.src = r, n.async = 1, n.onload = n.onreadystatechange = function () {
+                            var s = this.readyState;
+                            s && s !== "loaded" && s !== "complete" || (f(), n.onload = n.onreadystatechange = null)
+                        },
+                        i = d.getElementsByTagName(t)[0], i.parentNode.insertBefore(n, i)
+                })
+                    (window, document, "script", "//bat.bing.com/bat.js", "uetq");
+                // <!-- Microsoft Ads Conversion Tracking -->
+            });
+            // Ready function end
+        })
 
     </script>
-    <!-- Microsoft Ads Conversion Tracking -->
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');</script>
-    <!-- End Google Tag Manager -->
-    <script
-        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
     <!-- Crisp chat end -->
 </head>
 
@@ -173,15 +209,11 @@
     <div class="wrapper">
         <div class="page-home">
             <div class="announcement-bar text-center black-bg">
-                <div class="slider-item">
-                    Chapter is expanding! Renovation dreams are now coming true in NYC and Miami.
-                </div>
-                <div class="slider-item">
-                    Chapter is expanding! Renovation dreams are now coming true in NYC and Miami.
-                </div>
+                <div> Chapter is expanding! Renovation dreams are now coming true in NYC and Miami. </div>
+                <div> Chapter is expanding! Renovation dreams are now coming true in NYC and Miami.</div>
             </div>
             <header class="aos-init " data-aos="fade">
-                <button type="button" class="btn-styled-removed menu-btn-toggle">
+                <button aria-label="Name" type="button" class="btn-styled-removed menu-btn-toggle">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -190,7 +222,8 @@
                     <div class="header-nav row no-gutters">
                         <div class="col col-logo">
                             <div class="logo">
-                                <a href="/" title="Home "><img src="/images/icons/logo.svg" alt="logo" />
+                                <a href="/" title="Home "><img src="/images/icons/logo.svg" alt="logo" height="200"
+                                        width="200" />
                                 </a>
                             </div>
                         </div>
@@ -200,7 +233,7 @@
                                     <li>
                                         <a href="/about-chapter-home-renovation/" title="About ">About</a>
                                     </li>
- <li>
+                                    <li>
                                         <a href="/home-renovation-services/" title="Services ">Services</a>
                                     </li>
                                     <li>
@@ -241,30 +274,33 @@
                         <div class="col col-video-box aos-init pearl-bg2">
                             <div class="video-box-wrap">
                                 <div class="video-box">
-                                    <video controlsList="nodownload nofullscreen" autoplay="true" loop="true" muted
-                                        playsinline controls="" id="video-player" class="video-js" autobuffer="true"
-                                        muted
-                                        data-setup='{ "controls": false, "autoplay": true, "preload": "auto", "loop": "true" }'>
-                                        <source src="./videos/home/Chapter-Hero-Video.webm" type="video/webm" />
+                                    <video muted playsinline controlsList="nodownload nofullscreen" loop="true"
+                                        controls="" id="video-player" class="video-js" autobuffer="true" muted
+                                        loading="lazy" preload="auto"
+                                        data-setup='{ "controls": false, "autoplay": false, "preload": "auto", "loop": "true" }'>
+                                        <source
+                                            src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/home/Chapter-Hero-Video.webm"
+                                            type="video/webm" />
                                         <source src="./videos/home/Chapter-Hero-Video.mp4" type="video/mp4" />
                                         Your browser does not support HTML5 video.
                                     </video>
                                     <button id="btn-play" class="btn-styled-removed" type="button">
-                                        <img class="play-btn-icon" src="./images/icons/play-btn-small.svg" alt="icon" />
-                                        <img class="pause-btn-icon" src="./images/icons/Pause.svg" alt="icon" />
+                                        <img class="play-btn-icon" src="./images/icons/play-btn-small.svg" alt="icon"
+                                            height="200" width="200" />
+                                        <img class="pause-btn-icon" src="./images/icons/Pause.svg" alt="icon"
+                                            height="200" width="200" />
                                     </button>
                                 </div>
                             </div>
                             <div class="desktop-hide scroll-button-wrapper">
-                                <button id="scrollButton2" class="text-label-wrap btn-styled-removed" type="button">
+                                <button id="scrollButton2" aria-label="button"
+                                    class="text-label-wrap btn-styled-removed" type="button">
                                     <span class="line"></span>
-
                                 </button>
                             </div>
                         </div>
                         <div class="col section-content-col">
                             <div class="section-content text-center">
-
                                 <h1 data-aos="fade" data-aos-delay="650" class="aos-init
                     ">
                                     The home renovation you've been dreaming of</h1>
@@ -279,13 +315,15 @@
                                 </div>
                             </div>
                             <div class="section-graphic-img aos-init " data-aos="fade" data-aos-delay="350">
-                                <img src="./images/home/Cylinder-expanded-New.svg" alt="section-graphic-imgage" />
+                                <img src="./images/home/Cylinder-expanded-New.svg" alt="section-graphic-imgage"
+                                    height="200" width="200" />
                             </div>
                         </div>
                     </div>
                     <div class="mobile-hide scroll-button-wrapper">
                         <div id="lottie-container"></div>
-                        <button id="scrollButton" class="text-label-wrap btn-styled-removed" type="button"></button>
+                        <button id="scrollButton" aria-label="button" class="text-label-wrap btn-styled-removed"
+                            type="button"></button>
                     </div>
                 </section>
                 <!-- Intro Section end -->
@@ -392,18 +430,17 @@
                                                         </div>
                                                     </div>
                                                     <div class="col col-col-right">
-                                                        <div class="image bg-image mobile-hide image-with-fade"
-                                                            style="background-image: url(./images/home/how-it-works-slider/slider3.png);">
+                                                        <div class="image bg-image mobile-hide image-with-fade lazy"
+                                                            data-src="./images/home/how-it-works-slider/slider3.webp">
                                                         </div>
-                                                        <div class="image bg-image desktop-hide image-with-fade"
-                                                            style="background-image: url(./images/home/how-it-works-slider/mobile-client3.png);">
+                                                        <div class="image bg-image desktop-hide image-with-fade lazy"
+                                                            data-src="./images/home/how-it-works-slider/mobile-client3.webp">
                                                         </div>
                                                         <div class="desktop-hide">
                                                             <a href="how-chapter-home-renovation-works/" type="button"
                                                                 class="btn-white">How it works
                                                             </a>
                                                         </div>
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -441,11 +478,11 @@
                                                         </div>
                                                     </div>
                                                     <div class="col col-col-right">
-                                                        <div class="image bg-image mobile-hide image-with-fade"
-                                                            style="background-image: url(./images/home/how-it-works-slider/slider2.png);">
+                                                        <div class="image bg-image mobile-hide image-with-fade lazy"
+                                                            data-src="./images/home/how-it-works-slider/slider2.webp">
                                                         </div>
-                                                        <div class="image bg-image desktop-hide image-with-fade"
-                                                            style="background-image: url(./images/home/how-it-works-slider/mobile-client2.png);">
+                                                        <div class="image bg-image desktop-hide image-with-fade lazy"
+                                                            data-src="./images/home/how-it-works-slider/mobile-client2.webp">
                                                         </div>
                                                         <div class="desktop-hide">
                                                             <a href="how-chapter-home-renovation-works/" type="button"
@@ -484,11 +521,11 @@
                                                         </div>
                                                     </div>
                                                     <div class="col col-col-right">
-                                                        <div class="image bg-image mobile-hide image-with-fade"
-                                                            style="background-image: url(./images/home/how-it-works-slider/slider1.png);">
+                                                        <div class="image bg-image mobile-hide image-with-fade lazy"
+                                                            data-src="./images/home/how-it-works-slider/slider1.webp">
                                                         </div>
-                                                        <div class="image bg-image desktop-hide image-with-fade"
-                                                            style="background-image: url(./images/home/how-it-works-slider/mobile-client1.png);">
+                                                        <div class="image bg-image desktop-hide image-with-fade lazy"
+                                                            data-src="./images/home/how-it-works-slider/mobile-client1.webp">
                                                         </div>
                                                         <div class="desktop-hide">
                                                             <a href="how-chapter-home-renovation-works/" type="button"
@@ -527,37 +564,47 @@
                                 <div class="row">
                                     <div class="col col-item">
                                         <div class="col-item-content">
-                                            <img src="../images/locations-style/icons/Schedule-Icon.svg" alt="icon">
+                                            <img class="lazy"
+                                                data-src="../images/locations-style/icons/Schedule-Icon.svg" alt="icon"
+                                                height="200" width="200">
                                             <h3>Schedule</h3>
                                         </div>
                                     </div>
                                     <div class="col col-item">
                                         <div class="col-item-content">
-                                            <img src="../images/locations-style/icons/Photos-Icon.svg" alt="icon">
+                                            <img class="lazy" data-src="../images/locations-style/icons/Photos-Icon.svg"
+                                                alt="icon" height="200" width="200">
                                             <h3>Photos</h3>
                                         </div>
                                     </div>
                                     <div class="col col-item">
                                         <div class="col-item-content">
-                                            <img src="../images/locations-style/icons/Finance-Icon.svg" alt="icon">
+                                            <img class="lazy"
+                                                data-src="../images/locations-style/icons/Finance-Icon.svg" alt="icon"
+                                                height="200" width="200">
                                             <h3>Financials</h3>
                                         </div>
                                     </div>
                                     <div class="col col-item">
                                         <div class="col-item-content">
-                                            <img src="../images/locations-style/icons/Design-Icon .svg" alt="icon">
+                                            <img class="lazy"
+                                                data-src="../images/locations-style/icons/Design-Icon .svg" alt="icon"
+                                                height="200" width="200">
                                             <h3>Design  </h3>
                                         </div>
                                     </div>
                                     <div class="col col-item">
                                         <div class="col-item-content">
-                                            <img src="../images/locations-style/icons/Live-Icon.svg" alt="icon">
+                                            <img class="lazy" data-src="../images/locations-style/icons/Live-Icon.svg"
+                                                alt="icon" height="200" width="200">
                                             <h3>Live updates</h3>
                                         </div>
                                     </div>
                                     <div class="col col-item">
                                         <div class="col-item-content">
-                                            <img src="../images/locations-style/icons/Messages-Icon.svg" alt="icon">
+                                            <img class="lazy"
+                                                data-src="../images/locations-style/icons/Messages-Icon.svg" alt="icon"
+                                                height="200" width="200">
                                             <h3>Messages</h3>
                                         </div>
                                     </div>
@@ -566,18 +613,17 @@
                             <div class="col col-image">
                                 <div class="bg-img-image-wrap">
                                     <div class="bg-image-full mobile-hide">
-                                        <img src="./images/home/fingertips-image.png" alt="image" />
+                                        <img class="lazy" data-src="./images/home/fingertips-image.webp" alt="image"
+                                            height="833" width="872" />
                                     </div>
                                     <div class="bg-img-mobile tablet-show-image">
-                                        <img src="./images/home/tablet-resolution-image.png" />
+                                        <img class="lazy" data-src="./images/home/tablet-resolution-image.webp"
+                                            height="740" width="1182" />
                                     </div>
                                     <div class="bg-img-mobile desktop-hide">
-                                        <img src="./images/home/mobile-resolution-image.png" />
+                                        <img class="lazy" data-src="./images/home/mobile-resolution-image.webp"
+                                            height="668" width="417" alt="image" />
                                     </div>
-                                    <!--
-                                    <div class="bg-img-image-horizontal">
-                                        <img src="./images/home/desktop-image.png" />
-                                    </div> -->
                                 </div>
                             </div>
                 </section>
@@ -595,7 +641,8 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img src="./images/icons/location2.svg" alt="icon" />New York
+                                        <h6 class="location-title"> <img src="./images/icons/location2.svg" alt="icon"
+                                                height="200" width="200" />New York
                                         </h6>
                                         <h2>Broadway Duplex</h2>
                                         <div class="content-p">
@@ -613,7 +660,6 @@
                                                 class="btn-black">Learn more</a>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="desktop-hide">
                                     <div class="heading-content-wrap">
@@ -624,8 +670,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col col-img bg-image" style="background-image:
-                                  url('./images/home/section-image-1.jpeg');">
+                                <div class="col col-img bg-image lazy" data-src="./images/home/section-image-1.webp">
                                 </div>
                             </div>
                         </div>
@@ -640,7 +685,8 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img src="./images/icons/location2.svg" alt="icon" />Miami</h6>
+                                        <h6 class="location-title"> <img src="./images/icons/location2.svg" alt="icon"
+                                                height="200" width="200" />Miami</h6>
                                         <h2>Miami Shores</h2>
                                         <div class="content-p">
                                             <p>Elegance meets tropical…</p>
@@ -657,7 +703,6 @@
                                                 class="btn-black">Learn more</a>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="desktop-hide">
                                     <div class="heading-content-wrap">
@@ -668,8 +713,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col col-img bg-image" style="background-image:
-                                  url('./images/projects/miami-img/Image.png');">
+                                <div class="col col-img bg-image lazy"
+                                    data-src="./images/projects/miami-img/Image.webp">
                                 </div>
                             </div>
                         </div>
@@ -684,7 +729,8 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img src="./images/icons/location2.svg" alt="icon" />New York
+                                        <h6 class="location-title"> <img src="./images/icons/location2.svg" alt="icon"
+                                                height="200" width="200" />New York
                                         </h6>
                                         <h2>Chelsea Apartment</h2>
                                         <div class="content-p">
@@ -702,7 +748,6 @@
                                                 class="btn-black">Learn more</a>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="desktop-hide">
                                     <div class="heading-content-wrap">
@@ -713,10 +758,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col col-img bg-image" style="background-image:
-                                  url('./images/home/section-image-2.jpeg');">
+                                <div class="col col-img bg-image lazy" data-src="./images/home/section-image-2.webp">
                                 </div>
-
                             </div>
                         </div>
                         <div class="slide-item">
@@ -730,7 +773,8 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img src="./images/icons/location2.svg" alt="icon" />New York
+                                        <h6 class="location-title"> <img src="./images/icons/location2.svg" alt="icon"
+                                                height="200" width="200" />New York
                                         </h6>
                                         <h2>UES Townhouse</h2>
                                         <div class="content-p">
@@ -748,7 +792,6 @@
                                                 class="btn-black">Learn more</a>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="desktop-hide">
                                     <div class="heading-content-wrap">
@@ -759,8 +802,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col col-img bg-image" style="background-image:
-                                  url('./images/home/section-image-3.jpeg');">
+                                <div class="col col-img bg-image lazy" data-src="./images/home/section-image-3.webp">
                                 </div>
                             </div>
                         </div>
@@ -776,17 +818,21 @@
                                         <div class="content">
                                             <h2>“Chapter made me feel like I didn’t have anything to worry about.”</h2>
                                             <div class="client-info">
-                                                <h3>Jaye W. / <img src="./images/icons/location2.svg" alt="icon" /> Brooklyn, NY
+                                                <h3>Jaye W. / <img src="./images/icons/location2.svg" alt="icon"
+                                                        height="200" width="200" />
+                                                    Brooklyn, NY
                                                 </h3>
                                             </div>
                                         </div>
                                         <div class="images-icon">
                                             <div class="circle-ui"></div>
                                             <div class="client-image">
-                                                <img src="./images/home/clients/client1.png" alt="image" />
+                                                <img class="lazy" data-src="./images/home/clients/client1.webp"
+                                                    alt="image" height="200" width="200" />
                                                 <button id="openModal" type="button"
                                                     class="btn-styled-removed btn-client-play"><img
-                                                        src="./images/icons/play-icon-full.svg" alt="icon" /></button>
+                                                        src="./images/icons/play-icon-full.svg" alt="icon" height="200"
+                                                        width="200" /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -794,17 +840,21 @@
                                         <div class="content">
                                             <h2>“The Chapter <br /> team made <br />my vision<br /> come to life.”</h2>
                                             <div class="client-info">
-                                                <h3>Jeremy / <img src="./images/icons/location2.svg" alt="icon" /> Brooklyn, NY
+                                                <h3>Jeremy / <img src="./images/icons/location2.svg" alt="icon"
+                                                        height="200" width="200" />
+                                                    Brooklyn, NY
                                                 </h3>
                                             </div>
                                         </div>
                                         <div class="images-icon">
                                             <div class="circle-ui"></div>
                                             <div class="client-image">
-                                                <img src="./images/home/clients/client2.png" alt="image" />
+                                                <img class="lazy" data-src="./images/home/clients/client2.webp"
+                                                    alt="image" height="200" width="200" />
                                                 <button id="openModal2" type="button"
                                                     class="btn-styled-removed btn-client-play"><img
-                                                        src="./images/icons/play-icon-full.svg" alt="icon" /></button>
+                                                        src="./images/icons/play-icon-full.svg" alt="icon" height="200"
+                                                        width="200" /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -812,7 +862,8 @@
                                         <div class="content">
                                             <h2>“We would a <br /> 1000% recommend <br />Chapter.”</h2>
                                             <div class="client-info">
-                                                <h3>Katie and Scott / <img src="./images/icons/location2.svg" alt="icon" />
+                                                <h3>Katie and Scott / <img src="./images/icons/location2.svg" alt="icon"
+                                                        height="200" width="200" />
                                                     Mahattan, NY
                                                 </h3>
                                             </div>
@@ -820,10 +871,12 @@
                                         <div class="images-icon">
                                             <div class="circle-ui"></div>
                                             <div class="client-image">
-                                                <img src="./images/home/clients/client3.png" alt="image" />
+                                                <img class="lazy" data-src="./images/home/clients/client3.webp"
+                                                    alt="image" height="200" width="200" />
                                                 <button id="openModal3" type="button"
                                                     class="btn-styled-removed btn-client-play"><img
-                                                        src="./images/icons/play-icon-full.svg" alt="icon" /></button>
+                                                        src="./images/icons/play-icon-full.svg" alt="icon" height="200"
+                                                        width="200" /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -832,7 +885,7 @@
                             <div class="col col-right">
                                 <div class="client-content-wrap">
                                     <div class="wave-icon">
-                                        <img src="./images/icons/wave-icon.svg" alt="image" />
+                                        <img src="./images/icons/wave-icon.svg" alt="image" height="200" width="200" />
                                     </div>
                                     <div class="content">
                                         <h2>Trusted by our clients</h2>
@@ -844,7 +897,7 @@
                                     </div>
                                     <button class="custom-next-arrow btn-styled-removed btn-next-success-story"
                                         aria-label="Next Slide">
-                                        <img src="./images/icons/right-arrow3.svg" alt="icons">
+                                        <img src="./images/icons/right-arrow3.svg" alt="icons" height="200" width="200">
                                         <div class="text-1 text-label-wrap1" style="opacity: 0;"><span
                                                 class="button-label" style="opacity: 1;">N</span><span
                                                 class="button-label" style="opacity: 1;">e</span><span
@@ -893,7 +946,11 @@
                 </section>
                 <section class="section-home-reviews aos-init " data-aos="fade">
                     <div class="embedsocial-hashtag" data-ref="3d97164898bf69f7f5319b92ceb628803910cc4c"></div>
-                    <script> (function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript")); </script>
+                    <script defer>
+                        setTimeout(() => {
+                            (function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript"));
+                        }, 10000);
+                    </script>
                 </section>
                 <!-- section-reviews End -->
                 <section class="section-home-contact-forms pearl-bg2 aos-init " data-aos="fade">
@@ -959,8 +1016,8 @@
                                         </div>
                                         <div class="col col-select">
                                             <div class="input-wrap select-wrapper-box">
-                                                <select id="selectBox" class="form-control" tabindex="7"
-                                                    aria-invalid="false" name="state">
+                                                <select id="selectBox" class="form-control" tabindex="0"
+                                                    aria-invalid="false" name="state" aria-label="State">
                                                     <option value="0" selected="selected" class="gf_placeholder">State*
                                                     </option>
                                                     <option value="Alaska">Alaska</option>
@@ -1067,10 +1124,8 @@
                     </div>
                 </section>
                 <!-- section-home-contact-forms end -->
-
                 <!-- modal-home-client-video start -->
                 <div id="clent1-modal-container">
-
                 </div>
                 <!-- modal-home-client-video end -->
             </div>
@@ -1080,7 +1135,8 @@
                     <div class="row">
                         <div class="col col-footer-logo">
                             <div class="footer-logo">
-                                <a href="/" title="Home "><img src="/images/icons/footer-logo.svg" alt="footer logo" />
+                                <a href="/" title="Home "><img src="/images/icons/footer-logo.svg" alt="footer logo"
+                                        height="200" width="200" />
                                 </a>
                             </div>
                         </div>
@@ -1090,8 +1146,8 @@
                                     <a href="/about-chapter-home-renovation/" title="About
                                             ">About</a>
                                 </li>
-<li>
-                                   <a href="/home-renovation-services/" title="Services ">Services</a>
+                                <li>
+                                    <a href="/home-renovation-services/" title="Services ">Services</a>
                                 </li>
                                 <li>
                                     <a href="/how-chapter-home-renovation-works/" title="How It Works ">How It
@@ -1160,7 +1216,8 @@
                                 <div class="form-group">
                                     <input type="email" class="form-control" placeholder="Email" required />
                                     <button type="submit" class="btn-styled-removed"><img
-                                            src="/images/icons/right-shift.svg" alt="icon" /></button>
+                                            src="/images/icons/right-shift.svg" alt="icon" height="200"
+                                            width="200" /></button>
                                 </div>
                             </form>
                         </div>
@@ -1171,141 +1228,142 @@
         </div>
         <!-- for blocking page events -->
         <!-- <div class='event-blocker'>
-
         </div> -->
         <!-- Page wrapper end -->
     </div>
     <!-- Wrapper end -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
-    <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/jquery.nice-select.js"></script>
-    <script src="./js/custom.js"></script>
-    <script src="./js/contact-home.js"></script>
-    <script src="./js/home-page.js"></script>
-    <script src="./js/home-slider.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/aos.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/slick.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/anime.js"></script>
+    <!-- <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/video.min.js"></script> -->
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/lottie.min.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.lazy.min.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/swiper.js"></script>
+    <script defer
+        src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.nice-select.min.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/custom.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/contact-home.js"></script>
+    <script defer src="./js/home-page.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/home-slider.js"></script>
     <script>
     </script>
-
-    <script src="https://www.youtube.com/iframe_api"></script>
+    <script defer src="https://www.youtube.com/iframe_api"></script>
     <script>
-        $(document).ready(function () {
-            var animationPath = './js/scroll-animation.json';
-            var container = document.getElementById('scrollButton');
-            // Load the Lottie animation
-            setTimeout(() => {
-                var animation = lottie.loadAnimation({
-                    container: container,
-                    renderer: 'svg',
-                    loop: true,
-                    autoplay: true,
-                    path: animationPath
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).ready(function () {
+                var animationPath = './js/scroll-animation.json';
+                var container = document.getElementById('scrollButton');
+                // Load the Lottie animation
+                setTimeout(() => {
+                    var animation = lottie.loadAnimation({
+                        container: container,
+                        renderer: 'svg',
+                        loop: true,
+                        autoplay: true,
+                        path: animationPath
+                    });
+                }, 500);
+                // Play intro section video
+                // var player = videojs('video-player');
+                var player = document.getElementById("video-player")
+                player.pause();
+                setTimeout(function () {
+                    player.play();
+                }, 1000);
+                // Home page client video
+                $('.lazy').Lazy();
+                // lazy load images
+                $('.modal-home-client-video .btn-close, .modal-home-client-video').click(function () {
+                    $('#client1-modal, #client2-modal').css('display', 'none');
+                    stopYouTubeVideo();
                 });
-            }, 200);
-
-            // Home page client video
-
-            $('.modal-home-client-video .btn-close, .modal-home-client-video').click(function () {
-                $('#client1-modal, #client2-modal').css('display', 'none');
-                stopYouTubeVideo();
-            });
-
-            $('.modal-content').click(function (event) {
-                event.stopPropagation();
-            });
-
-            // Load and control the YouTube video
-
-            var queryParams = '?modestbranding=1&rel=0&showinfo=0&enablejsapi=1&start=0';
-
-            function loadYouTubeVideo(videoId) {
-                var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
-                new YT.Player('player1', {
-                    height: '100%',
-                    width: '100%',
-                    videoId: videoId,
-                    playerVars: {
-                        'playsinline': 1,
-                        'modestbranding': 1,
-                        'rel': 0,
-                        'showinfo': 0,
-                        'iv_load_policy': 3
-                    },
-                    events: {
-                        'onReady': onPlayerReady,
-                        'onStateChange': onPlayerStateChange
-                    }
+                $('.modal-content').click(function (event) {
+                    event.stopPropagation();
                 });
-            }
-            function loadYouTubeVideo2(videoId) {
-                var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
-                new YT.Player('player2', {
-                    height: '100%',
-                    width: '100%',
-                    videoId: videoId,
-                    playerVars: {
-                        'playsinline': 1,
-                        'modestbranding': 1,
-                        'rel': 0,
-                        'showinfo': 0,
-                        'iv_load_policy': 3
-                    },
-                    events: {
-                        'onReady': onPlayerReady,
-                        'onStateChange': onPlayerStateChange
-                    }
-                });
-            }
-            function loadYouTubeVideo3(videoId) {
-                var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
-                new YT.Player('player3', {
-                    height: '100%',
-                    width: '100%',
-                    videoId: videoId,
-                    playerVars: {
-                        'playsinline': 1,
-                        'modestbranding': 1,
-                        'rel': 0,
-                        'showinfo': 0,
-                        'iv_load_policy': 3
-                    },
-                    events: {
-                        'onReady': onPlayerReady,
-                        'onStateChange': onPlayerStateChange
-                    }
-                });
-            }
-
-            function onPlayerReady(event) {
-                event.target.playVideo();
-            }
-            function stopYouTubeVideo(type) {
-                if (type === 'modal1') {
-                    const client1Modal = document.getElementById('client1-modal');
-                    client1Modal.remove();
-                } else if (type === 'modal2') {
-                    const client2Modal = document.getElementById('client2-modal');
-                    client2Modal.remove();
-                } else if (type === 'modal3') {
-                    const client2Modal = document.getElementById('client3-modal');
-                    client2Modal.remove();
+                // Load and control the YouTube video
+                var queryParams = '?modestbranding=1&rel=0&showinfo=0&enablejsapi=1&start=0';
+                function loadYouTubeVideo(videoId) {
+                    var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
+                    new YT.Player('player1', {
+                        height: '100%',
+                        width: '100%',
+                        videoId: videoId,
+                        playerVars: {
+                            'playsinline': 1,
+                            'modestbranding': 1,
+                            'rel': 0,
+                            'showinfo': 0,
+                            'iv_load_policy': 3
+                        },
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
                 }
-            }
-            function onPlayerStateChange(event) {
-                // Handle video state changes here (e.g., pause, end)
-                if (event.data === YT.PlayerState.PAUSED) {
+                function loadYouTubeVideo2(videoId) {
+                    var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
+                    new YT.Player('player2', {
+                        height: '100%',
+                        width: '100%',
+                        videoId: videoId,
+                        playerVars: {
+                            'playsinline': 1,
+                            'modestbranding': 1,
+                            'rel': 0,
+                            'showinfo': 0,
+                            'iv_load_policy': 3
+                        },
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
                 }
-                if (event.data === YT.PlayerState.ENDED) {
+                function loadYouTubeVideo3(videoId) {
+                    var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
+                    new YT.Player('player3', {
+                        height: '100%',
+                        width: '100%',
+                        videoId: videoId,
+                        playerVars: {
+                            'playsinline': 1,
+                            'modestbranding': 1,
+                            'rel': 0,
+                            'showinfo': 0,
+                            'iv_load_policy': 3
+                        },
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
                 }
-            }
-            $('#openModal').click(function () {
-                // create and append modal structure here.
-                const docString = `
+                function onPlayerReady(event) {
+                    event.target.playVideo();
+                }
+                function stopYouTubeVideo(type) {
+                    if (type === 'modal1') {
+                        const client1Modal = document.getElementById('client1-modal');
+                        client1Modal.remove();
+                    } else if (type === 'modal2') {
+                        const client2Modal = document.getElementById('client2-modal');
+                        client2Modal.remove();
+                    } else if (type === 'modal3') {
+                        const client2Modal = document.getElementById('client3-modal');
+                        client2Modal.remove();
+                    }
+                }
+                function onPlayerStateChange(event) {
+                    // Handle video state changes here (e.g., pause, end)
+                    if (event.data === YT.PlayerState.PAUSED) {
+                    }
+                    if (event.data === YT.PlayerState.ENDED) {
+                    }
+                }
+                $('#openModal').click(function () {
+                    // create and append modal structure here.
+                    const docString = `
             <div id="client1-modal" class="modal modal-home-client-video">
                 <div class="modal-backdrop"></div>
                 <div class="modal-content">
@@ -1322,20 +1380,17 @@
                 </div>
             </div>
         `;
-                const modalContainer = document.getElementById('clent1-modal-container');
-                modalContainer.innerHTML = docString;
-
-                // attach event handler for the rendered modal
-                $(".modal-home-client-video .btn-close").on("click", function () {
-                    stopYouTubeVideo("modal1");
+                    const modalContainer = document.getElementById('clent1-modal-container');
+                    modalContainer.innerHTML = docString;
+                    // attach event handler for the rendered modal
+                    $(".modal-home-client-video .btn-close").on("click", function () {
+                        stopYouTubeVideo("modal1");
+                    });
+                    $('#client1-modal').css('display', 'flex');
+                    loadYouTubeVideo('EroEwFzupYI');
                 });
-
-                $('#client1-modal').css('display', 'flex');
-                loadYouTubeVideo('EroEwFzupYI');
-            });
-
-            $('#openModal2').click(function () {
-                const docString2 = `
+                $('#openModal2').click(function () {
+                    const docString2 = `
             <div id="client2-modal" class="modal modal-home-client-video">
                 <div class="modal-backdrop"></div>
                 <div class="modal-content">
@@ -1352,19 +1407,17 @@
                 </div>
             </div>
         `;
-                const modalContainer = document.getElementById('clent1-modal-container');
-                modalContainer.innerHTML = docString2;
-
-                // attach event handler for the rendered modal
-                $(".modal-home-client-video .btn-close").on("click", function () {
-                    stopYouTubeVideo("modal2");
+                    const modalContainer = document.getElementById('clent1-modal-container');
+                    modalContainer.innerHTML = docString2;
+                    // attach event handler for the rendered modal
+                    $(".modal-home-client-video .btn-close").on("click", function () {
+                        stopYouTubeVideo("modal2");
+                    });
+                    $('#client2-modal').css('display', 'flex');
+                    loadYouTubeVideo2('wmmtsXhlG0s');
                 });
-
-                $('#client2-modal').css('display', 'flex');
-                loadYouTubeVideo2('wmmtsXhlG0s');
-            });
-            $('#openModal3').click(function () {
-                const docString2 = `
+                $('#openModal3').click(function () {
+                    const docString2 = `
             <div id="client3-modal" class="modal modal-home-client-video">
                 <div class="modal-backdrop"></div>
                 <div class="modal-content">
@@ -1381,35 +1434,29 @@
                 </div>
             </div>
         `;
-                const modalContainer = document.getElementById('clent1-modal-container');
-                modalContainer.innerHTML = docString2;
-
-                // attach event handler for the rendered modal
-                $(".modal-home-client-video .btn-close").on("click", function () {
-                    stopYouTubeVideo("modal3");
+                    const modalContainer = document.getElementById('clent1-modal-container');
+                    modalContainer.innerHTML = docString2;
+                    // attach event handler for the rendered modal
+                    $(".modal-home-client-video .btn-close").on("click", function () {
+                        stopYouTubeVideo("modal3");
+                    });
+                    $('#client3-modal').css('display', 'flex');
+                    loadYouTubeVideo3('rsCpcFnADrY');
                 });
-
-                $('#client3-modal').css('display', 'flex');
-                loadYouTubeVideo3('rsCpcFnADrY');
             });
-        });
-        // ready function end
-        // var emailElement = document.getElementById('contact-email-field-id');
-        // emailElement.value = localStorage.getItem('email') != undefined ? localStorage.getItem('email') : null;
-        // emailElement.setAttribute("data-email", emailElement.value);
+        })
+
     </script>
-    <script>
-        // const urlParams = new URLSearchParams(window.location.search);
-        // const myParam = urlParams.get('submit');
-        // if (myParam == "true") {
-        //     window.dataLayer = window.dataLayer || [];
-        //     function gtag() { dataLayer.push(arguments); }
-        //     gtag('js', new Date());
-        //     gtag('config', 'UA-225495044-1');
-        //     gtag('event', 'conversion', { 'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo' });
-        // }
+    <!-- <script defer type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script> -->
+    <script defer>
+        setTimeout(function () {
+            var script = document.createElement('script');
+            script.async = true;
+            var cacheControl = 'max-age=8600000';
+            script.src = 'https://crm.zoho.com/crm/javascript/zcga.js?cache_control=' + cacheControl;
+            document.head.appendChild(script);
+        }, 5000);
     </script>
-    <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
 </body>
 
 </html>

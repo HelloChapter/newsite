@@ -1,8 +1,6 @@
 let selectedEmp = null;
-
 jQuery(document).ready(function ($) {
     // Cookie code
-
     var jQueryScript = document.createElement('script');
     jQueryScript.setAttribute('src', 'https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js');
     document.head.appendChild(jQueryScript);
@@ -11,14 +9,11 @@ jQuery(document).ready(function ($) {
         if (Cookies.get('HelloChapterContactPath') === undefined) {
             Cookies.set('HelloChapterContactPath', window.location.href, { expires: 30, path: '' })
         }
-
         if (window.location.pathname === '/contact-chapter-home-renovation/') {
             // Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
         }
-
     }
     setTimeout(custom_cookie, 1000);
-
     // Header sticky
     jQuery(window).scroll(function () {
         var scroll = jQuery(window).scrollTop();
@@ -32,7 +27,6 @@ jQuery(document).ready(function ($) {
     if (count_box.length) {
         var intTotalHeight = count_box.offset().top;
     }
-
     $(window).scroll(function () {
         if ($(this).scrollTop() >= intTotalHeight) {
             $('.count-number').each(function () {
@@ -46,9 +40,7 @@ jQuery(document).ready(function ($) {
         }
     });
     // Counter number js end
-
     // About team click js
-
     $(".desktop-team-wrapper .team-image").click(function () {
         var current_item = $(this).attr("data-point-id");
         if ($(".team-clickable-content")[current_item].classList.contains('d-block')) {
@@ -61,19 +53,11 @@ jQuery(document).ready(function ($) {
         // check if div has class 'd-block'
         $(".team-clickable-content").removeClass('d-block');
         $(".team-clickable-content").addClass('d-none');
-
         $(".team-clickable-content")[current_item].classList.remove('d-none');
         $(".team-clickable-content")[current_item].classList.add('d-block');
-
-        // if($(".col-team").classList.contains('active-member')){
-        //     $(".col-team").removeClass("active-member");
-        //     $(this).parent(".col-team").addClass("active-member");
-        //     return false;
-        // }
         $(".col-team").removeClass("active-member");
         $(this).parent(".col-team").addClass("active-member");
     });
-
     $(".menu-btn-toggle").click(function () {
         $("body").toggleClass("header-open");
     });
@@ -81,8 +65,6 @@ jQuery(document).ready(function ($) {
         "display",
         "none"
     );
-    //$(".accordion .card:first-of-type .card-title button").addClass("active-btn");
-
     $(".accordion .card-title button").click(function () {
         $(".active-btn")
             .not(this)
@@ -103,7 +85,6 @@ jQuery(document).ready(function ($) {
         dots: true,
         fade: true,
         cssEase: 'ease-in-out',
-
     });
     // Home slider end
     $('.home-new-projects-slider').slick({
@@ -155,13 +136,9 @@ jQuery(document).ready(function ($) {
         cssEase: 'ease-in-out',
     });
     // home-client-slider end
-
     var sectionInView = false;
-
     calculate_slider_height();
-
     // home-how-it-works-slider end
-
     $('.after-before-slider').slick({
         infinite: true,
         slidesToShow: 1,
@@ -176,7 +153,6 @@ jQuery(document).ready(function ($) {
         swipeToSlide: false,
         touchMove: false,
         swipe: false,
-
     });
     // after-before-slider end
     $('.review-slider').slick({
@@ -232,20 +208,22 @@ jQuery(document).ready(function ($) {
         cssEase: 'ease-in-out',
     });
     // new projects pages card slider end
-    $('.announcement-bar').slick({
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 35000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-        fade: false,
-        variableWidth: true,
-        centerMode: true,
-        cssEase: 'linear',
-    });
+    setTimeout(() => {
+        $('.announcement-bar').slick({
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 0,
+            speed: 35000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            fade: false,
+            variableWidth: true,
+            centerMode: false,
+            cssEase: 'linear',
+        });
+      }, 800);
     // announcement-bar slider end
     
     //NYC projects more cards
@@ -316,7 +294,6 @@ $(".two-joint-images .after-before-btn-wrap .after-btn").click(function (e) {
         $(this).parents('.two-joint-images').find('.slider-button').css('left', `calc(0px)`);
     }, 10);
 });
-
 // After Before Js end
 window.addEventListener('resize', function (event) {
     calculate_slider_height();
@@ -326,8 +303,7 @@ function calculate_slider_height() {
     // detect screen size here and adjust div height accordingly
     var viewportWidth = window.innerWidth;
     const magicScrollNumber = 170;
-    var divTotalHeight = divHeight * (viewportWidth / magicScrollNumber);
-
+    var divTotalHeight = divHeight * (viewportWidth/magicScrollNumber);
     var setHeight = $('.empty-height-div');
     setHeight.height(divTotalHeight);
 }

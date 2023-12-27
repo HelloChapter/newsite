@@ -1,30 +1,25 @@
 .section-client-slider {
     padding: 115px 184px 33px;
     min-height: calc(100vh - 114px);
-
     .container {
         max-width: 100%;
         padding: 0;
     }
-
     .images-icon {
         padding-right: 5px;
         opacity: 0;
         -webkit-transition: opacity 0.3s ease-in-out;
         transition: opacity 0.3s ease-in-out;
     }
-
     .slick-active {
         .images-icon {
             opacity: 1;
         }
     }
-
     .slider-item {
         -webkit-transition: none !important;
         transition: none !important;
     }
-
     .circle-ui {
         background-color: $pearl-drop3;
         width: 513px;
@@ -35,7 +30,6 @@
         right: 134px;
         z-index: 0;
     }
-
     .client-image {
         border-radius: 100%;
         overflow: hidden;
@@ -43,7 +37,6 @@
         max-height: 437px;
         position: relative;
         margin: -190px 0 0 auto;
-
         &:after {
             content: '';
             display: block;
@@ -56,13 +49,11 @@
             position: absolute;
             transition: background-color 0.6s ease-in-out;
         }
-
         &:hover {
             &:after {
                 background-color: rgba(35, 31, 32, 0.40);
             }
         }
-
         .btn-client-play {
             z-index: 1;
             position: absolute;
@@ -71,23 +62,19 @@
             transform: translate(-50%, -50%);
         }
     }
-
     .home-client-slider {
         position: static;
     }
-
     .col-left {
         position: relative;
         max-width: 56.3%;
         flex: 0 0 56.3%;
         padding-right: 0;
-
         .content {
             position: relative;
             z-index: 1;
             max-width: 525px;
             min-height: 310px;
-
             h2 {
                 font-size: 55px;
                 line-height: 1.2;
@@ -97,7 +84,6 @@
                 // min-height: 265px;
                 //@include default_words_animation;
             }
-
             h3 {
                 font-family: "Inter";
                 font-size: 17px;
@@ -106,29 +92,24 @@
                 display: flex;
                 align-items: center;
                 // @include default_words_animation;
-
                 img {
                     margin: 0 11px;
                 }
             }
         }
     }
-
     .col-right {
         padding-left: 9%;
         padding-top: 70px;
         max-width: 43.7%;
         flex: 0 0 43.7%;
         position: relative;
-
         .client-content-wrap {
             max-width: 425px;
         }
-
         .wave-icon {
             margin-bottom: 58px;
         }
-
         .content {
             h2 {
                 font-size: 75px;
@@ -138,7 +119,6 @@
                 //@include default_words_animation;
             }
         }
-
         .content-p {
             font-family: "Inter";
             font-size: 17px;
@@ -147,7 +127,6 @@
             // @include default_words_animation;
         }
     }
-
     .slick-dots {
         padding: 0;
         display: flex;
@@ -156,14 +135,11 @@
         bottom: 40px;
         left: calc(116%);
         z-index: 1;
-
         ul {
             display: flex;
         }
-
         li {
             margin: 0 6.5px;
-
             button {
                 width: 7px;
                 display: block;
@@ -177,7 +153,6 @@
                 box-shadow: none;
             }
         }
-
         .active,
         .slick-active {
             button {
@@ -185,23 +160,19 @@
             }
         }
     }
-
     .slick-prev {
         display: none !important;
     }
-
     .text-label-wrap1 {
         position: absolute;
         min-width: 300px;
         bottom: 0px;
         margin-left: 45px;
         color: $black;
-
         .button-label {
             color: $black;
         }
     }
-
     .custom-next-arrow {
         display: flex;
         align-items: center;
@@ -212,49 +183,41 @@
         line-height: 40px;
         font-weight: 400;
         font-family: "Inter";
-
         img {
             margin-right: 25px;
             margin-bottom: 10px;
         }
     }
 }
-
 // Responsive CSS start
 @media (max-width:1800px) {
     .section-client-slider {
         padding: 100px 140px 33px;
-
         .circle-ui {
             width: 430px;
             height: 430px;
         }
-
         .client-image {
             max-width: 360px;
             max-height: 360px;
         }
     }
 }
-
 // 1800 end
 @media (max-width:1600px) {
     .section-client-slider {
         padding: 90px 110px 30px;
-
         .circle-ui {
             width: 443px;
             height: 443px;
             top: 25px;
             right: 110px;
         }
-
         .client-image {
             max-width: 377px;
             max-height: 377px;
             margin: -100px 0 0 auto;
         }
-
         .col-left {
             .content {
                 h2 {
@@ -262,7 +225,6 @@
                 }
             }
         }
-
         .col-right {
             .content {
                 h2 {
@@ -272,16 +234,13 @@
         }
     }
 }
-
 // 1600 end
 @media (max-width:1440px) {
     .section-client-slider {
         padding: 70px 80px 30px;
-
         .circle-ui {
             right: 80px;
         }
-
         .col-left {
             .content {
                 h2 {
@@ -289,7 +248,6 @@
                 }
             }
         }
-
         .col-right {
             .content {
                 h2 {
@@ -299,16 +257,13 @@
         }
     }
 }
-
 // 1440 end
 @media (max-width:1300px) {
     .section-client-slider {
         padding: 70px 40px 30px;
-
         .circle-ui {
             right: 30px;
         }
-
         .col-left {
             .content {
                 h2 {
@@ -317,7 +272,6 @@
                 }
             }
         }
-
         .col-right {
             .content {
                 h2 {
@@ -327,24 +281,20 @@
         }
     }
 }
-
 // 1300 end
 @media (max-width:1199px) {
     .section-client-slider {
         .col-right {
             padding-left: 30px;
         }
-
         .slick-dots {
             left: 104%;
         }
-
         .custom-next-arrow {
             left: 88px;
         }
     }
 }
-
 // 1199 end
 @media (max-width:1100px) {
     .section-client-slider {
@@ -353,85 +303,68 @@
             max-width: 390px;
             max-height: 390px;
         }
-
         .client-image {
             margin: -90px 0 0 auto;
             max-width: 320px;
             max-height: 320px;
-
         }
     }
 }
-
 // 1100 end
 @media (max-width:1023px) {
     .section-client-slider {
         padding: 0 59px;
-
         .home-client-slider {
             padding-bottom: 0;
-
             .slider-item {
                 padding-bottom: 141px;
             }
         }
-
         .images-icon {
             padding-right: 0;
         }
-
         .client-image {
             margin: -30px 50px 0 auto;
-
             .btn-client-play {
                 img {
                     max-width: 154px;
                 }
             }
         }
-
         .circle-ui {
             right: 140px;
             top: 0;
         }
-
         .row {
             margin: 0;
         }
-
         .slick-dots {
             left: 0;
             bottom: 60px;
             right: 0;
             justify-content: center;
         }
-
         .btn-next-success-story {
             display: none !important;
         }
-
         .col-left {
             max-width: 100%;
             flex: 0 0 100%;
             order: 1;
-
             .content {
                 max-width: 396px;
                 min-height: 240px;
-
                 h2 {
                     font-size: 40px;
                     line-height: 48px;
                     margin-bottom: 8px;
                 }
-
                 h3 {
                     font-size: 17px;
                     line-height: 35px;
                 }
             }
         }
-
         .col-right {
             order: 0;
             max-width: 100%;
@@ -439,25 +372,20 @@
             padding: 43px 0 65px;
             margin-bottom: 50px;
             position: relative;
-
             .client-content-wrap {
                 max-width: 446px;
             }
-
             .content {
                 max-width: 374px;
-
                 h2 {
                     font-size: 70px;
                     line-height: 80px;
                 }
             }
-
             .content-p {
                 font-size: 17px;
                 line-height: 35px;
             }
-
             .wave-icon {
                 position: absolute;
                 bottom: 0;
@@ -466,13 +394,11 @@
         }
     }
 }
-
 // 1023 end
 @media (max-width:767px) {
     .section-client-slider {
         padding: 0 30px;
         position: relative;
-
         .home-client-slider {
             padding-bottom: 0;
             position: static;
@@ -480,69 +406,56 @@
                 padding-bottom: 98px;
             }
         }
-
         .col-right {
             padding-bottom: 47px;
             margin-bottom: 32px;
-
             .content {
                 padding-right: 60px;
-
                 h2 {
                     font-size: 45px;
                     line-height: 60px;
                     margin-bottom: 18px;
                 }
             }
-
             .content-p {
                 font-size: 14px;
                 line-height: 30px;
                 padding-right: 100px;
             }
         }
-
         .col-left {
             // max-width: 340px;
             padding: 0;
             position: static;
-
             .content {
                 max-width: 231px;
                 min-height: 140px;
-
                 h2 {
                     font-size: 20px;
                     line-height: 24px;
                     // min-height: 100px;
                 }
-
                 h3 {
                     font-size: 11px;
                     line-height: 35px;
                 }
             }
         }
-
         .circle-ui {
             right: 13%;
             height: 259px;
             width: 259px;
         }
-
         .client-image {
             max-width: 220px;
             max-height: 220px;
             margin: -25px -0px 0 auto;
-
             .btn-client-play img {
                 max-width: 90px;
             }
         }
-
         .slick-dots li {
             margin: 0 4px;
-
             button {
                 height: 7px;
                 width: 7px;
@@ -550,7 +463,6 @@
         }
     }
 }
-
 // 767 end
 @media (max-width:389px) {
     .section-client-slider {
@@ -559,7 +471,6 @@
             height: 229px;
             width: 229px;
         }
-
         .client-image {
             max-width: 200px;
             max-height: 200px;
@@ -567,5 +478,4 @@
         }
     }
 }
-
 // 389 end

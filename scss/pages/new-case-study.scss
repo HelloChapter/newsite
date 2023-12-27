@@ -7,18 +7,15 @@
 @import "../components/header.scss";
 @import "../components/footer.scss";
 @import "../components/image-content.scss";
-
 .new-case-study-page header {
     border-bottom: 0.5px solid $border-color;
 }
 .section-project-info {
     padding: 80px 0 152px;
-
     h2 {
         line-height: 1.2;
         margin-bottom: 31px;
     }
-
     h6 {
         font-weight: 600;
         font-size: 17px;
@@ -26,12 +23,10 @@
         font-family: "Inter";
         margin-bottom: 31px;
     }
-
     p {
         font-weight: 400;
     }
 }
-
 .section-image-content {
     h2 {
         margin-bottom: 30px;
@@ -40,52 +35,43 @@
         max-width: 730px;
     }
 }
-
 .section-youtube-video {
     padding: 50px 0;
 }
-
 .after-before-slider-wrap {
-
     // padding-bottom: 48px;
     .before-after-img-wrap {
         .two-joint-images .after-before-btn {
             bottom: 60px;
         }
-
         .slick-dots li {
             display: flex;
             align-items: center;
         }
     }
 }
-
 // Responsive css start
 @media (max-width:1440px) {
     .section-project-info {
         padding: 80px 0 130px;
     }
 }
-
 // 1440 end
 @media (max-width:1199px) {
     .section-project-info {
         padding: 60px 0 100px;
     }
 }
-
 // 1199 end
 @media (max-width:1023px) {
     .section-project-info {
         padding: 40px 0;
-
         h2,
         h6 {
             margin-bottom: 15px;
         }
     }
 }
-
 // 1199 end
 @media (min-width:768px) and (max-width:991px) {
     .after-before-slider-wrap {
@@ -115,5 +101,4 @@
         }
     }
 }
-
 // 767 end

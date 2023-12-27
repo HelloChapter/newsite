@@ -1,17 +1,13 @@
 .section-chapter-numbers {
     padding: 100px 0;
-
     .container {
         max-width: 1280px;
     }
-
     .section-title {
         padding-bottom: 70px;
-
         h2 {
             margin-bottom: 12px;
         }
-
         h3 {
             font-size: 23px;
             font-weight: 500;
@@ -19,7 +15,6 @@
             text-transform: uppercase;
         }
     }
-
     .counter-group {
         h4 {
             font-size: 100px;
@@ -27,18 +22,15 @@
             letter-spacing: -0.31px;
             font-family: "Times";
             font-weight: bold;
-
             .small-text {
                 font-size: 69px;
                 line-height: 1;
                 letter-spacing: -0.16px;
             }
-
             sup {
                 font-size: 35px;
             }
         }
-
         h5 {
             font-size: 20px;
             line-height: 50px;
@@ -49,23 +41,19 @@
         }
     }
 }
-
 // Responsive CSS start
 @media (max-width:1600px) {
     .section-chapter-numbers {
         .counter-group {
             h4 {
                 font-size: 97px;
-
                 .small-text {
                     font-size: 67px;
-
                     sup {
                         font-size: 34px;
                     }
                 }
             }
-
             h5 {
                 font-size: 14px;
                 line-height: 17px;
@@ -73,17 +61,14 @@
         }
     }
 }
-
 // 1600 end
 @media (max-width:1440px) {
     .section-chapter-numbers {
         .counter-group {
             h4 {
                 font-size: 90px;
-
                 .small-text {
                     font-size: 60px;
-
                     sup {
                         font-size: 30px;
                     }
@@ -92,17 +77,14 @@
         }
     }
 }
-
 // 1440 end
 @media (max-width:1300px) {
     .section-chapter-numbers {
         .counter-group {
             h4 {
                 font-size: 80px;
-
                 .small-text {
                     font-size: 50px;
-
                     sup {
                         font-size: 25px;
                     }
@@ -111,24 +93,20 @@
         }
     }
 }
-
 // 1300 end
 @media (max-width:1199px) {
     .section-chapter-numbers {
         .counter-group {
             h4 {
                 font-size: 67px;
-
                 .small-text {
                     font-size: 40px;
-
                     sup {
                         font-size: 20px;
                     }
                 }
             }
         }
-
         .section-title {
             h3 {
                 font-size: 20px;
@@ -136,70 +114,56 @@
         }
     }
 }
-
 // 1199 end
 @media (max-width:1023px) {
     .section-chapter-numbers {
         padding: 60px 0 45px;
-
         .container {
             max-width: 860px;
         }
-
         .row {
             white-space: nowrap;
-
             .col {
                 padding-bottom: 15px;
             }
         }
-
         .section-title {
             padding-bottom: 40px;
-
             h3 {
                 font-size: 14px;
             }
         }
     }
 }
-
 // 1023 end
 @media (max-width:767px) {
     .section-chapter-numbers {
         .row {
             white-space: normal;
-
             .col {
                 max-width: 100%;
                 flex: 0 0 100%;
                 padding-bottom: 30px;
-
                 &:last-child {
                     padding-bottom: 0;
                 }
             }
         }
-
         .counter-group {
             h4 {
                 font-size: 48px;
-
                 .small-text {
                     font-size: 30px;
-
                     sup {
                         font-size: 14px;
                     }
                 }
             }
-
             h5 {
                 font-size: 17px;
                 line-height: 1.2;
             }
         }
-
         .section-title {
             h3 {
                 font-size: 17px;
@@ -207,5 +171,4 @@
         }
     }
 }
-
 // 1199 end
