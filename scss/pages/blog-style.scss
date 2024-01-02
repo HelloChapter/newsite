@@ -5,10 +5,10 @@
 @import "../components/chapter-content.scss";
 .page-blog {
     .row {
-        margin: 0 -7px;
+        margin: 0 -22.5px;
     }
     .col-blog {
-        padding: 0 7px;
+        padding: 0 22.5px;
         max-width: 33.33%;
         flex: 0 0 33.33%;
         margin-bottom: 31px;
@@ -39,11 +39,14 @@
     }
     .card-image {
         min-height: inherit;
-        padding-bottom: 52.25%;
+        padding-bottom: 50%;
     }
 }
 .section-blog-listing {
-    padding: 65px 0 100px;
+    padding: 115px 0 100px;
+    .container {
+        max-width: 1093px;
+    }
 }
 // Blog listing css end
 .page-blog-detail {
