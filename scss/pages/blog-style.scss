@@ -2,6 +2,7 @@
 @import "../common.scss";
 @import "../components/header.scss";
 @import "../components/footer.scss";
+@import "../components/form-elements.scss";
 @import "../components/chapter-content.scss";
 
 .page-blog {
@@ -103,7 +104,7 @@
 }
 
 .section-blog-listing {
-    padding: 115px 0 100px;
+    padding: 115px 0 0px;
 
     .container {
         max-width: 1093px;
@@ -111,6 +112,32 @@
 }
 
 // Blog listing css end
+.section-blog-expert-help {
+    padding: 75px 0 60px;
+
+    .container {
+        max-width: 710px;
+        border-top: 5px solid $pearl-drop2;
+        border-bottom: 5px solid $pearl-drop2;
+        padding: 30px 15px;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+        font-size: 50px;
+        line-height: 58px;
+    }
+
+    .btn-wrap {
+        .btn-black {
+            min-height: 67px;
+            min-width: 183px;
+            font-size: 19px;
+            line-height: 23px;
+        }
+    }
+}
+
 .page-blog-detail {
     header {
         background-color: transparent;
@@ -236,19 +263,6 @@
 
 // Responsive CSS start
 @media (max-width:1440px) {
-    .page-blog {
-        .card {
-            h4 {
-                font-size: 14px;
-                line-height: 40px;
-            }
-
-            h5 {
-                font-size: 21px;
-            }
-        }
-    }
-
     .section-blog-heading {
         padding: 140px 0 70px;
 
@@ -269,53 +283,55 @@
 // 1440 end
 @media (max-width:1199px) {
     .section-blog-listing {
-        padding: 50px 0;
+        padding: 50px 0 0;
     }
 
-    .page-blog {
-        .card {
-            h5 {
-                font-size: 18px;
-            }
+    .section-heading {
+        padding: 70px 0;
+
+        .container {
+            max-width: 950px;
+        }
+
+        h3 {
+            font-size: 27px;
+            line-height: 1.4;
         }
     }
-}
 
-.section-heading {
-    padding: 70px 0;
-
-    .container {
-        max-width: 950px;
-    }
-
-    h3 {
-        font-size: 27px;
-        line-height: 1.4;
-    }
-}
-
-.page-blog-detail {
-    h4 {
-        font-size: 23px;
+    .page-blog-detail {
+        h4 {
+            font-size: 23px;
+        }
     }
 }
 
 // 1199 end
 @media (max-width:1023px) {
     .section-blog-listing {
-        padding: 30px 0;
+        padding: 30px 0 0;
     }
 
     .page-blog {
-        .card {
-            h5 {
-                font-size: 21px;
-                margin-bottom: 10px;
-            }
+        .row {
+            margin: 0 -16px;
+        }
 
-            h4 {
-                line-height: 2;
-            }
+        .col-blog {
+            padding: 0 16px;
+        }
+    }
+
+    .section-blog-expert-help {
+        padding: 75px 0 60px;
+
+        .container {
+            padding: 30px 15px;
+        }
+
+        h2 {
+            font-size: 45px;
+            line-height: 60px;
         }
     }
 
@@ -356,11 +372,34 @@
 }
 
 // 1023 end
+@media (max-width:991px) {
+    .page-blog {
+        .container {
+            padding: 0 44px;
+        }
+
+        .col-blog {
+            max-width: 50%;
+            flex: 0 0 50%;
+        }
+        .section-blog-expert-help {
+            .container {
+                padding: 30px 15px;
+            }
+        }
+    }
+}
+
+// 991 end
 @media (max-width:767px) {
     .page-blog {
         .col-blog {
             max-width: 50%;
             flex: 0 0 50%;
+            margin-bottom: 32px;
+        }
+         .container {
+            padding: 0 33px;
         }
     }
 
@@ -385,6 +424,16 @@
 
     .section-blog-heading {
         padding: 100px 0 30px;
+    }
+    .section-blog-expert-help {
+        padding: 30px 0;
+        .container {
+            max-width: 350px;
+        }
+        h2 {
+        font-size: 25px;
+        line-height: 29px;
+        }
     }
 }
 
