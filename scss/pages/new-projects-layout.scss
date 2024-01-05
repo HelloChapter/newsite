@@ -6,76 +6,116 @@
 @import "../components/chapter-content.scss";
 @import "../components/category.scss";
 @import "../components/new-project-cards.scss";
+
 .page-projects {
     header {
         border-bottom: 0.5px solid $border-color;
     }
 }
+
 .new-projects-intro {
     .col-bg-image {
         min-height: 643px;
+        position: relative;
     }
+
     .desktop-image-hide {
         display: none;
     }
+
     h1 {
         font-size: 70px;
         line-height: 1.1;
         margin-bottom: 30px;
     }
+
     .content {
         max-width: 680px;
         margin: 0 auto;
         padding: 0 15px;
+
         p {
             line-height: 33px;
         }
     }
+
+    .image-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $black;
+        padding: 0 40px;
+        width: auto;
+
+        h6 {
+            color: $white;
+            margin: 0;
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 40px;
+            font-family: "Inter";
+        }
+
+        @media (max-width:767px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
 }
+
 // Responsive css start
 @media (max-width:1441px) {
     .new-projects-intro {
         h1 {
-            font-size: 44px;;
+            font-size: 44px;
+            ;
         }
+
         .content {
             p {
                 font-size: 14px;
                 line-height: 24px;
             }
         }
-    }   
+    }
 }
+
 // 1440 end
 @media (max-width:1400px) {
     .new-projects-intro {
         .col-bg-image {
             min-height: auto;
             padding-bottom: 38%;
-        }   
+        }
     }
 }
+
 // 1400 end
 @media (max-width:991px) {
     .new-projects-intro {
         .col-bg-image {
             padding-bottom: 71.6%;
         }
+
         .tab-image-hide {
             display: none;
-        }   
+        }
+
         .desktop-image-hide {
             display: block;
         }
+
         .content {
             padding: 40px 30px;
         }
+
         h1 {
             font-size: 25px;
             line-height: 29px;
         }
     }
 }
+
 // 991 end
 @media (max-width:767px) {
     .new-projects-intro {
@@ -85,10 +125,12 @@
             flex: 0 0 100%;
             order: 1;
         }
+
         .content {
             padding: 30px 20px;
             max-width: 100%;
         }
     }
 }
+
 // 767 end
