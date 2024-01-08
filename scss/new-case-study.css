@@ -899,6 +899,9 @@ video, iframe {
   .section-project-category {
     top: 94px;
   }
+  .section-project-category ul li {
+    padding: 0 10px;
+  }
 }
 .pearl-bg {
   background-color: #F9F4ED;
