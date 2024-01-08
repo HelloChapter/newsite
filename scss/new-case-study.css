@@ -2,16 +2,19 @@
 .inline-block {
   display: inline-block;
 }
+
 .d-flex, .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
+
 .row {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 -15px;
 }
+
 .col {
   padding: 0 15px;
   -ms-flex-preferred-size: 0;
@@ -21,6 +24,7 @@
           flex-grow: 1;
   max-width: 100%;
 }
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -30,75 +34,93 @@
   padding-right: 0;
   padding-left: 0;
 }
+
 .justify-content-between {
   -ms-flex-pack: justify;
   -webkit-box-pack: justify;
           justify-content: space-between;
 }
+
 .justify-content-center {
   -ms-flex-pack: center;
   -webkit-box-pack: center;
           justify-content: center;
 }
+
 .align-items-between {
   -ms-flex-pack: justify;
   -webkit-box-align: space-between;
       -ms-flex-align: space-between;
           align-items: space-between;
 }
+
 .align-items-center {
   -ms-flex-pack: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
+
 .align-self-center {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
+
 .flex-wrap {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+
 .px-5 {
   padding: 0 5px;
 }
+
 .pr-0 {
   padding-right: 0;
 }
+
 .m-0 {
   margin: 0;
 }
+
 .w-100 {
   width: 100%;
 }
+
 .h-100 {
   height: 100%;
 }
+
 .textRight {
   text-align: right;
 }
+
 .text-center {
   text-align: center;
 }
+
 .d-none {
   display: none;
 }
+
 .d-block {
   display: block;
 }
+
 .list-unstyled {
   padding: 0;
   list-style: none;
   margin-bottom: 0;
 }
+
 .bg-image {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   min-height: 300px;
 }
+
 @font-face {
   font-family: "Times";
   src: url("../fonts/times/Times-Bold.eot");
@@ -134,36 +156,46 @@
 .pearl-bg {
   background-color: #F9F4ED;
 }
+
 .pearl-bg2 {
   background-color: #Faf5ee;
 }
+
 .pearl-bg3 {
   background-color: #F3E3D8;
 }
+
 .dawn-pink-bg {
   background-color: #F2E2D7;
 }
+
 .light-pink-bg {
   background-color: #e1cdc0;
 }
+
 .light-pink-bg2 {
   background-color: #D7C3B6;
 }
+
 .white-bg {
   background-color: #ffffff;
 }
+
 .black-bg {
   background-color: #231F20;
 }
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Inter";
   color: #231F20;
@@ -181,34 +213,46 @@ body {
   text-size-adjust: none;
   scroll-behavior: smooth;
 }
+
 a {
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
+
 button {
   cursor: pointer;
 }
+
 svg,
 img {
   max-width: 100%;
 }
+
+img {
+  height: auto;
+  width: auto;
+}
+
 .btn-styled-removed {
   background-color: transparent;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+
 .container {
   max-width: 1310px;
   padding: 0 15px;
   margin: 0 auto;
 }
+
 .middle-content {
   min-height: 400px;
   padding-top: 111px;
 }
+
 .link-text a,
 .link-text button {
   line-height: 50px;
@@ -242,12 +286,15 @@ img {
   -webkit-transform: scaleX(0.8);
   transform: scaleX(0.8);
 }
+
 textarea {
   resize: none;
 }
+
 iframe {
   max-width: 100%;
 }
+
 h1,
 h2,
 h3,
@@ -257,11 +304,13 @@ h6 {
   font-family: "Times";
   font-weight: bold;
 }
+
 h2 {
   font-size: 50px;
   line-height: 50px;
   letter-spacing: -0.2px;
 }
+
 .page-title h1 {
   font-size: 50px;
   line-height: 60px;
@@ -274,6 +323,7 @@ h2 {
   font-weight: 500;
   text-transform: uppercase;
 }
+
 .stretched-link {
   text-align: center;
   text-decoration: none;
@@ -284,6 +334,7 @@ h2 {
   height: 100%;
   width: 100%;
 }
+
 .location-title {
   font-size: 17px;
   font-family: "Inter";
@@ -291,15 +342,19 @@ h2 {
   font-weight: 300;
   margin-bottom: 12px;
 }
+
 .section-full-image img {
   display: block;
 }
+
 .opacity-0 {
   opacity: 0 !important;
 }
+
 video, iframe {
   max-width: 100%;
 }
+
 .btn-black-bg {
   min-height: 45px;
   min-width: 139px;
@@ -324,6 +379,7 @@ video, iframe {
   background-color: transparent;
   color: #231F20;
 }
+
 @media (max-width: 1600px) {
   body {
     font-size: 14px;
@@ -407,6 +463,7 @@ video, iframe {
   -webkit-transform: rotate(1turn);
   transform: rotate(1turn);
 }
+
 @media (max-width: 1023px) {
   .section-chapter-content {
     padding: 60px 0;
@@ -536,6 +593,7 @@ video, iframe {
   left: auto;
   right: 12px;
 }
+
 @media (max-width: 1100px) {
   .before-after-img-wrap .two-joint-images .img {
     background-size: 550px 100%;
@@ -689,6 +747,7 @@ video, iframe {
 .home-image-content-slider .col-img-content .link-text {
   padding-top: 0;
 }
+
 .after-before-slider .slick-arrow {
   position: absolute;
   bottom: 14px;
@@ -746,6 +805,7 @@ video, iframe {
   border-radius: 100%;
   overflow: hidden;
 }
+
 @media (max-width: 1199px) {
   .home-image-content-slider .col-img-content .content {
     padding-right: 30px;
@@ -823,6 +883,7 @@ video, iframe {
   font-style: italic;
   font-weight: 700;
 }
+
 @media (max-width: 1440px) {
   .section-project-category ul a {
     font-size: 14px;
@@ -842,27 +903,35 @@ video, iframe {
 .pearl-bg {
   background-color: #F9F4ED;
 }
+
 .pearl-bg2 {
   background-color: #Faf5ee;
 }
+
 .pearl-bg3 {
   background-color: #F3E3D8;
 }
+
 .dawn-pink-bg {
   background-color: #F2E2D7;
 }
+
 .light-pink-bg {
   background-color: #e1cdc0;
 }
+
 .light-pink-bg2 {
   background-color: #D7C3B6;
 }
+
 .white-bg {
   background-color: #ffffff;
 }
+
 .black-bg {
   background-color: #231F20;
 }
+
 header {
   padding: 36px 0 33px;
   -webkit-transition: background-color 0.3s, opacity 0.3s !important;
@@ -948,9 +1017,11 @@ header .col-get-started a:hover {
   background-color: transparent;
   border-color: #231F20;
 }
+
 .header-sticky header {
   background-color: #ffffff;
 }
+
 @media (max-width: 1440px) {
   header nav a {
     font-size: 14px;
@@ -1154,27 +1225,35 @@ header .col-get-started a:hover {
 .pearl-bg {
   background-color: #F9F4ED;
 }
+
 .pearl-bg2 {
   background-color: #Faf5ee;
 }
+
 .pearl-bg3 {
   background-color: #F3E3D8;
 }
+
 .dawn-pink-bg {
   background-color: #F2E2D7;
 }
+
 .light-pink-bg {
   background-color: #e1cdc0;
 }
+
 .light-pink-bg2 {
   background-color: #D7C3B6;
 }
+
 .white-bg {
   background-color: #ffffff;
 }
+
 .black-bg {
   background-color: #231F20;
 }
+
 footer {
   width: 100%;
   background-color: #231F20;
@@ -1253,6 +1332,7 @@ footer .col-news-letter button {
 footer .col-news-letter button img {
   max-width: 7px;
 }
+
 @media (max-width: 1440px) {
   footer a {
     font-size: 14px;
@@ -1357,11 +1437,13 @@ footer .col-news-letter button img {
       -ms-grid-row-align: center;
       align-self: center;
 }
+
 .section-image-content-cards .row:nth-child(even) .col-img-content {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
 }
+
 .section-image-content-miami-cards .row:nth-child(even) .col-img-content {
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
@@ -1372,6 +1454,7 @@ footer .col-news-letter button img {
       -ms-flex-order: 1;
           order: 1;
 }
+
 .section-multiple-image-content-row .bg-image {
   display: none;
 }
@@ -1396,6 +1479,7 @@ footer .col-news-letter button img {
     display: block;
   }
 }
+
 .section-image-content-location .content {
   max-width: 700px;
 }
@@ -1421,6 +1505,7 @@ footer .col-news-letter button img {
   line-height: 40px;
   font-family: "Inter";
 }
+
 @media (max-width: 1440px) {
   .section-image-content h2 {
     margin-bottom: 40px;
@@ -1478,6 +1563,7 @@ footer .col-news-letter button img {
 .new-case-study-page header {
   border-bottom: 0.5px solid #C2C2C2;
 }
+
 .section-project-info {
   padding: 80px 0 152px;
 }
@@ -1495,15 +1581,18 @@ footer .col-news-letter button img {
 .section-project-info p {
   font-weight: 400;
 }
+
 .section-image-content h2 {
   margin-bottom: 30px;
 }
 .section-image-content .content {
   max-width: 730px;
 }
+
 .section-youtube-video {
   padding: 50px 0;
 }
+
 .after-before-slider-wrap .before-after-img-wrap .two-joint-images .after-before-btn {
   bottom: 60px;
 }
@@ -1515,6 +1604,7 @@ footer .col-news-letter button img {
       -ms-flex-align: center;
           align-items: center;
 }
+
 @media (max-width: 1440px) {
   .section-project-info {
     padding: 80px 0 130px;
