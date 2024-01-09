@@ -157,6 +157,28 @@
 
     .card {
         height: 100%;
+        position: relative;
+
+        &:after {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            transition: background-color 0.150s ease-in-out;
+        }
+
+        &:hover {
+            &:after {
+                background-color: rgba($color: #231F2033, $alpha: 0.20);
+            }
+            .card-content .right-arrow-click {
+                transform: translateX(7px);
+            }
+        }
     }
 
     .card-image {
@@ -176,6 +198,7 @@
     .card-content {
         padding: 30px 130px 55px 55px;
         position: relative;
+        z-index: 1;
 
         h3 {
             font-size: 50px;
@@ -193,6 +216,7 @@
             position: absolute;
             right: 60px;
             bottom: 53px;
+            transition: transform 0.300s ease-in-out;
         }
     }
 }
