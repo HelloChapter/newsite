@@ -175,9 +175,75 @@
             &:after {
                 background-color: rgba($color: #231F2033, $alpha: 0.20);
             }
-            .card-content .right-arrow-click {
-                transform: translateX(7px);
+
+            @media (max-width:1196px) {
+                &:after {
+                    background-color: transparent;
+                }
             }
+
+            .card-content .right-arrow-click {
+
+                .arrow {
+                    width: 74px;
+                    border-color: #231F20;
+                    opacity: 1;
+                    transform: translateX(7px);
+
+                    @media (max-width:1196px) {
+                        width: 67px;
+                        transform: none;
+                    }
+                }
+
+                .head,
+                .head:after {
+                    border-color: #231F20;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .arrow {
+            width: 67px;
+            transition: all 0.3s ease;
+            border: 1px solid #231F20;
+            opacity: 1;
+            position: relative;
+            background: #231F20;
+            display: inline-block;
+            vertical-align: middle;
+            box-sizing: border-box;
+
+            .head,
+            .head:after {
+                border: 1px solid #231F20;
+                border-radius: 1rem;
+                width: 10px;
+                position: absolute;
+                right: -4px;
+                top: 2px;
+                transform: rotate(-45deg);
+                background-color: #231F20;
+            }
+
+            .head:after {
+                content: "";
+                border-color: #231F20;
+                right: -6px;
+                top: -6px;
+                transform: rotate(87deg);
+            }
+        }
+    }
+
+    .right-arrow-click {
+        position: absolute;
+        right: 60px;
+        bottom: 53px;
+
+        svg {
+            width: 67px;
         }
     }
 
@@ -212,12 +278,6 @@
             line-height: 35px;
         }
 
-        .right-arrow-click {
-            position: absolute;
-            right: 60px;
-            bottom: 53px;
-            transition: transform 0.300s ease-in-out;
-        }
     }
 }
 
