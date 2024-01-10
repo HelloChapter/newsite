@@ -26,6 +26,7 @@ img {
             border-radius: 100%;
         }
     }
+
     h6 {
         margin-bottom: 0;
     }
@@ -148,6 +149,7 @@ img {
 
     .middle-content {
         padding-top: 0;
+
         ul,
         ol {
             padding-left: 22px;
@@ -180,12 +182,13 @@ img {
         max-width: 710px;
         border-top: 5px solid $pearl-drop2;
         border-bottom: 5px solid $pearl-drop2;
-        padding: 60px 15px;
+        padding: 60px 0;
     }
 
     .blog-writer {
         display: flex;
         align-items: center;
+        margin-bottom: 0;
 
         .profile-image {
             max-width: 48px;
@@ -198,6 +201,7 @@ img {
                 width: 100%;
             }
         }
+
         h6 {
             margin-bottom: 0;
         }
@@ -480,8 +484,8 @@ img {
     .page-blog {
         .middle-content {
             .container {
-                padding-left:44px;
-                padding-right:44px;
+                padding-left: 44px;
+                padding-right: 44px;
             }
         }
 
@@ -523,8 +527,8 @@ img {
 
         .middle-content {
             .container {
-                padding-left:33px;
-                padding-right:33px;
+                padding-left: 33px;
+                padding-right: 33px;
             }
         }
     }
@@ -583,10 +587,11 @@ img {
                 max-width: calc(100% - 40px);
                 padding: 30px 0;
             }
+
             .section-more-posts {
                 .container {
                     padding-left: 33px;
-                    padding-right: 33px;   
+                    padding-right: 33px;
                 }
             }
         }
