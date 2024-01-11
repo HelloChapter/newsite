@@ -319,9 +319,29 @@ img {
     }
 }
 
-.content-full-image {
+.content-full-image,
+.content-full-image-text {
     padding: 50px 0;
     text-align: center;
+}
+
+.content-full-image-text {
+    img {
+        display: block;
+    }
+
+    h3 {
+        color: #656263;
+        font-size: 17px;
+        line-height: 1;
+        font-weight: 300;
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-family: "Inter";
+        @media (max-width:767px) {
+            font-size: 14px;
+        }
+    }
 }
 
 .header-sticky {
@@ -514,6 +534,7 @@ img {
                 padding-right: 44px;
                 max-width: 100%;
             }
+
             .section-blog-expert-help {
                 .container {
                     max-width: calc(100% - 88px);
@@ -601,6 +622,7 @@ img {
                     padding-right: 33px;
                 }
             }
+
             .section-blog-expert-help {
                 .container {
                     max-width: 350px;

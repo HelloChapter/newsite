@@ -163,7 +163,17 @@
             max-width: 640px;
         }
     }
-
+    @keyframes resetAnimation {
+        0% {
+            transform: translateX(7px);
+            width: 74px;
+        }
+    
+        100% {
+            transform: translateX(0);
+            width: 67px;
+        }
+    }
     .card {
         height: 100%;
         position: relative;
@@ -182,7 +192,7 @@
 
         &:hover {
             &:after {
-                background-color: rgba($color: #231F2033, $alpha: 0.20);
+                background-color: rgba($color: $black33, $alpha: 0.20);
             }
 
             @media (max-width:1196px) {
@@ -195,10 +205,10 @@
 
                 .arrow {
                     width: 74px;
-                    border-color: #231F20;
+                    border-color: $black;
                     opacity: 1;
                     transform: translateX(7px);
-
+                    animation: resetAnimation 0.3s ease-in-out;
                     @media (max-width:1196px) {
                         width: 67px;
                         transform: none;
@@ -207,7 +217,7 @@
 
                 .head,
                 .head:after {
-                    border-color: #231F20;
+                    border-color: $black;
                     opacity: 1;
                 }
             }
@@ -216,29 +226,29 @@
         .arrow {
             width: 67px;
             transition: all 0.3s ease;
-            border: 1px solid #231F20;
+            border: 1px solid $black;
             opacity: 1;
             position: relative;
-            background: #231F20;
+            background: $black;
             display: inline-block;
             vertical-align: middle;
             box-sizing: border-box;
 
             .head,
             .head:after {
-                border: 1px solid #231F20;
+                border: 1px solid $black;
                 border-radius: 1rem;
                 width: 10px;
                 position: absolute;
                 right: -4px;
                 top: 2px;
                 transform: rotate(-45deg);
-                background-color: #231F20;
+                background-color: $black;
             }
 
             .head:after {
                 content: "";
-                border-color: #231F20;
+                border-color: $black;
                 right: -6px;
                 top: -6px;
                 transform: rotate(87deg);
