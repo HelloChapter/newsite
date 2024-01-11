@@ -192,7 +192,7 @@
 
         &:hover {
             &:after {
-                background-color: rgba($color: $black33, $alpha: 0.20);
+                background-color: rgba($color: $black, $alpha: 0.20);
             }
 
             @media (max-width:1196px) {
@@ -209,6 +209,7 @@
                     opacity: 1;
                     transform: translateX(7px);
                     animation: resetAnimation 0.3s ease-in-out;
+                    animation-iteration-count: 1;
                     @media (max-width:1196px) {
                         width: 67px;
                         transform: none;
