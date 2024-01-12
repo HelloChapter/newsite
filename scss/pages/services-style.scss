@@ -209,7 +209,7 @@
                     opacity: 1;
                     transform: translateX(7px);
                     animation: resetAnimation 0.3s ease-in-out;
-                    animation-iteration-count: 1;
+                    // animation-iteration-count: 1;
                     @media (max-width:1196px) {
                         width: 67px;
                         transform: none;
