@@ -159,21 +159,28 @@
         max-width: 100%;
         flex: 0 0 100%;
         margin-bottom: 60px;
+
         .card-content p {
             max-width: 640px;
         }
     }
+
     @keyframes resetAnimation {
         0% {
-            transform: translateX(7px);
+            // transform: translateX(7px);
+            width: 67px;
+        }
+
+        50% {
             width: 74px;
         }
-    
+
         100% {
-            transform: translateX(0);
+            // transform: translateX(0);
             width: 67px;
         }
     }
+
     .card {
         height: 100%;
         position: relative;
@@ -204,12 +211,9 @@
             .card-content .right-arrow-click {
 
                 .arrow {
-                    width: 74px;
                     border-color: $black;
                     opacity: 1;
-                    transform: translateX(7px);
-                    animation: resetAnimation 0.3s ease-in-out;
-                    // animation-iteration-count: 1;
+                    animation: resetAnimation 0.3s;
                     @media (max-width:1196px) {
                         width: 67px;
                         transform: none;
@@ -226,7 +230,7 @@
 
         .arrow {
             width: 67px;
-            transition: all 0.3s ease;
+            // transition: all 0.3s ease;
             border: 1px solid $black;
             opacity: 1;
             position: relative;
@@ -258,17 +262,14 @@
     }
 
     .right-arrow-click {
-        position: absolute;
         right: 60px;
         bottom: 53px;
-
-        svg {
-            width: 67px;
-        }
+        width: 67px;
+        position: absolute;
     }
 
     .card-image {
-       min-height: 429px;
+        min-height: 429px;
 
         &.tablet-image {
             display: none;
@@ -627,7 +628,6 @@
             }
 
             .right-arrow-click {
-                position: absolute;
                 right: 40px;
                 bottom: 40px;
             }
@@ -709,7 +709,6 @@
             }
 
             .right-arrow-click {
-                position: absolute;
                 right: 40px;
                 bottom: 40px;
             }
@@ -1042,8 +1041,6 @@
             }
 
             .right-arrow-click {
-                position: absolute;
-                right: 40px;
                 bottom: auto;
                 top: 115px;
             }
@@ -1167,9 +1164,11 @@
             .col {
                 padding: 0;
             }
+
             .col-full-card {
                 margin-bottom: 0;
             }
+
             .col-card+.col-card {
                 padding-top: 30px;
             }
@@ -1190,6 +1189,7 @@
                 bottom: 20px;
             }
         }
+
         .card-image {
             min-height: 200px;
             padding-bottom: 56.25%;
