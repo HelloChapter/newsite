@@ -265,103 +265,8 @@
                         <div class="section-title">
                             <h2>More posts you may like</h2>
                         </div>
-                        <div class="row">
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/5-tips-for-miami-condo-renovations/" class="stretched-link"></a>
-                                    <div class="card-image bg-image"
-                                        style="background-image:
-                    url('../images/blog-images/5-tips-for-miami-condo-renovations-images/5-tips-for-miami-condo-renovations-image.webp');">
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="blog-writer">
-                                            <div class="profile-image">
-                                                <img src="../images/blog-images/blog-writer-images/Ben-Milgram.webp"
-                                                    alt="profile image" height="24" width="24" />
-                                            </div>
-                                            <h4><span class="name">Ben Milgram</span> <span class="date">Nov 23,
-                                                    2023</span></h4>
-                                        </div>
-                                        <h5>5 Tips For Miami Condo Renovations </h5>
-                                        <div class="intro-text">
-                                            <p>Miami's vibrant condo scene offers endless possibilities for stylish
-                                                living, b...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/5-tips-for-miami-condo-renovations/" class="stretched-link"></a>
-                                    <div class="card-image bg-image"
-                                        style="background-image:
-                    url('../images/blog-images/5-tips-for-miami-condo-renovations-images/5-tips-for-miami-condo-renovations-image.webp');">
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="blog-writer">
-                                            <div class="profile-image">
-                                                <img src="../images/blog-images/blog-writer-images/Ben-Milgram.webp"
-                                                    alt="profile image" height="24" width="24" />
-                                            </div>
-                                            <h4><span class="name">Ben Milgram</span> <span class="date">Nov 23,
-                                                    2023</span></h4>
-                                        </div>
-                                        <h5>5 Tips For Miami Condo Renovations </h5>
-                                        <div class="intro-text">
-                                            <p>Miami's vibrant condo scene offers endless possibilities for stylish
-                                                living, b...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/5-tips-for-miami-condo-renovations/" class="stretched-link"></a>
-                                    <div class="card-image bg-image"
-                                        style="background-image:
-                    url('../images/blog-images/5-tips-for-miami-condo-renovations-images/5-tips-for-miami-condo-renovations-image.webp');">
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="blog-writer">
-                                            <div class="profile-image">
-                                                <img src="../images/blog-images/blog-writer-images/Ben-Milgram.webp"
-                                                    alt="profile image" height="24" width="24" />
-                                            </div>
-                                            <h4><span class="name">Ben Milgram</span> <span class="date">Nov 23,
-                                                    2023</span></h4>
-                                        </div>
-                                        <h5>5 Tips For Miami Condo Renovations </h5>
-                                        <div class="intro-text">
-                                            <p>Miami's vibrant condo scene offers endless possibilities for stylish
-                                                living, b...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/5-tips-for-miami-condo-renovations/" class="stretched-link"></a>
-                                    <div class="card-image bg-image"
-                                        style="background-image:
-                    url('../images/blog-images/5-tips-for-miami-condo-renovations-images/5-tips-for-miami-condo-renovations-image.webp');">
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="blog-writer">
-                                            <div class="profile-image">
-                                                <img src="../images/blog-images/blog-writer-images/Ben-Milgram.webp"
-                                                    alt="profile image" height="24" width="24" />
-                                            </div>
-                                            <h4><span class="name">Ben Milgram</span> <span class="date">Nov 23,
-                                                    2023</span></h4>
-                                        </div>
-                                        <h5>5 Tips For Miami Condo Renovations </h5>
-                                        <div class="intro-text">
-                                            <p>Miami's vibrant condo scene offers endless possibilities for stylish
-                                                living, b...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="blog-listing" class="row">
+                            <!-- Related Blog posts will be dynamically added here -->
                         </div>
                     </div>
                 </section>
@@ -470,6 +375,7 @@
     <!-- Wrapper end -->
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/aos.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/slick.js"></script>
+    <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.matchHeight-min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/custom.js"></script>
     <script>
         jQuery(window).scroll(function () {
@@ -485,6 +391,62 @@
             script.src = 'https://crm.zoho.com/crm/javascript/zcga.js';
             document.head.appendChild(script);
         }, 5000);
+    </script>
+     <script>
+        // Function to shuffle the array randomly
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+        function createBlogPostElement(post) {
+            const postContainer = document.createElement('div');
+            postContainer.className = 'col col-blog';
+            postContainer.innerHTML = `
+            <div class="card aos-init aos-animate" data-aos="fade">
+              <a href=${post.blogUrl} class="stretched-link"></a>
+              <div class="card-image bg-image" style="background-image: url('${post.imageUrl}');"></div>
+              <div class="card-content">
+                <div class="blog-writer">
+                  <div class="profile-image">
+                    <img src="${post.writerImage}" alt="profile image" height="24" width="24" />
+                  </div>
+                  <h4><span class="name">${post.writerName}</span> <span class="date">${post.date}</span></h4>
+                </div>
+                <h5>${post.title}</h5>
+                <div class="intro-text">
+                  <p>${post.introText}</p>
+                </div>
+              </div>
+            </div>
+          `;
+            return postContainer;
+        }
+
+        fetch('../js/blogData.json')
+            .then(response => response.json())
+            .then(data => {
+                shuffleArray(data);
+                const selectedPosts = data.slice(0, 4);
+                const blogListingContainer = document.getElementById('blog-listing');
+                selectedPosts.forEach(post => {
+                    const postElement = createBlogPostElement(post);
+                    blogListingContainer.appendChild(postElement);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching blog data:', error);
+            });
+
+        //matchHeight
+        jQuery(document).ready(function ($) {
+            setTimeout(function () {
+                $('.col-blog .card-content h5').matchHeight({
+                    property: 'min-height'
+                });
+            }, 150);
+        });
     </script>
 </body>
 

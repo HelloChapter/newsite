@@ -1,0 +1,62 @@
+[
+  {
+    "id":0,
+    "blogUrl":"/how-to-maximize-space-in-a-small-kitchen/",
+    "imageUrl": "../images/blog-images/how-to-maximize-space-in-a-small-kitchen-images/how-to-maximize-space-in-a-small-kitchen-card.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/nicole-barel.webp",
+    "writerName": "Nicole Barel",
+    "date": "Dec 21, 2023",
+    "title": "How to maximize space in a small kitchen?",
+    "introText": "In the world of interior design, small kitchens present a unique challenge. H..."
+  },
+  {
+    "id":1,
+    "blogUrl":"/5-tips-for-miami-condo-renovations/",
+    "imageUrl": "../images/blog-images/5-tips-for-miami-condo-renovations-images/5-tips-for-miami-condo-renovations-image-card.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ben-Milgram.webp",
+    "writerName": "Ben Milgram",
+    "date": "Nov 23, 2023",
+    "title": "5 tips for Miami condo renovations",
+    "introText": "Miami's vibrant condo scene offers endless possibilities for stylish living, b..."
+  },
+  {
+    "id":2,
+    "blogUrl":"/how-to-find-a-home-remodeling-contractor-in-nyc/",
+    "imageUrl": "../images/blog-images/how-to-find-a-home-remodeling-contractor-in-nyc-images/how-to-find-a-home-remodeling-contractor-in-nyc-image.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ari-Salehi.webp",
+    "writerName": "Ari Salehi",
+    "date": "Nov 08, 2023",
+    "title": "How to find a home remodeling contractor in NYC?",
+    "introText": "Home renovation can be an exciting endeavor, but finding the right contrac..."
+  },
+  {
+    "id":3,
+    "blogUrl":"/how-long-does-it-take-to-renovate-a-home-in-miami/",
+    "imageUrl": "../images/blog-images/how-long-does-a-renovation-take-in-miami-images/blog-images-111.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ben-Milgram.webp",
+    "writerName": "Ben Milgram",
+    "date": "Aug 16, 2023",
+    "title": "How long does it take to renovate a home in Miami?",
+    "introText": "Miami, with its diverse neighborhoods, architectural heritage, and dynamic life..."
+  },
+  {
+    "id":4,
+    "blogUrl":"/how-long-does-it-take-to-renovate-in-nyc/",
+    "imageUrl": "../images/blog-images/how-long-does-a-renovation-take-in-nyc-images/blog-images-1.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Eli-Moyal.webp",
+    "writerName": "Eli Moyal",
+    "date": "Aug 08, 2023",
+    "title": "How long does it take to renovate in NYC?",
+    "introText": "Renovating an apartment or townhouse in New York City is a thrilling journey,..."
+  },
+  {
+    "id":5,
+    "blogUrl":"/renotech-bringing-technology-into-renovation/",
+    "imageUrl": "../images/blog-images/renotech-image.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ira-Kugelman.webp",
+    "writerName": "Ira Kugelman",
+    "date": "Dec 21, 2023",
+    "title": "Renotech: Bringing technology into renovation",
+    "introText": "Renotech is probably a word you haven't heard before, so in this blog w..."
+  }
+]
