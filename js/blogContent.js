@@ -37,7 +37,6 @@ jQuery(document).ready(function ($) {
             const pathname = window.location.pathname
 
             const filteredData = data.filter(post => post.blogUrl !== pathname);
-            debugger;
             shuffleArray(filteredData);
             const selectedPosts = filteredData.slice(0, 4);
             const blogListingContainer = document.getElementById('blog-listing');
