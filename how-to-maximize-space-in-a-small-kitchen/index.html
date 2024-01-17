@@ -389,6 +389,7 @@
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/slick.js"></script>
     <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.matchHeight-min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/custom.js"></script>
+    <script src="../js/blogContent.js"></script>
     <script>
         jQuery(window).scroll(function () {
             var theta = $(window).scrollTop() / 10 % Math.PI;
@@ -405,52 +406,7 @@
         }, 5000);
     </script>
     <script>
-        // Function to shuffle the array randomly
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-        }
-        function createBlogPostElement(post) {
-            const postContainer = document.createElement('div');
-            postContainer.className = 'col col-blog';
-            postContainer.innerHTML = `
-            <div class="card aos-init aos-animate" data-aos="fade">
-              <a href=${post.blogUrl} class="stretched-link"></a>
-              <div class="card-image bg-image" style="background-image: url('${post.imageUrl}');"></div>
-              <div class="card-content">
-                <div class="blog-writer">
-                  <div class="profile-image">
-                    <img src="${post.writerImage}" alt="profile image" height="24" width="24" />
-                  </div>
-                  <h4><span class="name">${post.writerName}</span> <span class="date">${post.date}</span></h4>
-                </div>
-                <h5>${post.title}</h5>
-                <div class="intro-text">
-                  <p>${post.introText}</p>
-                </div>
-              </div>
-            </div>
-          `;
-            return postContainer;
-        }
-        const currentPostId = 0;
-        fetch('../js/blogData.json')
-            .then(response => response.json())
-            .then(data => {
-                const filteredData = data.filter(post => post.id !== currentPostId);
-                shuffleArray(filteredData);
-                const selectedPosts = filteredData.slice(0, 4);
-                const blogListingContainer = document.getElementById('blog-listing');
-                selectedPosts.forEach(post => {
-                    const postElement = createBlogPostElement(post);
-                    blogListingContainer.appendChild(postElement);
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching blog data:', error);
-            });
+       
 
         //matchHeight
         jQuery(document).ready(function ($) {

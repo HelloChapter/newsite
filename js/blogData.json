@@ -58,5 +58,155 @@
     "date": "Dec 21, 2023",
     "title": "Renotech: Bringing technology into renovation",
     "introText": "Renotech is probably a word you haven't heard before, so in this blog w..."
+  },
+  {
+    "id":6,
+    "blogUrl":"/nyc-condo-renovations-tips/",
+    "imageUrl": "../images/blog-images/nyc-condo-renovations-tips.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Sebastian-Aguas.webp",
+    "writerName": "Sebastian Aguas",
+    "date": "Jul 20, 2023",
+    "title": "NYC condo renovations tips",
+    "introText": "Renovating a condo in New York City can be a daunting task, especially if yo..."
+  },
+  {
+    "id":7,
+    "blogUrl":"/5-ways-chapter-brings-innovation-to-home-renovation/",
+    "imageUrl": "../images/blog-images/5-ways-chapter-brings-innovation-to-home-renovation.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ira-Kugelman.webp",
+    "writerName": "Ira Kugelman",
+    "date": "Jul 10, 2023",
+    "title": "5 ways Chapter brings innovation to home renovation",
+    "introText": "Some industries have a reputation for being slow to change and resistant to i..."
+  },
+  {
+    "id":8,
+    "blogUrl":"/miami-condo-renovations/",
+    "imageUrl": "../images/blog-images/Miami-1.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ben-Milgram.webp",
+    "writerName": "Ben Milgram",
+    "date": "Jun 02, 2023",
+    "title": "Miami condo renovations",
+    "introText": "Taking on a condo renovation in Miami can be both exciting and challenging..."
+  },
+  {
+    "id":9,
+    "blogUrl":"/myth-vs-fact-for-renovations/",
+    "imageUrl": "../images/blog-images/pexels-blue-bird-7218525small.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Sebastian-Aguas.webp",
+    "writerName": "Sebastian Aguas",
+    "date": "Apr 17, 2023",
+    "title": "Myth vs. fact for renovations",
+    "introText": "Before you start on your home renovations, there are some things you..."
+  },
+  {
+    "id":10,
+    "blogUrl":"/5-things-to-consider-when-renovating-a-brownstone-in-brooklyn/",
+    "imageUrl": "../images/blog-images/rachel-martin-4yCXNMLP9g8-unsplash1.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Eli-Moyal.webp",
+    "writerName": "Eli Moyal",
+    "date": "Mar 21, 2023",
+    "title": "5 things to consider when renovating a brownstone in Brooklyn",
+    "introText": "Brownstones are some of the most iconic houses with a lot of history Fro..."
+  },
+  {
+    "id":11,
+    "blogUrl":"/streamlining-material-selection-how-our-client-portal-makes-renovations-easier/",
+    "imageUrl": "../images/blog-images/image-64-at-2x.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ira-Kugelman.webp",
+    "writerName": "Ira Kugelman",
+    "date": "Mar 03, 2023",
+    "title": "Streamlining material selection: How our client portal makes renovations easier",
+    "introText": "At Chapter, we understand that selecting the right materials for your h..."
+  },
+  {
+    "id":12,
+    "blogUrl":"/how-much-does-a-home-renovation-in-Miami-cost-in-2023/",
+    "imageUrl": "../images/blog-images/dji-0201-at-new2023x.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ben-Milgram.webp",
+    "writerName": "Ben Milgram",
+    "date": "Feb 16, 2023",
+    "title": "How much does a home renovation in Miami cost in 2023?",
+    "introText": "Home renovation is an investment in your property, and can significantly in..."
+  },
+  {
+    "id":13,
+    "blogUrl":"/home-renovation-in-facts-Stats-to-consider-before-renovating/",
+    "imageUrl": "./../images/blog-images/nh-20221118-0270-by-nadav-havakook-1920x1280.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ari-Salehi.webp",
+    "writerName": "Ari Salehi",
+    "date": "Feb 13, 2023",
+    "title": "Home renovation in 2023: 10 facts & stats to consider before renovating",
+    "introText": "Home renovation is an exciting project, but it requires a lot of planning to ensu..."
+  },
+  {
+    "id":14,
+    "blogUrl":"/10-tips-to-help-you-get-ready-for-an-apartment-renovation/",
+    "imageUrl": "./../images/blog-images/pexels-jeshootscom-834892-scaled.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Sebastian-Aguas.webp",
+    "writerName": "Sebastian Aguas",
+    "date": "Nov 24, 2022",
+    "title": "10 tips to help you get ready for an apartment renovation",
+    "introText": "You're getting ready for that new kitchen countertop, new tiles or perha..."
+  },
+  {
+    "id":15,
+    "blogUrl":"/dos-and-donts-when-renovating-to-increase-property-value/",
+    "imageUrl": "./../images/blog-images/nh-20220210-0118-by-nadav-havakook.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Eli-Moyal.webp",
+    "writerName": "Eli Moyal",
+    "date": "Oct 28, 2022",
+    "title": "Do’s and don’ts when renovating to increase property value",
+    "introText": "Buying a home for many is synonymous with stability, protection and sometim..."
+  },
+  {
+    "id":16,
+    "blogUrl":"/top-5-nyc-neighborhoods-to-buy-an-apartment-in-now/",
+    "imageUrl": "./../images/blog-images/pexels-roberto-vivancos-2190283-scaled.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Eli-Moyal.webp",
+    "writerName": "Eli Moyal",
+    "date": "Oct 17, 2022",
+    "title": "Top 5 NYC neighborhoods to buy an apartment in now",
+    "introText": "After calling NYC home for a few years, many professionals are looking to stre..."
+  },
+  {
+    "id":17,
+    "blogUrl":"/tips-and-design-ideas-for-your-bathroom-renovation/",
+    "imageUrl": "./../images/blog-images/nh-20220711-0494-by-nadav-havakook-2048x1365.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/nicole-barel.webp",
+    "writerName": "Nicole Barel",
+    "date": "Aug 16, 2022",
+    "title": "Tips and design ideas for your bathroom renovation",
+    "introText": "Renovating your bathroom can significantly change how your home lo..."
+  },
+  {
+    "id":18,
+    "blogUrl":"/why-is-communication-from-the-client-important-during-a-renovation/",
+    "imageUrl": "./../images/blog-images/microsoftteams-image-24-scaled.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Eli-Moyal.webp",
+    "writerName": "Eli Moyal",
+    "date": "Jul 21, 2022",
+    "title": "Why is communication from the client important during a renovation?",
+    "introText": "Renovating your apartment can help increase the market value, improve a p..."
+  },
+  {
+    "id":19,
+    "blogUrl":"/top-5-things-to-know-for-renovating-an-apartment-in-nyc/",
+    "imageUrl": "./../images/blog-images/image.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Sebastian-Aguas.webp",
+    "writerName": "Sebastian Aguas",
+    "date": "Apr 29, 2022",
+    "title": "Top 5 things to know for renovating an apartment in NYC",
+    "introText": "Life is a series of transitions and evolutions. Sometimes, work from hom..."
+  },
+  {
+    "id":20,
+    "blogUrl":"/how-much-does-an-apartment-renovation-cost-in-nyc/",
+    "imageUrl": "./../images/blog-images/casestudy2.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Eli-Moyal.webp",
+    "writerName": "Eli Moyal",
+    "date": "Mar 25, 2022",
+    "title": "How much does an apartment renovation cost in NYC?",
+    "introText": "Miami's vibrant condo scene offers endless possibilities for stylish living, b..."
   }
 ]
