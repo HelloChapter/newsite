@@ -435,12 +435,13 @@
           `;
             return postContainer;
         }
-
+        const currentPostId = 0;
         fetch('../js/blogData.json')
             .then(response => response.json())
             .then(data => {
-                shuffleArray(data);
-                const selectedPosts = data.slice(0, 4);
+                const filteredData = data.filter(post => post.id !== currentPostId);
+                shuffleArray(filteredData);
+                const selectedPosts = filteredData.slice(0, 4);
                 const blogListingContainer = document.getElementById('blog-listing');
                 selectedPosts.forEach(post => {
                     const postElement = createBlogPostElement(post);
