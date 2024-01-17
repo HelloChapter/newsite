@@ -48,4 +48,9 @@ jQuery(document).ready(function ($) {
         .catch(error => {
             console.error('Error fetching blog data:', error);
         });
+        setTimeout(function () {
+          $('.col-blog .card-content h5').matchHeight({
+              property: 'min-height'
+          });
+      }, 150);
 });
