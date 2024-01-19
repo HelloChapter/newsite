@@ -1120,7 +1120,7 @@
                                         <button type="submit" class="btn-black g-recaptcha"
                                             data-sitekey="6LfHyVUpAAAAAOEl2IIAroEc38DO_o7x5iNwvJaz"
                                             data-callback='onSubmit' data-action='submit'>
-                                            submit
+                                            Submit
                                         </button>
                                     </div>
                                     <input type="hidden" id="zc_gad" name="zc_gad" value="" />
@@ -1266,11 +1266,11 @@
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script defer src="https://www.youtube.com/iframe_api"></script>
     <script>
+        function onSubmit(token) {
+            document.getElementById("contact-form").submit();
+        }
         document.addEventListener('DOMContentLoaded', function () {
             $(document).ready(function () {
-                function onSubmit(token) {
-                    document.getElementById("contact-form").submit();
-                }
                 var animationPath = './js/scroll-animation.json';
                 var container = document.getElementById('scrollButton');
                 // Load the Lottie animation
