@@ -105,7 +105,11 @@ window.addEventListener("pageshow", (event) => {
   }
   $('form').get(0).reset();
 });
-function handleContactSubmit(e) {
+function handleContactSubmit(e, token) {
+  postDataObject.recaptchaToken = token;
+  submitForm();
+}
+function submitForm(e) {
   // Read cookies parameter 
   const cookieValue_fbp = document.cookie
     .split("; ")
@@ -156,14 +160,6 @@ function handleContactSubmit(e) {
       localStorage.setItem('email', emailElement.value);
       emailElement.setAttribute("data-email", emailElement.value);
     }
-    //window.dataLayer = window.dataLayer || [];
-    //function gtag() { dataLayer.push(arguments); }
-    //gtag('js', new Date());
-    //gtag('config', 'UA-225495044-1');
-    // gtag('set', 'user_data', {
-    //     "email": localStorage.getItem('email') != undefined ? localStorage.getItem('email') : null,
-    // });
-    //gtag('event', 'conversion', { 'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo' });
     $('#loader').show();
     inputs.each(function () {
       $(this).attr("disabled", "disabled");
@@ -179,6 +175,19 @@ function handleContactSubmit(e) {
     // get url 
     postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
     setTimeout(function () {
+      $.ajax({
+        url: "https://api.hellochapter.com/api/contact/add",
+        type: "POST",
+        data: postDataObject,
+        success: function (response) {
+            // Handle the server response
+            console.log(response);
+            debugger;
+        },
+        error: function (error) {
+            console.error(error);
+        }
+    });
       makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
       //makeAjaxCall("abcd", "POST", !0, postDataObject, redirectToThankYou);
     }, 500);

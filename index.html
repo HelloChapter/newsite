@@ -1119,7 +1119,7 @@
                                     <div class="form-group text-center btn-submit-wrap">
                                         <button type="submit" class="btn-black g-recaptcha"
                                             data-sitekey="6LfHyVUpAAAAAOEl2IIAroEc38DO_o7x5iNwvJaz"
-                                            data-callback='onSubmit' data-action='submit'>
+                                            data-callback='handleContactSubmit' data-action='submit'>
                                             Submit
                                         </button>
                                     </div>
@@ -1260,15 +1260,12 @@
     <script defer
         src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.nice-select.min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/custom.js"></script>
-    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/contact-home.js"></script>
+    <script defer src="./js/contact-home.js"></script>
     <script defer src="./js/home-page.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/home-slider.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script defer src="https://www.youtube.com/iframe_api"></script>
     <script>
-        function onSubmit(token) {
-            document.getElementById("contact-form").submit();
-        }
         document.addEventListener('DOMContentLoaded', function () {
             $(document).ready(function () {
                 var animationPath = './js/scroll-animation.json';

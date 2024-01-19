@@ -106,7 +106,7 @@ function redirectToThankYou() {
     }
     // var url = window.location.href;
     window.location.href = "/thank-you-message-home/?submit=true";
-    var url ="/thank-you-message-home/?submit=true";
+    var url = "/thank-you-message-home/?submit=true";
     if (!url.includes("submit=true")) {
         if (url.indexOf("?") !== -1) {
             url = url + "&submit=true";
@@ -125,7 +125,11 @@ window.addEventListener("pageshow", (event) => {
     }
     $('form').get(0).reset();
 });
-function handleContactSubmit(e) {
+function handleContactSubmit(e, token) {
+    postDataObject.recaptchaToken = token;
+    submitForm();
+}
+function submitForm() {
     // Read cookies parameter 
     const cookieValue_fbp = document.cookie
         .split("; ")
