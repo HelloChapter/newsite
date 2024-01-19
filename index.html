@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="https://hellochapter.com/favicon.ico" />
@@ -38,7 +39,7 @@
         rel="stylesheet" async /> -->
     <link rel="stylesheet"
         href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/nice-select.css?rsct=text/css" async />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
     <link rel="preconnect" href="https://embedsocial.com/" />
     <link defer rel="stylesheet" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/index.css" />
     <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"
@@ -51,7 +52,7 @@
     </noscript>
     <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
     <!-- Google tag (gtag.js) -->
-     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script> --> 
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script> -->
     <script>
     </script>
     <noscript><img height="1" width="1" style="display:none"
@@ -180,7 +181,7 @@
                         (window, document, "script", "//bat.bing.com/bat.js", "uetq");
                     // <!-- Microsoft Ads Conversion Tracking -->
                     window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
-                //<!-- Crisp chat end -->
+                    //<!-- Crisp chat end -->
                 }, 5000);
             });
             // Ready function end
@@ -188,6 +189,7 @@
     </script>
     <!-- Crisp chat end -->
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRJKFJK" height="0" width="0"
@@ -1115,7 +1117,11 @@
                                         </div>
                                     </div>
                                     <div class="form-group text-center btn-submit-wrap">
-                                        <button type="submit" class="btn-submit btn-black">Submit</button>
+                                        <button type="submit" class="btn-black g-recaptcha"
+                                            data-sitekey="6LfHyVUpAAAAAOEl2IIAroEc38DO_o7x5iNwvJaz"
+                                            data-callback='onSubmit' data-action='submit'>
+                                            submit
+                                        </button>
                                     </div>
                                     <input type="hidden" id="zc_gad" name="zc_gad" value="" />
                                 </form>
@@ -1188,9 +1194,9 @@
                                     <a href="https://www.facebook.com/hellochapter" title="Facebook "
                                         target="_blank">Facebook</a>
                                 </li>
- <li>
-                                    <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768" title="Houzz "
-                                        target="_blank">Houzz</a>
+                                <li>
+                                    <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
+                                        title="Houzz " target="_blank">Houzz</a>
                                 </li>
                                 <li>
                                     <a href="https://www.pinterest.com/chapterrenovations/" title="Twitter
@@ -1257,12 +1263,14 @@
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/contact-home.js"></script>
     <script defer src="./js/home-page.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/home-slider.js"></script>
-    <script>
-    </script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script defer src="https://www.youtube.com/iframe_api"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             $(document).ready(function () {
+                function onSubmit(token) {
+                    document.getElementById("contact-form").submit();
+                }
                 var animationPath = './js/scroll-animation.json';
                 var container = document.getElementById('scrollButton');
                 // Load the Lottie animation
@@ -1469,4 +1477,5 @@
         }, 5000);
     </script>
 </body>
+
 </html>
