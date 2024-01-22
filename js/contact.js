@@ -175,19 +175,6 @@ function submitForm(e) {
     // get url 
     postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
     setTimeout(function () {
-      $.ajax({
-        url: "https://api.hellochapter.com/api/contact/add",
-        type: "POST",
-        data: postDataObject,
-        success: function (response) {
-            // Handle the server response
-            console.log(response);
-            debugger;
-        },
-        error: function (error) {
-            console.error(error);
-        }
-    });
       makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
       //makeAjaxCall("abcd", "POST", !0, postDataObject, redirectToThankYou);
     }, 500);
