@@ -335,6 +335,7 @@ img {
         margin-top: 10px;
         margin-bottom: 0;
         font-family: "Inter";
+
         @media (max-width:767px) {
             font-size: 14px;
         }
@@ -538,10 +539,17 @@ img {
                 }
             }
         }
+
         .content-full-image-text {
             img {
                 width: 100%;
             }
+        }
+
+        .section-blog-heading .container {
+            max-width: calc(100% - 88px);
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }
