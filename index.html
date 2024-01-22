@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="https://hellochapter.com/favicon.ico" />
@@ -186,7 +187,7 @@
                         (window, document, "script", "//bat.bing.com/bat.js", "uetq");
                     // <!-- Microsoft Ads Conversion Tracking -->
                     window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
-                //<!-- Crisp chat end -->
+                    //<!-- Crisp chat end -->
                 }, 5000);
                 // google tagmanager end
             });
@@ -195,6 +196,7 @@
     </script>
     <!-- Crisp chat end -->
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRJKFJK" height="0" width="0"
@@ -269,7 +271,7 @@
                             <div class="video-box-wrap">
                                 <div class="video-box">
                                     <video muted playsinline controlsList="nodownload nofullscreen" loop="true"
-                                        controls="" id="video-player" class="video-js" autobuffer="true" muted
+                                        controls="false" id="video-player" class="video-js" autobuffer="true" muted
                                         loading="lazy" preload="auto"
                                         data-setup='{ "controls": false, "autoplay": false, "preload": "auto", "loop": "true" }'>
                                         <source
@@ -1282,6 +1284,9 @@
                 // var player = videojs('video-player');
                 var player = document.getElementById("video-player")
                 player.pause();
+                if (player) {
+                   player.controls = false;
+                }
                 setTimeout(function () {
                     player.play();
                 }, 1000);
@@ -1472,4 +1477,5 @@
         }, 5000);
     </script>
 </body>
+
 </html>

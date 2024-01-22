@@ -50,7 +50,7 @@ $(document).ready(function () {
         story_animation();
     });
     // Js for intro section video
-    var video = document.getElementById("video-player_html5_api");
+    var video = document.getElementById("video-player");
     var playButton = document.getElementById("btn-play");
     $(playButton).on("click", function () {
         if (video.paused || video.ended) {
