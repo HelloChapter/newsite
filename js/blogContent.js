@@ -52,5 +52,5 @@ jQuery(document).ready(function ($) {
           $('.col-blog .card-content h5').matchHeight({
               property: 'min-height'
           });
-      }, 150);
+      }, 200);
 });
