@@ -264,7 +264,7 @@
                             <div class="video-box-wrap">
                                 <div class="video-box">
                                     <video muted playsinline controlsList="nodownload nofullscreen" loop="true"
-                                        controls="" id="video-player" class="video-js" autobuffer="true" muted
+                                        controls="false" id="video-player" class="video-js" autobuffer="true" muted
                                         loading="lazy" preload="auto"
                                         data-setup='{ "controls": false, "autoplay": false, "preload": "auto", "loop": "true" }'>
                                         <source
@@ -656,7 +656,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="desktop-hide">
+                                <div class="desktop-hide col-12">
                                     <div class="heading-content-wrap">
                                         <h3>Get inspired</h3>
                                         <div class="heading-content">
@@ -701,7 +701,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="desktop-hide">
+                                <div class="desktop-hide col-12">
                                     <div class="heading-content-wrap">
                                         <h3>Get inspired</h3>
                                         <div class="heading-content">
@@ -747,7 +747,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="desktop-hide">
+                                <div class="desktop-hide col-12">
                                     <div class="heading-content-wrap">
                                         <h3>Get inspired</h3>
                                         <div class="heading-content">
@@ -793,7 +793,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="desktop-hide">
+                                <div class="desktop-hide col-12">
                                     <div class="heading-content-wrap">
                                         <h3>Get inspired</h3>
                                         <div class="heading-content">
@@ -1284,6 +1284,9 @@
                 // var player = videojs('video-player');
                 var player = document.getElementById("video-player")
                 player.pause();
+                if (player) {
+                   player.controls = false;
+                }
                 setTimeout(function () {
                     player.play();
                 }, 1000);

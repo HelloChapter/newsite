@@ -593,8 +593,9 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img src="./../images/icons/location2.svg" />New
-                                            York
+                                        <h6 class="location-title"> <img
+                                                src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/location2.svg"
+                                                alt="icon" height="200" width="200" />New York
                                         </h6>
                                         <h2>Broadway Duplex</h2>
                                         <div class="content-p">
@@ -622,8 +623,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col col-img bg-image" style="background-image:
-                                  url('./../images/home/section-image-1.webp');">
+                                <div class="col col-img bg-image lazy"
+                                    data-src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/home-images/section-image-1.webp">
                                 </div>
                             </div>
                         </div>
@@ -638,8 +639,9 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img src="./../images/icons/location2.svg" />Miami
-                                        </h6>
+                                        <h6 class="location-title"> <img
+                                                src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/location2.svg"
+                                                alt="icon" height="200" width="200" />Miami</h6>
                                         <h2>Miami Shores</h2>
                                         <div class="content-p">
                                             <p>Elegance meets tropical…</p>
@@ -666,8 +668,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col col-img bg-image" style="background-image:
-                                  url('./../images/projects/miami-img/Image.webp');">
+                                <div class="col col-img bg-image lazy"
+                                    data-src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/home-images/Image.webp">
                                 </div>
                             </div>
                         </div>
@@ -682,8 +684,9 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img src="./../images/icons/location2.svg" />New
-                                            York
+                                        <h6 class="location-title"> <img
+                                                src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/location2.svg"
+                                                alt="icon" height="200" width="200" />New York
                                         </h6>
                                         <h2>Chelsea Apartment</h2>
                                         <div class="content-p">
@@ -711,8 +714,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col col-img bg-image" style="background-image:
-                                  url('./../images/home/section-image-2.webp');">
+                                <div class="col col-img bg-image lazy"
+                                    data-src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/home-images/section-image-2.webp">
                                 </div>
                             </div>
                         </div>
@@ -727,8 +730,9 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img src="./../images/icons/location2.svg" />New
-                                            York
+                                        <h6 class="location-title"> <img
+                                                src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/location2.svg"
+                                                alt="icon" height="200" width="200" />New York
                                         </h6>
                                         <h2>UES Townhouse</h2>
                                         <div class="content-p">
@@ -756,8 +760,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col col-img bg-image" style="background-image:
-                                  url('./../images/home/section-image-3.webp');">
+                                <div class="col col-img bg-image lazy"
+                                    data-src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/home-images/section-image-3.webp">
                                 </div>
                             </div>
                         </div>
@@ -1175,6 +1179,12 @@
     </script>
     <script defer src="https://www.youtube.com/iframe_api"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).ready(function () {
+                $('.lazy').Lazy();
+                // lazy load images
+            });
+        });
         $(document).ready(function () {
             var animationPath = './../js/scroll-animation.json';
             var container = document.getElementById('scrollButton');
