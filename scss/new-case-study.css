@@ -1043,13 +1043,13 @@ header .col-get-started a:hover {
             flex: 0 0 150px;
   }
   header nav ul li {
-    padding: 0 15px;
+    padding: 0 12px;
   }
   header .col-get-started {
-    max-width: 140px;
+    max-width: 160px;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 140px;
-            flex: 0 0 140px;
+        -ms-flex: 0 0 160px;
+            flex: 0 0 160px;
   }
 }
 @media (max-width: 1023px) {
