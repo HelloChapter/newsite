@@ -106,7 +106,7 @@ window.addEventListener("pageshow", (event) => {
   $('form').get(0).reset();
 });
 function handleContactSubmit(e, token) {
-  postDataObject.recaptchaToken = token;
+  //postDataObject.recaptchaToken = token;
   submitForm();
 }
 function submitForm(e) {
