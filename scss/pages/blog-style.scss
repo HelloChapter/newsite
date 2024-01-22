@@ -538,6 +538,11 @@ img {
                 }
             }
         }
+        .content-full-image-text {
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 
