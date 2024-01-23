@@ -215,7 +215,7 @@ function submitForm() {
         // get url 
         postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
         setTimeout(function () {
-            makeAjaxCall("ttps://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+            makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
             //makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
         }, 500);
     }
