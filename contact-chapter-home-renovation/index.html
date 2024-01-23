@@ -46,13 +46,31 @@ area." />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../scss/pages/contact-style.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <!-- Meta Pixel Code -->
-   
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            var cacheControl = 'max-age=8600000';
+            t.src = v + '?cache_control=' + cacheControl;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '432821205070173');
+        fbq('track', 'PageView');
+    </script>
     <!-- Google tag (gtag.js) -->
 
-   
+
     <!-- End Meta Pixel Code -->
-   
+
     <!-- Microsoft Ads Conversion Tracking -->
     <!-- Google Tag Manager -->
 
@@ -131,9 +149,9 @@ area." />
                                     <h1>What chapter are you in?</h1>
                                     <h2>Contact us</h2>
                                 </div>
-                            <div id="loader"></div>
-                                <form onsubmit="handleContactSubmit();
-                                        return false;" id="contact-form">
+                                <div id="loader"></div>
+                                <form onsubmit="submitForm();
+                                return false;" id="contact-form">
                                     <div class="form-group row">
                                         <div class="col col-input">
                                             <div class="input-wrap">
@@ -151,8 +169,8 @@ area." />
                                     <div class="form-group row">
                                         <div class="col col-input">
                                             <div class="input-wrap">
-                                                <input type="text" id="contact-email-field-id" data-email="" class="form-control" placeholder="Email*"
-                                                    name="email" />
+                                                <input type="text" id="contact-email-field-id" data-email=""
+                                                    class="form-control" placeholder="Email*" name="email" />
                                             </div>
                                         </div>
                                     </div>
@@ -292,11 +310,16 @@ area." />
                                         <div class="input-wrap">
                                             <textarea class="form-control"
                                                 placeholder="Tell us more about your project*" rows="5" minlength="5"
-                                                 name="projectDescription"></textarea>
+                                                name="projectDescription"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group link-text">
-                                        <button type="submit" class="btn-submit">submit</button>
+                                        <!-- <button type="submit" class="btn-submit">submit</button> -->
+                                        <button type="submit" class="btn-submit"> Submit </button>
+                                        <div class="g-recaptcha" data-sitekey="6LfpdlkpAAAAANNE9akXyOjuHPl86KIiwGaafKdj"
+                                            data-callback="reCaptchaChallenge"></div>
+                                        <label id="recaptcha-error" class="error-message recaptcha-error">Please
+                                            complete the reCAPTCHA verification.</label>
                                     </div>
                                 </form>
                             </div>

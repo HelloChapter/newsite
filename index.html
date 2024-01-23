@@ -38,8 +38,26 @@
     <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/nice-select.css" />
     <link rel="stylesheet" href="css/pages/index.css" />
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
     <!-- Meta Pixel Code -->
-   
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            var cacheControl = 'max-age=8600000';
+            t.src = v + '?cache_control=' + cacheControl;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '432821205070173');
+        fbq('track', 'PageView');
+    </script>
     <!-- Google tag (gtag.js) -->
 
     
@@ -828,7 +846,7 @@
                             </div>
                             <div class="form-fields-wrap">
                                 <div id="loader"></div>
-                                <form onsubmit="handleContactSubmit();  return false;" id="contact-form">
+                                <form onsubmit="submitForm();  return false;" id="contact-form">
                                     <div class="form-group row">
                                         <div class="col col-input">
                                             <div class="input-wrap">
@@ -971,7 +989,13 @@
                                         </div>
                                     </div>
                                     <div class="form-group text-center btn-submit-wrap">
-                                        <button type="submit" class="btn-submit btn-black">Submit</button>
+                                        <button type="submit" class="btn-black">
+                                            Submit
+                                        </button>
+                                        <div class="g-recaptcha" data-sitekey="6LfpdlkpAAAAANNE9akXyOjuHPl86KIiwGaafKdj"
+                                            data-callback="reCaptchaChallenge"></div>
+                                        <label id="recaptcha-error" class="error-message recaptcha-error">Please
+                                            complete the reCAPTCHA verification.</label>
                                     </div>
                                 </form>
                             </div>
