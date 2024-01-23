@@ -33,9 +33,10 @@
     <meta property="twitter:image" content="https://hellochapter.com/images/contact-img/contact-image1.jpg">
     <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload"
+    <!-- <link rel="preload"
         href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/contact-style.css?rsct=text/css"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
+        as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+        <link rel="stylesheet" href="../scss/pages/contact-style.css">
     <noscript>
         <link rel="stylesheet"
             href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css">
@@ -43,25 +44,10 @@
             href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/contact-style.css?rsct=text/css">
     </noscript>
     <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=6LfHyVUpAAAAAOEl2IIAroEc38DO_o7x5iNwvJaz"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Meta Pixel Code -->
     <script>
-        // setTimeout(() => {
-        //     !function (f, b, e, v, n, t, s) {
-        //         if (f.fbq) return; n = f.fbq = function () {
-        //             n.callMethod ?
-        //                 n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        //         };
-        //         if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-        //         n.queue = []; t = b.createElement(e); t.async = !0;
-        //         t.src = v; s = b.getElementsByTagName(e)[0];
-        //         s.parentNode.insertBefore(t, s)
-        //     }(window, document, 'script',
-        //         'https://connect.facebook.net/en_US/fbevents.js');
-        //     fbq('init', '432821205070173');
-        //     fbq('track', 'PageView');
-        // }, 0);
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
@@ -79,12 +65,6 @@
         fbq('track', 'PageView');
     </script>
     <script>
-        // setTimeout(function () {
-        //     var script = document.createElement('script');
-        //     script.async = true;
-        //     script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-225495044-1';
-        //     document.head.appendChild(script);
-        // }, 5000);
     </script>
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script> -->
     <script>
@@ -238,7 +218,7 @@
                                     <h2>Contact us</h2>
                                 </div>
                                 <div id="loader"></div>
-                                <form onsubmit="handleContactSubmit();
+                                <form onsubmit="submitForm();
                                         return false;" id="contact-form">
                                     <div class="form-group row">
                                         <div class="col col-input">
@@ -403,13 +383,9 @@
                                     </div>
                                     <div class="form-group link-text">
                                         <!-- <button type="submit" class="btn-submit">submit</button> -->
-                                        <button type="button" class="btn-submit g-recaptcha"
-                                            data-sitekey="6LfHyVUpAAAAAOEl2IIAroEc38DO_o7x5iNwvJaz"
-                                            data-action='submit'
-                                            data-callback="handleContactSubmit"
-                                            >
-                                            Submit
-                                        </button>
+                                        <button type="submit" class="btn-submit" > Submit </button>
+                                        <div class="g-recaptcha" data-sitekey="6LfpdlkpAAAAANNE9akXyOjuHPl86KIiwGaafKdj" data-callback="reCaptchaChallenge"></div>
+                                        <label id="recaptcha-error" class="error-message recaptcha-error">Please complete the reCAPTCHA verification.</label>
                                     </div>
                                     <input type="hidden" id="zc_gad" name="zc_gad" value="" />
                                 </form>

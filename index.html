@@ -41,7 +41,8 @@
         href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/nice-select.css?rsct=text/css" async />
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
     <link rel="preconnect" href="https://embedsocial.com/" />
-    <link defer rel="stylesheet" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/index.css" />
+    <!-- <link defer rel="stylesheet" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/index.css" /> -->
+    <link rel="stylesheet" href="./scss/pages/index.css" />
     <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"
         as="script" />
     <noscript>
@@ -974,7 +975,7 @@
                             </div>
                             <div class="form-fields-wrap">
                                 <div id="loader"></div>
-                                <form onsubmit="handleContactSubmit();  return false;" id="contact-form">
+                                <form onsubmit="submitForm();  return false;" id="contact-form">
                                     <div class="form-group row">
                                         <div class="col col-input">
                                             <div class="input-wrap">
@@ -1117,11 +1118,13 @@
                                         </div>
                                     </div>
                                     <div class="form-group text-center btn-submit-wrap">
-                                        <button type="submit" class="btn-black g-recaptcha"
-                                            data-sitekey="6LfHyVUpAAAAAOEl2IIAroEc38DO_o7x5iNwvJaz"
-                                            data-callback='handleContactSubmit' data-action='submit'>
+                                        <button type="submit" class="btn-black">
                                             Submit
                                         </button>
+                                        <div class="g-recaptcha" data-sitekey="6LfpdlkpAAAAANNE9akXyOjuHPl86KIiwGaafKdj"
+                                            data-callback="reCaptchaChallenge"></div>
+                                        <label id="recaptcha-error" class="error-message recaptcha-error">Please
+                                            complete the reCAPTCHA verification.</label>
                                     </div>
                                     <input type="hidden" id="zc_gad" name="zc_gad" value="" />
                                 </form>
@@ -1285,7 +1288,7 @@
                 var player = document.getElementById("video-player")
                 player.pause();
                 if (player) {
-                   player.controls = false;
+                    player.controls = false;
                 }
                 setTimeout(function () {
                     player.play();

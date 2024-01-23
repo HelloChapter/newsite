@@ -12,6 +12,7 @@ var postDataObject = {
   "fbc": "",
   "fbp": "",
   "originalUrl": "",
+  "recaptchaToken": ""
 }
 // Email Validation
 function isEmail(email) {
@@ -105,10 +106,16 @@ window.addEventListener("pageshow", (event) => {
   }
   $('form').get(0).reset();
 });
-function handleContactSubmit(e, token) {
-  postDataObject.recaptchaToken = token;
-  submitForm();
+
+// reCaptcha callback function
+function reCaptchaChallenge(siteToken){
+  // here we will remove the restriction added on submitting form.
+  $(recaptcha_id).hide();
+  postDataObject.recaptchaToken = siteToken;
 }
+
+var recaptcha_id = document.getElementById("recaptcha-error")
+$(recaptcha_id).hide();
 function submitForm(e) {
   // Read cookies parameter 
   const cookieValue_fbp = document.cookie
@@ -151,6 +158,12 @@ function submitForm(e) {
   }));
   if ($("textarea[name='projectDescription']").val() === "") {
     $("textarea[name='projectDescription']").parent().addClass("error");
+    return false;
+  }
+
+  // Handle reCAPTCHA not verified  
+  if (postDataObject.recaptchaToken === undefined || postDataObject.recaptchaToken === "") {
+    $(recaptcha_id).show();
     return false;
   }
   if (isValid) {

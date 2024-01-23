@@ -1,13 +1,16 @@
 @import "../scss/fonts.scss";
 @import "../scss/colors.scss";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: 'Inter';
     color: $text-color;
@@ -25,37 +28,46 @@ body {
     text-size-adjust: none;
     scroll-behavior: smooth;
 }
+
 a {
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
+
 button {
     cursor: pointer;
 }
+
 svg,
 img {
     max-width: 100%;
 }
+
 img {
     height: auto;
     width: auto;
 }
+
 .btn-styled-removed {
     background-color: transparent;
     border: none;
     box-shadow: none;
 }
+
 .container {
     max-width: 1310px;
     padding: 0 15px;
     margin: 0 auto;
 }
+
 .middle-content {
     min-height: 400px;
     padding-top: 111px;
 }
+
 .link-text {
+
     a,
     button {
         line-height: 50px;
@@ -65,6 +77,7 @@ img {
         color: $text-color;
         position: relative;
         display: inline-block;
+
         &:after {
             content: "";
             width: 100%;
@@ -81,6 +94,7 @@ img {
             bottom: 13px;
             left: 0;
         }
+
         &:hover {
             &:after {
                 -webkit-transform: scaleX(.8);
@@ -90,12 +104,15 @@ img {
         }
     }
 }
+
 textarea {
     resize: none;
 }
+
 iframe {
     max-width: 100%;
 }
+
 h1,
 h2,
 h3,
@@ -105,17 +122,20 @@ h6 {
     font-family: "Times";
     font-weight: bold;
 }
+
 h2 {
     font-size: 50px;
     line-height: 50px;
     letter-spacing: -0.20px;
 }
+
 .page-title {
     h1 {
         font-size: 50px;
         line-height: 60px;
         letter-spacing: -0.15px;
     }
+
     h2 {
         font-size: 17px;
         line-height: 50px;
@@ -124,6 +144,7 @@ h2 {
         text-transform: uppercase;
     }
 }
+
 .stretched-link {
     text-align: center;
     text-decoration: none;
@@ -134,6 +155,7 @@ h2 {
     height: 100%;
     width: 100%;
 }
+
 .location-title {
     font-size: 17px;
     font-family: "Inter";
@@ -141,17 +163,22 @@ h2 {
     font-weight: 300;
     margin-bottom: 12px;
 }
+
 .section-full-image {
     img {
         display: block;
     }
 }
+
 .opacity-0 {
     opacity: 0 !important;
 }
-video, iframe {
+
+video,
+iframe {
     max-width: 100%;
 }
+
 .btn-black-bg {
     min-height: 45px;
     min-width: 139px;
@@ -165,41 +192,57 @@ video, iframe {
     align-items: center;
     justify-content: center;
     font-family: "Inter";
+
     &:hover {
         background-color: transparent;
         color: $black;
     }
 }
+
+.error-message {
+    color: $red2;
+    font-size: 13px;
+    line-height: 40px;
+    font-weight: 400;
+    display: none;
+}
+
 // Responsive CSS start
 @media (max-width:1600px) {
     body {
         font-size: 14px;
         line-height: 24px;
     }
+
     .location-title {
         font-size: 14px;
     }
+
     h2 {
         font-size: 47px;
         line-height: 52px;
     }
+
     .page-title {
         h1 {
             font-size: 47px;
             line-height: 52px;
         }
+
         h2 {
             font-size: 14px;
             line-height: 45px;
         }
     }
 }
+
 // 1600 end
 @media (max-width:1440px) {
     h2 {
         font-size: 44px;
         line-height: 48px;
     }
+
     .page-title {
         h1 {
             font-size: 44px;
@@ -207,12 +250,14 @@ video, iframe {
         }
     }
 }
+
 // 1440 end
 @media (max-width:1300px) {
     h2 {
         font-size: 38px;
         line-height: 45px;
     }
+
     .page-title {
         h1 {
             font-size: 38px;
@@ -220,12 +265,14 @@ video, iframe {
         }
     }
 }
+
 // 1300 end
 @media (max-width:1199px) {
     h2 {
         font-size: 31px;
         line-height: 1.2;
     }
+
     .page-title {
         h1 {
             font-size: 31px;
@@ -233,20 +280,24 @@ video, iframe {
         }
     }
 }
+
 // 1199 end
 @media (max-width:1023px) {
     .container {
         padding: 0 20px;
     }
+
     h2 {
         font-size: 25px;
     }
+
     .page-title {
         h1 {
             font-size: 25px;
         }
     }
 }
+
 // 1199 end
 @media (max-width:767px) {
     // .btn-black-bg {
@@ -256,4 +307,5 @@ video, iframe {
     //     line-height:23px;
     // }
 }
+
 // 767 end
