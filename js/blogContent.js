@@ -32,10 +32,7 @@ jQuery(document).ready(function ($) {
     fetch('../js/blogData.json')
         .then(response => response.json())
         .then(data => {
-
-            console.log(window.location.pathname)
             const pathname = window.location.pathname
-
             const filteredData = data.filter(post => post.blogUrl !== pathname);
             shuffleArray(filteredData);
             const selectedPosts = filteredData.slice(0, 4);
