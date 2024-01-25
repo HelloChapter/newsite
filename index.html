@@ -90,9 +90,6 @@
         fbq('init', '432821205070173');
         fbq('track', 'PageView');
     </script>
-    <!-- Google Tag Manager -->
-    <script>
-    </script>
     <!-- End Google Tag Manager -->
     <!-- QR code query parameter read  -->
     <script async>
@@ -157,6 +154,11 @@
                     }
                 }
                 setTimeout(() => {
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag() { dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'UA-225495044-1');
+                    //<!-- Google tag (gtag.js) -->
                     // <!-- Google Tag Manager -->
                     (function (w, d, s, l, i) {
                         w[l] = w[l] || []; w[l].push({
@@ -1118,12 +1120,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group text-center btn-submit-wrap">
-                                        <div class="g-recaptcha" data-sitekey="6LesnlkpAAAAAKMCoW6o_39PI09sdEedi2dCgOag"
+                                        <!-- <div class="g-recaptcha" data-sitekey="6LesnlkpAAAAAKMCoW6o_39PI09sdEedi2dCgOag"
                                             data-callback="reCaptchaChallenge"></div>
                                         <div class="recaptcha-error-wrap">
                                             <label id="recaptcha-error" class="error-message recaptcha-error">Please
                                                 complete the reCAPTCHA verification.</label>
-                                        </div>
+                                        </div> -->
                                         <button type="submit" class="btn-black">
                                             Submit
                                         </button>
@@ -1268,7 +1270,7 @@
     <script defer src="./js/contact-home.js"></script>
     <script defer src="./js/home-page.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/home-slider.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
     <script defer src="https://www.youtube.com/iframe_api"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
