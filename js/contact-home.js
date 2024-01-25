@@ -12,6 +12,7 @@ var postDataObject = {
     "fbc": "",
     "fbp": "",
     "originalUrl": "",
+    "recaptchaToken": ""
 }
 // Email Validation
 function isEmail(email) {
@@ -106,7 +107,7 @@ function redirectToThankYou() {
     }
     // var url = window.location.href;
     window.location.href = "/thank-you-message-home/?submit=true";
-    var url ="/thank-you-message-home/?submit=true";
+    var url = "/thank-you-message-home/?submit=true";
     if (!url.includes("submit=true")) {
         if (url.indexOf("?") !== -1) {
             url = url + "&submit=true";
@@ -125,7 +126,16 @@ window.addEventListener("pageshow", (event) => {
     }
     $('form').get(0).reset();
 });
-function handleContactSubmit(e) {
+// reCaptcha callback function
+function reCaptchaChallenge(siteToken) {
+    // here we will remove the restriction added on submitting form.
+    $(recaptcha_id).hide();
+    postDataObject.recaptchaToken = siteToken;
+}
+
+var recaptcha_id = document.getElementById("recaptcha-error")
+$(recaptcha_id).hide();
+function submitForm() {
     // Read cookies parameter 
     const cookieValue_fbp = document.cookie
         .split("; ")
@@ -177,6 +187,11 @@ function handleContactSubmit(e) {
     }));
     if ($("textarea[name='projectDescription']").val() === "") {
         $("textarea[name='projectDescription']").parent().addClass("error-show");
+        return false;
+    }
+    // Handle reCAPTCHA not verified  
+    if (postDataObject.recaptchaToken === undefined || postDataObject.recaptchaToken === "") {
+        $(recaptcha_id).show();
         return false;
     }
     if (isValid) {

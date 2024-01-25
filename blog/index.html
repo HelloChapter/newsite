@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="https://hellochapter.com/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
             user-scalable=0" />
     <title>Blog | Chapter</title>
-    <meta name="description" content="Chapter is a professional home renovation and remodeling contractor company offering full-service design and build services. We specialize in interior remodeling of homes, apartments and townhouses in the New York City and Miami area." />
+    <meta name="description"
+        content="Chapter is a professional home renovation and remodeling contractor company offering full-service design and build services. We specialize in interior remodeling of homes, apartments and townhouses in the New York City and Miami area." />
     <link rel="canonical" href="https://hellochapter.com/blog/" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Blog | Chapter" />
-    <meta property="og:description" content="Chapter is a professional home renovation and remodeling contractor company offering full-service design and build services. We specialize in interior remodeling of homes, apartments and townhouses in the New York City and Miami area." />
+    <meta property="og:description"
+        content="Chapter is a professional home renovation and remodeling contractor company offering full-service design and build services. We specialize in interior remodeling of homes, apartments and townhouses in the New York City and Miami area." />
     <meta property="og:url" content="https://hellochapter.com/blog/" />
     <meta property="og:site_name" content="Chapter" />
     <meta property="article:modified_time" content="2022-10-12T17:14:53+00:00" />
@@ -22,14 +25,16 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://hellochapter.com/blog/">
     <meta property="twitter:title" content="Blog | Chapter">
-    <meta property="twitter:description" content="Chapter is a professional home renovation and remodeling contractor company offering full-service design and build services. We specialize in interior remodeling of homes, apartments and townhouses in the New York City and Miami area.">
+    <meta property="twitter:description"
+        content="Chapter is a professional home renovation and remodeling contractor company offering full-service design and build services. We specialize in interior remodeling of homes, apartments and townhouses in the New York City and Miami area.">
     <meta property="twitter:image" content="https://hellochapter.com/images/og-images/other/blog-image.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/pages/blog-style.css" />
+    <!--  -->
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/slick.css?rsct=text/css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/blog-style.css" />
+    <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -47,7 +52,7 @@
         fbq('track', 'PageView');
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script> -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -75,19 +80,23 @@
     </script>
     <!-- Microsoft Ads Conversion Tracking -->
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');</script>
-    <!-- End Google Tag Manager -->
- <script
-        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
-    <!-- Crisp chat end -->
+    <script>
+        $(document).ready(function () {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');
+            // <!-- End Google Tag Manager -->
+            window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+            // <!-- Crisp chat end -->
+        }, 5000);
+    </script>
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRJKFJK" height="0" width="0"
@@ -96,7 +105,7 @@
     <div class="wrapper">
         <div class="page-blog">
             <header>
-                                <button aria-label="Name" type="button" class="btn-styled-removed menu-btn-toggle">
+                <button aria-label="Name" type="button" class="btn-styled-removed menu-btn-toggle">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -105,7 +114,8 @@
                     <div class="header-nav row no-gutters">
                         <div class="col col-logo">
                             <div class="logo">
-                                <a href="/" title="Home "><img src="/images/icons/logo.svg" alt="logo" />
+                                <a href="/" title="Home "><img height="20" width="20" src="/images/icons/logo.svg"
+                                        alt="logo" />
                                 </a>
                             </div>
                         </div>
@@ -154,357 +164,24 @@
             <div class="middle-content">
                 <section class="section-blog-listing">
                     <div class="container">
-                        <div class="row">
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/5-tips-for-miami-condo-renovations/" class="stretched-link"></a>
-                                    <div class="card-image bg-image"
-                                        style="background-image:
-                                            url('../images/blog-images/5-tips-for-miami-condo-renovations-images/5-tips-for-miami-condo-renovations-image.png');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>11.23.23</h4>
-                                        <h5>5 Tips For Miami Condo Renovations </h5>
-                                        <div class="link-text text-center">
-                                            <a href="/5-tips-for-miami-condo-renovations/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/how-to-find-a-home-remodeling-contractor-in-nyc/"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image"
-                                        style="background-image:
-                                            url('../images/blog-images/how-to-find-a-home-remodeling-contractor-in-nyc-images/how-to-find-a-home-remodeling-contractor-in-nyc-image.png');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>11.08.23</h4>
-                                        <h5>How To Find A Home Remodeling Contractor in NYC? </h5>
-                                        <div class="link-text text-center">
-                                            <a href="/how-to-find-a-home-remodeling-contractor-in-nyc/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/how-long-does-it-take-to-renovate-a-home-in-miami/"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image"
-                                        style="background-image:
-                                            url('../images/blog-images/how-long-does-a-renovation-take-in-miami-images/Blog-images-11.png');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>08.16.23</h4>
-                                        <h5>How long does it take to renovate a home in Miami?</h5>
-                                        <div class="link-text text-center">
-                                            <a href="/how-long-does-it-take-to-renovate-a-home-in-miami/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/how-long-does-it-take-to-renovate-in-nyc/" class="stretched-link"></a>
-                                    <div class="card-image bg-image"
-                                        style="background-image:
-                                            url('../images/blog-images/how-long-does-a-renovation-take-in-nyc-images/Blog-images-1.png');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>08.10.23</h4>
-                                        <h5>How long does it take to renovate in NYC?</h5>
-                                        <div class="link-text text-center">
-                                            <a href="/how-long-does-it-take-to-renovate-in-nyc/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/renotech-bringing-technology-into-renovation/" class="stretched-link"></a>
-                                    <div class="card-image bg-image" style="background-image:
-                                            url('../images/blog-images/renotech-image.png');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>07.29.23</h4>
-                                        <h5>Renotech: Bringing Technology into Renovation </h5>
-                                        <div class="link-text text-center">
-                                            <a href="/renotech-bringing-technology-into-renovation/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/nyc-condo-renovations-tips/" class="stretched-link"></a>
-                                    <div class="card-image bg-image" style="background-image:
-                                            url('../images/blog-images/nyc-condo-renovations-tips.jpeg');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>07.20.23</h4>
-                                        <h5>NYC Condo Renovations Tips </h5>
-                                        <div class="link-text text-center">
-                                            <a href="/nyc-condo-renovations-tips/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/5-ways-chapter-brings-innovation-to-home-renovation/"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image"
-                                        style="background-image:
-                                            url('../images/blog-images/5-ways-chapter-brings-innovation-to-home-renovation.png');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>07.10.23</h4>
-                                        <h5>5 Ways Chapter Brings Innovation to Home Renovation</h5>
-                                        <div class="link-text text-center">
-                                            <a href="/5-ways-chapter-brings-innovation-to-home-renovation/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/miami-condo-renovations/" class="stretched-link"></a>
-                                    <div class="card-image bg-image" style="background-image:
-                                            url('../images/blog-images/Miami_1.png');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>06.02.23</h4>
-                                        <h5>Miami Condo Renovations</h5>
-                                        <div class="link-text text-center">
-                                            <a href="/miami-condo-renovations/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/myth-vs-fact-for-renovations/" class="stretched-link"></a>
-                                    <div class="card-image bg-image" style="background-image:
-                                            url('../images/blog-images/pexels-blue-bird-7218525small.png');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>04.17.23</h4>
-                                        <h5>Myth vs. Fact for Renovations</h5>
-                                        <div class="link-text text-center">
-                                            <a href="/myth-vs-fact-for-renovations/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/5-things-to-consider-when-renovating-a-brownstone-in-brooklyn/"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image" style="background-image:
-                                            url('../images/blog-images/rachel-martin-4yCXNMLP9g8-unsplash.jpg');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>03.21.23</h4>
-                                        <h5>5 Things to Consider when Renovating a Brownstone in Brooklyn</h5>
-                                        <div class="link-text text-center">
-                                            <a href="/5-things-to-consider-when-renovating-a-brownstone-in-brooklyn/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/streamlining-material-selection-how-our-client-portal-makes-renovations-easier/"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image" style="background-image:
-                                            url('../images/blog-images/Image\ 64@2x.png');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>03.13.23</h4>
-                                        <h5>Streamlining Material Selection: How Our Client Portal Makes Renovations
-                                            Easier</h5>
-                                        <div class="link-text text-center">
-                                            <a
-                                                href="/streamlining-material-selection-how-our-client-portal-makes-renovations-easier/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/how-much-does-a-home-renovation-in-Miami-cost-in-2023/"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image" style="background-image:
-                                            url('../images/blog-images/DJI_0201@new2023x.png');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>02.16.23</h4>
-                                        <h5>How much does a home renovation in Miami cost in 2023?</h5>
-                                        <div class="link-text text-center">
-                                            <a href="/how-much-does-a-home-renovation-in-Miami-cost-in-2023/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/home-renovation-in-facts-Stats-to-consider-before-renovating/"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image"
-                                        style="background-image:
-                                            url('./../images/blog-images/NH_20221118_0270_by_Nadav_Havakook-1920x1280.png');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>02.13.23</h4>
-                                        <h5> Home Renovation in 2023: 10 Facts & Stats to Consider Before Renovating
-                                        </h5>
-                                        <div class="link-text text-center">
-                                            <a href="/home-renovation-in-facts-Stats-to-consider-before-renovating/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/10-tips-to-help-you-get-ready-for-an-apartment-renovation/"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image" style="background-image:
-                                            url('./../images/blog-images/pexels-jeshootscom-834892-scaled.jpg');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>11.24.22</h4>
-                                        <h5>10 Tips To Help You Get Ready For An Apartment Renovation</h5>
-                                        <div class="link-text text-center">
-                                            <a href="/10-tips-to-help-you-get-ready-for-an-apartment-renovation/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/dos-and-donts-when-renovating-to-increase-property-value"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image" style="background-image:
-                                            url('./../images/blog-images/NH_20220210_0118_by_Nadav_Havakook.jpg');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>10.28.22</h4>
-                                        <h5>Do’s and Don’ts When Renovating To Increase Property Value</h5>
-                                        <div class="link-text text-center">
-                                            <a href="/dos-and-donts-when-renovating-to-increase-property-value">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/top-5-nyc-neighborhoods-to-buy-an-apartment-in-now/"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image"
-                                        style="background-image:
-                                            url('./../images/blog-images/pexels-roberto-vivancos-2190283-scaled.jpg');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>10.17.22</h4>
-                                        <h5>Top 5 NYC Neighborhoods To Buy An Apartment In Now</h5>
-                                        <div class="link-text text-center">
-                                            <a href="/top-5-nyc-neighborhoods-to-buy-an-apartment-in-now/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/tips-and-design-ideas-for-your-bathroom-renovation"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image"
-                                        style="background-image:
-                                            url('./../images/blog-images/NH_20220711_0494_by_Nadav_Havakook-scaled.jpg');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>08.16.22</h4>
-                                        <h5>Tips And Design Ideas For Your Bathroom Renovation</h5>
-                                        <div class="link-text text-center">
-                                            <a href="/tips-and-design-ideas-for-your-bathroom-renovation">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/why-is-communication-from-the-client-important-during-a-renovation/"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image" style="background-image:
-                                            url('./../images/blog-images/MicrosoftTeams-image-24-scaled.jpg');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>06.21.22</h4>
-                                        <h5>Why Is Communication From The Client Important During A Renovation? </h5>
-                                        <div class="link-text text-center">
-                                            <a
-                                                href="/why-is-communication-from-the-client-important-during-a-renovation/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/top-5-things-to-know-for-renovating-an-apartment-in-nyc/"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image" style="background-image:
-                                            url('./../images/blog-images/image.jpg');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>04.29.22</h4>
-                                        <h5>Top 5 Things To Know For Renovating An Apartment In NYC</h5>
-                                        <div class="link-text text-center">
-                                            <a href="/top-5-things-to-know-for-renovating-an-apartment-in-nyc/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col col-blog">
-                                <div class="card aos-init aos-animate" data-aos="fade">
-                                    <a href="/how-much-does-an-apartment-renovation-cost-in-nyc/"
-                                        class="stretched-link"></a>
-                                    <div class="card-image bg-image" style="background-image:
-                                            url('./../images/blog-images/casestudy2.jpg');">
-                                    </div>
-                                    <div class="card-content text-center">
-                                        <h4>03.25.22</h4>
-                                        <h5> How much does an apartment renovation cost in NYC? </h5>
-                                        <div class="link-text text-center">
-                                            <a href="/how-much-does-an-apartment-renovation-cost-in-nyc/">Read
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="blog-listing" class="row">
+                            <!-- Blog posts will be dynamically added here -->
                         </div>
                     </div>
                 </section>
                 <!-- section blog listing end -->
+                <section class="section-blog-expert-help text-center aos-init aos-animate" data-aos="fade">
+                    <div class="container">
+                        <h2>Further information needed?
+                            Chapter renovation expert is here to help.
+                        </h2>
+                        <div class="text-center btn-wrap">
+                            <a class="btn-black" href="/contact-chapter-home-renovation/" title="Let’s talk">Let’s
+                                talk</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- section-blog-expert-help end -->
             </div>
             <!-- Middle container end -->
             <footer>
@@ -512,7 +189,8 @@
                     <div class="row">
                         <div class="col col-footer-logo">
                             <div class="footer-logo">
-                                <a href="/" title="Home "><img src="/images/icons/footer-logo.svg" alt="footer logo" />
+                                <a href="/" title="Home "><img height="20" width="20"
+                                        src="/images/icons/footer-logo.svg" alt="footer logo" />
                                 </a>
                             </div>
                         </div>
@@ -522,8 +200,8 @@
                                     <a href="/about-chapter-home-renovation/" title="About
                                             ">About</a>
                                 </li>
-<li>
-                                   <a href="/home-renovation-services/" title="Services ">Services</a>
+                                <li>
+                                    <a href="/home-renovation-services/" title="Services ">Services</a>
                                 </li>
                                 <li>
                                     <a href="/how-chapter-home-renovation-works/" title="How It Works ">How It
@@ -556,6 +234,10 @@
                                 <li>
                                     <a href="https://www.facebook.com/hellochapter" title="Facebook "
                                         target="_blank">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
+                                        title="Houzz " target="_blank">Houzz</a>
                                 </li>
                                 <li>
                                     <a href="https://www.pinterest.com/chapterrenovations/" title="Twitter
@@ -592,7 +274,7 @@
                                 <h6>Join our newsletter to stay up to date!</h6>
                                 <div class="form-group">
                                     <input type="email" class="form-control" placeholder="Email" required />
-                                    <button type="submit" class="btn-styled-removed"><img
+                                    <button type="submit" class="btn-styled-removed"><img height="20" width="20"
                                             src="/images/icons/right-shift.svg" alt="icon" /></button>
                                 </div>
                             </form>
@@ -605,17 +287,75 @@
         <!-- Page wrapper end -->
     </div>
     <!-- Wrapper end -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./../js/jquery.matchHeight-min.js"></script>
-    <script src="./../js/custom.js"></script>
+
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/aos.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/slick.js"></script>
+    <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.matchHeight-min.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/custom.js"></script>
+
+    <script defer>
+        setTimeout(function () {
+            var script = document.createElement('script');
+            script.async = true;
+            var cacheControl = 'max-age=8600000';
+            script.src = 'https://crm.zoho.com/crm/javascript/zcga.js';
+            document.head.appendChild(script);
+        }, 5000);
+    </script>
+    <script>
+        // Function to shuffle the array randomly
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+        function createBlogPostElement(post) {
+            const postContainer = document.createElement('div');
+            postContainer.className = 'col col-blog';
+            postContainer.innerHTML = `
+            <div class="card aos-init aos-animate" data-aos="fade">
+              <a href=${post.blogUrl} class="stretched-link"></a>
+              <div class="card-image bg-image" style="background-image: url('${post.imageUrl}');"></div>
+              <div class="card-content">
+                <div class="blog-writer">
+                  <div class="profile-image">
+                    <img src="${post.writerImage}" alt="profile image" height="24" width="24" />
+                  </div>
+                  <h4><span class="name">${post.writerName}</span> <span class="date">${post.date}</span></h4>
+                </div>
+                <h5>${post.title}</h5>
+                <div class="intro-text">
+                  <p>${post.introText}</p>
+                </div>
+              </div>
+            </div>
+          `;
+
+            return postContainer;
+        }
+
+        fetch('../js/blogData.json')
+            .then(response => response.json())
+            .then(data => {
+                //shuffleArray(data);
+                const blogListingContainer = document.getElementById('blog-listing');
+                data.forEach(post => {
+                    const postElement = createBlogPostElement(post);
+                    blogListingContainer.appendChild(postElement);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching blog data:', error);
+            });
+    </script>
     <script>
         jQuery(document).ready(function ($) {
-            $('.col-blog .card-content h5').matchHeight({
-                property: 'min-height'
-            });
+            setTimeout(function () {
+                $('.col-blog .card-content h5').matchHeight({
+                    property: 'min-height'
+                });
+            }, 200);
         });
         /*Ready function end*/
         jQuery(window).scroll(function () {
@@ -623,6 +363,6 @@
             jQuery('#spinner-wrap').css({ transform: 'translateX(-50%) rotate(' + theta + 'rad)' });
         });
     </script>
-<script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
 </body>
+
 </html>

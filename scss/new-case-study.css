@@ -351,7 +351,8 @@ h2 {
   opacity: 0 !important;
 }
 
-video, iframe {
+video,
+iframe {
   max-width: 100%;
 }
 
@@ -378,6 +379,14 @@ video, iframe {
 .btn-black-bg:hover {
   background-color: transparent;
   color: #231F20;
+}
+
+.error-message {
+  color: #F67A7A;
+  font-size: 13px;
+  line-height: 40px;
+  font-weight: 400;
+  display: none;
 }
 
 @media (max-width: 1600px) {
@@ -899,6 +908,9 @@ video, iframe {
   .section-project-category {
     top: 94px;
   }
+  .section-project-category ul li {
+    padding: 0 10px;
+  }
 }
 .pearl-bg {
   background-color: #F9F4ED;
@@ -1040,13 +1052,13 @@ header .col-get-started a:hover {
             flex: 0 0 150px;
   }
   header nav ul li {
-    padding: 0 15px;
+    padding: 0 12px;
   }
   header .col-get-started {
-    max-width: 140px;
+    max-width: 160px;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 140px;
-            flex: 0 0 140px;
+        -ms-flex: 0 0 160px;
+            flex: 0 0 160px;
   }
 }
 @media (max-width: 1023px) {

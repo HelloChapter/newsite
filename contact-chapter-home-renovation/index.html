@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="https://hellochapter.com/favicon.ico" />
@@ -30,35 +31,23 @@
     apartments and townhouses specilizing the New York City and Miami
     area.">
     <meta property="twitter:image" content="https://hellochapter.com/images/contact-img/contact-image1.jpg">
-    <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
     <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload"
+    <!-- <link rel="preload"
         href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/contact-style.css?rsct=text/css"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
+        as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+    <link rel="stylesheet" href="../scss/pages/contact-style.css">
     <noscript>
         <link rel="stylesheet"
             href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css">
         <link rel="stylesheet"
             href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/contact-style.css?rsct=text/css">
     </noscript>
+    <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <!-- Meta Pixel Code -->
     <script>
-        // setTimeout(() => {
-        //     !function (f, b, e, v, n, t, s) {
-        //         if (f.fbq) return; n = f.fbq = function () {
-        //             n.callMethod ?
-        //                 n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-        //         };
-        //         if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-        //         n.queue = []; t = b.createElement(e); t.async = !0;
-        //         t.src = v; s = b.getElementsByTagName(e)[0];
-        //         s.parentNode.insertBefore(t, s)
-        //     }(window, document, 'script',
-        //         'https://connect.facebook.net/en_US/fbevents.js');
-        //     fbq('init', '432821205070173');
-        //     fbq('track', 'PageView');
-        // }, 0);
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
@@ -76,12 +65,6 @@
         fbq('track', 'PageView');
     </script>
     <script>
-        // setTimeout(function () {
-        //     var script = document.createElement('script');
-        //     script.async = true;
-        //     script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-225495044-1';
-        //     document.head.appendChild(script);
-        // }, 5000);
     </script>
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script> -->
     <script>
@@ -156,6 +139,7 @@
         </script>
     <!-- organization structured data end -->
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRJKFJK" height="0" width="0"
@@ -234,7 +218,7 @@
                                     <h2>Contact us</h2>
                                 </div>
                                 <div id="loader"></div>
-                                <form onsubmit="handleContactSubmit();
+                                <form onsubmit="submitForm();
                                         return false;" id="contact-form">
                                     <div class="form-group row">
                                         <div class="col col-input">
@@ -398,7 +382,14 @@
                                         </div>
                                     </div>
                                     <div class="form-group link-text">
-                                        <button type="submit" class="btn-submit">submit</button>
+                                        <!-- <button type="submit" class="btn-submit">submit</button> -->
+                                        <div class="g-recaptcha" data-sitekey="6LesnlkpAAAAAKMCoW6o_39PI09sdEedi2dCgOag"
+                                            data-callback="reCaptchaChallenge"></div>
+                                        <div class="recaptcha-error-wrap">
+                                            <label id="recaptcha-error" class="error-message recaptcha-error">Please
+                                                complete the reCAPTCHA verification.</label>
+                                        </div>
+                                        <button type="submit" class="btn-submit"> Submit </button>
                                     </div>
                                     <input type="hidden" id="zc_gad" name="zc_gad" value="" />
                                 </form>
@@ -547,8 +538,8 @@
                                     <a href="/about-chapter-home-renovation/" title="About
                                             ">About</a>
                                 </li>
-<li>
-                                   <a href="/home-renovation-services/" title="Services ">Services</a>
+                                <li>
+                                    <a href="/home-renovation-services/" title="Services ">Services</a>
                                 </li>
                                 <li>
                                     <a href="/how-chapter-home-renovation-works/" title="How It Works ">How It
@@ -581,6 +572,10 @@
                                 <li>
                                     <a href="https://www.facebook.com/hellochapter" title="Facebook "
                                         target="_blank">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
+                                        title="Houzz " target="_blank">Houzz</a>
                                 </li>
                                 <li>
                                     <a href="https://www.pinterest.com/chapterrenovations/" title="Twitter
@@ -636,16 +631,22 @@
     <script async src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/aos.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/slick.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/custom.js"></script>
-    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/contact.js"></script>
+    <script defer src="../js/contact.js"></script>
     <!-- <script defer type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script> -->
+    <script>
+        // function onSubmit(token) {
+        //     document.getElementById("contact-form").submit();
+        // }
+    </script>
     <script defer>
         setTimeout(function () {
-        var script = document.createElement('script');
-        script.async = true;
-        var cacheControl = 'max-age=8600000';
-        script.src = 'https://crm.zoho.com/crm/javascript/zcga.js';
-        document.head.appendChild(script);
-    }, 5000);
+            var script = document.createElement('script');
+            script.async = true;
+            var cacheControl = 'max-age=8600000';
+            script.src = 'https://crm.zoho.com/crm/javascript/zcga.js';
+            document.head.appendChild(script);
+        }, 5000);
     </script>
 </body>
+
 </html>

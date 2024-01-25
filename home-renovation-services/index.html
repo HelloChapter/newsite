@@ -21,7 +21,7 @@ company offering full-service design and build services. We specialize
 in interior remodeling of homes, apartments and townhouses in the New
 York City and Miami area." />
     <meta property="og:url" content="https://hellochapter.com/home-renovation-services/" />
-    <meta property="og:image" content="https://hellochapter.com/images/services/Hero-image.jpg" />
+    <meta property="og:image" content="https://hellochapter.com/images/services/Hero-image.webp" />
     <meta property="og:image:width" content="750" />
     <meta property="og:image:height" content="422" />
     <meta property="og:site_name" content="Chapter" />
@@ -34,13 +34,16 @@ York City and Miami area." />
 company offering full-service design and build services. We specialize
 in interior remodeling of homes, apartments and townhouses in the New
 York City and Miami area.">
-    <meta property="twitter:image" content="https://hellochapter.com/images/services/Hero-image.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../scss/pages/services-style.css" />
+    <meta property="twitter:image" content="https://hellochapter.com/images/services/Hero-image.webp">
+
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/slick.css?rsct=text/css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
+
+     <link rel="stylesheet" href="../scss/pages/services-style.css" />
+    <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -58,14 +61,14 @@ York City and Miami area.">
         fbq('track', 'PageView');
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script> -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-225495044-1');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
+    <noscript><img height="20" width="20" height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=432821205070173&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Meta Pixel Code -->
@@ -86,18 +89,21 @@ York City and Miami area.">
     </script>
     <!-- Microsoft Ads Conversion Tracking -->
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');</script>
-    <!-- End Google Tag Manager -->
-    <script
-        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
-    <!-- Crisp chat end -->
+    <script>
+        $(document).ready(function () {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');
+            // <!-- End Google Tag Manager -->
+            window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+            // <!-- Crisp chat end -->
+        }, 5000);
+    </script>
 </head>
 
 <body>
@@ -118,7 +124,8 @@ York City and Miami area.">
                     <div class="header-nav row no-gutters">
                         <div class="col col-logo">
                             <div class="logo">
-                                <a href="/" title="Home "><img src="/images/icons/logo.svg" alt="logo" />
+                                <a href="/" title="Home "><img height="20" width="20" src="/images/icons/logo.svg"
+                                        alt="logo" />
                                 </a>
                             </div>
                         </div>
@@ -172,6 +179,9 @@ York City and Miami area.">
                             <a class="active" href="/home-renovation-services/" title="All">All</a>
                         </li>
                         <li>
+                            <a href="/full-home-renovation-remodeling/" title="Full Home ">Full Home </a>
+                        </li>
+                        <li>
                             <a href="/kitchens-renovation-remodeling/" title="Kitchens">Kitchens</a>
                         </li>
                         <li>
@@ -201,65 +211,108 @@ York City and Miami area.">
                         </div>
                         <div class="col section-image-content aos-init
                                 aos-animate bg-image col-img" data-aos="fade" data-aos-delay="200" style="background-image:
-                                url('../images/services/Hero-image.jpg');">
+                                url('../images/services/Hero-image.webp');">
                         </div>
                     </div>
                 </section>
                 <!-- section-intro-image end -->
                 <section class="section-two-card-layout aos-animate aos-init " data-aos="fade">
                     <div class="row">
-                        <div class="col col-card">
+                        <div class="col col-card col-full-card">
                             <div class="card pearl-bg2">
-                                <div class="card-image">
-                                    <img src="../images/services/Kitchen-Remodel.png" alt="image" />
+                                <div class="card-image desktop-image bg-image" style="background-image: url('../images/services/Full-Home-Renovation-Card.webp');">
+                                </div>
+                                <div class="card-image tablet-image bg-image" style="background-image: url('../images/services/Full-Home-Renovation-Card-tablet.webp');">
                                 </div>
                                 <div class="card-content">
-                                    <a class="link-url" href="/kitchens-renovation-remodeling/"></a>
+                                    <a class="link-url" href="/full-home-renovation-remodeling/"></a>
                                     <div class="desktop-content">
-                                        <img src="../images/services/Full-Home-Renovation.svg" alt="icon" />
-                                        <h3>Kitchen <br />Remodel</h3>
+                                        <img height="20" width="20"
+                                            src="../images/services/Full-Home-Renovation-Card.svg" alt="icon" />
+                                        <h3>Full Home <br />Renovation</h3>
                                     </div>
                                     <div class="mobile-content">
-                                        <h3><img src="../images/services/Full-Home-Renovation.svg" alt="icon" /> Kitchen
-                                            Remodel</h3>
+                                        <h3><img height="20" width="20"
+                                                src="../images/services/Full-Home-Renovation-Card.svg" alt="icon" />
+                                            Full Home <br />Renovation</h3>
                                     </div>
-                                    <p>Whether you're looking for custom cabinets, top-of-the-line appliances, a
-                                        particular countertop, or a specific layout, you can have it all. With a Chapter
-                                        kitchen renovation, there are no limits.</p>
-                                    <a href="/kitchens-renovation-remodeling/" class="right-arrow-click"><img
-                                            src="../images/services/right-arrow.svg" /></a>
+                                    <p>If whole-house renovation is your goal, Chapter has the expertise and passion to
+                                        transform your space to reflect your needs and taste. We’re masters of every
+                                        type of interior remodel you can imagine.</p>
+                                    <a href="/full-home-renovation-remodeling/" class="right-arrow-click">
+                                        <div class="arrow">
+                                            <div class="head"></div>
+                                        </div>
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="col col-card">
                             <div class="card pearl-bg2">
-                                <div class="card-image">
-                                    <img src="../images/services/bathroom-Remodel.png" alt="image" />
+                                <div class="card-image bg-image" style="background-image: url('../images/services/Kitchen-Remodel.webp');">
+                                </div>
+                                <div class="card-content">
+                                    <a class="link-url" href="/kitchens-renovation-remodeling/"></a>
+                                    <div class="desktop-content">
+                                        <img height="20" width="20" src="../images/services/Full-Home-Renovation.svg"
+                                            alt="icon" />
+                                        <h3>Kitchen <br />Remodel</h3>
+                                    </div>
+                                    <div class="mobile-content">
+                                        <h3><img height="20" width="20"
+                                                src="../images/services/Full-Home-Renovation.svg" alt="icon" /> Kitchen
+                                            Remodel</h3>
+                                    </div>
+                                    <p>Whether you're looking for custom cabinets, top-of-the-line appliances, a
+                                        particular countertop, or a specific layout, you can have it all. With a Chapter
+                                        kitchen renovation, there are no limits.</p>
+                                    <a href="/kitchens-renovation-remodeling/" class="right-arrow-click">
+                                        <div class="arrow">
+                                            <div class="head"></div>
+                                        </div>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-card">
+                            <div class="card pearl-bg2">
+                                <div class="card-image bg-image" style="background-image: url('../images/services/bathroom-Remodel.webp');">
                                 </div>
                                 <div class="card-content">
                                     <a class="link-url" href="/bathrooms-renovation-remodeling/"></a>
                                     <div class="desktop-content">
-                                        <img src="../images/services/Full-Home-Renovation2.svg" alt="icon" />
+                                        <img height="20" width="20" src="../images/services/Full-Home-Renovation2.svg"
+                                            alt="icon" />
                                         <h3>Bathroom <br />Remodel</h3>
                                     </div>
                                     <div class="mobile-content">
-                                        <h3><img src="../images/services/Full-Home-Renovation2.svg" alt="icon" />
+                                        <h3><img height="20" width="20"
+                                                src="../images/services/Full-Home-Renovation2.svg" alt="icon" />
                                             Bathroom Remodel</h3>
                                     </div>
                                     <p>From high-end amenities that create a luxury feel to innovative designs for
                                         sustainable living, there are endless options for aesthetics and function with a
                                         Chapter bathroom renovation.</p>
-                                    <a href="/bathrooms-renovation-remodeling/" class="right-arrow-click"><img
-                                            src="../images/services/right-arrow.svg" /></a>
+                                    <a href="/bathrooms-renovation-remodeling/" class="right-arrow-click">
+                                        <div class="arrow">
+                                            <div class="head"></div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- section-reviews End -->
-                <section class="section-reviews aos-animate aos-init " data-aos="fade">
+                <section class="section-home-reviews aos-init " data-aos="fade">
                     <div class="embedsocial-hashtag" data-ref="3d97164898bf69f7f5319b92ceb628803910cc4c"></div>
-                    <script> (function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript")); </script>
+                    <script defer>
+                        setTimeout(() => {
+                            (function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript"));
+                        }, 10000);
+                    </script>
                 </section>
                 <!-- section-reviews End -->
                 <section class="section-project-manager aos-init aos-animate pearl-bg2" data-aos="fade">
@@ -267,7 +320,8 @@ York City and Miami area.">
                         <div class="col section-image-content aos-init
                             aos-animate col-img" data-aos="fade" data-aos-delay="200">
                             <div class="image">
-                                <img src="../images/services/designated-project-manager.png" alt="image">
+                                <img height="20" width="20" src="../images/services/designated-project-manager.webp"
+                                    alt="image">
                             </div>
                         </div>
                         <div class="col section-content-col align-self-center">
@@ -300,7 +354,7 @@ York City and Miami area.">
                         </div>
                         <div class="col section-image-content aos-init
                             aos-animate bg-image col-img" data-aos="fade" data-aos-delay="200" style="background-image:
-                            url('../images/services/Image--Interior-Designers.png');">
+                            url('../images/services/Image--Interior-Designers.webp');">
                         </div>
                     </div>
                 </section>
@@ -316,56 +370,58 @@ York City and Miami area.">
                         <div class="row content-row">
                             <div class="col">
                                 <div class="col-item">
-                                    <img src="../images/location-img/icons/Estimates-Icon.svg">
+                                    <img height="20" width="20" src="../images/location-img/icons/Estimates-Icon.svg">
                                     <h4>Accurate estimates &amp; timelines</h4>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="col-item">
-                                    <img src="../images/location-img/icons/Residential-Icon.svg">
+                                    <img height="20" width="20" src="../images/location-img/icons/Residential-Icon.svg">
                                     <h4>Residential &amp; commercial <br> renovations&nbsp; </h4>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="col-item">
-                                    <img src="../images/location-img/icons/Brownstones-Icon.svg">
+                                    <img height="20" width="20" src="../images/location-img/icons/Brownstones-Icon.svg">
                                     <h4>Diverse residential <br />property types</h4>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="col-item">
-                                    <img src="../images/location-img/icons/Board-approval-Icon.svg">
+                                    <img height="20" width="20"
+                                        src="../images/location-img/icons/Board-approval-Icon.svg">
                                     <h4>Board approval process </h4>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="col-item">
-                                    <img src="../images/location-img/icons/Landmarks.svg">
+                                    <img height="20" width="20" src="../images/location-img/icons/Landmarks.svg">
                                     <h4>Landmarks, pre-war buildings, historical, restoration &<br /> waterfront homes
                                     </h4>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="col-item">
-                                    <img src="../images/location-img/icons/Permit-Icon.svg ">
+                                    <img height="20" width="20" src="../images/location-img/icons/Permit-Icon.svg ">
                                     <h4>Local laws, municipality <br> restrictions &amp; permit filing </h4>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="col-item">
-                                    <img src="../images/location-img/icons/Safety-Icon.svg">
+                                    <img height="20" width="20" src="../images/location-img/icons/Safety-Icon.svg">
                                     <h4>Safety protocols</h4>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="col-item">
-                                    <img src="../images/location-img/icons/Project-Managers-Icon.svg">
+                                    <img height="20" width="20"
+                                        src="../images/location-img/icons/Project-Managers-Icon.svg">
                                     <h4>Project management</h4>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="col-item">
-                                    <img src="../images/location-img/icons/Interior-Design.svg">
+                                    <img height="20" width="20" src="../images/location-img/icons/Interior-Design.svg">
                                     <h4>Interior Design</h4>
                                 </div>
                             </div>
@@ -386,7 +442,7 @@ York City and Miami area.">
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img
+                                        <h6 class="location-title"> <img height="20" width="20"
                                                 src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/location2.svg"
                                                 alt="icon" height="200" width="200" />New York
                                         </h6>
@@ -407,7 +463,7 @@ York City and Miami area.">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="desktop-hide col-12">
+                                <div class="desktop-hide">
                                     <div class="heading-content-wrap">
                                         <h3>Get inspired</h3>
                                         <div class="heading-content">
@@ -432,7 +488,7 @@ York City and Miami area.">
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img
+                                        <h6 class="location-title"> <img height="20" width="20"
                                                 src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/location2.svg"
                                                 alt="icon" height="200" width="200" />Miami</h6>
                                         <h2>Miami Shores</h2>
@@ -452,7 +508,7 @@ York City and Miami area.">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="desktop-hide col-12">
+                                <div class="desktop-hide">
                                     <div class="heading-content-wrap">
                                         <h3>Get inspired</h3>
                                         <div class="heading-content">
@@ -477,7 +533,7 @@ York City and Miami area.">
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img
+                                        <h6 class="location-title"> <img height="20" width="20"
                                                 src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/location2.svg"
                                                 alt="icon" height="200" width="200" />New York
                                         </h6>
@@ -498,7 +554,7 @@ York City and Miami area.">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="desktop-hide col-12">
+                                <div class="desktop-hide">
                                     <div class="heading-content-wrap">
                                         <h3>Get inspired</h3>
                                         <div class="heading-content">
@@ -523,7 +579,7 @@ York City and Miami area.">
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img
+                                        <h6 class="location-title"> <img height="20" width="20"
                                                 src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/location2.svg"
                                                 alt="icon" height="200" width="200" />New York
                                         </h6>
@@ -544,7 +600,7 @@ York City and Miami area.">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="desktop-hide col-12">
+                                <div class="desktop-hide">
                                     <div class="heading-content-wrap">
                                         <h3>Get inspired</h3>
                                         <div class="heading-content">
@@ -566,7 +622,7 @@ York City and Miami area.">
                     <div class="container text-center">
                         <h2>What Chapter are you in?</h2>
                         <div class="spinner-wrapper">
-                            <img class="small aos-init aos-animate" data-aos="fade"
+                            <img height="20" width="20" class="small aos-init aos-animate" data-aos="fade"
                                 src="./../../images/home/Spinner.svg" alt="icons" />
                         </div>
                         <div class="text-center link-text">
@@ -584,7 +640,8 @@ York City and Miami area.">
                         <div class="col col-footer-logo">
                             <div class="footer-logo">
                                 <a href="/" title="Home
-                                        "><img src="/images/icons/footer-logo.svg" alt="footer logo" />
+                                        "><img height="20" width="20" src="/images/icons/footer-logo.svg"
+                                        alt="footer logo" />
                                 </a>
                             </div>
                         </div>
@@ -629,6 +686,10 @@ York City and Miami area.">
                                         target="_blank">Facebook</a>
                                 </li>
                                 <li>
+                                    <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
+                                        title="Houzz " target="_blank">Houzz</a>
+                                </li>
+                                <li>
                                     <a href="https://www.pinterest.com/chapterrenovations/" title="Twitter
                                             " target="_blank">Pinterest</a>
                                 </li>
@@ -665,8 +726,9 @@ York City and Miami area.">
                                     date!</h6>
                                 <div class="form-group">
                                     <input type="email" class="form-control" placeholder="Email" required />
-                                    <button type="submit" class="btn-styled-removed"><img
-                                            src="/images/icons/right-shift.svg" alt="icon" /></button>
+                                    <button type="submit" class="btn-styled-removed"><img height="20" width="20"
+                                            height="20" width="20" src="/images/icons/right-shift.svg"
+                                            alt="icon" /></button>
                                 </div>
                             </form>
                         </div>
@@ -678,20 +740,23 @@ York City and Miami area.">
         <!-- Page wrapper end -->
     </div>
     <!-- Wrapper end -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.lazy.min.js"></script>
-    <script src="./../../js/custom.js"></script>
-    <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            $(document).ready(function () {
-                $('.lazy').Lazy();
-                // lazy load images
-            });
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/aos.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/slick.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/custom.js"></script>
+    <script defer>
+        $(document).ready(function () {
+            $('.lazy').Lazy();
+            // lazy load images
         });
+
+        setTimeout(function () {
+            var script = document.createElement('script');
+            script.async = true;
+            var cacheControl = 'max-age=8600000';
+            script.src = 'https://crm.zoho.com/crm/javascript/zcga.js';
+            document.head.appendChild(script);
+        }, 5000);
     </script>
 </body>
 

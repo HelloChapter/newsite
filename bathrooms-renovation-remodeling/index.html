@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="https://hellochapter.com/favicon.ico" />
@@ -20,7 +21,7 @@ company offering full-service design and build services. We specialize
 in interior remodeling of homes, apartments and townhouses in the New
 York City and Miami area." />
     <meta property="og:url" content="https://hellochapter.com/bathrooms-renovation-remodeling/" />
-    <meta property="og:image" content="https://hellochapter.com/images/services/bathrooms/bathrooms-intro.jpg" />
+    <meta property="og:image" content="https://hellochapter.com/images/services/bathrooms/bathrooms-intro.webp" />
     <meta property="og:image:width" content="750" />
     <meta property="og:image:height" content="422" />
     <meta property="og:site_name" content="Chapter" />
@@ -33,13 +34,14 @@ York City and Miami area." />
 company offering full-service design and build services. We specialize
 in interior remodeling of homes, apartments and townhouses in the New
 York City and Miami area.">
-    <meta property="twitter:image" content="https://hellochapter.com/images/services/bathrooms/bathrooms-intro.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../scss/pages/services-style.css" />
+    <meta property="twitter:image" content="https://hellochapter.com/images/services/bathrooms/bathrooms-intro.webp">
+
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/slick.css?rsct=text/css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+     <link rel="stylesheet" href="../scss/pages/services-style.css" />
+    <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -57,14 +59,14 @@ York City and Miami area.">
         fbq('track', 'PageView');
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script> -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-225495044-1');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
+    <noscript><img height="20" width="20" height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=432821205070173&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Meta Pixel Code -->
@@ -85,19 +87,23 @@ York City and Miami area.">
     </script>
     <!-- Microsoft Ads Conversion Tracking -->
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');</script>
-    <!-- End Google Tag Manager -->
-    <script
-        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
-    <!-- Crisp chat end -->
+    <script>
+        $(document).ready(function () {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');
+            // <!-- End Google Tag Manager -->
+            window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+            // <!-- Crisp chat end -->
+        }, 5000);
+    </script>
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRJKFJK" height="0" width="0"
@@ -116,7 +122,8 @@ York City and Miami area.">
                     <div class="header-nav row no-gutters">
                         <div class="col col-logo">
                             <div class="logo">
-                                <a href="/" title="Home "><img src="/images/icons/logo.svg" alt="logo" />
+                                <a href="/" title="Home "><img height="20" width="20" src="/images/icons/logo.svg"
+                                        alt="logo" />
                                 </a>
                             </div>
                         </div>
@@ -170,6 +177,9 @@ York City and Miami area.">
                             <a href="/home-renovation-services/" title="All ">All</a>
                         </li>
                         <li>
+                            <a href="/full-home-renovation-remodeling/" title="Full Home ">Full Home </a>
+                        </li>
+                        <li>
                             <a href="/kitchens-renovation-remodeling/" title="Kitchens">Kitchens</a>
                         </li>
                         <li>
@@ -182,10 +192,10 @@ York City and Miami area.">
                         <div class="col section-image-content aos-init pearl-bg2
                         aos-animate" data-aos="fade" data-aos-delay="200">
                             <div class="bg-image col-img" style="background-image:
-                        url('../images/services/bathrooms/bathrooms-intro.jpg');">
-                         <div class="image-label">
-                            <h6>Bathroom Remodel, Hamptons, NY</h6>
-                        </div>
+                        url('../images/services/bathrooms/bathrooms-intro.webp');">
+                                <div class="image-label">
+                                    <h6>Bathroom Remodel, Hamptons, NY</h6>
+                                </div>
                             </div>
                         </div>
                         <div class="col section-content-col align-self-center text-center">
@@ -230,7 +240,8 @@ York City and Miami area.">
                                 <div class="col col-item">
                                     <div class="content">
                                         <div class="title-content">
-                                            <img src="../images/services/kitchen/icons/draw.svg" alt="icon" />
+                                            <img height="20" width="20" src="../images/services/kitchen/icons/draw.svg"
+                                                alt="icon" />
                                             <div class="dash"></div>
                                             <h5>Planning & design</h5>
                                         </div>
@@ -244,7 +255,8 @@ York City and Miami area.">
                                 <div class="col col-item">
                                     <div class="content">
                                         <div class="title-content">
-                                            <img src="../images/services/kitchen/icons/browse.svg" alt="icon" />
+                                            <img height="20" width="20"
+                                                src="../images/services/kitchen/icons/browse.svg" alt="icon" />
                                             <div class="dash"></div>
                                             <h5>Layout changes</h5>
                                         </div>
@@ -257,7 +269,8 @@ York City and Miami area.">
                                 <div class="col col-item">
                                     <div class="content">
                                         <div class="title-content">
-                                            <img src="../images/services/kitchen/icons/disabled_by_default.svg"
+                                            <img height="20" width="20"
+                                                src="../images/services/kitchen/icons/disabled_by_default.svg"
                                                 alt="icon" />
                                             <div class="dash"></div>
                                             <h5>Demolition</h5>
@@ -272,7 +285,8 @@ York City and Miami area.">
                                 <div class="col col-item">
                                     <div class="content">
                                         <div class="title-content">
-                                            <img src="../images/services/kitchen/icons/water_ec.svg" alt="icon" />
+                                            <img height="20" width="20"
+                                                src="../images/services/kitchen/icons/water_ec.svg" alt="icon" />
                                             <div class="dash"></div>
                                             <h5>Plumbing & electrical</h5>
                                         </div>
@@ -285,7 +299,8 @@ York City and Miami area.">
                                 <div class="col col-item">
                                     <div class="content">
                                         <div class="title-content">
-                                            <img src="../images/services/kitchen/icons/grid_view.svg" alt="icon" />
+                                            <img height="20" width="20"
+                                                src="../images/services/kitchen/icons/grid_view.svg" alt="icon" />
                                             <div class="dash"></div>
                                             <h5>Floor & wall coverings</h5>
                                         </div>
@@ -298,7 +313,8 @@ York City and Miami area.">
                                 <div class="col col-item">
                                     <div class="content">
                                         <div class="title-content">
-                                            <img src="../images/services/kitchen/icons/corporate_fare.svg" alt="icon" />
+                                            <img height="20" width="20"
+                                                src="../images/services/kitchen/icons/corporate_fare.svg" alt="icon" />
                                             <div class="dash"></div>
                                             <h5>Cabinetry & storage</h5>
                                         </div>
@@ -311,7 +327,8 @@ York City and Miami area.">
                                 <div class="col col-item">
                                     <div class="content">
                                         <div class="title-content">
-                                            <img src="../images/services/kitchen/icons/shower.svg" alt="icon" />
+                                            <img height="20" width="20"
+                                                src="../images/services/kitchen/icons/shower.svg" alt="icon" />
                                             <div class="dash"></div>
                                             <h5>Fixtures & accessories</h5>
                                         </div>
@@ -324,7 +341,8 @@ York City and Miami area.">
                                 <div class="col col-item">
                                     <div class="content">
                                         <div class="title-content">
-                                            <img src="../images/services/kitchen/icons/local_laundry_service.svg"
+                                            <img height="20" width="20"
+                                                src="../images/services/kitchen/icons/local_laundry_service.svg"
                                                 alt="icon" />
                                             <div class="dash"></div>
                                             <h5>Appliances</h5>
@@ -339,7 +357,8 @@ York City and Miami area.">
                                 <div class="col col-item">
                                     <div class="content">
                                         <div class="title-content">
-                                            <img src="../images/services/kitchen/icons/editor_choice.svg" alt="icon" />
+                                            <img height="20" width="20"
+                                                src="../images/services/kitchen/icons/editor_choice.svg" alt="icon" />
                                             <div class="dash"></div>
                                             <h5>Quality assurance & inspection</h5>
                                         </div>
@@ -359,7 +378,7 @@ York City and Miami area.">
                         <div class="col slider-item">
                             <div class="card">
                                 <div class="card-header bg-image"
-                                    style="background-image:url('../images/services/kitchen/plan.png');">
+                                    style="background-image:url('../images/services/kitchen/plan.webp');">
                                 </div>
                                 <div class="card-content">
                                     <h6>01</h6>
@@ -369,10 +388,11 @@ York City and Miami area.">
                                         and procurement to set up construction start date. We work with you to find the
                                         best plan that matches your needs and budget.</p>
                                     <div class="time">
-                                        <h6><img src="../images/services/kitchen/icons/timer.svg" alt="icon"> ~1-3
-                                            Months</h6>
+                                        <h6><img height="20" width="20" src="../images/services/kitchen/icons/timer.svg"
+                                                alt="icon"> </h6>
                                     </div>
-                                    <h5>Influenced by: <br />Client decisions shaping final plan; permits and
+                                    <h5><strong>Factors influencing timeline: </strong><br />Client decisions shaping
+                                        final plan; permits and
                                         regulatory
                                         approvals</h5>
                                 </div>
@@ -381,7 +401,7 @@ York City and Miami area.">
                         <div class="col slider-item">
                             <div class="card">
                                 <div class="card-header bg-image"
-                                    style="background-image:url('../images/services/kitchen/design.png');">
+                                    style="background-image:url('../images/services/kitchen/design.webp');">
                                 </div>
                                 <div class="card-content">
                                     <h6>02</h6>
@@ -391,17 +411,18 @@ York City and Miami area.">
                                         design the layout and style; and select materials, fittings, and fixtures.
                                         Renderings and visuals help you conceptualize your new bathroom.</p>
                                     <div class="time">
-                                        <h6><img src="../images/services/kitchen/icons/timer.svg" alt="icon"> ~1-3
-                                            Months</h6>
+                                        <h6><img height="20" width="20" src="../images/services/kitchen/icons/timer.svg"
+                                                alt="icon"> </h6>
                                     </div>
-                                    <h5>Influenced by: <br />Design revisions and material procurement delays</h5>
+                                    <h5><strong>Factors influencing timeline: </strong><br />Design revisions and
+                                        material procurement delays</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="col slider-item">
                             <div class="card">
                                 <div class="card-header bg-image"
-                                    style="background-image:url('../images/services/kitchen/build.png');">
+                                    style="background-image:url('../images/services/kitchen/build.webp');">
                                 </div>
                                 <div class="card-content">
                                     <h6>03</h6>
@@ -411,10 +432,11 @@ York City and Miami area.">
                                         bathroom renovation with each step. Site preparations, structural work,
                                         installations, and finishing touches all bring the final design to life.</p>
                                     <div class="time">
-                                        <h6><img src="../images/services/kitchen/icons/timer.svg" alt="icon"> ~2-5
-                                            Months</h6>
+                                        <h6><img height="20" width="20" src="../images/services/kitchen/icons/timer.svg"
+                                                alt="icon"> </h6>
                                     </div>
-                                    <h5>Influenced by: <br />Project complexity, unforeseen structural challenges
+                                    <h5><strong>Factors influencing timeline: </strong><br />Project complexity,
+                                        unforeseen structural challenges
                                     </h5>
                                 </div>
                             </div>
@@ -422,9 +444,13 @@ York City and Miami area.">
                     </div>
                 </section>
                 <!-- section-plan-design-build end -->
-                <section class="section-reviews aos-animate aos-init " data-aos="fade">
+                <section class="section-home-reviews aos-init " data-aos="fade">
                     <div class="embedsocial-hashtag" data-ref="3d97164898bf69f7f5319b92ceb628803910cc4c"></div>
-                    <script> (function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript")); </script>
+                    <script defer>
+                        setTimeout(() => {
+                            (function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript"));
+                        }, 10000);
+                    </script>
                 </section>
                 <!-- section-reviews End -->
                 <section class="section-plan-design-build-method aos-init">
@@ -444,7 +470,7 @@ York City and Miami area.">
                         </div>
                         <div class="col section-image-content bg-image col-img" data-aos="fade" data-aos-delay="200"
                             style="background-image:
-                        url('../images/services/kitchen/section-plan-design-build-method.jpg');">
+                        url('../images/services/kitchen/section-plan-design-build-method.webp');">
                         </div>
                     </div>
                 </section>
@@ -454,7 +480,7 @@ York City and Miami area.">
                         <div class="col section-image-content aos-init
                         aos-animate" data-aos="fade" data-aos-delay="200">
                             <div class="bg-image col-img" style="background-image:
-                        url('../images/services/kitchen/access-world.jpg');">
+                        url('../images/services/kitchen/access-world.webp');">
                             </div>
                         </div>
                         <div class="col section-content-col align-self-center">
@@ -496,7 +522,8 @@ York City and Miami area.">
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img src="./../images/icons/location2.svg" />New
+                                        <h6 class="location-title"> <img height="20" width="20"
+                                                src="./../images/icons/location2.svg" />New
                                             York
                                         </h6>
                                         <h2>Water Mill House Renovation</h2>
@@ -526,7 +553,7 @@ York City and Miami area.">
                                     </div>
                                 </div>
                                 <div class="col col-img bg-image" style="background-image:
-                                  url('./../images/services/bathrooms/slider1.png');">
+                                  url('./../images/services/bathrooms/slider1.webp');">
                                 </div>
                             </div>
                         </div>
@@ -541,7 +568,8 @@ York City and Miami area.">
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img src="./../images/icons/location2.svg" />New
+                                        <h6 class="location-title"> <img height="20" width="20"
+                                                src="./../images/icons/location2.svg" />New
                                             York
                                         </h6>
                                         <h2>Tribeca Apartment Renovation </h2>
@@ -571,7 +599,7 @@ York City and Miami area.">
                                     </div>
                                 </div>
                                 <div class="col col-img bg-image" style="background-image:
-                                  url('./../images/services/bathrooms/slider2.png');">
+                                  url('./../images/services/bathrooms/slider2.webp');">
                                 </div>
                             </div>
                         </div>
@@ -586,7 +614,8 @@ York City and Miami area.">
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img src="./../images/icons/location2.svg" />Miami
+                                        <h6 class="location-title"> <img height="20" width="20"
+                                                src="./../images/icons/location2.svg" />Miami
                                         </h6>
                                         <h2>Wynwood Bathrooms Renovation</h2>
                                         <div class="content-p">
@@ -616,7 +645,7 @@ York City and Miami area.">
                                 </div>
                                 <div class="col col-img bg-image"
                                     style="background-image:
-                                  url('./../images/projects//wynwood-bathrooms-renovation/NH_20230418_0213_(by_Nadav_Havakook)-min.png');">
+                                  url('./../images/projects/wynwood-bathrooms-renovation/NH_20230418_0213_(by_Nadav_Havakook)-min.webp');">
                                 </div>
                             </div>
                         </div>
@@ -631,7 +660,8 @@ York City and Miami area.">
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="location-title"> <img src="./../images/icons/location2.svg" />New
+                                        <h6 class="location-title"> <img height="20" width="20"
+                                                src="./../images/icons/location2.svg" />New
                                             York </h6>
                                         <h2>DUMBO Bathroom Renovation</h2>
                                         <div class="content-p">
@@ -660,7 +690,7 @@ York City and Miami area.">
                                     </div>
                                 </div>
                                 <div class="col col-img bg-image" style="background-image:
-                                  url('./../images/projects/dumbo-bathroom-renovation/i-9RSp78R-X3.jpeg');">
+                                  url('./../images/projects/dumbo-bathroom-renovation/i-9RSp78R-X3.webp');">
                                 </div>
                             </div>
                         </div>
@@ -748,7 +778,7 @@ York City and Miami area.">
                     <div class="container text-center">
                         <h2>What Chapter are you in?</h2>
                         <div class="spinner-wrapper">
-                            <img class="small aos-init aos-animate" data-aos="fade"
+                            <img height="20" width="20" class="small aos-init aos-animate" data-aos="fade"
                                 src="./../../images/home/Spinner.svg" alt="icons" />
                         </div>
                         <div class="text-center link-text">
@@ -766,7 +796,8 @@ York City and Miami area.">
                         <div class="col col-footer-logo">
                             <div class="footer-logo">
                                 <a href="/" title="Home
-                                        "><img src="/images/icons/footer-logo.svg" alt="footer logo" />
+                                        "><img height="20" width="20" src="/images/icons/footer-logo.svg"
+                                        alt="footer logo" />
                                 </a>
                             </div>
                         </div>
@@ -811,6 +842,10 @@ York City and Miami area.">
                                         target="_blank">Facebook</a>
                                 </li>
                                 <li>
+                                    <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
+                                        title="Houzz " target="_blank">Houzz</a>
+                                </li>
+                                <li>
                                     <a href="https://www.pinterest.com/chapterrenovations/" title="Twitter
                                             " target="_blank">Pinterest</a>
                                 </li>
@@ -847,8 +882,9 @@ York City and Miami area.">
                                     date!</h6>
                                 <div class="form-group">
                                     <input type="email" class="form-control" placeholder="Email" required />
-                                    <button type="submit" class="btn-styled-removed"><img
-                                            src="/images/icons/right-shift.svg" alt="icon" /></button>
+                                    <button type="submit" class="btn-styled-removed"><img height="20" width="20"
+                                            height="20" width="20" src="/images/icons/right-shift.svg"
+                                            alt="icon" /></button>
                                 </div>
                             </form>
                         </div>
@@ -860,11 +896,20 @@ York City and Miami area.">
         <!-- Page wrapper end -->
     </div>
     <!-- Wrapper end -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/aos.js"></script>
+
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/slick.js"></script>
     <script src="../js/custom.js"></script>
-    <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
+    <script defer>
+        setTimeout(function () {
+            var script = document.createElement('script');
+            script.async = true;
+            var cacheControl = 'max-age=8600000';
+            script.src = 'https://crm.zoho.com/crm/javascript/zcga.js';
+            document.head.appendChild(script);
+        }, 5000);
+    </script>
 </body>
+
 </html>

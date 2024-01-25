@@ -72,6 +72,11 @@
     .btn-submit-wrap {
         padding-top: 23px;
     }
+    .g-recaptcha {
+        > div {
+            margin: 10px auto 27px;
+        }
+    }
     .select-wrapper-row {
         .col {
             max-width: 33.33%;

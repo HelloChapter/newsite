@@ -31,12 +31,11 @@
         content="https://hellochapter.com/images/og-images/projects/nyc/tribecalobbyrenovation.jpg" />
     <meta name="twitter:label1" content="Est. reading time" />
     <meta name="twitter:data1" content="1 minute" /> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../scss/new-case-study.css" />
+    
+<link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/slick.css?rsct=text/css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">    <link rel="stylesheet" href="../../scss/new-case-study.css" />
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -54,7 +53,7 @@
         fbq('track', 'PageView');
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script>
+     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script> -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -82,18 +81,21 @@
     </script>
     <!-- Microsoft Ads Conversion Tracking -->
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');</script>
-    <!-- End Google Tag Manager -->
- <script
-        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
-    <!-- Crisp chat end -->
+     <script>
+        $(document).ready(function () {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');
+            // <!-- End Google Tag Manager -->
+            window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+            // <!-- Crisp chat end -->
+        }, 5000);
+    </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -112,7 +114,7 @@
                     <div class="header-nav row no-gutters">
                         <div class="col col-logo">
                             <div class="logo">
-                                <a href="/" title="Home "><img src="/images/icons/logo.svg" alt="logo" />
+                                <a href="/" title="Home "><img height="20" width="20" src="/images/icons/logo.svg" alt="logo" />
                                 </a>
                             </div>
                         </div>
@@ -410,7 +412,7 @@
                         <div class="col col-footer-logo">
                             <div class="footer-logo">
                                 <a href="/" title="Home
-                                        "><img src="/images/icons/footer-logo.svg" alt="footer logo" />
+                                        "><img height="20" width="20" src="/images/icons/footer-logo.svg" alt="footer logo" />
                                 </a>
                             </div>
                         </div>
@@ -454,6 +456,10 @@
                                     <a href="https://www.facebook.com/hellochapter" title="Facebook "
                                         target="_blank">Facebook</a>
                                 </li>
+ <li>
+                                    <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768" title="Houzz "
+                                        target="_blank">Houzz</a>
+                                </li>
                                 <li>
                                     <a href="https://www.pinterest.com/chapterrenovations/" title="Twitter
                                             " target="_blank">Pinterest</a>
@@ -492,7 +498,7 @@
                                 <div class="form-group">
                                     <input type="email" class="form-control" placeholder="Email" required />
                                     <button type="submit" class="btn-styled-removed"><img
-                                            src="/images/icons/right-shift.svg" alt="icon" /></button>
+                                            height="20" width="20" src="/images/icons/right-shift.svg" alt="icon" /></button>
                                 </div>
                             </form>
                         </div>
@@ -504,11 +510,20 @@
         <!-- Page wrapper end -->
     </div>
     <!-- Wrapper end -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./../../js/custom.js"></script>
-<script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
+        <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
+
+        <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/aos.js"></script>
+
+<script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/slick.js"></script>       <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/custom.js"></script>
+
+<script defer>
+        setTimeout(function () {
+            var script = document.createElement('script');
+            script.async = true;
+            var cacheControl = 'max-age=8600000';
+            script.src = 'https://crm.zoho.com/crm/javascript/zcga.js';
+            document.head.appendChild(script);
+        }, 5000);
+    </script>
 </body>
 </html>

@@ -12,6 +12,7 @@ var postDataObject = {
   "fbc": "",
   "fbp": "",
   "originalUrl": "",
+  "recaptchaToken": ""
 }
 // Email Validation
 function isEmail(email) {
@@ -105,7 +106,17 @@ window.addEventListener("pageshow", (event) => {
   }
   $('form').get(0).reset();
 });
-function handleContactSubmit(e) {
+
+// reCaptcha callback function
+function reCaptchaChallenge(siteToken){
+  // here we will remove the restriction added on submitting form.
+  $(recaptcha_id).hide();
+  postDataObject.recaptchaToken = siteToken;
+}
+
+var recaptcha_id = document.getElementById("recaptcha-error")
+$(recaptcha_id).hide();
+function submitForm(e) {
   // Read cookies parameter 
   const cookieValue_fbp = document.cookie
     .split("; ")
@@ -149,6 +160,12 @@ function handleContactSubmit(e) {
     $("textarea[name='projectDescription']").parent().addClass("error");
     return false;
   }
+
+  // Handle reCAPTCHA not verified  
+  if (postDataObject.recaptchaToken === undefined || postDataObject.recaptchaToken === "") {
+    $(recaptcha_id).show();
+    return false;
+  }
   if (isValid) {
     var emailElement = document.getElementById('contact-email-field-id');
     //console.log("emailElement1");
@@ -156,14 +173,6 @@ function handleContactSubmit(e) {
       localStorage.setItem('email', emailElement.value);
       emailElement.setAttribute("data-email", emailElement.value);
     }
-    //window.dataLayer = window.dataLayer || [];
-    //function gtag() { dataLayer.push(arguments); }
-    //gtag('js', new Date());
-    //gtag('config', 'UA-225495044-1');
-    // gtag('set', 'user_data', {
-    //     "email": localStorage.getItem('email') != undefined ? localStorage.getItem('email') : null,
-    // });
-    //gtag('event', 'conversion', { 'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo' });
     $('#loader').show();
     inputs.each(function () {
       $(this).attr("disabled", "disabled");

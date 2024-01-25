@@ -60,7 +60,7 @@
                 &:after {
                     content: '';
                     display: block;
-                    background-image: url('../../images/icons/Left.svg');
+                    background-image: url('https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/Left.svg');
                     background-position: center center;
                     background-size: cover;
                     background-repeat: no-repeat;
@@ -74,7 +74,7 @@
             .slick-next {
                 right: 12px;
                 &:after {
-                    background-image: url('../../images/icons/Right.svg');
+                    background-image: url('https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/Right.svg');
                 }
             }
             .slick-dots {

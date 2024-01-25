@@ -45,6 +45,11 @@
 @media (max-width:767px) {
     .section-project-category {
         top: 94px;
+        ul {
+            li {
+                padding: 0 10px;
+            }
+        }
     }
 }
 // 767 end

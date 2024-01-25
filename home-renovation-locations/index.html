@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <link rel="icon" href="https://hellochapter.com/favicon.ico" />
@@ -28,15 +29,14 @@
         content="Chapter is a professional home renovation and remodeling contractor company offering full-service design and build services. We specialize in interior remodeling of homes, apartments and townhouses in the New York City and Miami area.">
     <meta property="twitter:image"
         content="https://hellochapter.com/images/locations-style/corinne-kutz-SnvX8KIqCHQ-unsplash.png">
-    <!-- <meta name="twitter:card" content="https://hellochapter.com/images/og-images/other/locations.png"/>
-        <meta name="twitter:label1" content="Est. reading time" />
-        <meta name="twitter:data1" content="1 minute" /> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/slick.css?rsct=text/css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="../scss/pages/locations-style.css" />
+    <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
+
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -54,7 +54,7 @@
         fbq('track', 'PageView');
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script> -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -82,19 +82,23 @@
     </script>
     <!-- Microsoft Ads Conversion Tracking -->
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');</script>
-    <!-- End Google Tag Manager -->
-    <script
-        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
-    <!-- Crisp chat end -->
+    <script>
+        $(document).ready(function () {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');
+            // <!-- End Google Tag Manager -->
+            window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+            // <!-- Crisp chat end -->
+        }, 5000);
+    </script>
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRJKFJK" height="0" width="0"
@@ -103,7 +107,7 @@
     <div class="wrapper">
         <div class="page-locations">
             <header class="aos-init " data-aos="fade">
-                                <button aria-label="Name" type="button" class="btn-styled-removed menu-btn-toggle">
+                <button aria-label="Name" type="button" class="btn-styled-removed menu-btn-toggle">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -112,7 +116,8 @@
                     <div class="header-nav row no-gutters">
                         <div class="col col-logo">
                             <div class="logo">
-                                <a href="/" title="Home "><img src="/images/icons/logo.svg" alt="logo" />
+                                <a href="/" title="Home "><img height="20" width="20" src="/images/icons/logo.svg"
+                                        alt="logo" />
                                 </a>
                             </div>
                         </div>
@@ -177,7 +182,7 @@
                     <div class="row no-gutters">
                         <div class="col section-image-content aos-init
                                 aos-animate bg-image" data-aos="fade" data-aos-delay="200" style="background-image:
-                                url('../images/locations-style/corinne-kutz-SnvX8KIqCHQ-unsplash.png');">
+                                url('../images/locations-style/corinne-kutz-snvx8kiqchq-unsplash.webp');">
                         </div>
                         <div class="col section-content-col">
                             <div class="page-title text-center">
@@ -210,7 +215,7 @@
                         <div class="col col-location">
                             <a href="/nyc-renovation/" title="" class="stretched-link"></a>
                             <div class="locations-image bg-image" style="background-image:
-                                    url('../images/locations-style/pexels-somone-bull-12983798.png');">
+                                    url('../images/locations-style/pexels-somone-bull-12983798.webp');">
                                 <div class="anchor-">
                                     <h2>
                                         <a class="location-link-hover" href="/nyc-renovation/" title="Location
@@ -225,7 +230,7 @@
                         <div class="col col-location">
                             <a href="/miami-renovation/" title="" class="stretched-link"></a>
                             <div class="locations-image bg-image" style="background-image:
-                                    url('../images/locations-style/matin-keivanloo-50IeEWQfST0-unsplash.png');">
+                                    url('../images/locations-style/matin-keivanloo-50IeEWQfST0-unsplash.webp');">
                                 <div class="anchor-">
                                     <h2>
                                         <a class="location-link-hover" href="/miami-renovation/"
@@ -244,10 +249,10 @@
                     <div class="container">
                         <div class="row no-gutters">
                             <div class="col bg-image col-image desktop-bg-image" style="background-image:
-                            url('../images/locations-style/get-to-know-us2.png');">
+                            url('../images/locations-style/get-to-know-us2.webp');">
                             </div>
                             <div class="col bg-image col-image mobile-bg-image" style="background-image:
-                            url('../images/locations-style/mobile-bg-image.png');">
+                            url('../images/locations-style/mobile-bg-image.webp');">
                             </div>
                             <div class="col col-content">
                                 <div class="content">
@@ -285,34 +290,41 @@
                                 </div>
                                 <div class="row">
                                     <div class="col col-item">
-                                        <img src="../images/locations-style/icons/Schedule-Icon.svg" alt="icon">
+                                        <img height="20" width="20"
+                                            src="../images/locations-style/icons/Schedule-Icon.svg" alt="icon">
                                         <h3>Schedule</h3>
                                     </div>
                                     <div class="col col-item">
-                                        <img src="../images/locations-style/icons/Photos-Icon.svg" alt="icon">
+                                        <img height="20" width="20"
+                                            src="../images/locations-style/icons/Photos-Icon.svg" alt="icon">
                                         <h3>Photos</h3>
                                     </div>
                                     <div class="col col-item">
-                                        <img src="../images/locations-style/icons/Finance-Icon.svg" alt="icon">
+                                        <img height="20" width="20"
+                                            src="../images/locations-style/icons/Finance-Icon.svg" alt="icon">
                                         <h3>Financials</h3>
                                     </div>
                                     <div class="col col-item">
-                                        <img src="../images/locations-style/icons/Design-Icon .svg" alt="icon">
+                                        <img height="20" width="20"
+                                            src="../images/locations-style/icons/Design-Icon .svg" alt="icon">
                                         <h3>Design  </h3>
                                     </div>
                                     <div class="col col-item">
-                                        <img src="../images/locations-style/icons/Live-Icon.svg" alt="icon">
+                                        <img height="20" width="20" src="../images/locations-style/icons/Live-Icon.svg"
+                                            alt="icon">
                                         <h3>Live updates</h3>
                                     </div>
                                     <div class="col col-item">
-                                        <img src="../images/locations-style/icons/Messages-Icon.svg" alt="icon">
+                                        <img height="20" width="20"
+                                            src="../images/locations-style/icons/Messages-Icon.svg" alt="icon">
                                         <h3>Messages</h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="col col-image">
                                 <div class="bg-img-image">
-                                    <img src="../images/locations-style/Client-Portal–Project-Overview.png" />
+                                    <img height="20" width="20"
+                                        src="../images/locations-style/client-portal-project-overview.webp" />
                                 </div>
                             </div>
                 </section>
@@ -320,7 +332,7 @@
                 <section class="section-future-good aos-init aos-animate" data-aos="fade">
                     <div class="row">
                         <div class="col bg-image col-image" style="background-image:
-                        url('../images/locations-style/frederik-lower-NCaH-Ba4MLg-unsplash1.png');">
+                        url('../images/locations-style/frederik-lower-NCaH-Ba4MLg-unsplash1.webp');">
                         </div>
                         <div class="col col-content">
                             <div class="content">
@@ -334,7 +346,7 @@
                                 </div>
                             </div>
                             <div class="icon-image text-right">
-                                <img src="../images/locations-style/image-circle.png" />
+                                <img height="20" width="20" src="../images/locations-style/image-circle.webp" />
                             </div>
                         </div>
                     </div>
@@ -347,7 +359,8 @@
                     <div class="row">
                         <div class="col col-footer-logo">
                             <div class="footer-logo">
-                                <a href="/" title="Home "><img src="/images/icons/footer-logo.svg" alt="footer logo" />
+                                <a href="/" title="Home "><img height="20" width="20"
+                                        src="/images/icons/footer-logo.svg" alt="footer logo" />
                                 </a>
                             </div>
                         </div>
@@ -358,7 +371,7 @@
                                             ">About</a>
                                 </li>
                                 <li>
-                                   <a href="/home-renovation-services/" title="Services ">Services</a>
+                                    <a href="/home-renovation-services/" title="Services ">Services</a>
                                 </li>
                                 <li>
                                     <a href="/how-chapter-home-renovation-works/" title="How It Works ">How It
@@ -390,6 +403,10 @@
                                 <li>
                                     <a href="https://www.facebook.com/hellochapter" title="Facebook "
                                         target="_blank">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
+                                        title="Houzz " target="_blank">Houzz</a>
                                 </li>
                                 <li>
                                     <a href="https://www.pinterest.com/chapterrenovations/" title="Twitter
@@ -427,7 +444,7 @@
                                     date!</h6>
                                 <div class="form-group">
                                     <input type="email" class="form-control" placeholder="Email" required />
-                                    <button type="submit" class="btn-styled-removed"><img
+                                    <button type="submit" class="btn-styled-removed"><img height="20" width="20"
                                             src="/images/icons/right-shift.svg" alt="icon" /></button>
                                 </div>
                             </form>
@@ -440,11 +457,18 @@
         <!-- Page wrapper end -->
     </div>
     <!-- Wrapper end -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./../js/custom.js"></script>
-    <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/aos.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/slick.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/custom.js"></script>
+    <script defer>
+        setTimeout(function () {
+            var script = document.createElement('script');
+            script.async = true;
+            var cacheControl = 'max-age=8600000';
+            script.src = 'https://crm.zoho.com/crm/javascript/zcga.js';
+            document.head.appendChild(script);
+        }, 5000);
+    </script>
 </body>
+
 </html>

@@ -39,9 +39,10 @@
         rel="stylesheet" async /> -->
     <link rel="stylesheet"
         href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/nice-select.css?rsct=text/css" async />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
     <link rel="preconnect" href="https://embedsocial.com/" />
     <link defer rel="stylesheet" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/index.css" />
+    <!-- <link rel="stylesheet" href="./scss/pages/index.css" /> -->
     <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"
         as="script" />
     <noscript>
@@ -50,16 +51,10 @@
         <link rel="stylesheet"
             href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css">
     </noscript>
-    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
+    <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
     <!-- Google tag (gtag.js) -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script> -->
     <script>
-        // setTimeout(function () {
-        //     var script = document.createElement('script');
-        //     script.async = true;
-        //     script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-225495044-1';
-        //     document.head.appendChild(script);
-        // }, 2000);
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=432821205070173&ev=PageView&noscript=1" />
@@ -189,7 +184,6 @@
                     window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
                     //<!-- Crisp chat end -->
                 }, 5000);
-                // google tagmanager end
             });
             // Ready function end
         })
@@ -981,7 +975,7 @@
                             </div>
                             <div class="form-fields-wrap">
                                 <div id="loader"></div>
-                                <form onsubmit="handleContactSubmit();  return false;" id="contact-form">
+                                <form onsubmit="submitForm();  return false;" id="contact-form">
                                     <div class="form-group row">
                                         <div class="col col-input">
                                             <div class="input-wrap">
@@ -1124,7 +1118,15 @@
                                         </div>
                                     </div>
                                     <div class="form-group text-center btn-submit-wrap">
-                                        <button type="submit" class="btn-submit btn-black">Submit</button>
+                                        <div class="g-recaptcha" data-sitekey="6LesnlkpAAAAAKMCoW6o_39PI09sdEedi2dCgOag"
+                                            data-callback="reCaptchaChallenge"></div>
+                                        <div class="recaptcha-error-wrap">
+                                            <label id="recaptcha-error" class="error-message recaptcha-error">Please
+                                                complete the reCAPTCHA verification.</label>
+                                        </div>
+                                        <button type="submit" class="btn-black">
+                                            Submit
+                                        </button>
                                     </div>
                                     <input type="hidden" id="zc_gad" name="zc_gad" value="" />
                                 </form>
@@ -1198,6 +1200,10 @@
                                         target="_blank">Facebook</a>
                                 </li>
                                 <li>
+                                    <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
+                                        title="Houzz " target="_blank">Houzz</a>
+                                </li>
+                                <li>
                                     <a href="https://www.pinterest.com/chapterrenovations/" title="Twitter
                       " target="_blank">Pinterest</a>
                                 </li>
@@ -1259,11 +1265,10 @@
     <script defer
         src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.nice-select.min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/custom.js"></script>
-    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/contact-home.js"></script>
+    <script defer src="./js/contact-home.js"></script>
     <script defer src="./js/home-page.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/home-slider.js"></script>
-    <script>
-    </script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script defer src="https://www.youtube.com/iframe_api"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -1285,7 +1290,7 @@
                 var player = document.getElementById("video-player")
                 player.pause();
                 if (player) {
-                   player.controls = false;
+                    player.controls = false;
                 }
                 setTimeout(function () {
                     player.play();
