@@ -1,7 +1,7 @@
 .section-project-category {
     padding: 5px 15px;
     position: sticky;
-    top: 105px;
+    top: 131px;
     left: 0;
     background-color: $white;
     z-index: 9;
@@ -38,13 +38,13 @@
 // 1440 end
 @media (max-width:1023px) {
     .section-project-category {
-        top: 98px;
+        top: 92px;
     }
 }
 // 1023 end
 @media (max-width:767px) {
     .section-project-category {
-        top: 94px;
+        top: 86px;
         ul {
             li {
                 padding: 0 10px;
