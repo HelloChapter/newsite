@@ -450,6 +450,9 @@ iframe {
   .page-title h1 {
     font-size: 25px;
   }
+  .middle-content {
+    padding-top: 100px;
+  }
 }
 .section-chapter-content {
   padding: 92px 0;
@@ -982,7 +985,7 @@ header nav ul {
           justify-content: center;
 }
 header nav ul li {
-  padding: 0 23px;
+  padding: 0 17px;
 }
 header nav a {
   font-size: 17px;
