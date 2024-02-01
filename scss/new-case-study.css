@@ -768,6 +768,8 @@ iframe {
   text-indent: -99em;
   font-size: 0;
   z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .after-before-slider .slick-arrow:after {
   content: "";
