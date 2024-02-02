@@ -1603,6 +1603,7 @@ footer .col-news-letter button img {
   }
   .section-image-content-location .image-label h6 {
     font-size: 14px;
+    line-height: 24px;
   }
 }
 @media (max-width: 767px) {
