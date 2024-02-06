@@ -12,7 +12,7 @@ var postDataObject = {
     "fbc": "",
     "fbp": "",
     "originalUrl": "",
-    // "recaptchaToken": ""
+    "recaptchaToken": ""
 }
 // Email Validation
 function isEmail(email) {
@@ -129,12 +129,12 @@ window.addEventListener("pageshow", (event) => {
 // reCaptcha callback function
 function reCaptchaChallenge(siteToken) {
     // here we will remove the restriction added on submitting form.
-    // $(recaptcha_id).hide();
-    // postDataObject.recaptchaToken = siteToken;
+    $(recaptcha_id).hide();
+    postDataObject.recaptchaToken = siteToken;
 }
 
-// var recaptcha_id = document.getElementById("recaptcha-error")
-// $(recaptcha_id).hide();
+var recaptcha_id = document.getElementById("recaptcha-error")
+$(recaptcha_id).hide();
 function submitForm() {
     // Read cookies parameter 
     const cookieValue_fbp = document.cookie
@@ -190,10 +190,10 @@ function submitForm() {
         return false;
     }
     // Handle reCAPTCHA not verified  
-    // if (postDataObject.recaptchaToken === undefined || postDataObject.recaptchaToken === "") {
-    //     $(recaptcha_id).show();
-    //     return false;
-    // }
+    if (postDataObject.recaptchaToken === undefined || postDataObject.recaptchaToken === "") {
+        $(recaptcha_id).show();
+        return false;
+    }
     if (isValid) {
         var emailElement = document.getElementById('contact-email-field-id-home');
         if (emailElement) {
@@ -215,7 +215,7 @@ function submitForm() {
         // get url 
         postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
         setTimeout(function () {
-            makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+            makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
             //makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
         }, 500);
     }
