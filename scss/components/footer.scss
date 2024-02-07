@@ -74,6 +74,14 @@ footer {
             margin-bottom: 26px;
             font-family: "Inter";
         }
+        h5 {
+            font-size: 17px;
+            line-height: 21px;
+            font-weight: 400;
+            color: $white;
+            margin-top: 6px;
+            font-family: "Inter";
+        }
 
         .form-group {
             position: relative;
@@ -278,6 +286,10 @@ footer {
             }
 
             h6 {
+                font-size: 14px;
+                line-height: 24px;
+            }
+            h5 {
                 font-size: 14px;
                 line-height: 24px;
             }

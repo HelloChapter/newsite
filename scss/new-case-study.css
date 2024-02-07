@@ -1389,6 +1389,14 @@ footer form h6 {
   margin-bottom: 26px;
   font-family: "Inter";
 }
+footer form h5 {
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 6px;
+  font-family: "Inter";
+}
 footer form .form-group {
   position: relative;
 }
@@ -1572,6 +1580,10 @@ footer .trusted-by li img {
     width: 46px;
   }
   footer form h6 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  footer form h5 {
     font-size: 14px;
     line-height: 24px;
   }
