@@ -960,6 +960,10 @@ header {
   width: 100%;
   background-color: #ffffff;
 }
+header .container {
+  max-width: 100%;
+  padding: 0 115px;
+}
 header .menu-btn-toggle {
   display: none;
 }
@@ -1076,7 +1080,15 @@ header .col-get-started a:hover {
   padding: 0 30px;
 }
 
+@media (max-width: 1660px) {
+  header .container {
+    padding: 0 80px;
+  }
+}
 @media (max-width: 1440px) {
+  header .container {
+    padding: 0 60px;
+  }
   header nav a {
     font-size: 14px;
     line-height: 17px;
@@ -1103,6 +1115,11 @@ header .col-get-started a:hover {
             flex: 0 0 160px;
   }
 }
+@media (max-width: 1199px) {
+  header .container {
+    padding: 0 30px;
+  }
+}
 @media (max-width: 1023px) {
   body:before {
     content: "";
@@ -1122,15 +1139,12 @@ header .col-get-started a:hover {
     padding: 29px 0;
     background-color: #ffffff !important;
   }
-  header .container {
-    padding: 0 40px;
-  }
   header .menu-btn-toggle {
     display: block;
     position: fixed;
     top: 34px;
     padding: 5px;
-    right: 25px;
+    right: 15px;
     z-index: 9999;
   }
   header .menu-btn-toggle span {
@@ -1169,7 +1183,7 @@ header .col-get-started a:hover {
             flex: 0 0 160px;
     position: fixed;
     top: 24px;
-    right: 75px;
+    right: 65px;
     z-index: 999;
   }
   header .col-get-started a {
@@ -1634,6 +1648,9 @@ footer .trusted-by li img {
   }
   footer .desktop-hide {
     display: block;
+  }
+  footer .container {
+    padding: 0 20px;
   }
   footer ul li + li {
     margin-top: 8px;

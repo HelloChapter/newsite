@@ -12,6 +12,11 @@ header {
     width: 100%;
     background-color: $white;
 
+    .container {
+        max-width: 100%;
+        padding: 0 115px;
+    }
+
     .menu-btn-toggle {
         display: none;
     }
@@ -132,8 +137,21 @@ header {
 }
 
 // Responsive UI start
+@media (max-width:1660px) {
+    header {
+        .container {
+            padding: 0 80px;
+        }
+    }
+}
+
+// 1660 end
 @media (max-width:1440px) {
     header {
+        .container {
+            padding: 0 60px;
+        }
+
         nav {
             a {
                 font-size: 14px;
@@ -172,7 +190,16 @@ header {
         }
     }
 }
+// 1240px end
 
+@media (max-width:1199px) {
+    header {
+        .container {
+            padding: 0 30px;
+        }
+    }
+}
+// 1199px
 @media (max-width:1023px) {
     body {
         &:before {
@@ -195,17 +222,12 @@ header {
     header {
         padding: 29px 0;
         background-color: $white !important;
-
-        .container {
-            padding: 0 40px;
-        }
-
         .menu-btn-toggle {
             display: block;
             position: fixed;
             top: 34px;
             padding: 5px;
-            right: 25px;
+            right: 15px;
             z-index: 9999;
 
             span {
@@ -245,7 +267,7 @@ header {
             flex: 0 0 160px;
             position: fixed;
             top: 24px;
-            right: 75px;
+            right: 65px;
             z-index: 999;
 
             a {
@@ -369,9 +391,11 @@ header {
                 max-width: 120px;
             }
         }
+
         .menu-btn-toggle {
-            top:32px;
+            top: 32px;
         }
+
         .contact-url {
             padding-right: 6px;
         }

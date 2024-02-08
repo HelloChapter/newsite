@@ -74,6 +74,7 @@ footer {
             margin-bottom: 26px;
             font-family: "Inter";
         }
+
         h5 {
             font-size: 17px;
             line-height: 21px;
@@ -289,6 +290,7 @@ footer {
                 font-size: 14px;
                 line-height: 24px;
             }
+
             h5 {
                 font-size: 14px;
                 line-height: 24px;
@@ -344,6 +346,10 @@ footer {
 
         .desktop-hide {
             display: block;
+        }
+
+        .container {
+            padding: 0 20px;
         }
 
         ul {
@@ -414,12 +420,15 @@ footer {
                 display: block;
             }
         }
+
         .col-dream-text {
             flex-direction: column;
+
             .privacy-link {
                 order: 0;
                 margin-bottom: 15px;
             }
+
             p {
                 order: 1;
             }
