@@ -323,6 +323,7 @@ function kitchen_plan_design_slider() {
         autoplaySpeed: 5000,
         variableWidth: false,
         arrows: false,
+        centerMode:true,
         responsive: [
             {
                 breakpoint: 9999,
