@@ -737,10 +737,22 @@
 
 // 1440 end
 @media (max-width:1196px) {
-    .section-plan-design-build .card .card-header {
-        min-height: 200px;
-        background-position: top center;
-        padding-bottom: 30%;
+    .section-plan-design-build {
+        padding:60px 0;
+        .card .card-header {
+            min-height: 200px;
+            background-position: top center;
+            padding-bottom: 30%;
+        }
+        .slick-track {
+            display: flex;
+        }
+        .slider-item {
+            height: inherit;
+        }
+        .slick-list {
+            padding: 0 100px !important;
+        }
     }
 }
 
@@ -851,7 +863,6 @@
     }
 
     .section-plan-design-build {
-        padding: 60px;
 
         .card {
             .card-content {
@@ -1353,7 +1364,9 @@
 
     .section-plan-design-build {
         padding: 30px 20px 71px;
-
+        .slick-list {
+            padding: 0 55px !important;
+        }
         .card .card-content {
             padding: 30px 20px 47px;
 
@@ -1361,6 +1374,9 @@
                 font-size: 35px;
                 line-height: 40px;
             }
+        }
+        .col {
+            padding: 0 15px;
         }
     }
 
