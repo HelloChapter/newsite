@@ -1,5 +1,15 @@
 [
   {
+    "id":21,
+    "blogUrl":"/how-to-pick-a-grout-color/",
+    "imageUrl": "../images/blog-images/how-to-pick-a-grout-color-images/how-to-pick-a-grout-color-images-1.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/nicole-barel.webp",
+    "writerName": "Nicole Barel",
+    "date": "Feb 12, 2024",
+    "title": "How to pick a grout color - Pro tips",
+    "introText": "Choosing the right grout color for your tile can make a significant difference i..."
+  },
+  {
     "id":0,
     "blogUrl":"/how-to-maximize-space-in-a-small-kitchen/",
     "imageUrl": "../images/blog-images/how-to-maximize-space-in-a-small-kitchen-images/how-to-maximize-space-in-a-small-kitchen-card.webp",
