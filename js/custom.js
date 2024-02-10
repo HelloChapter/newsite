@@ -223,7 +223,7 @@ jQuery(document).ready(function ($) {
             centerMode: false,
             cssEase: 'linear',
         });
-      }, 800);
+    }, 800);
     // announcement-bar slider end
     //NYC projects more cards
     $('.show-lesss-btn').hide();
@@ -261,7 +261,7 @@ jQuery(document).ready(function ($) {
         jQuery(this).parents(".col-location").toggleClass("hover-link");
     });
     kitchen_plan_design_slider();
-// kitchen-plan-design-build-slider end
+    // kitchen-plan-design-build-slider end
 });
 /*Ready function end*/
 // Js for global after before
@@ -301,7 +301,7 @@ function calculate_slider_height() {
     // detect screen size here and adjust div height accordingly
     var viewportWidth = window.innerWidth;
     const magicScrollNumber = 170;
-    var divTotalHeight = divHeight * (viewportWidth/magicScrollNumber);
+    var divTotalHeight = divHeight * (viewportWidth / magicScrollNumber);
     var setHeight = $('.empty-height-div');
     setHeight.height(divTotalHeight);
 }
@@ -323,7 +323,8 @@ function kitchen_plan_design_slider() {
         autoplaySpeed: 5000,
         variableWidth: false,
         arrows: false,
-        centerMode:true,
+        centerMode: true,
+        infinite: false,
         responsive: [
             {
                 breakpoint: 9999,
@@ -332,14 +333,25 @@ function kitchen_plan_design_slider() {
             {
                 breakpoint: 1197,
                 settings: {
-                    infinite: true,
                     dots: true
                 }
             }
-        ]
+        ],
+        beforeChange: function (event, slick, currentSlide, nextSlide) {
+            if (nextSlide === slick.slideCount - 1) {
+                $('.slick-next').hide();
+            } else {
+                $('.slick-next').show();
+            }
+            if (nextSlide === 0) {
+                $('.slick-prev').hide();
+            } else {
+                $('.slick-prev').show();
+            }
+        }
     });
 }
 // kitchen-plan-design-build-slider end
-$(window).on('load', function() {
+$(window).on('load', function () {
     AOS.refresh();
- });
+});
