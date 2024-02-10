@@ -30,6 +30,16 @@
     "introText": "Renovating a single-family home in Miami offers an exciting opportunity to..."
   },
   {
+    "id":24,
+    "blogUrl":"/brownstones-and-townhouses-in-nyc-a-detailed-renovation-guide/",
+    "imageUrl": "../images/blog-images/brownstones-and-townhouses-in-nyc-a-detailed-renovation-guide-images/brownstone-townhouse-renovation-card.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Eli-Moyal.webp",
+    "writerName": "Eli Moyal",
+    "date": "Jan 10, 2024",
+    "title": "Brownstones and townhouses in NYC: A detailed renovation guide",
+    "introText": "Renovating a brownstone or townhouse in New York City offers a blend of chal..."
+  },
+  {
     "id":0,
     "blogUrl":"/how-to-maximize-space-in-a-small-kitchen/",
     "imageUrl": "../images/blog-images/how-to-maximize-space-in-a-small-kitchen-images/how-to-maximize-space-in-a-small-kitchen-card.webp",
