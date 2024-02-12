@@ -135,7 +135,31 @@ function reCaptchaChallenge(siteToken) {
 
 var recaptcha_id = document.getElementById("recaptcha-error")
 $(recaptcha_id).hide();
-function submitForm() {
+function submitForm(e) {
+
+    // 6Ldk1m8pAAAAABXM7ctLEIsWtyy3JX2nYWJqS376 - site key
+    // 6Ldk1m8pAAAAAP-0wApr9PyV_RyHc4o9lPm0-3TP - secret key
+
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6Ldk1m8pAAAAABXM7ctLEIsWtyy3JX2nYWJqS376', {action: 'submit'}).then(function(token) {
+            // Add your logic to submit to your backend server here.
+            console.log(token);
+
+            fetch('https://www.google.com/recaptcha/api/siteverify', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'secret=6Ldk1m8pAAAAAP-0wApr9PyV_RyHc4o9lPm0-3TP&response=' + token
+            }).then((response) => {
+                return response.json();
+            }).then((data) => {
+                console.log(data);
+            })
+        });
+    });
+
+    return false;
     // Read cookies parameter 
     const cookieValue_fbp = document.cookie
         .split("; ")
@@ -190,10 +214,11 @@ function submitForm() {
         return false;
     }
     // Handle reCAPTCHA not verified  
-    if (postDataObject.recaptchaToken === undefined || postDataObject.recaptchaToken === "") {
-        $(recaptcha_id).show();
-        return false;
-    }
+    // if (postDataObject.recaptchaToken === undefined || postDataObject.recaptchaToken === "") {
+    //     $(recaptcha_id).show();
+    //     return false;
+    // }
+    postDataObject.recaptchaToken = "6LesnlkpAAAAAKMCoW6o_39PI09sdEedi2dCgOag"
     if (isValid) {
         var emailElement = document.getElementById('contact-email-field-id-home');
         if (emailElement) {
@@ -215,7 +240,7 @@ function submitForm() {
         // get url 
         postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
         setTimeout(function () {
-            makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+            makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
             //makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
         }, 500);
     }
