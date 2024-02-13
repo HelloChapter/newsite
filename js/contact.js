@@ -189,15 +189,16 @@ function submitForm(e) {
     // get url 
     postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
 
-    // 6Ldk1m8pAAAAABXM7ctLEIsWtyy3JX2nYWJqS376 - site key
+    // 6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk - site key
+    // check if its the same key as used in the respective html page
 
         grecaptcha.ready(function() {
-        grecaptcha.execute('6Ldk1m8pAAAAABXM7ctLEIsWtyy3JX2nYWJqS376', {action: 'submit'})
+        grecaptcha.execute('6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk', {action: 'submit'})
             .then(function(token) {
                 // add generated token to the post data object
                 postDataObject.recaptchaToken = token;
                 setTimeout(function () {
-                    makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+                    makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
                     // makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
                 }, 500);
                 
