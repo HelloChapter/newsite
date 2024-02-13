@@ -94,6 +94,7 @@ function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
             callback(result)
         },
         error: function (jqXHR, exception) {
+            // describes what needs to happen if form submission failed
             inputs.each(function () {
                 $(this).attr("disabled", "false");
             })
@@ -135,7 +136,7 @@ function reCaptchaChallenge(siteToken) {
 
 var recaptcha_id = document.getElementById("recaptcha-error")
 $(recaptcha_id).hide();
-function submitForm() {
+function submitForm(e) {
     // Read cookies parameter 
     const cookieValue_fbp = document.cookie
         .split("; ")
@@ -190,10 +191,10 @@ function submitForm() {
         return false;
     }
     // Handle reCAPTCHA not verified  
-    if (postDataObject.recaptchaToken === undefined || postDataObject.recaptchaToken === "") {
-        $(recaptcha_id).show();
-        return false;
-    }
+    // if (postDataObject.recaptchaToken === undefined || postDataObject.recaptchaToken === "") {
+    //     $(recaptcha_id).show();
+    //     return false;
+    // }
     if (isValid) {
         var emailElement = document.getElementById('contact-email-field-id-home');
         if (emailElement) {
@@ -214,10 +215,27 @@ function submitForm() {
         postDataObject.fbp = payload.fbp;
         // get url 
         postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
-        setTimeout(function () {
-            makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
-            //makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
-        }, 500);
+
+        // 6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk - site key
+        // check if its the same key as used in the respective html page
+
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk', {action: 'submit'})
+                .then(function(token) {
+                    // add generated token to the post data object
+                    postDataObject.recaptchaToken = token;
+                    setTimeout(function () {
+                        makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+                        // makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
+                    }, 500);
+                    
+                })
+                .catch(err => {
+                    // recaptcha token not generated.
+                    // reset form ??
+                    console.log(err);
+                });
+        });
     }
     else {
         $('#loader').hide();
