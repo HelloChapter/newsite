@@ -94,6 +94,7 @@ function makeAjaxCall(url, type, crossDomain, dataObject, callback) {
             callback(result)
         },
         error: function (jqXHR, exception) {
+            // describes what needs to happen if form submission failed
             inputs.each(function () {
                 $(this).attr("disabled", "false");
             })
@@ -136,30 +137,6 @@ function reCaptchaChallenge(siteToken) {
 var recaptcha_id = document.getElementById("recaptcha-error")
 $(recaptcha_id).hide();
 function submitForm(e) {
-
-    // 6Ldk1m8pAAAAABXM7ctLEIsWtyy3JX2nYWJqS376 - site key
-    // 6Ldk1m8pAAAAAP-0wApr9PyV_RyHc4o9lPm0-3TP - secret key
-
-    grecaptcha.ready(function() {
-        grecaptcha.execute('6Ldk1m8pAAAAABXM7ctLEIsWtyy3JX2nYWJqS376', {action: 'submit'}).then(function(token) {
-            // Add your logic to submit to your backend server here.
-            console.log(token);
-
-            fetch('https://www.google.com/recaptcha/api/siteverify', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: 'secret=6Ldk1m8pAAAAAP-0wApr9PyV_RyHc4o9lPm0-3TP&response=' + token
-            }).then((response) => {
-                return response.json();
-            }).then((data) => {
-                console.log(data);
-            })
-        });
-    });
-
-    return false;
     // Read cookies parameter 
     const cookieValue_fbp = document.cookie
         .split("; ")
@@ -218,7 +195,6 @@ function submitForm(e) {
     //     $(recaptcha_id).show();
     //     return false;
     // }
-    postDataObject.recaptchaToken = "6LesnlkpAAAAAKMCoW6o_39PI09sdEedi2dCgOag"
     if (isValid) {
         var emailElement = document.getElementById('contact-email-field-id-home');
         if (emailElement) {
@@ -239,10 +215,27 @@ function submitForm(e) {
         postDataObject.fbp = payload.fbp;
         // get url 
         postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
-        setTimeout(function () {
-            makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
-            //makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
-        }, 500);
+
+        // 6Ldk1m8pAAAAABXM7ctLEIsWtyy3JX2nYWJqS376 - site key
+        // check if its the same key as used in the respective html page
+
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6Ldk1m8pAAAAABXM7ctLEIsWtyy3JX2nYWJqS376', {action: 'submit'})
+                .then(function(token) {
+                    // add generated token to the post data object
+                    postDataObject.recaptchaToken = token;
+                    setTimeout(function () {
+                        makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+                        // makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
+                    }, 500);
+                    
+                })
+                .catch(err => {
+                    // recaptcha token not generated.
+                    // reset form ??
+                    console.log(err);
+                });
+        });
     }
     else {
         $('#loader').hide();
