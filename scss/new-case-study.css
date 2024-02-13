@@ -324,6 +324,13 @@ h2 {
   text-transform: uppercase;
 }
 
+.page-title2 h1 {
+  font-size: 70px;
+  line-height: 1.21;
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+}
+
 .stretched-link {
   text-align: center;
   text-decoration: none;
@@ -452,6 +459,12 @@ iframe {
   }
   .middle-content {
     padding-top: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .page-title2 h1 {
+    font-size: 45px;
+    line-height: 60px;
   }
 }
 .section-chapter-content {

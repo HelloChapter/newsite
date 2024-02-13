@@ -144,6 +144,14 @@ h2 {
         text-transform: uppercase;
     }
 }
+.page-title2 {
+    h1 {
+        font-size: 70px;
+        line-height: 1.21;
+        letter-spacing: 0px;
+        margin-bottom: 30px;
+    }
+}
 
 .stretched-link {
     text-align: center;
@@ -303,12 +311,12 @@ iframe {
 
 // 1199 end
 @media (max-width:767px) {
-    // .btn-black-bg {
-    //     min-height: 67px;
-    //     min-width: 183px;
-    //     font-size: 19px;
-    //     line-height:23px;
-    // }
+    .page-title2 {
+        h1 {
+            font-size: 45px;
+            line-height: 60px;
+        }
+    }
 }
 
 // 767 end

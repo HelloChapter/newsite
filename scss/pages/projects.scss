@@ -459,6 +459,16 @@
     }
 }
 
+.section-location-project-fingertips {
+    .new-section-title {
+        h2 {
+            font-size: 70px;
+            line-height: 1.21;
+            letter-spacing: 0px;
+        }
+    }
+}
+
 // Responsive Start
 @media (max-width:1600px) {
     .section-what-we-know {
@@ -984,9 +994,15 @@
             .right-arrow-click {
                 bottom: 30px;
             }
+
+            img {
+                max-width: 40px;
+            }
         }
 
         .card-image {
+            min-height: 176px;
+
             &.desktop-image {
                 display: none;
             }
@@ -994,6 +1010,21 @@
             &.tablet-image {
                 display: block;
             }
+        }
+    }
+
+    .section-image-content-location {
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .col-img-content {
+            order: 0;
+        }
+
+        .col-img {
+            order: 1;
         }
     }
 }
@@ -1268,11 +1299,25 @@
                 top: auto;
                 bottom: 20px;
             }
+
+            img {
+                max-width: 30px;
+            }
         }
 
         .card-image {
-            min-height: 200px;
-            padding-bottom: 56.25%;
+            min-height: 107px;
+            padding-bottom: 30%;
+        }
+    }
+    .section-location-project-fingertips {
+        .new-section-title {
+            max-width: 350px;
+            h2 {
+                font-size: 45px;
+                line-height: 60px;
+                letter-spacing: 0px;
+            }
         }
     }
 }

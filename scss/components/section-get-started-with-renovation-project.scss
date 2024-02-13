@@ -82,6 +82,14 @@
                 background-image: url('../../images/icons/airoplane.svg');
             }
         }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+            .circle {
+                display: none;
+            }
+        }
 
         h6 {
             font-size: 17px;
