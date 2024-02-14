@@ -44,7 +44,11 @@
             href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/contact-style.css?rsct=text/css">
     </noscript>
     <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
+
+    <!-- recaptcha -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk"></script>
+    <!-- recaptcha -->
 
     <!-- Meta Pixel Code -->
     <script>
@@ -139,6 +143,20 @@
           }
         </script>
     <!-- organization structured data end -->
+    <script type="application/ld+json" class="reviews-schema" data-ref="83b69a6b84bd75b0ddd7c6dc541e1ef8f5479a7f">
+        {
+            "@context": https://schema.org, 
+            "@type": "Product", 
+            "name": "Chapter-New York", 
+            "aggregateRating": 
+            { 
+                "@type": "AggregateRating", 
+                "ratingValue": 5.0, 
+                "reviewCount": 91
+            }
+        }
+         </script>
+    <script src=https://embedsocial.com/cdn/rsh2.js></script>
 </head>
 
 <body>
@@ -380,12 +398,13 @@
                                     </div>
                                     <div class="form-group link-text">
                                         <!-- <button type="submit" class="btn-submit">submit</button> -->
-                                        <div class="g-recaptcha" data-sitekey="6LesnlkpAAAAAKMCoW6o_39PI09sdEedi2dCgOag"
-                                            data-callback="reCaptchaChallenge"></div>
+                                        <!-- <div class="g-recaptcha" data-sitekey="6LesnlkpAAAAAKMCoW6o_39PI09sdEedi2dCgOag"
+                                            data-callback="reCaptchaChallenge">
+                                        </div>
                                         <div class="recaptcha-error-wrap">
                                             <label id="recaptcha-error" class="error-message recaptcha-error">Please
                                                 complete the reCAPTCHA verification.</label>
-                                        </div>
+                                        </div> -->
                                         <button type="submit" class="btn-submit"> Submit </button>
                                     </div>
                                     <input type="hidden" id="zc_gad" name="zc_gad" value="" />
