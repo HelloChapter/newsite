@@ -225,6 +225,12 @@ jQuery(document).ready(function ($) {
         });
     }, 800);
     // announcement-bar slider end
+    setTimeout(() => {
+        AOS.init({
+            duration: 1200,
+        });
+    }, 300);
+    // Aos Animate
     //NYC projects more cards
     $('.show-lesss-btn').hide();
     $(".expand-project-nyc-btn .show-all-btn").click(function (event) {
@@ -253,10 +259,6 @@ jQuery(document).ready(function ($) {
         $(".miami-card-groups .expand-all-projects").slideUp();
         $('.new-projects-card-slider').slick('reinit');
     });
-    AOS.init({
-        duration: 1200,
-    });
-    // Aos Animate
     jQuery(".location-link-hover").hover(function () {
         jQuery(this).parents(".col-location").toggleClass("hover-link");
     });
