@@ -82,10 +82,12 @@
                 background-image: url('../../images/icons/airoplane.svg');
             }
         }
+
         &:last-child {
             &:after {
                 display: none;
             }
+
             .circle {
                 display: none;
             }
@@ -148,6 +150,10 @@
 
             +.content-item {
                 margin-top: 60px;
+            }
+
+            &:nth-child(2) {
+                margin-top: 90px;
             }
 
             &:last-child {
@@ -261,6 +267,7 @@
 @media (max-width:767px) {
     .section-get-started-with-renovation-project {
         padding: 60px 20px 0;
+
         .content {
             h2 {
                 margin-bottom: 30px;
@@ -281,6 +288,7 @@
                 font-size: 25px;
                 line-height: 30px;
             }
+
             h6 {
                 line-height: 24px;
             }
