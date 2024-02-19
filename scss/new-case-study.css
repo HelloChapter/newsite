@@ -1541,6 +1541,24 @@ footer .trusted-by li img {
           flex: 0 0 37%;
 }
 
+.general-contractor-license-wrap {
+  width: 100%;
+}
+
+.general-contractor-license-number {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 45px;
+  padding-top: 90px;
+}
+
 @media (max-width: 1660px) {
   footer .container,
   .footer-intro-text .container {
@@ -1566,6 +1584,11 @@ footer .trusted-by li img {
   footer .container,
   .footer-intro-text .container {
     padding: 0 60px;
+  }
+  .general-contractor-license-number {
+    padding-top: 120px;
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 @media (max-width: 1199px) {
@@ -1739,6 +1762,15 @@ footer .trusted-by li img {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+  .general-contractor-license-number {
+    padding-top: 30px;
+    text-align: center;
+    width: 100%;
+    padding-right: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .section-image-content .col-img {
