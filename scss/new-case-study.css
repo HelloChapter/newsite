@@ -1359,6 +1359,16 @@ footer {
   padding: 60px 0 50px;
   color: #ffffff;
 }
+footer input:-webkit-autofill,
+footer input:-webkit-autofill:hover,
+footer input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0px 1000px inherit inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  line-height: 30px;
+  font-size: 17px;
+}
 footer .mobile-hide {
   display: block;
 }

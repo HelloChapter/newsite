@@ -1112,7 +1112,8 @@
                                     <div class="quick_form_7_css" name="SIGNUP_BODY">
                                         <div>
                                             <form method="POST" id="zcampaignOptinForm"
-                                                onsubmit="submitNewsletterForm(event)" target="_zcSignup">
+                                                onsubmit="submitNewsletterForm(event)" target="_zcSignup"
+                                                action="https://zymul-zgpm.maillist-manage.com/weboptin.zc">
                                                 <h6 id="SIGNUP_HEADING">Join our newsletter to stay up to date!</h6>
                                                 <div class="form-group">
                                                     <div class="SIGNUP_FLD">
@@ -1183,7 +1184,7 @@
                                     onload="referenceSetter(this)" style="display:none;">
                             </div>
                             <input type="hidden" id="signupFormType" value="QuickForm_Horizontal">
-                            <div id="zcOptinOverLay" oncontextmenu="return false"
+                            <!-- <div id="zcOptinOverLay" oncontextmenu="return false"
                                 style="display:none;text-align: center; background-color: rgb(0, 0, 0); opacity: 0.5; z-index: 100; position: fixed; width: 100%; top: 0px; left: 0px; height: 988px;">
                             </div>
                             <div id="zcOptinSuccessPopup"
@@ -1193,7 +1194,7 @@
                                     <img src="https://zymul-zgpm.maillist-manage.com/images/videoclose.png">
                                 </span>
                                 <div id="zcOptinSuccessPanel"></div>
-                            </div>
+                            </div> -->
                             <div class="trusted-by mobile-hide">
                                 <h3>Trusted by</h3>
                                 <ul class="list-unstyled">
@@ -1369,15 +1370,15 @@
 
     <script>
         function submitNewsletterForm(event) {
-           // debugger;
+            // debugger;
             event.preventDefault();
-            
+
             const form = document.getElementById("zcampaignOptinForm");
             const formData = new FormData(form);
             console.log("form", + form)
             fetch("https://zymul-zgpm.maillist-manage.com/weboptin.zc", {
                 method: "POST",
-               body: formData
+                body: formData
             })
                 .then(response => response.json())
                 .then(data => {
