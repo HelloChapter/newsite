@@ -144,6 +144,7 @@ h2 {
         text-transform: uppercase;
     }
 }
+
 .page-title2 {
     h1 {
         font-size: 70px;
@@ -213,6 +214,13 @@ iframe {
     line-height: 40px;
     font-weight: 400;
     display: none;
+}
+
+#errorMsgDiv {
+    color: $red2;
+    font-size: 13px;
+    line-height: 40px;
+    font-weight: 400;
 }
 
 // Responsive CSS start
@@ -304,6 +312,7 @@ iframe {
             font-size: 25px;
         }
     }
+
     .middle-content {
         padding-top: 100px;
     }
