@@ -1112,7 +1112,7 @@
                                     <div class="quick_form_7_css" name="SIGNUP_BODY">
                                         <div>
                                             <form method="POST" id="zcampaignOptinForm"
-                                                onsubmit="submitNewsletterForm(event)" target="_zcSignup"
+                                                onsubmit="return submitNewsletterForm(event)" target="_zcSignup"
                                                 action="https://zymul-zgpm.maillist-manage.com/weboptin.zc">
                                                 <h6 id="SIGNUP_HEADING">Join our newsletter to stay up to date!</h6>
                                                 <div class="form-group">
@@ -1132,25 +1132,7 @@
                                                         marked field(s) below.</div>
                                                     <div style="position:relative;">
                                                         <div id="Zc_SignupSuccess" style="display: none;">
-                                                            <h5>Thanks for subscribing!</h5>
-
-                                                            <table width="100%" cellpadding="0" cellspacing="0"
-                                                                border="0">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td width="10%">
-                                                                            <img class="successicon"
-                                                                                src="https://zymul-zgpm.maillist-manage.com/images/challangeiconenable.jpg"
-                                                                                align="absmiddle">
-                                                                        </td>
-                                                                        <td>
-                                                                            <span id="signupSuccessMsg"
-                                                                                style="color: rgb(73, 140, 132); font-family: sans-serif; font-size: 14px;word-break:break-word">&nbsp;&nbsp;Thank
-                                                                                you for Signing Up</span>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
+                                                            <h5 id="signupSuccessMsg">Thanks for subscribing!</h5>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1370,27 +1352,28 @@
 
     <script>
         function submitNewsletterForm(event) {
-            // debugger;
             event.preventDefault();
-
             const form = document.getElementById("zcampaignOptinForm");
             const formData = new FormData(form);
-            console.log("form", + form)
+            console.log(form)
             fetch("https://zymul-zgpm.maillist-manage.com/weboptin.zc", {
                 method: "POST",
                 body: formData
             })
                 .then(response => response.json())
                 .then(data => {
-                    if (data.result && data.result.success) {
-                        document.getElementById("Zc_SignupSuccess").style.display = "block";
+                    if (data.targetUrl) {
+                        window.location.href = "/";
                     } else {
-                        console.error("Form submission failed:", data.result.message);
+                        // console.error("Form submission failed:", data);
+                        document.getElementById("Zc_SignupSuccess").style.display = "block";
                     }
                 })
                 .catch(error => {
-                    console.error("Error submitting form:", error);
+                    //  console.error("Error submitting form:", error);
+                    document.getElementById("Zc_SignupSuccess").style.display = "block";
                 });
+            return false;
         }
         document.addEventListener('DOMContentLoaded', function () {
             $(document).ready(function () {
