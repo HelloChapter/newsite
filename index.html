@@ -1111,52 +1111,51 @@
                                 <div id="customForm">
                                     <div class="quick_form_7_css" name="SIGNUP_BODY">
                                         <div>
-                                            <form method="POST" id="zcampaignOptinForm"
-                                                onsubmit="submitNewsletterForm(event)" target="_zcSignup"
-                                                action="https://zymul-zgpm.maillist-manage.com/weboptin.zc">
+                                            
+                                            <form 
+                                                method="POST" id="zcampaignOptinForm"
+                                                onsubmit="submitNewsletterForm1(event)" target="_self"
+                                                action=""
+                                            >
+                                                
                                                 <h6 id="SIGNUP_HEADING">Join our newsletter to stay up to date!</h6>
+                                                
                                                 <div class="form-group">
+
+                                                    <!-- email input field -->
                                                     <div class="SIGNUP_FLD">
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Email Address" changeitem="SIGNUP_FORM_FIELD"
-                                                            name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL">
+                                                        <input 
+                                                            type="text" class="form-control" 
+                                                            placeholder="Email Address" changeitem="SIGNUP_FORM_FIELD" 
+                                                            name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL"
+                                                        >
                                                     </div>
+                                                    <!-- email input field -->
+                                                    
+                                                    <!-- sign up button -->
                                                     <div class="SIGNUP_FLD">
                                                         <button type="submit" name="SIGNUP_SUBMIT_BUTTON"
                                                             id="zcWebOptin" value="" class="btn-styled-removed">
-                                                            <img height="20" width="20"
-                                                                src="/images/icons/right-shift.svg" alt="icon" />
+                                                            <img height="20" width="20" src="/images/icons/right-shift.svg" alt="icon" />
                                                         </button>
                                                     </div>
-                                                    <div style="display: none;" id="errorMsgDiv">Please correct the
-                                                        marked field(s) below.</div>
+                                                    <!-- sign up button -->
+                                                    
+                                                    <!-- form error message -->
+                                                    <div style="display: none;" id="errorMsgDiv">Please correct the marked field(s) below.</div>
+                                                    <!-- form error message -->
+                                                    
+                                                    <!-- thank you message upon successful subscription -->
                                                     <div style="position:relative;">
                                                         <div id="Zc_SignupSuccess" style="display: none;">
-                                                            <h5>Thanks for subscribing!</h5>
-
-                                                            <table width="100%" cellpadding="0" cellspacing="0"
-                                                                border="0">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td width="10%">
-                                                                            <img class="successicon"
-                                                                                src="https://zymul-zgpm.maillist-manage.com/images/challangeiconenable.jpg"
-                                                                                align="absmiddle">
-                                                                        </td>
-                                                                        <td>
-                                                                            <span id="signupSuccessMsg"
-                                                                                style="color: rgb(73, 140, 132); font-family: sans-serif; font-size: 14px;word-break:break-word">&nbsp;&nbsp;Thank
-                                                                                you for Signing Up</span>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
+                                                            <h5 id="signupSuccessMsg">Thanks for subscribing!</h5>
                                                         </div>
                                                     </div>
+
                                                 </div>
+
                                                 <input type="hidden" id="fieldBorder" value="">
-                                                <input type="hidden" id="submitType" name="submitType"
-                                                    value="optinCustomView">
+                                                <input type="hidden" id="submitType" name="submitType" value="optinCustomView">
                                                 <input type="hidden" id="emailReportId" name="emailReportId" value="">
                                                 <input type="hidden" id="formType" name="formType" value="QuickForm">
                                                 <input type="hidden" name="zx" id="cmpZuid" value="12d852193">
@@ -1169,14 +1168,12 @@
                                                 <input type="hidden" id="zc_Url" value="zymul-zgpm.maillist-manage.com">
                                                 <input type="hidden" id="new_optin_response_in" value="1">
                                                 <input type="hidden" id="duplicate_optin_response_in" value="0">
-                                                <input type="hidden" name="zc_trackCode" id="zc_trackCode"
-                                                    value="ZCFORMVIEW">
-                                                <input type="hidden" id="zc_formIx" name="zc_formIx"
-                                                    value="3zf7e0b828616f44b3dd3d031997957aa5e20281895973e4509607265583e00af6">
+                                                <input type="hidden" name="zc_trackCode" id="zc_trackCode" value="ZCFORMVIEW">
+                                                <input type="hidden" id="zc_formIx" name="zc_formIx" value="3zf7e0b828616f44b3dd3d031997957aa5e20281895973e4509607265583e00af6">
                                                 <input type="hidden" id="viewFrom" value="URL_ACTION">
-                                                <span style="display: none" id="dt_CONTACT_EMAIL">1,true,6,Contact
-                                                    Email,2</span>
+                                                <span style="display: none" id="dt_CONTACT_EMAIL">1,true,6,Contact Email,2</span>
                                             </form>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1369,29 +1366,6 @@
     <script defer src="https://www.youtube.com/iframe_api"></script>
 
     <script>
-        function submitNewsletterForm(event) {
-            // debugger;
-            event.preventDefault();
-
-            const form = document.getElementById("zcampaignOptinForm");
-            const formData = new FormData(form);
-            console.log("form", + form)
-            fetch("https://zymul-zgpm.maillist-manage.com/weboptin.zc", {
-                method: "POST",
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.result && data.result.success) {
-                        document.getElementById("Zc_SignupSuccess").style.display = "block";
-                    } else {
-                        console.error("Form submission failed:", data.result.message);
-                    }
-                })
-                .catch(error => {
-                    console.error("Error submitting form:", error);
-                });
-        }
         document.addEventListener('DOMContentLoaded', function () {
             $(document).ready(function () {
                 var animationPath = './js/scroll-animation.json';
