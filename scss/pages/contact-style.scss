@@ -46,14 +46,25 @@
 
 .page-contact {
     .form-wrap {
-        max-width: 580px;
-        margin: 0 auto;
-        padding: 0px 15px 70px;
+        max-width: 730px;
+        padding: 0px 0px 70px;
         position: relative;
     }
 
     .page-title {
-        padding-bottom: 32px;
+        padding-bottom: 42px;
+
+        h1 {
+            font-size: 75px;
+            line-height: 85px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 35px;
+            font-weight: 400;
+        }
     }
 
     .section-client-success .phone-graphic-img {
@@ -134,15 +145,126 @@
 .section-client-slider {
     padding-bottom: 115px;
 }
+
 .section-form {
     padding: 55px 115px;
+
+    .col-form {
+        padding-right: 30px;
+    }
+
     .col-image {
         max-width: 43.8%;
     }
+
     .bg-image {
         min-height: 414px;
     }
+
+    .col-mobile-image {
+        display: none;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+    }
+
+    .input-wrap {
+        position: relative;
+
+        &:after {
+            display: none;
+        }
+
+        .form-control {
+            border-bottom: 1px solid $black;
+            padding: 12px 0 20px;
+
+            @include placeholder-text {
+                color: $text-color2;
+                opacity: 1;
+            }
+        }
+
+        textarea {
+            min-height: 179px;
+        }
+
+        &.error {
+
+            .form-control::placeholder,
+            .form-control::-webkit-input-placeholder,
+            .form-control::-ms-input-placeholder,
+            .form-control:-ms-input-placeholder,
+            .form-control::-moz-placeholder,
+            .form-control:-moz-placeholder {
+                color: $text-color2;
+            }
+
+            .error-message {
+                display: block;
+                position: absolute;
+                bottom: -35px;
+                width: 100%;
+                left: 0;
+                font-size: 10px;
+                z-index: 1;
+            }
+        }
+    }
+
+    .btn-submit {
+        background-color: $black;
+        border: none;
+        color: $white;
+        text-transform: initial;
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 23px;
+        letter-spacing: 0;
+        text-decoration: none;
+        width: 100%;
+        min-height: 67px;
+    }
+
+    .thank-you-content-wrap {
+        padding-top: 100px;
+
+        .thank-you-content {
+            max-width: 486px;
+            margin: 0 auto;
+
+            .icon-wrap {
+                margin-bottom: 30px;
+            }
+
+            p {
+                font-weight: 300;
+            }
+
+            .links a {
+                background-color: black;
+                color: $white;
+                text-transform: initial;
+                font-family: "Inter";
+                font-weight: 700;
+                font-size: 19px;
+                line-height: 23px;
+                letter-spacing: 0;
+                text-decoration: none;
+                width: 100%;
+                min-height: 67px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 465px;
+                margin: 0 auto;
+            }
+        }
+    }
 }
+
 .contact-info-wrap {
     text-align: center;
     line-height: 35px;
@@ -195,10 +317,20 @@
 }
 
 //Responsive CSS start
+@media (max-width:1600px) {
+    .section-form {
+        padding: 50px 60px;
+    }
+}
+
 @media (max-width:1440px) {
     .page-contact {
         .form-wrap {
-            padding: 0px 15px 40px;
+            padding: 0px 0 40px;
+        }
+
+        .page-title p {
+            font-size: 17px;
         }
     }
 
@@ -218,9 +350,6 @@
     .section-client-slider {
         padding-bottom: 70px;
     }
-    .section-form {
-        padding: 50px 80px;
-    }
 }
 
 // 1440 end
@@ -228,32 +357,127 @@
     .section-expert address {
         font-size: 17px;
     }
+
     .section-form {
         padding: 50px 60px;
     }
 }
 
 // 1199 end
+@media (max-width:1099px) {
+    .page-contact {
+        .page-title {
+            h1 {
+                font-size: 70px;
+                line-height: 80px;
+
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+// 1099px end
 @media (max-width:1023px) {
     .section-expert {
         padding: 60px 0;
     }
 
     .page-contact .form-wrap {
-        padding: 0 20px 20px;
+        padding: 20px 19px 0;
+        margin: 0 auto;
+        max-width: 100%;
+
+        .page-title {
+            text-align: center;
+        }
     }
 
     .section-form {
+        padding: 0;
 
         .col-image,
         .col-form {
             max-width: 100%;
             flex: 0 0 100%;
+            padding: 0;
         }
 
         .bg-image {
-            padding-bottom: 75%;
+            padding-bottom: 48%;
             order: 1;
+            min-height: 373px;
+        }
+
+        .col-desktop-image {
+            display: none;
+        }
+
+        .col-mobile-image {
+            display: block;
+
+            .image-label {
+                width: auto;
+            }
+        }
+
+        .input-wrap {
+            textarea {
+                min-height: 149px;
+            }
+
+            .form-control {
+                padding: 12px 0 16px;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .btn-submit {
+            min-height: 45px;
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        .contact-info-wrap {
+            margin-top: 6px;
+
+            h6 {
+                font-size: 14px;
+            }
+        }
+
+        .social-wrap ul {
+            margin: 17px -30px 30px;
+            line-height: 0;
+
+            li {
+                padding: 0 15px;
+            }
+
+            img {
+                max-width: 24px;
+            }
+        }
+
+        .thank-you-content-wrap {
+            padding-top: 50px;
+
+            .thank-you-content {
+                .links a {
+                    font-size: 13px;
+                    line-height: 16px;
+                    min-height: 45px;
+                    max-width: 235px;
+                    margin-bottom: 24px;
+                }
+            }
         }
     }
 }
@@ -267,8 +491,15 @@
 
 // 991 end
 @media (max-width:767px) {
-    .page-contact .form-wrap {
-        max-width: 100%;
+    .page-contact {
+        .form-wrap {
+            max-width: 100%;
+        }
+
+        .page-title h1 {
+            font-size: 45px;
+            line-height: 60px;
+        }
     }
 
     .section-trusted-by {
@@ -283,6 +514,49 @@
                 img {
                     max-width: 100px;
                     max-height: 100px;
+                }
+            }
+        }
+    }
+
+    .section-form {
+        .bg-image {
+            min-height: 299px;
+
+            .image-label {
+                width: 100%;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        .input-wrap {
+            margin-bottom: 12px;
+
+            .form-control {
+                min-height: 48px;
+            }
+
+            textarea {
+                min-height: 164px;
+            }
+        }
+
+        .thank-you-content-wrap {
+            padding-top: 30px;
+            .thank-you-content {
+                padding: 0 20px;
+                .links a {
+                    max-width: 100%;
+                    margin-top: 15px;
+                }
+                .icon-wrap {
+                    margin-bottom: 0;
+                    img {
+                        max-width: 45px;
+                    }
                 }
             }
         }
@@ -305,7 +579,16 @@
 
         .col-input+.col-select,
         .col-input+.col-input {
-            margin: 15px 0;
+            margin: 0;
+        }
+    }
+
+    .contact-info-wrap .address-wrap {
+        flex-direction: column;
+
+        .address-group+.address-group {
+            border: none;
+            margin-top: 30px;
         }
     }
 }

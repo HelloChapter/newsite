@@ -237,9 +237,16 @@
                                     <div class="form-group row">
                                         <div class="col col-input">
                                             <div class="input-wrap">
-                                                <input type="text" class="form-control" placeholder="Full Name*"
+                                                <input type="text" class="form-control" placeholder="First Name*"
                                                     name="firstName" />
-                                                <label class="error-message">* Please enter your full name</label>
+                                                <label class="error-message">* Please enter your first name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col col-input">
+                                            <div class="input-wrap">
+                                                <input type="text" class="form-control" placeholder="Last Name*"
+                                                    name="lastName">
+                                                <label class="error-message">* Please enter your last name</label>
                                             </div>
                                         </div>
                                     </div>
@@ -365,7 +372,7 @@
                                             <textarea class="form-control"
                                                 placeholder="Tell us more about your project*" rows="5" minlength="5"
                                                 name="projectDescription"></textarea>
-                                            <label class="error-message">* Please enter your full name</label>
+                                            <!-- <label class="error-message">* Please tell us about your project</label> -->
 
                                         </div>
                                     </div>
@@ -383,9 +390,26 @@
                                     <input type="hidden" id="zc_gad" name="zc_gad" value="" />
                                 </form>
                             </div>
+                            <!-- form end -->
+                            <div class="thank-you-content-wrap  d-none">
+                                <div class="thank-you-content">
+                                    <div class="page-title text-center">
+                                        <div class="icon-wrap">
+                                            <img src="../images/icons/check-circle.svg" alt="icon">
+                                        </div>
+                                        <h1>Thank you for<br /> contacting us!</h1>
+                                        <p>A Chapter renovation expert will be in touch shortly.<br /> Until then, get
+                                            inspired by some of our work.</p>
+                                    </div>
+                                    <div class="links">
+                                        <a href="/all-renovation-projects/">Explore our projects</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Thank you wrap end -->
                         </div>
                         <div class="col col-image">
-                            <div class="bg-image"
+                            <div class="bg-image col-desktop-image"
                                 style="background-image:url('./../images/contact-img/contact-image2.webp');">
                                 <div class="image-label">
                                     <h6>Kitchen Renovation, NYC </h6>
@@ -400,7 +424,7 @@
                                     <div class="address-group col">
                                         <h6>Chapter New York</h6>
                                         <address>
-                                            (212) 680-4628<br/>
+                                            (212) 680-4628<br />
                                             345 7th Ave, New York, NY 10001
                                         </address>
                                         <p>NY license #624690</p>
@@ -408,7 +432,7 @@
                                     <div class="address-group col">
                                         <h6>Chapter Miami</h6>
                                         <address>
-                                            (305) 676-6787<br/>
+                                            (305) 676-6787<br />
                                             252 NW 29th St, Miami, FL 33127
                                         </address>
                                         <p>FL license #CBC1267423</p>
@@ -420,26 +444,32 @@
                                 <div class="social-wrap">
                                     <ul class="list-unstyled">
                                         <li>
-                                            <a href="https://www.facebook.com/hellochapter" target="_blank"><img src="../images/icons/facebook.svg"
-                                                    alt="icon"></a>
+                                            <a href="https://www.facebook.com/hellochapter" target="_blank"><img
+                                                    src="../images/icons/facebook.svg" alt="icon"></a>
                                         </li>
                                         <li>
-                                            <a href="https://www.instagram.com/chapter.renovations/" target="_blank"><img src="../images/icons/instagram.svg"
-                                                    alt="icon"></a>
+                                            <a href="https://www.instagram.com/chapter.renovations/"
+                                                target="_blank"><img src="../images/icons/instagram.svg" alt="icon"></a>
                                         </li>
                                         <li>
-                                            <a href="https://www.youtube.com/@hello.chapter" target="_blank"><img src="../images/icons/youtube.svg"
-                                                    alt="icon"></a>
+                                            <a href="https://www.youtube.com/@hello.chapter" target="_blank"><img
+                                                    src="../images/icons/youtube.svg" alt="icon"></a>
                                         </li>
                                         <li>
-                                            <a href="https://www.pinterest.com/chapterrenovations/" target="_blank"><img src="../images/icons/pinterest.svg"
-                                                    alt="icon"></a>
+                                            <a href="https://www.pinterest.com/chapterrenovations/" target="_blank"><img
+                                                    src="../images/icons/pinterest.svg" alt="icon"></a>
                                         </li>
                                         <li>
-                                            <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768" target="_blank"><img src="../images/icons/houzz.svg"
-                                                    alt="icon"></a>
+                                            <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
+                                                target="_blank"><img src="../images/icons/houzz.svg" alt="icon"></a>
                                         </li>
                                     </ul>
+                                </div>
+                            </div>
+                            <div class="bg-image col-mobile-image"
+                                style="background-image:url('./../images/contact-img/contact-image2.webp');">
+                                <div class="image-label">
+                                    <h6>Kitchen Renovation, NYC </h6>
                                 </div>
                             </div>
                         </div>
@@ -919,6 +949,13 @@
                                     </ul>
                                 </div>
                             </div>
+                            <div class="general-contractor-license-wrap mobile-hide">
+                                <div class="general-contractor-license-number">
+                                    <p>NY license #624690 <br />
+                                        FL license #CBC1267423
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                         <div class="trusted-by desktop-hide">
                             <h3>Trusted by</h3>
@@ -937,6 +974,13 @@
                                     </a>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="general-contractor-license-wrap desktop-hide">
+                            <div class="general-contractor-license-number">
+                                <p>NY license #624690 <br />
+                                    FL license #CBC1267423
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

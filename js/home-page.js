@@ -13,9 +13,9 @@ const editCursor = e => {
     cursor.style.left = x + 'px';
     cursor.style.top = y + 'px';
 };
-link.forEach(b => b.addEventListener('mousemove', animateit, {passive: true}));
-link.forEach(b => b.addEventListener('mouseleave', animateit, {passive: true}));
-window.addEventListener('mousemove', editCursor, {passive: true});
+link.forEach(b => b.addEventListener('mousemove', animateit, { passive: true }));
+link.forEach(b => b.addEventListener('mouseleave', animateit, { passive: true }));
+window.addEventListener('mousemove', editCursor, { passive: true });
 $(".diamond-square").css("display", "none");
 $(".section-confident .section-box").mouseenter(function () {
     $(".diamond-square").css("display", "block");
@@ -26,13 +26,13 @@ $(".section-confident .section-box").mouseleave(function () {
     $(".diamond-square").css("display", "none");
 });
 // Js for mobile devices
-window.addEventListener('touchmove', editCursor, {passive: true});
+window.addEventListener('touchmove', editCursor, { passive: true });
 const section_box = document.querySelector('.section-box');
-section_box.addEventListener('touchstart',{passive: true}, function (event) {
+section_box.addEventListener('touchstart', { passive: true }, function (event) {
     $(".diamond-square").css("display", "block");
     $("body").css("cursor", "none");
 });
-section_box.addEventListener('touchend',{passive: true}, function (event) {
+section_box.addEventListener('touchend', { passive: true }, function (event) {
     $("body").css("cursor", "inherit");
     $(".diamond-square").css("display", "none");
 });
@@ -159,4 +159,32 @@ $(window).on('load', function () {
         }, 100);
     }
 });
+
+const submitNewsletterForm1 = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const form = document.getElementById("zcampaignOptinForm");
+    const formData = new FormData(form);
+
+    fetch("https://zymul-zgpm.maillist-manage.com/weboptin.zc", {
+        method: "POST",
+        body: formData
+    })
+        .then(data => {
+            if (data.status === 200) {
+                document.getElementById("Zc_SignupSuccess").style.display = "block";
+                const firstNameInput = document.getElementById('EMBED_FORM_EMAIL_LABEL');
+                firstNameInput.value = '';
+                setTimeout(function () {
+                    document.getElementById("Zc_SignupSuccess").style.display = "none";
+                }, 6000);
+            } else {
+                console.error("Form submission failed:", data.result.message);
+            }
+        })
+        .catch(error => {
+            console.error("Error submitting form:", error);
+        });
+}
 // client section Next success story animation effect end

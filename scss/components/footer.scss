@@ -6,7 +6,15 @@ footer {
     background-color: $text-color;
     padding: 60px 0 50px;
     color: $white;
-
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+      -webkit-text-fill-color: $white;
+      -webkit-box-shadow: 0 0 0px 1000px inherit inset;
+      transition: background-color 5000s ease-in-out 0s;
+      line-height: 30px;
+      font-size: 17px;
+    }
     .mobile-hide {
         display: block;
     }
@@ -198,6 +206,18 @@ footer {
         flex: 0 0 37%;
     }
 }
+.general-contractor-license-wrap {
+    width: 100%;
+}
+.general-contractor-license-number {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 45px;
+    padding-top: 90px;
+}
 
 // Responsive UI start
 @media (max-width:1660px) {
@@ -236,6 +256,12 @@ footer {
     footer .container,
     .footer-intro-text .container {
         padding: 0 60px;
+    }
+
+    .general-contractor-license-number {
+        padding-top: 120px;
+        font-size: 14px;
+        line-height: 17px;
     }
 }
 
@@ -433,6 +459,14 @@ footer {
                 order: 1;
             }
         }
+    }
+
+    .general-contractor-license-number {
+        padding-top: 30px;
+        text-align: center;
+        width: 100%;
+        padding-right: 0;
+        justify-content: center;
     }
 }
 
