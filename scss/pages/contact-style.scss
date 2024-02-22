@@ -165,8 +165,18 @@
         display: none;
     }
 
-    .form-group {
-        margin-bottom: 30px;
+    form {
+        .row {
+            margin: 0 -12px;
+
+            .col {
+                padding: 0 12px;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
     }
 
     .input-wrap {
@@ -435,8 +445,10 @@
             }
         }
 
-        .form-group {
-            margin-bottom: 24px;
+        form {
+            .form-group {
+                margin-bottom: 24px;
+            }
         }
 
         .btn-submit {
@@ -519,6 +531,25 @@
         }
     }
 
+    .form-wrap {
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .form-name-row {
+            .col {
+                max-width: 50%;
+                flex: 0 0 50%;
+            }
+        }
+
+        .col-input+.col-select,
+        .col-input+.col-input {
+            margin: 0;
+        }
+    }
+
     .section-form {
         .bg-image {
             min-height: 299px;
@@ -528,7 +559,7 @@
             }
         }
 
-        .form-group {
+       form .form-group {
             margin-bottom: 0;
         }
 
@@ -546,14 +577,18 @@
 
         .thank-you-content-wrap {
             padding-top: 30px;
+
             .thank-you-content {
                 padding: 0 20px;
+
                 .links a {
                     max-width: 100%;
                     margin-top: 15px;
                 }
+
                 .icon-wrap {
                     margin-bottom: 0;
+
                     img {
                         max-width: 45px;
                     }
@@ -568,18 +603,6 @@
     .page-contact {
         .page-title {
             padding-bottom: 15px;
-        }
-    }
-
-    .form-wrap {
-        .col {
-            max-width: 100%;
-            flex: 0 0 100%;
-        }
-
-        .col-input+.col-select,
-        .col-input+.col-input {
-            margin: 0;
         }
     }
 
