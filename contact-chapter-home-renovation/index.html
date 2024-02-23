@@ -231,7 +231,7 @@
                                     <h1>Start a new <br /> Chapter with us</h1>
                                     <p>Submit this form and our renovation expert will get back to you shortly.</p>
                                 </div>
-                                <div id="loader"></div>
+                                <!-- <div id="loader"></div> -->
                                 <form onsubmit="submitForm();
                                         return false;" id="contact-form">
                                     <div class="form-group row form-name-row">
@@ -385,7 +385,7 @@
                                             <label id="recaptcha-error" class="error-message recaptcha-error">Please
                                                 complete the reCAPTCHA verification.</label>
                                         </div> -->
-                                        <button type="submit" class="btn-submit"> Submit </button>
+                                        <button type="submit" class="btn-submit"><span id="loader-spinner"></span> Submit </button>
                                     </div>
                                     <input type="hidden" id="zc_gad" name="zc_gad" value="" />
                                 </form>
@@ -482,11 +482,11 @@
                             <div class="content">
                                 <h2>How to get<br /> started with your<br /> renovation project</h2>
                                 <p>Let Chapter take you through a few free-of-charge steps before you decide.</p>
-                                <div class="btn-wrap">
+                                <!-- <div class="btn-wrap">
                                     <a href="../contact-chapter-home-renovation/" class="btn-black-bg"
                                         title="Let’s talk" tabindex="0">Let’s
                                         talk</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="col col-right">
@@ -501,11 +501,11 @@
                                             on the
                                             spot.</strong> We can then set up an appointment to meet you at your
                                         property.</p>
-                                    <div class="btn-wrap-mobile">
+                                    <!-- <div class="btn-wrap-mobile">
                                         <a href="../contact-chapter-home-renovation/" class="btn-black-bg"
                                             title="Let’s talk" tabindex="0">Let’s
                                             talk</a>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="content-item">
                                     <span class="circle"></span>
@@ -1021,6 +1021,7 @@
     <script defer src="../js/aos.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/slick.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/anime.js"></script>
+    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/lottie.min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.lazy.min.js"></script>
     <script defer src="../js/custom.js"></script>
     <script defer src="../js/contact.js"></script>
@@ -1030,6 +1031,19 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             $(document).ready(function () {
+                var animationPath = '../js/Loader.json';
+                var container = document.getElementById('loader-spinner');
+
+                // Load the Lottie animation
+                setTimeout(() => {
+                    var animation = lottie.loadAnimation({
+                        container: container,
+                        renderer: 'svg',
+                        loop: true,
+                        autoplay: true,
+                        path: animationPath
+                    });
+                }, 500);
                 $('.lazy').Lazy();
                 // Load lazy images
                 $('.modal-home-client-video .btn-close, .modal-home-client-video').click(function () {

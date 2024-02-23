@@ -174,7 +174,7 @@ function submitForm(e) {
       localStorage.setItem('email', emailElement.value);
       emailElement.setAttribute("data-email", emailElement.value);
     }
-    $('#loader').show();
+    $('#loader-spinner').show();
     inputs.each(function () {
       $(this).attr("disabled", "disabled");
     })
@@ -211,7 +211,7 @@ function submitForm(e) {
     });
   }
   else {
-    $('#loader').hide();
+    $('#loader-spinner').hide();
   }
   // return false;
 }
