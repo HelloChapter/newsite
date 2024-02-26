@@ -198,9 +198,11 @@ footer {
         flex: 0 0 37%;
     }
 }
+
 .general-contractor-license-wrap {
     width: 100%;
 }
+
 .general-contractor-license-number {
     font-size: 17px;
     line-height: 24px;
@@ -422,6 +424,7 @@ footer {
 
             ul {
                 justify-content: center;
+                margin: 0;
             }
 
             li {

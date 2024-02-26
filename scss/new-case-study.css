@@ -1739,6 +1739,7 @@ footer .trusted-by li img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 0;
   }
   footer .trusted-by li img {
     max-width: 57px;
