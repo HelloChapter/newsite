@@ -215,14 +215,12 @@ iframe {
     font-weight: 400;
     display: none;
 }
-
 #errorMsgDiv {
-    color: $red2;
+    color: #F67A7A;
     font-size: 13px;
     line-height: 40px;
     font-weight: 400;
 }
-
 // Responsive CSS start
 @media (max-width:1600px) {
     body {

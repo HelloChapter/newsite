@@ -40,6 +40,7 @@ jQuery(document).ready(function ($) {
         }
     });
     // Counter number js end
+    
     // About team click js
     $(".desktop-team-wrapper .team-image").click(function () {
         var current_item = $(this).attr("data-point-id");
@@ -357,3 +358,30 @@ function kitchen_plan_design_slider() {
 $(window).on('load', function () {
     AOS.refresh();
 });
+const submitNewsletterForm1 = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const form = document.getElementById("zcampaignOptinForm");
+    const formData = new FormData(form);
+
+    fetch("https://zymul-zgpm.maillist-manage.com/weboptin.zc", {
+        method: "POST",
+        body: formData
+    })
+        .then(data => {
+            if (data.status === 200) {
+                document.getElementById("Zc_SignupSuccess").style.display = "block";
+                const firstNameInput = document.getElementById('EMBED_FORM_EMAIL_LABEL');
+                firstNameInput.value = '';
+                setTimeout(function () {
+                    document.getElementById("Zc_SignupSuccess").style.display = "none";
+                }, 6000);
+            } else {
+                console.error("Form submission failed:", data.result.message);
+            }
+        })
+        .catch(error => {
+            console.error("Error submitting form:", error);
+        });
+}
