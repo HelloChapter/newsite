@@ -1366,12 +1366,6 @@ footer {
   padding: 60px 0 50px;
   color: #ffffff;
 }
-footer #Zc_SignupSuccess {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
 footer .mobile-hide {
   display: block;
 }
