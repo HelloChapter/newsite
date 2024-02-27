@@ -109,7 +109,7 @@ window.addEventListener("pageshow", (event) => {
 });
 
 // reCaptcha callback function
-function reCaptchaChallenge(siteToken){
+function reCaptchaChallenge(siteToken) {
   // here we will remove the restriction added on submitting form.
   $(recaptcha_id).hide();
   postDataObject.recaptchaToken = siteToken;
@@ -175,6 +175,8 @@ function submitForm(e) {
       emailElement.setAttribute("data-email", emailElement.value);
     }
     $('#loader-spinner').show();
+    $('#contact-form-submit-label').hide();
+    $('#loader-spinner-label').show();
     inputs.each(function () {
       $(this).attr("disabled", "disabled");
     })
@@ -192,26 +194,28 @@ function submitForm(e) {
     // 6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk - site key
     // check if its the same key as used in the respective html page
 
-        grecaptcha.ready(function() {
-        grecaptcha.execute('6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk', {action: 'submit'})
-            .then(function(token) {
-                // add generated token to the post data object
-                postDataObject.recaptchaToken = token;
-                setTimeout(function () {
-                    makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
-                    // makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
-                }, 500);
-                
-            })
-            .catch(err => {
-                // recaptcha token not generated.
-                // reset form ??
-                console.log(err);
-            });
+    grecaptcha.ready(function () {
+      grecaptcha.execute('6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk', { action: 'submit' })
+        .then(function (token) {
+          // add generated token to the post data object
+          postDataObject.recaptchaToken = token;
+          setTimeout(function () {
+            makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+            // makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
+          }, 500);
+
+        })
+        .catch(err => {
+          // recaptcha token not generated.
+          // reset form ??
+          console.log(err);
+        });
     });
   }
   else {
     $('#loader-spinner').hide();
+    $('#loader-spinner-label').hide();
+    $('#contact-form-submit-label').show();
   }
   // return false;
 }

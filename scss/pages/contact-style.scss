@@ -253,6 +253,11 @@
                 margin-right: 20px;
             }
         }
+
+        #loader-spinner-label {
+            display: none;
+        }
+
     }
 
     .thank-you-content-wrap {
@@ -507,6 +512,18 @@
                     margin-bottom: 24px;
                 }
             }
+        }
+    }
+
+    .section-get-started-with-renovation-project .content-item {
+        &:first-child {
+            .circle {
+                bottom: -45px;
+            }
+        }
+
+        &::nth-child(2) {
+            margin-top: 100px;
         }
     }
 }
