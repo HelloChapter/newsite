@@ -703,16 +703,34 @@
                                 data-type="signupform" style="">
                                 <div id="customForm">
                                     <div class="quick_form_7_css" name="SIGNUP_BODY">
-                                        <form method="POST" id="zcampaignOptinForm" style="margin: 0px; width: 100%; padding: 0 25px" action="https://zymul-zgpm.maillist-manage.com/weboptin.zc" target="_zcSignup">
-                                            <div style="background-color: rgb(255, 235, 232); padding: 10px; color: rgb(210, 0, 0); font-size: 11px; margin: 20px 0px 0px; border: 1px solid rgb(255, 217, 211); opacity: 1; display: none" id="errorMsgDiv">Please correct the marked field(s) below.</div>
-                                            <div style="position: relative; margin: 10px 0 15px; width: 220px; height: 30px; display: inline-block" class="SIGNUP_FLD">
-                                                <input type="text" style="font-size: 14px; border: 0; border-radius: 0; width: 100%; height: 100%; z-index: 4; outline: none; padding: 5px 10px; color: rgb(136, 136, 136); text-align: left; font-family: &quot;Arial&quot;; background-color: transparent; border: 0; background-color: rgb(255, 255, 255); box-sizing: border-box" placeholder="Email" changeitem="SIGNUP_FORM_FIELD" name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL">
+                                        <form method="POST" id="zcampaignOptinForm"
+                                            action="https://zymul-zgpm.maillist-manage.com/weboptin.zc"
+                                            target="_zcSignup">
+
+                                            <div class="form-group">
+                                                <div class="SIGNUP_FLD">
+                                                    <input type="text" class="form-control" placeholder="Email"
+                                                        changeitem="SIGNUP_FORM_FIELD" name="CONTACT_EMAIL"
+                                                        id="EMBED_FORM_EMAIL_LABEL">
+                                                    <div style="display: none;" id="errorMsgDiv">Please enter a valid
+                                                        email address.</div>
+                                                </div>
+                                                <div class="SIGNUP_FLD">
+                                                    <button type="submit" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin"
+                                                        value="" class="btn-styled-removed">
+                                                        <img height="20" width="20" src="/images/icons/right-shift.svg"
+                                                            alt="icon" />
+                                                    </button>
+                                                </div>
                                             </div>
-                                            <div style="position: relative; height: 30px; text-align: left; display: inline-block; width: 46px" class="SIGNUP_FLD">
-                                                <input type="button" style="text-align: center; width: 100%; height: 100%; z-index: 5; border: 1px solid; color: rgb(255, 255, 255); cursor: pointer; outline: none; font-size: 14px; background-color: rgb(35, 31, 32); margin: 0px 0px 0px -5px" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin" value=">">
+                                            <div style="position:relative;">
+                                                <div id="Zc_SignupSuccess" style="display: none;">
+                                                    <h5 id="signupSuccessMsg">Thanks for subscribing!</h5>
+                                                </div>
                                             </div>
                                             <input type="hidden" id="fieldBorder" value="">
-                                            <input type="hidden" id="submitType" name="submitType" value="optinCustomView">
+                                            <input type="hidden" id="submitType" name="submitType"
+                                                value="optinCustomView">
                                             <input type="hidden" id="emailReportId" name="emailReportId" value="">
                                             <input type="hidden" id="formType" name="formType" value="QuickForm">
                                             <input type="hidden" name="zx" id="cmpZuid" value="12d852193">
@@ -725,10 +743,13 @@
                                             <input type="hidden" id="zc_Url" value="zymul-zgpm.maillist-manage.com">
                                             <input type="hidden" id="new_optin_response_in" value="1">
                                             <input type="hidden" id="duplicate_optin_response_in" value="0">
-                                            <input type="hidden" name="zc_trackCode" id="zc_trackCode" value="ZCFORMVIEW">
-                                            <input type="hidden" id="zc_formIx" name="zc_formIx" value="3zf7e0b828616f44b3dd3d031997957aa5e20281895973e4509607265583e00af6">
+                                            <input type="hidden" name="zc_trackCode" id="zc_trackCode"
+                                                value="ZCFORMVIEW">
+                                            <input type="hidden" id="zc_formIx" name="zc_formIx"
+                                                value="3zf7e0b828616f44b3dd3d031997957aa5e20281895973e4509607265583e00af6">
                                             <input type="hidden" id="viewFrom" value="URL_ACTION">
-                                            <span style="display: none" id="dt_CONTACT_EMAIL">1,true,6,Contact Email,2</span>
+                                            <span style="display: none" id="dt_CONTACT_EMAIL">1,true,6,Contact
+                                                Email,2</span>
                                         </form>
                                     </div>
                                 </div>
@@ -934,7 +955,7 @@
             script.src = 'https://crm.zoho.com/crm/javascript/zcga.js';
             document.head.appendChild(script);
         }, 100);
-        
+
     </script>
 </body>
 
