@@ -167,6 +167,7 @@
             /*Before submit, if you want to trigger your event, "include your code here"*/
         };
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3MXIcoTiInqtSGlXE0cNF28rYSWPTIoQ&libraries=places"></script>
 </head>
 
 <body>
@@ -279,7 +280,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="input-wrap">
-                                            <input type="text" class="form-control" placeholder="Project Address*"
+                                            <input type="text" id="autocomplete" class="form-control" placeholder="Project Address*"
                                                 name="streetAddress" />
                                             <label class="error-message"> * Please enter your project address</label>
                                         </div>
@@ -396,8 +397,9 @@
                                         <button type="submit" class="btn-submit">
                                             <span id="loader-spinner" class="loader-spinner-wrap">
                                             </span>
-                                            <span id="loader-spinner-label">Please Wait...</span> 
-                                           <label id="contact-form-submit-label" class="contact-form-submit-label"> Submit</label>
+                                            <span id="loader-spinner-label">Please Wait...</span>
+                                            <label id="contact-form-submit-label" class="contact-form-submit-label">
+                                                Submit</label>
                                         </button>
                                     </div>
                                     <input type="hidden" id="zc_gad" name="zc_gad" value="" />
@@ -1116,6 +1118,7 @@
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/lottie.min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.lazy.min.js"></script>
     <script defer src="../js/custom.js"></script>
+    <script defer src="../js/google-api.js"></script>
     <script defer src="../js/contact.js"></script>
     <script defer src="https://www.youtube.com/iframe_api"></script>
 
