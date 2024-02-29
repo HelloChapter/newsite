@@ -48,6 +48,7 @@ $(document).on("change", "select", (function (e) {
   return
 }));
 jQuery(document).ready(function ($) {
+  Cookies.set('HelloChapterContactPath', window.location.href, { expires: 20, path: window.location.href });
   setTimeout(function () {
     window.scrollTo(0, 0);
   }, 100)
@@ -203,8 +204,8 @@ function submitForm(e) {
     // postDataObject.state = state;
     // postDataObject.zipCode = postalCode;
     // get url 
+    
     postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
-
     // 6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk - site key
     // check if its the same key as used in the respective html page
 

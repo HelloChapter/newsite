@@ -160,31 +160,31 @@ $(window).on('load', function () {
     }
 });
 
-const submitNewsletterForm1 = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
+// const submitNewsletterForm1 = (event) => {
+//     event.preventDefault();
+//     event.stopPropagation();
 
-    const form = document.getElementById("zcampaignOptinForm");
-    const formData = new FormData(form);
+//     const form = document.getElementById("zcampaignOptinForm");
+//     const formData = new FormData(form);
 
-    fetch("https://zymul-zgpm.maillist-manage.com/weboptin.zc", {
-        method: "POST",
-        body: formData
-    })
-        .then(data => {
-            if (data.status === 200) {
-                document.getElementById("Zc_SignupSuccess").style.display = "block";
-                const firstNameInput = document.getElementById('EMBED_FORM_EMAIL_LABEL');
-                firstNameInput.value = '';
-                setTimeout(function () {
-                    document.getElementById("Zc_SignupSuccess").style.display = "none";
-                }, 6000);
-            } else {
-                console.error("Form submission failed:", data.result.message);
-            }
-        })
-        .catch(error => {
-            console.error("Error submitting form:", error);
-        });
-}
+//     fetch("https://zymul-zgpm.maillist-manage.com/weboptin.zc", {
+//         method: "POST",
+//         body: formData
+//     })
+//         .then(data => {
+//             if (data.status === 200) {
+//                 document.getElementById("Zc_SignupSuccess").style.display = "block";
+//                 const firstNameInput = document.getElementById('EMBED_FORM_EMAIL_LABEL');
+//                 firstNameInput.value = '';
+//                 setTimeout(function () {
+//                     document.getElementById("Zc_SignupSuccess").style.display = "none";
+//                 }, 6000);
+//             } else {
+//                 console.error("Form submission failed:", data.result.message);
+//             }
+//         })
+//         .catch(error => {
+//             console.error("Error submitting form:", error);
+//         });
+// }
 // client section Next success story animation effect end
