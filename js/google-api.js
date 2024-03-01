@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    $("#autocomplete-results").hide();
     $(document).ready(function () {
         $('#autocomplete').on('input', function () {
             var query = $(this).val();
@@ -9,13 +10,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     data: { input: query },
                     success: function (response) {
                         var suggestions = response.data.suggestions;
-                        console.log(suggestions)
+                        console.log("suggestions", suggestions);
+
+                        // used for rendering addresses list
                         var suggestionList = '';
                         for (var i = 0; i < suggestions.length; i++) {
                             var placePrediction = suggestions[i].placePrediction;
-                          var placeId = placePrediction.placeId;
+                            var placeId = placePrediction.placeId;
                             var text = placePrediction.text.text;
-
+                            console.log(placeId)
                             var city, state, postalCode;
                             var structuredFormat = placePrediction.structuredFormat;
                             if (structuredFormat && structuredFormat.mainText && structuredFormat.secondaryText) {
@@ -27,16 +30,53 @@ document.addEventListener('DOMContentLoaded', function () {
                             if (types && types.includes('postal_code')) {
                                 postalCode = text.split(', ').pop();
                             }
-                           // console.log("city",city + "state", state + "postalCode", postalCode );
-                            suggestionList += '<li>' + suggestions[i]?.placePrediction?.text?.text + '</li>';
+
+                            
+                            suggestionList += '<li data-placeid="' + placeId + '">' + text + '</li>';
                         }
+                        $("#autocomplete-results").show();
                         $('#autocomplete-results').html(suggestionList);
                         $('#autocomplete-results li').click(function () {
                             var selectedText = $(this).text();
-                            var selectedPlaceId = $(this).data('placeid');
                             $('#autocomplete').val(selectedText);
-                            $('#selected-place-id').val(selectedPlaceId);
+                            $('#autocomplete').attr("value", selectedText);
                             $('#autocomplete-results').html('');
+                            $("#autocomplete-results").hide();
+
+                            // set place id against the streetAddress field
+                            $('#autocomplete').attr("data-place-id", placeId);
+                            
+                            // API call to fetch selected address's details
+                            $.ajax({
+                                url: 'https://api.hellochapter.dev/api/contact/place/' + placeId,
+                                type: 'GET',
+                                success: function (placeInfo) {
+                                    console.log("placeInfo second api data", placeInfo)
+                                    var city = placeInfo.city;
+                                    var state = placeInfo.state;
+                                    var postalCode = placeInfo.postalCode;
+                                    placeInfo.data.addressComponents.forEach(function(component) {
+                                        if (component.types.includes('locality')) {
+                                            city = component.longText;
+                                        } else if (component.types.includes('administrative_area_level_1')) {
+                                            state = component.shortText;
+                                        } else if (component.types.includes('postal_code')) {
+                                            postalCode = component.longText;
+                                        }
+                                    });
+
+                                    postDataObject.city = city;
+                                    postDataObject.state = state;
+                                    postDataObject.zipCode = postalCode;
+                                    console.log("City:", city);
+                                    console.log("State:", state);
+                                    console.log("Postal Code:", postalCode);
+                                   // console.log("latestRecord", secondApiResponse)
+                                },
+                                error: function (xhr, status, error) {
+                                    console.error('Error:', status, error);
+                                }
+                            });
                         });
                     },
                     error: function (xhr, status, error) {

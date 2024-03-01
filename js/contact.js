@@ -28,11 +28,13 @@ $(document).on("change", "input, textarea", (function (e) {
     isValid = false;
     $(e.target).parent().addClass("error");
     return
-  } else if (($(e.target).attr("name") === "streetAddress" && e.target.value.length < 5)) {
-    isValid = false;
-    $(e.target).parent().addClass("error");
-    return
-  } else if (((!/^[0-9]+$/.test(e.target.value) && $(e.target).attr("name") === "phoneNumber") || ($(e.target).attr("name") === "phoneNumber" && (e.target.value.length < 5 || e.target.value.length > 12)))) {
+  }
+  //  else if (($(e.target).attr("name") === "streetAddress" && e.target.value.length < 3)) {
+  //   isValid = false;
+  //   $(e.target).parent().addClass("error");
+  //   return
+  // }
+   else if (((!/^[0-9]+$/.test(e.target.value) && $(e.target).attr("name") === "phoneNumber") || ($(e.target).attr("name") === "phoneNumber" && (e.target.value.length < 5 || e.target.value.length > 12)))) {
     isValid = false;
     $(e.target).parent().addClass("error");
     return
@@ -152,6 +154,7 @@ function submitForm(e) {
   var inputs = $("#contact-form input");
   isValid = true;
   inputs.each((function () {
+    // debugger;
     if (this.value === "") {
       isValid = false;
       $(this).parent().addClass("error");
@@ -160,9 +163,13 @@ function submitForm(e) {
       isValid = false;
       $(this).parent().addClass("error");
     }
-    if (($(this).attr("name") === "streetAddress" && this.value.length < 5)) {
-      isValid = false;
-      $(this).parent().addClass("error");
+    if (($(this).attr("name") === "streetAddress")) {
+
+      // debugger;
+      if($(this).attr("data-place-id") === ""){
+        isValid = false;
+        $(this).parent().addClass("error");
+      }
     }
     if (((!/^[0-9]+$/.test(this.value) && $(this).attr("name") === "phoneNumber") || ($(this).attr("name") === "phoneNumber" && (this.value.length < 5 || this.value.length > 12)))) {
       isValid = false;

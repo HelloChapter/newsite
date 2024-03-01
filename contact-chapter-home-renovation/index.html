@@ -279,10 +279,13 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="input-wrap">
-                                            <input type="text" id="autocomplete" class="form-control" placeholder="Project Address*"
-                                                name="streetAddress" />
+                                            <input type="text" id="autocomplete" class="form-control"
+                                                placeholder="Project Address*" name="streetAddress"/>
+                                                <!-- <input type="hidden" id="selected-place-id"> -->
                                             <label class="error-message"> * Please enter your project address</label>
-                                            <ul class="list-unstyled" id="autocomplete-results"></ul>
+                                            <div class="autocomplete-results-wrap">
+                                                <ul class="list-unstyled" id="autocomplete-results"></ul>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- <div class="form-group row">
