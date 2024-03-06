@@ -12,7 +12,8 @@ var postDataObject = {
   "fbc": "",
   "fbp": "",
   "originalUrl": "",
-  "recaptchaToken": ""
+  "recaptchaToken": "",
+  "streetAddress":"",
 }
 // Email Validation
 function isEmail(email) {
@@ -213,8 +214,6 @@ function submitForm(e) {
     // get url 
     
     postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
-    // 6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk - site key
-    // check if its the same key as used in the respective html page
 
     grecaptcha.ready(function () {
       grecaptcha.execute('6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk', { action: 'submit' })
