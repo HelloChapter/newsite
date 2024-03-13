@@ -48,7 +48,12 @@ document.addEventListener('DOMContentLoaded', function () {
                             // set place id against the streetAddress field
                             $('#autocomplete').attr("data-place-id", placeId);
                             $('#autocomplete').attr("data-value", "true");
-
+                            if ($('#autocomplete').attr("data-value") === "true") {
+                                $('#autocomplete').parent().removeClass("error");
+                            }
+                            if ($('#autocomplete').attr("data-value") === "false") {
+                                $("#autocomplete-results").hide();
+                            }
                             // API call to fetch selected address's details
                             $.ajax({
                                 url: 'https://api.hellochapter.dev/api/contact/place/' + placeId,
@@ -74,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                             streetAddress += " "+component.longText;
                                         }
                                         
-                                        console.log(streetAddress,city, state, postalCode);
+                                       // console.log(streetAddress,city, state, postalCode);
                                     });
                                     if (!city || !state || !postalCode) {
                                       // $("#autocomplete-results").show();

@@ -21,8 +21,6 @@ function isEmail(email) {
 }
 // On input change
 $(document).on("change", "input, textarea", (function (e) {
-  //var isAutofilled = e.originalEvent.inputType === "insertFromPaste" || e.originalEvent.inputType === "insertFromDrop";
-
   if (e.target.value === "") {
     isValid = false;
     $(e.target).parent().addClass("error");
@@ -37,6 +35,11 @@ $(document).on("change", "input, textarea", (function (e) {
   //   $(e.target).parent().addClass("error");
   //   return
   // }
+  else if (($(e.target).attr("data-value") === "false")) {
+    isValid = false;
+    $(this).parent().addClass("error");
+    return;
+  }
   else if (((!/^[0-9]+$/.test(e.target.value) && $(e.target).attr("name") === "phoneNumber") || ($(e.target).attr("name") === "phoneNumber" && (e.target.value.length < 5 || e.target.value.length > 12)))) {
     isValid = false;
     $(e.target).parent().addClass("error");
