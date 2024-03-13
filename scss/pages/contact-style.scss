@@ -209,6 +209,7 @@
         .form-control {
             border-bottom: 1px solid $black;
             padding: 12px 0 20px;
+            border-radius: 0;
 
             @include placeholder-text {
                 color: $text-color2;
@@ -265,6 +266,10 @@
         align-items: center;
         justify-content: center;
 
+        &:after {
+            display: none;
+        }
+
         #loader-spinner {
             display: none;
 
@@ -278,6 +283,9 @@
             display: none;
         }
 
+        .contact-form-submit-label {
+            cursor: pointer;
+        }
     }
 
     .thank-you-content-wrap {
@@ -547,7 +555,7 @@
         }
 
         .social-wrap ul {
-            margin: 17px -30px 30px;
+            margin: 17px -14px 30px;
             line-height: 0;
 
             li {
