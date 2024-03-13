@@ -78,8 +78,11 @@ document.addEventListener('DOMContentLoaded', function () {
                                         }else if (component.types.includes('route')) {
                                             streetAddress += " "+component.longText;
                                         }
-                                        
-                                       // console.log(streetAddress,city, state, postalCode);
+                                        postDataObject.city = city;
+                                        postDataObject.state = state;
+                                        postDataObject.zipCode = postalCode;
+                                        postDataObject.streetAddress=streetAddress;
+                                        console.log("streetAddress: ",streetAddress,"city:", city,"state:", state,"postalCode:", postalCode);
                                     });
                                     if (!city || !state || !postalCode) {
                                       // $("#autocomplete-results").show();
@@ -88,10 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                        // $("#autocomplete-results").hide();
 
                                     } else {
-                                        postDataObject.city = city;
-                                        postDataObject.state = state;
-                                        postDataObject.zipCode = postalCode;
-                                        postDataObject.streetAddress=streetAddress;
+                                      
                                     }
                                 },
                                 error: function (xhr, status, error) {
