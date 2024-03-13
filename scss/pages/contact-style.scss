@@ -274,6 +274,7 @@
             display: none;
 
             svg {
+                display: none;
                 max-width: 32px;
                 margin-right: 20px;
             }
@@ -555,7 +556,7 @@
         }
 
         .social-wrap ul {
-            margin: 17px -14px 30px;
+            margin: 17px 0px 30px;
             line-height: 0;
 
             li {

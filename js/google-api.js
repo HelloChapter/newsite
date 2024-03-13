@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     data: { input: query },
                     success: function (response) {
                         var suggestions = response.data.suggestions;
-                        console.log("suggestions list", suggestions);
+                       // console.log("suggestions list", suggestions);
                         // debugger;
                         // used for rendering addresses list
                         var suggestionList = '';
@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
                             if (types && types.includes('postal_code')) {
                                 postalCode = text.split(', ').pop();
                             }
-                            suggestionList += '<li data-placeid="' + placeId + '">' + text + '</li>';
+                            let pattern = /\d/;
+                            let found=pattern.test(text);
+                            found? suggestionList += '<li data-placeid="' + placeId + '">' + text + '</li>':null;
                         }
                         $("#autocomplete-results").show();
                         $('#autocomplete-results').html(suggestionList);
@@ -55,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                     let city = "";
                                     let state = "";
                                     let postalCode = "";
-                                    console.log("placeInfo", placeInfo);
+                                    // console.log("placeInfo", placeInfo);
                                     let streetAddress='';
                                     placeInfo.data.addressComponents.forEach(function (component) {
                                         if (component.types.includes('locality')) {
@@ -73,9 +75,9 @@ document.addEventListener('DOMContentLoaded', function () {
                                         console.log(streetAddress,city, state, postalCode);
                                     });
                                     if (!city || !state || !postalCode) {
-                                       $("#autocomplete-results").show();
-                                       suggestionList += '<li class="red-text">Address not found. Check spelling or try another one.</li>'
-                                        $('#autocomplete-results').html(suggestionList);
+                                      // $("#autocomplete-results").show();
+                                       //suggestionList += '<li class="red-text">Address not found. Check spelling or try another one.</li>'
+                                        //$('#autocomplete-results').html(suggestionList);
                                        // $("#autocomplete-results").hide();
 
                                     } else {

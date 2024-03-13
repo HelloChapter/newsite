@@ -195,6 +195,7 @@ function submitForm(e) {
       emailElement.setAttribute("data-email", emailElement.value);
     }
     $('#loader-spinner').show();
+    $('#loader-spinner svg').show();
     $('#contact-form-submit-label').hide();
     $('#loader-spinner-label').show();
     inputs.each(function () {
