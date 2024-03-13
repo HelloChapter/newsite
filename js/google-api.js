@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     $(document).ready(function () {
         $('#autocomplete').on('input', function (e) {
             var query = $(this).val();
-            if (query.length > 0) {
+            //console.log("query",query.length)
+            if (query.length > 2) {
                 $.ajax({
                     url: 'https://api.hellochapter.dev/api/contact/autocomplete',
                     type: 'POST',
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         // debugger;
                         // used for rendering addresses list
                         var suggestionList = '';
-                        for (var i = 0; i < suggestions.length; i++) {
+                        for (var i = 0; i < suggestions?.length; i++) {
                             var placePrediction = suggestions[i].placePrediction;
                             let placeId = placePrediction.placeId;
                             var text = placePrediction.text.text;
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                             // set place id against the streetAddress field
                             $('#autocomplete').attr("data-place-id", placeId);
+                            $('#autocomplete').attr("data-value", "true");
 
                             // API call to fetch selected address's details
                             $.ajax({
@@ -99,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             } else {
                 $('#autocomplete-results').html('');
+                $("#autocomplete-results").hide();
             }
         });
     });

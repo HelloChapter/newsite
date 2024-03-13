@@ -13,7 +13,7 @@ var postDataObject = {
   "fbp": "",
   "originalUrl": "",
   "recaptchaToken": "",
-  "streetAddress":"",
+  "streetAddress": "",
 }
 // Email Validation
 function isEmail(email) {
@@ -21,6 +21,8 @@ function isEmail(email) {
 }
 // On input change
 $(document).on("change", "input, textarea", (function (e) {
+  //var isAutofilled = e.originalEvent.inputType === "insertFromPaste" || e.originalEvent.inputType === "insertFromDrop";
+
   if (e.target.value === "") {
     isValid = false;
     $(e.target).parent().addClass("error");
@@ -35,7 +37,7 @@ $(document).on("change", "input, textarea", (function (e) {
   //   $(e.target).parent().addClass("error");
   //   return
   // }
-   else if (((!/^[0-9]+$/.test(e.target.value) && $(e.target).attr("name") === "phoneNumber") || ($(e.target).attr("name") === "phoneNumber" && (e.target.value.length < 5 || e.target.value.length > 12)))) {
+  else if (((!/^[0-9]+$/.test(e.target.value) && $(e.target).attr("name") === "phoneNumber") || ($(e.target).attr("name") === "phoneNumber" && (e.target.value.length < 5 || e.target.value.length > 12)))) {
     isValid = false;
     $(e.target).parent().addClass("error");
     return
@@ -101,18 +103,18 @@ function redirectToThankYou() {
   if (localStorage.getItem("qr_status")) {
     localStorage.setItem("formSubmitted", true);
   }
-  
+
   // window.location.href = "/thank-you-message/?submit=true"
   var url_check = window.location.href;
-    if (url_check.includes("contact-chapter-home-renovation")) {
-        $(".form-wrap").hide();
-        $(".thank-you-content-wrap").show();
-        var stickyHeaderHeight = 160;
-        var offset = $('.thank-you-content-wrap').offset().top - stickyHeaderHeight;
-        $('html, body').animate({
-            scrollTop: offset
-        }, 400);
-    }
+  if (url_check.includes("contact-chapter-home-renovation")) {
+    $(".form-wrap").hide();
+    $(".thank-you-content-wrap").show();
+    var stickyHeaderHeight = 160;
+    var offset = $('.thank-you-content-wrap').offset().top - stickyHeaderHeight;
+    $('html, body').animate({
+      scrollTop: offset
+    }, 400);
+  }
 }
 // Contact Submit 
 //code for back button pressed the form will reset
@@ -164,13 +166,13 @@ function submitForm(e) {
       isValid = false;
       $(this).parent().addClass("error");
     }
-    if (($(this).attr("name") === "streetAddress")) {
-
-      // debugger;
-      if($(this).attr("data-place-id") === ""){
-        isValid = false;
-        $(this).parent().addClass("error");
-      }
+    if (($(this).attr("data-value") === "false")) {
+      isValid = false;
+      $(this).parent().addClass("error");
+    }
+    if ($(this).attr("data-place-id") === "") {
+      isValid = false;
+      $(this).parent().addClass("error");
     }
     if (((!/^[0-9]+$/.test(this.value) && $(this).attr("name") === "phoneNumber") || ($(this).attr("name") === "phoneNumber" && (this.value.length < 5 || this.value.length > 12)))) {
       isValid = false;
@@ -213,7 +215,7 @@ function submitForm(e) {
     // postDataObject.state = state;
     // postDataObject.zipCode = postalCode;
     // get url 
-    
+
     postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
 
     grecaptcha.ready(function () {
