@@ -1449,6 +1449,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const myParam = urlParams.get('submit');
         if (myParam == "true") {
+            console.log("Contact Conversion");
             window.dataLayer = window.dataLayer || [];
             function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date());
