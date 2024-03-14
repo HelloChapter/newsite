@@ -1,6 +1,7 @@
 @import "../colors.scss";
+
 header {
-    padding: 36px 0 33px;
+    padding: 51px 0 32px;
     -webkit-transition: background-color .3s, opacity .3s !important;
     -o-transition: background-color .3s, opacity .3s !important;
     transition: background-color .3s, opacity .3s !important;
@@ -10,30 +11,43 @@ header {
     z-index: 999;
     width: 100%;
     background-color: $white;
+
+    .container {
+        max-width: 100%;
+        padding: 0 115px;
+    }
+
     .menu-btn-toggle {
         display: none;
     }
+
     .header-nav {
         align-items: center;
     }
+
     .col-logo {
         max-width: 230px;
         flex: 0 0 230px;
+        line-height: 0;
     }
+
     .logo {
         max-width: 142px;
     }
+
     nav {
         ul {
             display: flex;
             justify-content: center;
+
             li {
-                padding: 0 20px;
+                padding: 0 17px;
             }
         }
+
         a {
-            font-size: 14px;
-            line-height: 21px;
+            font-size: 17px;
+            line-height: 20px;
             font-weight: 400;
             color: $text-color;
             letter-spacing: -0.16px;
@@ -44,25 +58,29 @@ header {
             -webkit-transition: border-color .25s;
             -o-transition: border-color .25s;
             transition: border-color .25s;
+
             &:hover {
                 border-color: $text-color;
             }
         }
+
         .active {
             font-style: italic;
             font-weight: 700;
         }
     }
+
     .col-get-started {
         max-width: 200px;
         flex: 0 0 200px;
         text-align: right;
+
         a {
             background-color: $black;
             color: $white;
             min-width: 157px;
             display: inline-block;
-            padding: 11px;
+            padding: 12px;
             font-weight: 700;
             font-size: 17px;
             line-height: 21px;
@@ -70,6 +88,7 @@ header {
             text-align: center;
             text-transform: uppercase;
             border: 1px solid transparent;
+
             &:hover {
                 color: $black;
                 background-color: transparent;
@@ -78,20 +97,68 @@ header {
         }
     }
 }
+
 .header-sticky {
     header {
         background-color: $white;
     }
 }
+
+.announcement-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30px;
+    letter-spacing: 0;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    transition: opacity 0.4s ease-in-out !important;
+    min-height: 40px;
+
+    * {
+        color: $white;
+        letter-spacing: 0;
+    }
+
+    p {
+        font-weight: 400;
+    }
+
+    .slick-slide {
+        padding: 0 30px;
+    }
+}
+
 // Responsive UI start
+@media (max-width:1660px) {
+    header {
+        .container {
+            padding: 0 80px;
+        }
+    }
+}
+
+// 1660 end
 @media (max-width:1440px) {
     header {
+        .container {
+            padding: 0 60px;
+        }
+
         nav {
             a {
                 font-size: 14px;
                 line-height: 17px;
             }
         }
+
         .col-get-started {
             a {
                 font-size: 14px;
@@ -100,6 +167,7 @@ header {
         }
     }
 }
+
 // 1440 end
 @media (max-width:1240px) {
     header {
@@ -107,6 +175,7 @@ header {
             max-width: 150px;
             flex: 0 0 150px;
         }
+
         nav {
             ul {
                 li {
@@ -114,12 +183,23 @@ header {
                 }
             }
         }
+
         .col-get-started {
             max-width: 160px;
             flex: 0 0 160px;
         }
     }
 }
+// 1240px end
+
+@media (max-width:1199px) {
+    header {
+        .container {
+            padding: 0 30px;
+        }
+    }
+}
+// 1199px
 @media (max-width:1023px) {
     body {
         &:before {
@@ -138,19 +218,18 @@ header {
             transition: opacity .3s;
         }
     }
+
     header {
         padding: 29px 0;
         background-color: $white !important;
-        .container {
-            padding: 0 40px;
-        }
         .menu-btn-toggle {
             display: block;
             position: fixed;
-            top: 40px;
+            top: 34px;
             padding: 5px;
-            right: 25px;
+            right: 15px;
             z-index: 9999;
+
             span {
                 display: block;
                 background-color: $text-color;
@@ -162,33 +241,44 @@ header {
                 -o-transition: transform .3s;
                 transition: transform .3s;
                 transition: transform .3s, -webkit-transform .3s;
+
                 +span {
                     margin-top: 4px;
                 }
             }
         }
+
         .header-nav {
             justify-content: space-between;
         }
+
         .col-logo {
             position: relative;
             z-index: 99;
         }
+
         .col-nav {
             max-width: 100%;
             flex: 0 0 100%;
         }
+
         .col-get-started {
             max-width: 160px;
             flex: 0 0 160px;
             position: fixed;
-            top: 26px;
-            right: 75px;
+            top: 24px;
+            right: 65px;
             z-index: 999;
+
+            a {
+                padding: 9.5px;
+            }
         }
+
         .contact-url {
             padding-right: 50px;
         }
+
         nav {
             position: fixed;
             left: 0;
@@ -209,12 +299,16 @@ header {
             -o-transition: transform .3s, opacity .25s;
             transition: transform .3s, opacity .25s;
             transition: transform .3s, opacity .25s, -webkit-transform .3s;
+
             ul {
                 flex-direction: column;
+
                 li {
                     padding: 10px 0;
+
                     a {
                         padding: 0;
+
                         &:hover {
                             border-color: transparent;
                         }
@@ -223,16 +317,19 @@ header {
             }
         }
     }
+
     .header-open {
         &:before {
             opacity: 1;
             z-index: 45;
         }
+
         .page-home {
             header {
                 background-color: $white;
             }
         }
+
         header {
             .menu-btn-toggle {
                 span {
@@ -241,11 +338,13 @@ header {
                         -ms-transform: translateY(6px) rotate(45deg);
                         transform: translateY(6px) rotate(45deg);
                     }
+
                     &:nth-child(2) {
                         -webkit-transform: scaleX(0);
                         -ms-transform: scaleX(0);
                         transform: scaleX(0);
                     }
+
                     &:last-child {
                         -webkit-transform: translateY(-6px) rotate(-225deg);
                         -ms-transform: translateY(-6px) rotate(-225deg);
@@ -253,12 +352,14 @@ header {
                     }
                 }
             }
+
             nav {
                 opacity: 1;
                 -webkit-transform: translateX(0);
                 -ms-transform: translateX(0);
                 transform: translateX(0);
                 pointer-events: all;
+
                 ul {
                     height: calc(100vh - 160px);
                     overflow: hidden;
@@ -268,41 +369,71 @@ header {
         }
     }
 }
+
 // 1023 end
 @media (max-width:767px) {
     header {
         nav {
             width: 100%;
         }
+
         .container {
             padding: 0 20px;
         }
+
         .col-logo {
             max-width: 100%;
             flex: 0 0 100%;
         }
+
         .logo {
             img {
                 max-width: 120px;
             }
         }
+
+        .menu-btn-toggle {
+            top: 32px;
+        }
+
         .contact-url {
             padding-right: 6px;
         }
+
         .col-get-started {
-            top: 34px;
+            top: 28px;
+
             a {
                 line-height: 17px;
                 min-width: 117px;
-                padding: 6px;
+                padding: 5px;
             }
         }
     }
+
+    .announcement-bar {
+        font-size: 14px;
+        line-height: 17px;
+    }
 }
+
 // 767 end
+@media (max-width:575px) {
+    .announcement-bar {
+        .container {
+            padding: 0 10px;
+        }
+
+        p {
+            font-size: 9px;
+        }
+    }
+}
+
 @media (max-width:350px) {
     header .col-get-started {
         right: 55px;
+
         a {
             min-width: 110px;
         }

@@ -95,7 +95,7 @@ img {
 }
 
 .page-blog {
-    .row {
+   .section-blog-listing .row {
         margin: 0 -22.5px;
     }
 
@@ -159,6 +159,9 @@ img {
 
     p {
         margin-bottom: 16px;
+    }
+    .mb-0 {
+        margin-bottom: 0;
     }
 
     h6 {
@@ -422,7 +425,7 @@ img {
     }
 
     .page-blog {
-        .row {
+        .section-blog-listing  .row {
             margin: 0 -16px;
         }
 

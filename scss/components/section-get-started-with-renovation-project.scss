@@ -1,0 +1,299 @@
+.section-get-started-with-renovation-project {
+    padding: 115px 115px 30px;
+    letter-spacing: 0;
+
+    .content {
+        max-width: 648px;
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        p {
+            line-height: 35px;
+        }
+
+        .btn-wrap {
+            margin-top: 30px;
+        }
+    }
+
+    .btn-wrap-mobile {
+        display: none;
+    }
+
+    .content-item {
+        margin-bottom: 30px;
+        max-width: 625px;
+        position: relative;
+
+        .circle {
+            height: 7px;
+            width: 7px;
+            background-color: $black;
+            display: block;
+            border-radius: 100%;
+            position: absolute;
+            bottom: 0;
+            left: -78px;
+        }
+
+        &:before {
+            content: '';
+            background-image: url('../../images/icons/messages.svg');
+            height: 60px;
+            width: 60px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            position: absolute;
+            left: -105px;
+            top: 0;
+        }
+
+        &:after {
+            content: '';
+            height: calc(100% - 60px);
+            width: 60px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            display: block;
+            position: absolute;
+            left: -75px;
+            top: 60px;
+            border-left: 1px dashed $black;
+        }
+
+        &:nth-child(2) {
+            &::before {
+                background-image: url('../../images/icons/eye-camera.svg');
+            }
+        }
+
+        &:nth-child(3) {
+            &::before {
+                background-image: url('../../images/icons/note.svg');
+            }
+        }
+
+        &:nth-child(4) {
+            &::before {
+                background-image: url('../../images/icons/airoplane.svg');
+            }
+        }
+
+        &:last-child {
+            &:after {
+                display: none;
+            }
+
+            .circle {
+                display: none;
+            }
+        }
+
+        h6 {
+            font-size: 17px;
+            line-height: 47px;
+            font-weight: 300;
+            font-family: "Inter";
+        }
+
+        h3 {
+            font-size: 50px;
+            line-height: 57px;
+        }
+
+        p {
+            line-height: 35px;
+        }
+    }
+
+    .col-left,
+    .col-right {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+
+    .content-wrap {
+        position: relative;
+        padding-left: 55px;
+    }
+}
+
+// Responsive css start
+@media (max-width:1600px) {
+    .section-get-started-with-renovation-project {
+        padding: 60px 60px 30px;
+
+        .content-item {
+            h6 {
+                font-size: 14px;
+            }
+
+            h3 {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+// 1600 end
+@media (max-width:1023px) {
+    .section-get-started-with-renovation-project {
+        padding: 60px 32px 0px;
+
+        .content-item {
+            max-width: 100%;
+            margin-bottom: 70px;
+
+            +.content-item {
+                margin-top: 60px;
+            }
+
+            &:nth-child(2) {
+                margin-top: 90px;
+            }
+
+            &:last-child {
+                margin-bottom: 30px;
+
+                .circle {
+                    display: none;
+                }
+
+                p {
+                    margin-bottom: 48px;
+                }
+            }
+
+            &:first-child {
+                p {
+                    margin-bottom: 30px;
+                    padding-bottom: 0;
+                }
+            }
+
+            &::before {
+                left: 50%;
+                transform: translateX(-50%);
+                height: 45px;
+                width: 45px;
+                top: -35px;
+            }
+
+            &:after {
+                display: none;
+            }
+
+            h6 {
+                font-size: 14px;
+            }
+
+            h3 {
+                font-size: 40px;
+                line-height: 57px;
+            }
+
+            p {
+                line-height: 24px;
+                margin-bottom: 90px;
+                padding-bottom: 12px;
+            }
+
+            .circle {
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -31px;
+
+                &:after {
+                    content: '';
+                    height: 30px;
+                    width: 0px;
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: -30px;
+                    border-left: 1px dashed $black;
+                }
+            }
+        }
+
+        .col-left,
+        .col-right {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .btn-wrap-mobile {
+            display: block;
+            padding-bottom: 12px;
+        }
+
+        .content {
+            text-align: center;
+            padding-bottom: 60px;
+            margin: 0 auto;
+
+            h2 {
+                line-height: 30px;
+                max-width: 250px;
+                margin: 0 auto 15px;
+
+                br {
+                    display: none;
+                }
+            }
+
+            p {
+                line-height: 24px;
+            }
+
+            .btn-wrap {
+                display: none;
+            }
+        }
+
+        .content-wrap {
+            padding: 0;
+            text-align: center;
+        }
+    }
+}
+
+// 1023 end
+@media (max-width:767px) {
+    .section-get-started-with-renovation-project {
+        padding: 60px 20px 0;
+
+        .content {
+            h2 {
+                margin-bottom: 30px;
+
+                br {
+                    display: block;
+                }
+            }
+        }
+
+        .content-item {
+            &:before {
+                width: 32px;
+                height: 32px;
+            }
+
+            h3 {
+                font-size: 25px;
+                line-height: 30px;
+            }
+
+            h6 {
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+// 767 end

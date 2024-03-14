@@ -12,7 +12,8 @@ var postDataObject = {
   "fbc": "",
   "fbp": "",
   "originalUrl": "",
-  "recaptchaToken": ""
+  "recaptchaToken": "",
+  "streetAddress": "",
 }
 // Email Validation
 function isEmail(email) {
@@ -28,11 +29,18 @@ $(document).on("change", "input, textarea", (function (e) {
     isValid = false;
     $(e.target).parent().addClass("error");
     return
-  } else if (($(e.target).attr("name") === "streetAddress" && e.target.value.length < 5)) {
+  }
+  //  else if (($(e.target).attr("name") === "streetAddress" && e.target.value.length < 3)) {
+  //   isValid = false;
+  //   $(e.target).parent().addClass("error");
+  //   return
+  // }
+  else if (($(e.target).attr("data-value") === "false")) {
     isValid = false;
-    $(e.target).parent().addClass("error");
-    return
-  } else if (((!/^[0-9]+$/.test(e.target.value) && $(e.target).attr("name") === "phoneNumber") || ($(e.target).attr("name") === "phoneNumber" && (e.target.value.length < 5 || e.target.value.length > 12)))) {
+    $(this).parent().addClass("error");
+    return;
+  }
+  else if (((!/^[0-9]+$/.test(e.target.value) && $(e.target).attr("name") === "phoneNumber") || ($(e.target).attr("name") === "phoneNumber" && (e.target.value.length < 5 || e.target.value.length > 12)))) {
     isValid = false;
     $(e.target).parent().addClass("error");
     return
@@ -48,6 +56,7 @@ $(document).on("change", "select", (function (e) {
   return
 }));
 jQuery(document).ready(function ($) {
+  Cookies.set('HelloChapterContactPath', window.location.href, { expires: 20, path: window.location.href });
   setTimeout(function () {
     window.scrollTo(0, 0);
   }, 100)
@@ -97,7 +106,18 @@ function redirectToThankYou() {
   if (localStorage.getItem("qr_status")) {
     localStorage.setItem("formSubmitted", true);
   }
-  window.location.href = "/thank-you-message/?submit=true"
+
+  window.location.href = "/contact-chapter-home-renovation/?submit=true"
+  var url_check = window.location.href;
+  if (url_check.includes("contact-chapter-home-renovation")) {
+    $(".form-wrap").hide();
+    $(".thank-you-content-wrap").show();
+    var stickyHeaderHeight = 160;
+    var offset = $('.thank-you-content-wrap').offset().top - stickyHeaderHeight;
+    $('html, body').animate({
+      scrollTop: offset
+    }, 400);
+  }
 }
 // Contact Submit 
 //code for back button pressed the form will reset
@@ -109,7 +129,7 @@ window.addEventListener("pageshow", (event) => {
 });
 
 // reCaptcha callback function
-function reCaptchaChallenge(siteToken){
+function reCaptchaChallenge(siteToken) {
   // here we will remove the restriction added on submitting form.
   $(recaptcha_id).hide();
   postDataObject.recaptchaToken = siteToken;
@@ -140,6 +160,7 @@ function submitForm(e) {
   var inputs = $("#contact-form input");
   isValid = true;
   inputs.each((function () {
+    // debugger;
     if (this.value === "") {
       isValid = false;
       $(this).parent().addClass("error");
@@ -148,7 +169,11 @@ function submitForm(e) {
       isValid = false;
       $(this).parent().addClass("error");
     }
-    if (($(this).attr("name") === "streetAddress" && this.value.length < 5)) {
+    if (($(this).attr("data-value") === "false")) {
+      isValid = false;
+      $(this).parent().addClass("error");
+    }
+    if ($(this).attr("data-place-id") === "") {
       isValid = false;
       $(this).parent().addClass("error");
     }
@@ -174,7 +199,10 @@ function submitForm(e) {
       localStorage.setItem('email', emailElement.value);
       emailElement.setAttribute("data-email", emailElement.value);
     }
-    $('#loader').show();
+    $('#loader-spinner').show();
+    $('#loader-spinner svg').show();
+    $('#contact-form-submit-label').hide();
+    $('#loader-spinner-label').show();
     inputs.each(function () {
       $(this).attr("disabled", "disabled");
     })
@@ -186,32 +214,35 @@ function submitForm(e) {
     }
     postDataObject.fbc = payload.fbc;
     postDataObject.fbp = payload.fbp;
+    // postDataObject.city = city;
+    // postDataObject.state = state;
+    // postDataObject.zipCode = postalCode;
     // get url 
+
     postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
 
-    // 6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk - site key
-    // check if its the same key as used in the respective html page
+    grecaptcha.ready(function () {
+      grecaptcha.execute('6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk', { action: 'submit' })
+        .then(function (token) {
+          // add generated token to the post data object
+          postDataObject.recaptchaToken = token;
+          setTimeout(function () {
+            makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+            // makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
+          }, 500);
 
-        grecaptcha.ready(function() {
-        grecaptcha.execute('6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk', {action: 'submit'})
-            .then(function(token) {
-                // add generated token to the post data object
-                postDataObject.recaptchaToken = token;
-                setTimeout(function () {
-                    makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
-                    // makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
-                }, 500);
-                
-            })
-            .catch(err => {
-                // recaptcha token not generated.
-                // reset form ??
-                console.log(err);
-            });
+        })
+        .catch(err => {
+          // recaptcha token not generated.
+          // reset form ??
+          // console.log(err);
+        });
     });
   }
   else {
-    $('#loader').hide();
+    $('#loader-spinner').hide();
+    $('#loader-spinner-label').hide();
+    $('#contact-form-submit-label').show();
   }
   // return false;
 }

@@ -1,5 +1,65 @@
 [
   {
+    "id":26,
+    "blogUrl":"/cost-to-build-pool-miami/",
+    "imageUrl": "../images/blog-images/cost-to-build-pool-miami-images/cost-to-build-pool-miami-card.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Andres-Garcia.webp",
+    "writerName": "Andres Garcia",
+    "date": "Feb 19, 2024",
+    "title": "How much does it cost to build a pool in Miami?",
+    "introText": "Dreaming of making a splash with your very own pool in the sunny backdrop o..."
+  },
+  {
+    "id":21,
+    "blogUrl":"/how-to-pick-a-grout-color/",
+    "imageUrl": "../images/blog-images/how-to-pick-a-grout-color-images/how-to-pick-a-grout-color-images-1.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/nicole-barel.webp",
+    "writerName": "Nicole Barel",
+    "date": "Feb 12, 2024",
+    "title": "How to pick a grout color - Pro tips",
+    "introText": "Choosing the right grout color for your tile can make a significant difference i..."
+  },
+  {
+    "id":22,
+    "blogUrl":"/condo-renovation-in-miami-a-fully-detailed-guide/",
+    "imageUrl": "../images/blog-images/condo-renovation-in-miami-a-fully-detailed-guide-images/condo-renovation-in-miami-a-fully-detailed-guide-images-1.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ben-Milgram.webp",
+    "writerName": "Ben Milgram",
+    "date": "Feb 05, 2024",
+    "title": "Condo renovation in Miami: A fully detailed guide",
+    "introText": "Renovating a condo in Miami presents a unique set of opportunities and challen..."
+  },
+  {
+    "id":23,
+    "blogUrl":"/single-home-renovations-in-miami-a-comprehensive-guide/",
+    "imageUrl": "../images/blog-images/single-home-renovations-in-miami-a-comprehensive-guide-images/single-home-renovations-in-miami-a-comprehensive-guide-images-3.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ben-Milgram.webp",
+    "writerName": "Ben Milgram",
+    "date": "Jan 24, 2024",
+    "title": "Single home renovations in Miami: A comprehensive guide",
+    "introText": "Renovating a single-family home in Miami offers an exciting opportunity to..."
+  },
+  {
+    "id":24,
+    "blogUrl":"/brownstones-and-townhouses-in-nyc-a-detailed-renovation-guide/",
+    "imageUrl": "../images/blog-images/brownstones-and-townhouses-in-nyc-a-detailed-renovation-guide-images/brownstone-townhouse-renovation-card.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Eli-Moyal.webp",
+    "writerName": "Eli Moyal",
+    "date": "Jan 10, 2024",
+    "title": "Brownstones and townhouses in NYC: A detailed renovation guide",
+    "introText": "Renovating a brownstone or townhouse in New York City offers a blend of chal..."
+  },
+  {
+    "id":25,
+    "blogUrl":"/navigating-condo-and-co-op-renovations-in-nyc-a-comprehensive-guide/",
+    "imageUrl": "../images/blog-images/navigating-condo-and-co-op-renovations-in-nyc-a-comprehensive-guide-images/navigating-condo-and-co-op-renovations-in-nyc-a-comprehensive-guide-images-2.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Eli-Moyal.webp",
+    "writerName": "Eli Moyal",
+    "date": "Jan 04, 2024",
+    "title": "Navigating condo and co-op renovations in NYC: A comprehensive guide",
+    "introText": "Renovating a condo or co-op in New York City is an exciting venture that ca..."
+  },
+  {
     "id":0,
     "blogUrl":"/how-to-maximize-space-in-a-small-kitchen/",
     "imageUrl": "../images/blog-images/how-to-maximize-space-in-a-small-kitchen-images/how-to-maximize-space-in-a-small-kitchen-card.webp",

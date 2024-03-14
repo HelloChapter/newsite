@@ -1,0 +1,233 @@
+.section-plan-design-build {
+    padding: 115px 134px 60px;
+
+    * {
+        color: $white;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .heading-content-wrap {
+        padding-bottom: 60px;
+        max-width: 895px;
+        margin: 0 auto;
+        text-align: center;
+
+        h2 {
+            font-size: 50px;
+            line-height: 58px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 35px;
+            font-weight: 400;
+        }
+    }
+
+    .row {
+        margin: 0 -20px;
+    }
+
+    .col {
+        padding: 0 20px;
+    }
+
+    .card {
+        border: 2px solid $white;
+        height: 100%;
+
+        .card-header {
+            border-bottom: 2px solid $white;
+            min-height: 203px;
+        }
+
+        .card-content {
+            padding: 42px;
+        }
+
+        h6 {
+            font-size: 17px;
+            line-height: 47px;
+            font-family: "Inter";
+            font-weight: 300;
+        }
+
+        h2 {
+            line-height: 57px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 35px;
+            font-weight: 400;
+        }
+
+        h5 {
+            font-family: "Inter";
+            font-size: 17px;
+            line-height: 35px;
+            font-weight: 400;
+
+            strong {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin: 0 -6.5px;
+        width: 100%;
+        position: absolute;
+        bottom: -42px;
+
+        li {
+            padding: 0 6.5px;
+            line-height: 0;
+        }
+
+        .slick-active {
+            button {
+                background-color: $white;
+            }
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            font-size: 0;
+            border: 0.25px solid $white;
+            height: 11px;
+            width: 11px;
+            border-radius: 100%;
+        }
+    }
+}
+
+// Responsive css start
+@media (max-width:1600px) {
+    .section-plan-design-build {
+        padding: 90px 100px 60px;
+    }
+}
+
+// 1600 end
+@media (max-width:1440px) {
+    .section-plan-design-build {
+        padding: 60px;
+
+        .card .card-content {
+            padding: 30px;
+        }
+    }
+}
+
+// 1440 end
+@media (max-width:1199px) {
+    .section-plan-design-build {
+        padding: 60px 0 71px;
+
+        .heading-content-wrap {
+            padding: 0 20px 60px;
+
+            .new-section-title {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            h2 {
+                font-size: 25px;
+                line-height: 30px;
+                letter-spacing: -0.15px;
+
+                br {
+                    display: none;
+                }
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 0;
+            }
+        }
+
+        .slick-track {
+            display: flex;
+        }
+
+        .row {
+            margin: 0;
+        }
+
+        .slider-item {
+            padding: 0 30px;
+            height: inherit;
+        }
+
+        .slick-list {
+            padding: 0 100px !important;
+        }
+
+        .card {
+            .card-header {
+                min-height: 200px;
+                padding-bottom: 35%;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+
+            h6,
+            p {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+// 1199 end
+@media (max-width:767px) {
+    .section-plan-design-build {
+        padding: 30px 0 71px;
+
+        .heading-content-wrap {
+            padding: 0 20px 20px;
+        }
+
+        .slider-item {
+            padding: 0 15px;
+        }
+
+        .slick-list {
+            padding: 0 55px !important;
+        }
+
+        .card {
+            .card-header {
+                min-height: 121px;
+                padding-bottom: 40%;
+            }
+
+            h2 {
+                font-size: 35px;
+                line-height: 40px;
+            }
+
+            .card-content {
+                padding: 30px 20px 40px;
+            }
+        }
+    }
+}

@@ -63,7 +63,7 @@ img {
 
 .middle-content {
     min-height: 400px;
-    padding-top: 111px;
+    padding-top: 130px;
 }
 
 .link-text {
@@ -145,6 +145,15 @@ h2 {
     }
 }
 
+.page-title2 {
+    h1 {
+        font-size: 70px;
+        line-height: 1.21;
+        letter-spacing: 0px;
+        margin-bottom: 30px;
+    }
+}
+
 .stretched-link {
     text-align: center;
     text-decoration: none;
@@ -206,7 +215,12 @@ iframe {
     font-weight: 400;
     display: none;
 }
-
+#errorMsgDiv {
+    color: #F67A7A;
+    font-size: 13px;
+    line-height: 40px;
+    font-weight: 400;
+}
 // Responsive CSS start
 @media (max-width:1600px) {
     body {
@@ -296,16 +310,20 @@ iframe {
             font-size: 25px;
         }
     }
+
+    .middle-content {
+        padding-top: 100px;
+    }
 }
 
 // 1199 end
 @media (max-width:767px) {
-    // .btn-black-bg {
-    //     min-height: 67px;
-    //     min-width: 183px;
-    //     font-size: 19px;
-    //     line-height:23px;
-    // }
+    .page-title2 {
+        h1 {
+            font-size: 45px;
+            line-height: 60px;
+        }
+    }
 }
 
 // 767 end

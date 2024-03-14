@@ -40,6 +40,7 @@ jQuery(document).ready(function ($) {
         }
     });
     // Counter number js end
+    
     // About team click js
     $(".desktop-team-wrapper .team-image").click(function () {
         var current_item = $(this).attr("data-point-id");
@@ -223,8 +224,14 @@ jQuery(document).ready(function ($) {
             centerMode: false,
             cssEase: 'linear',
         });
-      }, 800);
+    }, 800);
     // announcement-bar slider end
+    setTimeout(() => {
+        AOS.init({
+            duration: 1200,
+        });
+    }, 300);
+    // Aos Animate
     //NYC projects more cards
     $('.show-lesss-btn').hide();
     $(".expand-project-nyc-btn .show-all-btn").click(function (event) {
@@ -253,15 +260,11 @@ jQuery(document).ready(function ($) {
         $(".miami-card-groups .expand-all-projects").slideUp();
         $('.new-projects-card-slider').slick('reinit');
     });
-    AOS.init({
-        duration: 1200,
-    });
-    // Aos Animate
     jQuery(".location-link-hover").hover(function () {
         jQuery(this).parents(".col-location").toggleClass("hover-link");
     });
     kitchen_plan_design_slider();
-// kitchen-plan-design-build-slider end
+    // kitchen-plan-design-build-slider end
 });
 /*Ready function end*/
 // Js for global after before
@@ -301,7 +304,7 @@ function calculate_slider_height() {
     // detect screen size here and adjust div height accordingly
     var viewportWidth = window.innerWidth;
     const magicScrollNumber = 170;
-    var divTotalHeight = divHeight * (viewportWidth/magicScrollNumber);
+    var divTotalHeight = divHeight * (viewportWidth / magicScrollNumber);
     var setHeight = $('.empty-height-div');
     setHeight.height(divTotalHeight);
 }
@@ -323,6 +326,8 @@ function kitchen_plan_design_slider() {
         autoplaySpeed: 5000,
         variableWidth: false,
         arrows: false,
+        centerMode: true,
+        infinite: false,
         responsive: [
             {
                 breakpoint: 9999,
@@ -331,14 +336,52 @@ function kitchen_plan_design_slider() {
             {
                 breakpoint: 1197,
                 settings: {
-                    infinite: true,
                     dots: true
                 }
             }
-        ]
+        ],
+        beforeChange: function (event, slick, currentSlide, nextSlide) {
+            if (nextSlide === slick.slideCount - 1) {
+                $('.slick-next').hide();
+            } else {
+                $('.slick-next').show();
+            }
+            if (nextSlide === 0) {
+                $('.slick-prev').hide();
+            } else {
+                $('.slick-prev').show();
+            }
+        }
     });
 }
 // kitchen-plan-design-build-slider end
-$(window).on('load', function() {
+$(window).on('load', function () {
     AOS.refresh();
- });
+});
+const submitNewsletterForm1 = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const form = document.getElementById("zcampaignOptinForm");
+    const formData = new FormData(form);
+
+    fetch("https://zymul-zgpm.maillist-manage.com/weboptin.zc", {
+        method: "POST",
+        body: formData
+    })
+        .then(data => {
+            if (data.status === 200) {
+                document.getElementById("Zc_SignupSuccess").style.display = "block";
+                const firstNameInput = document.getElementById('EMBED_FORM_EMAIL_LABEL');
+                firstNameInput.value = '';
+                setTimeout(function () {
+                    document.getElementById("Zc_SignupSuccess").style.display = "none";
+                }, 6000);
+            } else {
+                console.error("Form submission failed:", data.result.message);
+            }
+        })
+        .catch(error => {
+            console.error("Error submitting form:", error);
+        });
+}
