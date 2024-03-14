@@ -64,10 +64,10 @@ document.addEventListener('DOMContentLoaded', function () {
                                     let city = "";
                                     let state = "";
                                     let postalCode = "";
-                                    // console.log("placeInfo", placeInfo);
+                                    console.log("placeInfo", placeInfo);
                                     let streetAddress='';
                                     placeInfo.data.addressComponents.forEach(function (component) {
-                                        if (component.types.includes('locality')) {
+                                        if ((component.types.includes('locality')) || (component.types.includes('administrative_area_level_3')) || (component.types.includes('neighborhood')))  {
                                             city = component.longText;
                                         } else if (component.types.includes('administrative_area_level_1')) {
                                             state = component.shortText;
