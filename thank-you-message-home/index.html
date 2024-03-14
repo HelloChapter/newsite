@@ -1311,6 +1311,7 @@
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/swiper.js"></script>
     <script defer
         src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.nice-select.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
     <script defer src="../js/custom.js"></script>
     <script defer src="../js/contact-home.js"></script>
     <script defer src="../js/home-page.js"></script>
@@ -1465,12 +1466,13 @@
         // ready function end
     </script>
     <script>
-        var emailElement = document.getElementById('contact-email-field-id');
+        var emailElement = document.getElementById('contact-email-field-id-home');
         emailElement.value = localStorage.getItem('email') != undefined ? localStorage.getItem('email') : null;
         emailElement.setAttribute("data-email", emailElement.value);
         const urlParams = new URLSearchParams(window.location.search);
         const myParam = urlParams.get('submit');
         if (myParam == "true") {
+            console.log("Home Conversion");
             window.dataLayer = window.dataLayer || [];
             function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date());
