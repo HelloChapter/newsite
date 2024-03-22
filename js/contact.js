@@ -196,7 +196,7 @@ function submitForm(e) {
     var emailElement = document.getElementById('contact-email-field-id');
     //console.log("emailElement1");
     if (emailElement) {
-      localStorage.setItem('email', emailElement.value);
+      localStorage.setItem('Contactemail', emailElement.value);
       emailElement.setAttribute("data-email", emailElement.value);
     }
     $('#loader-spinner').show();
@@ -227,7 +227,7 @@ function submitForm(e) {
           // add generated token to the post data object
           postDataObject.recaptchaToken = token;
           setTimeout(function () {
-            makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+            makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
             // makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
           }, 500);
 
