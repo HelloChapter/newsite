@@ -196,7 +196,7 @@ function submitForm(e) {
     var emailElement = document.getElementById('contact-email-field-id');
     //console.log("emailElement1");
     if (emailElement) {
-      localStorage.setItem('email', emailElement.value);
+      localStorage.setItem('Contactemail', emailElement.value);
       emailElement.setAttribute("data-email", emailElement.value);
     }
     $('#loader-spinner').show();
