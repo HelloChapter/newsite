@@ -552,6 +552,30 @@
                                 <div class="home-client-slider">
                                     <div class="slider-item">
                                         <div class="content">
+                                            <h2>“They came in on budget, they came in on time.”</h2>
+                                            <div class="client-info">
+                                                <h3>Randy Sharp / <img
+                                                        src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/location2.svg"
+                                                        alt="icon" height="200" width="200" />
+                                                    Manhattan, NY
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="images-icon">
+                                            <div class="circle-ui"></div>
+                                            <div class="client-image">
+                                                <img class="lazy"
+                                                    data-src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/home-images/client01.webp"
+                                                    alt="image" height="200" width="200" />
+                                                <button id="openModal01" type="button"
+                                                    class="btn-styled-removed btn-client-play"><img
+                                                        src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/play-icon-full.svg"
+                                                        alt="icon" height="200" width="200" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-item">
+                                        <div class="content">
                                             <h2>“Chapter made me feel like I didn’t have anything to worry about.”</h2>
                                             <div class="client-info">
                                                 <h3>Jaye W. / <img
@@ -1097,7 +1121,7 @@
                                 </a>
                             </div>
                             <h2>Start a new Chapter</h2>
-                            
+
                             <div id="sf3zf7e0b828616f44b3dd3d031997957aa5e20281895973e4509607265583e00af6"
                                 data-type="signupform" style="">
                                 <div id="customForm">
@@ -1380,6 +1404,25 @@
                 });
                 // Load and control the YouTube video
                 var queryParams = '?modestbranding=1&rel=0&showinfo=0&enablejsapi=1&start=0';
+                function loadYouTubeVideo01(videoId) {
+                    var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
+                    new YT.Player('player01', {
+                        height: '100%',
+                        width: '100%',
+                        videoId: videoId,
+                        playerVars: {
+                            'playsinline': 1,
+                            'modestbranding': 1,
+                            'rel': 0,
+                            'showinfo': 0,
+                            'iv_load_policy': 3
+                        },
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                }
                 function loadYouTubeVideo(videoId) {
                     var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
                     new YT.Player('player1', {
@@ -1472,6 +1515,9 @@
                     } else if (type === 'modal12') {
                         const client2Modal = document.getElementById('client12-modal');
                         client2Modal.remove();
+                    } else if (type === 'modal01') {
+                        const client01Modal = document.getElementById('client01-modal');
+                        client01Modal.remove();
                     }
                 }
                 function onPlayerStateChange(event) {
@@ -1481,6 +1527,34 @@
                     if (event.data === YT.PlayerState.ENDED) {
                     }
                 }
+                $('#openModal01').click(function () {
+                    // create and append modal structure here.
+                    const docString = `
+            <div id="client01-modal" class="modal modal-home-client-video">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button id="client1-btn-close" class="btn-styled-removed btn-close" data-dismiss="modal">
+                            <img src="./images/icons/close-icon.svg" alt="icon" />
+                        </button>
+                    </div>
+                    <div class="mid-content">
+                        <div class="video-box">
+                            <div id="player01"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+                    const modalContainer = document.getElementById('clent1-modal-container');
+                    modalContainer.innerHTML = docString;
+                    // attach event handler for the rendered modal
+                    $(".modal-home-client-video .btn-close").on("click", function () {
+                        stopYouTubeVideo("modal01");
+                    });
+                    $('#client01-modal').css('display', 'flex');
+                    loadYouTubeVideo01('vsVF51FSoeI');
+                });
                 $('#openModal').click(function () {
                     // create and append modal structure here.
                     const docString = `

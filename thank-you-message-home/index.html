@@ -531,6 +531,30 @@
                                 <div class="home-client-slider">
                                     <div class="slider-item">
                                         <div class="content">
+                                            <h2>“They came in on budget, they came in on time.”</h2>
+                                            <div class="client-info">
+                                                <h3>Randy Sharp / <img
+                                                        src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/location2.svg"
+                                                        alt="icon" height="200" width="200" />
+                                                    Manhattan, NY
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="images-icon">
+                                            <div class="circle-ui"></div>
+                                            <div class="client-image">
+                                                <img class="lazy"
+                                                    data-src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/home-images/client01.webp"
+                                                    alt="image" height="200" width="200" />
+                                                <button id="openModal01" type="button"
+                                                    class="btn-styled-removed btn-client-play"><img
+                                                        src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/play-icon-full.svg"
+                                                        alt="icon" height="200" width="200" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-item">
+                                        <div class="content">
                                             <h2>“Chapter made me feel like I didn’t have anything to worry about.”</h2>
                                             <div class="client-info">
                                                 <h3>Jaye W. / <img
@@ -555,7 +579,7 @@
                                     </div>
                                     <div class="slider-item">
                                         <div class="content">
-                                            <h2>“Working with Chapter was amazing..”</h2>
+                                            <h2>“Working with Chapter was amazing.”</h2>
                                             <div class="client-info">
                                                 <h3>Marco C. /<img
                                                         src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/location2.svg"
@@ -1046,7 +1070,7 @@
                                             Submit
                                         </button>
                                     </div>
-                                    <input type="hidden" id="zc_gad" name="zc_gad" value=""/>
+                                    <input type="hidden" id="zc_gad" name="zc_gad" value="" />
                                 </form>
                             </div>
                             <!-- form-fields-wrap end -->
@@ -1311,7 +1335,7 @@
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/swiper.js"></script>
     <script defer
         src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.nice-select.min.js"></script>
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
     <script defer src="../js/custom.js"></script>
     <script defer src="../js/contact-home.js"></script>
     <script defer src="../js/home-page.js"></script>
@@ -1349,6 +1373,25 @@
             });
             // Load and control the YouTube video
             var queryParams = '?modestbranding=1&rel=0&showinfo=0&enablejsapi=1&start=0';
+            function loadYouTubeVideo01(videoId) {
+                var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
+                new YT.Player('player01', {
+                    height: '100%',
+                    width: '100%',
+                    videoId: videoId,
+                    playerVars: {
+                        'playsinline': 1,
+                        'modestbranding': 1,
+                        'rel': 0,
+                        'showinfo': 0,
+                        'iv_load_policy': 3
+                    },
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
             function loadYouTubeVideo(videoId) {
                 var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
                 new YT.Player('player1', {
@@ -1387,6 +1430,44 @@
                     }
                 });
             }
+            function loadYouTubeVideo3(videoId) {
+                var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
+                new YT.Player('player3', {
+                    height: '100%',
+                    width: '100%',
+                    videoId: videoId,
+                    playerVars: {
+                        'playsinline': 1,
+                        'modestbranding': 1,
+                        'rel': 0,
+                        'showinfo': 0,
+                        'iv_load_policy': 3
+                    },
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
+            function loadYouTubeVideo12(videoId) {
+                var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
+                new YT.Player('player12', {
+                    height: '100%',
+                    width: '100%',
+                    videoId: videoId,
+                    playerVars: {
+                        'playsinline': 1,
+                        'modestbranding': 1,
+                        'rel': 0,
+                        'showinfo': 0,
+                        'iv_load_policy': 3
+                    },
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
             function onPlayerReady(event) {
                 event.target.playVideo();
             }
@@ -1397,6 +1478,15 @@
                 } else if (type === 'modal2') {
                     const client2Modal = document.getElementById('client2-modal');
                     client2Modal.remove();
+                } else if (type === 'modal3') {
+                    const client2Modal = document.getElementById('client3-modal');
+                    client2Modal.remove();
+                } else if (type === 'modal12') {
+                    const client2Modal = document.getElementById('client12-modal');
+                    client2Modal.remove();
+                } else if (type === 'modal01') {
+                    const client01Modal = document.getElementById('client01-modal');
+                    client01Modal.remove();
                 }
             }
             function onPlayerStateChange(event) {
@@ -1406,6 +1496,34 @@
                 if (event.data === YT.PlayerState.ENDED) {
                 }
             }
+            $('#openModal01').click(function () {
+                // create and append modal structure here.
+                const docString = `
+            <div id="client01-modal" class="modal modal-home-client-video">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button id="client1-btn-close" class="btn-styled-removed btn-close" data-dismiss="modal">
+                            <img src=".././images/icons/close-icon.svg" alt="icon" />
+                        </button>
+                    </div>
+                    <div class="mid-content">
+                        <div class="video-box">
+                            <div id="player01"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+                const modalContainer = document.getElementById('clent1-modal-container');
+                modalContainer.innerHTML = docString;
+                // attach event handler for the rendered modal
+                $(".modal-home-client-video .btn-close").on("click", function () {
+                    stopYouTubeVideo("modal01");
+                });
+                $('#client01-modal').css('display', 'flex');
+                loadYouTubeVideo01('vsVF51FSoeI');
+            });
             $('#openModal').click(function () {
                 // create and append modal structure here.
                 const docString = `
@@ -1414,7 +1532,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button id="client1-btn-close" class="btn-styled-removed btn-close" data-dismiss="modal">
-                            <img src="./../images/icons/close-icon.svg" alt="icon" />
+                            <img src=".././images/icons/close-icon.svg" alt="icon" />
                         </button>
                     </div>
                     <div class="mid-content">
@@ -1435,14 +1553,13 @@
                 loadYouTubeVideo('EroEwFzupYI');
             });
             $('#openModal2').click(function () {
-                // create and append modal structure here.
                 const docString2 = `
             <div id="client2-modal" class="modal modal-home-client-video">
                 <div class="modal-backdrop"></div>
                 <div class="modal-content">
                     <div class="modal-header">
                         <button id="client1-btn-close" class="btn-styled-removed btn-close" data-dismiss="modal">
-                            <img src="./../images/icons/close-icon.svg" alt="icon" />
+                            <img src=".././images/icons/close-icon.svg" alt="icon" />
                         </button>
                     </div>
                     <div class="mid-content">
@@ -1462,6 +1579,59 @@
                 $('#client2-modal').css('display', 'flex');
                 loadYouTubeVideo2('wmmtsXhlG0s');
             });
+            $('#openModal3').click(function () {
+                const docString2 = `
+            <div id="client3-modal" class="modal modal-home-client-video">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button id="client1-btn-close" class="btn-styled-removed btn-close" data-dismiss="modal">
+                            <img src=".././images/icons/close-icon.svg" alt="icon" />
+                        </button>
+                    </div>
+                    <div class="mid-content">
+                        <div class="video-box">
+                            <div id="player3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+                const modalContainer = document.getElementById('clent1-modal-container');
+                modalContainer.innerHTML = docString2;
+                // attach event handler for the rendered modal
+                $(".modal-home-client-video .btn-close").on("click", function () {
+                    stopYouTubeVideo("modal3");
+                });
+                $('#client3-modal').css('display', 'flex');
+                loadYouTubeVideo3('rsCpcFnADrY');
+            });
+            $('#openModal12').click(function () {
+                const docString2 = `
+            <div id="client12-modal" class="modal modal-home-client-video">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button id="client1-btn-close" class="btn-styled-removed btn-close" data-dismiss="modal">
+                            <img src=".././images/icons/close-icon.svg" alt="icon" />
+                        </button>
+                    </div>
+                    <div class="mid-content">
+                        <div class="video-box">
+                            <div id="player12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+                const modalContainer = document.getElementById('clent1-modal-container');
+                modalContainer.innerHTML = docString2;
+                // attach event handler for the rendered modal
+                $(".modal-home-client-video .btn-close").on("click", function () {
+                    stopYouTubeVideo("modal12");
+                });
+                $('#client12-modal').css('display', 'flex');
+                loadYouTubeVideo12('jpEUzX69kdY');
+            });
         });
         // ready function end
     </script>
@@ -1480,8 +1650,8 @@
             gtag('event', 'conversion', { 'send_to': 'AW-10883092413/MbiyCMnEkfIYEL2fu8Uo' });
         }
     </script>
-    
-<script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
+
+    <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
 </body>
 
 </html>

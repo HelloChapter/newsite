@@ -201,8 +201,11 @@ function submitForm(e) {
     }
     $('#loader-spinner').show();
     $('#loader-spinner svg').show();
-    $('#contact-form-submit-label').hide();
-    $('#loader-spinner-label').show();
+    // $('#contact-form-submit-label').hide();
+    // $('#loader-spinner-label').show();
+    $('#submit').addClass("loading-data");
+   // debugger;
+
     inputs.each(function () {
       $(this).attr("disabled", "disabled");
     })
@@ -241,8 +244,9 @@ function submitForm(e) {
   }
   else {
     $('#loader-spinner').hide();
-    $('#loader-spinner-label').hide();
-    $('#contact-form-submit-label').show();
+    // $('#loader-spinner-label').hide();
+    // $('#contact-form-submit-label').show();
+    $('#submit').removeClass("loading-data");
   }
   // return false;
 }
