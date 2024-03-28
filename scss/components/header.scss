@@ -26,13 +26,17 @@ header {
     }
 
     .col-logo {
-        max-width: 230px;
-        flex: 0 0 230px;
+        max-width: 200px;
+        flex: 0 0 200px;
         line-height: 0;
     }
 
     .logo {
         max-width: 142px;
+    }
+
+    .mobile-login-url {
+        display: none;
     }
 
     nav {
@@ -71,19 +75,31 @@ header {
     }
 
     .col-get-started {
-        max-width: 200px;
-        flex: 0 0 200px;
+        max-width: 250px;
+        flex: 0 0 250px;
         text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .login-url {
+            padding-right: 35px;
+            font-weight: 400;
+        }
 
         a {
+            font-size: 17px;
+            line-height: 21px;
+            color: $black;
+        }
+
+        .contact-url a {
             background-color: $black;
             color: $white;
             min-width: 157px;
             display: inline-block;
             padding: 12px;
             font-weight: 700;
-            font-size: 17px;
-            line-height: 21px;
             font-style: italic;
             text-align: center;
             text-transform: uppercase;
@@ -179,17 +195,18 @@ header {
         nav {
             ul {
                 li {
-                    padding: 0 12px;
+                    padding: 0 8px;
                 }
             }
         }
 
         .col-get-started {
-            max-width: 160px;
-            flex: 0 0 160px;
+            max-width: 240px;
+            flex: 0 0 240px;
         }
     }
 }
+
 // 1240px end
 
 @media (max-width:1199px) {
@@ -199,6 +216,7 @@ header {
         }
     }
 }
+
 // 1199px
 @media (max-width:1023px) {
     body {
@@ -222,6 +240,7 @@ header {
     header {
         padding: 29px 0;
         background-color: $white !important;
+
         .menu-btn-toggle {
             display: block;
             position: fixed;
@@ -251,6 +270,11 @@ header {
         .header-nav {
             justify-content: space-between;
         }
+        .mobile-login-url {
+            display: block;
+            border-top: 0.5px solid $black;
+            padding-top: 18px;
+        }
 
         .col-logo {
             position: relative;
@@ -272,6 +296,10 @@ header {
 
             a {
                 padding: 9.5px;
+            }
+
+            .login-url {
+                display: none;
             }
         }
 
@@ -403,7 +431,7 @@ header {
         .col-get-started {
             top: 28px;
 
-            a {
+            .contact-url a {
                 line-height: 17px;
                 min-width: 117px;
                 padding: 5px;
