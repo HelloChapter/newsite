@@ -970,7 +970,7 @@ iframe {
 }
 
 header {
-  padding: 51px 0 32px;
+  padding: 40px 0 40px;
   -webkit-transition: background-color 0.3s, opacity 0.3s !important;
   transition: background-color 0.3s, opacity 0.3s !important;
   position: fixed;
@@ -993,10 +993,10 @@ header .header-nav {
           align-items: center;
 }
 header .col-logo {
-  max-width: 200px;
+  max-width: 242px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 200px;
-          flex: 0 0 200px;
+      -ms-flex: 0 0 242px;
+          flex: 0 0 242px;
   line-height: 0;
 }
 header .logo {
@@ -1014,7 +1014,7 @@ header nav ul {
           justify-content: center;
 }
 header nav ul li {
-  padding: 0 17px;
+  padding: 0 27px;
 }
 header nav a {
   font-size: 17px;
@@ -1022,10 +1022,9 @@ header nav a {
   font-weight: 400;
   color: #231F20;
   letter-spacing: -0.16px;
-  padding: 5px 3px;
+  padding: 0;
   display: block;
   border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
   -webkit-transition: border-color 0.25s;
   transition: border-color 0.25s;
 }
@@ -1037,10 +1036,10 @@ header nav .active {
   font-weight: 700;
 }
 header .col-get-started {
-  max-width: 250px;
+  max-width: 242px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 250px;
-          flex: 0 0 250px;
+      -ms-flex: 0 0 242px;
+          flex: 0 0 242px;
   text-align: right;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1124,6 +1123,11 @@ header .col-get-started .contact-url a:hover {
     padding: 0 80px;
   }
 }
+@media (max-width: 1480px) {
+  header nav ul li {
+    padding: 0 16px;
+  }
+}
 @media (max-width: 1440px) {
   header .container {
     padding: 0 60px;
@@ -1145,7 +1149,7 @@ header .col-get-started .contact-url a:hover {
             flex: 0 0 150px;
   }
   header nav ul li {
-    padding: 0 8px;
+    padding: 0 12px;
   }
   header .col-get-started {
     max-width: 240px;

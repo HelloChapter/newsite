@@ -1,7 +1,7 @@
 @import "../colors.scss";
 
 header {
-    padding: 51px 0 32px;
+    padding: 40px 0 40px;
     -webkit-transition: background-color .3s, opacity .3s !important;
     -o-transition: background-color .3s, opacity .3s !important;
     transition: background-color .3s, opacity .3s !important;
@@ -26,8 +26,8 @@ header {
     }
 
     .col-logo {
-        max-width: 200px;
-        flex: 0 0 200px;
+        max-width: 242px;
+        flex: 0 0 242px;
         line-height: 0;
     }
 
@@ -45,7 +45,7 @@ header {
             justify-content: center;
 
             li {
-                padding: 0 17px;
+                padding: 0 27px;
             }
         }
 
@@ -55,10 +55,9 @@ header {
             font-weight: 400;
             color: $text-color;
             letter-spacing: -0.16px;
-            padding: 5px 3px;
+            padding: 0;
             display: block;
             border-bottom: 2px solid transparent;
-            padding-bottom: 2px;
             -webkit-transition: border-color .25s;
             -o-transition: border-color .25s;
             transition: border-color .25s;
@@ -75,8 +74,8 @@ header {
     }
 
     .col-get-started {
-        max-width: 250px;
-        flex: 0 0 250px;
+        max-width: 242px;
+        flex: 0 0 242px;
         text-align: right;
         display: flex;
         align-items: center;
@@ -162,6 +161,15 @@ header {
 }
 
 // 1660 end
+@media (max-width:1480px) {
+    header {
+        nav ul li {
+            padding: 0 16px;
+        }
+    }
+}
+
+// 1480 end
 @media (max-width:1440px) {
     header {
         .container {
@@ -195,7 +203,7 @@ header {
         nav {
             ul {
                 li {
-                    padding: 0 8px;
+                    padding: 0 12px;
                 }
             }
         }
