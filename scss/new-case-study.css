@@ -403,6 +403,11 @@ iframe {
   font-weight: 400;
 }
 
+.grecaptcha-badge {
+  bottom: 88px !important;
+  z-index: 99;
+}
+
 @media (max-width: 1600px) {
   body {
     font-size: 14px;
