@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             $('#autocomplete').attr("data-value", "true");
                             if ($('#autocomplete').attr("data-value") === "true") {
                                 $('#autocomplete').parent().removeClass("error");
+                                $('#autocomplete').parent().removeClass("error-show");
                             }
                             if ($('#autocomplete').attr("data-value") === "false") {
                                 $("#autocomplete-results").hide();

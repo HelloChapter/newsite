@@ -28,11 +28,18 @@ $(document).on("change", "input, textarea", (function (e) {
         isValid = false;
         $(e.target).parent().addClass("error-show");
         return
-    } else if (($(e.target).attr("name") === "streetAddress" && e.target.value.length < 5)) {
+    }
+    // else if (($(e.target).attr("name") === "streetAddress" && e.target.value.length < 5)) {
+    //     isValid = false;
+    //     $(e.target).parent().addClass("error-show");
+    //     return
+    // }
+    else if (($(e.target).attr("data-value") === "false")) {
         isValid = false;
-        $(e.target).parent().addClass("error-show");
-        return
-    } else if (((!/^[0-9]+$/.test(e.target.value) && $(e.target).attr("name") === "phoneNumber") || ($(e.target).attr("name") === "phoneNumber" && (e.target.value.length < 5 || e.target.value.length > 12)))) {
+        $(this).parent().addClass("error-show");
+        return;
+    }
+    else if (((!/^[0-9]+$/.test(e.target.value) && $(e.target).attr("name") === "phoneNumber") || ($(e.target).attr("name") === "phoneNumber" && (e.target.value.length < 5 || e.target.value.length > 12)))) {
         isValid = false;
         $(e.target).parent().addClass("error-show");
         return
@@ -109,17 +116,29 @@ function redirectToThankYou() {
         localStorage.setItem("formSubmitted", true);
     }
     // var url = window.location.href;
-    window.location.href = "/thank-you-message-home/?submit=true";
-    var url = "/thank-you-message-home/?submit=true";
-    if (!url.includes("submit=true")) {
-        if (url.indexOf("?") !== -1) {
-            url = url + "&submit=true";
-        } else {
-            url = url + "?submit=true";
-        }
+    // window.location.href = "/thank-you-message-home/?submit=true";
+    // var url = "/thank-you-message-home/?submit=true";
+    // if (!url.includes("submit=true")) {
+    //     if (url.indexOf("?") !== -1) {
+    //         url = url + "&submit=true";
+    //     } else {
+    //         url = url + "?submit=true";
+    //     }
+    // }
+    // $(".form-fields-wrap").hide();
+    // $(".thank-you-wrap").show();
+    window.location.href = "/?submit=true"
+    console.log("window.location.href", window.location.href)
+    var url_check = window.location.href;
+    if (url_check.includes("/")) {
+        $(".form-wrap").hide();
+        $(".thank-you-content-wrap").show();
+        var stickyHeaderHeight = 160;
+        var offset = $('.section-form').offset().top - stickyHeaderHeight;
+        $('html, body').animate({
+            scrollTop: offset
+        }, 400);
     }
-    $(".form-fields-wrap").hide();
-    $(".thank-you-wrap").show();
 }
 // Contact Submit 
 //code for back button pressed the form will reset
@@ -139,6 +158,7 @@ function reCaptchaChallenge(siteToken) {
 var recaptcha_id = document.getElementById("recaptcha-error")
 $(recaptcha_id).hide();
 function submitForm(e) {
+    // e.preventDefault();
     // Read cookies parameter 
     const cookieValue_fbp = document.cookie
         .split("; ")
@@ -168,6 +188,10 @@ function submitForm(e) {
         if (($(this).attr("name") === "email" && !isEmail(this.value))) {
             isValid = false;
             $(this).parent().addClass("error-show");
+        }
+        if (($(this).attr("data-value") === "false")) {
+            isValid = false;
+            $(this).parent().addClass("error");
         }
         if (($(this).attr("name") === "streetAddress" && this.value.length < 5)) {
             isValid = false;
@@ -204,6 +228,11 @@ function submitForm(e) {
             emailElement.setAttribute("data-email", emailElement.value);
         }
         $('#loader').show();
+        $('#loader-spinner').show();
+        $('#loader-spinner svg').show();
+        // $('#contact-form-submit-label').hide();
+        // $('#loader-spinner-label').show();
+        $('#submit').addClass("loading-data");
         inputs.each(function () {
             $(this).attr("disabled", "disabled");
         })
@@ -221,16 +250,16 @@ function submitForm(e) {
         // 6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk - site key
         // check if its the same key as used in the respective html page
 
-        grecaptcha.ready(function() {
-            grecaptcha.execute('6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk', {action: 'submit'})
-                .then(function(token) {
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk', { action: 'submit' })
+                .then(function (token) {
                     // add generated token to the post data object
                     postDataObject.recaptchaToken = token;
                     setTimeout(function () {
-                        makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+                        makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
                         // makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
                     }, 500);
-                    
+
                 })
                 .catch(err => {
                     // recaptcha token not generated.
@@ -240,7 +269,10 @@ function submitForm(e) {
         });
     }
     else {
-        $('#loader').hide();
+        $('#loader-spinner').hide();
+    // $('#loader-spinner-label').hide();
+    // $('#contact-form-submit-label').show();
+    $('#submit').removeClass("loading-data");
     }
     // return false;
 }

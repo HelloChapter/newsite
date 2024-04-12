@@ -935,7 +935,7 @@
                 </section>
                 <!-- section-home-carousel end -->
 
-                <section class="section-home-contact-forms pearl-bg2 aos-init " data-aos="fade">
+                <!-- <section class="section-home-contact-forms pearl-bg2 aos-init " data-aos="fade">
                     <div class="container">
                         <div class="form-wrap">
                             <div class="content text-center">
@@ -1090,12 +1090,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group text-center btn-submit-wrap">
-                                        <!-- <div class="g-recaptcha" data-sitekey="6LesnlkpAAAAAKMCoW6o_39PI09sdEedi2dCgOag"
+                                         <div class="g-recaptcha" data-sitekey="6LesnlkpAAAAAKMCoW6o_39PI09sdEedi2dCgOag"
                                             data-callback="reCaptchaChallenge"></div>
                                         <div class="recaptcha-error-wrap">
                                             <label id="recaptcha-error" class="error-message recaptcha-error">Please
                                                 complete the reCAPTCHA verification.</label>
-                                        </div> -->
+                                        </div> 
                                         <button type="submit" class="btn-black">
                                             Submit
                                         </button>
@@ -1103,7 +1103,6 @@
                                     <input type="hidden" id="zc_gad" name="zc_gad" value="" />
                                 </form>
                             </div>
-                            <!-- form-fields-wrap end -->
                             <div class="thank-you-wrap text-center d-none">
                                 <div class="new-section-title">
                                     <h2>Thank you!</h2>
@@ -1112,8 +1111,271 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
                 <!-- section-home-contact-forms end -->
+                <section class="section-form aos-init " data-aos="fade">
+                    <div class="row no-gutters">
+                        <div class="col col-form aos-init " data-aos="fade" data-aos-delay="300">
+                            <div class="form-wrap">
+                                <div class="page-title">
+                                    <h1>Start a new <br /> Chapter with us</h1>
+                                    <p>Submit this form and our renovation expert will get back to you shortly.</p>
+                                </div>
+                                <!-- <div id="loader"></div> -->
+                                <form onsubmit="submitForm();
+                                        return false;" id="contact-form">
+                                    <div class="form-group row form-name-row">
+                                        <div class="col col-input">
+                                            <div class="input-wrap">
+                                                <input type="text" class="form-control" placeholder="First Name*"
+                                                    name="firstName" />
+                                                <label class="error-message">* Please enter your first name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col col-input">
+                                            <div class="input-wrap">
+                                                <input type="text" class="form-control" placeholder="Last Name*"
+                                                    name="lastName">
+                                                <label class="error-message">* Please enter your last name</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col col-input">
+                                            <div class="input-wrap">
+                                                <input type="text" id="contact-email-field-id-home" data-email=""
+                                                    class="form-control" placeholder="Email*" name="email" />
+                                                <label class="error-message">* Please enter your email address</label>
+
+                                            </div>
+                                        </div>
+                                        <div class="col col-input">
+                                            <div class="input-wrap">
+                                                <input type="number" id="phoneNumber" class="form-control"
+                                                    placeholder="Phone Number*" name="phoneNumber" maxlength="12"
+                                                    minlength="5" />
+                                                <label class="error-message">* Please enter your phone number</label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-wrap">
+                                            <input type="text" id="autocomplete" class="form-control"
+                                                placeholder="Project Address*" name="streetAddress"
+                                                data-value="false" />
+                                            <!-- <input type="hidden" id="selected-place-id"> -->
+                                            <label class="error-message"> * Please enter your project address</label>
+                                            <div class="autocomplete-results-wrap">
+                                                <ul class="list-unstyled" id="autocomplete-results"></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="form-group row">
+                                        <div class="col col-input">
+                                            <div class="input-wrap">
+                                                <input type="text" class="form-control" placeholder="City*"
+                                                    name="city" />
+                                            </div>
+                                        </div>
+                                        <div class="col col-select">
+                                            <div class="input-wrap
+                                                    select-wrapper">
+                                                <select class="form-control" tabindex="0" aria-invalid="false"
+                                                    name="state" aria-label="State">
+                                                    <option value="" selected="selected" class="gf_placeholder">State
+                                                    </option>
+                                                    <option value="Alaska">Alaska</option>
+                                                    <option value="Alabama">Alabama</option>
+                                                    <option value="Arizona">Arizona</option>
+                                                    <option value="Arkansas">Arkansas</option>
+                                                    <option value="California">California</option>
+                                                    <option value="Colorado">Colorado</option>
+                                                    <option value="Connecticut">Connecticut</option>
+                                                    <option value="Delaware">Delaware</option>
+                                                    <option value="Florida">Florida</option>
+                                                    <option value="Georgia">Georgia</option>
+                                                    <option value="Hawaii">Hawaii</option>
+                                                    <option value="Idaho">Idaho</option>
+                                                    <option value="Illinois">Illinois</option>
+                                                    <option value="Indiana">Indiana</option>
+                                                    <option value="Iowa">Iowa</option>
+                                                    <option value="Kansas">Kansas</option>
+                                                    <option value="Kentucky">Kentucky</option>
+                                                    <option value="Louisiana">Louisiana</option>
+                                                    <option value="Maine">Maine</option>
+                                                    <option value="Maryland">Maryland</option>
+                                                    <option value="Massachusetts">Massachusetts</option>
+                                                    <option value="Michigan">Michigan</option>
+                                                    <option value="Minnesota">Minnesota</option>
+                                                    <option value="Mississippi">Mississippi</option>
+                                                    <option value="Missouri">Missouri</option>
+                                                    <option value="Montana">Montana</option>
+                                                    <option value="Nebraska">Nebraska</option>
+                                                    <option value="Nevada">Nevada</option>
+                                                    <option value="New
+                                                            Hampshire">New
+                                                        Hampshire</option>
+                                                    <option value="New Jersey">New
+                                                        Jersey</option>
+                                                    <option value="New Mexico">New
+                                                        Mexico</option>
+                                                    <option value="New York">New
+                                                        York</option>
+                                                    <option value="North
+                                                            Carolina">North
+                                                        Carolina</option>
+                                                    <option value="North
+                                                            Dakota">North
+                                                        Dakota</option>
+                                                    <option value="Ohio">Ohio</option>
+                                                    <option value="Oklahoma">Oklahoma</option>
+                                                    <option value="Oregon">Oregon</option>
+                                                    <option value="Pennsylvania">Pennsylvania</option>
+                                                    <option value="Rhode
+                                                            Island">Rhode
+                                                        Island</option>
+                                                    <option value="South
+                                                            Carolina">South
+                                                        Carolina</option>
+                                                    <option value="South
+                                                            Dakota">South
+                                                        Dakota</option>
+                                                    <option value="Tennessee">Tennessee</option>
+                                                    <option value="Texas">Texas</option>
+                                                    <option value="Utah">Utah</option>
+                                                    <option value="Vermont">Vermont</option>
+                                                    <option value="Virginia">Virginia</option>
+                                                    <option value="Washington">Washington</option>
+                                                    <option value="West
+                                                            Virginia">West
+                                                        Virginia</option>
+                                                    <option value="Wisconsin">Wisconsin</option>
+                                                    <option value="Wyoming">Wyoming</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col col-input">
+                                            <div class="input-wrap">
+                                                <input type="text" class="form-control" placeholder="Zip Code*"
+                                                    name="zipCode" />
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="form-group">
+                                        <div class="input-wrap">
+                                            <textarea class="form-control"
+                                                placeholder="Tell us more about your project*" rows="5" minlength="5"
+                                                name="projectDescription"></textarea>
+                                            <!-- <label class="error-message">* Please tell us about your project</label> -->
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group link-text">
+                                        <!-- <button type="submit" class="btn-submit">submit</button> -->
+                                        <!-- <div class="g-recaptcha" data-sitekey="6LesnlkpAAAAAKMCoW6o_39PI09sdEedi2dCgOag"
+                                            data-callback="reCaptchaChallenge">
+                                        </div>
+                                        <div class="recaptcha-error-wrap">
+                                            <label id="recaptcha-error" class="error-message recaptcha-error">Please
+                                                complete the reCAPTCHA verification.</label>
+                                        </div> -->
+                                        <button id="submit" type="submit" class="btn-submit ">
+                                            <span id="loader-spinner" class="loader-spinner-wrap">
+                                            </span>
+                                            <!-- <span id="loader-spinner-label">Please Wait...</span>
+                                            <label id="contact-form-submit-label" class="contact-form-submit-label">
+                                                Submit</label> -->
+                                        </button>
+                                    </div>
+                                    <input type="hidden" id="zc_gad" name="zc_gad" value="" />
+                                </form>
+                            </div>
+                            <!-- form end -->
+                            <div class="thank-you-content-wrap  d-none">
+                                <div class="thank-you-content">
+                                    <div class="page-title text-center">
+                                        <div class="icon-wrap">
+                                            <img src="../images/icons/check-circle.svg" alt="icon">
+                                        </div>
+                                        <h1>Thank you for<br /> contacting us!</h1>
+                                        <p>A Chapter renovation expert will be in touch shortly.<br /> Until then, get
+                                            inspired by some of our work.</p>
+                                    </div>
+                                    <div class="links">
+                                        <a href="/all-renovation-projects/">Explore our projects</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Thank you wrap end -->
+                        </div>
+                        <div class="col col-image">
+                            <div class="bg-image col-desktop-image"
+                                style="background-image:url('./../images/contact-img/contact-image2.webp');">
+                                <div class="image-label">
+                                    <h6>Kitchen Renovation, NYC </h6>
+                                </div>
+                            </div>
+                            <div class="contact-info-wrap">
+                                <h6>Need more information?</h6>
+                                <p>Contact us or <a target="_blank"
+                                        href="https://hellochapter.zohobookings.com/#/remodelingconsultation">book a
+                                        call</a> with our renovation expert</p>
+                                <div class="address-wrap row">
+                                    <div class="address-group col">
+                                        <h6>Chapter New York</h6>
+                                        <address>
+                                            (212) 680-4628<br />
+                                            345 7th Ave, New York, NY 10001
+                                        </address>
+                                        <p>NY license #624690</p>
+                                    </div>
+                                    <div class="address-group col">
+                                        <h6>Chapter Miami</h6>
+                                        <address>
+                                            (305) 676-6787<br />
+                                            252 NW 29th St, Miami, FL 33127
+                                        </address>
+                                        <p>FL license #CBC1267423</p>
+                                    </div>
+                                </div>
+                                <div class="email-wrap">
+                                    <a href="mailto:itstime@hellochapter.com">itstime@hellochapter.com</a>
+                                </div>
+                                <div class="social-wrap">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="https://www.facebook.com/hellochapter" target="_blank"><img
+                                                    src="../images/icons/facebook.svg" alt="icon"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/chapter.renovations/"
+                                                target="_blank"><img src="../images/icons/instagram.svg" alt="icon"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/@hello.chapter" target="_blank"><img
+                                                    src="../images/icons/youtube.svg" alt="icon"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.pinterest.com/chapterrenovations/" target="_blank"><img
+                                                    src="../images/icons/pinterest.svg" alt="icon"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
+                                                target="_blank"><img src="../images/icons/houzz.svg" alt="icon"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bg-image col-mobile-image"
+                                style="background-image:url('./../images/contact-img/contact-image2.webp');">
+                                <div class="image-label">
+                                    <h6>Kitchen Renovation, NYC </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <!-- modal-home-client-video start -->
                 <div id="clent1-modal-container">
                 </div>
@@ -1389,6 +1651,7 @@
     <script defer src="./js//home-slider.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script defer src="https://www.youtube.com/iframe_api"></script>
+    <script defer src="../js/google-api.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -1694,6 +1957,30 @@
 
     <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
     <script> (function () { var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function () { acsbJS.init({ statementLink: '', footerHtml: '', hideMobile: false, hideTrigger: false, disableBgProcess: false, language: 'en', position: 'left', leadColor: '#231f20', triggerColor: '#231f20', triggerRadius: '50%', triggerPositionX: 'left', triggerPositionY: 'bottom', triggerIcon: 'people', triggerSize: 'medium', triggerOffsetX: 20, triggerOffsetY: 20, mobile: { triggerSize: 'small', triggerPositionX: 'left', triggerPositionY: 'bottom', triggerOffsetX: 10, triggerOffsetY: 10, triggerRadius: '50%' } }); }; h.appendChild(s); })(); </script>
+    <script>
+        var emailElement = document.getElementById('contact-email-field-id-home');
+        emailElement.value = localStorage.getItem('email') != undefined ? localStorage.getItem('email') : null;
+        emailElement.setAttribute("data-email", emailElement.value);
+        const urlParams = new URLSearchParams(window.location.search);
+        const myParam = urlParams.get('submit');
+        if (myParam == "true") {
+            console.log("Home Conversion");
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-225495044-1');
+            gtag('event', 'conversion', { 'send_to': 'AW-10883092413/MbiyCMnEkfIYEL2fu8Uo' });
+
+            $(".form-wrap").hide();
+            $(".thank-you-content-wrap").show();
+            var stickyHeaderHeight = 160;
+            var offset = $('.section-form').offset().top - stickyHeaderHeight;
+            console.log("offset", offset);
+            $('html, body').animate({
+                scrollTop: offset
+            }, 400);
+        }
+    </script>
 </body>
 
 </html>
