@@ -1973,9 +1973,8 @@
 
             $(".form-wrap").hide();
             $(".thank-you-content-wrap").show();
-            var stickyHeaderHeight = 160;
-            var offset = $('.section-form').offset().top - stickyHeaderHeight;
-            console.log("offset", offset);
+            var stickyHeaderHeight = 40;
+            var offset = $('.section-home-carousel').offset().top - stickyHeaderHeight;
             $('html, body').animate({
                 scrollTop: offset
             }, 400);

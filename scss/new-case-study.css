@@ -1941,7 +1941,7 @@ footer .trusted-by li img {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #231F20;
+  background-color: rgba(35, 31, 32, 0.9);
   padding: 0 40px;
   width: auto;
 }
