@@ -1,5 +1,15 @@
 [
   {
+    "id":29,
+    "blogUrl":"/nyc-building-permits-filing-guide/",
+    "imageUrl": "../images/blog-images/nyc-building-permits-filing-guide-images/nyc-building-permits-filing-guide-images-1.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Sebastian-Aguas.webp",
+    "writerName": "Sebastian Aguas",
+    "date": "Mar 25, 2024",
+    "title": "NYC building permits & filing process",
+    "introText": "Confused about NYC building permits? Our comprehensive guide covers everything y..."
+  },
+  {
     "id":28,
     "blogUrl":"/bathroom-renovation-cost-nyc/",
     "imageUrl": "../images/blog-images/bathroom-renovation-cost-nyc-images/bathroom-renovation-cost-nyc-images-1.webp",
