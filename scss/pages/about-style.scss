@@ -1,35 +1,75 @@
 @import "../classes.scss";
 @import "../common.scss";
 @import "../components/slider.scss";
+@import "../components/form-elements.scss";
 @import "../components/header.scss";
 @import "../components/footer.scss";
 @import "../components/chapter-content.scss";
 @import "../components/chapter-numbers.scss";
+@import "../components/section-blog-expert-help.scss";
+
 .page-about {
     header {
         background-color: transparent;
     }
+
     .middle-content {
         padding-top: 0;
     }
 }
+
 .header-sticky {
     header {
         background-color: $white;
     }
 }
+
 .section-intro-image {
+    .image-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($color: $black, $alpha: 0.9);
+        padding: 0 40px;
+        width: auto;
+
+        h6 {
+            color: $white;
+            margin: 0;
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 40px;
+            font-family: "Inter";
+        }
+
+        @media (max-width:1023px) {
+            h6 {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+
+        @media (max-width:1023px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
     .col {
         max-width: 50%;
         flex: 0 0 50%;
     }
+
     .page-title {
         max-width: 548px;
         margin: 0 auto;
     }
+
     .bg-image {
         min-height: 650px;
+        position: relative;
     }
+
     .section-content-col {
         position: relative;
         padding: 20px 30px;
@@ -37,6 +77,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
         .section-graphic-img {
             position: absolute;
             left: 50%;
@@ -48,8 +89,10 @@
             z-index: -1;
             pointer-events: none;
         }
+
         .content {
             position: relative;
+
             &:before {
                 content: "";
                 width: 1px;
@@ -59,6 +102,7 @@
                 margin: 25px auto;
             }
         }
+
         h4 {
             font-size: 35px;
             line-height: 50px;
@@ -69,16 +113,20 @@
         }
     }
 }
+
 .section-intro-content {
     padding: 215px 0 115px;
     position: relative;
+
     h2 {
         line-height: 1.13;
     }
+
     .section-title {
         max-width: 850px;
         margin: 0 auto 20px;
     }
+
     .row {
         .col+.col {
             .content {
@@ -87,14 +135,17 @@
             }
         }
     }
+
     .content {
         max-width: 580px;
+
         p {
             letter-spacing: -0.6px;
             line-height: 2.8;
         }
     }
 }
+
 .spinner-wrap {
     width: 245px;
     position: absolute;
@@ -114,8 +165,10 @@
     transition: transform 1s;
     transition: transform 1s, -webkit-transform 1s;
 }
+
 .section-welcome-text {
     padding: 95px 0;
+
     h3 {
         font-size: 40px;
         line-height: 48px;
@@ -124,26 +177,33 @@
         text-transform: uppercase;
     }
 }
+
 .section-team-members {
     padding-bottom: 60px;
+
     .section-title {
         padding: 115px 15px;
+
         h2 {
             font-size: 70px;
             line-height: 1.15;
         }
     }
+
     .team-wrapper {
         padding: 0 115px;
+
         .col-team {
             max-width: 25%;
             flex: 0 0 25%;
             padding-bottom: 30px;
             position: relative;
+
             .team-image {
                 min-height: inherit;
                 padding-bottom: 100%;
                 position: relative;
+
                 &:hover {
                     .team-content {
                         position: absolute;
@@ -163,6 +223,7 @@
                 }
             }
         }
+
         .col-team-no-image {
             .bg-image {
                 height: 100%;
@@ -173,12 +234,14 @@
                 justify-content: center;
                 padding: 30px;
             }
+
             .image {
                 img {
                     display: block;
                 }
             }
         }
+
         .team-content {
             visibility: hidden;
             display: none;
@@ -189,6 +252,7 @@
             background-color: rgba($color: #ffffff, $alpha: 0.86);
             height: calc(100% - 30px);
             width: calc(100% - 30px);
+
             h6 {
                 font-size: 14px;
                 line-height: 17px;
@@ -197,11 +261,13 @@
                 margin-bottom: 10px;
                 text-transform: uppercase;
             }
+
             h3 {
                 font-size: 36px;
                 line-height: 41px;
                 margin-bottom: 12px;
             }
+
             h4 {
                 font-size: 14px;
                 line-height: 17px;
@@ -210,6 +276,7 @@
                 margin-bottom: 10px;
             }
         }
+
         .active-member:not(.col-team-5, .col-team-6) {
             &:after {
                 content: '';
@@ -224,6 +291,7 @@
                 margin: 0 auto;
             }
         }
+
         .active-member:not(.col-team-1, .col-team-2, .col-team-3, .col-team-4) {
             &:before {
                 content: '';
@@ -240,16 +308,20 @@
             }
         }
     }
+
     .mobile-team-wrapper {
         display: none;
     }
+
     .team-clickable-content {
         margin: 0px 0 30px;
         padding: 100px;
         min-height: 510px;
+
         .content {
             max-width: 861px;
         }
+
         h6 {
             font-size: 17px;
             line-height: 1.15;
@@ -258,11 +330,13 @@
             margin-bottom: 6px;
             text-transform: uppercase;
         }
+
         h3 {
             font-size: 70px;
             line-height: 1.15;
             margin-bottom: 30px;
         }
+
         h4 {
             font-size: 17px;
             line-height: 1.15;
@@ -272,48 +346,60 @@
         }
     }
 }
+
 .section-team-chapter {
     padding: 115px;
+
     h2 {
         margin-bottom: 30px;
         font-size: 70px;
         line-height: 1.14;
     }
+
     .col-img {
         max-width: 50.13%;
         flex: 0 0 50.13%;
         // min-height: 564px;
         padding-bottom: 33.4%;
     }
+
     .col-content {
         padding-left: 100px;
     }
+
     .content {
         max-width: 680px;
         margin: 0 auto;
     }
+
     p {
         line-height: 1.92;
     }
 }
+
 .section-project-managers {
     padding: 115px 0 0 115px;
+
     h2 {
         margin-bottom: 30px;
         font-size: 70px;
         line-height: 1.14;
     }
+
     .col-content {
         padding-right: 20px;
         padding-bottom: 20px;
     }
+
     .content {
         max-width: 680px;
         margin: 0 auto;
     }
+
     p {
         line-height: 1.92;
     }
+
     .col-img {
         max-width: 63.2%;
         flex: 0 0 63.2%;
@@ -321,35 +407,42 @@
         margin-top: -30px;
     }
 }
+
 .section-about-partners {
     padding: 102px 0;
+
     .container {
         max-width: 930px;
     }
+
     .heading-section {
         max-width: 670px;
         margin: 0 auto;
     }
+
     h2 {
-        font-size: 80px;
-        line-height: 1.07;
-        margin-bottom: 50px;
+        font-size: 50px;
+        line-height: 1.15;
+        margin-bottom: 30px;
     }
+
     p {
         line-height: 40px;
+
         br {
             display: none;
         }
     }
+
     .partners-wrap {
-        margin: 90px 0 20px;
+        margin: 90px auto 20px;
         line-height: 0;
-        img {
-            max-width: 274px;
-        }
+        max-width: 485px;
+
         .row {
             position: relative;
             align-items: center;
+
             &:after {
                 content: '';
                 display: block;
@@ -361,84 +454,308 @@
                 background-color: $black;
                 height: 88%;
             }
+
             .col {
                 max-width: 50%;
                 flex: 0 0 50%;
             }
         }
+
         .col-left {
-            padding-right: 135px;
+            padding-right: 101px;
             text-align: right;
         }
+
         .col-right {
-            padding-left: 135px;
+            padding-left: 108px;
         }
     }
 }
+
+.section-home-reviews {
+    padding: 30px 0;
+}
+
+.section-who-we-are {
+    padding: 115px;
+
+    * {
+        color: $white;
+    }
+
+    h2 {
+        line-height: 1.15;
+        margin-bottom: 50px;
+    }
+
+    .content-wrap {
+        max-width: 801px;
+    }
+
+    .col-content {
+        max-width: 55.9%;
+        flex: 0 0 55.9%;
+    }
+
+    .bg-image {
+        position: relative;
+        height: 100%;
+    }
+
+    .image-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($color: $black, $alpha: 0.9);
+        padding: 0 40px;
+        width: auto;
+
+        h6 {
+            color: $white;
+            margin: 0;
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 40px;
+            font-family: "Inter";
+        }
+
+        @media (max-width:1023px) {
+            h6 {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+
+        @media (max-width:1023px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 24px;
+        font-family: "Inter";
+        margin-bottom: 6px;
+    }
+
+    p {
+        line-height: 35px;
+        font-weight: 400;
+
+        +h3 {
+            margin-top: 60px;
+        }
+    }
+}
+
+.section-values {
+    padding: 115px 115px 95px;
+
+    .container {
+        max-width: 1420px;
+    }
+
+    .section-title {
+        margin-bottom: 60px;
+
+        h2 {
+            line-height: 1.15;
+        }
+    }
+
+    .content-item {
+        display: flex;
+
+        +.content-item {
+            margin-top: 60px;
+        }
+
+        .image {
+            max-width: 84px;
+            flex: 0 0 84px;
+        }
+
+        .content {
+            max-width: 525px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+        line-height: 24px;
+        font-family: "Inter";
+        font-weight: 600;
+        margin-bottom: 6px;
+
+        i {
+            font-weight: 900;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        line-height: 35px;
+    }
+}
+
+.section-client-experience {
+    .desktop-hide {
+        display: none;
+    }
+
+    .section-title {
+        padding: 115px;
+        height: 40%;
+    }
+
+    h2 {
+        font-size: 75px;
+        line-height: 85px;
+    }
+
+    .image {
+        height: 60%;
+
+        img {
+            display: block;
+        }
+    }
+
+    .content-wrap {
+        padding: 126px 138px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .content-item {
+            max-width: 247px;
+            flex: 0 0 247px;
+            text-align: center;
+            margin-bottom: 72px;
+
+            &:last-child {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+        line-height: 24px;
+        font-family: "Inter";
+        margin-bottom: 7px;
+        margin-top: 4px;
+    }
+
+    p {
+        line-height: 35px;
+        font-weight: 400;
+    }
+}
+
 //  Responsive CSS start
 @media (max-width:1660px) {
     .section-team-chapter {
         padding: 80px;
+
         h2 {
             font-size: 60px;
         }
+
         .col-content {
             padding-left: 80px;
         }
     }
+
     .section-project-managers {
         padding: 80px 0 0 80px;
+
         h2 {
             font-size: 60px;
         }
     }
+
     .section-team-members {
         padding-bottom: 30px;
+
         .section-title {
             padding: 80px 15px;
+
             h2 {
                 font-size: 60px;
             }
         }
+
         .team-wrapper {
             padding: 0 80px;
+
             .team-content {
                 padding: 20px;
             }
         }
+
         .team-clickable-content {
             padding: 70px;
             min-height: 440px;
+
             h3 {
                 font-size: 60px;
             }
         }
     }
+
     .section-about-partners {
         padding: 80px 0;
-        h2 {
-            font-size: 70px;
-        }
+
         p {
             line-height: 24px;
         }
+
         .heading-section {
             max-width: 570px;
         }
+
         .partners-wrap {
-            margin: 60px 0 20px;
-            img {
-                max-width: 250px;
-            }
+            margin: 60px auto 20px;
             .col-left {
-                padding-right: 100px;
+                padding-right: 90px;
             }
+
             .col-right {
-                padding-left: 100px;
+                padding-left: 90px;
             }
         }
     }
+
+    .section-who-we-are {
+        padding: 80px;
+    }
+
+    .section-values {
+        padding: 80px 80px 70px;
+    }
+
+    .section-client-experience {
+        .section-title {
+            padding: 80px;
+        }
+
+        h2 {
+            font-size: 70px;
+            line-height: 80px;
+        }
+
+        p {
+            line-height: 24px;
+        }
+
+        .content-wrap {
+            padding: 100px 110px;
+        }
+    }
 }
+
 // 1660 end
 @media (max-width:1440px) {
     .section-intro-image {
@@ -449,32 +766,41 @@
             }
         }
     }
+
     .section-welcome-text h3 {
         font-size: 35px;
         line-height: 1.1;
     }
+
     .section-team-members {
         .section-title {
             padding: 60px 15px;
+
             h2 {
                 font-size: 50px;
             }
         }
+
         .team-wrapper {
             padding: 0 60px;
+
             .team-content h3 {
                 font-size: 32px;
                 line-height: 36px;
             }
         }
+
         .team-clickable-content {
             padding: 50px;
             min-height: 360px;
+
             h3 {
                 font-size: 50px;
             }
+
             .content {
                 max-width: 840px;
+
                 p {
                     br {
                         display: none;
@@ -483,68 +809,111 @@
             }
         }
     }
+
     .section-team-chapter {
         padding: 60px;
+
         h2 {
             font-size: 50px;
         }
+
         .col-content {
             padding-left: 60px;
         }
     }
+
     .section-project-managers {
         padding: 60px 0 0 60px;
+
         h2 {
             font-size: 50px;
         }
     }
-    .section-about-partners {
+
+    .section-who-we-are {
+        padding: 60px;
+    }
+
+    .section-values {
+        padding: 60px 45px;
+    }
+
+    .section-client-experience {
+        .section-title {
+            padding: 60px;
+        }
+
         h2 {
-            font-size: 60px;
+            font-size: 65px;
+            line-height: 75px;
+        }
+
+        .content-wrap {
+            padding: 80px 60px;
+
+            .content-item {
+                max-width: 50%;
+                flex: 0 0 50%;
+                padding: 0 10px;
+                margin-bottom: 55px;
+            }
         }
     }
 }
+
 // 1440 end
 @media (max-width:1199px) {
     .spinner-wrap {
         max-width: 180px;
         top: -90px;
     }
+
     .section-intro-content {
         padding: 175px 0 85px;
     }
+
     .section-welcome-text {
         padding: 75px;
+
         h3 {
             font-size: 30px;
         }
     }
+
     .section-team-members {
         .section-title {
             padding: 40px 15px;
+
             h2 {
                 font-size: 40px;
             }
         }
+
         .team-wrapper {
             padding: 0 40px;
+
             .team-content {
                 padding: 15px;
+
                 h3 {
                     font-size: 27px;
                     margin-bottom: 10px;
                 }
+
                 h4 {
                     line-height: 1.3;
                     margin-bottom: 10px;
                 }
+
                 h6 {
                     line-height: 1;
                 }
+
                 .content {
                     font-size: 12px;
                 }
             }
+
             .col-team-7 .bg-image {
                 img {
                     max-width: 70%;
@@ -552,77 +921,120 @@
                 }
             }
         }
+
         .team-clickable-content {
             padding: 40px;
+
             h3 {
                 font-size: 40px;
             }
         }
     }
+
     .section-team-chapter {
         h2 {
             font-size: 40px;
         }
+
         .col-content {
             padding-left: 40px;
         }
     }
+
     .section-project-managers {
         h2 {
             font-size: 40px;
         }
     }
-    .section-about-partners {
+
+    .section-who-we-are {
+        padding: 60px 40px;
+
         h2 {
-            font-size: 50px;
             margin-bottom: 30px;
         }
-        .partners-wrap img {
-            max-width: 210px;
+
+        p+h3 {
+            margin-top: 30px;
+        }
+
+        .image-label {
+            padding: 0 20px;
+        }
+    }
+
+    .section-values {
+        padding: 60px 25px;
+    }
+
+    .section-client-experience {
+        h2 {
+            font-size: 60px;
+            line-height: 70px;
+        }
+
+        .section-title {
+            padding: 60px 20px;
+        }
+
+        .content-wrap {
+            padding: 60px 20px;
         }
     }
 }
+
 // 1199 end
 @media (max-width:1023px) {
     .section-intro-image {
         padding: 100px 0 0;
+
         .bg-image {
             min-height: 600px;
         }
+
         .col {
             max-width: 100%;
             flex: 0 0 100%;
         }
+
         .section-image-content {
             order: 1;
         }
+
         .section-content-col {
             h4 {
                 font-size: 28px;
             }
+
             .content:before {
                 height: 40px;
             }
         }
     }
+
     .section-intro-content {
         padding: 140px 0 60px;
     }
+
     .section-welcome-text {
         padding: 60px 20px;
+
         h3 {
             font-size: 25px;
         }
     }
+
     .section-team-members {
         .section-title {
             padding: 60px 20px;
         }
+
         .team-image {
             .team-content {
                 display: none !important;
             }
         }
+
         .team-content.desktop-hide {
             visibility: visible;
             display: block;
@@ -630,31 +1042,160 @@
             padding: 20px;
         }
     }
+
     .section-team-chapter {
         .col-img {
             min-height: 100%;
         }
     }
+
     .section-about-partners {
         padding: 60px 0;
+
         h2 {
             font-size: 40px;
         }
+
         .partners-wrap {
             margin-bottom: 0;
         }
     }
+
+    .section-who-we-are {
+        padding: 50px 0 0;
+
+        .row {
+            margin: 0;
+        }
+
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding: 0;
+        }
+
+        .content-wrap {
+            padding: 0 30px 30px;
+        }
+
+        h2 {
+            font-size: 70px;
+            line-height: 80px;
+        }
+
+        h3,
+        p {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .bg-image {
+            padding-bottom: 53.6%;
+        }
+    }
+
+    .section-values {
+        padding: 60px 5px;
+
+        .section-title {
+            margin-bottom: 40px;
+        }
+
+        .content-item {
+            flex-direction: column;
+            text-align: center;
+
+            .image {
+                margin: 0 auto;
+                flex: 0 0 auto;
+
+                img {
+                    max-width: 32px;
+                }
+            }
+
+            h4 {
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            p {
+                line-height: 24px;
+            }
+        }
+    }
+
+    .section-client-experience {
+        .desktop-hide {
+            display: block;
+        }
+
+        .mobile-hide {
+            display: none;
+        }
+
+        .section-title {
+            height: auto;
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 25px;
+            line-height: 30px;
+        }
+
+        .content-wrap {
+            padding: 30px 20px;
+
+            .content-item {
+                margin-bottom: 32px;
+
+                img {
+                    max-width: 32px;
+                }
+            }
+        }
+
+        .col {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .col-left {
+            order: 1;
+        }
+
+        .col-right {
+            order: 0;
+            padding-top: 30px;
+        }
+
+        .image {
+            height: auto;
+            min-height: 320px;
+            padding-bottom: 41%;
+            background-position: top center;
+        }
+
+        h4 {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
 }
+
 // 1023 end
 @media (max-width:991px) {
     .section-project-managers {
         padding: 60px 0 0 20px;
+
         h2 {
             font-size: 25px;
             line-height: 30px;
             margin-bottom: 30px;
             letter-spacing: -0.15px;
         }
+
         .col-img {
             padding-bottom: 35%;
             margin-top: 0;
@@ -663,38 +1204,48 @@
             flex: 0 0 53.7%;
             align-self: flex-end;
         }
+
         .col-content {
             padding-bottom: 60px;
         }
     }
+
     .section-team-chapter {
         padding: 60px 20px;
+
         h2 {
             font-size: 25px;
             line-height: 30px;
             letter-spacing: -0.15px;
         }
+
         .col-content {
             padding-left: 20px;
         }
+
         .col-img {
             padding-bottom: 57.15%;
         }
     }
+
     .section-team-members {
         .desktop-team-wrapper {
             display: none;
         }
+
         .mobile-team-wrapper {
             display: block;
             padding: 0 20px;
+
             .col-team {
                 max-width: 50%;
                 flex: 0 0 50%;
             }
         }
+
         .team-content-info {
             padding: 15px 0;
+
             h6 {
                 font-size: 14px;
                 line-height: 17px;
@@ -703,12 +1254,14 @@
                 text-transform: uppercase;
                 font-family: "Inter";
             }
+
             h3 {
                 font-size: 24px;
                 line-height: 28px;
                 font-weight: 700;
                 margin-bottom: 8px;
             }
+
             h4 {
                 font-size: 14px;
                 line-height: 17px;
@@ -717,39 +1270,48 @@
             }
         }
     }
+
     .section-about-partners {
         h2 {
             font-size: 25px;
             line-height: 30px;
             letter-spacing: -0.15px;
         }
+
         p {
             br {
                 display: block;
             }
         }
+
         .heading-section {
             max-width: 345px;
         }
+
         .partners-wrap {
             margin-top: 36px;
+
             img {
                 max-width: 151px;
             }
+
             .col-left {
                 padding-right: 60px;
             }
+
             .col-right {
                 padding-left: 60px;
             }
         }
     }
 }
+
 @media (max-width:820px) and (min-width:768px) {
     .section-project-managers .col-img {
         margin-bottom: -10px;
     }
 }
+
 @media (max-width:767px) {
     .section-intro-content {
         .content-wrap {
@@ -759,50 +1321,64 @@
                 padding-bottom: 20px;
             }
         }
+
         .row .col+.col .content {
             margin: 0;
         }
+
         .content {
             max-width: 100%;
+
             p {
                 line-height: 24px;
             }
         }
     }
+
     .section-intro-image .bg-image {
         min-height: 400px;
     }
+
     .section-team-chapter {
         padding: 60px 0 0;
+
         .col {
             max-width: 100%;
             flex: 0 0 100%;
         }
+
         .col-img {
             order: 1;
             min-height: 290px;
         }
+
         .col-content {
             padding: 0 20px 30px;
         }
     }
+
     .section-project-managers {
         padding: 60px 0 0 0;
+
         .col {
             max-width: 100%;
             flex: 0 0 100%;
         }
+
         .col-content {
             padding: 0 20px 20px;
         }
+
         .col-img {
             margin-top: 0;
             padding-bottom: 63%;
             min-height: 290px;
         }
     }
+
     .section-team-members {
         padding-bottom: 0;
+
         .section-title {
             h2 {
                 font-size: 25px;
@@ -810,49 +1386,110 @@
                 letter-spacing: -0.15px;
             }
         }
+
         .team-wrapper .col-team .team-image {
             min-height: 290px;
             padding-bottom: 74%;
         }
     }
+
     .section-about-partners {
         .partners-wrap {
             margin-top: 30px;
+
             img {
                 max-width: 116px;
             }
+
             .col-left {
                 padding-right: 30px;
             }
+
             .col-right {
                 padding-left: 30px;
             }
         }
     }
+
+    .section-who-we-are {
+        .content-wrap {
+            padding: 0 20px 30px;
+        }
+
+        h2 {
+            font-size: 45px;
+            line-height: 60px;
+        }
+
+        .bg-image {
+            padding-bottom: 80%;
+        }
+    }
+
+    .section-values {
+        .section-title {
+            margin-bottom: 30px;
+        }
+
+        .col {
+            max-width: 100%;
+            flex: 100%;
+        }
+
+        .content-item {
+            .content {
+                margin: 0 auto;
+            }
+
+            +.content-item {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .section-client-experience {
+        .content-wrap .content-item {
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding: 0;
+        }
+
+        .image {
+            min-height: 158px;
+            padding-bottom: 40%;
+        }
+    }
 }
+
 //767 end
 @media (max-width:600px) {
     .section-team-members .team-wrapper {
         padding: 0;
+
         .row {
             margin: 0;
         }
+
         .col {
             padding: 0;
         }
+
         .col-team {
             max-width: 100%;
             flex: 0 0 100%;
             padding-bottom: 30px;
+
             .team-image {
                 background-position: center top;
             }
         }
+
         .team-content-info {
             padding: 15px 20px;
         }
     }
 }
+
 // 600 end
 @media (max-width:430px) {
     .section-project-managers .col-img {
