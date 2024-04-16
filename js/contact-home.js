@@ -75,16 +75,6 @@ jQuery(document).ready(function ($) {
         }
         inputQuantity[$thisIndex] = val;
     });
-    var url_check = window.location.href;
-    if (url_check.includes("submit=true")) {
-        $(".form-fields-wrap").hide();
-        $(".thank-you-wrap").show();
-        var stickyHeaderHeight = 160;
-        var offset = $('.thank-you-wrap').offset().top - stickyHeaderHeight;
-        $('html, body').animate({
-            scrollTop: offset
-        }, 400);
-    }
 });
 /*Ready function end*/
 window.fbq('track', 'Contact', { value: 0, currency: 'USD' });
@@ -130,14 +120,20 @@ function redirectToThankYou() {
     window.location.href = "/?submit=true"
     console.log("window.location.href", window.location.href)
     var url_check = window.location.href;
-    if (url_check.includes("/")) {
+    if (url_check === "/?submit=true" || url_check === "/") {
         $(".form-wrap").hide();
         $(".thank-you-content-wrap").show();
-        var stickyHeaderHeight = 160;
-        var offset = $('.section-form').offset().top - stickyHeaderHeight;
-        $('html, body').animate({
-            scrollTop: offset
-        }, 400);
+        setTimeout(() => {
+            var $sectionForm = $('.thank-you-content-wrap');
+            if ($sectionForm.length > 0) {
+                var stickyHeaderHeight = 40;
+                var offset = $sectionForm.offset().top - stickyHeaderHeight ;
+                console.log('offset', offset);
+                $('html, body').animate({
+                    scrollTop: offset
+                }, 400);
+            }
+        }, 900);
     }
 }
 // Contact Submit 
