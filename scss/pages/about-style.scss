@@ -409,7 +409,7 @@
 }
 
 .section-about-partners {
-    padding: 102px 0;
+    padding: 115px 0;
 
     .container {
         max-width: 930px;
@@ -423,7 +423,7 @@
     h2 {
         font-size: 50px;
         line-height: 1.15;
-        margin-bottom: 30px;
+        margin-bottom: 32px;
     }
 
     p {
@@ -435,7 +435,7 @@
     }
 
     .partners-wrap {
-        margin: 90px auto 20px;
+        margin: 97px auto 35px;
         line-height: 0;
         max-width: 485px;
 
@@ -450,9 +450,9 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 top: 50%;
-                width: 1px;
+                width: 0.5px;
                 background-color: $black;
-                height: 88%;
+                height: 94px;
             }
 
             .col {
@@ -477,7 +477,7 @@
 }
 
 .section-who-we-are {
-    padding: 115px;
+    padding: 132px 115px 124px;
 
     * {
         color: $white;
@@ -485,7 +485,7 @@
 
     h2 {
         line-height: 1.15;
-        margin-bottom: 50px;
+        margin-bottom: 60px;
     }
 
     .content-wrap {
@@ -499,6 +499,7 @@
 
     .bg-image {
         position: relative;
+        padding-bottom: 145.5%;
         height: 100%;
     }
 
@@ -550,7 +551,7 @@
 }
 
 .section-values {
-    padding: 115px 115px 95px;
+    padding: 115px 115px 97px;
 
     .container {
         max-width: 1420px;
@@ -605,17 +606,23 @@
     }
 
     .section-title {
-        padding: 115px;
-        height: 40%;
+        padding: 128.5px 115px;
     }
 
     h2 {
         font-size: 75px;
         line-height: 85px;
+        letter-spacing: 0;
+    }
+
+    .col-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .image {
-        height: 60%;
+        padding-bottom: 57.2%;
 
         img {
             display: block;
@@ -654,6 +661,42 @@
     }
 }
 
+.section-blog-expert-help .container {
+    border-width: 2px;
+}
+
+.section-chapter-numbers {
+    padding: 115px 0;
+
+    .section-title {
+        padding-bottom: 35px;
+
+        h3 {
+            line-height: 27px;
+        }
+
+        h2 {
+            line-height: 1.15;
+            margin-bottom: 30px;
+        }
+    }
+
+    .counter-group {
+        h4 {
+            line-height: 1.15;
+            letter-spacing: 0;
+        }
+
+        h5 {
+            font-size: 17px;
+            line-height: 20px;
+            font-weight: 300;
+        }
+    }
+}
+.section-blog-expert-help {
+    padding: 60px 0;
+}
 //  Responsive CSS start
 @media (max-width:1660px) {
     .section-team-chapter {
@@ -718,6 +761,7 @@
 
         .partners-wrap {
             margin: 60px auto 20px;
+
             .col-left {
                 padding-right: 90px;
             }
@@ -1095,10 +1139,10 @@
     }
 
     .section-values {
-        padding: 60px 5px;
+        padding: 60px 5px 120px;
 
         .section-title {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .content-item {
@@ -1180,6 +1224,27 @@
         h4 {
             font-size: 14px;
             line-height: 24px;
+        }
+    }
+
+    .section-chapter-numbers {
+        padding: 60px 0;
+
+        .section-title {
+
+            h3 {
+                line-height: 17px;
+            }
+
+            h2 {
+                margin-bottom: 12px;
+            }
+        }
+
+        .counter-group {
+            h4 {
+                font-size: 70px;
+            }
         }
     }
 }
@@ -1272,10 +1337,12 @@
     }
 
     .section-about-partners {
+        padding-bottom: 73px;
         h2 {
             font-size: 25px;
             line-height: 30px;
             letter-spacing: -0.15px;
+            margin-bottom: 30px;
         }
 
         p {
@@ -1289,18 +1356,18 @@
         }
 
         .partners-wrap {
-            margin-top: 36px;
+            margin-top: 40px;
 
             img {
-                max-width: 151px;
+                max-width: 100px;
             }
 
             .col-left {
-                padding-right: 60px;
+                padding-right: 32px;
             }
 
             .col-right {
-                padding-left: 60px;
+                padding-left: 32px;
             }
         }
     }
@@ -1393,24 +1460,6 @@
         }
     }
 
-    .section-about-partners {
-        .partners-wrap {
-            margin-top: 30px;
-
-            img {
-                max-width: 116px;
-            }
-
-            .col-left {
-                padding-right: 30px;
-            }
-
-            .col-right {
-                padding-left: 30px;
-            }
-        }
-    }
-
     .section-who-we-are {
         .content-wrap {
             padding: 0 20px 30px;
@@ -1458,6 +1507,32 @@
             min-height: 158px;
             padding-bottom: 40%;
         }
+    }
+
+    .section-chapter-numbers {
+        .section-title {
+            h3 {
+                font-size: 14px;
+            }
+        }
+
+        .counter-group {
+            h4 {
+                font-size: 45px;
+                line-height: 60px;
+                margin-bottom: 7px;
+            }
+        }
+
+        .row {
+            .col {
+                padding-bottom: 36px;
+            }
+        }
+    }
+
+    .section-values {
+        padding-bottom: 60px;
     }
 }
 
