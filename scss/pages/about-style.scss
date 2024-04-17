@@ -477,7 +477,7 @@
 }
 
 .section-who-we-are {
-    padding: 132px 115px 124px;
+    padding: 115px 115px 124px;
 
     * {
         color: $white;
@@ -493,14 +493,15 @@
     }
 
     .col-content {
-        max-width: 55.9%;
-        flex: 0 0 55.9%;
+        max-width: 52.9%;
+        flex: 0 0 52.9%;
     }
 
     .bg-image {
         position: relative;
-        padding-bottom: 145.5%;
+        padding-bottom: 135.9%;
         height: 100%;
+        max-width: 728px;
     }
 
     .image-label {
@@ -553,8 +554,12 @@
 .section-values {
     padding: 115px 115px 97px;
 
-    .container {
-        max-width: 1420px;
+    .row {
+        margin: 0 -30px;
+
+        .col {
+            padding: 0 45px;
+        }
     }
 
     .section-title {
@@ -630,16 +635,17 @@
     }
 
     .content-wrap {
-        padding: 126px 138px;
+        padding: 139px 0 110px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-
+        max-width: 648px;
+        margin: 0 auto;
         .content-item {
-            max-width: 247px;
-            flex: 0 0 247px;
+            max-width: 250px;
+            flex: 0 0 250px;
             text-align: center;
-            margin-bottom: 72px;
+            margin-bottom: 74px;
 
             &:last-child {
                 margin: 0 auto;
@@ -651,8 +657,8 @@
         font-size: 20px;
         line-height: 24px;
         font-family: "Inter";
-        margin-bottom: 7px;
-        margin-top: 4px;
+        margin-bottom: 9px;
+        margin-top: 13px;
     }
 
     p {
@@ -694,9 +700,11 @@
         }
     }
 }
+
 .section-blog-expert-help {
     padding: 60px 0;
 }
+
 //  Responsive CSS start
 @media (max-width:1660px) {
     .section-team-chapter {
@@ -795,7 +803,7 @@
         }
 
         .content-wrap {
-            padding: 100px 110px;
+            padding: 100px 0;
         }
     }
 }
@@ -893,7 +901,7 @@
         }
 
         .content-wrap {
-            padding: 80px 60px;
+            padding: 60px 20px;
 
             .content-item {
                 max-width: 50%;
@@ -1120,6 +1128,7 @@
 
         .content-wrap {
             padding: 0 30px 30px;
+            max-width: 100%;
         }
 
         h2 {
@@ -1135,11 +1144,20 @@
 
         .bg-image {
             padding-bottom: 53.6%;
+            max-width: 100%;
         }
     }
 
     .section-values {
         padding: 60px 5px 120px;
+
+        .row {
+            margin: 0 -15px;
+
+            .col {
+                padding: 0 15px;
+            }
+        }
 
         .section-title {
             margin-bottom: 30px;
@@ -1224,6 +1242,7 @@
         h4 {
             font-size: 14px;
             line-height: 24px;
+            margin-top: 0;
         }
     }
 
@@ -1338,6 +1357,7 @@
 
     .section-about-partners {
         padding-bottom: 73px;
+
         h2 {
             font-size: 25px;
             line-height: 30px;
