@@ -106,8 +106,8 @@ jQuery(document).ready(function ($) {
             console.log("After : ", offset)
             $('html, body').animate({
                 scrollTop: offset
-            }, 400);
-        }, 2000);
+            }, 1200);
+        }, 2500);
     }
 });
 /*Ready function end*/
