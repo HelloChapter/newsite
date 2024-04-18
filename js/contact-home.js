@@ -107,7 +107,7 @@ jQuery(document).ready(function ($) {
             $('html, body').animate({
                 scrollTop: offset
             }, 400);
-        }, 1200);
+        }, 2000);
     }
 });
 /*Ready function end*/
@@ -142,15 +142,15 @@ function redirectToThankYou() {
     var url = window.location.href;
     window.location.href = "/thank-you-message-home/?submit=true";
     var url = "/thank-you-message-home/?submit=true";
-    if (!url.includes("submit=true")) {
-        if (url.indexOf("?") !== -1) {
-            url = url + "&submit=true";
-        } else {
-            url = url + "?submit=true";
-        }
-    }
-    $(".form-wrap").hide();
-    $(".thank-you-content-wrap").show();
+    // if (!url.includes("submit=true")) {
+    //     if (url.indexOf("?") !== -1) {
+    //         url = url + "&submit=true";
+    //     } else {
+    //         url = url + "?submit=true";
+    //     }
+    // }
+    // $(".form-wrap").hide();
+    // $(".thank-you-content-wrap").show();
     // window.location.href = "/?submit=true"
     // console.log("window.location.href", window.location.href)
     // var url_check = window.location.href;
