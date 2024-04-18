@@ -106,7 +106,7 @@ jQuery(document).ready(function ($) {
             console.log("After : ", offset)
             $('html, body').animate({
                 scrollTop: offset
-            }, 1000);
+            }, 700);
         }, 2000);
     }
 });
