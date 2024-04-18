@@ -107,7 +107,7 @@ jQuery(document).ready(function ($) {
             $('html, body').animate({
                 scrollTop: offset
             }, 400);
-        }, 1900);
+        }, 3000);
     }
 });
 /*Ready function end*/
