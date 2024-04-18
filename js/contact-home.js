@@ -155,7 +155,7 @@ function redirectToThankYou() {
     console.log("window.location.href", window.location.href)
     var url_check = window.location.href;
     if (url_check === "/?submit=true" || url_check === "/") {
-        $(".form-wrap").hide();
+        $(".section-form .form-wrap").hide();
         $(".thank-you-content-wrap").show();
         setTimeout(() => {
             var $sectionForm = $('.thank-you-content-wrap');
