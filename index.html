@@ -1985,34 +1985,34 @@
         }
     </script> -->
     <script>
-        var emailElement = document.getElementById('contact-email-field-id-home');
-        emailElement.value = localStorage.getItem('email') !== undefined ? localStorage.getItem('email') : null;
-        emailElement.setAttribute("data-email", emailElement.value);
+        // var emailElement = document.getElementById('contact-email-field-id-home');
+        // emailElement.value = localStorage.getItem('email') !== undefined ? localStorage.getItem('email') : null;
+        // emailElement.setAttribute("data-email", emailElement.value);
         
-        const urlParams = new URLSearchParams(window.location.search);
-        const myParam = urlParams.get('submit');
-        if (myParam === "true") {
-            console.log("Home Conversion");
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'UA-225495044-1');
-            gtag('event', 'conversion', { 'send_to': 'AW-10883092413/MbiyCMnEkfIYEL2fu8Uo' });
+        // const urlParams = new URLSearchParams(window.location.search);
+        // const myParam = urlParams.get('submit');
+        // if (myParam === "true") {
+        //     console.log("Home Conversion");
+        //     window.dataLayer = window.dataLayer || [];
+        //     function gtag() { dataLayer.push(arguments); }
+        //     gtag('js', new Date());
+        //     gtag('config', 'UA-225495044-1');
+        //     gtag('event', 'conversion', { 'send_to': 'AW-10883092413/MbiyCMnEkfIYEL2fu8Uo' });
             
-            $(".form-wrap").hide();
-            $(".thank-you-content-wrap").show();
-            setTimeout(() => {
-                var $sectionForm = $('.thank-you-content-wrap');
-                if ($sectionForm.length > 0) {
-                    var stickyHeaderHeight = 40;
-                    var offset = $sectionForm.offset().top - stickyHeaderHeight ;
-                    console.log('offset', offset);
-                    $('html, body').animate({
-                        scrollTop: offset
-                    }, 400);
-                }
-            }, 900);
-        }
+        //     $(".form-wrap").hide();
+        //     $(".thank-you-content-wrap").show();
+        //     setTimeout(() => {
+        //         var $sectionForm = $('.thank-you-content-wrap');
+        //         if ($sectionForm.length > 0) {
+        //             var stickyHeaderHeight = 40;
+        //             var offset = $sectionForm.offset().top - stickyHeaderHeight ;
+        //             console.log('offset', offset);
+        //             $('html, body').animate({
+        //                 scrollTop: offset
+        //             }, 400);
+        //         }
+        //     }, 900);
+        // }
     </script>
 </body>
 

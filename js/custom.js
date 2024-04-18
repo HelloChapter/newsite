@@ -40,7 +40,7 @@ jQuery(document).ready(function ($) {
         }
     });
     // Counter number js end
-    
+
     // About team click js
     $(".desktop-team-wrapper .team-image").click(function () {
         var current_item = $(this).attr("data-point-id");
@@ -319,40 +319,42 @@ function debounce(func, delay) {
 // Attach a debounced event listener to the window resize event
 window.addEventListener('resize', debounce(kitchen_plan_design_slider, 200));
 function kitchen_plan_design_slider() {
-    $('.kitchen-plan-design-build-slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 5000,
-        variableWidth: false,
-        arrows: false,
-        centerMode: true,
-        infinite: false,
-        responsive: [
-            {
-                breakpoint: 9999,
-                settings: "unslick"
-            },
-            {
-                breakpoint: 1197,
-                settings: {
-                    dots: true
+    if ($('.kitchen-plan-design-build-slider').length) {
+        $('.kitchen-plan-design-build-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 5000,
+            variableWidth: false,
+            arrows: false,
+            centerMode: true,
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 9999,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 1197,
+                    settings: {
+                        dots: true
+                    }
+                }
+            ],
+            beforeChange: function (event, slick, currentSlide, nextSlide) {
+                if (nextSlide === slick.slideCount - 1) {
+                    $('.slick-next').hide();
+                } else {
+                    $('.slick-next').show();
+                }
+                if (nextSlide === 0) {
+                    $('.slick-prev').hide();
+                } else {
+                    $('.slick-prev').show();
                 }
             }
-        ],
-        beforeChange: function (event, slick, currentSlide, nextSlide) {
-            if (nextSlide === slick.slideCount - 1) {
-                $('.slick-next').hide();
-            } else {
-                $('.slick-next').show();
-            }
-            if (nextSlide === 0) {
-                $('.slick-prev').hide();
-            } else {
-                $('.slick-prev').show();
-            }
-        }
-    });
+        });
+    }
 }
 // kitchen-plan-design-build-slider end
 $(window).on('load', function () {

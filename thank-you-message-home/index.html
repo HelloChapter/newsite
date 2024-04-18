@@ -178,7 +178,7 @@
             /*Before submit, if you want to trigger your event, "include your code here"*/
         };
     </script>
-<script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=28998611860da' async='true'></script>
+    <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=28998611860da' async='true'></script>
 </head>
 
 <body>
@@ -233,7 +233,7 @@
                                     <li>
                                         <a href="/blog/" title="Blog ">Blog</a>
                                     </li>
-                                     <li>
+                                    <li>
                                         <a href="/chapter-renovation-faq/" title="FAQs ">FAQs</a>
                                     </li>
                                     <li class="login-url mobile-login-url">
@@ -527,7 +527,7 @@
                     <script defer>
                         setTimeout(() => {
                             (function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript"));
-                        }, 6000);
+                        }, 50);
                     </script>
                 </section>
                 <!-- section-reviews End -->
@@ -912,20 +912,18 @@
                 </section>
                 <!-- section-home-carousel end -->
 
-                <section class="section-home-contact-forms pearl-bg2 aos-init " data-aos="fade">
-                    <div class="container">
-                        <div class="form-wrap">
-                            <div class="content text-center">
-                                <div class="new-section-title">
-                                    <h2>Start a new Chapter with us</h2>
+                <section class="section-form aos-init " data-aos="fade">
+                    <div class="row no-gutters">
+                        <div class="col col-form aos-init " data-aos="fade" data-aos-delay="300">
+                            <div class="form-wrap">
+                                <div class="page-title">
+                                    <h1>Start a new <br /> Chapter with us</h1>
+                                    <p>Submit this form and our renovation expert will get back to you shortly.</p>
                                 </div>
-                                <p>Tell us more about your home renovation project and the new Chapter you want to
-                                    begin.</p>
-                            </div>
-                            <div class="form-fields-wrap">
-                                <div id="loader"></div>
-                                <form onsubmit="submitForm();  return false;" id="contact-form">
-                                    <div class="form-group row">
+                                <!-- <div id="loader"></div> -->
+                                <form onsubmit="submitForm();
+                                        return false;" id="contact-form">
+                                    <div class="form-group row form-name-row">
                                         <div class="col col-input">
                                             <div class="input-wrap">
                                                 <input type="text" class="form-control" placeholder="First Name*"
@@ -936,7 +934,7 @@
                                         <div class="col col-input">
                                             <div class="input-wrap">
                                                 <input type="text" class="form-control" placeholder="Last Name*"
-                                                    name="lastName" />
+                                                    name="lastName">
                                                 <label class="error-message">* Please enter your last name</label>
                                             </div>
                                         </div>
@@ -946,7 +944,8 @@
                                             <div class="input-wrap">
                                                 <input type="text" id="contact-email-field-id-home" data-email=""
                                                     class="form-control" placeholder="Email*" name="email" />
-                                                <label class="error-message">* Please enter a valid email</label>
+                                                <label class="error-message">* Please enter your email address</label>
+
                                             </div>
                                         </div>
                                         <div class="col col-input">
@@ -955,29 +954,35 @@
                                                     placeholder="Phone Number*" name="phoneNumber" maxlength="12"
                                                     minlength="5" />
                                                 <label class="error-message">* Please enter your phone number</label>
+
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-wrap">
-                                            <input type="text" class="form-control" placeholder="Project Address*"
-                                                name="streetAddress" />
-                                            <label class="error-message">* Please enter your home address</label>
+                                            <input type="text" id="autocomplete" class="form-control"
+                                                placeholder="Project Address*" name="streetAddress"
+                                                data-value="false" />
+                                            <!-- <input type="hidden" id="selected-place-id"> -->
+                                            <label class="error-message"> * Please enter your project address</label>
+                                            <div class="autocomplete-results-wrap">
+                                                <ul class="list-unstyled" id="autocomplete-results"></ul>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group row select-wrapper-row">
+                                    <!-- <div class="form-group row">
                                         <div class="col col-input">
                                             <div class="input-wrap">
                                                 <input type="text" class="form-control" placeholder="City*"
                                                     name="city" />
-                                                <label class="error-message">* Please enter city</label>
                                             </div>
                                         </div>
                                         <div class="col col-select">
-                                            <div class="input-wrap select-wrapper-box">
-                                                <select id="selectBox" class="form-control" tabindex="0"
-                                                    aria-invalid="false" name="state" aria-label="State">
-                                                    <option value="0" selected="selected" class="gf_placeholder">State*
+                                            <div class="input-wrap
+                                                    select-wrapper">
+                                                <select class="form-control" tabindex="0" aria-invalid="false"
+                                                    name="state" aria-label="State">
+                                                    <option value="" selected="selected" class="gf_placeholder">State
                                                     </option>
                                                     <option value="Alaska">Alaska</option>
                                                     <option value="Alabama">Alabama</option>
@@ -1008,7 +1013,7 @@
                                                     <option value="Nebraska">Nebraska</option>
                                                     <option value="Nevada">Nevada</option>
                                                     <option value="New
-                                    Hampshire">New
+                                                            Hampshire">New
                                                         Hampshire</option>
                                                     <option value="New Jersey">New
                                                         Jersey</option>
@@ -1017,23 +1022,23 @@
                                                     <option value="New York">New
                                                         York</option>
                                                     <option value="North
-                                    Carolina">North
+                                                            Carolina">North
                                                         Carolina</option>
                                                     <option value="North
-                                    Dakota">North
+                                                            Dakota">North
                                                         Dakota</option>
                                                     <option value="Ohio">Ohio</option>
                                                     <option value="Oklahoma">Oklahoma</option>
                                                     <option value="Oregon">Oregon</option>
                                                     <option value="Pennsylvania">Pennsylvania</option>
                                                     <option value="Rhode
-                                    Island">Rhode
+                                                            Island">Rhode
                                                         Island</option>
                                                     <option value="South
-                                    Carolina">South
+                                                            Carolina">South
                                                         Carolina</option>
                                                     <option value="South
-                                    Dakota">South
+                                                            Dakota">South
                                                         Dakota</option>
                                                     <option value="Tennessee">Tennessee</option>
                                                     <option value="Texas">Texas</option>
@@ -1042,49 +1047,129 @@
                                                     <option value="Virginia">Virginia</option>
                                                     <option value="Washington">Washington</option>
                                                     <option value="West
-                                    Virginia">West
+                                                            Virginia">West
                                                         Virginia</option>
                                                     <option value="Wisconsin">Wisconsin</option>
                                                     <option value="Wyoming">Wyoming</option>
                                                 </select>
-                                                <label class="error-message">* Please enter state</label>
                                             </div>
                                         </div>
                                         <div class="col col-input">
                                             <div class="input-wrap">
                                                 <input type="text" class="form-control" placeholder="Zip Code*"
                                                     name="zipCode" />
-                                                <label class="error-message">* Please enter zip code</label>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="form-group">
                                         <div class="input-wrap">
                                             <textarea class="form-control"
-                                                placeholder="Tell us more about your project*" rows="2" minlength="5"
+                                                placeholder="Tell us more about your project*" rows="5" minlength="5"
                                                 name="projectDescription"></textarea>
-                                            <label class="error-message">* Please tell us about your project</label>
+                                            <!-- <label class="error-message">* Please tell us about your project</label> -->
+
                                         </div>
                                     </div>
-                                    <div class="form-group text-center btn-submit-wrap">
+                                    <div class="form-group link-text">
+                                        <!-- <button type="submit" class="btn-submit">submit</button> -->
                                         <!-- <div class="g-recaptcha" data-sitekey="6LesnlkpAAAAAKMCoW6o_39PI09sdEedi2dCgOag"
-                                            data-callback="reCaptchaChallenge"></div>
+                                            data-callback="reCaptchaChallenge">
+                                        </div>
                                         <div class="recaptcha-error-wrap">
                                             <label id="recaptcha-error" class="error-message recaptcha-error">Please
                                                 complete the reCAPTCHA verification.</label>
                                         </div> -->
-                                        <button type="submit" class="btn-black">
-                                            Submit
+                                        <button id="submit" type="submit" class="btn-submit ">
+                                            <span id="loader-spinner" class="loader-spinner-wrap">
+                                            </span>
+                                            <!-- <span id="loader-spinner-label">Please Wait...</span>
+                                            <label id="contact-form-submit-label" class="contact-form-submit-label">
+                                                Submit</label> -->
                                         </button>
                                     </div>
                                     <input type="hidden" id="zc_gad" name="zc_gad" value="" />
                                 </form>
                             </div>
-                            <!-- form-fields-wrap end -->
-                            <div class="thank-you-wrap text-center d-none">
-                                <div class="new-section-title">
-                                    <h2>Thank you!</h2>
-                                    <p>The Chapter team will be in touch soon.</p>
+                            <!-- form end -->
+                            <div class="thank-you-content-wrap  d-none">
+                                <div class="thank-you-content">
+                                    <div class="page-title text-center">
+                                        <div class="icon-wrap">
+                                            <img src="../images/icons/check-circle.svg" alt="icon">
+                                        </div>
+                                        <h1>Thank you for<br /> contacting us!</h1>
+                                        <p>A Chapter renovation expert will be in touch shortly.<br /> Until then, get
+                                            inspired by some of our work.</p>
+                                    </div>
+                                    <div class="links">
+                                        <a href="/all-renovation-projects/">Explore our projects</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Thank you wrap end -->
+                        </div>
+                        <div class="col col-image">
+                            <div class="bg-image col-desktop-image"
+                                style="background-image:url('./../images/contact-img/contact-image2.webp');">
+                                <div class="image-label">
+                                    <h6>Kitchen Renovation, NYC </h6>
+                                </div>
+                            </div>
+                            <div class="contact-info-wrap">
+                                <h6>Need more information?</h6>
+                                <p>Contact us or <a target="_blank"
+                                        href="https://hellochapter.zohobookings.com/#/remodelingconsultation">book a
+                                        call</a> with our renovation expert</p>
+                                <div class="address-wrap row">
+                                    <div class="address-group col">
+                                        <h6>Chapter New York</h6>
+                                        <address>
+                                            (212) 680-4628<br />
+                                            345 7th Ave, New York, NY 10001
+                                        </address>
+                                        <p>NY license #624690</p>
+                                    </div>
+                                    <div class="address-group col">
+                                        <h6>Chapter Miami</h6>
+                                        <address>
+                                            (305) 676-6787<br />
+                                            252 NW 29th St, Miami, FL 33127
+                                        </address>
+                                        <p>FL license #CBC1267423</p>
+                                    </div>
+                                </div>
+                                <div class="email-wrap">
+                                    <a href="mailto:itstime@hellochapter.com">itstime@hellochapter.com</a>
+                                </div>
+                                <div class="social-wrap">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="https://www.facebook.com/hellochapter" target="_blank"><img
+                                                    src="../images/icons/facebook.svg" alt="icon"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/chapter.renovations/"
+                                                target="_blank"><img src="../images/icons/instagram.svg" alt="icon"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/@hello.chapter" target="_blank"><img
+                                                    src="../images/icons/youtube.svg" alt="icon"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.pinterest.com/chapterrenovations/" target="_blank"><img
+                                                    src="../images/icons/pinterest.svg" alt="icon"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
+                                                target="_blank"><img src="../images/icons/houzz.svg" alt="icon"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bg-image col-mobile-image"
+                                style="background-image:url('./../images/contact-img/contact-image2.webp');">
+                                <div class="image-label">
+                                    <h6>Kitchen Renovation, NYC </h6>
                                 </div>
                             </div>
                         </div>
@@ -1267,15 +1352,15 @@
                             <div class="general-contractor-license-wrap mobile-hide">
                                 <div class="general-contractor-license-number">
                                     <div class="licenses-wrap">
-                                    <h4>Licenses numbers:</h4>
-                                    <p>
-                                        NY- 624690 <br />
-                                        FL- CBC1267423<br />
-                                        Westchester County- WC-37416-H24<br />
-                                        Southampton– L006804<br />
-                                        Connecticut- HIC.0672343
-                                    </p>
-                                </div>
+                                        <h4>Licenses numbers:</h4>
+                                        <p>
+                                            NY- 624690 <br />
+                                            FL- CBC1267423<br />
+                                            Westchester County- WC-37416-H24<br />
+                                            Southampton– L006804<br />
+                                            Connecticut- HIC.0672343
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1353,14 +1438,14 @@
     <!-- <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/video.min.js"></script> -->
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/lottie.min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.lazy.min.js"></script>
-    <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/swiper.js"></script>
+    <!-- <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/swiper.js"></script> -->
     <script defer
         src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.nice-select.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
     <script defer src="../js/custom.js"></script>
     <script defer src="../js/contact-home.js"></script>
     <script defer src="../js/home-page.js"></script>
-    <script defer src="../js//home-slider.js"></script>
+    <!-- <script defer src="../js//home-slider.js"></script> -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script defer src="https://www.youtube.com/iframe_api"></script>
     <script>
@@ -1669,11 +1754,37 @@
             gtag('js', new Date());
             gtag('config', 'UA-225495044-1');
             gtag('event', 'conversion', { 'send_to': 'AW-10883092413/MbiyCMnEkfIYEL2fu8Uo' });
+            // $(".form-wrap").hide();
+            // $(".thank-you-content-wrap").show();
+            // // var stickyHeaderHeight = 160;
+            // if (window.innerWidth < 1024) {
+            //     var stickyHeaderHeight = 100;
+            // }
+            // else if (window.innerWidth < 768) {
+            //     var stickyHeaderHeight = 100;
+            // }
+            // else {
+            //     var stickyHeaderHeight = 160;
+            // }
+            // $(window).resize(function () {
+            //     if ((window.innerWidth > 767) && (window.innerWidth < 1024)) {
+            //         stickyHeaderHeight = 100;
+            //     } else if (window.innerWidth < 768) {
+            //         stickyHeaderHeight = 100;
+            //     } else {
+            //         stickyHeaderHeight = 160;
+            //     }
+            // });
+            // console.log(stickyHeaderHeight)
+            // var offset = $('.thank-you-content-wrap ').offset().top - stickyHeaderHeight;
+            // $('html, body').animate({
+            //     scrollTop: offset
+            // }, 600);
         }
     </script>
 
     <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
-<script> (function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'left', leadColor : '#231f20', triggerColor : '#231f20', triggerRadius : '50%', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerOffsetX : 10, triggerOffsetY : 10, triggerRadius : '50%' } }); }; h.appendChild(s); })(); </script>
+    <script> (function () { var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function () { acsbJS.init({ statementLink: '', footerHtml: '', hideMobile: false, hideTrigger: false, disableBgProcess: false, language: 'en', position: 'left', leadColor: '#231f20', triggerColor: '#231f20', triggerRadius: '50%', triggerPositionX: 'left', triggerPositionY: 'bottom', triggerIcon: 'people', triggerSize: 'medium', triggerOffsetX: 20, triggerOffsetY: 20, mobile: { triggerSize: 'small', triggerPositionX: 'left', triggerPositionY: 'bottom', triggerOffsetX: 10, triggerOffsetY: 10, triggerRadius: '50%' } }); }; h.appendChild(s); })(); </script>
 </body>
 
 </html>
