@@ -76,39 +76,39 @@ jQuery(document).ready(function ($) {
         inputQuantity[$thisIndex] = val;
     });
     var url_check = window.location.href;
-    if (url_check.includes("submit=true")) {
-        $(".form-wrap").hide();
-        $(".thank-you-content-wrap").show();
-        // var stickyHeaderHeight = 130;
-        if ((window.innerWidth > 767) && (window.innerWidth < 1024)) {
-            var stickyHeaderHeight = 100;
-        }
-        else if (window.innerWidth < 768) {
-            var stickyHeaderHeight = 90;
-        }
-        else {
-            var stickyHeaderHeight = 130;
-        }
-        $(window).resize(function () {
-            if ((window.innerWidth > 767) && (window.innerWidth < 1024)) {
-                stickyHeaderHeight = 100;
-            } else if (window.innerWidth < 768) {
-                stickyHeaderHeight = 90;
-            } else {
-                stickyHeaderHeight = 130;
-            }
-        });
-        console.log(stickyHeaderHeight)
-        var offset = $('.section-form').offset().top - stickyHeaderHeight;
-        console.log("Before : ", offset)
-        setTimeout(function () {
-            var offset = $('.section-form').offset().top - stickyHeaderHeight;
-            console.log("After : ", offset)
-            $('html, body').animate({
-                scrollTop: offset
-            }, 400);
-        }, 2000);
-    }
+    // if (url_check.includes("submit=true")) {
+    //     $(".form-wrap").hide();
+    //     $(".thank-you-content-wrap").show();
+    //     // var stickyHeaderHeight = 130;
+    //     if ((window.innerWidth > 767) && (window.innerWidth < 1024)) {
+    //         var stickyHeaderHeight = 100;
+    //     }
+    //     else if (window.innerWidth < 768) {
+    //         var stickyHeaderHeight = 90;
+    //     }
+    //     else {
+    //         var stickyHeaderHeight = 130;
+    //     }
+    //     $(window).resize(function () {
+    //         if ((window.innerWidth > 767) && (window.innerWidth < 1024)) {
+    //             stickyHeaderHeight = 100;
+    //         } else if (window.innerWidth < 768) {
+    //             stickyHeaderHeight = 90;
+    //         } else {
+    //             stickyHeaderHeight = 130;
+    //         }
+    //     });
+    //     console.log(stickyHeaderHeight)
+    //     var offset = $('.section-form').offset().top - stickyHeaderHeight;
+    //     console.log("Before : ", offset)
+    //     setTimeout(function () {
+    //         var offset = $('.section-form').offset().top - stickyHeaderHeight;
+    //         console.log("After : ", offset)
+    //         $('html, body').animate({
+    //             scrollTop: offset
+    //         }, 400);
+    //     }, 2000);
+    // }
 });
 /*Ready function end*/
 window.fbq('track', 'Contact', { value: 0, currency: 'USD' });
@@ -142,33 +142,33 @@ function redirectToThankYou() {
     var url = window.location.href;
     window.location.href = "/thank-you-message-home/?submit=true";
     var url = "/thank-you-message-home/?submit=true";
-    // if (!url.includes("submit=true")) {
-    //     if (url.indexOf("?") !== -1) {
-    //         url = url + "&submit=true";
-    //     } else {
-    //         url = url + "?submit=true";
-    //     }
-    // }
-    // $(".form-wrap").hide();
-    // $(".thank-you-content-wrap").show();
-    // window.location.href = "/?submit=true"
-    // console.log("window.location.href", window.location.href)
-    // var url_check = window.location.href;
-    // if (url_check === "/?submit=true" || url_check === "/") {
-    //     $(".form-wrap").hide();
-    //     $(".thank-you-content-wrap").show();
-    //     setTimeout(() => {
-    //         var $sectionForm = $('.thank-you-content-wrap');
-    //         if ($sectionForm.length > 0) {
-    //             var stickyHeaderHeight = 40;
-    //             var offset = $sectionForm.offset().top - stickyHeaderHeight ;
-    //             console.log('offset', offset);
-    //             $('html, body').animate({
-    //                 scrollTop: offset
-    //             }, 400);
-    //         }
-    //     }, 900);
-    // }
+    if (!url.includes("submit=true")) {
+        if (url.indexOf("?") !== -1) {
+            url = url + "&submit=true";
+        } else {
+            url = url + "?submit=true";
+        }
+    }
+    $(".form-wrap").hide();
+    $(".thank-you-content-wrap").show();
+    window.location.href = "/?submit=true"
+    console.log("window.location.href", window.location.href)
+    var url_check = window.location.href;
+    if (url_check === "/?submit=true" || url_check === "/") {
+        $(".form-wrap").hide();
+        $(".thank-you-content-wrap").show();
+        setTimeout(() => {
+            var $sectionForm = $('.thank-you-content-wrap');
+            if ($sectionForm.length > 0) {
+                var stickyHeaderHeight = 90;
+                var offset = $sectionForm.offset().top - stickyHeaderHeight ;
+                console.log('offset', offset);
+                $('html, body').animate({
+                    scrollTop: offset
+                }, 400);
+            }
+        }, 900);
+    }
 }
 // Contact Submit 
 //code for back button pressed the form will reset
