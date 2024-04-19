@@ -160,14 +160,14 @@ function redirectToThankYou() {
         setTimeout(() => {
             var $sectionForm = $('.thank-you-content-wrap');
             if ($sectionForm.length > 0) {
-                var stickyHeaderHeight = 90;
+                var stickyHeaderHeight = 85;
                 var offset = $sectionForm.offset().top - stickyHeaderHeight ;
                 console.log('offset', offset);
                 $('html, body').animate({
                     scrollTop: offset
                 }, 400);
             }
-        }, 900);
+        }, 1100);
     }
 }
 // Contact Submit 
