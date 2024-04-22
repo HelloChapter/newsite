@@ -139,36 +139,36 @@ function redirectToThankYou() {
     if (localStorage.getItem("qr_status")) {
         localStorage.setItem("formSubmitted", true);
     }
-    var url = window.location.href;
-    window.location.href = "/thank-you-message-home/?submit=true";
-    var url = "/thank-you-message-home/?submit=true";
-    if (!url.includes("submit=true")) {
-        if (url.indexOf("?") !== -1) {
-            url = url + "&submit=true";
-        } else {
-            url = url + "?submit=true";
-        }
-    }
-    $(".form-wrap").hide();
-    $(".thank-you-content-wrap").show();
+    // var url = window.location.href;
+    // window.location.href = "/thank-you-message-home/?submit=true";
+    // var url = "/thank-you-message-home/?submit=true";
+    // if (!url.includes("submit=true")) {
+    //     if (url.indexOf("?") !== -1) {
+    //         url = url + "&submit=true";
+    //     } else {
+    //         url = url + "?submit=true";
+    //     }
+    // }
     window.location.href = "/?submit=true"
-    console.log("window.location.href", window.location.href)
     var url_check = window.location.href;
     if (url_check === "/?submit=true" || url_check === "/") {
-        $(".section-form .form-wrap").hide();
-        $(".thank-you-content-wrap").show();
-        setTimeout(() => {
-            var $sectionForm = $('.thank-you-content-wrap');
-            if ($sectionForm.length > 0) {
-                var stickyHeaderHeight = 85;
-                var offset = $sectionForm.offset().top - stickyHeaderHeight ;
-                console.log('offset', offset);
-                $('html, body').animate({
-                    scrollTop: offset
-                }, 400);
-            }
-        }, 1100);
+        $(".modal-contact-thank-you").addClass("modal-open");
     }
+    //if (url_check === "/?submit=true" || url_check === "/") {
+    //     $(".section-form .form-wrap").hide();
+    //     $(".thank-you-content-wrap").show();
+    //     setTimeout(() => {
+    //         var $sectionForm = $('.thank-you-content-wrap');
+    //         if ($sectionForm.length > 0) {
+    //             var stickyHeaderHeight = 85;
+    //             var offset = $sectionForm.offset().top - stickyHeaderHeight ;
+    //             console.log('offset', offset);
+    //             $('html, body').animate({
+    //                 scrollTop: offset
+    //             }, 400);
+    //         }
+    //     }, 1100);
+    // }
 }
 // Contact Submit 
 //code for back button pressed the form will reset

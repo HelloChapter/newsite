@@ -265,6 +265,15 @@ jQuery(document).ready(function ($) {
     });
     kitchen_plan_design_slider();
     // kitchen-plan-design-build-slider end
+    //Home and Contact page Thank you message modal
+    $(".modal-contact-thank-you .btn-close").click(function (e) {
+        $(".modal-contact-thank-you").removeClass('modal-open');
+    });
+    $(document).click(function (e) {
+        if (!$(e.target).is('.modal-contact-thank-you .modal-content *')) {
+            $(".modal-contact-thank-you").removeClass('modal-open');
+        }
+    });
 });
 /*Ready function end*/
 // Js for global after before

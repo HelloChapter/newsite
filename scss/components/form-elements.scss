@@ -61,18 +61,7 @@
     -ms-transform: scaleX(1) !important;
     transform: scaleX(1) !important;
 }
-.btn-submit {
-    background-color: transparent;
-    border: none;
-    text-transform: uppercase;
-    font-family: "Inter";
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 50px;
-    letter-spacing: 0;
-    text-decoration: none;
-    color: $text-color;
-}
+
 select {
     appearance: none;
     -webkit-appearance: none;
@@ -105,6 +94,24 @@ input[type=number] {
         transform: translateY(-50%);
         right: 0px;
     }
+}
+.btn-style-removed {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.btn-submit {
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 50px;
+    letter-spacing: 0;
+    text-decoration: none;
+    color: $text-color;
 }
 .btn-black {
     background-color: $black;

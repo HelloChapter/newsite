@@ -109,15 +109,18 @@ function redirectToThankYou() {
 
   window.location.href = "/contact-chapter-home-renovation/?submit=true"
   var url_check = window.location.href;
-  if (url_check.includes("contact-chapter-home-renovation")) {
-    $(".form-wrap").hide();
-    $(".thank-you-content-wrap").show();
-    var stickyHeaderHeight = 160;
-    var offset = $('.thank-you-content-wrap').offset().top - stickyHeaderHeight;
-    $('html, body').animate({
-      scrollTop: offset
-    }, 400);
-  }
+  if (url_check === "/?submit=true" || url_check === "/") {
+    $(".modal-contact-thank-you").addClass("modal-open");
+}
+  // if (url_check.includes("contact-chapter-home-renovation")) {
+  //   $(".form-wrap").hide();
+  //   $(".thank-you-content-wrap").show();
+  //   var stickyHeaderHeight = 160;
+  //   var offset = $('.thank-you-content-wrap').offset().top - stickyHeaderHeight;
+  //   $('html, body').animate({
+  //     scrollTop: offset
+  //   }, 400);
+  // }
 }
 // Contact Submit 
 //code for back button pressed the form will reset
