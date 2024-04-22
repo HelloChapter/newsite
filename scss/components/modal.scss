@@ -55,10 +55,10 @@
 
     .mid-content {
         padding: 0 12px;
-        max-height: 70vh;
-        overflow: hidden;
-        overflow-y: auto;
-        @include scrollbar;
+        // max-height: 70vh;
+        // overflow: hidden;
+        // overflow-y: auto;
+        // @include scrollbar;
     }
 
     .btn-close {
