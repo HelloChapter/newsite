@@ -134,8 +134,13 @@
 
 // Responsive css start
 @media (max-width:1440px) {
-    .modal-root .content-wrap p {
+    .modal-root {
+        .content-wrap p {
         font-size: 17px;
+        }
+    }
+    .modal-contact-thank-you .modal-content {
+        padding: 75px 0;
     }
 }
 
