@@ -1,0 +1,240 @@
+.modal-root {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    right: auto;
+    bottom: auto;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 0;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    &::before {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: $black, $alpha:0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .content-wrap {
+        padding-bottom: 60px;
+
+        h1 {
+            font-size: 75px;
+            line-height: 85px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 35px;
+            font-weight: 400;
+        }
+    }
+
+    .modal-content {
+        border: 1px solid $black;
+        max-width: 60%;
+        width: 100%;
+        padding: 24px 0;
+        margin: 0 auto;
+        position: relative;
+        background-color: $white;
+    }
+
+    .mid-content {
+        padding: 0 12px;
+        // max-height: 70vh;
+        // overflow: hidden;
+        // overflow-y: auto;
+        // @include scrollbar;
+    }
+
+    .btn-close {
+        position: absolute;
+        right: 12px;
+        top: 10px;
+        padding: 0;
+        line-height: 0;
+    }
+
+    .modal-header {
+        border-bottom: 1px solid $border-color;
+        padding: 0 24px;
+        margin-bottom: 12px;
+        min-height: 34px;
+    }
+
+    .modal-footer {
+        padding: 24px 12px 0;
+        border-top: 1px solid $border-color;
+
+        .button-group {
+            button {
+                +button {
+                    margin-left: 24px;
+                }
+            }
+        }
+    }
+}
+.modal-open {
+    display: flex;
+    opacity: 1;
+}
+.modal-contact-thank-you {
+    .modal-content {
+        max-width: 960px;
+        padding: 115px 0;
+    }
+
+    .thank-you-content {
+        max-width: 486px;
+        margin: 0 auto;
+
+        .icon-wrap {
+            margin-bottom: 18px;
+        }
+
+        p {
+            font-weight: 300;
+        }
+
+        .links a {
+            background-color: black;
+            color: $white;
+            text-transform: initial;
+            font-family: "Inter";
+            font-weight: 700;
+            font-size: 19px;
+            line-height: 23px;
+            letter-spacing: 0;
+            text-decoration: none;
+            width: 100%;
+            min-height: 67px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 465px;
+            margin: 0 auto;
+        }
+    }
+}
+
+// Responsive css start
+@media (max-width:1440px) {
+    .modal-root {
+        .content-wrap p {
+        font-size: 17px;
+        }
+    }
+    .modal-contact-thank-you .modal-content {
+        padding: 75px 0;
+    }
+}
+
+@media (max-width:1099px) {
+    .modal-root {
+        .content-wrap {
+            h1 {
+                font-size: 70px;
+                line-height: 80px;
+
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+// 1099px end
+@media (max-width:1023px) {
+    .modal-root .content-wrap {
+        padding-bottom: 30px;
+    }
+
+    .modal-contact-thank-you {
+        .modal-content {
+            padding: 60px 0;
+            max-width: 728px;
+        }
+
+        .thank-you-content {
+            .links a {
+                font-size: 13px;
+                line-height: 16px;
+                min-height: 45px;
+                max-width: 235px;
+            }
+        }
+    }
+}
+
+// 1023 end
+@media (max-width:767px) {
+    .modal-root {
+        .btn-close {
+            top: 6px;
+            right: 6px;
+            max-width: 32px;
+        }
+
+        .content-wrap {
+            h1 {
+                font-size: 45px;
+                line-height: 60px;
+            }
+
+            p {
+                line-height: 30px;
+            }
+        }
+    }
+
+    .modal-contact-thank-you {
+        .modal-content {
+            max-width: 350px;
+            padding: 30px 0;
+        }
+
+        .content-wrap {
+            p {
+                max-width: 200px;
+                margin: 0 auto;
+            }
+        }
+
+        .thank-you-content {
+            padding: 0 20px;
+
+            .links a {
+                max-width: 100%;
+                ;
+            }
+
+            .icon-wrap {
+                margin-bottom: 0;
+
+                img {
+                    max-width: 45px;
+                }
+            }
+        }
+    }
+}
+
+// 767 end

@@ -221,6 +221,10 @@ iframe {
     line-height: 40px;
     font-weight: 400;
 }
+.grecaptcha-badge {
+    bottom: 100px !important;
+    z-index: 99;
+}
 // Responsive CSS start
 @media (max-width:1600px) {
     body {

@@ -6,15 +6,17 @@ footer {
     background-color: $text-color;
     padding: 60px 0 50px;
     color: $white;
+
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus {
-      -webkit-text-fill-color: $white;
-      -webkit-box-shadow: 0 0 0px 1000px inherit inset;
-      transition: background-color 5000s ease-in-out 0s;
-      line-height: 30px;
-      font-size: 17px;
+        -webkit-text-fill-color: $white;
+        -webkit-box-shadow: 0 0 0px 1000px inherit inset;
+        transition: background-color 5000s ease-in-out 0s;
+        line-height: 30px;
+        font-size: 17px;
     }
+
     .mobile-hide {
         display: block;
     }
@@ -72,8 +74,12 @@ footer {
     }
 
     form {
-        margin-bottom: 42px;
-
+        margin-bottom: 70px;
+        #Zc_SignupSuccess {
+            position: absolute;
+            top: 3px;
+            left: 0;
+        }
         h6 {
             font-size: 17px;
             line-height: 20px;
@@ -144,8 +150,9 @@ footer {
     .links-wrap {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -30px;
-        justify-content: flex-end;
+        margin: 0 0 0 auto;
+        justify-content: space-between;
+        max-width: 340px;
 
         .links-col {
             padding: 0 30px;
@@ -226,9 +233,15 @@ footer {
     line-height: 24px;
     font-weight: 400;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 45px;
-    padding-top: 90px;
+    padding-right: 0;
+    padding-top: 30px;
+    max-width: 310px;
+    margin: 0 0 0 auto;
+
+    h4 {
+        font-weight: 700;
+        font-family: "Inter";
+    }
 }
 
 // Responsive UI start
@@ -258,6 +271,7 @@ footer {
         }
 
         form {
+            margin-bottom: 42px;
             .form-control {
                 font-size: 14px;
                 line-height: 17px;
@@ -271,7 +285,7 @@ footer {
     }
 
     .general-contractor-license-number {
-        padding-top: 120px;
+        padding-top: 110px;
         font-size: 14px;
         line-height: 17px;
     }
@@ -373,6 +387,9 @@ footer {
             }
         }
     }
+    .general-contractor-license-number {
+        padding-top: 65px;
+    }
 }
 
 // 1023 end
@@ -429,6 +446,7 @@ footer {
         .links-wrap {
             justify-content: space-between;
             margin: 0;
+            max-width: 100%;
         }
 
         .trusted-by {
@@ -479,6 +497,7 @@ footer {
         text-align: center;
         width: 100%;
         padding-right: 0;
+        margin: 0 auto;
         justify-content: center;
     }
 }

@@ -1,5 +1,25 @@
 [
   {
+    "id":29,
+    "blogUrl":"/nyc-building-permits-filing-guide/",
+    "imageUrl": "../images/blog-images/nyc-building-permits-filing-guide-images/nyc-building-permits-filing-guide-images-1.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Sebastian-Aguas.webp",
+    "writerName": "Sebastian Aguas",
+    "date": "Mar 25, 2024",
+    "title": "NYC building permits & filing process",
+    "introText": "Confused about NYC building permits? Our comprehensive guide covers e..."
+  },
+  {
+    "id":28,
+    "blogUrl":"/bathroom-renovation-cost-nyc/",
+    "imageUrl": "../images/blog-images/bathroom-renovation-cost-nyc-images/bathroom-renovation-cost-nyc-images-1.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Sebastian-Aguas.webp",
+    "writerName": "Sebastian Aguas",
+    "date": "Mar 11, 2024",
+    "title": "How much does a bathroom renovation cost in NYC?",
+    "introText": "Planning a bathroom renovation in NYC? Learn about the latest trends and av..."
+  },
+  {
     "id":27,
     "blogUrl":"/cost-of-kitchen-renovation-remodeling-nyc-2024/",
     "imageUrl": "../images/blog-images/cost-of-kitchen-renovation-remodeling-nyc-2024-images/cost-of-kitchen-renovation-remodeling-nyc-2024-images-card.webp",
@@ -277,6 +297,6 @@
     "writerName": "Eli Moyal",
     "date": "Mar 25, 2022",
     "title": "How much does an apartment renovation cost in NYC?",
-    "introText": "Miami's vibrant condo scene offers endless possibilities for stylish living, b..."
+    "introText": "If you’ve lived in your apartment for some time and looking to refresh y..."
   }
 ]
