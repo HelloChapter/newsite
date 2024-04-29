@@ -113,7 +113,7 @@ function redirectToThankYou() {
     $(".modal-contact-thank-you").addClass("modal-open");
 }
   if (url_check.includes("thank-you-message")) {
-    $(".modal-contact-thank-you").addClass("modal-open");
+  //  $(".modal-contact-thank-you").addClass("modal-open");
    // $(".form-wrap").hide();
     //$(".thank-you-content-wrap").show();
     // var stickyHeaderHeight = 160;

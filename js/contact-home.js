@@ -119,7 +119,7 @@ function redirectToThankYou() {
     }
     window.location.href = "/?submit=true"
     var url_check = window.location.href;
-    if (url_check === "/?submit=true" || url_check === "/") {
+    if (url_check.includes === "/?submit=true" || url_check === "/") {
         $(".modal-contact-thank-you").addClass("modal-open");
     }
 }
