@@ -111,10 +111,10 @@ function redirectToThankYou() {
   var url_check = window.location.href;
   if (url_check.includes === "/?submit=true" || url_check === "/") {
     $(".modal-contact-thank-you").addClass("modal-open");
-}
+  }
   if (url_check.includes("thank-you-message")) {
-  //  $(".modal-contact-thank-you").addClass("modal-open");
-   // $(".form-wrap").hide();
+    //  $(".modal-contact-thank-you").addClass("modal-open");
+    // $(".form-wrap").hide();
     //$(".thank-you-content-wrap").show();
     // var stickyHeaderHeight = 160;
     // var offset = $('.thank-you-content-wrap').offset().top - stickyHeaderHeight;
@@ -208,7 +208,7 @@ function submitForm(e) {
     // $('#contact-form-submit-label').hide();
     // $('#loader-spinner-label').show();
     $('#submit').addClass("loading-data");
-   // debugger;
+    // debugger;
 
     inputs.each(function () {
       $(this).attr("disabled", "disabled");
