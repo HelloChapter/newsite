@@ -107,12 +107,12 @@ function redirectToThankYou() {
     localStorage.setItem("formSubmitted", true);
   }
 
-  window.location.href = "/contact-chapter-home-renovation/?submit=true"
+  window.location.href = "/thank-you-message/?submit=true"
   var url_check = window.location.href;
   if (url_check.includes === "/?submit=true" || url_check === "/") {
     $(".modal-contact-thank-you").addClass("modal-open");
 }
-  if (url_check.includes("contact-chapter-home-renovation")) {
+  if (url_check.includes("thank-you-message")) {
     $(".modal-contact-thank-you").addClass("modal-open");
    // $(".form-wrap").hide();
     //$(".thank-you-content-wrap").show();
@@ -234,7 +234,7 @@ function submitForm(e) {
           // add generated token to the post data object
           postDataObject.recaptchaToken = token;
           setTimeout(function () {
-            makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+            makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
             // makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
           }, 500);
 
