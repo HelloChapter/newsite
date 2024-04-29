@@ -436,7 +436,7 @@
                     </div>
                 </section>
                 <!-- section-plan-design-build end -->
-                <section class="section-home-project-fingertips pearl-bg2 aos-init" data-aos="fade">
+                <!-- <section class="section-home-project-fingertips pearl-bg2 aos-init" data-aos="fade">
                     <div class="container">
                         <div class="row no-gutters">
                             <div class="col col-content">
@@ -520,7 +520,7 @@
                                     </div>
                                 </div>
                             </div>
-                </section>
+                </section> -->
                 <!-- section-project-fingertips end -->
                 <section class="section-home-reviews aos-init " data-aos="fade">
                     <div class="embedsocial-hashtag" data-ref="3d97164898bf69f7f5319b92ceb628803910cc4c"></div>
@@ -1428,6 +1428,32 @@
                 </div>
             </section>
             <!-- Footer end -->
+            <div class='modal-root modal-contact-thank-you'>
+                <div class="modal-content">
+                    <Button class="btn-style-removed btn-close">
+                        <img src="../images/icons/close-black.svg" alt="icon">
+                    </Button>
+                    <div class='mid-content'>
+                        <div class="thank-you-content-wrap">
+                            <div class="thank-you-content">
+                                <div class="content-wrap text-center">
+                                    <div class="icon-wrap">
+                                        <img src="../images/icons/check-circle.svg" alt="icon">
+                                    </div>
+                                    <h1>Thank you for<br /> contacting us!</h1>
+                                    <p>A Chapter renovation expert will be in touch shortly.<br /> Until
+                                        then, get
+                                        inspired by some of our work.</p>
+                                </div>
+                                <div class="links">
+                                    <a href="/all-renovation-projects/">Explore our projects</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Thank you modal end -->
         </div>
         <!-- Page wrapper end -->
     </div>
@@ -1446,6 +1472,7 @@
     <script defer src="../js/contact-home.js"></script>
     <script defer src="../js/home-page.js"></script>
     <!-- <script defer src="../js//home-slider.js"></script> -->
+    <script defer src="../js/google-api.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script defer src="https://www.youtube.com/iframe_api"></script>
     <script>
@@ -1742,45 +1769,25 @@
         // ready function end
     </script>
     <script>
-        var emailElement = document.getElementById('contact-email-field-id-home');
-        emailElement.value = localStorage.getItem('email') != undefined ? localStorage.getItem('email') : null;
-        emailElement.setAttribute("data-email", emailElement.value);
-        const urlParams = new URLSearchParams(window.location.search);
-        const myParam = urlParams.get('submit');
-        if (myParam == "true") {
-            console.log("Home Conversion");
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'UA-225495044-1');
-            gtag('event', 'conversion', { 'send_to': 'AW-10883092413/MbiyCMnEkfIYEL2fu8Uo' });
-            // $(".form-wrap").hide();
-            // $(".thank-you-content-wrap").show();
-            // // var stickyHeaderHeight = 160;
-            // if (window.innerWidth < 1024) {
-            //     var stickyHeaderHeight = 100;
-            // }
-            // else if (window.innerWidth < 768) {
-            //     var stickyHeaderHeight = 100;
-            // }
-            // else {
-            //     var stickyHeaderHeight = 160;
-            // }
-            // $(window).resize(function () {
-            //     if ((window.innerWidth > 767) && (window.innerWidth < 1024)) {
-            //         stickyHeaderHeight = 100;
-            //     } else if (window.innerWidth < 768) {
-            //         stickyHeaderHeight = 100;
-            //     } else {
-            //         stickyHeaderHeight = 160;
-            //     }
-            // });
-            // console.log(stickyHeaderHeight)
-            // var offset = $('.thank-you-content-wrap ').offset().top - stickyHeaderHeight;
-            // $('html, body').animate({
-            //     scrollTop: offset
-            // }, 600);
-        }
+         $(document).ready(function () {
+            var emailElement = document.getElementById('contact-email-field-id-home');
+            emailElement.value = localStorage.getItem('email') !== undefined ? localStorage.getItem('email') : null;
+            emailElement.setAttribute("data-email", emailElement.value);
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const myParam = urlParams.get('submit');
+            if (myParam === "true") {
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                if (window.location.href.includes('https://hellochapter.com/')) {
+                    gtag('config', 'UA-225495044-1');
+                    gtag('event', 'conversion', { 'send_to': 'AW-10883092413/MbiyCMnEkfIYEL2fu8Uo' });
+                    console.log("Home Conversion Done");
+                }
+                $(".modal-contact-thank-you").addClass("modal-open");
+            }
+        });
     </script>
 
     <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>

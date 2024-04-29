@@ -139,16 +139,16 @@ function redirectToThankYou() {
     if (localStorage.getItem("qr_status")) {
         localStorage.setItem("formSubmitted", true);
     }
-    // var url = window.location.href;
-    // window.location.href = "/thank-you-message-home/?submit=true";
-    // var url = "/thank-you-message-home/?submit=true";
-    // if (!url.includes("submit=true")) {
-    //     if (url.indexOf("?") !== -1) {
-    //         url = url + "&submit=true";
-    //     } else {
-    //         url = url + "?submit=true";
-    //     }
-    // }
+    var url = window.location.href;
+    window.location.href = "/thank-you-message-home/?submit=true";
+    var url = "/thank-you-message-home/?submit=true";
+    if (!url.includes("submit=true")) {
+        if (url.indexOf("?") !== -1) {
+            url = url + "&submit=true";
+        } else {
+            url = url + "?submit=true";
+        }
+    }
     window.location.href = "/?submit=true"
     var url_check = window.location.href;
     if (url_check === "/?submit=true" || url_check === "/") {
