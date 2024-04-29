@@ -234,7 +234,7 @@ function submitForm(e) {
           // add generated token to the post data object
           postDataObject.recaptchaToken = token;
           setTimeout(function () {
-            makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+            makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
             // makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
           }, 500);
 
