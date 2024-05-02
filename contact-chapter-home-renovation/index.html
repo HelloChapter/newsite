@@ -167,6 +167,7 @@
             /*Before submit, if you want to trigger your event, "include your code here"*/
         };
     </script>
+    <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=28998611860da' async='true'></script>
 </head>
 
 <body>
@@ -215,13 +216,21 @@
                                         <a href="/blog/" title="Blog">Blog</a>
                                     </li>
                                     <li>
-                                        <a href="/chapter-renovation-faq/" title="FAQs">FAQs</a>
+                                        <a href="/chapter-renovation-faq/" title="FAQs ">FAQs</a>
+                                    </li>
+                                    <li class="login-url mobile-login-url">
+                                        <a href="https://portal.hellochapter.com/login" target="_blank"
+                                            title="Log In">Log In</a>
                                     </li>
 
                                 </ul>
                             </nav>
                         </div>
                         <div class="col col-get-started">
+                            <div class="login-url">
+                                <a href="https://portal.hellochapter.com/login" target="_blank" title="Log In">Log
+                                    In</a>
+                            </div>
                             <div class="contact-url">
                                 <a href="/contact-chapter-home-renovation/" title="Contact ">CONTACT US</a>
                             </div>
@@ -410,22 +419,6 @@
                                 </form>
                             </div>
                             <!-- form end -->
-                            <div class="thank-you-content-wrap  d-none">
-                                <div class="thank-you-content">
-                                    <div class="page-title text-center">
-                                        <div class="icon-wrap">
-                                            <img src="../images/icons/check-circle.svg" alt="icon">
-                                        </div>
-                                        <h1>Thank you for<br /> contacting us!</h1>
-                                        <p>A Chapter renovation expert will be in touch shortly.<br /> Until then, get
-                                            inspired by some of our work.</p>
-                                    </div>
-                                    <div class="links">
-                                        <a href="/all-renovation-projects/">Explore our projects</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Thank you wrap end -->
                         </div>
                         <div class="col col-image">
                             <div class="bg-image col-desktop-image"
@@ -1057,9 +1050,16 @@
                             </div>
                             <div class="general-contractor-license-wrap mobile-hide">
                                 <div class="general-contractor-license-number">
-                                    <p>NY license #624690 <br />
-                                        FL license #CBC1267423
-                                    </p>
+                                    <div class="licenses-wrap">
+                                        <h4>Licenses numbers:</h4>
+                                        <p>
+                                            NY- 624690 <br />
+                                            FL- CBC1267423<br />
+                                            Westchester County- WC-37416-H24<br />
+                                            Southampton– L006804<br />
+                                            Connecticut- HIC.0672343
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1083,9 +1083,16 @@
                         </div>
                         <div class="general-contractor-license-wrap desktop-hide">
                             <div class="general-contractor-license-number">
-                                <p>NY license #624690 <br />
-                                    FL license #CBC1267423
-                                </p>
+                                <div class="licenses-wrap">
+                                    <h4>Licenses numbers:</h4>
+                                    <p>
+                                        NY- 624690 <br />
+                                        FL- CBC1267423<br />
+                                        Westchester County- WC-37416-H24<br />
+                                        Southampton– L006804<br />
+                                        Connecticut- HIC.0672343
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1120,6 +1127,32 @@
                 </div>
             </section>
             <!-- Footer end -->
+            <div class='modal-root modal-contact-thank-you'>
+                <div class="modal-content">
+                    <Button class="btn-style-removed btn-close">
+                        <img src="./../images/icons/close-black.svg" alt="icon">
+                    </Button>
+                    <div class='mid-content'>
+                        <div class="thank-you-content-wrap">
+                            <div class="thank-you-content">
+                                <div class="content-wrap text-center">
+                                    <div class="icon-wrap">
+                                        <img src="../images/icons/check-circle.svg" alt="icon">
+                                    </div>
+                                    <h1>Thank you for<br /> contacting us!</h1>
+                                    <p>A Chapter renovation expert will be in touch shortly.<br /> Until
+                                        then, get
+                                        inspired by some of our work.</p>
+                                </div>
+                                <div class="links">
+                                    <a href="/all-renovation-projects/">Explore our projects</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Thank you modal end -->
         </div>
         <!-- Page wrapper end -->
     </div>
@@ -1518,28 +1551,32 @@
 
     <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
     <script>
-        var emailElement = document.getElementById('contact-email-field-id');
-        emailElement.value = localStorage.getItem('Contactemail') != undefined ? localStorage.getItem('Contactemail') : null;
-        emailElement.setAttribute("data-email", emailElement.value);
-        const urlParams = new URLSearchParams(window.location.search);
-        const myParam = urlParams.get('submit');
-        if (myParam == "true") {
-            console.log("Contact Conversion");
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'UA-225495044-1');
-            gtag('event', 'conversion', { 'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo' });
+        // var emailElement = document.getElementById('contact-email-field-id');
+        // emailElement.value = localStorage.getItem('Contactemail') != undefined ? localStorage.getItem('Contactemail') : null;
+        // emailElement.setAttribute("data-email", emailElement.value);
+        // const urlParams = new URLSearchParams(window.location.search);
+        // const myParam = urlParams.get('submit');
+       // if (myParam == "true") {
+            // window.dataLayer = window.dataLayer || [];
+            // function gtag() { dataLayer.push(arguments); }
+            // gtag('js', new Date());
 
-            $(".form-wrap").hide();
-            $(".thank-you-content-wrap").show();
-            var stickyHeaderHeight = 160;
-            var offset = $('.thank-you-content-wrap').offset().top - stickyHeaderHeight;
-            $('html, body').animate({
-                scrollTop: offset
-            }, 400);
-        }
+            // $(".form-wrap").hide();
+            // $(".thank-you-content-wrap").show();
+            // var stickyHeaderHeight = 160;
+            // var offset = $('.thank-you-content-wrap').offset().top - stickyHeaderHeight;
+            // $('html, body').animate({
+            //     scrollTop: offset
+            // }, 400);
+            // if (window.location.href.includes('https://hellochapter.com/')) {
+            //     gtag('config', 'UA-225495044-1');
+            //     gtag('event', 'conversion', { 'send_to': 'AW-10883092413/R16jCK7357kDEL2fu8Uo' });
+            //     console.log("Contact Conversion Done");
+            // }
+            // $(".modal-contact-thank-you").addClass("modal-open");
+        //}
     </script>
+    <script> (function () { var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function () { acsbJS.init({ statementLink: '', footerHtml: '', hideMobile: false, hideTrigger: false, disableBgProcess: false, language: 'en', position: 'left', leadColor: '#231f20', triggerColor: '#231f20', triggerRadius: '50%', triggerPositionX: 'left', triggerPositionY: 'bottom', triggerIcon: 'people', triggerSize: 'medium', triggerOffsetX: 20, triggerOffsetY: 20, mobile: { triggerSize: 'small', triggerPositionX: 'left', triggerPositionY: 'bottom', triggerOffsetX: 10, triggerOffsetY: 10, triggerRadius: '50%' } }); }; h.appendChild(s); })(); </script>
 </body>
 
 </html>

@@ -56,7 +56,8 @@ $(document).on("change", "select", (function (e) {
   return
 }));
 jQuery(document).ready(function ($) {
-  Cookies.set('HelloChapterContactPath', window.location.href, { expires: 20, path: window.location.href });
+  // Cookies.set('HelloChapterContactPath', window.location.href, { expires: 20, path: window.location.href });
+  Cookies.set('HelloChapterContactPath', window.location.href, { expires: 20, path: '/' });
   setTimeout(function () {
     window.scrollTo(0, 0);
   }, 100)
@@ -107,16 +108,20 @@ function redirectToThankYou() {
     localStorage.setItem("formSubmitted", true);
   }
 
-  window.location.href = "/contact-chapter-home-renovation/?submit=true"
+  window.location.href = "/thank-you-message/?submit=true"
   var url_check = window.location.href;
-  if (url_check.includes("contact-chapter-home-renovation")) {
-    $(".form-wrap").hide();
-    $(".thank-you-content-wrap").show();
-    var stickyHeaderHeight = 160;
-    var offset = $('.thank-you-content-wrap').offset().top - stickyHeaderHeight;
-    $('html, body').animate({
-      scrollTop: offset
-    }, 400);
+  if (url_check.includes === "/?submit=true" || url_check === "/") {
+    $(".modal-contact-thank-you").addClass("modal-open");
+  }
+  if (url_check.includes("thank-you-message")) {
+    //  $(".modal-contact-thank-you").addClass("modal-open");
+    // $(".form-wrap").hide();
+    //$(".thank-you-content-wrap").show();
+    // var stickyHeaderHeight = 160;
+    // var offset = $('.thank-you-content-wrap').offset().top - stickyHeaderHeight;
+    // $('html, body').animate({
+    //   scrollTop: offset
+    // }, 400);
   }
 }
 // Contact Submit 
@@ -204,7 +209,7 @@ function submitForm(e) {
     // $('#contact-form-submit-label').hide();
     // $('#loader-spinner-label').show();
     $('#submit').addClass("loading-data");
-   // debugger;
+    // debugger;
 
     inputs.each(function () {
       $(this).attr("disabled", "disabled");

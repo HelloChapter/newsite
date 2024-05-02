@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap");
 .inline-block {
   display: inline-block;
 }
@@ -401,6 +401,11 @@ iframe {
   font-size: 13px;
   line-height: 40px;
   font-weight: 400;
+}
+
+.grecaptcha-badge {
+  bottom: 100px !important;
+  z-index: 99;
 }
 
 @media (max-width: 1600px) {
@@ -890,7 +895,7 @@ iframe {
 .section-project-category {
   padding: 5px 15px;
   position: sticky;
-  top: 131px;
+  top: 128px;
   left: 0;
   background-color: #ffffff;
   z-index: 9;
@@ -970,7 +975,7 @@ iframe {
 }
 
 header {
-  padding: 51px 0 32px;
+  padding: 40px 0 40px;
   -webkit-transition: background-color 0.3s, opacity 0.3s !important;
   transition: background-color 0.3s, opacity 0.3s !important;
   position: fixed;
@@ -993,14 +998,17 @@ header .header-nav {
           align-items: center;
 }
 header .col-logo {
-  max-width: 230px;
+  max-width: 242px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 230px;
-          flex: 0 0 230px;
+      -ms-flex: 0 0 242px;
+          flex: 0 0 242px;
   line-height: 0;
 }
 header .logo {
   max-width: 142px;
+}
+header .mobile-login-url {
+  display: none;
 }
 header nav ul {
   display: -webkit-box;
@@ -1011,7 +1019,7 @@ header nav ul {
           justify-content: center;
 }
 header nav ul li {
-  padding: 0 17px;
+  padding: 0 27px;
 }
 header nav a {
   font-size: 17px;
@@ -1019,10 +1027,9 @@ header nav a {
   font-weight: 400;
   color: #231F20;
   letter-spacing: -0.16px;
-  padding: 5px 3px;
+  padding: 0;
   display: block;
   border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
   -webkit-transition: border-color 0.25s;
   transition: border-color 0.25s;
 }
@@ -1034,27 +1041,43 @@ header nav .active {
   font-weight: 700;
 }
 header .col-get-started {
-  max-width: 200px;
+  max-width: 242px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 200px;
-          flex: 0 0 200px;
+      -ms-flex: 0 0 242px;
+          flex: 0 0 242px;
   text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+header .col-get-started .login-url {
+  padding-right: 35px;
+  font-weight: 400;
 }
 header .col-get-started a {
+  font-size: 17px;
+  line-height: 21px;
+  color: #231F20;
+}
+header .col-get-started .contact-url a {
   background-color: #231F20;
   color: #ffffff;
   min-width: 157px;
   display: inline-block;
   padding: 12px;
   font-weight: 700;
-  font-size: 17px;
-  line-height: 21px;
   font-style: italic;
   text-align: center;
   text-transform: uppercase;
   border: 1px solid transparent;
 }
-header .col-get-started a:hover {
+header .col-get-started .contact-url a:hover {
   color: #231F20;
   background-color: transparent;
   border-color: #231F20;
@@ -1105,6 +1128,11 @@ header .col-get-started a:hover {
     padding: 0 80px;
   }
 }
+@media (max-width: 1480px) {
+  header nav ul li {
+    padding: 0 16px;
+  }
+}
 @media (max-width: 1440px) {
   header .container {
     padding: 0 60px;
@@ -1129,10 +1157,10 @@ header .col-get-started a:hover {
     padding: 0 12px;
   }
   header .col-get-started {
-    max-width: 160px;
+    max-width: 240px;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 160px;
-            flex: 0 0 160px;
+        -ms-flex: 0 0 240px;
+            flex: 0 0 240px;
   }
 }
 @media (max-width: 1199px) {
@@ -1186,6 +1214,11 @@ header .col-get-started a:hover {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  header .mobile-login-url {
+    display: block;
+    border-top: 0.5px solid #231F20;
+    padding-top: 18px;
+  }
   header .col-logo {
     position: relative;
     z-index: 99;
@@ -1208,6 +1241,9 @@ header .col-get-started a:hover {
   }
   header .col-get-started a {
     padding: 9.5px;
+  }
+  header .col-get-started .login-url {
+    display: none;
   }
   header .contact-url {
     padding-right: 50px;
@@ -1302,7 +1338,7 @@ header .col-get-started a:hover {
   header .col-get-started {
     top: 28px;
   }
-  header .col-get-started a {
+  header .col-get-started .contact-url a {
     line-height: 17px;
     min-width: 117px;
     padding: 5px;
@@ -1423,7 +1459,12 @@ footer h3 {
   margin-bottom: 12px;
 }
 footer form {
-  margin-bottom: 42px;
+  margin-bottom: 70px;
+}
+footer form #Zc_SignupSuccess {
+  position: absolute;
+  top: 3px;
+  left: 0;
 }
 footer form h6 {
   font-size: 17px;
@@ -1501,10 +1542,11 @@ footer .links-wrap {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 -30px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  margin: 0 0 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 340px;
 }
 footer .links-wrap .links-col {
   padding: 0 30px;
@@ -1577,11 +1619,14 @@ footer .trusted-by li img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-right: 45px;
-  padding-top: 90px;
+  padding-right: 0;
+  padding-top: 30px;
+  max-width: 310px;
+  margin: 0 0 0 auto;
+}
+.general-contractor-license-number h4 {
+  font-weight: 700;
+  font-family: "Inter";
 }
 
 @media (max-width: 1660px) {
@@ -1602,6 +1647,9 @@ footer .trusted-by li img {
   footer ul li + li {
     margin-top: 12px;
   }
+  footer form {
+    margin-bottom: 42px;
+  }
   footer form .form-control {
     font-size: 14px;
     line-height: 17px;
@@ -1611,7 +1659,7 @@ footer .trusted-by li img {
     padding: 0 60px;
   }
   .general-contractor-license-number {
-    padding-top: 120px;
+    padding-top: 110px;
     font-size: 14px;
     line-height: 17px;
   }
@@ -1702,6 +1750,9 @@ footer .trusted-by li img {
   .footer-intro-text .col-dream-text .privacy-link {
     margin-left: 15px;
   }
+  .general-contractor-license-number {
+    padding-top: 65px;
+  }
 }
 @media (max-width: 767px) {
   footer .mobile-hide {
@@ -1749,6 +1800,7 @@ footer .trusted-by li img {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin: 0;
+    max-width: 100%;
   }
   footer .trusted-by {
     text-align: center;
@@ -1794,6 +1846,7 @@ footer .trusted-by li img {
     text-align: center;
     width: 100%;
     padding-right: 0;
+    margin: 0 auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1888,7 +1941,7 @@ footer .trusted-by li img {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #231F20;
+  background-color: rgba(35, 31, 32, 0.9);
   padding: 0 40px;
   width: auto;
 }
