@@ -70,6 +70,16 @@
     "introText": "Renovating a single-family home in Miami offers an exciting opportunity to..."
   },
   {
+    "id":13,
+    "blogUrl":"/home-renovation-in-facts-Stats-to-consider-before-renovating/",
+    "imageUrl": "./../images/blog-images/nh-20221118-0270-by-nadav-havakook-1920x1280.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ari-Salehi.webp",
+    "writerName": "Ari Salehi",
+    "date": "Jan 16, 2024",
+    "title": "Home renovation in 2024: 10 facts & stats to consider before renovating",
+    "introText": "Home renovation is an exciting project, but it requires a lot of planning to ensu..."
+  },
+  {
     "id":24,
     "blogUrl":"/brownstones-and-townhouses-in-nyc-a-detailed-renovation-guide/",
     "imageUrl": "../images/blog-images/brownstones-and-townhouses-in-nyc-a-detailed-renovation-guide-images/brownstone-townhouse-renovation-card.webp",
@@ -218,16 +228,6 @@
     "date": "Feb 16, 2023",
     "title": "How much does a home renovation in Miami cost in 2023?",
     "introText": "Home renovation is an investment in your property, and can significantly in..."
-  },
-  {
-    "id":13,
-    "blogUrl":"/home-renovation-in-facts-Stats-to-consider-before-renovating/",
-    "imageUrl": "./../images/blog-images/nh-20221118-0270-by-nadav-havakook-1920x1280.webp",
-    "writerImage": "../images/blog-images/blog-writer-images/Ari-Salehi.webp",
-    "writerName": "Ari Salehi",
-    "date": "Feb 13, 2023",
-    "title": "Home renovation in 2023: 10 facts & stats to consider before renovating",
-    "introText": "Home renovation is an exciting project, but it requires a lot of planning to ensu..."
   },
   {
     "id":14,
