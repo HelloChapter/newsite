@@ -9,11 +9,19 @@ jQuery(document).ready(function ($) {
         if (Cookies.get('HelloChapterContactPath') === undefined) {
             Cookies.set('HelloChapterContactPath', window.location.href, { expires: 30, path: '' })
         }
-        if (window.location.pathname === '/contact-chapter-home-renovation/') {
-            // Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
-        }
     }
     setTimeout(custom_cookie, 1000);
+
+    var mainurl = window.location.href;
+    const urlAfterSlash = mainurl.split('/').pop();
+    console.log("urlAfterSlash", urlAfterSlash);
+    function extractAndSaveUrlAfterSlash(url) {
+        if (!Cookies.get('ExtractedUrlAfterSlash')) {
+            Cookies.set('ExtractedUrlAfterSlash', urlAfterSlash, { expires: 30, path: '/' });
+            return urlAfterSlash;
+        }
+    }
+    extractAndSaveUrlAfterSlash();
     // Header sticky
     jQuery(window).scroll(function () {
         var scroll = jQuery(window).scrollTop();

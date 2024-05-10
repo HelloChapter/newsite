@@ -55,12 +55,12 @@ $(document).on("change", "select", (function (e) {
   $(e.target).parent().removeClass("error");
   return
 }));
+
 jQuery(document).ready(function ($) {
-  // Cookies.set('HelloChapterContactPath', window.location.href, { expires: 20, path: window.location.href });
+  // Cookies.set('HelloChapterContactPath', window.location.href, { expires: 30, path: window.location.href });
   if (!Cookies.get('HelloChapterContactPath')) {
-    Cookies.set('HelloChapterContactPath', window.location.href, { expires: 20, path: '/' });
+    Cookies.set('HelloChapterContactPath', window.location.href, { expires: 30, path: '/' });
   }
-  //Cookies.set('HelloChapterContactPath', window.location.href, { expires: 20, path: '/' });
   setTimeout(function () {
     window.scrollTo(0, 0);
   }, 100)
@@ -231,7 +231,13 @@ function submitForm(e) {
     // get url 
 
     postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
+    var extractedUrl = Cookies.get('ExtractedUrlAfterSlash')
 
+    if (extractedUrl) {
+      postDataObject.originalUrl = postDataObject.originalUrl + extractedUrl;
+    } else {
+      postDataObject.originalUrl = Cookies.get('HelloChapterContactPath');
+    }
     grecaptcha.ready(function () {
       grecaptcha.execute('6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk', { action: 'submit' })
         .then(function (token) {
