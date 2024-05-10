@@ -57,7 +57,10 @@ $(document).on("change", "select", (function (e) {
 }));
 jQuery(document).ready(function ($) {
   // Cookies.set('HelloChapterContactPath', window.location.href, { expires: 20, path: window.location.href });
-  Cookies.set('HelloChapterContactPath', window.location.href, { expires: 20, path: '/' });
+  if (!Cookies.get('HelloChapterContactPath')) {
+    Cookies.set('HelloChapterContactPath', window.location.href, { expires: 20, path: '/' });
+  }
+  //Cookies.set('HelloChapterContactPath', window.location.href, { expires: 20, path: '/' });
   setTimeout(function () {
     window.scrollTo(0, 0);
   }, 100)
@@ -235,7 +238,7 @@ function submitForm(e) {
           // add generated token to the post data object
           postDataObject.recaptchaToken = token;
           setTimeout(function () {
-            makeAjaxCall("https://api.hellochapter.com/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
+            makeAjaxCall("https://api.hellochapter.dev/api/contact/add", "POST", !0, postDataObject, redirectToThankYou);
             // makeAjaxCall(" ", "POST", !0, postDataObject, redirectToThankYou);
           }, 500);
 
