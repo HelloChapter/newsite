@@ -14,14 +14,17 @@ jQuery(document).ready(function ($) {
 
     var mainurl = window.location.href;
     const urlAfterSlash = mainurl.split('/').pop();
-    console.log("urlAfterSlash", urlAfterSlash);
-    function extractAndSaveUrlAfterSlash(url) {
+    // console.log("urlAfterSlash", urlAfterSlash);
+    function extractAndSaveUrlAfterSlash(urlAfterSlash) {
+        if(urlAfterSlash){
+            Cookies.remove('ExtractedUrlAfterSlash')
+        }
         if (!Cookies.get('ExtractedUrlAfterSlash')) {
             Cookies.set('ExtractedUrlAfterSlash', urlAfterSlash, { expires: 30, path: '/' });
             return urlAfterSlash;
         }
     }
-    extractAndSaveUrlAfterSlash();
+    extractAndSaveUrlAfterSlash(urlAfterSlash);
     // Header sticky
     jQuery(window).scroll(function () {
         var scroll = jQuery(window).scrollTop();
