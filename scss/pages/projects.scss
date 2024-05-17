@@ -237,6 +237,41 @@
     .bg-image {
         padding-bottom: 50.2%;
         max-width: 43.25%;
+        position: relative;
+    }
+
+    .image-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($color: $black, $alpha: 0.9);
+        padding: 0 40px;
+        width: auto;
+
+        @media (max-width:1199px) {
+            padding: 0 35px;
+        }
+
+        h6 {
+            color: $white;
+            margin: 0;
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 40px;
+            font-family: "Inter";
+        }
+
+        @media (max-width:1023px) {
+            h6 {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+
+        @media (max-width:1023px) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     .content {
@@ -1311,9 +1346,11 @@
             padding-bottom: 30%;
         }
     }
+
     .section-location-project-fingertips {
         .new-section-title {
             max-width: 350px;
+
             h2 {
                 font-size: 45px;
                 line-height: 60px;

@@ -544,7 +544,7 @@
                                 </div>
                             </div>
                 </section>
-                <!-- section-project-fingertips end -->
+                <!-section-project-fingertips end -->
                 <section class="section-home-reviews aos-init " data-aos="fade">
                     <div class="embedsocial-hashtag" data-ref="3d97164898bf69f7f5319b92ceb628803910cc4c"></div>
                     <script defer>
@@ -601,6 +601,30 @@
                                                     data-src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/home-images/client1.webp"
                                                     alt="image" height="200" width="200" />
                                                 <button id="openModal" type="button"
+                                                    class="btn-styled-removed btn-client-play"><img
+                                                        src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/play-icon-full.svg"
+                                                        alt="icon" height="200" width="200" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-item">
+                                        <div class="content">
+                                            <h2>“I would recommend them with no hesitation.”</h2>
+                                            <div class="client-info">
+                                                <h3>Ilyas and Bobby / <img
+                                                        src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/location2.svg"
+                                                        alt="icon" height="200" width="200" />
+                                                    Surfside, FL
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="images-icon">
+                                            <div class="circle-ui"></div>
+                                            <div class="client-image">
+                                                <img class="lazy"
+                                                    data-src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/home-images/client6.webp"
+                                                    alt="image" height="200" width="200" />
+                                                <button id="openModalIlyas" type="button"
                                                     class="btn-styled-removed btn-client-play"><img
                                                         src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/play-icon-full.svg"
                                                         alt="icon" height="200" width="200" /></button>
@@ -1008,7 +1032,7 @@
                                                     <option value="Arkansas">Arkansas</option>
                                                     <option value="California">California</option>
                                                     <option value="Colorado">Colorado</option>
-                                                    <option value="Connecticut">Connecticut</option>
+                                                    <option value="CT">CT</option>
                                                     <option value="Delaware">Delaware</option>
                                                     <option value="Florida">Florida</option>
                                                     <option value="Georgia">Georgia</option>
@@ -1191,7 +1215,7 @@
                                                     <option value="Arkansas">Arkansas</option>
                                                     <option value="California">California</option>
                                                     <option value="Colorado">Colorado</option>
-                                                    <option value="Connecticut">Connecticut</option>
+                                                    <option value="CT">CT</option>
                                                     <option value="Delaware">Delaware</option>
                                                     <option value="Florida">Florida</option>
                                                     <option value="Georgia">Georgia</option>
@@ -1537,13 +1561,13 @@
                             <div class="general-contractor-license-wrap mobile-hide">
                                 <div class="general-contractor-license-number">
                                     <div class="licenses-wrap">
-                                        <h4>Licenses numbers:</h4>
+                                        <h4>License numbers:</h4>
                                         <p>
                                             NY- 624690 <br />
                                             FL- CBC1267423<br />
                                             Westchester County- WC-37416-H24<br />
                                             Southampton– L006804<br />
-                                            Connecticut- HIC.0672343
+                                            CT- HIC.0672343
                                         </p>
                                     </div>
                                 </div>
@@ -1570,13 +1594,13 @@
                         <div class="general-contractor-license-wrap desktop-hide">
                             <div class="general-contractor-license-number">
                                 <div class="licenses-wrap">
-                                    <h4>Licenses numbers:</h4>
+                                    <h4>License numbers:</h4>
                                     <p>
                                         NY- 624690 <br />
                                         FL- CBC1267423<br />
                                         Westchester County- WC-37416-H24<br />
                                         Southampton– L006804<br />
-                                        Connecticut- HIC.0672343
+                                        CT- HIC.0672343
                                     </p>
                                 </div>
                             </div>
@@ -1796,6 +1820,25 @@
                         }
                     });
                 }
+                function loadYouTubeVideo13(videoId) {
+                    var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
+                    new YT.Player('player13', {
+                        height: '100%',
+                        width: '100%',
+                        videoId: videoId,
+                        playerVars: {
+                            'playsinline': 1,
+                            'modestbranding': 1,
+                            'rel': 0,
+                            'showinfo': 0,
+                            'iv_load_policy': 3
+                        },
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                }
                 function onPlayerReady(event) {
                     event.target.playVideo();
                 }
@@ -1815,6 +1858,9 @@
                     } else if (type === 'modal01') {
                         const client01Modal = document.getElementById('client01-modal');
                         client01Modal.remove();
+                    } else if (type === 'modal13') {
+                        const client13Modal = document.getElementById('client13-modal');
+                        client13Modal.remove();
                     }
                 }
                 function onPlayerStateChange(event) {
@@ -1960,6 +2006,33 @@
                     });
                     $('#client12-modal').css('display', 'flex');
                     loadYouTubeVideo12('jpEUzX69kdY');
+                });
+                $('#openModalIlyas').click(function () {
+                    const docString2 = `
+            <div id="client13-modal" class="modal modal-home-client-video">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button id="client2-btn-close" class="btn-styled-removed btn-close" data-dismiss="modal">
+                            <img src="./images/icons/close-icon.svg" alt="icon" />
+                        </button>
+                    </div>
+                    <div class="mid-content">
+                        <div class="video-box">
+                            <div id="player13"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+                    const modalContainer = document.getElementById('clent1-modal-container');
+                    modalContainer.innerHTML = docString2;
+                    // attach event handler for the rendered modal
+                    $(".modal-home-client-video .btn-close").on("click", function () {
+                        stopYouTubeVideo("modal13");
+                    });
+                    $('#client13-modal').css('display', 'flex');
+                    loadYouTubeVideo13('yZ8QAp0lNSE');
                 });
             });
         })
