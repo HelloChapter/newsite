@@ -96,7 +96,7 @@
             /*Before submit, if you want to trigger your event, "include your code here"*/
         };
     </script>
-<script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=28998611860da' async='true'></script>
+    <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=28998611860da' async='true'></script>
 </head>
 
 <body>
@@ -140,7 +140,7 @@
                                     <li>
                                         <a href="/blog/" title="Blog ">Blog</a>
                                     </li>
-                                     <li>
+                                    <li>
                                         <a href="/chapter-renovation-faq/" title="FAQs ">FAQs</a>
                                     </li>
                                     <li class="login-url mobile-login-url">
@@ -913,6 +913,37 @@
         <!-- Page wrapper end -->
     </div>
     <!-- Wrapper end -->
+    <script>
+        // 1-----------------------------------------------
+        // const Footer = document.getElementById("footer");
+        // Footer.innerHTML=`<object type="text/html" data="../../footer.html" ></object>`
+
+        $("#footer").load("../footer.html", function (response, status, xhr) {
+            if (status === "success") {
+                // Create a temporary container to hold the loaded content
+                var tempDiv = $("<div>").html(response);
+
+                // Evaluate inline scripts
+                tempDiv.find("script").each(function () {
+                    var scriptContent = $(this).text();
+                    $.globalEval(scriptContent);
+                });
+
+                // Re-insert external scripts
+                tempDiv.find('script[src]').each(function () {
+                    var script = document.createElement('script');
+                    script.src = $(this).attr('src');
+                    document.head.appendChild(script);
+                });
+
+                // Insert the content into the footer
+                $("#footer").html(tempDiv.html());
+            } else {
+                console.error("Failed to load footer content: " + xhr.status + " " + xhr.statusText);
+            }
+        });
+
+    </script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/aos.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/slick.js"></script>
@@ -924,14 +955,11 @@
             jQuery('#spinner-wrap').css({ transform: 'translateX(-50%) rotate(' + theta + 'rad)' });
         });
     </script>
-    
-<script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
-<script> (function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'left', leadColor : '#231f20', triggerColor : '#231f20', triggerRadius : '50%', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerOffsetX : 10, triggerOffsetY : 10, triggerRadius : '50%' } }); }; h.appendChild(s); })(); </script>
-<script>
-$(function() {
-    $("#footer").load("../../footer.html");
-});
-</script>
+
+    <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
+    <script> (function () { var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function () { acsbJS.init({ statementLink: '', footerHtml: '', hideMobile: false, hideTrigger: false, disableBgProcess: false, language: 'en', position: 'left', leadColor: '#231f20', triggerColor: '#231f20', triggerRadius: '50%', triggerPositionX: 'left', triggerPositionY: 'bottom', triggerIcon: 'people', triggerSize: 'medium', triggerOffsetX: 20, triggerOffsetY: 20, mobile: { triggerSize: 'small', triggerPositionX: 'left', triggerPositionY: 'bottom', triggerOffsetX: 10, triggerOffsetY: 10, triggerRadius: '50%' } }); }; h.appendChild(s); })(); </script>
+
+
 </body>
 
 </html>

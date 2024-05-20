@@ -1816,8 +1816,22 @@
         });
     </script>
     <script>
-        $(function () {
-            $("#footer").load("footer.html");
+        $("#footer").load("footer.html", function (response, status, xhr) {
+            if (status === "success") {
+                var tempDiv = $("<div>").html(response);
+                tempDiv.find("script").each(function () {
+                    var scriptContent = $(this).text();
+                    $.globalEval(scriptContent);
+                });
+                tempDiv.find('script[src]').each(function () {
+                    var script = document.createElement('script');
+                    script.src = $(this).attr('src');
+                    document.head.appendChild(script);
+                });
+                $("#footer").html(tempDiv.html());
+            } else {
+                console.error("Failed to load footer content: " + xhr.status + " " + xhr.statusText);
+            }
         });
     </script>
 </body>
