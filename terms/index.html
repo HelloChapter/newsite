@@ -920,23 +920,16 @@
 
         $("#footer").load("../footer.html", function (response, status, xhr) {
             if (status === "success") {
-                // Create a temporary container to hold the loaded content
                 var tempDiv = $("<div>").html(response);
-
-                // Evaluate inline scripts
                 tempDiv.find("script").each(function () {
                     var scriptContent = $(this).text();
                     $.globalEval(scriptContent);
                 });
-
-                // Re-insert external scripts
                 tempDiv.find('script[src]').each(function () {
                     var script = document.createElement('script');
                     script.src = $(this).attr('src');
                     document.head.appendChild(script);
                 });
-
-                // Insert the content into the footer
                 $("#footer").html(tempDiv.html());
             } else {
                 console.error("Failed to load footer content: " + xhr.status + " " + xhr.statusText);
