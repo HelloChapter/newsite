@@ -1,5 +1,15 @@
 [
   {
+    "id":32,
+    "blogUrl":"/townhouse-renovation-in-new-jersey/",
+    "imageUrl": "../images/blog-images/townhouse-renovation-in-new-jersey-images/blog-post-image-664f0e525a32d.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/ravit-doozli.webp",
+    "writerName": "Ravit Doozli",
+    "date": "Apr 15, 2024",
+    "title": "Townhouse renovation in New Jersey",
+    "introText": "Renovating a townhouse in New Jersey allows homeowners to blend historic c..."
+  },
+  {
     "id":31,
     "blogUrl":"/single-family-home-renovations-westchester-ny/",
     "imageUrl": "../images/blog-images/single-family-home-renovations-westchester-ny-images/blog-post-image-1-664f07137736f.webp",
