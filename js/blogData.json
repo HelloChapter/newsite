@@ -1,5 +1,15 @@
 [
   {
+    "id":30,
+    "blogUrl":"/single-family-home-renovations-new-jersey/",
+    "imageUrl": "../images/blog-images/single-family-home-renovations-new-jersey-images/blog-post-image-664f01c0a404d.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/ravit-doozli.webp",
+    "writerName": "Ravit Doozli",
+    "date": "Apr 2, 2024",
+    "title": "Single family home renovations in New Jersey",
+    "introText": "Renovating a single-family home in New Jersey offers an exciting opportunity t..."
+  },
+  {
     "id":29,
     "blogUrl":"/nyc-building-permits-filing-guide/",
     "imageUrl": "../images/blog-images/nyc-building-permits-filing-guide-images/nyc-building-permits-filing-guide-images-1.webp",
