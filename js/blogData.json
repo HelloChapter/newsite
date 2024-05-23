@@ -1,5 +1,15 @@
 [
   {
+    "id":33,
+    "blogUrl":"/townhouse-renovation-in-westchester-ny/",
+    "imageUrl": "../images/blog-images/townhouse-renovation-in-westchester-ny-images/blog-post-image-1-664f2bc31d6df.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Sami-Majdalani.webp",
+    "writerName": "Sami Majdalani",
+    "date": "Apr 23, 2024",
+    "title": "Townhouse Renovation in Westchester, NY",
+    "introText": "Renovating a townhouse in Westchester, NY, involves navigating a..."
+  },
+  {
     "id":32,
     "blogUrl":"/townhouse-renovation-in-new-jersey/",
     "imageUrl": "../images/blog-images/townhouse-renovation-in-new-jersey-images/blog-post-image-664f0e525a32d.webp",
