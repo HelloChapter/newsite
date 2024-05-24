@@ -528,13 +528,13 @@
     }
 
     .col-content {
-        max-width: 42%;
-        flex: 0 0 42%;
+        max-width: 40%;
+        flex: 0 0 40%;
     }
 
     .col-last {
-        max-width: 26%;
-        flex: 0 0 26%;
+        max-width: 30%;
+        flex: 0 0 30%;
     }
 
     .col-image {
@@ -549,7 +549,7 @@
 
     .content-wrap {
         margin: 0 auto;
-        max-width: 664px;
+        max-width: 674px;
         padding-top: 115px;
         padding-bottom: 80px;
     }
@@ -1110,12 +1110,6 @@
         h2 {
             line-height: 1.2;
         }
-
-        .col-content {
-            max-width: 50%;
-            flex: 0 0 50%;
-        }
-
         .content-wrap {
             padding: 60px 20px 30px;
         }
