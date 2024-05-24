@@ -584,8 +584,10 @@
             }
 
             @media (max-width:1196px) {
-                &:after {
-                    background-color: transparent;
+                .card-image {
+                    &:after {
+                        background-color: transparent;
+                    }
                 }
             }
 
@@ -702,6 +704,11 @@
             }
         }
     }
+    .card-info {
+        p {
+            margin-bottom: 12px;
+        }
+    }
 
     .card-wrap {
         padding: 38px 0;
@@ -748,8 +755,10 @@
             }
 
             @media (max-width:1196px) {
-                &:after {
-                    background-color: transparent;
+                .card-image {
+                    &:after {
+                        background-color: transparent;
+                    }
                 }
             }
 
@@ -1921,13 +1930,41 @@
     }
 
     .section-our-services-new {
-        padding: 60px 0;
+        padding: 60px 20px;
+
+        .row {
+            margin: 0;
+        }
+
+        .col {
+            padding: 0;
+
+            +.col {
+                margin-top: 30px;
+            }
+        }
+
         .card {
             flex-direction: column;
 
             .card-image {
                 max-width: 100%;
                 flex: 0 0 100%;
+                margin-bottom: 24px;
+            }
+
+            .card-content {
+                padding: 0;
+                text-align: center;
+            }
+
+            .card-info {
+                max-width: 100%;
+                margin-bottom: 24px;
+            }
+
+            .arrow {
+                margin: 0 auto;
             }
         }
     }
