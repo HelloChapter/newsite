@@ -46,6 +46,12 @@
     }
 }
 
+.page-new-jersey-location {
+    header {
+        border-color: transparent;
+    }
+}
+
 .section-full-image {
     min-height: 820px;
 }
@@ -523,6 +529,15 @@
 .section-our-service-area {
     letter-spacing: 0;
 
+    .img-map {
+        height: 100%;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
     .img-tablet {
         display: none;
     }
@@ -705,6 +720,7 @@
             }
         }
     }
+
     .card-info {
         p {
             margin-bottom: 12px;
@@ -865,6 +881,12 @@
             line-height: 24px;
             margin-bottom: 12px;
         }
+    }
+}
+
+.page-westchester-location {
+    .section-our-service-area .img-map {
+        max-width: 390px;
     }
 }
 
@@ -1110,6 +1132,7 @@
         h2 {
             line-height: 1.2;
         }
+
         .content-wrap {
             padding: 60px 20px 30px;
         }
@@ -1514,7 +1537,13 @@
         }
 
         .img-tablet {
+            max-width: 525px;
             display: block;
+            margin: 0 auto;
+
+            img {
+                display: block;
+            }
         }
 
         .col-content {
@@ -1936,7 +1965,7 @@
             padding: 0;
 
             +.col {
-                margin-top: 30px;
+                margin-top: 45px;
             }
         }
 
@@ -1951,16 +1980,12 @@
 
             .card-content {
                 padding: 0;
-                text-align: center;
+                text-align: left;
             }
 
             .card-info {
                 max-width: 100%;
                 margin-bottom: 24px;
-            }
-
-            .arrow {
-                margin: 0 auto;
             }
         }
     }
