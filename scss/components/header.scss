@@ -45,7 +45,18 @@ header {
             justify-content: center;
 
             li {
-                padding: 0 27px;
+                padding: 10px 27px;
+                position: relative;
+            }
+
+            .menu-locations {
+
+                &:hover,
+                &.active-submenu {
+                    .header-full-submenu-wrap {
+                        max-height: 625px;
+                    }
+                }
             }
         }
 
@@ -151,12 +162,174 @@ header {
     }
 }
 
+.header-full-submenu-wrap {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    z-index: 99;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    .header-full-submenu {
+        padding: 115px 107px 0;
+    }
+
+    .col {
+        max-width: 33.33%;
+        flex: 0 0 33.33%;
+        margin-bottom: 60px;
+    }
+
+    h5 {
+        font-size: 25px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 25px;
+    }
+
+    .content {
+        max-width: 522px;
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        max-width: 522px;
+
+        .col-first {
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        &:not(.card-map):hover {
+            .card-image {
+                &:after {
+                    background-color: rgba($color: $black, $alpha: 0.20);
+                }
+            }
+
+            @media (max-width:1196px) {
+                .card-image {
+                    &:after {
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            .card-content {
+                .arrow {
+                    border-color: $black;
+                    opacity: 1;
+                    animation: resetAnimation2 0.3s;
+
+                    @media (max-width:1196px) {
+                        width: 58px;
+                        transform: none;
+                    }
+                }
+
+                .head,
+                .head:after {
+                    border-color: $black;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .arrow {
+            width: 58px;
+            border: 1px solid $black;
+            opacity: 1;
+            position: relative;
+            background: $black;
+            display: inline-block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            margin-bottom: 14px;
+            margin-left: 5px;
+
+            .head,
+            .head:after {
+                border: 1px solid $black;
+                border-radius: 1rem;
+                width: 10px;
+                position: absolute;
+                right: -4px;
+                top: 2px;
+                transform: rotate(-45deg);
+                background-color: $black;
+            }
+
+            .head:after {
+                content: "";
+                border-color: $black;
+                right: -6px;
+                top: -6px;
+                transform: rotate(87deg);
+            }
+        }
+
+        .card-click {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 2;
+            border: none;
+        }
+
+        .card-image {
+            max-width: 40%;
+            flex: 0 0 40%;
+            position: relative;
+
+            &:after {
+                content: "";
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                transition: background-color 0.150s ease-in-out;
+            }
+
+            img {
+                height: 100%;
+                display: block;
+            }
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 20px;
+        }
+    }
+}
+
 // Responsive UI start
 @media (max-width:1660px) {
     header {
         .container {
             padding: 0 80px;
         }
+    }
+    header nav ul .menu-locations.active-submenu .header-full-submenu-wrap .header-full-submenu,
+    header nav ul .menu-locations:hover .header-full-submenu-wrap .header-full-submenu,
+    .header-full-submenu-wrap  .header-full-submenu  {
+        padding: 80px;
     }
 }
 
@@ -190,6 +363,12 @@ header {
             }
         }
     }
+
+    header nav ul .menu-locations.active-submenu .header-full-submenu-wrap .header-full-submenu,
+    header nav ul .menu-locations:hover .header-full-submenu-wrap .header-full-submenu,
+    .header-full-submenu-wrap .header-full-submenu  {
+        padding: 60px;
+    }
 }
 
 // 1440 end
@@ -222,6 +401,11 @@ header {
         .container {
             padding: 0 30px;
         }
+    }
+
+    .header-full-submenu-wrap .card .card-image {
+        max-width: 50%;
+        flex: 0 0 50%;
     }
 }
 
@@ -278,6 +462,7 @@ header {
         .header-nav {
             justify-content: space-between;
         }
+
         .mobile-login-url {
             display: block;
             border-top: 0.5px solid $black;

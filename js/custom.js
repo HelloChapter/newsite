@@ -407,3 +407,32 @@ const submitNewsletterForm1 = (event) => {
             console.error("Error submitting form:", error);
         });
 }
+// Js for header submenu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    var menuLocations = document.querySelectorAll('.menu-locations');
+
+    menuLocations.forEach(function(menuItem) {
+        menuItem.addEventListener('click', function(e) {
+            // Prevent the default action of the click
+            e.preventDefault();
+
+            // Toggle the 'active' class
+            this.classList.toggle('active-submenu');
+
+            // Close other submenus
+            menuLocations.forEach(function(otherItem) {
+                if (otherItem !== menuItem) {
+                    otherItem.classList.remove('active-submenu');
+                }
+            });
+        });
+
+        // Prevent submenu from closing when clicking inside it
+        var subMenu = menuItem.querySelector('.header-full-submenu-wrap');
+        if (subMenu) {
+            subMenu.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        }
+    });
+});
