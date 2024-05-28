@@ -302,7 +302,7 @@
                     <script defer>
                         setTimeout(() => {
                             (function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript"));
-                        }, 1000);
+                        }, 10);
                     </script>
                 </section>
                 <!-- section-reviews End -->
@@ -323,8 +323,8 @@
                         </div>
                         <div class="col col-right">
                             <div class="card-wrap">
-                                <div class="card">
-                                    <a href="/single-family-home-renovations-westchester-ny/" class="card-click"></a>
+                                <div class="card" id="card1">
+                                    <a href="/single-family-home-renovations-westchester-ny/" class="card-click" onclick="storeCard('card1')"></a>
                                     <div class="card-image">
                                         <div class="img-desktop">
                                             <img src="../images/location-img/westchester-renovation-images/what-we-know-really-card1.webp"
@@ -345,8 +345,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
-                                    <a href="/townhouse-renovation-westchester-ny/" class="card-click"></a>
+                                <div class="card" id="card2">
+                                    <a href="/townhouse-renovation-westchester-ny/" class="card-click" onclick="storeCard('card2')"></a>
                                     <div class="card-image">
                                         <div class="img-desktop">
                                             <img src="../images/location-img/new-jersey-renovation-images/what-we-know-really-card2.webp"
@@ -1567,7 +1567,32 @@
             script.src = 'https://crm.zoho.com/crm/javascript/zcga.js';
             document.head.appendChild(script);
         }, 5000);
+    </script>
+    <script>
+        $(document).ready(function () {
+        function storeCard(cardId) {
+            sessionStorage.setItem('activeCard', cardId);
+        }
 
+        // Function to restore the card position
+        function restoreCard() {
+            var activeCardId = sessionStorage.getItem('activeCard');
+            if (activeCardId) {
+                var activeCard = document.getElementById(activeCardId);
+                if (activeCard) {
+                    var headerHeight = document.querySelector('header').offsetHeight;
+                    console.log("headerHeight", headerHeight);
+                    var scrollPosition = activeCard.offsetTop - headerHeight;
+                    console.log("scrollPosition", scrollPosition);
+                    window.scrollTo(0, scrollPosition);
+                    activeCard.classList.add('active');
+                }
+                sessionStorage.removeItem('activeCard');
+            }
+        }
+        // Restore the card when the page loads
+        document.addEventListener("DOMContentLoaded", restoreCard);
+    },);
     </script>
     <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
     <script> (function () { var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function () { acsbJS.init({ statementLink: '', footerHtml: '', hideMobile: false, hideTrigger: false, disableBgProcess: false, language: 'en', position: 'left', leadColor: '#231f20', triggerColor: '#231f20', triggerRadius: '50%', triggerPositionX: 'left', triggerPositionY: 'bottom', triggerIcon: 'people', triggerSize: 'medium', triggerOffsetX: 20, triggerOffsetY: 20, mobile: { triggerSize: 'small', triggerPositionX: 'left', triggerPositionY: 'bottom', triggerOffsetX: 10, triggerOffsetY: 10, triggerRadius: '50%' } }); }; h.appendChild(s); })(); </script>

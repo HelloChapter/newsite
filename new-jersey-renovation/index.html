@@ -308,7 +308,7 @@
                     <script defer>
                         setTimeout(() => {
                             (function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript"));
-                        }, 1000);
+                        }, 10);
                     </script>
                 </section>
                 <!-- section-reviews End -->
@@ -1577,7 +1577,6 @@
     <script>
         $(document).ready(function () {
         function storeCard(cardId) {
-            // Save the card ID in session storage
             sessionStorage.setItem('activeCard', cardId);
         }
 
@@ -1586,8 +1585,7 @@
             var activeCardId = sessionStorage.getItem('activeCard');
             if (activeCardId) {
                 var activeCard = document.getElementById(activeCardId);
-                if (activeCard) {
-                    // Calculate the scroll position adjusted for the sticky header
+                if (activeCard) {        
                     var headerHeight = document.querySelector('header').offsetHeight;
                     console.log("headerHeight", headerHeight);
                     var scrollPosition = activeCard.offsetTop - headerHeight;
@@ -1598,10 +1596,8 @@
                 sessionStorage.removeItem('activeCard');
             }
         }
-
         // Restore the card when the page loads
         document.addEventListener("DOMContentLoaded", restoreCard);
-
     },);
     </script>
     <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
