@@ -1660,6 +1660,12 @@ header .col-get-started .contact-url a:hover {
             flex: 0 0 35.5%;
     max-width: 35.5%;
   }
+  .header-full-submenu-wrap .card .card-content {
+    max-width: 64.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 64.5%;
+            flex: 0 0 64.5%;
+  }
 }
 @media (max-width: 575px) {
   .announcement-bar .container {
