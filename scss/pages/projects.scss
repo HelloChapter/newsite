@@ -531,10 +531,15 @@
 
     .img-map {
         height: 100%;
+        position: relative;
 
         img {
             height: 100%;
             object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
         }
     }
 
@@ -859,6 +864,10 @@
 
             img {
                 height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
                 display: block;
             }
         }
@@ -1969,6 +1978,7 @@
 
         .img-mobile {
             display: block;
+            padding-bottom: 24.8%;
         }
     }
 
