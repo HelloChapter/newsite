@@ -685,7 +685,7 @@
             }
 
             img {
-                height: 100%;
+                // height: 100%;
                 display: block;
             }
         }
@@ -1920,6 +1920,15 @@
 
         .img-desktop {
             display: block;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                left: 0;
+            }
         }
 
         .card-wrap {
@@ -1934,6 +1943,15 @@
             .card-image {
                 max-width: 29%;
                 flex: 0 0 29%;
+
+                >div {
+                    height: 100%;
+                }
+            }
+
+            .card-info p {
+                max-width: 130px;
+                margin-bottom: 16px;
             }
 
             .card-content {
