@@ -721,103 +721,7 @@
                 <!-- section-blog-expert-help end -->
             </div>
             <!-- Middle container end -->
-            <footer>
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-footer-logo">
-                            <div class="footer-logo">
-                                <a href="/" title="Home "><img height="20" width="20" src="/images/icons/footer-logo.svg" alt="footer logo" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col col-links">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="/about-chapter-home-renovation/" title="About
-                                            ">About</a>
-                                </li>
-                                <li>
-                                    <a href="/home-renovation-services/" title="Services ">Services</a>
-                                </li>
-                                <li>
-                                    <a href="/how-chapter-home-renovation-works/" title="How It Works ">How It
-                                        Works</a>
-                                </li>
-                                <li>
-                                    <a href="/home-renovation-locations/" title="Locations ">Locations</a>
-                                </li>
-                                <li>
-                                    <a href="/nyc-renovation-projects/" title="Projects">Projects</a>
-                                </li>
-                                <li>
-                                    <a href="/blog/" title="Blog ">Blog</a>
-                                </li>
-                                <li>
-                                    <a href="/chapter-renovation-faq/" title="FAQs ">FAQs</a>
-                                </li>
-                                <li>
-                                    <a href="/contact-chapter-home-renovation/" title="Contact
-                                            ">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col col-links">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="https://www.instagram.com/chapter.renovations/" title="Instagram "
-                                        target="_blank">Instagram</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/hellochapter" title="Facebook "
-                                        target="_blank">Facebook</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
-                                        title="Houzz " target="_blank">Houzz</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.pinterest.com/chapterrenovations/" title="Twitter
-                                        " target="_blank">Pinterest</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/@hello.chapter" title="Youtube
-                                        " target="_blank">Youtube</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.tiktok.com/@hello.chapter/" title="TikTok
-                                        " target="_blank">TikTok</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/company/hellochapter/" title="Linkedin
-                                        " target="_blank">Linkedin</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col col-links">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="/privacy/" title="Privacy">Privacy
-                                        Policy</a>
-                                </li>
-                                <li>
-                                    <a href="/terms/" title="Terms">Terms
-                                        of Service</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col col-news-letter">
-                            <form>
-                                <h6>Join our newsletter to stay up to date!</h6>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email" required />
-                                    <button type="submit" class="btn-styled-removed"><img height="20" width="20"
-                                            src="/images/icons/right-shift.svg" alt="icon" /></button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <div id="footer"></div>
             <!-- Footer end -->
         </div>
         <!-- Page wrapper end -->
@@ -843,6 +747,25 @@
     
 <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
 <script> (function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'left', leadColor : '#231f20', triggerColor : '#231f20', triggerRadius : '50%', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'left', triggerPositionY : 'bottom', triggerOffsetX : 10, triggerOffsetY : 10, triggerRadius : '50%' } }); }; h.appendChild(s); })(); </script>
+<script>
+$("#footer").load("../footer.html", function (response, status, xhr) {
+                if (status === "success") {
+                    var tempDiv = $("<div>").html(response);
+                    tempDiv.find("script").each(function () {
+                        var scriptContent = $(this).text();
+                        $.globalEval(scriptContent);
+                    });
+                    tempDiv.find('script[src]').each(function () {
+                        var script = document.createElement('script');
+                        script.src = $(this).attr('src');
+                        document.head.appendChild(script);
+                    });
+                    $("#footer").html(tempDiv.html());
+                } else {
+                    console.error("Failed to load footer content: " + xhr.status + " " + xhr.statusText);
+                }
+            });
+</script>
 </body>
 
 </html>
