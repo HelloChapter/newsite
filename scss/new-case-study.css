@@ -200,7 +200,7 @@ body {
   font-family: "Inter";
   color: #231F20;
   font-size: 17px;
-  line-height: 30px;
+  line-height: 35px;
   letter-spacing: -0.12px;
   font-weight: 300;
   background-color: #ffffff;
@@ -406,6 +406,35 @@ iframe {
 .grecaptcha-badge {
   bottom: 100px !important;
   z-index: 99;
+}
+
+.image-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(35, 31, 32, 0.9);
+  padding: 0 40px;
+  width: auto;
+}
+.image-label h6 {
+  color: #ffffff;
+  margin: 0;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 40px;
+  font-family: "Inter";
+}
+@media (max-width: 1023px) {
+  .image-label h6 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 1023px) {
+  .image-label {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 1600px) {

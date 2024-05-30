@@ -15,7 +15,7 @@ body {
     font-family: 'Inter';
     color: $text-color;
     font-size: 17px;
-    line-height: 30px;
+    line-height: 35px;
     letter-spacing: -0.12px;
     font-weight: 300;
     background-color: $white;
@@ -224,6 +224,35 @@ iframe {
 .grecaptcha-badge {
     bottom: 100px !important;
     z-index: 99;
+}
+.image-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($color: $black, $alpha: 0.9);
+    padding: 0 40px;
+    width: auto;
+
+    h6 {
+        color: $white;
+        margin: 0;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 40px;
+        font-family: "Inter";
+    }
+
+    @media (max-width:1023px) {
+        h6 {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    @media (max-width:1023px) {
+        width: 100%;
+        text-align: center;
+    }
 }
 // Responsive CSS start
 @media (max-width:1600px) {
