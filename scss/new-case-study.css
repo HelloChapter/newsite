@@ -121,6 +121,10 @@
   min-height: 300px;
 }
 
+.position-relative {
+  position: relative;
+}
+
 @font-face {
   font-family: "Times";
   src: url("../fonts/times/Times-Bold.eot");
