@@ -1007,10 +1007,6 @@ iframe {
   background-color: #231F20;
 }
 
-.body-scroll-stop {
-  overflow: hidden;
-}
-
 @-webkit-keyframes resetAnimation2 {
   0% {
     width: 58px;
