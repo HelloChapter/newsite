@@ -410,7 +410,8 @@ const submitNewsletterForm1 = (event) => {
 // Js for header submenu toggle
 document.addEventListener('DOMContentLoaded', function() {
     var menuLocations = document.querySelectorAll('.menu-locations');
-
+    var bodyScroll = document.querySelector('body');
+console.log("bodyScroll", bodyScroll)
     menuLocations.forEach(function(menuItem) {
         menuItem.addEventListener('click', function(e) {
             // Prevent the default action of the click
@@ -418,11 +419,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Toggle the 'active' class
             this.classList.toggle('active-submenu');
-
+            bodyScroll.classList.toggle('body-scroll-stop');
             // Close other submenus
             menuLocations.forEach(function(otherItem) {
                 if (otherItem !== menuItem) {
                     otherItem.classList.remove('active-submenu');
+                    bodyScroll.classList.remove('body-scroll-stop');
                 }
             });
         });
