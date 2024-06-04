@@ -845,6 +845,9 @@ header {
         .arrow {
             display: none !important;
         }
+        p {
+            margin-bottom: 0;
+        }
 
         .card {
             min-height: 178px;
@@ -856,6 +859,9 @@ header {
             .card-content {
                 max-width: 64.5%;
                 flex: 0 0 64.5%;
+                .card-info {
+                    margin-bottom: 0;
+                }
             }
         }
 

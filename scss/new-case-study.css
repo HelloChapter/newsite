@@ -1743,6 +1743,9 @@ header .col-get-started .contact-url a:hover {
   .header-full-submenu-wrap .arrow {
     display: none !important;
   }
+  .header-full-submenu-wrap p {
+    margin-bottom: 0;
+  }
   .header-full-submenu-wrap .card {
     min-height: 178px;
   }
@@ -1757,6 +1760,9 @@ header .col-get-started .contact-url a:hover {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 64.5%;
             flex: 0 0 64.5%;
+  }
+  .header-full-submenu-wrap .card .card-content .card-info {
+    margin-bottom: 0;
   }
   .header-full-submenu-wrap .header-full-submenu {
     min-width: 100%;
