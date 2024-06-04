@@ -808,7 +808,8 @@
 
         .arrow {
             width: 58px;
-            border: 1px solid $black;
+            // border: 1px solid $black;
+            height: 2px;
             opacity: 1;
             position: relative;
             background: $black;
@@ -819,21 +820,22 @@
 
             .head,
             .head:after {
-                border: 1px solid $black;
+                // border: 1px solid $black;
+                height: 2px;
                 border-radius: 1rem;
                 width: 10px;
                 position: absolute;
                 right: -3px;
-                top: 2.8px;
-                transform: rotate(-39deg);
+                top: 3px;
+                transform: rotate(-45deg);
                 background-color: $black;
             }
 
             .head:after {
                 content: "";
                 border-color: $black;
-                right: -6px;
-                top: -6px;
+                right: -4px;
+                top: -4px;
                 transform: rotate(87deg);
             }
         }
