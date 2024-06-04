@@ -633,7 +633,8 @@
 
         .arrow {
             width: 58px;
-            border: 1px solid $black;
+            // border: 1px solid $black;
+            height: 2px;
             opacity: 1;
             position: relative;
             background: $black;
@@ -650,7 +651,7 @@
                 width: 10px;
                 position: absolute;
                 right: -3px;
-                top: 2px;
+                top: 3px;
                 transform: rotate(-45deg);
                 background-color: $black;
             }
