@@ -1501,7 +1501,8 @@ header .col-get-started .contact-url a:hover {
     padding: 100px 20px 20px 40px;
     z-index: 44;
     height: 100vh;
-    width: 45.58%;
+    width: 100%;
+    max-width: 350px;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
     opacity: 0;
@@ -1639,14 +1640,19 @@ header .col-get-started .contact-url a:hover {
             flex-direction: column;
   }
   .header-full-submenu-wrap .card-map .card-image {
-    max-width: 207px;
+    max-width: 100%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 207px;
-            flex: 0 0 207px;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    margin: 0 auto;
+    padding-bottom: 46%;
+  }
+  .header-full-submenu-wrap .card-map .card-image img {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .header-full-submenu-wrap .card-map .card-content {
     -webkit-box-ordinal-group: 1;
@@ -1655,6 +1661,8 @@ header .col-get-started .contact-url a:hover {
   }
   .header-full-submenu-wrap .card-map .card-content h5 {
     margin-bottom: 10px;
+    text-align: center;
+    max-width: 207px;
   }
   .header-full-submenu-wrap .card-map .card-content .card-info {
     margin-bottom: 0px;
