@@ -324,11 +324,10 @@ header {
         }
 
         .card-image {
-            max-width: 39.7%;
-            flex: 0 0 39.7%;
+            max-width: 37.7%;
+            flex: 0 0 37.7%;
             position: relative;
-
-            // margin-bottom: auto;
+            padding-bottom: 39.7%;
             &:after {
                 content: "";
                 display: block;
@@ -345,6 +344,9 @@ header {
                 height: 100%;
                 display: block;
                 object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
         }
 
@@ -353,6 +355,11 @@ header {
             flex-direction: column;
             justify-content: space-between;
             padding-left: 20px;
+        }
+    }
+    .card-map .card-image {
+        img {
+            object-fit: contain;
         }
     }
 }
