@@ -1007,6 +1007,10 @@ iframe {
   background-color: #231F20;
 }
 
+.body-header-submenu-active header {
+  background-color: #ffffff !important;
+}
+
 @-webkit-keyframes resetAnimation2 {
   0% {
     width: 58px;
@@ -1409,6 +1413,9 @@ header .col-get-started .contact-url a:hover {
   .header-full-submenu-wrap .header-full-submenu {
     padding: 60px 30px;
   }
+  header nav ul .menu-locations.active-submenu .header-full-submenu-wrap {
+    max-height: 1000px;
+  }
   .header-full-submenu-wrap .col {
     margin-bottom: 30px;
   }
@@ -1662,7 +1669,7 @@ header .col-get-started .contact-url a:hover {
   .header-full-submenu-wrap .card-map .card-content h5 {
     margin-bottom: 10px;
     text-align: center;
-    max-width: 207px;
+    max-width: 250px;
   }
   .header-full-submenu-wrap .card-map .card-content .card-info {
     margin-bottom: 0px;
@@ -1680,8 +1687,10 @@ header .col-get-started .contact-url a:hover {
     left: 5px;
     top: 118px;
   }
-  .header-full-submenu, .header-full-submenu-wrap .header-full-submenu, header nav ul .menu-locations.active-submenu .header-full-submenu-wrap .header-full-submenu {
-    padding: 30px 20px;
+  .header-full-submenu,
+  .header-full-submenu-wrap .header-full-submenu,
+  header nav ul .menu-locations.active-submenu .header-full-submenu-wrap .header-full-submenu {
+    padding: 30px 20px 50px;
   }
 }
 @media (max-width: 767px) {
@@ -1690,6 +1699,7 @@ header .col-get-started .contact-url a:hover {
     padding-top: 20px;
     top: 75px;
     padding-bottom: 100px;
+    max-width: 100%;
   }
   header .container {
     padding: 0 20px;
@@ -1795,6 +1805,9 @@ header .col-get-started .contact-url a:hover {
   }
   .header-full-submenu-wrap .header-full-submenu {
     min-width: 100%;
+  }
+  .header-full-submenu-wrap .header-full-submenu::before {
+    display: none;
   }
   .active-submenu .header-full-submenu-wrap {
     width: 100%;

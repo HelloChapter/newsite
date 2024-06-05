@@ -4,6 +4,12 @@
     // overflow: hidden;
 }
 
+.body-header-submenu-active {
+    header {
+        background-color: $white !important;
+    }
+}
+
 @keyframes resetAnimation2 {
     0% {
         width: 58px;
@@ -446,6 +452,9 @@ header {
     .header-full-submenu-wrap .header-full-submenu {
         padding: 60px 30px;
     }
+    header nav ul .menu-locations.active-submenu .header-full-submenu-wrap {
+        max-height: 1000px;
+    }
 
     .header-full-submenu-wrap .col {
         margin-bottom: 30px;
@@ -696,6 +705,7 @@ header {
                 max-width: 23.5%;
                 flex: 0 0 23.5%;
                 position: relative;
+
                 img {
                     position: absolute;
                     top: 0;
@@ -727,6 +737,7 @@ header {
                 flex: 0 0 100%;
                 order: 1;
                 padding-bottom: 46%;
+
                 img {
                     left: 50%;
                     transform: translateX(-50%);
@@ -739,8 +750,9 @@ header {
                 h5 {
                     margin-bottom: 10px;
                     text-align: center;
-                    max-width: 207px;
+                    max-width: 250px;
                 }
+
                 .card-info {
                     margin-bottom: 0px;
                 }
@@ -763,8 +775,10 @@ header {
         }
     }
 
-    .header-full-submenu, .header-full-submenu-wrap .header-full-submenu, header nav ul .menu-locations.active-submenu .header-full-submenu-wrap .header-full-submenu {
-        padding: 30px 20px;
+    .header-full-submenu,
+    .header-full-submenu-wrap .header-full-submenu,
+    header nav ul .menu-locations.active-submenu .header-full-submenu-wrap .header-full-submenu {
+        padding: 30px 20px 50px;
     }
 }
 
@@ -776,6 +790,7 @@ header {
             padding-top: 20px;
             top: 75px;
             padding-bottom: 100px;
+            max-width: 100%;
         }
 
         .container {
@@ -905,6 +920,10 @@ header {
 
         .header-full-submenu {
             min-width: 100%;
+
+            &::before {
+                display: none;
+            }
         }
     }
 

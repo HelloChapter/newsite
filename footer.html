@@ -131,7 +131,7 @@
                                         Works</a>
                                 </li>
                                 <li>
-                                    <a class="menu-locations"  title="Locations ">Locations</a>
+                                    <a class="menu-locations" title="Locations ">Locations</a>
                                 </li>
                                 <li>
                                     <a href="/nyc-renovation-projects/" title="Projects
@@ -263,6 +263,14 @@
         </div>
     </section>
     <!-- Footer end -->
+    <script>
+        // Js for header submenu toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            $("footer .menu-locations").click(function () {
+                $("header .menu-locations").toggleClass("active-submenu");
+            });
+        });
+    </script>
 </body>
 
 </html>

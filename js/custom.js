@@ -411,7 +411,11 @@ const submitNewsletterForm1 = (event) => {
 document.addEventListener('DOMContentLoaded', function() {
     var menuLocations = document.querySelectorAll('.menu-locations');
     var bodyScroll = document.querySelector('body');
-console.log("bodyScroll", bodyScroll)
+    $(document).click(function (e) {
+        if (!$(e.target).is('header *, footer .links-col *')) {
+            $(".menu-locations").removeClass('active-submenu');
+        }
+    });
     menuLocations.forEach(function(menuItem) {
         menuItem.addEventListener('click', function(e) {
             // Prevent the default action of the click
@@ -419,12 +423,12 @@ console.log("bodyScroll", bodyScroll)
 
             // Toggle the 'active' class
             this.classList.toggle('active-submenu');
-            bodyScroll.classList.toggle('body-scroll-stop');
+            bodyScroll.classList.toggle('body-header-submenu-active');
             // Close other submenus
             menuLocations.forEach(function(otherItem) {
                 if (otherItem !== menuItem) {
                     otherItem.classList.remove('active-submenu');
-                    bodyScroll.classList.remove('body-scroll-stop');
+                    bodyScroll.classList.remove('body-header-submenu-active');
                 }
             });
         });
