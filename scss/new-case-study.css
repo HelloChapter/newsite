@@ -1588,7 +1588,7 @@ header .col-get-started .contact-url a:hover {
     padding-bottom: 20px;
   }
   .active-submenu .header-full-submenu-wrap {
-    width: 420px;
+    width: calc(100vw - 350px);
   }
   .header-full-submenu-wrap {
     top: 90px;
@@ -1600,7 +1600,7 @@ header .col-get-started .contact-url a:hover {
     transition: width 0.6s ease-in-out;
   }
   .header-full-submenu-wrap .header-full-submenu {
-    min-width: 420px;
+    min-width: calc(100vw - 350px);
   }
   .header-full-submenu-wrap .col {
     max-width: 100%;
@@ -1635,8 +1635,8 @@ header .col-get-started .contact-url a:hover {
   .header-full-submenu-wrap .card-map .card-image {
     max-width: 207px;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+        -ms-flex: 0 0 207px;
+            flex: 0 0 207px;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -1649,6 +1649,25 @@ header .col-get-started .contact-url a:hover {
   }
   .header-full-submenu-wrap .card-map .card-content h5 {
     margin-bottom: 10px;
+  }
+  .header-full-submenu-wrap .card-map .card-content .card-info {
+    margin-bottom: 0px;
+  }
+  .header-full-submenu {
+    position: relative;
+  }
+  .header-full-submenu::before {
+    content: "";
+    display: block;
+    height: 40%;
+    width: 1px;
+    background-color: #231F20;
+    position: absolute;
+    left: 5px;
+    top: 118px;
+  }
+  .header-full-submenu, .header-full-submenu-wrap .header-full-submenu, header nav ul .menu-locations.active-submenu .header-full-submenu-wrap .header-full-submenu {
+    padding: 30px 20px;
   }
 }
 @media (max-width: 767px) {
