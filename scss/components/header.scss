@@ -71,7 +71,7 @@ header {
             }
 
             .menu-locations {
-                &.active-submenu {
+                &.active-submenu, &.active-footer-submenu {
                     .header-full-submenu-wrap {
                         max-height: 655px;
                     }

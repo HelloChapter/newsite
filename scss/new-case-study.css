@@ -1087,7 +1087,7 @@ header nav ul li {
   padding: 10px 27px;
   position: relative;
 }
-header nav ul .menu-locations.active-submenu .header-full-submenu-wrap {
+header nav ul .menu-locations.active-submenu .header-full-submenu-wrap, header nav ul .menu-locations.active-footer-submenu .header-full-submenu-wrap {
   max-height: 655px;
 }
 header nav a {
