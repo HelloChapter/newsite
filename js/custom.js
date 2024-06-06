@@ -16,7 +16,7 @@ jQuery(document).ready(function ($) {
     const urlAfterSlash = mainurl.split('/').pop();
     // console.log("urlAfterSlash", urlAfterSlash);
     function extractAndSaveUrlAfterSlash(urlAfterSlash) {
-        if(urlAfterSlash){
+        if (urlAfterSlash) {
             Cookies.remove('ExtractedUrlAfterSlash')
         }
         if (!Cookies.get('ExtractedUrlAfterSlash')) {
@@ -408,27 +408,35 @@ const submitNewsletterForm1 = (event) => {
         });
 }
 // Js for header submenu toggle
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var menuLocations = document.querySelectorAll('.menu-locations');
     var bodyScroll = document.querySelector('body');
+
     $(document).click(function (e) {
         if (!$(e.target).is('header *, footer .links-col *')) {
             $(".menu-locations").removeClass('active-submenu');
+            bodyScroll.classList.remove('body-header-submenu-active');
         }
     });
-    menuLocations.forEach(function(menuItem) {
-        menuItem.addEventListener('click', function(e) {
+
+    menuLocations.forEach(function (menuItem) {
+        menuItem.addEventListener('click', function (e) {
             // Prevent the default action of the click
             e.preventDefault();
 
             // Toggle the 'active' class
             this.classList.toggle('active-submenu');
-            bodyScroll.classList.toggle('body-header-submenu-active');
+            setTimeout(function () {
+                bodyScroll.classList.toggle('body-header-submenu-active');
+            }, 600);
+
             // Close other submenus
-            menuLocations.forEach(function(otherItem) {
+            menuLocations.forEach(function (otherItem) {
                 if (otherItem !== menuItem) {
                     otherItem.classList.remove('active-submenu');
-                    bodyScroll.classList.remove('body-header-submenu-active');
+                    setTimeout(function () {
+                        //bodyScroll.classList.remove('body-header-submenu-active');
+                    }, 600);
                 }
             });
         });
@@ -436,9 +444,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Prevent submenu from closing when clicking inside it
         var subMenu = menuItem.querySelector('.header-full-submenu-wrap');
         if (subMenu) {
-            subMenu.addEventListener('click', function(e) {
+            subMenu.addEventListener('click', function (e) {
                 e.stopPropagation();
             });
         }
     });
 });
+

@@ -1,12 +1,9 @@
 @import "../colors.scss";
-
-.body-scroll-stop {
-    // overflow: hidden;
-}
-
 .body-header-submenu-active {
+    overflow: hidden;
     header {
         background-color: $white !important;
+        transition:background-color 0.6s ease-in-out !important;
     }
 }
 
@@ -76,7 +73,7 @@ header {
             .menu-locations {
                 &.active-submenu {
                     .header-full-submenu-wrap {
-                        max-height: 635px;
+                        max-height: 655px;
                     }
                 }
             }
@@ -196,7 +193,7 @@ header {
     transition: max-height 0.6s ease-in-out;
 
     .header-full-submenu {
-        padding: 115px 107px 0;
+        padding: 115px 107px 2px;
         border-top: 1px solid $black;
         border-bottom: 1px solid $black;
 
@@ -375,7 +372,7 @@ header {
     header nav ul .menu-locations.active-submenu .header-full-submenu-wrap .header-full-submenu,
     .header-full-submenu,
     .header-full-submenu-wrap .header-full-submenu {
-        padding: 80px;
+        padding: 80px 80px 3px;
     }
 }
 
@@ -413,7 +410,7 @@ header {
     header nav ul .menu-locations.active-submenu .header-full-submenu-wrap .header-full-submenu,
     .header-full-submenu,
     .header-full-submenu-wrap .header-full-submenu {
-        padding: 60px;
+        padding: 60px 60px 3px;
     }
 }
 
@@ -457,7 +454,7 @@ header {
     header nav ul .menu-locations.active-submenu .header-full-submenu-wrap .header-full-submenu,
     .header-full-submenu,
     .header-full-submenu-wrap .header-full-submenu {
-        padding: 60px 30px;
+        padding: 60px 30px 3px;
     }
     header nav ul .menu-locations.active-submenu .header-full-submenu-wrap {
         max-height: 1000px;
@@ -773,19 +770,19 @@ header {
         &::before {
             content: '';
             display: block;
-            height: 40%;
+            height: 650px;
             width: 1px;
             background-color: $black;
-            position: absolute;
-            left: 5px;
-            top: 118px;
+            position: fixed;
+            left: 350px;
+            top: 203px;
         }
     }
 
     .header-full-submenu,
     .header-full-submenu-wrap .header-full-submenu,
     header nav ul .menu-locations.active-submenu .header-full-submenu-wrap .header-full-submenu {
-        padding: 30px 20px 50px;
+        padding: 30px 20px 80px;
     }
 }
 
