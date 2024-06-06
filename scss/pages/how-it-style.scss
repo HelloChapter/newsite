@@ -240,6 +240,9 @@
         +.phase-item {
             margin-top: 60px;
         }
+        .tablet-icons {
+            display: none;
+        }
     }
 
     .image-label {
@@ -721,6 +724,12 @@
                 +p {
                     margin-top: 10px;
                 }
+            }
+            .desktop-icons {
+                display: none;
+            }
+            .tablet-icons {
+                display: block;
             }
         }
 
