@@ -1341,11 +1341,6 @@
     <script defer src="../js/custom.js"></script>
     
     <script>
-        jQuery(document).ready(function ($) {
-            $("footer .menu-locations").click(function () {
-                $("header .menu-locations").toggleClass("active-submenu");
-            });
-        });
         jQuery(window).scroll(function () {
             var theta = $(window).scrollTop() / 10 % Math.PI;
             jQuery('#spinner-wrap').css({ transform: 'translateX(-50%) rotate(' + theta + 'rad)' });

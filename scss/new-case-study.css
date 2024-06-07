@@ -1007,9 +1007,6 @@ iframe {
   background-color: #231F20;
 }
 
-.body-header-submenu-active {
-  overflow: hidden;
-}
 .body-header-submenu-active header {
   background-color: #ffffff !important;
   -webkit-transition: background-color 0.6s ease-in-out !important;
@@ -1320,7 +1317,7 @@ header .col-get-started .contact-url a:hover {
       -ms-flex: 0 0 37.7%;
           flex: 0 0 37.7%;
   position: relative;
-  padding-bottom: 39.7%;
+  height: 197px;
 }
 .header-full-submenu-wrap .card .card-image:after {
   content: "";
@@ -1806,6 +1803,7 @@ header .col-get-started .contact-url a:hover {
         -ms-flex: 0 0 35.5%;
             flex: 0 0 35.5%;
     max-width: 35.5%;
+    height: auto;
   }
   .header-full-submenu-wrap .card .card-content {
     max-width: 64.5%;

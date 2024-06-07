@@ -51,7 +51,13 @@ jQuery(document).ready(function ($) {
         }
     });
     // Counter number js end
-
+    jQuery(document).ready(function ($) {
+        $("footer .menu-locations").click(function () {
+            $("header .menu-locations").toggleClass("active-submenu");
+            $("body").toggleClass("header-open");
+        });
+    });
+    // Js for open header menu 
     // About team click js
     $(".desktop-team-wrapper .team-image").click(function () {
         var current_item = $(this).attr("data-point-id");
@@ -408,6 +414,7 @@ const submitNewsletterForm1 = (event) => {
         });
 }
 // Js for header submenu toggle
+
 document.addEventListener('DOMContentLoaded', function () {
     var menuLocations = document.querySelectorAll('.menu-locations');
     var bodyScroll = document.querySelector('body');
