@@ -1318,6 +1318,7 @@ header .col-get-started .contact-url a:hover {
           flex: 0 0 37.7%;
   position: relative;
   height: 197px;
+  padding: 0;
 }
 .header-full-submenu-wrap .card .card-image:after {
   content: "";
