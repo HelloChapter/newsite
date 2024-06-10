@@ -138,7 +138,7 @@
         ]
         if (arrQueryStrign.indexOf(queryString) !== -1) {
             setTimeout(function () {
-                makeAjaxCall("https://api.hellochapter.dev/api/contact/track", "GET", !0, null, (res) => {
+                makeAjaxCall("https://api.hellochapter.com/api/contact/track", "GET", !0, null, (res) => {
                     console.log(res)
                     if (res.success) {
                         localStorage.setItem("qr_status", true);
