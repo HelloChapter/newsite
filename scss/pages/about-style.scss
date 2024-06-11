@@ -277,7 +277,7 @@
             }
         }
 
-        .active-member:not(.col-team-5, .col-team-6) {
+        .active-member:not(.col-team-5, .col-team-6, .col-team-7, .col-team-8) {
             &:after {
                 content: '';
                 display: block;

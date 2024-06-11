@@ -55,8 +55,10 @@ $(document).on("change", "select", (function (e) {
     return
 }));
 jQuery(document).ready(function ($) {
-    // Cookies.set('HelloChapterHomePath', window.location.href, { expires: 20, path: window.location.href });
-    Cookies.set('HelloChapterHomePath', window.location.href, { expires: 20, path: '/' });
+    // Cookies.set('HelloChapterHomePath', window.location.href, { expires: 30, path: window.location.href });
+    if (!Cookies.get('HelloChapterHomePath')) {
+        Cookies.set('HelloChapterHomePath', window.location.href, { expires: 30, path: '/' });
+    }
     
 
     setTimeout(function () {
@@ -221,7 +223,13 @@ function submitForm(e) {
         postDataObject.fbp = payload.fbp;
         // get url 
         postDataObject.originalUrl = Cookies.get('HelloChapterHomePath');
+        var extractedUrl = Cookies.get('ExtractedUrlAfterSlash')
 
+        if (extractedUrl) {
+          postDataObject.originalUrl = postDataObject.originalUrl + extractedUrl;
+        } else {
+          postDataObject.originalUrl = Cookies.get('HelloChapterHomePath');
+        }
         // 6LfrUnEpAAAAAOSgJLs2oDMX2d41b4hDl9uM8QNk - site key
         // check if its the same key as used in the respective html page
 

@@ -9,11 +9,22 @@ jQuery(document).ready(function ($) {
         if (Cookies.get('HelloChapterContactPath') === undefined) {
             Cookies.set('HelloChapterContactPath', window.location.href, { expires: 30, path: '' })
         }
-        if (window.location.pathname === '/contact-chapter-home-renovation/') {
-            // Cookies.set('HelloChapterContactPath',window.location.href, { expires: 30, path: '' })
-        }
     }
     setTimeout(custom_cookie, 1000);
+
+    var mainurl = window.location.href;
+    const urlAfterSlash = mainurl.split('/').pop();
+    // console.log("urlAfterSlash", urlAfterSlash);
+    function extractAndSaveUrlAfterSlash(urlAfterSlash) {
+        if (urlAfterSlash) {
+            Cookies.remove('ExtractedUrlAfterSlash')
+        }
+        if (!Cookies.get('ExtractedUrlAfterSlash')) {
+            Cookies.set('ExtractedUrlAfterSlash', urlAfterSlash, { expires: 30, path: '/' });
+            return urlAfterSlash;
+        }
+    }
+    extractAndSaveUrlAfterSlash(urlAfterSlash);
     // Header sticky
     jQuery(window).scroll(function () {
         var scroll = jQuery(window).scrollTop();
@@ -40,7 +51,13 @@ jQuery(document).ready(function ($) {
         }
     });
     // Counter number js end
-
+    jQuery(document).ready(function ($) {
+        $("footer .menu-locations").click(function () {
+            $("header .menu-locations").toggleClass("active-submenu");
+            $("body").toggleClass("header-open");
+        });
+    });
+    // Js for open header menu 
     // About team click js
     $(".desktop-team-wrapper .team-image").click(function () {
         var current_item = $(this).attr("data-point-id");
@@ -396,3 +413,48 @@ const submitNewsletterForm1 = (event) => {
             console.error("Error submitting form:", error);
         });
 }
+// Js for header submenu toggle
+
+document.addEventListener('DOMContentLoaded', function () {
+    var menuLocations = document.querySelectorAll('.menu-locations');
+    var bodyScroll = document.querySelector('body');
+
+    $(document).click(function (e) {
+        if (!$(e.target).is('header *, footer .links-col *')) {
+            $(".menu-locations").removeClass('active-submenu');
+            bodyScroll.classList.remove('body-header-submenu-active');
+        }
+    });
+
+    menuLocations.forEach(function (menuItem) {
+        menuItem.addEventListener('click', function (e) {
+            // Prevent the default action of the click
+            e.preventDefault();
+
+            // Toggle the 'active' class
+            this.classList.toggle('active-submenu');
+            setTimeout(function () {
+                bodyScroll.classList.toggle('body-header-submenu-active');
+            }, 600);
+
+            // Close other submenus
+            menuLocations.forEach(function (otherItem) {
+                if (otherItem !== menuItem) {
+                    otherItem.classList.remove('active-submenu');
+                    setTimeout(function () {
+                        //bodyScroll.classList.remove('body-header-submenu-active');
+                    }, 600);
+                }
+            });
+        });
+
+        // Prevent submenu from closing when clicking inside it
+        var subMenu = menuItem.querySelector('.header-full-submenu-wrap');
+        if (subMenu) {
+            subMenu.addEventListener('click', function (e) {
+                e.stopPropagation();
+            });
+        }
+    });
+});
+

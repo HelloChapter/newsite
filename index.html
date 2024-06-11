@@ -129,7 +129,7 @@
                 ]
                 if (arrQueryStrign.indexOf(queryString) !== -1) {
                     setTimeout(function () {
-                        makeAjaxCall("https://api.hellochapter.dev/api/contact/track", "GET", !0, null, (res) => {
+                        makeAjaxCall("https://api.hellochapter.com/api/contact/track", "GET", !0, null, (res) => {
                             console.log(res)
                             if (res.success) {
                                 localStorage.setItem("qr_status", true);
@@ -214,8 +214,10 @@
     <div class="wrapper">
         <div class="page-home">
             <div class="announcement-bar text-center black-bg">
-                <div> Chapter is expanding! Renovation dreams are now coming true in NYC and Miami. </div>
-                <div> Chapter is expanding! Renovation dreams are now coming true in NYC and Miami.</div>
+                <div> Chapter is expanding! Renovation dreams are now coming true in NYC , Miami, New Jersey,
+                    Westchester, and Connecticut. </div>
+                <div> Chapter is expanding! Renovation dreams are now coming true in NYC , Miami, New Jersey,
+                    Westchester, and Connecticut.</div>
             </div>
             <header class="aos-init " data-aos="fade">
                 <button aria-label="Name" type="button" class="btn-styled-removed menu-btn-toggle">
@@ -246,9 +248,128 @@
                                             It
                                             Works</a>
                                     </li>
-                                    <li>
-                                        <a href="/home-renovation-locations/" title="Locations ">Locations</a>
-                                    </li>
+                                    <li class="menu-locations menu-items-has-children">
+    <a href="/home-renovation-locations/" title="Locations">Locations</a>
+    <div class="header-full-submenu-wrap">
+        <div class="header-full-submenu">
+            <div class="row">
+                <div class="col col-first">
+                    <div class="content">
+                        <h5>Chapter. Renovation experts <br /> in multiple
+                            locations. </h5>
+                        <p>The locations may vary, the challenges may differ, but
+                            the
+                            Chapter approach to home renovation is universal. Every
+                            project on budget, on schedule, on point, and with
+                            quality
+                            interior design. All skillfully managed by one expert
+                            team.<br />
+                            <strong>Learn more about our locations and service
+                                areas</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <a href="/nyc-renovation/" class="card-click"></a>
+                        <div class="card-image">
+                            <img src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/header-images/nyc.webp" alt="image" height="200" width="200">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-info">
+                                <h5>NYC</h5>
+                                <p>
+                                    <strong>Service Area</strong> <br />
+                                    New York City, Hamptons and the surrounding
+                                    areas
+                                </p>
+                            </div>
+                            <div class="arrow">
+                                <div class="head"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <a href="/miami-renovation/" class="card-click"></a>
+                        <div class="card-image">
+                            <img src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/header-images/miami.webp" alt="image" height="200" width="200">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-info">
+                                <h5>Miami</h5>
+                                <p>
+                                    <strong>Service Area</strong> <br />
+                                    Miami-Dade County and the surrounding areas
+                                </p>
+                            </div>
+                            <div class="arrow">
+                                <div class="head"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <a href="/new-jersey-renovation/" class="card-click"></a>
+                        <div class="card-image">
+                            <img src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/header-images/new-jersey.webp" alt="image" height="200" width="200">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-info">
+                                <h5>New Jersey</h5>
+                                <p>
+                                    <strong>Service Area</strong> <br />
+                                    Counties of Bergen, Hudson, Essex, Union,
+                                    Morris, and the surrounding areas
+                                </p>
+                            </div>
+                            <div class="arrow">
+                                <div class="head"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <a href="/westchester-ny-renovation/" class="card-click"></a>
+                        <div class="card-image">
+                            <img src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/header-images/westchester.webp" alt="image" height="200" width="200">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-info">
+                                <h5>Westchester, NY</h5>
+                                <p>
+                                    <strong>Service Area</strong> <br />
+                                    Armonk, Scarsdale, Rye, White Plains, Bedford,
+                                    Greenwich (CT), Stamford (CT) and the
+                                    surrounding areas
+                                </p>
+                            </div>
+                            <div class="arrow">
+                                <div class="head"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-last">
+                    <div class="card card-map">
+                        <div class="card-image">
+                            <img src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/header-images/map.webp" alt="image" height="200" width="200">
+                        </div>
+                        <div class="card-content align-self-center">
+                            <div class="card-info">
+                                <h5>Check back for future Chapter locations</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
                                     <li>
                                         <a href="/all-renovation-projects/" title="Projects ">Projects</a>
                                     </li>
@@ -344,11 +465,7 @@
                                 <div class="new-section-title">
                                     <h2>Feel confident with Chapter</h2>
                                 </div>
-                                <p>We are fully licensed and insured, and we have a depth of experience in co-op, condo,
-                                    townhome, and single-family home renovations. Our story began years ago with
-                                    apartment renovations in New York City, which is often one of the toughest cities
-                                    for remodeling. Since then, we’ve expanded to the Miami area, and there are more
-                                    cities on the horizon.</p>
+                                <p>We are fully licensed and insured, and we have a depth of experience in co-op, condo, townhome, and single-family home renovations. Our story began years ago with apartment renovations in New York City, which is often one of the toughest cities for remodeling. After establishing ourselves as a leading renovation company in NYC, we are now expanding our proven renovation approach to other cities across the nation.</p>
                             </div>
                         </div>
                         <div class="col section-box-col">
@@ -458,8 +575,8 @@
                         </div>
                     </div>
                 </section>
-                <!-- section-plan-design-build end
-                <section class="section-home-project-fingertips pearl-bg2 aos-init" data-aos="fade">
+                <!-- section-plan-design-build end -->
+                <section class="section-home-project-fingertips pearl-bg2  aos-init" data-aos="fade">
                     <div class="container">
                         <div class="row no-gutters">
                             <div class="col col-content">
@@ -544,7 +661,7 @@
                                 </div>
                             </div>
                 </section>
-                <!-- section-project-fingertips end -->
+                <!-- <!-section-project-fingertips end -->
                 <section class="section-home-reviews aos-init " data-aos="fade">
                     <div class="embedsocial-hashtag" data-ref="3d97164898bf69f7f5319b92ceb628803910cc4c"></div>
                     <script defer>
@@ -601,6 +718,30 @@
                                                     data-src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/home-images/client1.webp"
                                                     alt="image" height="200" width="200" />
                                                 <button id="openModal" type="button"
+                                                    class="btn-styled-removed btn-client-play"><img
+                                                        src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/play-icon-full.svg"
+                                                        alt="icon" height="200" width="200" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-item">
+                                        <div class="content">
+                                            <h2>“I would recommend them with no hesitation.”</h2>
+                                            <div class="client-info">
+                                                <h3>Ilyas and Bobby / <img
+                                                        src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/location2.svg"
+                                                        alt="icon" height="200" width="200" />
+                                                    Surfside, FL
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="images-icon">
+                                            <div class="circle-ui"></div>
+                                            <div class="client-image">
+                                                <img class="lazy"
+                                                    data-src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/home-images/client6.webp"
+                                                    alt="image" height="200" width="200" />
+                                                <button id="openModalIlyas" type="button"
                                                     class="btn-styled-removed btn-client-play"><img
                                                         src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/icons/play-icon-full.svg"
                                                         alt="icon" height="200" width="200" /></button>
@@ -771,7 +912,7 @@
                                             <div class="custom-slick-dots">
                                             </div>
                                             <div class="custom-arrow">
-                                                <button class="slick-next"></button>
+                                                <button class="slick-next" aria-label="Next Slide"></button>
                                             </div>
                                         </div>
                                         <div class="more-btn-wrap">
@@ -816,7 +957,7 @@
                                             <div class="custom-slick-dots">
                                             </div>
                                             <div class="custom-arrow">
-                                                <button class="slick-next"></button>
+                                                <button class="slick-next" aria-label="Next Slide"></button>
                                             </div>
                                         </div>
                                         <div class="more-btn-wrap">
@@ -862,7 +1003,7 @@
                                             <div class="custom-slick-dots">
                                             </div>
                                             <div class="custom-arrow">
-                                                <button class="slick-next"></button>
+                                                <button class="slick-next" aria-label="Next Slide"></button>
                                             </div>
                                         </div>
                                         <div class="more-btn-wrap">
@@ -908,7 +1049,7 @@
                                             <div class="custom-slick-dots">
                                             </div>
                                             <div class="custom-arrow">
-                                                <button class="slick-next"></button>
+                                                <button class="slick-next" aria-label="Next Slide"></button>
                                             </div>
                                         </div>
                                         <div class="more-btn-wrap">
@@ -1008,7 +1149,7 @@
                                                     <option value="Arkansas">Arkansas</option>
                                                     <option value="California">California</option>
                                                     <option value="Colorado">Colorado</option>
-                                                    <option value="Connecticut">Connecticut</option>
+                                                    <option value="CT">CT</option>
                                                     <option value="Delaware">Delaware</option>
                                                     <option value="Florida">Florida</option>
                                                     <option value="Georgia">Georgia</option>
@@ -1191,7 +1332,7 @@
                                                     <option value="Arkansas">Arkansas</option>
                                                     <option value="California">California</option>
                                                     <option value="Colorado">Colorado</option>
-                                                    <option value="Connecticut">Connecticut</option>
+                                                    <option value="CT">CT</option>
                                                     <option value="Delaware">Delaware</option>
                                                     <option value="Florida">Florida</option>
                                                     <option value="Georgia">Georgia</option>
@@ -1307,7 +1448,7 @@
                                         call</a> with our renovation expert</p>
                                 <div class="address-wrap row">
                                     <div class="address-group col">
-                                        <h6>Chapter New York</h6>
+                                        <h6>Chapter Tri-State Area</h6>
                                         <address>
                                             (212) 680-4628<br />
                                             345 7th Ave, New York, NY 10001
@@ -1372,13 +1513,14 @@
                         <div class="col col-footer-logo">
                             <div class="footer-logo">
                                 <a href="/" title="Home "><img height="20" width="20"
-                                        src="/images/icons/footer-logo.svg" alt="footer logo" />
+                                        src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/footer-images/footer-logo.svg"
+                                        alt="footer logo" />
                                 </a>
                             </div>
                             <h2>Start a new Chapter</h2>
 
                             <div id="sf3zf7e0b828616f44b3dd3d031997957aa5e20281895973e4509607265583e00af6"
-                                data-type="signupform" style="">
+                                data-type="signupform">
                                 <div id="customForm">
                                     <div class="quick_form_7_css" name="SIGNUP_BODY">
                                         <div class="form-wrap">
@@ -1396,7 +1538,8 @@
                                                         <button type="button" name="SIGNUP_SUBMIT_BUTTON"
                                                             id="zcWebOptin" class="btn-styled-removed">
                                                             <img height="20" width="20"
-                                                                src="/images/icons/right-shift.svg" alt="icon" />
+                                                                src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/footer-images/right-shift.svg"
+                                                                alt="icon" />
                                                         </button>
                                                     </div>
                                                     <div style="display: none;" id="errorMsgDiv">Please enter a valid
@@ -1439,29 +1582,31 @@
                             </div>
                             <input type="hidden" id="signupFormType" value="QuickForm_Horizontal">
                             <!-- <div id="zcOptinOverLay" oncontextmenu="return false"
-                                style="display:none;text-align: center; background-color: rgb(0, 0, 0); opacity: 0.5; z-index: 100; position: fixed; width: 100%; top: 0px; left: 0px; height: 988px;">
-                            </div>
-                            <div id="zcOptinSuccessPopup"
-                                style="display:none;z-index: 9999;width: 800px; height: 40%;top: 84px;position: fixed; left: 26%;background-color: #FFFFFF;border-color: #E6E6E6; border-style: solid; border-width: 1px;  box-shadow: 0 1px 10px #424242;padding: 35px;">
-                                <span style="position: absolute;top: -16px;right:-14px;z-index:99999;cursor: pointer;"
-                                    id="closeSuccess">
-                                    <img src="https://zymul-zgpm.maillist-manage.com/images/videoclose.png">
-                                </span>
-                                <div id="zcOptinSuccessPanel"></div>
-                            </div> -->
+                                    style="display:none;text-align: center; background-color: rgb(0, 0, 0); opacity: 0.5; z-index: 100; position: fixed; width: 100%; top: 0px; left: 0px; height: 988px;">
+                                </div>
+                                <div id="zcOptinSuccessPopup"
+                                    style="display:none;z-index: 9999;width: 800px; height: 40%;top: 84px;position: fixed; left: 26%;background-color: #FFFFFF;border-color: #E6E6E6; border-style: solid; border-width: 1px;  box-shadow: 0 1px 10px #424242;padding: 35px;">
+                                    <span style="position: absolute;top: -16px;right:-14px;z-index:99999;cursor: pointer;"
+                                        id="closeSuccess">
+                                        <img src="https://zymul-zgpm.maillist-manage.com/images/videoclose.png">
+                                    </span>
+                                    <div id="zcOptinSuccessPanel"></div>
+                                </div> -->
                             <div class="trusted-by mobile-hide">
                                 <h3>Trusted by</h3>
                                 <ul class="list-unstyled">
                                     <li>
                                         <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
                                             target="_blank">
-                                            <img src="../images/icons/houzz-2023.svg" alt="icon">
+                                            <img src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/footer-images/houzz-2023.svg"
+                                                alt="icon">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
                                             target="_blank">
-                                            <img src="../images/icons/houzz-2022.svg" alt="icon">
+                                            <img src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/footer-images/houzz-2022.svg"
+                                                alt="icon">
 
                                         </a>
                                     </li>
@@ -1475,7 +1620,7 @@
                                     <ul class="list-unstyled">
                                         <li>
                                             <a href="/about-chapter-home-renovation/" title="About
-                                            ">About</a>
+                                                ">About</a>
                                         </li>
                                         <li>
                                             <a href="/home-renovation-services/" title="Services ">Services</a>
@@ -1485,11 +1630,11 @@
                                                 Works</a>
                                         </li>
                                         <li>
-                                            <a href="/home-renovation-locations/" title="Locations ">Locations</a>
+                                            <a class="menu-locations" title="Locations ">Locations</a>
                                         </li>
                                         <li>
                                             <a href="/nyc-renovation-projects/" title="Projects
-                                            ">Projects</a>
+                                                ">Projects</a>
                                         </li>
                                         <li>
                                             <a href="/blog/" title="Blog ">Blog</a>
@@ -1512,7 +1657,7 @@
                                         </li>
                                         <li>
                                             <a href="https://www.pinterest.com/chapterrenovations/" title="Twitter
-                                            " target="_blank">Pinterest</a>
+                                                " target="_blank">Pinterest</a>
                                         </li>
                                         <li>
                                             <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
@@ -1521,15 +1666,15 @@
 
                                         <li>
                                             <a href="https://www.youtube.com/@hello.chapter" title="Youtube
-                                            " target="_blank">Youtube</a>
+                                                " target="_blank">Youtube</a>
                                         </li>
                                         <li>
                                             <a href="https://www.tiktok.com/@hello.chapter/" title="TikTok
-                                            " target="_blank">TikTok</a>
+                                                " target="_blank">TikTok</a>
                                         </li>
                                         <li>
                                             <a href="https://www.linkedin.com/company/hellochapter/" title="Linkedin
-                                            " target="_blank">Linkedin</a>
+                                                " target="_blank">Linkedin</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1537,13 +1682,14 @@
                             <div class="general-contractor-license-wrap mobile-hide">
                                 <div class="general-contractor-license-number">
                                     <div class="licenses-wrap">
-                                        <h4>Licenses numbers:</h4>
+                                        <h4>License numbers:</h4>
                                         <p>
                                             NY- 624690 <br />
+                                            NJ- 13VH13212400<br />
                                             FL- CBC1267423<br />
                                             Westchester County- WC-37416-H24<br />
                                             Southampton– L006804<br />
-                                            Connecticut- HIC.0672343
+                                            CT- HIC.0672343
                                         </p>
                                     </div>
                                 </div>
@@ -1555,13 +1701,15 @@
                                 <li>
                                     <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
                                         target="_blank">
-                                        <img src="../images/icons/houzz-2023.svg" alt="icon">
+                                        <img src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/footer-images/houzz-2023.svg"
+                                            alt="icon">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
                                         target="_blank">
-                                        <img src="../images/icons/houzz-2022.svg" alt="icon">
+                                        <img src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/footer-images/houzz-2022.svg"
+                                            alt="icon">
 
                                     </a>
                                 </li>
@@ -1570,13 +1718,14 @@
                         <div class="general-contractor-license-wrap desktop-hide">
                             <div class="general-contractor-license-number">
                                 <div class="licenses-wrap">
-                                    <h4>Licenses numbers:</h4>
+                                    <h4>License numbers:</h4>
                                     <p>
                                         NY- 624690 <br />
+                                        NJ- 13VH13212400<br />
                                         FL- CBC1267423<br />
                                         Westchester County- WC-37416-H24<br />
                                         Southampton– L006804<br />
-                                        Connecticut- HIC.0672343
+                                        CT- HIC.0672343
                                     </p>
                                 </div>
                             </div>
@@ -1612,7 +1761,7 @@
                     </div>
                 </div>
             </section>
-            <!-- Footer end -->
+            <!-- footer end -->
             <div class='modal-root modal-contact-thank-you'>
                 <div class="modal-content">
                     <Button class="btn-style-removed btn-close">
@@ -1796,6 +1945,25 @@
                         }
                     });
                 }
+                function loadYouTubeVideo13(videoId) {
+                    var videoUrl = 'https://www.youtube.com/embed/' + videoId + queryParams;
+                    new YT.Player('player13', {
+                        height: '100%',
+                        width: '100%',
+                        videoId: videoId,
+                        playerVars: {
+                            'playsinline': 1,
+                            'modestbranding': 1,
+                            'rel': 0,
+                            'showinfo': 0,
+                            'iv_load_policy': 3
+                        },
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                }
                 function onPlayerReady(event) {
                     event.target.playVideo();
                 }
@@ -1815,6 +1983,9 @@
                     } else if (type === 'modal01') {
                         const client01Modal = document.getElementById('client01-modal');
                         client01Modal.remove();
+                    } else if (type === 'modal13') {
+                        const client13Modal = document.getElementById('client13-modal');
+                        client13Modal.remove();
                     }
                 }
                 function onPlayerStateChange(event) {
@@ -1961,6 +2132,33 @@
                     $('#client12-modal').css('display', 'flex');
                     loadYouTubeVideo12('jpEUzX69kdY');
                 });
+                $('#openModalIlyas').click(function () {
+                    const docString2 = `
+            <div id="client13-modal" class="modal modal-home-client-video">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button id="client2-btn-close" class="btn-styled-removed btn-close" data-dismiss="modal">
+                            <img src="./images/icons/close-icon.svg" alt="icon" />
+                        </button>
+                    </div>
+                    <div class="mid-content">
+                        <div class="video-box">
+                            <div id="player13"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+                    const modalContainer = document.getElementById('clent1-modal-container');
+                    modalContainer.innerHTML = docString2;
+                    // attach event handler for the rendered modal
+                    $(".modal-home-client-video .btn-close").on("click", function () {
+                        stopYouTubeVideo("modal13");
+                    });
+                    $('#client13-modal').css('display', 'flex');
+                    loadYouTubeVideo13('yZ8QAp0lNSE');
+                });
             });
         })
     </script>
@@ -1987,6 +2185,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>

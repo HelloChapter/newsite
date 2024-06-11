@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
             //console.log("query",query.length)
             if (query.length > 2) {
                 $.ajax({
-                    url: 'https://api.hellochapter.dev/api/contact/autocomplete',
+                    url: 'https://api.hellochapter.com/api/contact/autocomplete',
                     type: 'POST',
                     data: { input: query },
                     success: function (response) {
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             }
                             // API call to fetch selected address's details
                             $.ajax({
-                                url: 'https://api.hellochapter.dev/api/contact/place/' + placeId,
+                                url: 'https://api.hellochapter.com/api/contact/place/' + placeId,
                                 type: 'GET',
                                 success: function (placeInfo) {
                                     // debugger

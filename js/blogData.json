@@ -1,5 +1,55 @@
 [
   {
+    "id":34,
+    "blogUrl":"/home-addition-cost-miami/",
+    "imageUrl": "../images/blog-images/home-addition-cost-miami-images/blog-post-image.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ben-Milgram.webp",
+    "writerName": "Ben Milgram",
+    "date": "Apr 29, 2024",
+    "title": "How much do home additions in Miami cost?",
+    "introText": "Thinking about expanding your living space in Miami? Home additions are a..."
+  },
+  {
+    "id":33,
+    "blogUrl":"/townhouse-renovation-westchester-ny/",
+    "imageUrl": "../images/blog-images/townhouse-renovation-in-westchester-ny-images/blog-post-image-1-664f2bc31d6df.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Sami-Majdalani.webp",
+    "writerName": "Sami Majdalani",
+    "date": "Apr 23, 2024",
+    "title": "Townhouse Renovation in Westchester, NY",
+    "introText": "Renovating a townhouse in Westchester, NY, involves navigating a..."
+  },
+  {
+    "id":32,
+    "blogUrl":"/townhouse-renovation-new-jersey/",
+    "imageUrl": "../images/blog-images/townhouse-renovation-in-new-jersey-images/blog-post-image-664f0e525a32d.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/ravit-doozli.webp",
+    "writerName": "Ravit Doozli",
+    "date": "Apr 15, 2024",
+    "title": "Townhouse renovation in New Jersey",
+    "introText": "Renovating a townhouse in New Jersey allows homeowners to blend historic c..."
+  },
+  {
+    "id":31,
+    "blogUrl":"/single-family-home-renovations-westchester-ny/",
+    "imageUrl": "../images/blog-images/single-family-home-renovations-westchester-ny-images/blog-post-image-1-664f07137736f.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Sami-Majdalani.webp",
+    "writerName": "Sami Majdalani",
+    "date": "Apr 8, 2024",
+    "title": "Single family home renovations in Westchester, NY",
+    "introText": "Transforming a single-family home in Westchester, NY provides an exciting..."
+  },
+  {
+    "id":30,
+    "blogUrl":"/single-family-home-renovations-new-jersey/",
+    "imageUrl": "../images/blog-images/single-family-home-renovations-new-jersey-images/blog-post-image-664f01c0a404d.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/ravit-doozli.webp",
+    "writerName": "Ravit Doozli",
+    "date": "Apr 2, 2024",
+    "title": "Single family home renovations in New Jersey",
+    "introText": "Renovating a single-family home in New Jersey offers an exciting opportunity t..."
+  },
+  {
     "id":29,
     "blogUrl":"/nyc-building-permits-filing-guide/",
     "imageUrl": "../images/blog-images/nyc-building-permits-filing-guide-images/nyc-building-permits-filing-guide-images-1.webp",
@@ -66,8 +116,18 @@
     "writerImage": "../images/blog-images/blog-writer-images/Ben-Milgram.webp",
     "writerName": "Ben Milgram",
     "date": "Jan 24, 2024",
-    "title": "Single home renovations in Miami: A comprehensive guide",
+    "title": "Single family home renovations in Miami: A comprehensive guide",
     "introText": "Renovating a single-family home in Miami offers an exciting opportunity to..."
+  },
+  {
+    "id":13,
+    "blogUrl":"/home-renovation-in-facts-Stats-to-consider-before-renovating/",
+    "imageUrl": "./../images/blog-images/nh-20221118-0270-by-nadav-havakook-1920x1280.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Ari-Salehi.webp",
+    "writerName": "Ari Salehi",
+    "date": "Jan 16, 2024",
+    "title": "Home renovation in 2024: 10 facts & stats to consider before renovating",
+    "introText": "Home renovation is an exciting project, but it requires a lot of planning to ensu..."
   },
   {
     "id":24,
@@ -218,16 +278,6 @@
     "date": "Feb 16, 2023",
     "title": "How much does a home renovation in Miami cost in 2023?",
     "introText": "Home renovation is an investment in your property, and can significantly in..."
-  },
-  {
-    "id":13,
-    "blogUrl":"/home-renovation-in-facts-Stats-to-consider-before-renovating/",
-    "imageUrl": "./../images/blog-images/nh-20221118-0270-by-nadav-havakook-1920x1280.webp",
-    "writerImage": "../images/blog-images/blog-writer-images/Ari-Salehi.webp",
-    "writerName": "Ari Salehi",
-    "date": "Feb 13, 2023",
-    "title": "Home renovation in 2023: 10 facts & stats to consider before renovating",
-    "introText": "Home renovation is an exciting project, but it requires a lot of planning to ensu..."
   },
   {
     "id":14,
