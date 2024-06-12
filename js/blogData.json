@@ -1,5 +1,15 @@
 [
   {
+    "id":35,
+    "blogUrl":"/home-additions-miami-step-by-step-guide/",
+    "imageUrl": "../images/blog-images/home-additions-miami-step-by-step-guide-images/blog-post-image.webp",
+    "writerImage": "../images/blog-images/blog-writer-images/Andres-Garcia.webp",
+    "writerName": "Andres Garcia",
+    "date": "May 6, 2024",
+    "title": "Home additions in Miami: A step-by-step guide",
+    "introText": "Miami, a city known for its vibrant culture, beautiful beaches, and stunni..."
+  },
+  {
     "id":34,
     "blogUrl":"/home-addition-cost-miami/",
     "imageUrl": "../images/blog-images/home-addition-cost-miami-images/blog-post-image.webp",
