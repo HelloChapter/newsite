@@ -344,7 +344,25 @@
     }
 }
 
+.header-sticky {
+    .location-listing-wrapper {
+        header {
+            background-color: $white;
+        }
+    }
+}
+
 .location-listing-wrapper {
+
+    header {
+        background-color: transparent;
+        border: none;
+    }
+
+    .middle-content {
+        padding-top: 0;
+    }
+
     .section-image-content-slider {
         .location-title {
             min-height: 30px;
@@ -352,6 +370,23 @@
 
         .content-p {
             min-height: 60px;
+        }
+    }
+
+    .section-image-content-location {
+        .col-img {
+            padding-bottom: 41.6%;
+            @media (max-width:767px) {
+                padding-bottom: 75%;
+            }
+        }
+
+        .col-img-content {
+            padding-top: 130px;
+
+            @media (max-width:1023px) {
+                padding-top: 100px;
+            }
         }
     }
 }
