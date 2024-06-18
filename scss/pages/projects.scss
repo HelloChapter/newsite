@@ -376,6 +376,7 @@
     .section-image-content-location {
         .col-img {
             padding-bottom: 41.6%;
+
             @media (max-width:767px) {
                 padding-bottom: 75%;
             }
@@ -578,6 +579,17 @@
         }
     }
 
+    .nyc-img-map-wrap {
+        padding: 11px 11px 11px 71px;
+        height: 100%;
+    }
+
+    .nyc-img-map {
+        img {
+            max-width: 383px;
+        }
+    }
+
     .img-tablet {
         display: none;
     }
@@ -585,6 +597,10 @@
     .col-content {
         max-width: 40%;
         flex: 0 0 40%;
+
+        p {
+            line-height: 30px;
+        }
     }
 
     .col-last {
@@ -607,6 +623,20 @@
         max-width: 674px;
         padding-top: 115px;
         padding-bottom: 80px;
+    }
+
+    .nyc-col-content {
+        .content-wrap {
+            padding-bottom: 115px;
+
+            @media(max-width:1600px) {
+                padding-bottom: 50px;
+            }
+
+            @media(max-width:1375px) {
+                padding-bottom: 30px;
+            }
+        }
     }
 }
 
@@ -1591,6 +1621,19 @@
 
             img {
                 display: block;
+            }
+        }
+
+        .nyc-img-map-wrap {
+            padding:0 26px 46px;
+            @media (max-width:767px) {
+                padding-bottom: 20px;
+            }
+            .img-tablet {
+                max-width: 337px;
+                img {
+                    max-width: 100%;
+                }
             }
         }
 
