@@ -9,7 +9,7 @@
     <title>Surfside Apartment Renovation | Chapter</title>
     <meta name="description"
         content="Chapter is a professional home renovation and remodeling contractor company offering full-service design and build services. We specialize in interior remodeling of homes, apartments and townhouses in the New York City and Miami area." />
-    <link rel="canonical" href="https://hellochapter.com/surfside-apartment-renovation" />
+    <link rel="canonical" href="https://hellochapter.com/surfside-apartment-renovation/" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Surfside Apartment Renovation | Chapter" />
@@ -815,24 +815,6 @@
     <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
     <script> (function () { var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function () { acsbJS.init({ statementLink: '', footerHtml: '', hideMobile: false, hideTrigger: false, disableBgProcess: false, language: 'en', position: 'left', leadColor: '#231f20', triggerColor: '#231f20', triggerRadius: '50%', triggerPositionX: 'left', triggerPositionY: 'bottom', triggerIcon: 'people', triggerSize: 'medium', triggerOffsetX: 20, triggerOffsetY: 20, mobile: { triggerSize: 'small', triggerPositionX: 'left', triggerPositionY: 'bottom', triggerOffsetX: 10, triggerOffsetY: 10, triggerRadius: '50%' } }); }; h.appendChild(s); })(); </script>
-<script>
-$("#footer").load("../footer.html", function (response, status, xhr) {
-                if (status === "success") {
-                    var tempDiv = $("<div>").html(response);
-                    tempDiv.find("script").each(function () {
-                        var scriptContent = $(this).text();
-                        $.globalEval(scriptContent);
-                    });
-                    tempDiv.find('script[src]').each(function () {
-                        var script = document.createElement('script');
-                        script.src = $(this).attr('src');
-                        document.head.appendChild(script);
-                    });
-                    $("#footer").html(tempDiv.html());
-                } else {
-                    console.error("Failed to load footer content: " + xhr.status + " " + xhr.statusText);
-                }
-            });
-</script>
+
 </body>
 </html>

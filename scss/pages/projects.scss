@@ -285,7 +285,7 @@
         width: auto;
 
         @media (max-width:1199px) {
-            padding: 0 35px;
+            padding: 0 28px;
         }
 
         h6 {
@@ -344,7 +344,25 @@
     }
 }
 
+.header-sticky {
+    .location-listing-wrapper {
+        header {
+            background-color: $white;
+        }
+    }
+}
+
 .location-listing-wrapper {
+
+    header {
+        background-color: transparent;
+        border: none;
+    }
+
+    .middle-content {
+        padding-top: 0;
+    }
+
     .section-image-content-slider {
         .location-title {
             min-height: 30px;
@@ -352,6 +370,24 @@
 
         .content-p {
             min-height: 60px;
+        }
+    }
+
+    .section-image-content-location {
+        .col-img {
+            padding-bottom: 41.6%;
+
+            @media (max-width:767px) {
+                padding-bottom: 75%;
+            }
+        }
+
+        .col-img-content {
+            padding-top: 130px;
+
+            @media (max-width:1023px) {
+                padding-top: 100px;
+            }
         }
     }
 }
@@ -543,6 +579,29 @@
         }
     }
 
+    .nyc-img-map-wrap {
+        padding: 11px 11px 11px 71px;
+        height: 100%;
+
+        @media (max-width:1199px) {
+            padding-left: 30px;
+        }
+    }
+
+    .nyc-img-map {
+        img {
+            max-width: 383px;
+            object-fit: contain;
+        }
+    }
+
+    .miami-img-map {
+        img {
+            max-width: 347px;
+            object-fit: contain;
+        }
+    }
+
     .img-tablet {
         display: none;
     }
@@ -550,6 +609,10 @@
     .col-content {
         max-width: 40%;
         flex: 0 0 40%;
+
+        p {
+            line-height: 30px;
+        }
     }
 
     .col-last {
@@ -572,6 +635,21 @@
         max-width: 674px;
         padding-top: 115px;
         padding-bottom: 80px;
+    }
+
+    .nyc-col-content,
+    .miami-col-content {
+        .content-wrap {
+            padding-bottom: 115px;
+
+            @media(max-width:1600px) {
+                padding-bottom: 50px;
+            }
+
+            @media(max-width:1375px) {
+                padding-bottom: 30px;
+            }
+        }
     }
 }
 
@@ -1559,6 +1637,38 @@
             }
         }
 
+        .nyc-img-map-wrap {
+            padding: 0 26px 46px;
+
+            @media (max-width:767px) {
+                padding-bottom: 20px;
+            }
+
+            .img-tablet {
+                max-width: 337px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .miami-img-map-wrap {
+            padding-bottom: 30px;
+
+            .img-tablet {
+                max-width: 303px;
+
+                @media (max-width:767px) {
+                    max-width: 288px;
+                }
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+
         .col-content {
             order: 0;
         }
@@ -1624,6 +1734,18 @@
             .card-image {
                 max-width: 338px;
                 flex: 0 0 338px;
+            }
+        }
+    }
+
+    .section-miami-what-we-know-really-new {
+        .card-wrap {
+            max-width: calc(100% - 116px);
+            margin: 0 auto;
+            padding: 30px 0 0;
+
+            @media (max-width:767px) {
+                max-width: 100%;
             }
         }
     }
