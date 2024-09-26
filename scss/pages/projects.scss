@@ -1734,6 +1734,15 @@
             .card-image {
                 max-width: 338px;
                 flex: 0 0 338px;
+                @media (min-width:768px) and (max-width:991px) {
+                    img {
+                        height: 188px;
+                        object-fit: cover;
+                        overflow: hidden;
+                        width: 100%;
+                    }    
+                }
+                
             }
         }
     }
@@ -2085,7 +2094,7 @@
             }
 
             .card-info p {
-                max-width: 130px;
+                max-width: 230px;
                 margin-bottom: 16px;
             }
 

@@ -103,7 +103,13 @@
 }
 .section-image-content-new-location {
     .content {
-        max-width: 689px;
+        max-width: 679px;
+    }
+    @media (max-width:991px) {
+        .content p {
+            max-width: 503px;
+            margin: 0 auto;
+        }   
     }
 }
 // Responsive CSS start
