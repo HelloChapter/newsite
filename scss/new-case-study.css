@@ -2432,6 +2432,10 @@ footer .trusted-by li img {
   font-family: "Inter";
 }
 
+.section-image-content-new-location .content {
+  max-width: 689px;
+}
+
 @media (max-width: 1440px) {
   .section-image-content h2 {
     margin-bottom: 40px;
