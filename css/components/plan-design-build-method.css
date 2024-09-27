@@ -1,0 +1,19 @@
+.section-plan-design-build-method .col {
+  max-width: 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+.section-plan-design-build-method .section-content-col {
+  padding: 107px 115px 180px;
+}
+.section-plan-design-build-method .content-wrap {
+  max-width: 740px;
+  margin: 0 auto;
+}
+.section-plan-design-build-method .content-wrap h2 {
+  margin-bottom: 30px;
+}
+.section-plan-design-build-method .content-wrap p {
+  line-height: 40px;
+}
