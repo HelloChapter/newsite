@@ -2432,8 +2432,14 @@ footer .trusted-by li img {
   font-family: "Inter";
 }
 
+.section-image-content-new-location {
+  letter-spacing: 0;
+}
 .section-image-content-new-location .content {
-  max-width: 679px;
+  max-width: 677px;
+}
+.section-image-content-new-location .btn-wrap {
+  margin-top: 30px;
 }
 @media (max-width: 991px) {
   .section-image-content-new-location .content p {

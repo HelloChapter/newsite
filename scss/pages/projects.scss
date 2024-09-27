@@ -671,7 +671,7 @@
         max-width: 522px;
 
         +.card {
-            margin-top: 55px;
+            margin-top: 60px;
         }
 
         &:hover {
@@ -719,7 +719,7 @@
             display: inline-block;
             vertical-align: middle;
             box-sizing: border-box;
-            margin-bottom: 14px;
+            margin-bottom: 8px;
 
             .head,
             .head:after {
@@ -784,8 +784,8 @@
 
         h5 {
             font-size: 25px;
-            line-height: 30px;
-            margin-bottom: 12px;
+            line-height: 29px;
+            margin-bottom: 30px;
         }
     }
 
@@ -809,6 +809,9 @@
     .card-info {
         p {
             margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 24px;
+            max-width: 256px;
         }
     }
 
@@ -1724,8 +1727,18 @@
         }
 
         .card-wrap {
-            border-top: 1px solid $black;
-            padding: 30px 47px 0;
+            padding: 30px 38px 0;
+            position: relative;
+
+            &::before {
+                content: '';
+                border-top: 1px solid $black;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 48px;
+                width: calc(100% - 96px);
+            }
         }
 
         .card {
@@ -1734,15 +1747,24 @@
             .card-image {
                 max-width: 338px;
                 flex: 0 0 338px;
+
                 @media (min-width:768px) and (max-width:991px) {
                     img {
                         height: 188px;
                         object-fit: cover;
                         overflow: hidden;
                         width: 100%;
-                    }    
+                    }
                 }
-                
+
+            }
+            .card-info {
+                h5 {
+                    margin-bottom: 12px;
+                }
+                p {
+                    max-width: 270px;
+                }
             }
         }
     }
@@ -2072,21 +2094,32 @@
                 height: 100%;
                 width: 100%;
                 left: 0;
+                object-fit: cover;
             }
         }
 
         .card-wrap {
             padding: 30px 0 0;
+            &::before {
+                width: 100%;
+                left: 0;
+            }
+        }
+
+        .content {
+            p span {
+                display: block;
+            }
         }
 
         .card {
             +.card {
-                margin-top: 27px;
+                margin-top: 30px;
             }
 
             .card-image {
-                max-width: 29%;
-                flex: 0 0 29%;
+                max-width: 28.7%;
+                flex: 0 0 28.7%;
 
                 >div {
                     height: 100%;
@@ -2096,10 +2129,16 @@
             .card-info p {
                 max-width: 230px;
                 margin-bottom: 16px;
+                span {
+                    display: block;
+                }
             }
 
             .card-content {
                 padding-left: 15px;
+                h5 {
+                    max-width: 80%;
+                }
             }
         }
     }
