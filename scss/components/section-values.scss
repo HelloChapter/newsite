@@ -1,0 +1,134 @@
+.section-values {
+    padding: 115px 115px 37px;
+
+    .row {
+        margin: 0 -30px;
+
+        .col {
+            padding: 0 45px 55px;
+        }
+    }
+
+    .section-title {
+        margin-bottom: 60px;
+
+        h2 {
+            line-height: 1.15;
+        }
+    }
+
+    .content-item {
+        display: flex;
+        align-items: flex-start;
+
+        .image {
+            max-width: 84px;
+            flex: 0 0 84px;
+        }
+
+        .content {
+            max-width: 525px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+        line-height: 24px;
+        font-family: "Inter";
+        font-weight: 600;
+        margin-bottom: 6px;
+
+        i {
+            font-weight: 900;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        line-height: 35px;
+    }
+}
+
+// Responsive css start
+@media (max-width:1660px) {
+    .section-values {
+        padding: 80px 80px 30px;
+    }
+}
+
+// 1660 end
+@media (max-width:1440px) {
+    .section-values {
+        padding: 60px 45px 30px;
+    }
+}
+
+// 1440 end
+@media (max-width:1199px) {
+    .section-values {
+        padding: 60px 25px 30px;
+    }
+}
+
+// 1199 end
+@media (max-width:1023px) {
+    .section-values {
+        padding: 60px 5px 120px;
+
+        .row {
+            margin: 0 -15px;
+
+            .col {
+                padding: 0 15px 30px;
+            }
+        }
+
+        .section-title {
+            margin-bottom: 30px;
+        }
+
+        .content-item {
+            flex-direction: column;
+            text-align: center;
+
+            .image {
+                margin: 0 auto;
+                flex: 0 0 auto;
+
+                img {
+                    max-width: 32px;
+                }
+            }
+
+            h4 {
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            p {
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+// 1023 end
+@media (max-width:767px) {
+    .section-values {
+        padding-bottom: 30px;
+        .section-title {
+            margin-bottom: 30px;
+        }
+
+        .col {
+            max-width: 100%;
+            flex: 100%;
+        }
+
+        .content-item {
+            .content {
+                margin: 0 auto;
+            }
+        }
+    }
+}
