@@ -3441,13 +3441,13 @@ input[type=number] {
 }
 @media (max-width: 1023px) {
   .section-values {
-    padding: 60px 5px 120px;
+    padding: 60px 5px 28px;
   }
   .section-values .row {
     margin: 0 -15px;
   }
   .section-values .row .col {
-    padding: 0 15px 30px;
+    padding: 0 15px 32px;
   }
   .section-values .section-title {
     margin-bottom: 30px;
@@ -3497,20 +3497,20 @@ input[type=number] {
   display: none;
 }
 
-.section-image-content {
+.section-image-content-hero {
   padding-bottom: 110px;
 }
-.section-image-content .content {
+.section-image-content-hero .content {
   max-width: 600px;
   position: relative;
 }
-.section-image-content .col-img {
+.section-image-content-hero .col-img {
   min-height: 679px;
 }
-.section-image-content .page-title2 h1 {
+.section-image-content-hero .page-title2 h1 {
   margin-bottom: 12px;
 }
-.section-image-content .btn-wrap {
+.section-image-content-hero .btn-wrap {
   margin-top: 60px;
 }
 
@@ -3569,7 +3569,7 @@ input[type=number] {
   }
 }
 @media (max-width: 1440px) {
-  .section-image-content {
+  .section-image-content-hero {
     padding-bottom: 70px;
   }
   .section-plan-design-build-method .section-content-col {
@@ -3601,29 +3601,52 @@ input[type=number] {
     bottom: 24px;
     z-index: 1;
   }
-  .section-image-content {
+  .section-image-content-hero {
     padding-bottom: 37px;
   }
-  .section-image-content .col-img {
+  .section-image-content-hero .row {
+    padding: 0 37px;
+  }
+  .section-image-content-hero .image-label {
+    width: auto;
+  }
+  .section-image-content-hero .image-label h6 {
+    font-size: 17px;
+    line-height: 40px;
+  }
+  .section-image-content-hero .page-title2 h1 {
+    line-height: 80px;
+    margin-bottom: 30px;
+  }
+  .section-image-content-hero .page-title2 p {
+    max-width: 397px;
+    margin: 0 auto;
+  }
+  .section-image-content-hero .btn-wrap {
+    margin-top: 30px;
+  }
+  .section-image-content-hero .col-img {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
     min-height: 510px;
   }
-  .section-image-content .col {
+  .section-image-content-hero .col {
     max-width: 100%;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
-  .section-image-content .content {
+  .section-image-content-hero .content {
     padding-bottom: 97px;
+    padding-top: 60px;
   }
   .section-what-invloved {
-    padding: 60px 80px 30px;
+    padding: 60px 40px 40px;
   }
   .section-what-invloved .heading-content {
-    margin: 0 auto 35px;
+    margin: 0 auto 55px;
+    text-align: left;
   }
   .section-what-invloved .heading-content h2 {
     line-height: 29px;
@@ -3647,6 +3670,7 @@ input[type=number] {
     font-size: 14px;
     line-height: 24px;
     font-family: "Inter";
+    margin-top: 54px;
   }
   .section-what-invloved .content-wrap .col-item {
     max-width: 50%;
@@ -3660,16 +3684,59 @@ input[type=number] {
   }
   .section-what-invloved .content-wrap .content {
     max-width: 285px;
-    margin-bottom: 26px;
+    margin-bottom: 28px;
+  }
+  .section-what-invloved .title-content img {
+    max-width: 24px;
   }
   .home-new-projects-slider .slide-item .row,
   .home-new-projects-slider .heading-content-wrap {
     background-color: #Faf5ee;
   }
+  .section-full-image .image-label {
+    width: auto;
+  }
+  .section-plan-design-build-method .section-content-col {
+    padding-bottom: 30px;
+  }
+  .section-plan-design-build-method .content-wrap h2 {
+    margin-bottom: 30px;
+  }
+  .section-accordion .container {
+    padding: 0 34px;
+  }
+  .section-accordion .section-title {
+    padding-bottom: 30px;
+  }
+  .section-accordion h2 {
+    font-size: 50px;
+    line-height: 58px;
+  }
+  .section-accordion button {
+    line-height: 24px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .section-blog-expert-help {
+    padding-top: 60px;
+  }
+  .section-plan-design-build .card h5 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .section-plan-design-build .card .card-content {
+    padding-bottom: 40px;
+  }
 }
 @media (max-width: 767px) {
   .section-what-invloved {
-    padding: 30px 0px 0px;
+    padding: 30px 0px 30px;
+  }
+  .section-what-invloved .row {
+    margin: 0 -15px;
+  }
+  .section-what-invloved .row .col {
+    padding: 0 15px;
   }
   .section-what-invloved .heading-content {
     margin: 0 auto 35px;
@@ -3677,7 +3744,7 @@ input[type=number] {
   }
   .section-what-invloved .heading-content h2 {
     line-height: 28px;
-    max-width: 252px;
+    max-width: 100%;
   }
   .section-what-invloved .heading-content p {
     line-height: 35px;
@@ -3689,6 +3756,10 @@ input[type=number] {
     font-size: 14px;
     line-height: 24px;
     font-family: "Inter";
+    margin-top: 0;
+  }
+  .section-what-invloved .col-tablet h4 br {
+    display: none;
   }
   .section-what-invloved .content-wrap .col-item {
     max-width: 100%;
@@ -3696,9 +3767,12 @@ input[type=number] {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
+  .section-what-invloved .content-wrap p {
+    line-height: 24px;
+  }
   .section-what-invloved .content-wrap .content {
     max-width: 100%;
-    margin-bottom: 36px;
+    margin-bottom: 30px;
   }
   .section-what-invloved .content-wrap .title-content {
     display: -webkit-box;
@@ -3716,7 +3790,59 @@ input[type=number] {
     margin: 0 0 0 8px;
   }
   .section-what-invloved .content-wrap .title-content img {
-    max-width: 25px;
+    max-width: 24px;
     height: auto;
+  }
+  .scroll-button-wrapper .line {
+    height: 38px;
+    bottom: 30px;
+  }
+  .section-image-content-hero .page-title2 h1 {
+    line-height: 60px;
+  }
+  .section-image-content-hero .row {
+    padding: 0 30px;
+  }
+  .section-image-content-hero .content {
+    padding: 30px 0 98px;
+  }
+  .section-image-content-hero .col-img {
+    min-height: 329px;
+  }
+  .section-image-content-hero .image-label {
+    width: 100%;
+  }
+  .section-image-content-hero .image-label h6 {
+    font-size: 14px;
+  }
+  .section-full-image .image-label {
+    width: 100%;
+  }
+  .section-full-image .image-label h6 {
+    line-height: 40px;
+  }
+  .section-plan-design-build-method {
+    padding: 0;
+  }
+  .section-plan-design-build-method .content-wrap h2 {
+    font-size: 45px;
+    line-height: 60px;
+  }
+  .section-plan-design-build-method .section-content-col {
+    padding: 30px 20px;
+  }
+  .section-accordion .container {
+    padding: 0 20px;
+  }
+  .section-accordion .section-title {
+    padding-bottom: 30px;
+  }
+  .section-accordion h2 {
+    font-size: 45px;
+    line-height: 60px;
+  }
+  .section-accordion button {
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
