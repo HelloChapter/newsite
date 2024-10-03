@@ -3558,10 +3558,6 @@ input[type=number] {
   padding-bottom: 27px;
 }
 
-.section-blog-expert-help .container {
-  border-width: 2px;
-}
-
 @media (max-width: 1660px) {
   .section-plan-design-build-method .content-wrap h2 {
     font-size: 70px;
