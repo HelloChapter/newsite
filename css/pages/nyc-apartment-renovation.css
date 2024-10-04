@@ -3479,6 +3479,8 @@ input[type=number] {
 @media (max-width: 767px) {
   .section-values {
     padding-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .section-values .section-title {
     margin-bottom: 30px;
