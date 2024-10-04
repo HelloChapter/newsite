@@ -3507,11 +3507,20 @@ input[type=number] {
 .section-image-content-hero .col-img {
   min-height: 679px;
 }
+.section-image-content-hero .col-img-wrap {
+  padding: 0 110px;
+}
 .section-image-content-hero .page-title2 h1 {
   margin-bottom: 12px;
 }
 .section-image-content-hero .btn-wrap {
   margin-top: 60px;
+}
+.section-image-content-hero .btn-wrap a {
+  min-width: 183px;
+  min-height: 67px;
+  font-size: 19px;
+  line-height: 23px;
 }
 
 .section-what-invloved {
@@ -3558,15 +3567,26 @@ input[type=number] {
   padding-bottom: 27px;
 }
 
+.section-full-image .bg-image {
+  padding-bottom: 44.4%;
+  min-height: 474px;
+}
+
 @media (max-width: 1660px) {
   .section-plan-design-build-method .content-wrap h2 {
     font-size: 70px;
     line-height: 80px;
   }
+  .section-image-content-hero .col-img-wrap {
+    padding: 0 80px;
+  }
 }
 @media (max-width: 1440px) {
   .section-image-content-hero {
     padding-bottom: 70px;
+  }
+  .section-image-content-hero .col-img-wrap {
+    padding: 0 60px;
   }
   .section-plan-design-build-method .section-content-col {
     padding-bottom: 120px;
@@ -3609,6 +3629,9 @@ input[type=number] {
   .section-image-content-hero .image-label h6 {
     font-size: 17px;
     line-height: 40px;
+  }
+  .section-image-content-hero .col-img-wrap {
+    padding: 0px;
   }
   .section-image-content-hero .page-title2 h1 {
     line-height: 80px;
@@ -3816,6 +3839,10 @@ input[type=number] {
   }
   .section-full-image .image-label h6 {
     line-height: 40px;
+  }
+  .section-full-image .bg-image {
+    padding-bottom: 50%;
+    min-height: 240px;
   }
   .section-plan-design-build-method {
     padding: 0;

@@ -30,12 +30,23 @@
         min-height: 679px;
     }
 
+    .col-img-wrap {
+        padding: 0 110px;
+    }
+
     .page-title2 h1 {
         margin-bottom: 12px;
     }
 
     .btn-wrap {
         margin-top: 60px;
+
+        a {
+            min-width: 183px;
+            min-height: 67px;
+            font-size: 19px;
+            line-height: 23px;
+        }
     }
 }
 
@@ -95,6 +106,12 @@
     padding-bottom: 27px;
 }
 
+.section-full-image {
+    .bg-image {
+        padding-bottom: 44.40%;
+        min-height: 474px;
+    }
+}
 
 // Responsive css start
 @media (max-width:1660px) {
@@ -102,12 +119,20 @@
         font-size: 70px;
         line-height: 80px;
     }
+
+    .section-image-content-hero .col-img-wrap {
+        padding: 0 80px;
+    }
 }
 
 // 1660 end
 @media (max-width:1440px) {
     .section-image-content-hero {
         padding-bottom: 70px;
+
+        .col-img-wrap {
+            padding: 0 60px;
+        }
     }
 
     .section-plan-design-build-method {
@@ -162,6 +187,10 @@
                 font-size: 17px;
                 line-height: 40px;
             }
+        }
+
+        .col-img-wrap {
+            padding: 0px;
         }
 
         .page-title2 {
@@ -431,11 +460,18 @@
         }
     }
 
-    .section-full-image .image-label {
-        width: 100%;
+    .section-full-image {
+        .image-label {
+            width: 100%;
 
-        h6 {
-            line-height: 40px;
+            h6 {
+                line-height: 40px;
+            }
+        }
+
+        .bg-image {
+            padding-bottom: 50%;
+            min-height: 240px;
         }
     }
 
@@ -451,6 +487,7 @@
             padding: 30px 20px;
         }
     }
+
     .section-accordion {
         .container {
             padding: 0 20px;
@@ -467,7 +504,7 @@
 
         button {
             padding-top: 16px;
-            padding-bottom:16px;
+            padding-bottom: 16px;
         }
     }
 }
