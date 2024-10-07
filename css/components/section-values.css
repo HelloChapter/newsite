@@ -1,0 +1,46 @@
+.section-values {
+  padding: 115px 115px 37px;
+}
+.section-values .row {
+  margin: 0 -30px;
+}
+.section-values .row .col {
+  padding: 0 45px 55px;
+}
+.section-values .section-title {
+  margin-bottom: 60px;
+}
+.section-values .section-title h2 {
+  line-height: 1.15;
+}
+.section-values .content-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.section-values .content-item .image {
+  max-width: 84px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 84px;
+          flex: 0 0 84px;
+}
+.section-values .content-item .content {
+  max-width: 525px;
+}
+.section-values h4 {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Inter";
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.section-values h4 i {
+  font-weight: 900;
+}
+.section-values p {
+  font-weight: 400;
+  line-height: 35px;
+}

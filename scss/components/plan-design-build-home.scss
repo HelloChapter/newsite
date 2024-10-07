@@ -148,6 +148,9 @@
                 font-size: 25px;
                 line-height: 30px;
                 letter-spacing: -0.15px;
+                br {
+                    display: none;
+                }
             }
 
             p {
@@ -208,6 +211,13 @@
 
         .slick-list {
             padding: 0 55px !important;
+        }
+        .new-section-title {
+            h2 {
+                span {
+                    display: block;
+                }
+            }
         }
 
         .card {

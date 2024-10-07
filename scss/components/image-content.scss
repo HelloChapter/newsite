@@ -101,6 +101,21 @@
         }
     }
 }
+.section-image-content-new-location {
+    letter-spacing: 0;
+    .content {
+        max-width: 677px;
+    }
+    .btn-wrap {
+        margin-top: 30px;
+    }
+    @media (max-width:991px) {
+        .content p {
+            max-width: 503px;
+            margin: 0 auto;
+        }   
+    }
+}
 // Responsive CSS start
 @media (max-width:1440px) {
     .section-image-content {

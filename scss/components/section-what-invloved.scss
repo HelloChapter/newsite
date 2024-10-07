@@ -1,0 +1,51 @@
+.section-what-invloved {
+    padding: 115px 0 47px;
+
+    .heading-content {
+        max-width: 992px;
+        margin: 0 auto 50px;
+
+        h2 {
+            line-height: 58px;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 700;
+            margin: 16px 0;
+            font-family: "Inter";
+        }
+    }
+
+    .col-tablet {
+        display: none;
+    }
+
+    .content-wrap {
+        .col-item {
+            max-width: 33.33%;
+            flex: 0 0 33.33%;
+        }
+
+        h5 {
+            font-size: 20px;
+            line-height: 22px;
+            margin-bottom: 12px;
+            font-family: "Inter";
+        }
+
+        .content {
+            max-width: 360px;
+            margin-bottom: 68px;
+        }
+
+        .dash {
+            background-color: $black;
+            height: 2px;
+            width: 8px;
+            margin: 3px 0 8px;
+        }
+    }
+}
