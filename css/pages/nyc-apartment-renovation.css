@@ -513,9 +513,6 @@ iframe {
   }
 }
 @media (max-width: 389px) {
-  h2 {
-    font-size: 23px;
-  }
   .image-label {
     padding: 0 12px;
   }
@@ -3880,5 +3877,12 @@ input[type=number] {
   .section-accordion button {
     padding-top: 16px;
     padding-bottom: 16px;
+  }
+  .section-values .section-title {
+    max-width: 300px;
+    margin: 0 auto 30px;
+  }
+  .section-values .section-title h2 br {
+    display: none;
   }
 }

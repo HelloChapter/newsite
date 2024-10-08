@@ -509,6 +509,15 @@
             padding-bottom: 16px;
         }
     }
+    .section-values {
+        .section-title {
+            max-width: 300px;
+            margin: 0 auto 30px;
+            h2 br {
+                display: none;
+            }
+        }   
+    }
 }
 
 // 767 end
