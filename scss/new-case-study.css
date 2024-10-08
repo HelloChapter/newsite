@@ -512,9 +512,9 @@ iframe {
     line-height: 60px;
   }
 }
-@media (max-width: 388px) {
+@media (max-width: 389px) {
   h2 {
-    font-size: 21px;
+    font-size: 23px;
   }
   .image-label {
     padding: 0 12px;
