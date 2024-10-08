@@ -3572,6 +3572,7 @@ input[type=number] {
 
 .section-accordion .section-title {
   padding-bottom: 27px;
+  border: none;
 }
 
 .section-full-image .bg-image {
@@ -3884,5 +3885,8 @@ input[type=number] {
   }
   .section-values .section-title h2 br {
     display: none;
+  }
+  .page-miami-apartment-renovation .section-values .section-title {
+    max-width: 310px;
   }
 }

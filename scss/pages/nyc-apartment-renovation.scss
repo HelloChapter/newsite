@@ -104,6 +104,7 @@
 
 .section-accordion .section-title {
     padding-bottom: 27px;
+    border: none;
 }
 
 .section-full-image {
@@ -516,6 +517,13 @@
             h2 br {
                 display: none;
             }
+        }   
+    }
+    .page-miami-apartment-renovation {
+        .section-values {
+            .section-title {
+                max-width: 310px;
+            }   
         }   
     }
 }
