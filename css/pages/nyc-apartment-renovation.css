@@ -514,7 +514,10 @@ iframe {
 }
 @media (max-width: 388px) {
   h2 {
-    font-size: 23px;
+    font-size: 22px;
+  }
+  .image-label {
+    padding: 0 12px;
   }
 }
 .pearl-bg {
