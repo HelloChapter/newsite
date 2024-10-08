@@ -360,9 +360,12 @@ iframe {
 }
 
 // 767 end
-@media (max-width:388px) {
-    h2 {
-        font-size: 23px;
+@media (max-width:389px) {
+    // h2 {
+    //     font-size: 23px;
+    // }
+    .image-label { 
+        padding: 0 12px;
     }
 }
 
