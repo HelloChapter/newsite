@@ -512,6 +512,11 @@ iframe {
     line-height: 60px;
   }
 }
+@media (max-width: 388px) {
+  h2 {
+    font-size: 23px;
+  }
+}
 .section-chapter-content {
   padding: 92px 0;
 }
