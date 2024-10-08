@@ -512,6 +512,11 @@ iframe {
     line-height: 60px;
   }
 }
+@media (max-width: 388px) {
+  h2 {
+    font-size: 23px;
+  }
+}
 .pearl-bg {
   background-color: #F9F4ED;
 }
@@ -3646,10 +3651,12 @@ input[type=number] {
   .section-image-content-hero .btn-wrap {
     margin-top: 30px;
   }
-  .section-image-content-hero .col-img {
+  .section-image-content-hero .col-img-wrap {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+  .section-image-content-hero .col-img {
     min-height: 510px;
   }
   .section-image-content-hero .col {
@@ -3826,6 +3833,7 @@ input[type=number] {
   }
   .section-image-content-hero .content {
     padding: 30px 0 98px;
+    margin: 0 auto;
   }
   .section-image-content-hero .col-img {
     min-height: 329px;
