@@ -512,9 +512,9 @@ iframe {
     line-height: 60px;
   }
 }
-@media (max-width: 388px) {
-  h2 {
-    font-size: 23px;
+@media (max-width: 389px) {
+  .image-label {
+    padding: 0 12px;
   }
 }
 .section-chapter-content {
