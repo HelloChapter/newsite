@@ -209,9 +209,11 @@
         .btn-wrap {
             margin-top: 30px;
         }
-        .col-img-wrap { 
+
+        .col-img-wrap {
             order: 1;
         }
+
         .col-img {
             min-height: 510px;
         }
@@ -510,21 +512,24 @@
             padding-bottom: 16px;
         }
     }
+
     .section-values {
         .section-title {
             max-width: 300px;
             margin: 0 auto 30px;
+
             h2 br {
                 display: none;
             }
-        }   
+        }
     }
+
     .page-miami-apartment-renovation {
         .section-values {
             .section-title {
                 max-width: 310px;
-            }   
-        }   
+            }
+        }
     }
 }
 
