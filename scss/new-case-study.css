@@ -2552,6 +2552,10 @@ footer .trusted-by li img {
       -ms-flex-align: center;
           align-items: center;
 }
+.after-before-slider-wrap .content a {
+  text-decoration: underline;
+  color: #231F20;
+}
 
 @media (max-width: 1440px) {
   .section-project-info {
@@ -2593,5 +2597,8 @@ footer .trusted-by li img {
   }
   .section-image-content h2 {
     margin-bottom: 25px;
+  }
+  .section-image-content .content {
+    max-width: 100%;
   }
 }

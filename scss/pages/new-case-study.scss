@@ -49,6 +49,12 @@
             align-items: center;
         }
     }
+    .content {
+        a {
+            text-decoration: underline;
+            color: $black;
+        }
+    }
 }
 // Responsive css start
 @media (max-width:1440px) {
@@ -98,6 +104,9 @@
     .section-image-content {
         h2 {
             margin-bottom: 25px;
+        }
+        .content {
+            max-width: 100%;
         }
     }
 }
