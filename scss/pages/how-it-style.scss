@@ -738,7 +738,9 @@
             padding-bottom: 53.7%;
         }
     }
-
+    .section-phases-3 .bg-image-mobile {
+        display: block;
+    }
     .section-celebrate {
         padding: 34px 0 30px 20px;
 
@@ -913,11 +915,13 @@
 
         .section-phases-3 {
             .bg-image {
-                min-height: 420px;
+                min-height: 412px;
             }
-
-            .bg-image-mobile {
+            .bg-image-desktop {
                 display: block;
+            }
+            .bg-image-mobile {
+                display: none;
             }
         }
 
