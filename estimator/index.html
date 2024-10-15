@@ -12,145 +12,15 @@
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/css/aos.css?rsct=text/css"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="stylesheet" href="../scss/pages/services-style.css" />
+    <link rel="stylesheet" href="../css/pages/cost-estimator.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
-    <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
 </head>
 <style>
-    .page-estimator {
-        padding: 100px 0 0;
-    }
 
-    .middle-content {
-        padding-bottom: 100px;
-    }
-
-    svg {
-        width: 100%;
-        height: 100%;
-    }
-
-    .label {
-        font-size: 14px;
-        color: black;
-        font-weight: bold;
-    }
-
-    input[type="range"] {
-        width: 80%;
-        margin: 10px 0;
-    }
-
-    .cost-breakdown {
-        margin-top: 20px;
-        font-size: 14px;
-        text-align: left;
-    }
-
-    .price-range {
-        margin-top: 10px;
-        font-size: 14px;
-    }
-
-    .price-range span {
-        font-weight: bold;
-    }
-
-    .d-flex {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .col-4 {
-        max-width: 33.33%;
-        flex: 0 0 33.33%;
-    }
-
-    .col-6 {
-        max-width: 50%;
-        flex: 0 0 50%;
-    }
-
-    .label {
-        font-size: 14px;
-        color: black;
-        font-weight: bold;
-    }
-
-    .chart-container {
-        position: relative;
-        width: 300px;
-    }
-
-    .svg-box {
-        position: relative;
-        height: 200px;
-        width: 200px;
-    }
-
-    .svg-box:before {
-        content: '';
-        display: block;
-        position: absolute;
-        border: 2px solid #000;
-        height: 200px;
-        width: 200px;
-        transform: rotate(45deg);
-    }
-
-    .svg-box polygon {
-        height: 200px;
-        width: 200px;
-    }
-
-    .customRange {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 100%;
-        height: 6px;
-        background: #000;
-        /* Track color */
-        border-radius: 5px;
-        outline: none;
-        opacity: 0.7;
-    }
-
-    .customRange::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background: #fff;
-        /* Thumb color */
-        border: 2px solid #000;
-        /* Thumb border */
-        cursor: pointer;
-    }
-
-    .customRange::-moz-range-thumb {
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background: #fff;
-        border: 2px solid #000;
-        cursor: pointer;
-    }
-
-    .slide-image-wrap img {
-        width: 100%;
-    }
-    .slick-prev {
-        left: 0;
-        z-index: 9;
-    }
-    .slick-next {
-    right: 0px;
-}
 </style>
 
 <body>
@@ -158,61 +28,80 @@
         <div class="page-estimator">
             <!-- Header end -->
             <div class="middle-content">
-                <div class="container">
-                    <div class="d-flex">
-                        <div class="col-4">
-                            <div class="d-flex">
-                                <div class="col-6">
-                                    <div class="label size"> Size: <span id="sizeText">Medium</span></div>
-                                    <input class="customRange" type="range" id="sizeRange" min="20" max="80" value="50">
+                <div class="cost-estimator-wrap">
+                    <div class="row main-row">
+                        <div class="col col-8 pearl-bg3 col-cost-estimator">
+                            <div class="row">
+                                <div class="col col-7">
+                                    <div class="heading-text">
+                                        <h2>Live renovation cost estimator</h2>
+                                        <p>Easily adjust your budget estimation while prioritizing <br />the renovation
+                                            standards that matter to you.</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 col">
+                                            <div class="label size"> Size: <span id="sizeText">Medium</span></div>
+                                            <input class="customRange" type="range" id="sizeRange" min="20" max="80"
+                                                value="50">
+                                        </div>
+                                        <div class="col-6 col">
+                                            <div class="label quality">Quality: <span id="sizeText2">Medium</span>
+                                            </div>
+                                            <input class="customRange" type="range" id="complexityRange" min="20"
+                                                max="80" value="50">
+                                        </div>
+                                        <div class="col-6 col">
+                                            <div class="label scope">Scope: <span id="sizeText3">Medium</span></div>
+                                            <input class="customRange" type="range" id="scopeRange" min="20" max="80"
+                                                value="50">
+                                        </div>
+                                        <div class="col-6 col">
+                                            <div class="label complexity">Complexity: <span id="sizeText4">Medium</span>
+                                            </div>
+                                            <input class="customRange" type="range" id="qualityRange" min="20" max="80"
+                                                value="50">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="label quality">Quality: <span id="sizeText2">Medium</span> </div>
-                                    <input class="customRange" type="range" id="complexityRange" min="20" max="80"
-                                        value="50">
-                                </div>
-                                <div class="col-6">
-                                    <div class="label scope">Scope: <span id="sizeText3">Medium</span></div>
-                                    <input class="customRange" type="range" id="scopeRange" min="20" max="80"
-                                        value="50">
-                                </div>
-                                <div class="col-6">
-                                    <div class="label complexity">Complexity: <span id="sizeText4">Medium</span></div>
-                                    <input class="customRange" type="range" id="qualityRange" min="20" max="80"
-                                        value="50">
+                                <div class="col col-5 align-self-center">
+                                    <div class="svg-box">
+                                        <svg viewBox="40 40 120 120" width="180" height="180" style="display: block;">
+                                            <polygon id="dynamicPolygon" fill="#b4a494" opacity="0.7" stroke="black"
+                                                stroke-width="1" />
+                                            <circle id="circle1" cx="100" cy="45" r="5" fill="white" stroke="black" />
+                                            <circle id="circle2" cx="155" cy="100" r="5" fill="white" stroke="black" />
+                                            <circle id="circle3" cx="100" cy="155" r="5" fill="white" stroke="black" />
+                                            <circle id="circle4" cx="45" cy="100" r="5" fill="white" stroke="black" />
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <div class="svg-box">
-                                <svg viewBox="0 0 200 200">
-                                    <polygon id="dynamicPolygon" fill="#b4a494" opacity="0.7" stroke="black"
-                                        stroke-width="1" />
-                                    <circle id="circle1" cx="100" cy="45" r="5" fill="white" stroke="black" />
-                                    <circle id="circle2" cx="155" cy="100" r="5" fill="white" stroke="black" />
-                                    <circle id="circle3" cx="100" cy="155" r="5" fill="white" stroke="black" />
-                                    <circle id="circle4" cx="45" cy="100" r="5" fill="white" stroke="black" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <h3>$<span id="estimatedCost">0</span>K - $<span id="complexityCost">0</span>K</h3>
-                            <div class="cost-breakdown" id="costBreakdown">
-                                <h3>Cost Breakdown</h3>
-                                <p>Estimated Cost</p>
-                                <p>Quality Adjustment: $<span id="qualityCost">0</span>K</p>
-                                <p>Scope Adjustment: $<span id="scopeCost">0</span>K</p>
-                                <p>Complexity Adjustment</p>
-                            </div>
-                            <div class="price-range">
-                                <h3>Projects Completed Price Range</h3>
-                                <p>Low: $<span id="lowPrice">0</span>K - High: $<span id="highPrice">0</span>K</p>
-                                <input type="range" id="projectPriceRange" min="0" max="100" value="50">
+                        <div class="col col-4 pearl-bg2 col-estimated-cost">
+                            <div class="estimated-cost-wrap">
+                                <h2>$<span id="estimatedCost">0</span>K - $<span id="complexityCost">0</span>K</h2>
+                                <div class="cost-breakdown" id="costBreakdown">
+                                    <p>Estimated Cost</p>
+                                    <!-- <p>Quality Adjustment: $<span id="qualityCost">0</span>K</p> -->
+                                    <p>Townhouse/Brownstone,</p>
+                                    <p>Full-house renovation</p>
+                                </div>
+                                <div class="cost-breakdown" id="costBreakdown">
+                                    <h3>Cost Breakdown</h3>
+                                    <p>Cost Component #1.........$00K-$00K</p>
+                                    <p>Cost Component #2.........$00K-$00K</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="slick-slider" class="custom-slick-slider">
-
+                    <div class="custom-slick-slider-wrap pt-50">
+                        <div class="container">
+                            <div class="price-range text-center pb-30">
+                                <h2>Projects Completed within the price range</h2>
+                            </div>
+                            <div id="slick-slider" class="custom-slick-slider">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -301,13 +190,35 @@
                 const estimatedCost = Math.floor((size + complexity + scope + quality) / 4);
                 document.getElementById('estimatedCost').innerText = estimatedCost;
 
-                document.getElementById('qualityCost').innerText = Math.floor(quality / 2);
-                document.getElementById('scopeCost').innerText = Math.floor(scope / 2);
+                const qualityCostElement = document.getElementById('qualityCost');
+                if (qualityCostElement) {
+                    qualityCostElement.innerText = Math.floor(quality / 2); // Update value
+                } else {
+                    console.error("Element with ID 'qualityCost' not found.");
+                }
+                const scopeCost = document.getElementById('scopeCost');
+                if (scopeCost) {
+                    scopeCost.innerText = Math.floor(quality / 2); // Update value
+                } else {
+                    console.error("Element with ID 'qualityCost' not found.");
+                }
+
                 document.getElementById('complexityCost').innerText = Math.floor(complexity / 2);
 
                 // Update projects completed price range
-                document.getElementById('lowPrice').innerText = estimatedCost - 20;
-                document.getElementById('highPrice').innerText = estimatedCost + 20;
+                const lowPriceElement = document.getElementById('lowPrice');
+            if (lowPriceElement) {
+                lowPriceElement.innerText = estimatedCost - 20;
+            } else {
+                console.error("Element with ID 'lowPrice' not found.");
+            }
+
+            const highPriceElement = document.getElementById('highPrice');
+            if (highPriceElement) {
+                highPriceElement.innerText = estimatedCost + 20;
+            } else {
+                console.error("Element with ID 'highPrice' not found.");
+            }
             }
 
             // Add event listeners to update the diamond when the range values change
@@ -367,14 +278,14 @@
                     const filteredData = data.filter(post => post.blogUrl !== pathname);
                     shuffleArray(filteredData);
 
-                    filteredData.forEach(post => {
+                    filteredData[0]?.imges?.forEach(post => {
                         const slide = `
-                <div class="custom-slide">
-                    <div class="slide-image-wrap">
-                        <img src="${post.imageUrl}" alt="Image">
-                    </div>
-                </div>
-            `;
+                            <div class="custom-slide">
+                                <div class="slide-image-wrap">
+                                    <img src="${post.imageUrl}" alt="Image">
+                                </div>
+                            </div>
+                        `;
                         sliderContainer.append(slide);
                     });
 

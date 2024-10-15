@@ -1,0 +1,118 @@
+.cost-estimator-wrap .page-estimator {
+  padding: 100px 0 0;
+}
+.cost-estimator-wrap .middle-content {
+  padding-bottom: 100px;
+}
+.cost-estimator-wrap svg {
+  width: 100%;
+  height: 100%;
+}
+.cost-estimator-wrap .label {
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+.cost-estimator-wrap input[type=range] {
+  width: 80%;
+  margin: 10px 0;
+}
+.cost-estimator-wrap .cost-breakdown {
+  margin-top: 10px;
+}
+.cost-estimator-wrap .price-range {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.cost-estimator-wrap .price-range span {
+  font-weight: bold;
+}
+.cost-estimator-wrap .d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.cost-estimator-wrap .col-4 {
+  max-width: 33.33%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.33%;
+          flex: 0 0 33.33%;
+}
+.cost-estimator-wrap .col-6 {
+  max-width: 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+.cost-estimator-wrap .label {
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+.cost-estimator-wrap .chart-container {
+  position: relative;
+  width: 300px;
+}
+.cost-estimator-wrap .svg-box {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+.cost-estimator-wrap .svg-box:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 2px solid #000;
+  height: 200px;
+  width: 200px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.cost-estimator-wrap .svg-box polygon {
+  height: 200px;
+  width: 200px;
+}
+.cost-estimator-wrap .customRange {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #000;
+  /* Track color */
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+}
+.cost-estimator-wrap .customRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  /* Thumb color */
+  border: 2px solid #000;
+  /* Thumb border */
+  cursor: pointer;
+}
+.cost-estimator-wrap .customRange::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+.cost-estimator-wrap .slide-image-wrap img {
+  width: 100%;
+}
+.cost-estimator-wrap .slick-prev {
+  left: 0;
+  z-index: 9;
+}
+.cost-estimator-wrap .slick-next {
+  right: 0px;
+}

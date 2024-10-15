@@ -1,4 +1,6 @@
 [
+  {
+  "imges":[
     {
       "id":41,
       "imageUrl": "../images/blog-images/make-townhouse-lighter-brighter-images/blog-post-image.webp"
@@ -43,5 +45,48 @@
       "id":31,
       "imageUrl": "../images/blog-images/single-family-home-renovations-westchester-ny-images/blog-post-image-1-664f07137736f.webp"
     }
-  ]
-  
+  ],
+  "content":[
+    {
+        "size": "Small",
+        "quality": "Low",
+        "complexity": "Simple",
+        "scope": "Minimal",
+        "estimatedCost": {
+            "low": 50,
+            "high": 80
+        },
+        "costBreakdown": [
+            { "component": "Cost Component #1", "range": "10K-20K" },
+            { "component": "Cost Component #2", "range": "5K-10K" }
+        ]
+    },
+    {
+        "size": "Medium",
+        "quality": "Medium",
+        "complexity": "Moderate",
+        "scope": "Standard",
+        "estimatedCost": {
+            "low": 100,
+            "high": 150
+        },
+        "costBreakdown": [
+            { "component": "Cost Component #1", "range": "20K-30K" },
+            { "component": "Cost Component #2", "range": "10K-15K" }
+        ]
+    },
+    {
+        "size": "Large",
+        "quality": "High",
+        "complexity": "Complex",
+        "scope": "Full",
+        "estimatedCost": {
+            "low": 200,
+            "high": 300
+        },
+        "costBreakdown": [
+            { "component": "Cost Component #1", "range": "40K-60K" },
+            { "component": "Cost Component #2", "range": "30K-50K" }
+        ]
+    }
+]}]
