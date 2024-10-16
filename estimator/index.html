@@ -41,31 +41,44 @@
                                     <div class="row">
                                         <div class="col-6 col">
                                             <div class="label size"> Size: <span id="sizeText">Medium</span></div>
-                                            <input class="customRange" type="range" id="sizeRange" min="20" max="80"
-                                                value="50">
+                                            <input class="customRange" type="range" id="sizeRange" min="10" max="90"
+                                                value="50"
+                                                name="sizeRange"
+                                            >
                                         </div>
                                         <div class="col-6 col">
                                             <div class="label quality">Quality: <span id="sizeText2">Medium</span>
                                             </div>
-                                            <input class="customRange" type="range" id="complexityRange" min="20"
-                                                max="80" value="50">
+                                            <input class="customRange" type="range" id="complexityRange" min="10"
+                                                max="90" value="50"
+                                                name="complexityRange"
+                                            >
                                         </div>
                                         <div class="col-6 col">
                                             <div class="label scope">Scope: <span id="sizeText3">Medium</span></div>
-                                            <input class="customRange" type="range" id="scopeRange" min="20" max="80"
-                                                value="50">
+                                            <input class="customRange" type="range" id="scopeRange" min="10" max="90"
+                                                value="50"
+                                                name="scopeRange"
+                                            >
                                         </div>
                                         <div class="col-6 col">
                                             <div class="label complexity">Complexity: <span id="sizeText4">Medium</span>
                                             </div>
-                                            <input class="customRange" type="range" id="qualityRange" min="20" max="80"
-                                                value="50">
+                                            <input class="customRange" type="range" id="qualityRange" min="10" max="90"
+                                                value="50"
+                                                name="qualityRange"
+                                            >
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col col-5 align-self-center">
                                     <div class="svg-box">
-                                        <svg viewBox="40 40 120 120" width="180" height="180" style="display: block;">
+                                        <div class="size sizes">Size</div>
+                                        <div class="quality sizes">Quality</div>
+                                        <div class="scope sizes">Scope</div>
+                                        <div class="complexity sizes">Complexity</div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 120 120" width="180"
+                                            height="180" style="display: block;">
                                             <polygon id="dynamicPolygon" fill="#b4a494" opacity="0.7" stroke="black"
                                                 stroke-width="1" />
                                             <circle id="circle1" cx="100" cy="45" r="5" fill="white" stroke="black" />
@@ -82,11 +95,10 @@
                                 <h2>$<span id="estimatedCost">0</span>K - $<span id="complexityCost">0</span>K</h2>
                                 <div class="cost-breakdown" id="costBreakdown">
                                     <p>Estimated Cost</p>
-                                    <!-- <p>Quality Adjustment: $<span id="qualityCost">0</span>K</p> -->
-                                    <p>Townhouse/Brownstone,</p>
-                                    <p>Full-house renovation</p>
+                                    <p id="propertyType">Townhouse/Brownstone</p>
+                                    <p id="renovationType">Full-house renovation</p>
                                 </div>
-                                <div class="cost-breakdown" id="costBreakdown">
+                                <div class="cost-breakdown" id="costBreakdown2">
                                     <h3>Cost Breakdown</h3>
                                     <p>Cost Component #1.........$00K-$00K</p>
                                     <p>Cost Component #2.........$00K-$00K</p>
@@ -165,9 +177,42 @@
                 return points.join(' ');
             }
 
+            // Function to update cost breakdown based on input values
+            function updateCostBreakdown(size, complexity, scope, quality) {
+                const baseCost = 50000; // Base cost for calculations
+                const estimatedCost = Math.floor((size + complexity + scope + quality) / 4);
+                document.getElementById('estimatedCost').innerText = estimatedCost;
+                document.getElementById('complexityCost').innerText = estimatedCost+10;
+                
+            }
+
+            function updateTextBasedOnInput(renovationOptions, size, complexity, scope, quality) {
+                const propertyType = document.getElementById('propertyType');
+                const renovationType = document.getElementById('renovationType');
+
+                // Find the matching renovation option from the JSON data
+
+                const matchingOption = renovationOptions.find(option => {
+                    return (option.size === getSizeCategory(size) &&
+                        option.complexity === getComplexityCategory(complexity) &&
+                        option.scope === getScopeCategory(scope) &&
+                        option.quality === getQualityCategory(quality));
+                });
+
+                // Update the innerText with values from the JSON data if a match is found
+                if (matchingOption) {
+                    propertyType.innerText = matchingOption.propertyType;
+                    renovationType.innerText = matchingOption.renovationType;
+                } else {
+                    // Default values if no match is found
+                    propertyType.innerText = 'Unknown Property Type';
+                    renovationType.innerText = 'Unknown Renovation Type';
+                }
+            }
+            
 
             // Function to update the diamond shape and cost breakdown based on range inputs
-            function updateDiamond() {
+            function initiateDiamond(e) {
                 const size = parseInt(sizeRange.value);
                 const complexity = parseInt(complexityRange.value);
                 const scope = parseInt(scopeRange.value);
@@ -182,43 +227,30 @@
                 document.getElementById('circle4').setAttribute('cx', 100 - complexity);
 
                 updateCostBreakdown(size, complexity, scope, quality);
+                // updateTextBasedOnInput(renovationOptions, size, complexity, scope, quality);
             }
 
-            // Function to update cost breakdown based on input values
-            function updateCostBreakdown(size, complexity, scope, quality) {
-                const baseCost = 50000; // Base cost for calculations
-                const estimatedCost = Math.floor((size + complexity + scope + quality) / 4);
-                document.getElementById('estimatedCost').innerText = estimatedCost;
+            // Initial diamond rendering based on default values
+            initiateDiamond();
 
-                const qualityCostElement = document.getElementById('qualityCost');
-                if (qualityCostElement) {
-                    qualityCostElement.innerText = Math.floor(quality / 2); // Update value
-                } else {
-                    console.error("Element with ID 'qualityCost' not found.");
-                }
-                const scopeCost = document.getElementById('scopeCost');
-                if (scopeCost) {
-                    scopeCost.innerText = Math.floor(quality / 2); // Update value
-                } else {
-                    console.error("Element with ID 'qualityCost' not found.");
-                }
+            // handler function for range selectors
+            const updateDiamond = (e) => {
+                // update diamond
+                const size = parseInt(sizeRange.value);
+                const complexity = parseInt(complexityRange.value);
+                const scope = parseInt(scopeRange.value);
+                const quality = parseInt(qualityRange.value);
+                const points = generateDiamondPoints(size, complexity, scope, quality);
+                polygon.setAttribute('points', points);
 
-                document.getElementById('complexityCost').innerText = Math.floor(complexity / 2);
+                // Update circle positions
+                document.getElementById('circle1').setAttribute('cy', 100 - size);
+                document.getElementById('circle2').setAttribute('cx', 100 + quality);
+                document.getElementById('circle3').setAttribute('cy', 100 + scope);
+                document.getElementById('circle4').setAttribute('cx', 100 - complexity);
+                // update diamond
 
-                // Update projects completed price range
-                const lowPriceElement = document.getElementById('lowPrice');
-            if (lowPriceElement) {
-                lowPriceElement.innerText = estimatedCost - 20;
-            } else {
-                console.error("Element with ID 'lowPrice' not found.");
-            }
-
-            const highPriceElement = document.getElementById('highPrice');
-            if (highPriceElement) {
-                highPriceElement.innerText = estimatedCost + 20;
-            } else {
-                console.error("Element with ID 'highPrice' not found.");
-            }
+                updateCostBreakdown(size, complexity, scope, quality);
             }
 
             // Add event listeners to update the diamond when the range values change
@@ -226,9 +258,6 @@
             complexityRange.addEventListener('input', updateDiamond);
             scopeRange.addEventListener('input', updateDiamond);
             qualityRange.addEventListener('input', updateDiamond);
-
-            // Initial diamond rendering
-            updateDiamond();
 
             $('.slick-slider').slick({
                 // Slick slider settings
@@ -266,7 +295,7 @@
             // Initialize on page load
             updateSizeTextAndSlider(sizeRange1.value);
         });
-        // slider
+
         jQuery(document).ready(function ($) {
             const sliderContainer = $('#slick-slider');
 
@@ -296,11 +325,40 @@
                         slidesToScroll: 1,
                         arrows: true,
                     });
+                    console.log("Full data object:", data); // Log the entire data
+                    const renovationOptions = data[0]?.renovationOptions;
+                    console.log("renovationOptions",renovationOptions)
+
+                // Helper functions to categorize input values into the JSON categories
+                function getSizeCategory(size) {
+                    if (size <= 30) return 'Small';
+                    else if (size <= 60) return 'Medium';
+                    else return 'Large';
+                }
+
+                    function getComplexityCategory(complexity) {
+                        if (complexity <= 30) return 'Simple';
+                        else if (complexity <= 60) return 'Moderate';
+                        else return 'Complex';
+                    }
+
+                    function getScopeCategory(scope) {
+                        if (scope <= 30) return 'Minimal';
+                        else if (scope <= 60) return 'Standard';
+                        else return 'Full';
+                    }
+
+                    function getQualityCategory(quality) {
+                        if (quality <= 30) return 'Low';
+                        else if (quality <= 60) return 'Medium';
+                        else return 'High';
+                    }
+                    updateTextBasedOnInput(renovationOptions, size, complexity, scope, quality);
                 })
                 .catch(error => {
-                    console.error('Error fetching blog data:', error);
+                    //console.error('Error fetching blog data:', error);
                 });
-
+                
             // Shuffle function for the array
             function shuffleArray(array) {
                 for (let i = array.length - 1; i > 0; i--) {

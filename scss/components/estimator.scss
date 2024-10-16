@@ -6,92 +6,95 @@
     .middle-content {
         padding-bottom: 100px;
     }
-.main-row {
-    margin: 0;
-}
+
+    .main-row {
+        margin: 0;
+    }
+
     .col-1 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 8.333333%;
         flex: 0 0 8.333333%;
         max-width: 8.333333%;
     }
-    
+
     .col-2 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 16.666667%;
         flex: 0 0 16.666667%;
         max-width: 16.666667%;
     }
-    
+
     .col-3 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 25%;
         flex: 0 0 25%;
         max-width: 25%;
     }
-    
+
     .col-4 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 33.333333%;
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
     }
-    
+
     .col-5 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 41.666667%;
         flex: 0 0 41.666667%;
         max-width: 41.666667%;
     }
-    
+
     .col-6 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
         max-width: 50%;
     }
-    
+
     .col-7 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 58.333333%;
         flex: 0 0 58.333333%;
         max-width: 58.333333%;
     }
-    
+
     .col-8 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 66.666667%;
         flex: 0 0 66.666667%;
         max-width: 66.666667%;
     }
-    
+
     .col-9 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 75%;
         flex: 0 0 75%;
         max-width: 75%;
     }
-    
+
     .col-10 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 83.333333%;
         flex: 0 0 83.333333%;
         max-width: 83.333333%;
     }
-    
+
     .col-11 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 91.666667%;
         flex: 0 0 91.666667%;
         max-width: 91.666667%;
     }
-    
+
     .col-12 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
     }
+
     .label {
         font-size: 14px;
         color: black;
@@ -129,6 +132,7 @@
         max-width: 50%;
         flex: 0 0 50%;
     }
+
     .col-8 {
         max-width: 66.66%;
         flex: 0 0 66.66%;
@@ -150,9 +154,25 @@
         height: 180px;
         width: 180px;
         margin: 0 auto;
+
         svg {
             height: 100%;
             width: 100%;
+        }
+
+        .sizes {
+            position: absolute;
+            height: auto;
+        }
+
+        .size {
+            top: -70px;
+            left: 75px;
+        }
+
+        .quality {
+            left: 230px;
+            top: 75px;
         }
     }
 
@@ -212,11 +232,14 @@
     .slick-next {
         right: 0px;
     }
+
     .col-cost-estimator {
         padding: 30px;
     }
+
     .col-estimated-cost {
         padding: 30px;
+
         .estimated-cost-wrap {
             max-width: 400px;
             margin: 0 auto;
@@ -225,9 +248,12 @@
 }
 
 .custom-slick-slider {
-    .slick-next:before, .slick-prev:before {
+
+    .slick-next:before,
+    .slick-prev:before {
         color: $black;
     }
+
     .custom-slide {
         padding: 0 20px;
     }

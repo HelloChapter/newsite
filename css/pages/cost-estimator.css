@@ -2204,6 +2204,18 @@ footer .trusted-by li img {
   height: 100%;
   width: 100%;
 }
+.cost-estimator-wrap .svg-box .sizes {
+  position: absolute;
+  height: auto;
+}
+.cost-estimator-wrap .svg-box .size {
+  top: -70px;
+  left: 75px;
+}
+.cost-estimator-wrap .svg-box .quality {
+  left: 230px;
+  top: 75px;
+}
 .cost-estimator-wrap .svg-box:before {
   content: "";
   display: block;
@@ -2267,7 +2279,8 @@ footer .trusted-by li img {
   margin: 0 auto;
 }
 
-.custom-slick-slider .slick-next:before, .custom-slick-slider .slick-prev:before {
+.custom-slick-slider .slick-next:before,
+.custom-slick-slider .slick-prev:before {
   color: #231F20;
 }
 .custom-slick-slider .custom-slide {

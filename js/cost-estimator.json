@@ -89,4 +89,31 @@
             { "component": "Cost Component #2", "range": "30K-50K" }
         ]
     }
-]}]
+],
+"renovationOptions":[
+  {
+    "size": "Small",
+    "complexity": "Simple",
+    "scope": "Minimal",
+    "quality": "Low",
+    "propertyType": "Apartment/Condo",
+    "renovationType": "Partial Renovation"
+  },
+  {
+    "size": "Medium",
+    "complexity": "Moderate",
+    "scope": "Standard",
+    "quality": "Medium",
+    "propertyType": "Townhouse/Brownstone",
+    "renovationType": "Full-house Renovation"
+  },
+  {
+    "size": "Large",
+    "complexity": "Complex",
+    "scope": "Full",
+    "quality": "High",
+    "propertyType": "Single-Family Home",
+    "renovationType": "Luxury Renovation"
+  }
+]
+}]
