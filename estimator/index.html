@@ -41,33 +41,34 @@
                                     <div class="row">
                                         <div class="col-6 col">
                                             <div class="label size"> Size: <span id="sizeText">Medium</span></div>
-                                            <input class="customRange" type="range" id="sizeRange" min="10" max="90"
+                                           _ <input class="customRange" type="range" id="sizeRange" min="10" max="90"
                                                 value="50"
                                                 name="sizeRange"
-                                            >
+                                            > +
                                         </div>
                                         <div class="col-6 col">
                                             <div class="label quality">Quality: <span id="sizeText2">Medium</span>
                                             </div>
-                                            <input class="customRange" type="range" id="complexityRange" min="10"
-                                                max="90" value="50"
-                                                name="complexityRange"
-                                            >
+                                            - <input class="customRange" type="range" id="qualityRange" min="10" max="90"
+                                                value="50"
+                                                name="qualityRange"
+                                            > +
                                         </div>
                                         <div class="col-6 col">
                                             <div class="label scope">Scope: <span id="sizeText3">Medium</span></div>
-                                            <input class="customRange" type="range" id="scopeRange" min="10" max="90"
+                                           _ <input class="customRange" type="range" id="scopeRange" min="10" max="90"
                                                 value="50"
                                                 name="scopeRange"
-                                            >
+                                            > +
                                         </div>
                                         <div class="col-6 col">
                                             <div class="label complexity">Complexity: <span id="sizeText4">Medium</span>
                                             </div>
-                                            <input class="customRange" type="range" id="qualityRange" min="10" max="90"
-                                                value="50"
-                                                name="qualityRange"
-                                            >
+                                            _ <input class="customRange" type="range" id="complexityRange" min="10"
+                                            max="90" value="50"
+                                            name="complexityRange"
+                                        >
+                                        +
                                         </div>
                                     </div>
                                 </div>
@@ -77,14 +78,20 @@
                                         <div class="quality sizes">Quality</div>
                                         <div class="scope sizes">Scope</div>
                                         <div class="complexity sizes">Complexity</div>
+                                        <div class="medium-box"></div>
+                                        <div class="small-box"></div>
+                                        <div class="cross">
+                                            <div class="line line1"></div>
+                                            <div class="line line2"></div>
+                                        </div>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 120 120" width="180"
                                             height="180" style="display: block;">
-                                            <polygon id="dynamicPolygon" fill="#b4a494" opacity="0.7" stroke="black"
+                                            <polygon id="dynamicPolygon" fill="#231F20" opacity="0.4" stroke="black"
                                                 stroke-width="1" />
-                                            <circle id="circle1" cx="100" cy="45" r="5" fill="white" stroke="black" />
-                                            <circle id="circle2" cx="155" cy="100" r="5" fill="white" stroke="black" />
-                                            <circle id="circle3" cx="100" cy="155" r="5" fill="white" stroke="black" />
-                                            <circle id="circle4" cx="45" cy="100" r="5" fill="white" stroke="black" />
+                                            <circle id="circle1" cx="100" cy="45" r="5" fill="#F3E3D8" stroke="black" />
+                                            <circle id="circle2" cx="155" cy="100" r="5" fill="#F3E3D8" stroke="black" />
+                                            <circle id="circle3" cx="100" cy="155" r="5" fill="#F3E3D8" stroke="black" />
+                                            <circle id="circle4" cx="45" cy="100" r="5" fill="#F3E3D8" stroke="black" />
                                         </svg>
                                     </div>
                                 </div>
