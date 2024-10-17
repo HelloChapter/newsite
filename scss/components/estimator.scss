@@ -121,6 +121,7 @@
         font-size: 14px;
         color: black;
         font-weight: bold;
+
         span {
             font-weight: 300;
         }
@@ -131,16 +132,26 @@
         width: 300px;
     }
 
+    .col-left-content {}
+
+    .svg-box-wrap {
+        padding-top: 80px;
+    }
+
     .svg-box {
         position: relative;
-        height: 180px;
-        width: 180px;
-        margin: 0 auto;
+        // height: 180px;
+        // width: 180px;
+        max-width: 316px;
+        height: 316px;
+        margin: auto;
 
         svg {
             height: 100%;
             width: 100%;
-            position: relative;
+            position: absolute;
+            top: -68px;
+            left: -68px;
         }
 
         .sizes {
@@ -161,7 +172,7 @@
         }
 
         .scope {
-            bottom: -72px;
+            bottom: 65px;
             left: 65px;
         }
 
@@ -173,6 +184,10 @@
 
     .svg-box:before {
         content: '';
+
+    }
+
+    .large-box {
         display: block;
         position: absolute;
         border: 3px solid $black;
@@ -180,6 +195,7 @@
         width: 180px;
         transform: rotate(45deg);
     }
+
     .medium-box {
         border: 3px solid $black;
         height: 112px;
@@ -189,6 +205,7 @@
         top: 34px;
         left: 34px;
     }
+
     .small-box {
         border: 3px solid rgba($color: $black, $alpha: 0.6);
         height: 60px;
@@ -197,9 +214,12 @@
         position: absolute;
         top: 60px;
         left: 60px;
+        background-color: rgba($color: $black, $alpha: 0.25);
     }
+
     .lines {
         position: absolute;
+
         &:after {
             content: '';
             display: block;
@@ -210,22 +230,22 @@
             height: 180px;
         }
     }
-    
-    
+
+
     .line {
         position: absolute;
         background-color: $black;
         width: 3px;
-        height: 183px;
+        height: 176px;
         top: 0;
-        left: 50%;
+        left: 28%;
         transform-origin: center;
     }
-    
+
     .line1 {
         transform: rotate(45deg);
     }
-    
+
     .line2 {
         transform: rotate(-45deg);
     }
@@ -276,7 +296,7 @@
     }
 
     .col-cost-estimator {
-        padding: 30px;
+        padding: 60px 30px;
     }
 
     .col-estimated-cost {
@@ -300,3 +320,95 @@
         padding: 0 20px;
     }
 }
+
+// Responsive css start
+@media(max-width:1023px) {
+    .cost-estimator-wrap {
+        .col-cost-estimator {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .col-left-content {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .col-estimated-cost {
+            max-width: 50%;
+            flex: 0 0 50%;
+        }
+
+        .col-svg-box {
+            padding: 90px 0 40px 20px;
+            max-width: 50%;
+            flex: 0 0 50%;
+        }
+
+        .svg-box {
+            height: 150px;
+            width: 150px;
+
+            &::before {
+                height: 150px;
+                width: 150px;
+            }
+
+            .medium-box {
+                height: 90px;
+                width: 90px;
+                top: 30px;
+                left: 30px;
+            }
+
+            .small-box {
+                height: 40px;
+                width: 40px;
+                top: 55px;
+                left: 55px;
+            }
+
+            .line {
+                height: 154px;
+            }
+
+            .size {
+                top: -65px;
+                left: 65px;
+            }
+
+            .quality {
+                left: 195px;
+                top: 65px;
+            }
+
+            .scope {
+                bottom: -72px;
+                left: 65px;
+            }
+
+            .complexity {
+                left: -120px;
+                top: 60px;
+            }
+        }
+    }
+}
+
+// 1023 end
+@media(max-width:1023px) {
+    .cost-estimator-wrap {
+        .col-estimated-cost {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .col-svg-box {
+            padding: 90px 0 40px 20px;
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+    }
+}
+
+// 1023 end
