@@ -2434,6 +2434,12 @@ footer .trusted-by li img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+.cost-estimator-wrap .btn-minus,
+.cost-estimator-wrap .btn-plus {
+  font-size: 30px;
+  font-weight: 300;
+  padding: 5px;
+}
 .cost-estimator-wrap .label {
   font-size: 14px;
   color: black;

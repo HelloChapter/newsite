@@ -122,10 +122,12 @@ document.addEventListener('DOMContentLoaded', () => {
     qualityRange.addEventListener('input', updateDiamond);
     const sizeRange1 = document.getElementById('sizeRange');
     const sizeText = document.getElementById('sizeText');
-
-    function updateSizeTextAndSlider(value) {
+    const qualityText = document.getElementById('sizeText2');
+    const scopeText = document.getElementById('sizeText3');
+    const complexityText = document.getElementById('sizeText4');
+    
+    function updateSizeTextAndSlider(value, textElement) {
         let text;
-        let slideIndex;
         if (value <= 30) {
             text = 'Small';
             slideIndex = 0;
@@ -136,17 +138,52 @@ document.addEventListener('DOMContentLoaded', () => {
             text = 'Large';
             slideIndex = 2;
         }
-
-        sizeText.textContent = text;
+        textElement.textContent = text;
         $('.slick-slider').slick('slickGoTo', slideIndex);
     }
 
-    sizeRange1.addEventListener('input', () => {
-        updateSizeTextAndSlider(sizeRange1.value);
+    function updateTextValues() {
+        updateSizeTextAndSlider(sizeRange.value, sizeText);
+        updateSizeTextAndSlider(qualityRange.value, qualityText);
+        updateSizeTextAndSlider(scopeRange.value, scopeText);
+        updateSizeTextAndSlider(complexityRange.value, complexityText);
+    }
+    sizeRange.addEventListener('input', () => {
+        updateSizeTextAndSlider(sizeRange.value, sizeText);
+    });
+    qualityRange.addEventListener('input', () => {
+        updateSizeTextAndSlider(qualityRange.value, qualityText);
+    });
+    scopeRange.addEventListener('input', () => {
+        updateSizeTextAndSlider(scopeRange.value, scopeText);
+    });
+    complexityRange.addEventListener('input', () => {
+        updateSizeTextAndSlider(complexityRange.value, complexityText);
     });
 
     // Initialize on page load
-    updateSizeTextAndSlider(sizeRange1.value);
+    updateTextValues();
+    
+    const buttons = document.querySelectorAll('.btn-minus, .btn-plus');
+    buttons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const targetId = e.currentTarget.getAttribute('data-target');
+            const rangeInput = document.getElementById(targetId);
+            const isIncrement = e.currentTarget.classList.contains('btn-plus');
+
+            // Adjust the value of the range input
+            let newValue = parseInt(rangeInput.value, 10) + (isIncrement ? 1 : -1);
+            
+            // Ensure the new value stays within the min and max bounds
+            newValue = Math.max(rangeInput.min, Math.min(rangeInput.max, newValue));
+            
+            // Update the range input value
+            rangeInput.value = newValue;
+
+            // Trigger the 'input' event to update the diamond and text
+            rangeInput.dispatchEvent(new Event('input'));
+        });
+    });
 });
 
 jQuery(document).ready(function ($) {

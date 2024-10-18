@@ -98,6 +98,7 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="page-estimator">
@@ -296,34 +297,57 @@
                         <div class="col col-8 pearl-bg3 col-cost-estimator">
                             <div class="row">
                                 <div class="col col-7 col-left-content">
-                                    <div id="heading-text" class="heading-text">
+                                    <div id="heading-text" class="heading-text pb-30">
                                         <h2>Live renovation cost estimator</h2>
                                         <p>Easily adjust your budget estimation while prioritizing <br />the renovation
                                             standards that matter to you.</p>
                                     </div>
                                     <div class="row">
-                                        <div class="col-6 col">
+                                        <div class="col-6 col form-group">
                                             <div class="label size"> Size: <span id="sizeText">Medium</span></div>
-                                            _ <input class="customRange" type="range" id="sizeRange" min="25" max="80"
-                                                value="50" name="sizeRange"> +
+                                            <Button class="btn-minus btn-style-removed" data-target="sizeRange">
+                                                -
+                                            </Button>
+                                            <input class="customRange" type="range" id="sizeRange" min="25" max="80"
+                                                value="50" name="sizeRange">
+                                            <Button class="btn-style-removed btn-plus" data-target="sizeRange">
+                                                +
+                                            </Button>
                                         </div>
-                                        <div class="col-6 col">
+                                        <div class="col-6 col form-group">
                                             <div class="label quality">Quality: <span id="sizeText2">Medium</span>
                                             </div>
-                                            - <input class="customRange" type="range" id="qualityRange" min="25"
-                                                max="80" value="50" name="qualityRange"> +
+                                            <Button class="btn-minus btn-style-removed" data-target="qualityRange">
+                                                -
+                                            </Button>
+                                            <input class="customRange" type="range" id="qualityRange" min="25" max="80"
+                                                value="50" name="qualityRange">
+                                            <Button class="btn-style-removed btn-plus" data-target="qualityRange">
+                                                +
+                                            </Button>
                                         </div>
-                                        <div class="col-6 col">
+                                        <div class="col-6 col form-group">
                                             <div class="label scope">Scope: <span id="sizeText3">Medium</span></div>
-                                            _ <input class="customRange" type="range" id="scopeRange" min="25" max="80"
-                                                value="50" name="scopeRange"> +
+                                            <Button class="btn-minus btn-style-removed" data-target="scopeRange">
+                                                -
+                                            </Button>
+                                            <input class="customRange" type="range" id="scopeRange" min="25" max="80"
+                                                value="50" name="scopeRange">
+                                            <Button class="btn-style-removed btn-plus" data-target="scopeRange">
+                                                +
+                                            </Button>
                                         </div>
-                                        <div class="col-6 col">
+                                        <div class="col-6 col form-group">
                                             <div class="label complexity">Complexity: <span id="sizeText4">Medium</span>
                                             </div>
-                                            _ <input class="customRange" type="range" id="complexityRange" min="25"
+                                            <Button class="btn-minus btn-style-removed" data-target="complexityRange">
+                                                -
+                                            </Button>
+                                            <input class="customRange" type="range" id="complexityRange" min="25"
                                                 max="80" value="50" name="complexityRange">
-                                            +
+                                            <Button class="btn-style-removed btn-plus" data-target="complexityRange">
+                                                +
+                                            </Button>
                                         </div>
                                     </div>
                                 </div>
