@@ -18,11 +18,86 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <script src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/jquery.min.js"></script>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '432821205070173');
+        fbq('track', 'PageView');
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225495044-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-225495044-1');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=432821205070173&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+    <script>
+        (function (w, d, t, r, u) {
+            var f, n, i;
+            w[u] = w[u] || [], f = function () {
+                var o = { ti: "247002886" };
+                o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad")
+            },
+                n = d.createElement(t), n.src = r, n.async = 1, n.onload = n.onreadystatechange = function () {
+                    var s = this.readyState;
+                    s && s !== "loaded" && s !== "complete" || (f(), n.onload = n.onreadystatechange = null)
+                },
+                i = d.getElementsByTagName(t)[0], i.parentNode.insertBefore(n, i)
+        })
+            (window, document, "script", "//bat.bing.com/bat.js", "uetq");
+    </script>
+    <!-- Microsoft Ads Conversion Tracking -->
+    <!-- Google Tag Manager -->
+    <script>
+        $(document).ready(function () {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PRJKFJK');
+            // <!-- End Google Tag Manager -->
+            window.$crisp = []; window.CRISP_WEBSITE_ID = "504cb44f-aef2-4fa7-9ca5-4a32fbdfa3fd"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+            // <!-- Crisp chat end -->
+        }, 5000);
+    </script>
+    <!--Zoho Campaigns Web-Optin Form's Header Code Starts Here-->
+    <script type="text/javascript" src="https://zymul-zgpm.maillist-manage.com/js/optin.min.js"
+        onload="setupSF('sf3zf7e0b828616f44b3dd3d031997957aa5e20281895973e4509607265583e00af6','ZCFORMVIEW',false,'light',false,'0')"></script>
+    <script type="text/javascript">
+        function runOnFormSubmit_sf3zf7e0b828616f44b3dd3d031997957aa5e20281895973e4509607265583e00af6(th) {
+            /*Before submit, if you want to trigger your event, "include your code here"*/
+        };
+    </script>
+    <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=28998611860da' async='true'></script>
+    <!-- Hotjar Tracking Code for https://www.hellochapter.com -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 3064729, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </head>
-<style>
-
-</style>
-
 <body>
     <div class="wrapper">
         <div class="page-estimator">
@@ -221,7 +296,7 @@
                         <div class="col col-8 pearl-bg3 col-cost-estimator">
                             <div class="row">
                                 <div class="col col-7 col-left-content">
-                                    <div class="heading-text">
+                                    <div id="heading-text" class="heading-text">
                                         <h2>Live renovation cost estimator</h2>
                                         <p>Easily adjust your budget estimation while prioritizing <br />the renovation
                                             standards that matter to you.</p>
@@ -307,7 +382,7 @@
                             </div>
                             <div id="slick-slider" class="custom-slick-slider">
                             </div>
-                            <div class="section-title text-center pb-30">
+                            <div class="section-title text-center pb-30 pt-30">
                                 <h2>It's time to speak with your renovation expert!</h2>
                             </div>
                             <div class="button-wrap text-center">
@@ -392,17 +467,6 @@
                                     onload="referenceSetter(this)" style="display:none;">
                             </div>
                             <input type="hidden" id="signupFormType" value="QuickForm_Horizontal">
-                            <!-- <div id="zcOptinOverLay" oncontextmenu="return false"
-                                            style="display:none;text-align: center; background-color: rgb(0, 0, 0); opacity: 0.5; z-index: 100; position: fixed; width: 100%; top: 0px; left: 0px; height: 988px;">
-                                        </div>
-                                        <div id="zcOptinSuccessPopup"
-                                            style="display:none;z-index: 9999;width: 800px; height: 40%;top: 84px;position: fixed; left: 26%;background-color: #FFFFFF;border-color: #E6E6E6; border-style: solid; border-width: 1px;  box-shadow: 0 1px 10px #424242;padding: 35px;">
-                                            <span style="position: absolute;top: -16px;right:-14px;z-index:99999;cursor: pointer;"
-                                                id="closeSuccess">
-                                                <img src="https://zymul-zgpm.maillist-manage.com/images/videoclose.png">
-                                            </span>
-                                            <div id="zcOptinSuccessPanel"></div>
-                                        </div> -->
                             <div class="trusted-by mobile-hide">
                                 <h3>Trusted by</h3>
                                 <ul class="list-unstyled">
@@ -431,7 +495,7 @@
                                     <ul class="list-unstyled">
                                         <li>
                                             <a href="/about-chapter-home-renovation/" title="About
-                                                        ">About</a>
+                                                ">About</a>
                                         </li>
                                         <li>
                                             <a href="/home-renovation-services/" title="Services ">Services</a>
@@ -445,7 +509,7 @@
                                         </li>
                                         <li>
                                             <a href="/nyc-renovation-projects/" title="Projects
-                                                        ">Projects</a>
+                                                ">Projects</a>
                                         </li>
                                         <li>
                                             <a href="/blog/" title="Blog ">Blog</a>
@@ -468,7 +532,7 @@
                                         </li>
                                         <li>
                                             <a href="https://www.pinterest.com/chapterrenovations/" title="Twitter
-                                                        " target="_blank">Pinterest</a>
+                                                " target="_blank">Pinterest</a>
                                         </li>
                                         <li>
                                             <a href="https://www.houzz.com/professionals/general-contractors/chapter-pfvwus-pf~666806768"
@@ -477,15 +541,15 @@
 
                                         <li>
                                             <a href="https://www.youtube.com/@hello.chapter" title="Youtube
-                                                        " target="_blank">Youtube</a>
+                                                " target="_blank">Youtube</a>
                                         </li>
                                         <li>
                                             <a href="https://www.tiktok.com/@hello.chapter/" title="TikTok
-                                                        " target="_blank">TikTok</a>
+                                                " target="_blank">TikTok</a>
                                         </li>
                                         <li>
                                             <a href="https://www.linkedin.com/company/hellochapter/" title="Linkedin
-                                                        " target="_blank">Linkedin</a>
+                                                " target="_blank">Linkedin</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -579,6 +643,7 @@
     <!-- Wrapper end -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/aos.js"></script>
+    <script type="text/javascript" src="https://crm.zoho.com/crm/javascript/zcga.js"> </script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/slick.js"></script>
     <script defer src="https://chapter-dev-endpoinnt.azureedge.net/public/assets/cdn/js/custom.js"></script>
     <script src="../js/custom.js"></script>
