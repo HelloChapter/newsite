@@ -122,6 +122,7 @@
         font-size: 30px;
         font-weight: 300;
         padding: 5px;
+        color: $black;
     }
 
     .label {
@@ -139,7 +140,12 @@
         width: 300px;
     }
 
-    .col-left-content {}
+    .col-left-content {
+        .form-group {
+            display: flex;
+            align-items: center;
+        }
+    }
 
     .svg-box-wrap {
         padding-top: 80px;
@@ -147,9 +153,8 @@
 
     .svg-box {
         position: relative;
-        // height: 180px;
-        // width: 180px;
         max-width: 316px;
+        min-width: 316px;
         height: 316px;
         margin: auto;
 
@@ -188,12 +193,6 @@
             top: 72px;
         }
     }
-
-    .svg-box:before {
-        content: '';
-
-    }
-
     .large-box {
         display: block;
         position: absolute;
@@ -353,51 +352,43 @@
         }
 
         .svg-box {
-            height: 150px;
-            width: 150px;
+            // .medium-box {
+            //     height: 90px;
+            //     width: 90px;
+            //     top: 30px;
+            //     left: 30px;
+            // }
 
-            &::before {
-                height: 150px;
-                width: 150px;
-            }
+            // .small-box {
+            //     height: 40px;
+            //     width: 40px;
+            //     top: 55px;
+            //     left: 55px;
+            // }
 
-            .medium-box {
-                height: 90px;
-                width: 90px;
-                top: 30px;
-                left: 30px;
-            }
+            // .line {
+            //     height: 154px;
+            // }
 
-            .small-box {
-                height: 40px;
-                width: 40px;
-                top: 55px;
-                left: 55px;
-            }
+            // .size {
+            //     top: -65px;
+            //     left: 65px;
+            // }
 
-            .line {
-                height: 154px;
-            }
+            // .quality {
+            //     left: 195px;
+            //     top: 65px;
+            // }
 
-            .size {
-                top: -65px;
-                left: 65px;
-            }
+            // .scope {
+            //     bottom: -72px;
+            //     left: 65px;
+            // }
 
-            .quality {
-                left: 195px;
-                top: 65px;
-            }
-
-            .scope {
-                bottom: -72px;
-                left: 65px;
-            }
-
-            .complexity {
-                left: -120px;
-                top: 60px;
-            }
+            // .complexity {
+            //     left: -120px;
+            //     top: 60px;
+            // }
         }
     }
 }
