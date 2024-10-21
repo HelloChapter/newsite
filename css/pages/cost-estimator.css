@@ -2469,7 +2469,7 @@ footer .trusted-by li img {
   max-width: 316px;
   min-width: 316px;
   height: 316px;
-  margin: auto;
+  margin: 0 -10px 0 auto;
 }
 .cost-estimator-wrap .svg-box svg {
   height: 100%;
@@ -2619,6 +2619,50 @@ footer .trusted-by li img {
   padding: 0 20px;
 }
 
+@media (max-width: 1610px) {
+  .cost-estimator-wrap .svg-box {
+    max-width: 276px;
+    min-width: 276px;
+    height: 276px;
+    margin: 0 auto;
+  }
+  .cost-estimator-wrap .svg-box .size {
+    top: -60px;
+    left: 58px;
+  }
+  .cost-estimator-wrap .svg-box .quality {
+    left: 180px;
+    top: 55px;
+  }
+  .cost-estimator-wrap .svg-box .scope {
+    bottom: 75px;
+    left: 50px;
+  }
+  .cost-estimator-wrap .svg-box .complexity {
+    left: -120px;
+    top: 56px;
+  }
+  .cost-estimator-wrap .large-box {
+    height: 140px;
+    width: 140px;
+  }
+  .cost-estimator-wrap .medium-box {
+    height: 98px;
+    width: 98px;
+    top: 21px;
+    left: 21px;
+  }
+  .cost-estimator-wrap .small-box {
+    height: 65px;
+    width: 65px;
+    top: 38px;
+    left: 38px;
+  }
+  .cost-estimator-wrap .line {
+    left: 25%;
+    height: 138px;
+  }
+}
 @media (max-width: 1023px) {
   .cost-estimator-wrap .col-cost-estimator {
     max-width: 100%;
@@ -2639,22 +2683,28 @@ footer .trusted-by li img {
             flex: 0 0 50%;
   }
   .cost-estimator-wrap .col-svg-box {
-    padding: 90px 0 40px 20px;
-    max-width: 50%;
+    padding: 50px 0 10px 50px;
+    max-width: 60%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
   }
 }
 @media (max-width: 1023px) {
-  .cost-estimator-wrap .col-estimated-cost {
+  .cost-estimator-wrap .col-cost-estimator {
+    padding: 40px 20px 20px;
+  }
+  .cost-estimator-wrap .svg-box-wrap {
+    padding-top: 40px;
+  }
+  .cost-estimator-wrap .col-svg-box {
     max-width: 100%;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
+    padding: 50px 0 10px 125px;
   }
-  .cost-estimator-wrap .col-svg-box {
-    padding: 90px 0 40px 20px;
+  .cost-estimator-wrap .col-estimated-cost {
     max-width: 100%;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;

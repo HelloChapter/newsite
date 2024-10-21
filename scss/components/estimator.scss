@@ -156,7 +156,7 @@
         max-width: 316px;
         min-width: 316px;
         height: 316px;
-        margin: auto;
+        margin: 0 -10px 0 auto;
 
         svg {
             height: 100%;
@@ -193,6 +193,7 @@
             top: 72px;
         }
     }
+
     .large-box {
         display: block;
         position: absolute;
@@ -328,6 +329,62 @@
 }
 
 // Responsive css start
+@media(max-width:1610px) {
+    .cost-estimator-wrap {
+        .svg-box {
+            max-width: 276px;
+            min-width: 276px;
+            height: 276px;
+            margin: 0 auto;
+
+            .size {
+                top: -60px;
+                left: 58px;
+            }
+
+            .quality {
+                left: 180px;
+                top: 55px;
+            }
+
+            .scope {
+                bottom: 75px;
+                left: 50px;
+            }
+
+            .complexity {
+                left: -120px;
+                top: 56px;
+            }
+        }
+
+        .large-box {
+            height: 140px;
+            width: 140px;
+        }
+
+        .medium-box {
+            height: 98px;
+            width: 98px;
+            top: 21px;
+            left: 21px;
+        }
+
+        .small-box {
+            height: 65px;
+            width: 65px;
+            top: 38px;
+            left: 38px;
+        }
+
+        .line {
+            left: 25%;
+            height: 138px;
+        }
+    }
+}
+
+// 1600 end
 @media(max-width:1023px) {
     .cost-estimator-wrap {
         .col-cost-estimator {
@@ -346,49 +403,9 @@
         }
 
         .col-svg-box {
-            padding: 90px 0 40px 20px;
-            max-width: 50%;
-            flex: 0 0 50%;
-        }
-
-        .svg-box {
-            // .medium-box {
-            //     height: 90px;
-            //     width: 90px;
-            //     top: 30px;
-            //     left: 30px;
-            // }
-
-            // .small-box {
-            //     height: 40px;
-            //     width: 40px;
-            //     top: 55px;
-            //     left: 55px;
-            // }
-
-            // .line {
-            //     height: 154px;
-            // }
-
-            // .size {
-            //     top: -65px;
-            //     left: 65px;
-            // }
-
-            // .quality {
-            //     left: 195px;
-            //     top: 65px;
-            // }
-
-            // .scope {
-            //     bottom: -72px;
-            //     left: 65px;
-            // }
-
-            // .complexity {
-            //     left: -120px;
-            //     top: 60px;
-            // }
+            padding: 50px 0 10px 50px;
+            max-width: 60%;
+            flex: 0 0 60%;
         }
     }
 }
@@ -396,17 +413,22 @@
 // 1023 end
 @media(max-width:1023px) {
     .cost-estimator-wrap {
+        .col-cost-estimator {
+         padding: 40px 20px 20px;   
+        }
+        .svg-box-wrap {
+            padding-top: 40px;
+        }
+        .col-svg-box {
+            max-width: 100%;
+            flex: 0 0 100%;   
+            padding: 50px 0 10px 125px;
+        }
         .col-estimated-cost {
             max-width: 100%;
-            flex: 0 0 100%;
-        }
-
-        .col-svg-box {
-            padding: 90px 0 40px 20px;
-            max-width: 100%;
-            flex: 0 0 100%;
+            flex: 0 0 100%;   
         }
     }
 }
 
-// 1023 end
+// 767 end
